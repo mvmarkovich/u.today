@@ -287,6 +287,10 @@ function validate(subscribe__form,subscribe__email) {
   } else{
     $(".subscribe").removeClass("invalid-form");
     $(".subscribe").addClass("valid-form");
+
+    setTimeout(function(){
+      $(".subscribe").addClass("hide__transition");
+    }, 1500);
     return false;
   }
 }
