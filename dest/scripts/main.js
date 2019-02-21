@@ -282,6 +282,11 @@ function validate(subscribe__form,subscribe__email) {
   var address = document.forms[subscribe__form].elements[subscribe__email].value;
   if(reg.test(address) == false) {
     $(".subscribe").addClass("invalid-form");
+    $(".subscribe").removeClass("valid-form");
+    return false;
+  } else{
+    $(".subscribe").removeClass("invalid-form");
+    $(".subscribe").addClass("valid-form");
     return false;
   }
 }

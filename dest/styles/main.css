@@ -6660,24 +6660,65 @@ transition {
   cursor: pointer;
 }
 
-.subscribe .error__form{
-  display: none;
+.subscribe .error__form {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  transition: .2s;
+  color: transparent;
+
   background: #F44336;
   text-align: center;
-  color: #fff;
+
 
   font-size: 13px;
   line-height: 16px;
-  padding: 5px 0;
+
   font-weight: 500;
 }
 
-.subscribe.invalid-form .error__form{
+.subscribe .done__form {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  transition: .2s;
+  color: transparent;
+
+  background: #4CAF50;
+  text-align: center;
+
+
+  font-size: 13px;
+  line-height: 16px;
+
+  font-weight: 500;
+}
+
+.subscribe .error__form .error__text{
+  display: none;
+}
+
+.subscribe.invalid-form .error__form .error__text{
   display: block;
+}
+
+.subscribe.invalid-form .error__form,
+.subscribe.valid-form .done__form{
+  opacity: 1;
+  visibility: visible;
+  padding: 5px 0;
+  height: auto;
+  color: #fff;
 }
 
 .subscribe.invalid-form input[name="email"]{
   border: 1px solid #F44336;
+}
+
+.subscribe.valid-form input[name="email"]{
+  border: 1px solid #4CAF50;
 }
 
 .subscribe .subscribe__form .btn{
