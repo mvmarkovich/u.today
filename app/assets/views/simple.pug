@@ -1,0 +1,92 @@
+extends layouts/layout.pug
+
+block title
+  title Simple | u.today
+
+block content
+  .content-container
+    main.main-block
+      h1 h1 Terms & conditions
+      p We reserve the right at any time to:
+      h2 h2 Terms & conditions
+      p We reserve the right at any time to:
+      h3 h3 Terms & conditions
+      p We reserve the right at any time to:
+      h4 h4 Terms & conditions
+      p We reserve the right at any time to:
+      h5 h5 Terms & conditions
+      p We reserve the right at any time to:
+      ul
+        li Change the terms and conditions of the ToU
+        li
+          | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+          ul
+            li Change the terms and conditions of the ToU
+            li
+              | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+        li or Change other conditions for use of the U.Today Sites.
+
+      p We reserve the right at any time to:
+
+      ol
+        li Change the terms and conditions of the ToU
+        li
+          | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+          ol
+            li Change the terms and conditions of the ToU
+            li
+              | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+        li or Change other conditions for use of the U.Today Sites.
+
+      p Any changes we make to the ToU will be effective immediately after we post the modified ToU on U.today.
+
+      table
+        tbody
+          tr
+            td
+              p Subunit
+            td Symbol
+            td Value (of 1 BTC)
+          tr
+            td 'millibit'
+            td mBTC
+            td 1/1000
+          tr
+            td ‘bit’
+            td
+              p μBTC
+            td 1⁄1000000
+          tr
+            td ‘satoshi’
+            td satoshi
+            td 1⁄100000000
+
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, fugiat!
+
+      form.simple__form(action="#" method="get")
+        .input__row
+          .input
+            label.input__label(for="name") Name
+            input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+          .input.input--error
+            label.input__label(for="contact") Contact info
+            input#contact.input__elem(type="text" name="email" placeholder="Your phone number or email" required)
+            .input__error E-mail can’t contain symbols
+
+        .input
+          label.input__label(for="msg") Message
+          textarea#msg.input__elem(type="text" name="msg" placeholder="Your message" required)
+
+        button.btn.btn--input.btn--accent(type="submit") Contact me
+
+      p Or you can just send us an email: <a href="mailto:events@u.today">events@u.today</a>
+
+
+    aside.aside-block
+      include blocks/aside.pug
+

@@ -1,0 +1,44 @@
+section.comments
+  .comments__header
+    .comments__title ✍ There’s nothing better than a good comment!
+
+    ul.comments__tabs.tabs
+      li.tabs__item.tabs__item--active
+        button.tabs__btn.btn.btn--light Popular
+
+      li.tabs__item
+        button.tabs__btn.btn.btn--light Recent
+
+  .comments__add
+    button.comments__add-attach.btn.btn--light.btn--attach
+
+    form(action="#" method="get")
+      .input
+        textarea.input__elem(name="msg" placeholder="So why not write your own?" required)
+
+  ul.comments__list
+    li.comments__item
+      .comments__item-header
+        .comments__item-user
+          img.comments__item-user-avatar(src="https://dummyimage.com/40x40/d8dbde/aaa")
+
+          .comments__item-wrapper
+            .comments__item-user-name John Blazkovic
+            time.comments__item-time 28 Oct, 11:45 AM
+
+      .comments__item-body
+        .comments__item-msg
+          p Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers
+          p Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+
+      .comments__item-footer
+        button.comments__item-reply.btn.btn--light Reply
+        button.comments__item-more.btn.btn--light.btn--more
+
+        .comments__item-rating.rating.rating--positive.rating--tiny
+          button.btn.btn--light.btn--rating-down
+          .rating__value 28
+          button.btn.btn--light.btn--rating-up
+
+  .comments__footer
+    button.btn.btn--block.btn--large Show other comments (255)

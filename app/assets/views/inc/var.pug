@@ -1,0 +1,581 @@
+-
+  var currencies = [
+    {
+      name: "BTC",
+      trand: "0.03%",
+      price: "6315.99"
+    },
+    {
+      name: "Eth",
+      trand: "0.22%",
+      price: "196.11"
+    },
+    {
+      name: "Ltc",
+      trand: "0.99%",
+      price: "49.19"
+    },
+    {
+      name: "Eos",
+      trand: "0.19%",
+      price: "5.16"
+    },
+    {
+      name: "Xrp",
+      trand: "−0.61%",
+      price: "0.4457",
+      down: true
+    },
+    {
+      name: "Ada",
+      trand: "2.31%",
+      price: "0.07145"
+    },
+    {
+      name: "Neo",
+      trand: "−0.45%",
+      price: "15.51",
+      down: true
+    },
+    {
+      name: "TRX",
+      trand: "0.67%",
+      price: "0.02241"
+    },
+  ]
+
+  var nav = [
+    {
+      name: "News",
+      childs: [
+        {
+          name: "Latest News"
+        },
+        {
+          name: "Bitcoin News"
+        },
+        {
+          name: "Ethereum News"
+        },
+        {
+          name: "Bitcoin Cash News"
+        },
+        {
+          name: "Ripple News"
+        },
+        {
+          name: "EOS News"
+        },
+        {
+          name: "Litecoin News"
+        },
+        {
+          name: "Cardano News"
+        },
+        {
+          name: "NEM"
+        },
+        {
+          name: "Press releases"
+        },
+        {
+          name: "Submit Press releases"
+        }
+      ]
+    },
+    {
+      name: "Stories",
+      childs: [
+        {
+          name: "Features"
+        },
+        {
+          name: "Opinions"
+        },
+        {
+          name: "Artificial Intelligence"
+        },
+        {
+          name: "SingUlarity"
+        },
+        {
+          name: "Infographics"
+        },
+        {
+          name: "ICO Watch"
+        }
+      ]
+    },
+    {
+      name: "Price Predictions",
+      childs: [
+        {
+          name: "Pricewise"
+        },
+        {
+          name: "Bitcoin Price Index"
+        },
+        {
+          name: "Ethereum Price Index"
+        },
+        {
+          name: "Bitcoin Cash Price Index"
+        },
+        {
+          name: "Ripple Price Index"
+        },
+        {
+          name: "EOS Price Index"
+        },
+        {
+          name: "Litecoin Price Index"
+        },
+        {
+          name: "Cardano Price Index"
+        },
+      ]
+    },
+    {
+      name: "Guides",
+      childs: [
+        {
+          name: "Coins Guide"
+        },
+        {
+          name: "WikiCoin"
+        },
+        {
+          name: "CryptoTips"
+        },
+        {
+          name: "Trading Guide"
+        }
+      ]
+    },
+    {
+      name: "Events",
+    }
+  ]
+
+  var navFooter = [
+    {
+      name: "News",
+      childs: [
+        {
+          name: "Latest News"
+        },
+        {
+          name: "Bitcoin News"
+        },
+        {
+          name: "Ethereum News"
+        },
+        {
+          name: "Bitcoin Cash News"
+        },
+        {
+          name: "Ripple News"
+        },
+        {
+          name: "EOS News"
+        },
+        {
+          name: "Litecoin News"
+        },
+        {
+          name: "Cardano News"
+        },
+        {
+          name: "NEM"
+        },
+        {
+          name: "Press releases"
+        },
+        {
+          name: "Submit Press releases"
+        }
+      ]
+    },
+    {
+      name: "Stories",
+      childs: [
+        {
+          name: "Features"
+        },
+        {
+          name: "Opinions"
+        },
+        {
+          name: "Artificial Intelligence"
+        },
+        {
+          name: "SingUlarity"
+        },
+        {
+          name: "Infographics"
+        },
+        {
+          name: "ICO Watch"
+        }
+      ]
+    },
+    {
+      name: "Market analysis",
+      childs: [
+        {
+          name: "Pricewise"
+        },
+        {
+          name: "Bitcoin Price Index"
+        },
+        {
+          name: "Ethereum Price Index"
+        },
+        {
+          name: "Bitcoin Cash Price Index"
+        },
+        {
+          name: "Ripple Price Index"
+        },
+        {
+          name: "EOS Price Index"
+        },
+        {
+          name: "Litecoin Price Index"
+        },
+        {
+          name: "Cardano Price Index"
+        },
+      ]
+    },
+    {
+      name: "Guides",
+      childs: [
+        {
+          name: "Coins Guide"
+        },
+        {
+          name: "WikiCoin"
+        },
+        {
+          name: "CryptoTips"
+        },
+        {
+          name: "Trading Guide"
+        }
+      ]
+    },
+    {
+      name: "About Us",
+      childs: [
+        {
+          name: "Our partners"
+        },
+        {
+          name: "Jobs"
+        },
+        {
+          name: "About Us"
+        }
+      ]
+    },
+    {
+      name: "Interviews",
+    },
+    {
+      name: "Events",
+    }
+  ]
+
+  var hots = ["A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon", "Google’s Amir Sarhangi Joins Ripple", "HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes", "Where Is Bitcoin Going in the Near Future? Experts Weigh In", "Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise"]
+
+  var tags = ["#Tag", "#Bitcoin", "#Processor", "#AMD", "#CryptoSummit", "#MaltaBlockchainSummit"]
+
+  var events = ["World CryptoCon", "Malta Blockchain Summit"]
+
+  var articleContents = ["Women of Crypto as opening act", "Ladies only", "Scaling community and activism", "Reclaiming sovereignty", "Invisible adoption", "Adding value despite challenges"]
+
+  var articleTexts = ["In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second <a class='link-text' href='#!'>Crypto Invest Summit</a>, which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.", "It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”", "As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.", "Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:", "While the exclusion of men from the Women of Crypto track was a missed opportunity to foster integrated and inclusive discourse, it did give the panelists freedom to delve deep into subjects that may not have commanded the full attention of the “usual” conference crowd.", "During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.", "Opening the Full Spectrum Blockchain discussion, Crystal Rose recalled that the Internet began as a space where users could interact anonymously, and only the introduction of social networks and online shopping began tying an enormous amount of personal data to our digital profiles. Today, Internet usage had come full spectrum to focus on the importance of privacy, sovereignty, and data ownership. However, sovereignty can’t be reclaimed unless there is wide-scale adoption, and adoption won’t happen until simple, easily manageable tools are available to the public."]
+
+  var articleList = ["This is a sample of a list.", "Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.", "During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes."]
+
+
+  var articleRecomended = ["What Is Decentralized Application (dApp): Explanation for Beginners", "Ethereum Breakout in Full Force", "Bitcoin Cash Slingshots to the Moon?"]
+
+  var news = [
+    {
+      date: "11:05AM",
+      title: "Google CEO’s Son Mines Ethereum on Home PC"
+    },
+    {
+      date: "10:30AM",
+      title: "Coinbase Custody Launches Cryptocurrency Fund With Wilshire Phoenix Two strings news title"
+    },
+    {
+      date: "Oct 31",
+      title: "From Thinking Like a Regulator to Pulling Off a Crypto Heist: StartEngine Summit Opens LA Blockchain Week (Sample three line header for demo)"
+    },
+    {
+      date: "Oct 30",
+      title: "Past-ICO Review: Hero Token"
+    },
+    {
+      date: "Sep 27",
+      title: "Crypto Invest Summit Pulls a Huge Crowd in LA: Blockchain’s Future Looking Good"
+    }
+  ]
+
+  var newsFeatured = [
+    {
+      title: "Ripple 2018: Price and Telegram Mentions. What’s Driving What?"
+    },
+    {
+      title: "Tron May Be the Most Liked Cryptocurrency, According to Facebook Stats"
+    },
+    {
+      title: "Special offer for U.Today readers! Use a promo-code for great bargain",
+      adv: true
+    },
+    {
+      title: "5 Reasons to Invest in Ripple: How to Invest in XRP Most Profitable"
+    }
+  ]
+
+  var newsCategoryOpinions = {
+    title: "🗣 Opinions",
+    news: [
+      {
+        title: "What Is Decentralized Application (dApp): Explanation for Beginners"
+      },
+      {
+        title: "Ethereum Breakout in Full Force"
+      },
+      {
+        title: "Bitcoin Cash Slingshots to the Moon?"
+      }
+    ]
+  }
+
+  var newsCategoryInterviews = {
+    title: "🎤 Interviews",
+    news: [
+      {
+        title: "Ripple Price Prediction For November: Quietly In Reversal"
+      },
+      {
+        title: "ChainAds DLT Advertiser Launches DrMiner Cloud Platform, 2FA Secured"
+      },
+      {
+        title: "5 Reasons to Invest in Ripple: How to Invest in XRP Most Profitable"
+      }
+    ]
+  }
+
+  var newsCategoryPress = {
+    title: "📰 Press Releases",
+    news: [
+      {
+        title: "Bitcoin Price Prediction for November: The Market Is Wound Up and Waiting"
+      },
+      {
+        title: "Original Bitcoin Fork, BCH, Gets Exchanges’ Seal of Approval for Upcoming Fork"
+      },
+      {
+        title: "Ripple Price Prediction For November: Quietly In Reversal"
+      }
+    ]
+  }
+
+  var newsFeed = [
+    {
+      title: "Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive",
+      category: "📚 Category"
+    },
+    {
+      title: "Crypto Prices Can Be Predicted, Says Science",
+      category: "📚 Category"
+    },
+    {
+      title: "Trust Arms Race in the Age of Cryptography: Max Borders Interview",
+      category: "📚 Category"
+    },
+    {
+      title: "5 Worst ICO Promotions",
+      category: "📚 Category"
+    },
+    {
+      title: "Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble",
+      category: "👁 Category"
+    },
+    {
+      title: "Past-ICO Review: Hero Token",
+      category: "👁 Category"
+    },
+    {
+      title: "Top 5 Ripple Wallets in 2018",
+      category: "📊 Category"
+    },
+    {
+      title: "Bitstamp Review: Cryptocurrency Exchange For All Types Of Traders",
+      category: "💡 Category"
+    },
+    {
+      title: "Cryptocurrency Margin Trading - Explanation for Beginners",
+      category: "💡 Category"
+    },
+    {
+      title: "Monero Price Prediction 2018 ",
+      category: "💡 Category"
+    },
+  ]
+
+  var newsCategories = ["🎤 Interviews", "📰 Press Releases", "Singularity", "💡 CryptoTips", "🗣 Opinions", "🎓 Guides", "📊‍ Infographics", "⭐ Featured", "🍽 All categories", "👁 ICO Watch", "📚 WikiCoin", "💎 Market Analysis", "🤖 Artificial Intelligence" ]
+
+  var cryptoTweets = [
+    {
+      login: "@VitalikButerin",
+      time: "Yesterday, 11:01 (updated)",
+      text: "A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon"
+    },
+    {
+      login: "@Utoday_en",
+      time: "2 days ago",
+      text: "Google’s Amir Sarhangi Joins Ripple"
+    },
+    {
+      login: "@lopp",
+      time: "3 days ago",
+      text: "HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes"
+    },
+    {
+      login: "@ErikVoorhees",
+      time: "5 days ago",
+      text: "Where Is Bitcoin Going in the Near Future? Experts Weigh In"
+    },
+    {
+      login: "@Utoday_en",
+      time: "2 days ago",
+      text: "Google’s Amir Sarhangi Joins Ripple"
+    }
+  ]
+
+  var categoryItemList = ["🔹 What is Ethereum (ETH) - Really Simple Explanation for Beginners Two Lines title", "🔹 How to Buy Ethereum with Cash: A Step-by-Step Guide", "🔹 How to Mine Ethereum at Home on PC", "🔹 How to Store Ethereum offline (on USB)", "🔹 How to Exchange Ethereum to USD"]
+
+  var contactEmails = [
+    {
+      title: "✍ Editorial",
+      email: "editorial@u.today"
+    },
+    {
+      title: "💼 Partnerships",
+      email: "partners@u.today"
+    },
+    {
+      title: "💵 Advertising",
+      email: "sales@u.today"
+    },
+    {
+      title: "🗓 Events",
+      email: "events@u.today"
+    },
+    {
+      title: "✉ Other",
+      email: "hello@u.today"
+    },
+  ]
+
+  var indexCoins = [
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "−1.231%",
+      trand: false
+    },
+    {
+      name: "Ethereum",
+      short: "ETH",
+      price: "−0.61%",
+      trand: false
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "IOTA",
+      short: "IOT",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "344.692%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+    {
+      name: "Bitcoin",
+      short: "BTC",
+      price: "2.344%"
+    },
+  ]
+
+  var tablePrice = [
+    ["Title", true, true],
+    ["Dates", true, true],
+    ["Place", true, true],
+    ["Logotype", false, true],
+    ["Link to purchase the ticket", false, true],
+    ["Press and Post release", false, true],
+    ["Social media promotion", false, true, "(facebook, twitter, Telegram)"],
+    ["Full Agenda and Speakers list", false, true],
+    ["E-mail Newsletter", false, true],
+    ["Custome image", false, true],
+    ["Dofollow links", false, true],
+  ]
+
+  var tablePricePress = [
+    ["The size limit", true, false, false, "(up to 200 words)"],
+    ["Social media promotion", false, true, true, "(facebook, twitter, Telegram)"],
+    ["DoFollow links", false, true, true],
+    ["Custom image", false, true, true],
+    ["E-mail Newsletter", false, true, true],
+    ["Homepage publication in Top of category", false, true, true],
+    ["No mark \"sponsored/press release\"", false, false, true],
+    ["100% Top of the day views", false, false, true],
+    ["Publication in the News section", false, false, true],
+  ]

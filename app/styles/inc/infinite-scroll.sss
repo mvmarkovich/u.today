@@ -1,0 +1,34 @@
+.article
+  background: #fff
+
+  &-infinite-scroll
+    position: relative
+    z-index: 1
+
+    .article
+      overflow: hidden
+      max-height: 0
+      opacity: 0
+
+  &--scroll-show
+    max-height: 9999px !important
+    position: fixed
+    z-index: 5
+    top: 35vh
+    left: @sm-down 0
+    right: @sm-down 0
+    padding: @sm-down * 1rem
+    width: auto @md 480px @xl 736px
+    opacity: 1 !important
+    transition: opacity .2s ease
+
+  &--full-show
+    position: relative
+    top: 0
+
+.content-container
+  background: #fff
+
+.main-block > .article:first-child
+  margin-top: -2rem
+  padding-top: 2rem

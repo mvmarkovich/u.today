@@ -1,0 +1,71 @@
+.aside-story
+  box: left
+  padding-bottom: .5rem @xl .9rem
+
+  &:first-child
+    padding-top: 3px
+
+  &:last-child
+    padding-bottom: 0
+
+  & + &
+    padding-top: .9rem @xl 1.4rem
+    border-top: 1px solid $pseudo-neutral-50
+
+  &--events
+    padding-bottom: .9rem @xl 1.4rem
+
+    &:first-child
+      margin-top: 0 @xl -5px
+
+    & + &
+      padding-top: 0 !important
+      border-top: 0
+
+  &--tweets
+    flex-wrap: wrap
+
+    .text-small
+      display: block
+      text: @xl-down $body-tiny
+      margin-top: @xl-down -7px
+
+    ^&__img
+      border-radius: 50%
+
+      &-wrapper
+        size: 24px @xl 40px
+        min-width: 24px @xl 40px
+        margin-top: 0 @xl -1px
+        border-radius: 50%
+
+  &__img
+    @extend .img
+    border-radius: 2px
+
+    &-wrapper
+      width: 40px @xl 64px
+      min-width: 40px @xl 64px
+      background: $pseudo-neutral-50
+      border-radius: 2px
+      margin-right: 0.5rem @xl 1rem
+
+  &__info
+    box: center
+
+  &__body
+    margin-top: -6px
+
+  &__link
+    text: $body-tiny @xl $body-small
+    text: $pseudo-neutral-900
+    text-decoration: none
+    display: block
+    @extend .link-plain
+
+  &__info
+    margin-top: .1em
+
+  &__text
+    text: $body-tiny @xl $body-small
+    margin-top: .1rem @xl .7em

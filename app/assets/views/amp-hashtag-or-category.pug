@@ -1,0 +1,164 @@
+include inc/var.pug
+doctype html
+html(lang="en" dir="ltr" ⚡)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+    link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+
+    script(async="" src="https://cdn.ampproject.org/v0.js")
+
+    style(amp-boilerplate='').
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    noscript
+      style(amp-boilerplate='').
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+
+    script(custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js', async='')
+    script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+
+    style(amp-custom="")
+      include ../../../dest/styles/amp.css
+
+    //- link(href="styles/amp.css" rel="stylesheet")
+
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+      },
+      "headline": "Article headline",
+      "image": {
+      "@type": "ImageObject",
+      "url": "https://google.com/thumbnail1.jpg",
+      "height": 800,
+      "width": 800
+      },
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": {
+      "@type": "Person",
+      "name": "John Doe"
+      },
+      "publisher": {
+      "@type": "Organization",
+      "name": "Google",
+      "logo": {
+      "@type": "ImageObject",
+      "url": "https://google.com/logo.jpg",
+      "width": 600,
+      "height": 60
+      }
+      },
+      "description": "A most wonderful article"
+      }
+
+
+  body
+
+    amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+      .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+        include ../img/icons/cross.svg
+
+      .sidebar__social.social
+        a.social__link.social__link--fb(href='#!fb')
+        a.social__link.social__link--tg(href='#!tg')
+        a.social__link.social__link--tw(href='#!tw')
+        a.social__link.social__link--em(href='#!em')
+
+      .sidebar__lang
+        .sidebar__lang-item.active
+          a.sidebar__lang-link(href='#!en') English
+        .sidebar__lang-item
+          a.sidebar__lang-link(href='#!es') Español
+
+      nav.sidebar__nav
+        ul.sidebar__nav-list
+          each category in navFooter
+            li.sidebar__nav-item
+              a.sidebar__nav-link(href="#!")= category.name
+
+              if category.childs
+                ul.sidebar__nav-child-list
+                  each child in category.childs
+                    li.sidebar__nav-child-item
+                      a.sidebar__nav-child-link(href="#!")= child.name
+
+    .container.page-container
+      header.header
+        a.header__logo(href="/")
+          include ../img/icons/logo.svg
+
+        button.mobile-menu__btn(on="tap:sidebar.toggle")
+          include ../img/icons/burger.svg
+
+
+      .article
+        h1.article__title.article__title--category #Hashtag or 🌎 Category
+
+        .article__main-img-wrapper.article__main-img-wrapper--category
+          amp-img.article__main-img(src="https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz" layout="responsive" width="16" height="10")
+
+        .article__mark.article__mark--category Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming
+
+        section.article__amp-recommended
+          .article__amp-recommended-title 💼 Related articles
+
+          .article__article__amp-recommended-list
+            each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+              article.article__amp-recommended-item
+                a.article__amp-recommended-item-link(href="#!")
+                  amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                  .article__amp-recommended-item-title= item
+
+          a.btn.btn--large(href="#!") More articles
+
+
+      footer.footer
+        .footer__container
+          .footer__row
+            .footer__follow-us
+              .footer__title Follow us and get all crypto news 24/7
+
+              .social.social--border.social--wide
+                a.social__link.social__link--fb(href="#!")
+                a.social__link.social__link--tg(href="#!")
+                a.social__link.social__link--tw(href="#!")
+                a.social__link.social__link--yt(href="#!")
+                a.social__link.social__link--rd(href="#!")
+                a.social__link.social__link--rs(href="#!")
+
+            .footer__subscribe
+              .footer__title ✉ Subscribe to daily newsletter
+
+              form.form--row.footer__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
+                .input
+                  input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+                .input
+                  button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+                .footer__subscribe-agree By pressing the “Subscribe button” you agree with our 
+                  a(href="#!") Privacy Policy
+
+          nav.footer__nav
+            ul.footer__nav-list
+              each category in navFooter
+                li.footer__nav-item
+                  a.footer__nav-link(href="#!")= category.name
+
+                  if category.childs
+                    ul.footer__nav-child-list
+                      each child in category.childs
+                        li.footer__nav-child-item
+                          a.footer__nav-child-link(href="#!")= child.name
+
+          .footer__copy
+            .footer__copy-text © 2018 U.Today. All rights reserved
+            a.footer__copy-link(href="#!") Terms and conditions

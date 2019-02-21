@@ -1,0 +1,25 @@
+.breaking
+  background: $neutral-100
+  box: center
+  flex-wrap: wrap @md nowrap
+  margin: 1rem * 1rem @xl 1.5rem * 2rem
+  padding: 1rem
+  @extend .link-plain
+
+  &__label
+    margin-right: @md 1.5rem
+    margin-bottom: @md-down .7rem
+    width: @md-down 100%
+    justify-content: @md-down space-between
+
+  &__title
+    text: $header-super-tiny @xl $header-tiny
+    vertical-align: center
+
+    &:after
+      content: ""
+      display: inline-block
+      background-image: svg-load("icons/triangle_right.svg", fill: $accent-2-medium)
+      size: 17px
+      margin-left: .4rem
+      margin-top: -8px

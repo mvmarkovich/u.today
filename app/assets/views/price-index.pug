@@ -1,0 +1,30 @@
+extends layouts/layout.pug
+
+block title
+  title Price index | u.today
+
+block content
+  .main-aside-container
+    aside.aside-menu-block
+      .price-index__aside
+        .price-index__header
+          .price-index__title Coins
+
+          .price-index__tabs.tabs.tabs--small
+            .price-index__tabs-item.tabs__item.tabs__item--active
+              button.tabs__btn.btn.btn--light Daily
+            .price-index__tabs-item.tabs__item
+              button.tabs__btn.btn.btn--light Monthly
+
+        .price-index__body
+          ul.tabs.tabs--vertical
+            each coin in indexCoins
+              li.tabs__item
+                button.tabs__btn.btn.btn--pseudo= coin.name
+                  .price-index__coin-short= coin.short
+                  .price-index__coin-trand(class=coin.trand === false ? 'price-index__coin-trand--down' : '')= coin.price
+
+        .price-index__footer
+          button.btn.btn--arrow-down-before.btn--pseudo(onclick="showMore('.price-index__body')") Show more
+
+    .main-category-block Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda accusamus beatae praesentium vitae libero deserunt totam illo nisi.

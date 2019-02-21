@@ -1,0 +1,110 @@
+extends layouts/layout.pug
+
+block title
+  title Category filter | u.today
+
+block content
+  .main-aside-container
+    aside.aside-menu-block
+      .accordion.accordion--open
+        .accordion__title Filters
+        .accordion__body.accordion__body--content
+          .input
+            .input__label Country
+            select.input__select(name="select")
+              option(selected disabled) - Any -
+              option(value="") Andorra
+              option(value="") Angola
+              option(value="") Argentina
+
+          .input
+            .input__label Country
+            select.input__select(name="select")
+              option(selected disabled) - Any -
+              option(value="") Andorra
+              option(value="") Angola
+              option(value="") Argentina
+
+          .input
+            .input__label Country
+            select.input__select(name="select")
+              option(selected disabled) - Any -
+              option(value="") Andorra
+              option(value="") Angola
+              option(value="") Argentina
+
+          .input
+            .input__label Country
+            select.input__select(name="select")
+              option(selected disabled) - Any -
+              option(value="") Andorra
+              option(value="") Angola
+              option(value="") Argentina
+
+          .input
+            .input__label Country
+            select.input__select(name="select")
+              option(selected disabled) - Any -
+              option(value="") Andorra
+              option(value="") Angola
+              option(value="") Argentina
+
+          a.btn-filter-space.btn.btn--block.btn--big.btn--disabled(href="#!") Clear
+
+      a.btn-aside-space.btn.btn--block.btn--big(href="#!") Event archive
+      a.btn-aside-space.btn.btn--block.btn--big.btn--accent(href="#!") Submit event
+
+    .main-category-block
+      include blocks/category-info-short.pug
+
+      .category-item
+        .category-item__body
+          h2
+            a.category-item__title(href="#!") 👑 Blockspot Conference Europe 2018
+
+          .category-item__info-event
+            time.humble.humble--large 🗓 Nov 14
+            .humble.humble--large 📍 Lisbon, Portugal
+
+          .category-item__desc Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming
+
+        a.category-item__img-wrapper(href="#!")
+          img.category-item__img(src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j")
+
+
+      .category-item
+        .category-item__body
+          h2
+            a.category-item__title(href="#!") 👑 Blockspot Conference Europe 2018
+
+          .category-item__info-event
+            time.humble.humble--large 🗓 Nov 14
+            .humble.humble--large 📍 Lisbon, Portugal
+
+      .category-item
+        .category-item__body
+          h2
+            a.category-item__title(href="#!") 👑 Money 20/20 China
+
+          .category-item__info-event
+            time.humble.humble--large 🗓 Nov 14
+            .humble.humble--large 📍 Lisbon, Portugal
+
+          .category-item__desc Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+
+        a.category-item__img-wrapper(href="#!")
+          img.category-item__img(src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j")
+
+      .category-item
+        .category-item__body
+          h2
+            a.category-item__title(href="#!") ChainPoint'18 — International Blockchain Conference
+
+          .category-item__info-event
+            time.humble.humble--large 🗓 Nov 14
+            .humble.humble--large 📍 Lisbon, Portugal
+
+          .category-item__desc When it comes to company assets, intangible ones are dynamic and fluid, and are becoming vitally important when considering blockchain tokens
+
+
+      a.btn.btn--block.btn--large(href="#!") Show more

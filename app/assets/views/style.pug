@@ -1,0 +1,239 @@
+extends layouts/layout.pug
+
+block title
+  title Style | u.today
+
+block content
+  .style__container
+    section.style__elem
+      pre.style__code h1-h5
+      h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
+      h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
+      h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
+      h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
+      h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
+
+
+    section.style__elem
+      pre.style__code p
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, fuga cum! Incidunt qui dolores, expedita necessitatibus, ipsam vel omnis dolorum, nostrum unde consequatur odio sed reiciendis ullam sint.
+
+    section.style__elem
+      pre.style__code
+        |.input<b>.input--error</b>
+        |    input.input__elem
+        |    .input__error
+
+      form(action="#" method="get")
+        .input.input--error
+          input.input__elem(type="text" placeholder="Email" required value="user@gmail.com#")
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Email" required)
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Email" required value="user@gmail.com")
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Disabled" disabled required)
+          .input__error E-mail can’t contain symbols
+
+        input(type="text" placeholder="Input tag without a class")
+
+    section.style__elem
+      pre.style__code
+        | .btn
+        | .btn--light
+        | .btn--arrow-right
+        | .btn--arrow-down
+        | .btn--hash-tag
+        | .btn--disabled
+        | .btn--big
+
+      .btns-spacer
+        button.btn btn
+        a.btn(href="#!") link
+        button.btn.btn--light(href="#!") light
+        button.btn.btn--arrow-right arrow
+        button.btn.btn--arrow-down arrow
+        button.btn.btn--info info
+        button.btn.btn--pseudo Pseudo
+        button.btn.btn--pseudo.btn--info-before Pseudo
+        button.btn.btn--hash-tag #HashTag
+        button.btn(disabled) btn disabled
+        button.btn.btn--arrow-right(disabled) btn disabled
+        a.btn.btn--disabled(href="#!") link disabled
+        a.btn.btn--arrow-right.btn--disabled(href="#!") link disabled
+
+        button.btn.btn--accent-2 accent-2
+        button.btn.btn--accent-2.btn--lightning-white accent-2
+
+        button.btn.btn--accent accent
+        a.btn.btn--accent accent
+        a.btn.btn--accent.btn--info-white accent
+
+        button.btn.btn--accent(disabled) accent
+        a.btn.btn--accent.btn--disabled accent
+
+      br
+
+      .btns-spacer
+        a.btn.btn--big(href="#!") link
+        button.btn.btn--arrow-right.btn--big arrow
+        a.btn.btn--accent.btn--big accent
+
+    section.style__elem
+      pre.style__code
+        | .link
+        | .link-decorate
+        | .link-text <i>(only this with visited style)</i>
+        | .link-pseudo
+        | .link-plain
+
+      h1
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
+        a.link-text(href="#!") link-text
+        | 
+        a.link-pseudo(href="#!") link-pseudo
+        | 
+        a.link-plain(href="#!") link-plain
+
+      h2
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
+        a.link-text(href="#!") link-text
+        | 
+        a.link-pseudo(href="#!") link-pseudo
+        | 
+        a.link-plain(href="#!") link-plain
+
+      h3
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
+        a.link-text(href="#!") link-text
+        | 
+        a.link-pseudo(href="#!") link-pseudo
+        | 
+        a.link-plain(href="#!") link-plain
+
+      .links-spacer
+        a.link(href="#!") link
+        a.link-decorate(href="#!") link-decorate
+        a.link-text(href="#!") link-text
+        a.link-pseudo(href="#!") link-pseudo
+        a.link-plain(href="#!") link-plain
+
+
+    section.style__elem
+      pre.style__code
+        | .humble
+        | .humble--link
+        | .humble--views
+        | .humble--comments
+        | .humble--bookmark
+        | .humble--tiny
+        | .humble--single-icon
+        | .humble--accent
+
+      .article__panel
+        a.humble.humble--link(href="#!") ⭐ Featured
+        a.humble.humble--link(href="#!")
+          img.humble__img(src="https://dummyimage.com/24x24/d8dbde/aaa")
+          | Konstantin Konstanovich
+        time.humble Oct 31, 11:25AM (updated)
+        time.humble Nov 07
+
+      .article__panel
+        .humble.humble--views 123.5k views
+        a.humble.humble--comments(href="#!") 256 comments
+        button.humble.humble--bookmark Add to bookmarks
+
+      .article__panel
+        .humble.humble--views.humble--tiny 123.5k views
+        a.humble.humble--comments.humble--tiny(href="#!") 256 comments
+        button.humble.humble--share.humble--tiny Share
+
+      .article__panel
+        button.humble.humble--bookmark.humble--single-icon
+        .humble.humble--comments.humble--single-icon
+        button.humble.humble--share.humble--single-icon
+
+
+    section.style__elem
+      pre.style__code
+        | .tabs
+        |   .tabs__item<b>.tabs__item--active</b>
+        |      button.tabs__btn
+
+      ul.tabs
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Popular
+
+        li.tabs__item.tabs__item--active
+          button.tabs__btn.btn.btn--light Active
+
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Recent
+
+
+    section.style__elem
+      pre.style__code
+        | ul.tabs<b>.tabs--vertical</b>
+        |   li.tabs__item<b>.tabs__item--sub-open</b>
+        |      button.tabs__btn
+        |
+        |      ul.tabs__sub
+        |        li.tabs__sub-item
+        |          button.tabs__btn.btn.btn--pseudo
+
+      ul.tabs.tabs--vertical
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Popular
+
+        li.tabs__item.tabs__item--active.tabs__item--sub-open
+          button.tabs__btn.btn.btn--light Active
+
+          ul.tabs__sub
+            li.tabs__sub-item
+              button.tabs__btn.btn.btn--pseudo Sub item
+            li.tabs__sub-item
+              button.tabs__btn.btn.btn--pseudo Sub item
+
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Recent
+
+
+    section.style__elem
+      pre.style__code
+        | .accordion.accordion--open
+        |   .accordion__title
+        |   .accordion__body<b>.accordion__body--content</b>
+
+      p On mobile .accordion--open works reverse. Default closed.
+
+      .accordion.accordion--open
+        .accordion__title Accordion
+        .accordion__body.accordion__body--content Content
+
+
+    section.style__elem
+      pre.style__code
+        | (onclick="share('<b>telegram-url</b>', '<b>twitter-url</b>', '<b>facebook-url</b>')")
+
+      button.humble.humble--share.humble--tiny(onclick="share('#1', '#2', '#3', event)") Share
+
+      br
+      br
+      br
+
+      button.humble.humble--share(onclick="share('#4', '#5', '#6', event)") Share

@@ -1,0 +1,45 @@
+.news-feed
+  border-bottom: $border
+  padding-bottom: 1.9rem
+  margin-bottom: 1.2rem @xl 1.7rem
+
+  &__header
+    box: center
+    margin-bottom: 1.5rem
+
+  &__title
+    text: $header-small
+    margin-bottom: 1.6rem
+
+  &__item
+    box: left
+
+    & + &
+      margin-top: 1.47rem @md 1.75rem @xl 2rem
+
+    &-body
+      position: relative
+      top: -5px @xl 0
+      max-width: calc(100% - 40px - 1rem)
+
+    &-img
+      @extend .img-cover
+      border-radius: 2px
+      border: $border
+
+      &-wrapper
+        @extend .img-cover-wrapper
+        display: block
+        margin-right: .9rem
+        min-width: 63px @md 96px
+        height: 40px @md 60px
+
+    &-title
+      text: $body-small
+      @extend .link-plain
+
+    &-info
+      box: center wrap
+
+  &__footer
+    margin-top: 1.3rem

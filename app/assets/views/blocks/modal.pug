@@ -1,0 +1,61 @@
+.modal#subscribe-form
+  .modal__item
+    button.modal__close.btn.btn--light.btn--cross-white(data-close-modal)
+
+    .modal__item-header
+      .modal__item-header-title All crypto news for
+      .modal__item-logo
+
+    .modal__item-body
+      .modal__item-icon ✉
+      .modal__item-text Sign up for crypto digest
+
+      form(action="#" method="get")
+        .input.article__subscribe-input
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+        .modal__item-agree By pressing the “Subscribe button” you agree with our 
+          a(href="#!") Privacy Policy
+
+
+.modal#subscribe-form-title
+  .modal__square
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
+
+    .modal__square-img
+
+    .modal__square-content
+      .modal__square-icon ✉
+      .modal__square-title Get the latest news, tips and good insights to your inbox
+
+      form(action="#" method="get")
+        .input.article__subscribe-input
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+        .modal__square-agree By pressing the “Subscribe button” you agree with our 
+          a(href="#!") Privacy Policy
+
+
+.modal#subscribe-form-text
+  .modal__square.modal__square--text
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
+
+    .modal__square-img
+
+    .modal__square-content
+      .modal__square-icon ✉
+      .modal__square-title What will be your next move?
+      .modal__square-text Sign up for crypto-trading tips & hints:
+
+      form(action="#" method="get")
+        .input.article__subscribe-input
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        button.btn.btn--wide.btn--input.btn--accent(type="submit") Subscribe
+
+        .modal__square-agree By pressing the “Subscribe button” you agree with our 
+          a(href="#!") Privacy Policy

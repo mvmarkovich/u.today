@@ -1,0 +1,23 @@
+extends layouts/layout.pug
+
+block title
+  title Category simple | u.today
+
+block content
+  .main-aside-container
+    .main-category-block
+      include blocks/category-info.pug
+      include blocks/category-item.pug
+      include blocks/category-item.pug
+      include blocks/category-item.pug
+      include blocks/category-item.pug
+
+      include blocks/category-item-simple.pug
+      include blocks/category-item-simple.pug
+      include blocks/category-item-simple.pug
+      include blocks/category-item-simple.pug
+
+      a.btn.btn--block.btn--large(href="#!") Show more
+
+    aside.aside-category-block
+      include blocks/aside.pug

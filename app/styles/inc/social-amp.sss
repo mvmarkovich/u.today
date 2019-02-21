@@ -1,0 +1,52 @@
+.social
+  display: inline-flex
+  align-items: center
+  justify-content: space-between
+
+  &--border
+    border: $border
+    border-radius: 2px
+    width: @md-down 100%
+
+    ^&__link
+      width: 100% @md 2.45rem @xl 4rem
+      height: 38px
+
+      & + ^^&__link
+        border-left: $border
+
+  &--wide
+    ^&__link
+      width: 100% @md 2.7rem @xl 4.5rem
+
+  &__link
+    size: 1.5rem
+    background-position: center
+    background-repeat: no-repeat
+
+    &:hover
+      opacity: .9
+
+    &:active
+      opacity: .6
+
+    &--fb
+      background-image: svg-load("icons/social/facebook.svg" fill: $pseudo-neutral-100)
+
+    &--tg
+      background-image: svg-load("icons/social/telegram.svg" fill: $pseudo-neutral-100)
+
+    &--tw
+      background-image: svg-load("icons/social/twitter.svg" fill: $pseudo-neutral-100)
+
+    &--em
+      background-image: svg-load("icons/social/email.svg" fill: $pseudo-neutral-100)
+
+    &--yt
+      background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-100)
+
+    &--rd
+      background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-100)
+
+    &--rs
+      background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-100)

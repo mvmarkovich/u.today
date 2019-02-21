@@ -1,0 +1,43 @@
+.dropdown
+  @extend .btn
+  @extend .btn--dropdown
+  position: relative
+  z-index: 990
+
+  &:after
+    margin-left: 7px
+    width: 10px
+
+  &:hover
+    border: 1px solid $pseudo-neutral-300 !important
+    background: #fff
+    z-index: 995
+
+    ^&__list
+      display: block
+
+    &:after
+      transform: scaleY(-1)
+
+  &__list
+    position: absolute 30px -1px null -1px
+    border: 1px solid $pseudo-neutral-300
+    border-top-color: $pseudo-neutral-100
+    border-radius: 0 0 2px 2px
+    background: #fff
+    display: none
+    padding-top: .5rem
+
+  &__item
+    height: 2rem
+    text: $text-caps
+    line-height: 2rem
+    display: block
+    padding: 0 .7rem
+    text: $pseudo-neutral-900 left
+    text-decoration: none
+    margin-bottom: .5rem
+    cursor: pointer
+
+    &:hover
+      background: $neutral-100

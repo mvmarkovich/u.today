@@ -1,0 +1,82 @@
+.event
+  &__title
+    margin-top: 0
+    margin-bottom: .9rem @xl .5rem
+    margin-top: @md-down 1rem
+    text: $header-tiny @md $header-small @xl $header-standart
+
+  &__mark
+    text: $body-small @xl $body-large
+    text: $pseudo-neutral-900
+    margin-top: 0
+    margin-bottom: 2.1rem @xl 1.9rem
+
+  &__main-img
+    position: absolute 0 null null 0
+    @extend .img
+
+    &-wrapper
+      background: $pseudo-neutral-50
+      padding-top: 63.0434783%
+      position: relative
+      margin: @sm-down * -1rem
+      margin-bottom: 3.1rem @md 2.2rem @xl 3.3rem
+
+  p
+    text: $body-small @xl $body-standart
+    text: $pseudo-neutral-900
+    font-family: $font
+    margin-top: 0
+    margin-bottom: 1rem @xl 1.7rem
+
+  h2
+    text: @md-down $header-tiny
+    margin-bottom: 1.1rem @md .9rem @xl 1.6rem
+
+  &__info
+    background: $neutral-100
+    padding: 1.9rem 1.1rem 1.1rem @md 1.9rem 2rem .9rem @xl 2.9rem 4rem 2rem
+    margin-top: 2.1rem @xl 3.5rem
+    margin-bottom: 2.1rem @xl 3.3rem
+
+    &-row
+      box: left
+
+      & + &
+        margin-top: 1.5rem @xl 2rem
+
+    &-label
+      text: $pseudo-neutral-400 $body-small
+      min-width: 110px @md 119px
+
+    &-text
+      text: $body-small
+
+  &__speakers
+    @extend .list-reset
+    margin-bottom: 1.3rem @md 1.7rem @xl 3.3rem
+
+    &-item
+      text: $body-small
+      box: center
+
+      & + &
+        margin-top: 1rem @xl 1.5rem
+
+    &-icon
+      margin-left: 33px
+      position: relative
+
+      &:before
+        content: ""
+        display: block
+        position: absolute null null null -33px
+        size: 24px
+        margin-right: 1rem
+        background-image: svg-load("icons/greeting.svg", fill: $pseudo-neutral-900)
+
+    &-link
+      @extend .link-decorate
+
+      &:before
+        background-image: svg-load("icons/greeting.svg", fill: $accent-1-medium)

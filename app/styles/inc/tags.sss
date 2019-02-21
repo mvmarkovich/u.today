@@ -1,0 +1,106 @@
+input
+  @extend .input__elem
+
+figure
+  margin: 2.3rem 0 2.1rem @xl 3.3rem 0 2.5rem
+  margin: @sm-down * -1rem
+  font-family: $font
+
+figcaption
+  text: $body-small @xl $body-standart
+  text: $pseudo-neutral-400
+  margin-top: .5rem @xl 1.2rem
+  margin-left: @sm-down 1rem
+
+ol
+  list-style-type: decimal
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1rem
+
+  ol
+    margin: 1rem 0 @xl 1.5rem 0 2rem
+
+  li
+    text: $body-small @xl $body-standart
+
+    + li
+      margin-top: 1rem @xl 1.5rem
+
+ul:not([class])
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1.5rem
+  list-style: none
+
+  ul
+    margin: 1rem 0 @xl 1.5rem 0 2rem
+
+  li
+    text: $body-small @xl $body-standart
+    position: relative
+
+    + li
+      margin-top: 1rem @xl 1.5rem
+
+    &:before
+      content: "•"
+      display: block
+      position: absolute
+      left: -1.1rem @xl -1.5rem
+
+p
+  text: $body-small @xl $body-standart
+  margin: 0
+  margin-bottom: 1.7rem @xl 2.5rem
+
+.article
+
+  p, &__content
+    text: $article-small @xl $article-standart
+    font-family: $font-article
+    margin: 0
+    margin-bottom: 1.7rem @xl 2.5rem
+
+    + img
+      margin-bottom: 1.7rem @xl 2.5rem
+
+  > img
+    @extend .img
+
+  ul:not([class]), ol:not([class])
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+
+    li
+      text: $article-small @xl $article-standart
+      font-family: $font-article
+
+p + p, p + ul, p + ol
+  margin-top: -0.7rem @xl -1rem
+
+img:not([class])
+  @extend .img
+
+table
+  width: 100%
+  margin-bottom: 1.7rem @xl 2.5rem
+  border-collapse: collapse
+  border-radius: 2px
+  border: $border
+
+  td
+    text: $body-small @xl $body-standart
+    padding: .75rem 1rem
+    vertical-align: top
+    border-top: 1px solid #dee2e6
+    border-right: 1px solid #dee2e6
+
+html body
+  td p, li p
+    margin: 0
+    padding: 0
+    font-family: $font
+    text: $body-small @xl $body-standart
+
+h2 span
+  text: $body-tiny

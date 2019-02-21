@@ -1,0 +1,318 @@
+@import 'inc/var.sss'
+@import 'inc/reset.css'
+@import 'inc/helpers.sss'
+@import 'inc/link.sss'
+@import 'inc/typo.sss'
+@import 'inc/quote.sss'
+@import 'inc/form.sss'
+@import 'inc/social-amp.sss'
+@import 'inc/humble-amp.sss'
+@import 'inc/rating.sss'
+@import 'blocks/article.sss'
+@import 'blocks/footer.sss'
+@import 'inc/tags.sss'
+
+body
+  text: 16px
+  background: $neutral-100
+
+.container
+  padding: 0 1rem
+  margin: 0 auto
+  max-width: 560px
+
+.page-container
+  background: #fff
+  box-shadow: 4rem 0 0 #fff, -4rem 0 0 #fff
+
+.header
+  padding: 1rem @sm 1rem 0
+  margin-top: 0 @md 2rem
+  margin-bottom: 1rem
+  margin: * -1rem @sm * 0
+  border-bottom: $border
+  height: 56px
+  box: center space-between
+
+  &__logo
+    size: 132px 20px
+    svg
+      display: block
+      width: 100%
+    path
+      fill: $pseudo-neutral-900
+
+.mobile-menu
+  &__btn
+    background: transparent
+    border: 0
+    cursor: pointer
+    padding: 0
+    outline: 0
+    box: center
+    path
+      fill: $pseudo-neutral-900
+
+.btn
+  text: $pseudo-neutral-900 $text-caps none
+  line-height: unset
+  min-height: 2rem
+  padding: 0 .7rem
+  border-radius: 2px
+  border: $border
+  background: transparent
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  font-family: $font
+  outline: 0
+  cursor: pointer
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+  &--wide
+    padding: * 1rem
+
+  &--input
+    display: flex
+    width: 100%
+    min-height: 40px
+
+  &--light
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    background: transparent
+    cursor: pointer
+
+  &--hash-tag
+    text: $body-small normal none none
+    background: $neutral-100
+    border-color: $neutral-100
+
+    &:hover
+      border-color: $neutral-100
+
+  &:hover
+    border-color: $accent-1-medium
+    text: $accent-1-medium
+
+  &:active
+    border-color: $accent-1-dark
+    text: $accent-1-dark
+
+  &--large
+    background: $accent-1-medium
+    border-color: $accent-1-medium
+    text: #fff
+    width: 100%
+    max-width: 330px
+    height: 56px
+    line-height: 56px
+    display: flex
+    margin: * auto
+    &:hover
+      background: $accent-1-light
+      border-color: $accent-1-light
+      text: #fff
+    &:active
+      background: $accent-1-dark
+      border-color: $accent-1-dark
+      text: #fff
+
+  &--rating-up,
+  &--rating-down
+    &:after
+      content: ""
+      display: block
+      background-repeat: no-repeat
+      background-position: center
+      background-image: svg-load("icons/chevron.svg", fill: $pseudo-neutral-200)
+      transform: rotate(-90deg)
+      size: 24px
+
+  &--rating-down
+    &:after
+      transform: rotate(90deg)
+
+body .footer
+  margin-top: 2rem
+  form a
+    color: $pseudo-neutral-400
+  &__row
+    flex-wrap: wrap
+    padding-top: 1.6rem
+    padding-bottom: 1.6rem
+  &__title
+    margin-bottom: .8rem
+  &__follow-us
+    margin-bottom: 1.4rem
+    margin-right: 0
+    width: 100%
+  .social, .social__link
+    width: 100%
+  &__subscribe-form
+    flex-wrap: wrap
+    height: auto
+    .input__elem
+      width: 100%
+    .input
+      width: 100%
+      margin-bottom: 1rem
+  &__nav-list
+    justify-content: space-between
+  &__nav-item
+    width: auto @sm calc(100% / 3)
+    min-width: @sm-down 34%
+  &__nav-link
+    font-weight: 600
+    font-size: 1.0625rem
+    line-height: 1.4
+  &__nav-child-list
+    margin-bottom: 1rem @sm 1.8rem
+    display: block
+  &__nav-child-item + .footer__nav-child-item
+    margin-top: @sm-down .5rem
+
+.sidebar
+  width: 260px
+  min-width: 260px
+  background: #fff
+
+  &__social
+    padding: 1rem 4rem 1rem 1rem
+    width: 100%
+    border-bottom: $border
+    height: 56px
+
+  &__lang
+    padding: 0 1rem
+    box: space-around
+    border-bottom: $border
+    .active
+      ^&-link
+        border-color: $pseudo-neutral-900
+    &-link
+      padding: 1rem 0
+      display: block
+      text: $pseudo-neutral-900 $text-caps
+      text-decoration: none
+      margin-bottom: -1px
+      border-bottom: 3px solid transparent
+      &:hover
+        text: $accent-1-medium
+        border-color: $accent-1-medium
+
+  &__close
+    position: absolute 16px 16px null null
+    path
+      fill: $pseudo-neutral-900
+
+  &__nav
+    margin-bottom: 1rem
+
+    &-list
+      padding: .5rem 1rem
+      padding-left: 0
+      margin: 0
+      list-style: none
+
+    &-item
+
+    &-link
+      text: $pseudo-neutral-900 $text-caps
+      text-decoration: none
+      height: calc(3rem - 8px)
+      margin: 4px *
+      box: center
+      padding-left: 1rem
+      &:hover
+        box-shadow: inset 4px 0 0 0 $pseudo-neutral-900
+
+    &-child
+      &-list
+        padding: 1rem 0 .5rem
+        margin: -1rem 0 0
+        list-style: none
+        // display: none
+      &-link
+        text: $pseudo-neutral-900 $body-small
+        text-decoration: none
+        display: block
+        height: 2rem
+        padding-left: 2rem
+        &:hover
+          text: $accent-1-medium
+
+.continue
+  background: #fff
+  padding: 1rem 0 0
+  margin: -70px -1px 0
+  position: relative
+  z-index: 9
+  box: middle
+  &:before
+    content: ""
+    height: 176px
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+    position: absolute 0 0 null 0
+    transform: translateY(-100%)
+
+.article__main-img
+  width: 100%
+  height: 100%
+
+.article__amp-summary
+  display: flex
+  margin-bottom: .8rem
+
+.article__amp-recommended
+  border-top: $border
+  padding-top: 1.2rem
+  margin-top: 1.5rem
+
+  &-title
+    text: $header-small
+    margin-bottom: 1.2rem
+
+  &-item
+    margin-bottom: 1.8rem
+
+    &:last-child
+      margin-bottom: 2.2rem
+
+    &-link
+      display: flex
+      align-items: flex-start
+      text-decoration: none
+      color: $pseudo-neutral-900
+
+      &:hover
+        color: $accent-1-medium
+
+    &-img
+      background: $pseudo-neutral-50
+      display: block
+      width: 96px
+      min-width: 96px
+      margin-right: 1rem
+      border: $border
+      border-radius: 2px
+      overflow: hidden
+
+    &-title
+      text: $body-small
+      margin-top: -3px
+
+.article__title--category
+  margin-top: 1.5rem
+
+.article__main-img-wrapper--category
+  margin-top: 1.5rem @md 1.7rem
+  margin-bottom: 1.5rem @md 1.5rem @xl 1.5rem
+
+.article__mark--category
+  text: $body-small
+  margin-bottom: 0

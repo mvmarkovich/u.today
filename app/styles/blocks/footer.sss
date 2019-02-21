@@ -1,0 +1,95 @@
+.footer
+  margin-top: 2rem @md 3rem @xl 4rem
+
+  &__container
+    &:before
+      content: ""
+      display: block
+      margin: 0 -1rem @sm 0
+      border-bottom: 3px solid $pseudo-neutral-900
+
+  &__row
+    box: space-between
+    flex-wrap: wrap @md nowrap
+    padding: 1.6rem * @md 2.6rem * @xl 3.2rem * 3.5rem
+    border-bottom: $border
+
+  &__title
+    text: $header-super-tiny @xl $header-tiny
+    margin-bottom: .8rem @md 1.7rem
+
+  &__follow-us
+    margin-right: 0 @md 1rem @xl 3.6rem
+    margin-bottom: @md-down 1.4rem
+    width: @md-down 100%
+
+  &__subscribe
+    width: @md-down 100%
+
+    &-form
+      height: auto @md 40px
+
+    &-input
+      width: @md 116px @xl 269px
+
+    &-agree
+      text: $pseudo-neutral-400 $body-tiny
+      margin-top: 0 @sm -2px
+
+  &__nav
+    padding: 1.3rem * 0.3rem @md 2.5rem * @xl 3.5rem *
+    border-bottom: $border
+    position: relative
+
+    &-list
+      @extend .list-reset
+      box: wrap @md space-between
+
+    &-item
+      width: 60% @sm 33% @md auto
+      margin-bottom: @md-down 1.1rem
+      white-space: nowrap
+
+      &:nth-child(even)
+        width: @sm-down 40%
+
+      // &:last-child
+      //   position: @md absolute
+      //   top: 80px @xl 96px
+      //   right: 24px @xl 32px
+
+    &-link
+      text: $header-tiny @md $header-super-tiny @xl $header-tiny
+      @extend .link-plain
+
+    &-child
+
+      &-list
+        @extend .list-reset
+        margin-top: 1rem
+        display: @md-down none
+
+      &-item
+
+        & + &
+          margin-top: 0.94rem @xl 1rem
+
+      &-link
+        text: $body-tiny @xl $body-small
+        text: $pseudo-neutral-900
+        @extend .link-plain
+
+  &__copy
+    box: wrap @md center
+    padding: 1.5rem * @md 1rem * @xl 1.1rem *
+
+    &-text
+      text: $body-small
+      text: $pseudo-neutral-400
+      margin-right: 2rem
+      margin-bottom: @sm-down 1rem
+
+    &-link
+      text: $body-small
+      @extend .link
+      text: $pseudo-neutral-400

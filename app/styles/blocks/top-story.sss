@@ -1,0 +1,25 @@
+.top-story
+  border: $border
+  border-radius: 2px
+  height: 100%
+  box: wrap
+
+  &__link
+    @extend .link-plain
+
+  &__img
+    @extend .img-cover
+    border-radius: 2px 2px 0 0
+
+    &-wrapper
+      @extend .img-cover-wrapper
+      padding-top: 62.5%
+
+  &__title
+    text: $header-tiny @xl $header-small
+    padding: 1rem 1rem 0.8rem @xl 1.6rem 1.9rem 0.8rem
+
+  &__info
+    box: wrap center
+    margin-top: auto
+    padding: 0 1rem 0.8rem @xl 0 1.9rem 1rem

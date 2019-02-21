@@ -1,0 +1,379 @@
+include inc/var.pug
+doctype html
+html(lang="en" dir="ltr" ⚡)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+    link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+
+    script(async="" src="https://cdn.ampproject.org/v0.js")
+
+    style(amp-boilerplate='').
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    noscript
+      style(amp-boilerplate='').
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+
+    script(custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js', async='')
+    script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+
+    style(amp-custom="")
+      include ../../../dest/styles/amp.css
+
+    //- link(href="styles/amp.css" rel="stylesheet")
+
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+      },
+      "headline": "Article headline",
+      "image": {
+      "@type": "ImageObject",
+      "url": "https://google.com/thumbnail1.jpg",
+      "height": 800,
+      "width": 800
+      },
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": {
+      "@type": "Person",
+      "name": "John Doe"
+      },
+      "publisher": {
+      "@type": "Organization",
+      "name": "Google",
+      "logo": {
+      "@type": "ImageObject",
+      "url": "https://google.com/logo.jpg",
+      "width": 600,
+      "height": 60
+      }
+      },
+      "description": "A most wonderful article"
+      }
+
+
+  body
+
+    amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+      .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+        include ../img/icons/cross.svg
+
+      .sidebar__social.social
+        a.social__link.social__link--fb(href='#!fb')
+        a.social__link.social__link--tg(href='#!tg')
+        a.social__link.social__link--tw(href='#!tw')
+        a.social__link.social__link--em(href='#!em')
+
+      .sidebar__lang
+        .sidebar__lang-item.active
+          a.sidebar__lang-link(href='#!en') English
+        .sidebar__lang-item
+          a.sidebar__lang-link(href='#!es') Español
+
+      nav.sidebar__nav
+        ul.sidebar__nav-list
+          each category in navFooter
+            li.sidebar__nav-item
+              a.sidebar__nav-link(href="#!")= category.name
+
+              if category.childs
+                ul.sidebar__nav-child-list
+                  each child in category.childs
+                    li.sidebar__nav-child-item
+                      a.sidebar__nav-child-link(href="#!")= child.name
+
+    .container.page-container
+      header.header
+        a.header__logo(href="/")
+          include ../img/icons/logo.svg
+
+        button.mobile-menu__btn(on="tap:sidebar.toggle")
+          include ../img/icons/burger.svg
+
+
+      .article
+        section.article__summary
+          a.article__summary-category.humble.humble--link(href="#!") ⭐ Featured
+          a.humble.humble--link(href="#!")
+            amp-img.humble__img(src="https://dummyimage.com/24x24/d8dbde/aaa" layout="fixed" width="24" height="24")
+            | Konstantin Konstanovich
+          time.article__summary-time.humble Oct 31, 11:25AM (updated)
+
+        h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+          .title-mark 🔥 Hot
+
+        .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+
+        section.article__info
+          .humble.humble--views 123.5k
+            .humble__inner-text.hide-sm-down views
+          a.humble.humble--comments(href="#!") 256
+            .humble__inner-text.hide-sm-down comments
+          button.article__summary-bookmarks.humble.humble--bookmark Add to bookmarks
+
+        .article__main-img-wrapper
+          amp-img.article__main-img(src="https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz" layout="responsive" width="16" height="10")
+
+        section.article__content
+          .article__contents
+            .article__contents-title Contents
+
+            ul.article__contents-list
+              each content in articleContents
+                li.article__contents-item
+                  a.article__contents-link.link-pseudo(href="#!")= content
+
+          | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women.
+
+          p!= articleTexts[0]
+
+          h2 Women of Crypto as opening act
+
+          p!= articleTexts[1]
+
+          p!= articleTexts[2]
+
+          h2 Ladies only
+
+          p!= articleTexts[3]
+
+          blockquote
+            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+
+            strong Bob Stewarts
+            em CEO of uToday
+
+          p!= articleTexts[1]
+
+          blockquote
+            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+
+            strong Bob Stewarts
+
+          p!= articleTexts[2]
+
+          blockquote
+            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+
+          p!= articleTexts[5]
+
+          ul
+            each li in articleList
+              li= li
+
+          h2 Scaling community and activism
+
+          p!= articleTexts[2]
+
+          p!= articleTexts[3]
+
+          h2 Reclaiming sovereignty
+
+          p!= articleTexts[1]
+
+          p!= articleTexts[2]
+
+          figure
+            amp-img.img(src="https://dummyimage.com/1000x400/d8dbde/aaa" layout="responsive" width="1000" height="400")
+            figcaption This is a caption under a picture inside article text
+
+          h2 Reclaiming sovereignty
+
+          p!= articleTexts[1]
+
+          .article__related
+            .article__related-body
+              .article__related-title 💼 Related Article
+
+              a.article__related-link.link-plain(href="#!") Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
+                .title-mark 🔥 Hot
+
+              .article__related-panel
+                .humble.humble--tiny Nov 07
+                a.humble.humble--comments.humble--tiny(href="#!") 256
+                button.humble.humble--share.humble--tiny.humble--single-icon
+
+            a(href="#!")
+              amp-img.article__related-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="88" height="55")
+
+          p!= articleTexts[3]
+
+          include blocks/article-fact.pug
+
+          p!= articleTexts[1]
+
+          h4
+            strong almost 300 000
+            p iPhones XS and XS Max was sold in Russia in the first ten days
+
+          h2 Adding value despite challenges
+
+          p!= articleTexts[0]
+
+          ol
+            li Change the terms and conditions of the ToU
+            li
+              | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+              ol
+                li Change the terms and conditions of the ToU
+                li
+                  | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+            li or Change other conditions for use of the U.Today Sites.
+
+          p!= articleTexts[0]
+
+          ul
+            li Change the terms and conditions of the ToU
+            li
+              | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+              ul
+                li Change the terms and conditions of the ToU
+                li
+                  | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+            li or Change other conditions for use of the U.Today Sites.
+
+          table
+            tbody
+              tr
+                td Subunit
+                td Symbol
+                td Value (of 1 BTC)
+              tr
+                td 'millibit'
+                td mBTC
+                td 1/1000
+              tr
+                td ‘bit’
+                td μBTC
+                td 1⁄1000000
+              tr
+                td ‘satoshi’
+                td satoshi
+                td 1⁄100000000
+
+          p!= articleTexts[2]
+
+          p
+            strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+          p
+            em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum tempora quae minus a nam, quis labore eligendi nisi pariatur inventore possimus excepturi. Quis quia fugiat hic porro. Omnis voluptas fugiat vero tempora maxime beatae, odio assumenda earum pariatur, id, reiciendis a dolore? Ipsam deleniti corrupti nisi aliquid ipsa ad dignissimos ipsum adipisci rem, odit fugiat odio incidunt earum quisquam quibusdam magni, deserunt sequi! Quae, sed cumque excepturi facere, blanditiis repellendus repudiandae laboriosam nulla pariatur et, magnam itaque totam recusandae!
+
+          .continue
+            a.btn.continue__btn(href="#!") Continue reading
+
+        section.article__tags.btns-spacer
+          a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit
+          a.btn.btn--hash-tag(href="#!") #Bitcoin
+          a.btn.btn--hash-tag(href="#!") #Processor
+
+        section.article__panel
+          .rating.rating--positive
+            button.btn.btn--light.btn--rating-down
+            .rating__value 28
+            button.btn.btn--light.btn--rating-up
+
+          .article__panel-separator
+
+          .article__panel-row
+            .article__panel-col
+              a.humble.humble--link(href="#!") ⭐ Featured
+              time.humble Oct 31, 11:25AM (updated)
+
+            .article__panel-col
+              .humble.humble--views 123.5k
+                .humble__inner-text.hide-xl-down views
+              a.humble.humble--comments(href="#!") 256
+                .humble__inner-text.hide-xl-down comments
+              button.humble.humble--bookmark.humble--single-icon
+
+        section.article__recommended
+          .article__recommended-header
+            .article__recommended-title 👓 Recommended articles
+            a.btn.btn--arrow-right.hide-xl-down(href="#!") See all
+
+          .article__recommended-list-slide
+            .article__recommended-list
+              each item in articleRecomended
+                article.article__recommended-item
+                  a.article__recommended-link(href="#!")
+                    amp-img.article__recommended-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="responsive" width="600" height="375")
+                    .article__recommended-item-title= item
+
+                  .article__recommended-info
+                    time.humble.humble--tiny Nov 07
+                    a.humble.humble--comments.humble--tiny(href="#!") 256
+                    .humble.humble--views.humble--tiny 123.5k
+                    button.humble.humble--share.humble--tiny.humble--single-icon
+
+              each item in articleRecomended
+                article.article__recommended-item
+                  a.article__recommended-link(href="#!")
+                    amp-img.article__recommended-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="responsive" width="600" height="375")
+                    .article__recommended-item-title= item
+
+                  .article__recommended-info
+                    time.humble.humble--tiny Nov 07
+                    a.humble.humble--comments.humble--tiny(href="#!") 256
+                    .humble.humble--views.humble--tiny 123.5k
+                    button.humble.humble--share.humble--tiny.humble--single-icon
+
+          a.btn.btn--arrow-right.hide-xl-only(href="#!") See all
+
+
+      footer.footer
+        .footer__container
+          .footer__row
+            .footer__follow-us
+              .footer__title Follow us and get all crypto news 24/7
+
+              .social.social--border.social--wide
+                a.social__link.social__link--fb(href="#!")
+                a.social__link.social__link--tg(href="#!")
+                a.social__link.social__link--tw(href="#!")
+                a.social__link.social__link--yt(href="#!")
+                a.social__link.social__link--rd(href="#!")
+                a.social__link.social__link--rs(href="#!")
+
+            .footer__subscribe
+              .footer__title ✉ Subscribe to daily newsletter
+
+              form.form--row.footer__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
+                .input
+                  input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+                .input
+                  button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+                .footer__subscribe-agree By pressing the “Subscribe button” you agree with our 
+                  a(href="#!") Privacy Policy
+
+          nav.footer__nav
+            ul.footer__nav-list
+              each category in navFooter
+                li.footer__nav-item
+                  a.footer__nav-link(href="#!")= category.name
+
+                  if category.childs
+                    ul.footer__nav-child-list
+                      each child in category.childs
+                        li.footer__nav-child-item
+                          a.footer__nav-child-link(href="#!")= child.name
+
+          .footer__copy
+            .footer__copy-text © 2018 U.Today. All rights reserved
+            a.footer__copy-link(href="#!") Terms and conditions

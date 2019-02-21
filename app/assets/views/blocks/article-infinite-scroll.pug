@@ -1,0 +1,77 @@
+mixin article-infinite-scroll(i)
+  .article
+    section.article__summary
+      a.article__summary-category.humble.humble--link(href="#!") ⭐ Featured
+      a.humble.humble--link(href="#!")
+        img.humble__img(src="https://dummyimage.com/24x24/d8dbde/aaa")
+        | Konstantin Konstanovich
+      time.article__summary-time.humble Oct 31, 11:25AM (updated)
+
+    h1.article__title
+      b= i
+      |  Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+      .title-mark 🔥 Hot
+
+    section.article__summary-device
+      a.humble.humble--link(href="#!") ⭐ Featured
+      time.humble Oct 31, 11:25AM (updated)
+
+    .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+
+    section.article__info
+      .humble.humble--views 123.5k
+        .humble__inner-text.hide-sm-down views
+      a.humble.humble--comments(href="#!") 256
+        .humble__inner-text.hide-sm-down comments
+      button.article__summary-bookmarks.humble.humble--bookmark Add to bookmarks
+
+    .article__main-img-wrapper
+      img.article__main-img(src="https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz")
+
+    section.article__content
+      .article__contents
+        .article__contents-title Contents
+
+        ul.article__contents-list
+          each content in articleContents
+            li.article__contents-item
+              a.article__contents-link.link-pseudo(href="#!")= content
+
+      | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women.
+
+      p!= articleTexts[0]
+
+      p!= articleTexts[3]
+
+      p!= articleTexts[1]
+
+      h2 Adding value despite challenges
+
+      p!= articleTexts[0]
+
+    section.article__tags.btns-spacer
+      a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit
+      a.btn.btn--hash-tag(href="#!") #Bitcoin
+      a.btn.btn--hash-tag(href="#!") #Processor
+
+    section.article__panel
+      .rating.rating--positive
+        button.btn.btn--light.btn--rating-down
+        .rating__value 28
+        button.btn.btn--light.btn--rating-up
+
+      .article__panel-separator
+
+      .article__panel-row
+        .article__panel-col
+          a.humble.humble--link(href="#!") ⭐ Featured
+          time.humble Oct 31, 11:25AM (updated)
+
+        .article__panel-col
+          .humble.humble--views 123.5k
+            .humble__inner-text.hide-xl-down views
+          a.humble.humble--comments(href="#!") 256
+            .humble__inner-text.hide-xl-down comments
+          button.humble.humble--bookmark.humble--single-icon
+
+    include article-recommended.pug

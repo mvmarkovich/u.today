@@ -1,0 +1,42 @@
+.accordion
+  border-radius: 2px
+  border: $border
+
+  + .btn,
+  + .btn + .btn
+    display: @md-down flex
+
+  &--open
+
+    + .btn,
+    + .btn + .btn
+      display: @md-down none
+
+    ^&__title:after
+      transform: scaleY(1) @md scaleY(-1)
+
+    ^&__body
+      display: none @md block
+
+  &__title
+    text: $text-caps
+    padding: .44rem 1rem
+    cursor: pointer
+    user-select: none
+    box: center space-between
+
+    &:after
+      content: ""
+      display: block
+      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+      size: 24px
+      transform: @md-down scaleY(-1)
+
+  &__body
+    border-top: $border
+    display: block @md none
+    padding-top: .5rem
+    padding-bottom: .5rem
+
+    &--content
+      padding: 1rem @xl 1rem 1rem 2rem 1rem

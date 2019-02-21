@@ -1,0 +1,51 @@
+extends layouts/layout.pug
+
+block title
+  title About Us | u.today
+
+block content
+  .content-container
+    aside.aside-block.aside-block--mobile-visible
+      section.card
+        .card__title Contacts
+
+        .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
+
+        .card__list
+          each item in contactEmails
+            .card__list-item
+              .card__list-title= item.title
+              a.card__list-link(href="mailto:" + item.email)= item.email
+
+    main.main-block
+      h1 About Us
+      p U.Today is a news, analysis and educational platform that covers the crypto industry, Blockchain and new gen tech. It was founded by editors with extensive experience in both high-quality journalism and the crypto industry, who have developed some very successful media projects. We’re proud to serve the crypto community keeping it tuned to what’s up and new in the field by heeding the core journalistic values- clear thinking, accuracy, impartiality and independence.
+
+      p We run daily crypto market reviews, ICO analytics, interviews with the best experts and major newsmakers, in-depth feature stories and thought-provoking opinion. On the educational side, we’re giving the newcomers step-by-step trading guides, crypto tips and WikiCoin references that help them cope with crypto economics and learn more.
+
+      p We appreciate when members of our audience share with us their expertise through social media or by other means. Stay tuned and let’s build a better community together!
+
+      .about-logo
+
+    section.team
+      .team__title Team
+
+      .team__list
+        each i in [1,2,3,4,5,6,7,8,9]
+          a.team__item(href="#!")
+            .team__img-wrapper
+              img.team__img(src="https://u.today/sites/default/files/styles/profile_teaser/public/2018-06/borodich.jpg?itok=F_DxIVHf")
+
+            .team__name Angel Di Matteo
+            .team__post editor, writer
+
+        a.team__item(href="#!")
+          .team__img-wrapper
+
+          .team__name Angel Di Matteo
+          .team__post editor, writer
+
+        a.team__item(href="#!")
+          .team__img-wrapper
+
+          .team__name Angel Di Matteo

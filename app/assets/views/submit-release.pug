@@ -1,0 +1,126 @@
+extends layouts/layout.pug
+
+block title
+  title Submit release | u.today
+
+block content
+  .content-container
+    main.event-block
+      h1.page-title Submit your Press release on U.Today
+      p Intro text. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+      .table-plan.table-plan--three
+        .table-plan__header
+          .table-plan__col
+          .table-plan__col Standard
+          .table-plan__col Premium
+          .table-plan__col News coverage
+
+        each item in tablePricePress
+          .table-plan__row
+            .table-plan__col= item[0]
+              if item[4]
+                .table-plan__tip= item[4]
+            .table-plan__col
+              if item[1]
+                .icon.icon--check
+              else
+                .icon.icon--cross
+            .table-plan__col
+              if item[2]
+                .icon.icon--check
+              else
+                .icon.icon--cross
+            .table-plan__col
+              if item[3]
+                .icon.icon--check
+              else
+                .icon.icon--cross
+
+        .table-plan__footer
+          .table-plan__col Cost
+          .table-plan__col $200
+          .table-plan__col $400*
+          .table-plan__col $333**
+
+        .table-plan__legend
+          .table-plan__col
+            .table-plan__tip *25% discount from this price for media-partners
+            .table-plan__tip **From 3+ publication per month
+
+      h3 Choose your Press release plan
+
+      ul.tabs.tabs--devider
+        li.tabs__item(data-active-tab="standard")
+          button.tabs__btn.btn.btn--light Standard
+
+        li.tabs__item.tabs__item--active(data-active-tab="premium")
+          button.tabs__btn.btn.btn--light Premium
+
+        li.tabs__item(data-active-tab="news-coverage")
+          button.tabs__btn.btn.btn--light News coverage
+
+
+      form.form--col(action="#" method="get" data-tab="standard")
+        .input.input--large-space
+          label.input__label(for="name") Your name
+          input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .input.input--large-space
+          label.input__label(for="email") Your email
+          input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+        .input.input--btn-space
+          .input__label Upload your file
+          label
+            .btn.btn--big.btn--attach.btn--attach-dark Select file
+            input.input__file(type="file" name="file")
+
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW
+
+
+      form.form--col.active(action="#" method="get" data-tab="premium")
+        .input.input--large-space
+          label.input__label(for="name") Your name
+          input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .input.input--large-space
+          label.input__label(for="email") Your email
+          input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+        .input
+          input#partner.input__checkbox(type="checkbox" name="partner" checked)
+          label.input__checkbox-label(for="partner") Media-partner
+
+        .input.input--btn-space
+          .input__label Upload your file
+          label
+            .btn.btn--big.btn--attach.btn--attach-dark Select file
+            input.input__file(type="file" name="file")
+
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW
+
+
+      form.form--col(action="#" method="get" data-tab="news-coverage")
+        .input.input--large-space
+          label.input__label(for="name") Your name
+          input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .input.input--large-space
+          label.input__label(for="email") Your email
+          input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+        .input.input--large-space
+          .input__label Amount of publications
+          select.input__select(name="select")
+            option(selected) 3+ publication/month
+            option(value="") 6+ publication/month
+            option(value="") 9+ publication/month
+
+        .input.input--btn-space
+          .input__text Additional discount for amount of publications! More details on <a href="mailto:sales@u.today">sales@u.today</a>
+
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW

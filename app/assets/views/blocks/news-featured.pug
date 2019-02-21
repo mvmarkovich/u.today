@@ -1,0 +1,26 @@
+section.news-featured
+  .news-featured__header
+    .news-featured__title ⭐ Featured
+    a.btn.btn--arrow-right.hide-md-down(href="#!") See all
+
+  .news-featured__list
+    each item in newsFeatured
+      article.news-featured__item
+        a.news-featured__item-link(href="#!")
+          .news-featured__item-img-wrapper
+            img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
+
+          .news-featured__item-title= item.title
+
+        .news-featured__item-info
+          if item.adv
+            .humble.humble--info Ad by CompanyName
+          else
+            time.humble.humble--tiny Nov 07
+            a.humble.humble--link(href="#!") Author
+            a.humble.humble--comments.humble--tiny(href="#!") 256
+            .humble.humble--views.humble--tiny(href="#!") 123.5k
+            //- button.humble.humble--share.humble--tiny Share
+
+  .news-featured__footer.hide-md-up
+    a.btn.btn--arrow-right(href="#!") See all

@@ -1,0 +1,273 @@
+.header
+  background: #fff
+  position: relative
+  z-index: 996
+  box-shadow: 13rem 0 0 #fff, -13rem 0 0 #fff @sm 1rem 0 0 #fff, -1rem 0 0 #fff
+  min-height: 56px
+
+  &__container
+    box: center space-between
+    flex-wrap: wrap @xl nowrap
+    padding: .75rem * @md 1.4rem * 0 @xl 2rem * 2.5rem
+    position: relative
+    will-change: transform
+
+    &--sticky
+      position: @sm-down fixed 0 16px null 16px
+      background: @sm-down #fff
+      box-shadow: @sm-down 5rem 0 0 #fff, -5rem 0 0 #fff
+      transform: @sm-down translateY(-100%)
+      transition: @sm-down transform .3s ease
+
+      &-show
+        transform: @sm-down translateY(0)
+
+    &:after
+      content: ""
+      display: block @md none
+      border-bottom: $border
+      position: absolute
+      bottom: 0
+      left: -16px @sm 0 @md 0
+      right: -16px @sm 0 @md 0
+
+  &__logo
+    display: block
+    background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+    size: 130px 24px @md 176px 33px
+    min-width: 130px @md 176px
+    position: relative
+    top: 3px @xl 1px
+
+  &__social
+    width: 236px @xl 161px
+    position: @xl absolute null null 5px 0
+    display: @md-down none
+
+  &__nav
+    margin-bottom: 0 @xl -2.5rem
+    margin-top: 1.3rem @xl 0
+    margin-left: 0 @xl -79px
+    border-bottom: $border
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl 650px
+    display: none @md block
+
+    &:after
+      content: ""
+      display: none @xl block
+      position: absolute null -251px -1px null
+      width: 251px
+      border-top: $border
+
+    &-list
+      @extend .list-reset
+      box: vertical @md horizontal space-between @xl center
+      background: @md-down #fff
+      padding-top: @md-down .8rem
+      padding-bottom: @md-down 1.7rem
+
+      &.visibility-hidden
+        visibility: @xl-down visible
+
+    &-item
+      position: @md relative
+      font-family: $font
+
+      &:hover
+        &:before
+          display: @md-down block
+
+      &:after
+        content: ""
+        height: 40px @md 4px
+        margin-top: @md-down -44px
+        width: @md-down 4px
+        position: absolute auto auto auto 0 @md absolute auto 0 -1px 0
+        z-index: 997
+
+      &:hover
+        ^^&-child-list
+          display: @md block
+
+        &:after
+          background: $accent-1-medium
+
+      &--active:after
+        background: $pseudo-neutral-900
+
+      & + &
+        margin-left: 0 @md 1.5rem
+
+      &--arrow
+        &:hover
+
+          &:after
+            right: auto @md 24px
+
+          ^^^&-link
+            pointer-events: @md-down none
+
+            &:after
+              transform: @md scaleY(-1)
+
+        &:after
+          right: auto @md 24px
+
+        ^^&-link:after
+          content: ""
+          display: block
+          background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
+          size: 24px 12px
+          transform: @md-down rotate(-90deg)
+          margin-right: @md-down 0.8rem
+
+    &-link
+      text: $pseudo-neutral-900 $text-caps none
+      box: space-between center @md left center
+      padding-bottom: 0 @md .7rem @xl 2.5rem
+      height: @md-down 3rem
+      padding-left: @md-down 1rem
+
+    &-child
+
+      &-list
+        @extend .list-reset
+        display: none
+        position: absolute
+        top: @md-down -56px
+        bottom: @md-down 0
+        width: @md-down 205px
+        overflow: @md-down auto
+        padding-top: .5rem
+        border-radius: @md 2px
+        border: @md 1px solid $pseudo-neutral-300
+        background: #fff
+        z-index: 999 @md 997
+
+        &.show
+          display: @md-down block
+
+      &-item
+        border-left: 4px solid transparent
+        margin-bottom: .5rem
+
+        &--active
+          border-color: $pseudo-neutral-900
+
+        &:hover
+          background: @md $neutral-100
+
+      &-link
+        text: $pseudo-neutral-900 $text-caps none
+        text-transform: none
+        letter-spacing: normal
+        white-space: nowrap
+        height: 2.5rem
+        box: center
+        padding: * .8rem
+
+  &__panel
+    box: center space-between
+    // width: 129px @xs 164px @md 230px @xl 187px
+
+  &__btn-search
+    margin-right: .8rem @md 1.5rem
+
+  &__search
+    position: absolute
+    left: 0 @md 219px @xl 215px
+    right: 0 @md 100px @xl 100px
+    top: 12px @md 23px @xl 33px
+    display: none
+
+    &-form
+      box: center
+
+    &-submit
+      position: absolute 0 null 0 0
+
+    &-input
+      background: #fff @md $neutral-100
+      border-color: #fff !important @md $neutral-100 !important
+      min-height: 32px
+      padding-left: 2rem
+
+    &-close
+      position: absolute 0 0 0 null
+
+  &__account
+    margin-right: 1.5rem
+    display: none
+
+    &-img
+      display: block
+      border-radius: 2px
+      position: absolute
+
+  &__burger
+    display: @md none
+    size: 32px
+
+  &__lang
+    display: @md-down none
+
+  &--mobile-menu
+
+    ^&__container:after
+      display: none
+
+    ^&__social
+      display: @md-down flex
+      height: @md-down 56px
+      width: @md-down 205px
+      position: @md-down absolute 56px -16px null null
+      background: @md-down #fff
+      padding: @md-down * 1.3rem
+      border-top: @md-down $border
+      border-bottom: @md-down $border
+
+    ^&__nav
+      position: @md-down absolute 147px -16px null null
+      width: @md-down 205px
+      display: @md-down block
+
+    .mobile-menu-lang
+      display: flex
+
+.mobile-menu
+
+  &-lang
+    position: absolute 112px -16px null null
+    background: #fff
+    size: 205px 56px
+    border-bottom: $border
+    display: none
+    align-items: flex-end
+    justify-content: center
+
+  &-cover
+    position: fixed 0 0 -82px 0
+    z-index: 995
+    background: $cover-color
+    display: none
+
+  &-back
+    text: $text-caps
+    line-height: 55px
+    padding-left: 44px
+    position: absolute 57px -16px null null
+    size: 205px 54px
+    background-color: #fff
+    background-image: svg-load("icons/arrow_long.svg", fill: $pseudo-neutral-900)
+    background-repeat: no-repeat
+    background-position: 11px center
+    cursor: pointer
+    display: none
+
+    &.show
+      display: @md-down block
+
+.overflow-hidden
+  overflow: hidden

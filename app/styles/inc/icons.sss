@@ -1,0 +1,44 @@
+.link-icon
+  position: relative
+  margin-left: 30px
+  margin-right: 2.1rem
+  margin-bottom: 1.4rem @md 1.5rem
+  display: inline-flex
+  height: 21px
+
+  &:before
+    content: ""
+    display: block
+    position: absolute 0 null null -30px
+    size: 24px
+
+  &--fb
+    &:before
+      background-image: svg-load("icons/social/facebook.svg" fill: $fb-color)
+
+  &--tw
+    &:before
+      background-image: svg-load("icons/social/twitter.svg" fill: $tw-color)
+
+  &--tg
+    &:before
+      background-image: svg-load("icons/social/telegram.svg" fill: $tg-color)
+
+  &--yt
+    &:before
+      background-image: svg-load("icons/social/youtube.svg" fill: $yt-color)
+
+  &--rd
+    &:before
+      background-image: svg-load("icons/social/reddit.svg" fill: $rd-color)
+
+.icon
+  size: 16px @md 24px
+  display: inline-block
+  background-size: contain
+
+  &--check
+    background-image: svg-load("icons/check.svg" fill: $status-positive)
+
+  &--cross
+    background-image: svg-load("icons/cross.svg" fill: $status-negative)

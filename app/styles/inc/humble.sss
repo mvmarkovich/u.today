@@ -1,0 +1,107 @@
+.humble
+  text: $pseudo-neutral-400 $body-tiny
+  text-decoration: none
+  margin-right: 1.3rem
+  display: inline-flex
+  align-items: center
+  cursor: default
+  background: transparent
+  border: 0
+  padding: 0
+  outline: 0
+  user-select: none
+  height: 24px
+  white-space: nowrap
+
+  &__inner-text
+    margin-left: .25rem
+
+  &--accent
+    color: $accent-1-medium
+    margin-right: .3rem
+
+  &--large
+    text: $pseudo-neutral-900 $body-small @sm $body-standart
+    margin-right: 1rem @sm 1.7rem
+
+  &--link,
+  &--comments,
+  &--bookmark,
+  &--share
+    cursor: pointer
+
+    &:hover
+      text: $accent-1-medium
+
+    &:active
+      text: $accent-1-dark
+
+  &--views,
+  &--comments,
+  &--bookmark,
+  &--share,
+  &--info
+    &:before
+      content: ""
+      display: block
+      size: 24px
+      margin-right: .6rem
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+
+  &--views
+    &:before
+      background-image: svg-load("icons/eye.svg" fill: $pseudo-neutral-200)
+
+  &--info
+    &:before
+      background-image: svg-load("icons/information.svg" fill: $pseudo-neutral-200)
+
+  &--comments
+    &:before
+      background-image: svg-load("icons/comment.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/comment.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/comment.svg" fill: $accent-1-dark)
+
+  &--bookmark
+    &:before
+      background-image: svg-load("icons/bookmark.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-dark)
+
+  &--share
+    &:before
+      background-image: svg-load("icons/share.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/share.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/share.svg" fill: $accent-1-dark)
+
+  &--tiny
+    margin-right: .7rem @sm 1rem
+
+    &:before
+      size: 12px
+      margin-right: .3rem
+
+  &--single-icon:before
+    margin-right: 0
+
+  &__img
+    display: block
+    border-radius: 2px
+    margin-right: .5rem
+    size: 24px
+    min-width: 24px
+    border-radius: 50%

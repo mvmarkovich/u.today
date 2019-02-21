@@ -1,0 +1,22 @@
+section.news-feed
+  .news-feed__title 🍽 Article feed
+
+  .news-feed__list
+    each item in newsFeed
+      article.news-feed__item
+        a.news-feed__item-img-wrapper(href="#!")
+          img.news-feed__item-img(src="https://u.today/sites/default/files/styles/150/public/2018-11/ETH.jpg?itok=Os8p0Yjc")
+
+        .news-feed__item-body
+          a.news-feed__item-title(href="#!")= item.title
+
+          .news-feed__item-info
+            a.humble.humble--link(href="#!")= item.category
+            time.humble.humble--tiny Nov 07
+            a.humble.humble--comments.humble--tiny(href="#!") 256
+            .humble.humble--views.humble--tiny(href="#!") 123.5k
+            button.humble.humble--share.humble--tiny
+              .hide-sm-down Share
+
+  .news-feed__footer
+    a.btn.btn--block.btn--large(href="#!") Show more

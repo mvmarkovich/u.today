@@ -1,0 +1,25 @@
+extends layouts/layout.pug
+
+block title
+  title Our partners | u.today
+
+block content
+  .content-container
+    main.main-block
+      h1 Our partners
+      p Here's the list of our partners. If you want to become one of those, send an email to this address: 
+        a(href="mailto:partners@u.today") partners@u.today
+
+    section.partners__list
+      each i in [1,2,3,4,5]
+        a.partners__item(href="#!")
+          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-10/Decent.jpg?itok=3uiQCNgX")
+
+        a.partners__item(href="#!")
+          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-09/shift_money_logo.png?itok=ee1f8RDF")
+
+        a.partners__item(href="#!")
+          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/23.jpg?itok=PGCRBFdm")
+
+        a.partners__item(href="#!")
+          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/8_0.jpg?itok=Ub3J42ak")

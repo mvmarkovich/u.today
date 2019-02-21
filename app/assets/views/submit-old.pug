@@ -1,0 +1,140 @@
+extends layouts/layout.pug
+
+block title
+  title Submit release | u.today
+
+block content
+  .content-container
+    main.main-block
+      h1 Submit new press release
+      p Choose the option to publish your press release:
+
+      p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+
+      p Advantages of premium version:
+
+      ul
+        li Free Press Release Distribution
+        li Premium placement for $ 200. This feature ensures maximum coverage and additional options for promotion
+
+      p After sending your press release, proceed to the payment by opening a new tab. Your event will be published only after receiving the transferred payment.
+
+      p Feel free to contact: <a href="mailto:partners@u.today">partners@u.today</a>
+
+      form.submit-event__form(action="#" method="get")
+        .form__group
+          h2 1. Press release content
+
+          .input
+            label.input__label(for="title") Title
+            input#title.input__elem(type="text" name="title" placeholder="Name your story" required)
+
+          .input
+            label.input__label(for="description") Short description
+            input#description.input__elem(type="text" name="description" placeholder="170 symbols" required)
+
+          .input
+            label.input__label(for="content") Content
+            textarea#content.input__elem(name="content" placeholder="Full story" required)
+
+        .form__group
+          h2 2. Contacts
+
+          .input__row
+            .input
+              label.input__label(for="organization-name") Organization Name*
+              input#organization-name.input__elem(type="text" name="organization-name" placeholder="Your company’s name" required)
+
+            .input
+              label.input__label(for="email") Your email
+              input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+          .input__row
+            .input
+              label.input__label(for="website") Organization Website
+              input#website.input__elem(type="text" name="website" placeholder="sitename.com" required)
+
+            .input
+              label.input__label(for="name") Your name
+              input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .form__group
+          h2 3. Additional contacts 
+            span 💎 PREMIUM OPTION
+
+          p Advantages of premium version:
+
+          ul.list-check.list-check--one-col
+            li Permament link with “dofollow” to your site
+            li We make unique picture
+            li We promote the press release in our social media (facebook, twitter, telegram..)
+            li Place the press release on a homepage and in top of the category
+
+          .input
+            label.input__label(for="additional") Additional contacts
+            textarea#additional.input__elem(name="additional" placeholder="Sites, social networks, etc" required)
+
+          .input__row
+            .input
+              label.input__label(for="twitter") Twitter
+              input#twitter.input__elem(type="text" name="twitter" placeholder="twitter.com/" required)
+
+            .input
+              label.input__label(for="steemit") SteemIt
+              input#steemit.input__elem(type="text" name="steemit" placeholder="steemit.com/" required)
+
+          .input__row
+            .input
+              label.input__label(for="facebook") Facebook
+              input#facebook.input__elem(type="text" name="facebook" placeholder="facebook.com/" required)
+
+            .input
+              label.input__label(for="googleplus") Google+
+              input#googleplus.input__elem(type="text" name="googleplus" placeholder="plus.google.com/" required)
+
+          .input__row
+            .input
+              label.input__label(for="telegram") Telegram
+              input#telegram.input__elem(type="text" name="telegram" placeholder="telegram.me/" required)
+
+            .input
+              label.input__label(for="youtube") YouTube
+              input#youtube.input__elem(type="text" name="youtube" placeholder="youtube.com/" required)
+
+          .input__row
+            .input
+              label.input__label(for="linkedin") LinkedIn
+              input#linkedin.input__elem(type="text" name="linkedin" placeholder="linkedin.com/" required)
+
+            .input
+              label.input__label(for="github") GitHub
+              input#github.input__elem(type="text" name="github" placeholder="github.com/" required)
+
+          .input__row
+            .input
+              label.input__label(for="reddit") Reddit
+              input#reddit.input__elem(type="text" name="reddit" placeholder="reddit.com/" required)
+
+            .input
+              label.input__label(for="medium") Medium
+              input#medium.input__elem(type="text" name="medium" placeholder="medium.com/" required)
+
+          .input
+            .input__label Upload a picture of your logo
+            label
+              .btn.btn--big.btn--attach.btn--attach-dark Select file
+              input.input__file(type="file" name="file")
+
+        .form__group
+          h2 Almost there
+
+          .input__row
+            .input
+              button.btn.btn--input(type="submit") Submit free press release
+
+            .input
+              button.btn.btn--input.btn--accent(type="submit") Submit paid press release $200
+
+      p Having sent your premium press release, proceed to the payment by opening a new tab. The press release will be published only after receiving the transferred payment.
+
+      p U.Today has a right to refuse to publish your press release at any stage offering you a refund if and when it was paid for. Feel free to ask anything: <a href="mailto:events@u.today">events@u.today</a

@@ -1,0 +1,80 @@
+extends layouts/layout.pug
+
+block title
+  title Submit event | u.today
+
+block content
+  .content-container
+    main.event-block
+      h1.page-title Submit your Event on U.Today
+      p Intro text. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+      .table-plan
+        .table-plan__header
+          .table-plan__col
+          .table-plan__col Standard
+          .table-plan__col Premium
+
+        each item in tablePrice
+          .table-plan__row
+            .table-plan__col= item[0]
+              if item[3]
+                .table-plan__tip= item[3]
+            .table-plan__col
+              if item[1]
+                .icon.icon--check
+              else
+                .icon.icon--cross
+            .table-plan__col
+              .icon.icon--check
+
+        .table-plan__footer
+          .table-plan__col Cost
+          .table-plan__col Free
+          .table-plan__col
+            .table-plan__old-price $1000
+            | $800*
+
+        .table-plan__legend
+          .table-plan__col
+            .table-plan__tip *Untill December the 31
+            .table-plan__tip **50% discount from this price for media-partners
+
+      h3 Choose your Event plan
+
+      ul.tabs.tabs--devider
+        li.tabs__item(data-active-tab="standard")
+          button.tabs__btn.btn.btn--light Standard
+
+        li.tabs__item.tabs__item--active(data-active-tab="premium")
+          button.tabs__btn.btn.btn--light Premium
+
+
+      form.form--col(action="#" method="get" data-tab="standard")
+        .input.input--large-space
+          label.input__label(for="name") Your name
+          input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .input.input--large-space
+          label.input__label(for="email") Your email
+          input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW
+
+
+      form.form--col.active(action="#" method="get" data-tab="premium")
+        .input.input--large-space
+          label.input__label(for="name") Your name
+          input#name.input__elem(type="text" name="name" placeholder="John Doe" required)
+
+        .input.input--large-space
+          label.input__label(for="email") Your email
+          input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
+
+        .input.input--large-space
+          input#partner.input__checkbox(type="checkbox" name="partner" checked)
+          label.input__checkbox-label(for="partner") Media-partner
+
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW

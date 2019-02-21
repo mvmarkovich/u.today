@@ -1,0 +1,27 @@
+.news-categories
+  margin-bottom: 1.8rem @xl 2.8rem
+
+  &__title
+    text: $header-small
+    margin-bottom: 1rem
+
+  &__list
+    @extend .list-reset
+    box: wrap space-between
+
+  &__item
+    width: calc(50% - .5rem) @md calc(33% - .3rem)  @xl 31%
+    margin-bottom: .5rem
+
+    &-link
+      @extend .link-plain
+      text: $body-standart
+      display: block
+
+      &--singularity:before
+        content: ""
+        display: inline-block
+        background: resolve("logos/singularity.png") no-repeat center / contain
+        size: 8px 16px
+        margin-right: .35rem
+        margin-bottom: -2px

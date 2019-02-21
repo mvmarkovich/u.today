@@ -1,0 +1,39 @@
+.about-logo
+  size: 100% 50px @md 435px 65px @xl 652px 97px
+  background: svg-load("icons/logo.svg" fill: $pseudo-neutral-900) no-repeat left top / contain
+  margin-top: 2rem @md 3rem @xl 0
+  margin-bottom: @md-down 2.4rem
+
+.team
+  margin-top: 2.1rem @xl 3rem
+  order: 9
+
+  &__title
+    text: $header-tiny @md $header-small @xl $header-large
+    margin-bottom: 1.6rem
+
+  &__list
+    box: wrap
+    margin: * -.5rem @sm * -1rem
+
+  &__item
+    @extend .link-plain
+    display: block
+    text: $body-small
+    width: calc(50% - 1rem) @sm calc(100% / 3 - 2rem) @md calc(25% - 2rem) @xl calc(100% / 6 - 2rem)
+    margin-bottom: 1.6rem @sm 2rem
+    margin: * .5rem @sm * 1rem
+
+  &__img
+    @extend .img-cover
+    border-radius: 2px
+
+    &-wrapper
+      @extend .img-cover-wrapper
+      padding-top: 62.5%
+      margin-bottom: 1rem
+      background: svg-load("icons/greeting.svg", fill: 	#B0BFC6) no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
+      border-radius: 2px
+
+  &__post
+    text: $pseudo-neutral-400 $body-tiny

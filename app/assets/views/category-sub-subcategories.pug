@@ -1,0 +1,30 @@
+extends layouts/layout.pug
+
+block title
+  title Category subcategories | u.today
+
+block content
+  .main-aside-container
+    aside.aside-menu-block
+      .accordion.accordion--open
+        .accordion__title Subcategories
+        .accordion__body
+          ul.tabs.tabs--vertical
+            each item, i in nav[0].childs
+              li.tabs__item(class=[ i === 0 ? 'tabs__item--active' : '' ])
+                button.tabs__btn.btn.btn--light(onclick="tabsSub()")= item.name
+
+                ul.tabs__sub
+                  each itemChild, i in nav[1].childs
+                    li.tabs__sub-item
+                      button.tabs__btn.btn.btn--pseudo= itemChild.name
+
+
+    .main-category-block
+      include blocks/category-info.pug
+      include blocks/category-item-list.pug
+      include blocks/category-item-list.pug
+      include blocks/category-item-list.pug
+      include blocks/category-item-list.pug
+
+      a.btn.btn--block.btn--large(href="#!") Show more

@@ -1,0 +1,18 @@
+extends layouts/layout.pug
+
+block title
+  title Article | u.today
+
+block content
+  .content-container
+    main.main-block
+      include blocks/article-infinite-scroll.pug
+      +article-infinite-scroll(1)
+
+      .article-infinite-scroll
+        each i in [2,3,4,5,6,7,8,9]
+          +article-infinite-scroll(i)
+
+    aside.aside-block
+      include blocks/aside.pug
+

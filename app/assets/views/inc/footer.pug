@@ -1,0 +1,42 @@
+footer.footer
+  .footer__container
+    .footer__row
+      .footer__follow-us
+        .footer__title Follow us and get all crypto news 24/7
+
+        .social.social--border.social--wide
+          a.social__link.social__link--fb(href="#!")
+          a.social__link.social__link--tg(href="#!")
+          a.social__link.social__link--tw(href="#!")
+          a.social__link.social__link--yt(href="#!")
+          a.social__link.social__link--rd(href="#!")
+          a.social__link.social__link--rs(href="#!")
+
+      .footer__subscribe
+        .footer__title ✉ Subscribe to daily newsletter
+
+        form.form--row.footer__subscribe-form(target="#" method="get")
+          .input
+            input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+          .input
+            button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+          .footer__subscribe-agree By pressing the “Subscribe button” you agree with our 
+            a(href="#!") Privacy Policy
+
+    nav.footer__nav
+      ul.footer__nav-list
+        each category in navFooter
+          li.footer__nav-item
+            a.footer__nav-link(href="#!")= category.name
+
+            if category.childs
+              ul.footer__nav-child-list
+                each child in category.childs
+                  li.footer__nav-child-item
+                    a.footer__nav-child-link(href="#!")= child.name
+
+    .footer__copy
+      .footer__copy-text © 2018 U.Today. All rights reserved
+      a.footer__copy-link(href="#!") Terms and conditions

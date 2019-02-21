@@ -1,0 +1,13 @@
+extends layouts/layout.pug
+
+block title
+  title Modal | u.today
+
+block content
+  .content-container
+    .btns-spacer
+      .btn(data-modal="subscribe-form") subscribe old
+      .btn(data-modal="subscribe-form-title") subscribe new 1
+      .btn(data-modal="subscribe-form-text") subscribe new 2
+
+  include blocks/modal.pug

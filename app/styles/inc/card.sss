@@ -1,0 +1,56 @@
+.card
+  border: $border
+  border-radius: 2px
+  padding: 1.1rem .8rem 1rem 1rem @xl 1.4rem 1.8rem 2rem
+  overflow: hidden
+
+  & + &
+    margin-top: 1rem @xl 2rem
+
+  &--tweet
+    padding-top: @md-down .9rem
+
+    ^&__title:before
+      content: ""
+      display: inline-block
+      background: svg-load("icons/social/twitter.svg" fill: #1DA1F2)
+      size: 24px
+      margin-bottom: -0.4rem
+      margin-right: .5rem
+
+  &--no-padding
+    padding: 0 !important
+
+  &__title
+    text: $header-super-tiny @xl $header-tiny
+    margin-bottom: 1.1rem @xl 1.7rem
+    cursor: default
+
+  &__desc
+    text: $body-small
+    margin: -.2rem * .9rem @xl -.7rem * 1rem
+
+  &__list
+
+    &-item
+      border-top: 1px solid $pseudo-neutral-50
+      padding: .7rem * @xl 1rem *
+
+      &:last-child
+        padding-bottom: 0
+
+    &-title
+      text: $header-super-tiny @xl $header-tiny
+      margin-bottom: .5rem
+
+    &-link
+      text: $body-small
+      @extend .link-decorate
+
+  &__footer
+    margin-top: .9rem @xl 1.4rem
+
+  &--something
+    padding: 0 !important
+    border: 0
+    border-radius: 0

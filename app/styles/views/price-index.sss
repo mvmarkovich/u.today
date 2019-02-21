@@ -1,0 +1,44 @@
+.price-index
+
+  &__aside
+    border: $border
+    border-radius: 2px
+
+  &__title
+    text: $pseudo-neutral-400 $body-small
+
+  &__header
+    box: center space-between
+    border-bottom: $border
+    padding: 1rem 1rem
+
+  &__tabs
+    margin-bottom: -1rem
+
+  &__body
+    padding: .5rem *
+    max-height: 168px @md 490px
+    overflow: hidden
+
+    &--open
+      max-height: unset
+
+  &__coin
+
+    &-short
+      background: $neutral-100
+      text: $text-caps
+      border-radius: 2px
+      padding: .1rem .2rem
+      margin-left: .5rem
+
+    &-trand
+      margin-left: auto
+      padding-right: .5rem
+      text: $status-positive $text-caps
+
+      &--down
+        color: $status-negative
+
+  &__footer
+    padding: .2rem 1rem .5rem @xl 0 1rem 1rem
