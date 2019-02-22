@@ -684,6 +684,39 @@
         </div>
       </div>
       <div class="something--footer"></div>
+      <div class="subscribe">
+        <div class="error__form">
+          <div class="error__text">Please enter a valid e-mail</div>
+        </div>
+        <div class="done__form">
+          <div class="done__text">Successfully completed</div>
+        </div>
+        <div class="subscribe__content container">
+          <div class="subscribe__row">
+            <div class="subscribe__left">
+              <div class="subscribe__icons">🔥</div>
+              <div class="subscribe__subtitle">Get the latest news, tips and good insights to your inbox</div>
+            </div>
+            <form class="subscribe__form" id="subscribe__form" onsubmit="javascript:return validate('subscribe__form','subscribe__email');" action="">
+              <input class="subscribe__form_input" id="subscribe__email" type="text" name="email" placeholder="E-mail">
+              <div class="checkbox__block">
+                <div class="checkbox__block_item">
+                  <input id="subscribe__daily" type="checkbox">
+                  <label for="subscribe__daily">Daily</label>
+                </div>
+                <div class="checkbox__block_item">
+                  <input id="subscribe__weekly" type="checkbox">
+                  <label for="subscribe__weekly">Weekly</label>
+                </div>
+              </div>
+              <div class="btn__block">
+                <input class="btn" type="submit" value="Subscribe">
+              </div>
+            </form>
+            <div class="subscribe__close"></div>
+          </div>
+        </div>
+      </div>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__row">
@@ -772,39 +805,6 @@
       <div class="share-and-up"><a class="share__circle share__circle--tg" href="#!"></a><a class="share__circle share__circle--tw" href="#!"></a><a class="share__circle share__circle--fb" href="#!"></a><a class="share__circle share__circle--up" href="#"></a></div>
       <div class="share-post" id="share-post"><a class="share__square share__square--tg" id="share-post-link-tg" href="#!"></a><a class="share__square share__square--tw" id="share-post-link-tw" href="#!"></a><a class="share__square share__square--fb" id="share-post-link-fb" href="#!"></a>
         <button class="btn btn--light share__square share__square--close" onclick="shareHide()"></button>
-      </div>
-      <div class="subscribe">
-        <div class="error__form">
-          <div class="error__text">Please enter a valid e-mail</div>
-        </div>
-          <div class="done__form">
-              <div class="done__text">Successfully completed</div>
-          </div>
-        <div class="subscribe__content container">
-          <div class="subscribe__row">
-            <div class="subscribe__left">
-              <div class="subscribe__icons">🔥</div>
-              <div class="subscribe__subtitle">Get the latest news, tips and good insights to your inbox</div>
-            </div>
-            <form id="subscribe__form" onsubmit="javascript:return validate('subscribe__form','subscribe__email');" action="" class="subscribe__form">
-              <input type="text" name="email" id="subscribe__email" class="subscribe__form_input" placeholder="E-mail">
-              <div class="checkbox__block">
-                <div class="checkbox__block_item">
-                  <input id="subscribe__daily" type="checkbox">
-                  <label for="subscribe__daily">Daily</label>
-                </div>
-                <div class="checkbox__block_item">
-                  <input id="subscribe__weekly" type="checkbox">
-                  <label for="subscribe__weekly">Weekly</label>
-                </div>
-              </div>
-              <div class="btn__block">
-                <input type="submit" class="btn" value="Subscribe">
-              </div>
-            </form>
-            <div class="subscribe__close"></div>
-          </div>
-        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

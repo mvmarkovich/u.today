@@ -48,3 +48,25 @@ block content
       include blocks/aside.pug
 
   .something--footer
+  .subscribe
+    .error__form
+      .error__text Please enter a valid e-mail
+    .done__form
+      .done__text Successfully completed
+    .subscribe__content.container
+      .subscribe__row
+        .subscribe__left
+          .subscribe__icons 🔥
+          .subscribe__subtitle Get the latest news, tips and good insights to your inbox
+        form#subscribe__form.subscribe__form(onsubmit="javascript:return validate('subscribe__form','subscribe__email');", action='')
+          input#subscribe__email.subscribe__form_input(type='text', name='email', placeholder='E-mail')
+          .checkbox__block
+            .checkbox__block_item
+              input#subscribe__daily(type='checkbox')
+              label(for='subscribe__daily') Daily
+            .checkbox__block_item
+              input#subscribe__weekly(type='checkbox')
+              label(for='subscribe__weekly') Weekly
+          .btn__block
+            input.btn(type='submit', value='Subscribe')
+        .subscribe__close
