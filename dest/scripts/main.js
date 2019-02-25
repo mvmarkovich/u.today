@@ -148,15 +148,15 @@
 
     switch (currency) {
       case "usd":
-        console.log("set usd")
+        console.log("set usd");
         break;
 
       case "eur":
-        console.log("set eur")
+        console.log("set eur");
         break;
 
       case "rub":
-        console.log("set rub")
+        console.log("set rub");
         break;
     }
 
@@ -202,17 +202,17 @@
         return;
       }
 
-      var articlePrev = $("main > .article:nth-last-child(2)")[0];
+      var articlePrev = $(".main-block > .article:last").get(0);
       var articleRect = article.getBoundingClientRect();
       var articlePrevRect = articlePrev.getBoundingClientRect();
 
-      $articleContainer.height(articleRect.height)
+      $articleContainer.height(articleRect.height);
 
       if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.35 < 0) {
-        $(article).addClass("article--full-show")
+        $(article).addClass("article--full-show");
 
         var articleDetach = $(article).detach();
-        articlePrev.after(articleDetach[0]);
+        $(".main-block > .article:last").after(articleDetach[0]);
       }
 
       if (articleRect.top - viewHeight * 1.35 < 0) {
@@ -252,7 +252,7 @@ function share(tg, tw, fb) {
   let offset = {
     top: elemRect.top - bodyRect.top,
     left: elemRect.left - bodyRect.left
-  }
+  };
 
   shareBox.style.top = offset.top + "px";
   shareBox.style.left = offset.left + 34 + "px";
