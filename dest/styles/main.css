@@ -2940,6 +2940,10 @@ blockquote em {
   background-size: 14px 10px;
 }
 
+.form--col .input__select:valid {
+  line-height: 2.1875rem;
+}
+
 .article {
   position: relative;
   z-index: 5;
