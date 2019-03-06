@@ -148,15 +148,15 @@
 
     switch (currency) {
       case "usd":
-        console.log("set usd");
+        console.log("set usd")
         break;
 
       case "eur":
-        console.log("set eur");
+        console.log("set eur")
         break;
 
       case "rub":
-        console.log("set rub");
+        console.log("set rub")
         break;
     }
 
@@ -202,17 +202,17 @@
         return;
       }
 
-      var articlePrev = $(".main-block > .article:last").get(0);
+      var articlePrev = $("main > .article:nth-last-child(2)")[0];
       var articleRect = article.getBoundingClientRect();
       var articlePrevRect = articlePrev.getBoundingClientRect();
 
-      $articleContainer.height(articleRect.height);
+      $articleContainer.height(articleRect.height)
 
       if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.35 < 0) {
-        $(article).addClass("article--full-show");
+        $(article).addClass("article--full-show")
 
         var articleDetach = $(article).detach();
-        $(".main-block > .article:last").after(articleDetach[0]);
+        articlePrev.after(articleDetach[0]);
       }
 
       if (articleRect.top - viewHeight * 1.35 < 0) {
@@ -229,6 +229,10 @@
       $(window).on("resize", articleInfiniteScroll);
     });
   }
+
+  $(".price-index__header .btn").on("click", function() {
+    $(" .price-index__aside").toggleClass("active");
+  });
 
 })(jQuery);
 
@@ -252,7 +256,7 @@ function share(tg, tw, fb) {
   let offset = {
     top: elemRect.top - bodyRect.top,
     left: elemRect.left - bodyRect.left
-  };
+  }
 
   shareBox.style.top = offset.top + "px";
   shareBox.style.left = offset.left + 34 + "px";
@@ -277,24 +281,3 @@ function tabsSub() {
 }
 
 
-function validate(subscribe__form,subscribe__email) {
-  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  var address = document.forms[subscribe__form].elements[subscribe__email].value;
-  if(reg.test(address) == false) {
-    $(".subscribe").addClass("invalid-form");
-    $(".subscribe").removeClass("valid-form");
-    return false;
-  } else{
-    $(".subscribe").removeClass("invalid-form");
-    $(".subscribe").addClass("valid-form");
-
-    setTimeout(function(){
-      $(".subscribe").addClass("hide__transition");
-    }, 1500);
-    return false;
-  }
-}
-
-$(".subscribe__close").on("click", function() {
-  $(".subscribe").addClass("hide");
-});

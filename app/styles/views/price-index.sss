@@ -7,13 +7,18 @@
   &__title
     text: $pseudo-neutral-400 $body-small
 
-  &__header
+
+  &__tabs-item
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+
+
+  &__table
     box: center space-between
     border-bottom: $border
-    padding: 1rem 1rem
-
-  &__tabs
-    margin-bottom: -1rem
+    padding: 0 16px
+    background: #CFD8DC
 
   &__body
     padding: .5rem *
@@ -42,3 +47,19 @@
 
   &__footer
     padding: .2rem 1rem .5rem @xl 0 1rem 1rem
+
+.price-index_chart
+  margin-bottom: 5rem
+  .tradingview-widget-container
+    height: 368px !important
+    width: 100% !important
+    iframe
+      height: 100% !important
+      width: 100% !important
+  &.chart-row
+    display: flex
+    justify-content: space-between
+    .tradingview-widget-container
+      width: 100% !important
+      max-width: 352px
+

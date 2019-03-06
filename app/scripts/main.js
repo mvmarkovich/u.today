@@ -230,6 +230,10 @@
     });
   }
 
+  $(".price-index__header .btn").on("click", function() {
+    $(" .price-index__aside").toggleClass("active");
+  });
+
 })(jQuery);
 
 //
@@ -275,3 +279,5 @@ function showMore(elem) {
 function tabsSub() {
   event.target.parentNode.classList.toggle("tabs__item--sub-open");
 }
+
+
