@@ -4934,7 +4934,6 @@ transition {
 @media (min-width: 785px) {
   .container {
     max-width: 768px;
-    overflow-x: hidden;
   }
 
   .hide-md-up {

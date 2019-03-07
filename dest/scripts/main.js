@@ -202,7 +202,7 @@
         return;
       }
 
-      var articlePrev = $("main > .article:nth-last-child(2)")[0];
+      var articlePrev = $(".main-block > .article:last").get(0);
       var articleRect = article.getBoundingClientRect();
       var articlePrevRect = articlePrev.getBoundingClientRect();
 
@@ -212,7 +212,7 @@
         $(article).addClass("article--full-show")
 
         var articleDetach = $(article).detach();
-        articlePrev.after(articleDetach[0]);
+        $(".main-block > .article:last").after(articleDetach[0]);
       }
 
       if (articleRect.top - viewHeight * 1.35 < 0) {
@@ -291,6 +291,6 @@ function validate(subscribe__form,subscribe__email) {
 
 $(".subscribe__close").on("click", function() {
   $(".subscribe").addClass("hide");
-}); 
+});
 
 
