@@ -280,4 +280,17 @@ function tabsSub() {
   event.target.parentNode.classList.toggle("tabs__item--sub-open");
 }
 
+function validate(subscribe__form,subscribe__email) {
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var address = document.forms[subscribe__form].elements[subscribe__email].value;
+  if(reg.test(address) == false) {
+    $(".subscribe").addClass("invalid-form");
+    return false;
+  }
+}
+
+$(".subscribe__close").on("click", function() {
+  $(".subscribe").addClass("hide");
+}); 
+
 

@@ -7151,6 +7151,15 @@ transition {
   padding: 0 16px;
 }
 
+.price-index__header .btn:hover{
+  border-color: inherit;
+  color: inherit;
+}
+
+.price-index__header  .btn--arrow-down-before:hover:before{
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 10L12 15L17 10H7Z'/%3E %3C/svg%3E");
+}
+
 .price-index__header .btn:before{
   position: absolute;
   right: 15px;

@@ -99,7 +99,7 @@ html(lang="en" dir="ltr" ⚡)
           include ../img/icons/burger.svg
 
 
-      .article
+      .article.amp-article
         section.article__amp-summary
           a.humble.humble--link(href="#!")
             amp-img.humble__img(src="https://dummyimage.com/24x24/d8dbde/aaa" layout="fixed" width="24" height="24")
@@ -275,9 +275,34 @@ html(lang="en" dir="ltr" ⚡)
 
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum tempora quae minus a nam, quis labore eligendi nisi pariatur inventore possimus excepturi. Quis quia fugiat hic porro. Omnis voluptas fugiat vero tempora maxime beatae, odio assumenda earum pariatur, id, reiciendis a dolore? Ipsam deleniti corrupti nisi aliquid ipsa ad dignissimos ipsum adipisci rem, odit fugiat odio incidunt earum quisquam quibusdam magni, deserunt sequi! Quae, sed cumque excepturi facere, blanditiis repellendus repudiandae laboriosam nulla pariatur et, magnam itaque totam recusandae!
 
-          .continue
-            a.btn.btn--large(href="#!") Continue reading
+        .continue.amp_descr-continue
+          a.btn.btn--large(href="#!") Continue reading
+      .amp-subscribe
+        .subscribe__content.container
+          .subscribe_btn__block
+            a.subscribe_btn(href="#!")
+              span.descr Our Telegram Channel
+              span.icon.telegram
+      .amp-subscribe.amp-subscribe_no-fix
+        .subscribe__content.container
+          .subscribe__content__description
+            .subscribe__text
+              .subscribe__descr 🔥 Only the most important posts per day. Infographics, analytics, reviews & summaries:
+          .subscribe_btn__block
+            a.subscribe_btn(href="#!")
+              span.descr Subscribe to updates
+              span.icon.bell
+      section.article__amp-recommended
+        .article__amp-recommended-title 💼 Related articles
 
+        .article__article__amp-recommended-list
+          each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+            article.article__amp-recommended-item
+              a.article__amp-recommended-item-link(href="#!")
+                amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                .article__amp-recommended-item-title= item
+
+        a.btn.btn--large(href="#!") More articles
       footer.footer
         .footer__container
           .footer__row
