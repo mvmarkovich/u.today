@@ -98,13 +98,13 @@ html(lang="en" dir="ltr" ⚡)
         button.mobile-menu__btn(on="tap:sidebar.toggle")
           include ../img/icons/burger.svg
 
-      .header_article
+      a.header_article(href="#!")
         .header_article__row
           .header_article__descr
             .title-mark 🔥 TOP STORY
-            a.header_article__title(href='#')
+            .header_article__title
               | Ethereum Price Analysis from Twitter: From $145 to $200 and Higher? What’s the Chance of Ethereum Breaking Out?
-          a.header_article__image(href='#')
+          .header_article__image
             .image
               amp-img(src='img/content/article_header/item_1.png', width="96px" height="64px" alt='')
       .article.amp-article
@@ -282,14 +282,15 @@ html(lang="en" dir="ltr" ⚡)
             em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
 
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse illum tempora quae minus a nam, quis labore eligendi nisi pariatur inventore possimus excepturi. Quis quia fugiat hic porro. Omnis voluptas fugiat vero tempora maxime beatae, odio assumenda earum pariatur, id, reiciendis a dolore? Ipsam deleniti corrupti nisi aliquid ipsa ad dignissimos ipsum adipisci rem, odit fugiat odio incidunt earum quisquam quibusdam magni, deserunt sequi! Quae, sed cumque excepturi facere, blanditiis repellendus repudiandae laboriosam nulla pariatur et, magnam itaque totam recusandae!
-
-        .continue
-      .amp-subscribe
-        .subscribe__content.container
-          .subscribe_btn__block
-            a.subscribe_btn(href="#!")
-              span.descr Our Telegram Channel
-              span.icon.telegram
+      .fix-block
+        .continue.amp_descr-continue
+          a.btn.btn--large(href="#!") Continue reading
+        .amp-subscribe
+          .subscribe__content.container
+            .subscribe_btn__block
+              a.subscribe_btn(href="#!")
+                span.descr Subscribe to updates
+                span.icon.bell
       .amp-subscribe.amp-subscribe_no-fix
         .subscribe__content.container
           .subscribe__content__description
@@ -297,10 +298,9 @@ html(lang="en" dir="ltr" ⚡)
               .subscribe__descr 🔥 Only the most important posts per day. Infographics, analytics, reviews & summaries:
           .subscribe_btn__block
             a.subscribe_btn(href="#!")
-              span.descr Subscribe to updates
-              span.icon.bell
-      .amp_descr-continue
-        a.btn.btn--large(href="#!") Continue reading
+              span.descr Our Telegram Channel
+              span.icon.telegram
+
       section.article__amp-recommended
         .article__amp-recommended-title 💼 Related articles
 
