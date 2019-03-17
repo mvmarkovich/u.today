@@ -1,0 +1,345 @@
+include inc/var.pug
+doctype html
+html(lang="en" dir="ltr" ⚡)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+
+        script(async="" src="https://cdn.ampproject.org/v0.js")
+
+        style(amp-boilerplate='').
+            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+        noscript
+            style(amp-boilerplate='').
+                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+
+        script(custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js', async='')
+        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+
+        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+
+        style(amp-custom="")
+            include ../../../dest/styles/amp.css
+
+        //- link(href="styles/amp.css" rel="stylesheet")
+
+        script(type='application/ld+json').
+            {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://google.com/article"
+            },
+            "headline": "Article headline",
+            "image": {
+            "@type": "ImageObject",
+            "url": "https://google.com/thumbnail1.jpg",
+            "height": 800,
+            "width": 800
+            },
+            "datePublished": "2015-02-05T08:00:00+08:00",
+            "dateModified": "2015-02-05T09:20:00+08:00",
+            "author": {
+            "@type": "Person",
+            "name": "John Doe"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Google",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://google.com/logo.jpg",
+            "width": 600,
+            "height": 60
+            }
+            },
+            "description": "A most wonderful article"
+            }
+
+
+    body
+
+        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+                include ../img/icons/cross.svg
+
+            .sidebar__social.social
+                a.social__link.social__link--fb(href='#!fb')
+                a.social__link.social__link--tg(href='#!tg')
+                a.social__link.social__link--tw(href='#!tw')
+                a.social__link.social__link--em(href='#!em')
+
+            .sidebar__lang
+                .sidebar__lang-item.active
+                    a.sidebar__lang-link(href='#!en') English
+                .sidebar__lang-item
+                    a.sidebar__lang-link(href='#!es') Español
+
+            nav.sidebar__nav
+                ul.sidebar__nav-list
+                    each category in navFooter
+                        li.sidebar__nav-item
+                            a.sidebar__nav-link(href="#!")= category.name
+
+                            if category.childs
+                                ul.sidebar__nav-child-list
+                                    each child in category.childs
+                                        li.sidebar__nav-child-item
+                                            a.sidebar__nav-child-link(href="#!")= child.name
+
+        .container.page-container.amp_page-container.article_new
+            header.header
+                a.header__logo(href="/")
+                    include ../img/icons/logo.svg
+
+                button.mobile-menu__btn(on="tap:sidebar.toggle")
+                    include ../img/icons/burger.svg
+
+            a.header_article(href="#!")
+                .header_article__row
+                    .header_article__descr
+                        .title-mark 🔥 TOP STORY
+                        .header_article__title
+                            | Ethereum Price Analysis from Twitter: From $145 to $200 and Higher? What’s the Chance of Ethereum Breaking Out?
+                    .header_article__image
+                        .image
+                            amp-img(src='img/content/article_header/item_1.png', width="96px" height="64px" alt='')
+            .article
+                .article_new__header
+                    .row
+                        .switch
+                            a.switch_arrow.switch_back(href='')
+                            span list articles
+                            a.switch_arrow.switch_next(href='')
+                        .humble.humble--views 123k
+                        .humble.humble--like 31
+                        .humble.humble--chat 256
+                h1.article__title
+                    | Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+                    .title-mark 🔥 Hot
+                section.author_block
+                    ul.author__list
+                        li.author__item
+                            .author__item-header
+                                .author__item-user
+                                    amp-img.author__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa' width="40" height="40")
+                                .right
+                                    .author__item-wrapper
+                                        .author__item-name.humble Konstantin Konstantinopolsky
+                                        time.author__item-time.humble Oct 27’2018, 11:27 AM
+                                        .author__item-tag.humble ⭐ Featured
+                                    .author__item-body
+                                        .author__item-msg
+                                            p
+                                                | I did some quite research, checked a hefty load of sources and here’s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
+                .article__main-img-wrapper
+                    amp-img(src='https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz', layout='responsive', width='16', height='10', i-amphtml-layout='responsive')
+                        i-amphtml-sizer(style='padding-top: 62.5%;')
+                        img.i-amphtml-fill-content.i-amphtml-replaced-content(decoding='async', src='https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz')
+                    .under_article__main-img
+                        .title You may also like:
+                        ul.under_main-img__list
+                            li.under_main-img__item
+                                | 🔥
+                                span.red TOP STORY
+                                |  Bitcoin Price Prediction for November: The Market Is Wound Up and Waiting
+                            li.under_main-img__item
+                                | 🚀 Original Bitcoin Fork, BCH, Gets Exchanges’ Seal of Approval for Upcoming Fork
+                            li.under_main-img__item
+                                | 💎 Brave Rewards Now Available for Android
+                section.article__content
+                    p
+                        | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
+                        a.link-text(href='#!') Crypto Invest Summit
+                        | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
+                    h2 Women of Crypto as opening act
+                    p
+                        | It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
+                    p
+                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                    h2 Ladies only
+                    p
+                        | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:
+                    p
+                        | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
+                        a.link-text(href='#!') Crypto Invest Summit
+                        | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
+                    p
+                        | It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
+                    .article__related
+                        .article__related-body
+                            a.article__related-link.link-plain(href='#!')
+                                | 👉 MUST READ Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
+                        a(href='#!')
+                            amp-img.article__related-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp' width="95px" height="59px")
+                    p
+                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                    blockquote
+                        p
+                            | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
+                            a.link-text(href='#!') made up roughly 20 percent
+                            |  of the speakers.
+                    p
+                        | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
+                    ul
+                        li This is a sample of a list.
+                        li
+                            | Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.
+                        li
+                            | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
+                    h2 Scaling community and activism
+                    p
+                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                section.article__panel
+                    section.article__tags.btns-spacer
+                        a.btn.btn--hash-tag(href='#!') #MaltaBlockchainSummit
+                        a.btn.btn--hash-tag(href='#!') #Bitcoin
+                        a.btn.btn--hash-tag(href='#!') #Processor
+                    .article__panel-row
+                        .article__panel-col
+                            .left
+                                .humble.humble--like 31
+                                .humble.humble--favorites 17
+                            .humble.humble--views 123.5k
+                section.comments
+                    section.author_block.comments_block
+                        ul.author__list
+                            li.author__item
+                                .author__item-header
+                                    .author__item-user
+                                        amp-img.author__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa' width="40" height="40")
+                                    .right
+                                        .author__item-wrapper
+                                            .author__item-name.humble Konstantin Konstantinopolsky
+                                            .author__item-position.humble Author
+                                            time.author__item-time.humble Oct 27’2018, 11:27 AM
+                                        .author__item-body
+                                            .title
+                                                | So what do you think about crypto women at that summit?
+                                        .comments__add
+                                            button.comments__add-attach.btn.btn--light.btn--attach
+                                            form(action='#')
+                                                .input
+                                                    textarea.input__elem(name='msg', placeholder='So why not write your own?', required='')
+                                        .comments_block__bottom
+                                            .humble.humble--chat 256
+                                            .right
+                                                ul.comments__tabs.tabs
+                                                    li.tabs__item.tabs__item--active
+                                                        button.tabs__btn.btn.btn--light.active Popular
+                                                    li.tabs__item
+                                                        button.tabs__btn.btn.btn--light Recent
+                    ul.comments__list
+                        li.comments__item
+                            .comments__item-header
+                                .comments__item-user
+                                    amp-img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa' width="40" height="40")
+                                .right
+                                    .comments__item-wrapper
+                                        .comments__item-user-name John Blazkovic
+                                        time.comments__item-time 28 Oct, 11:45 AM
+                                    .comments__item-body
+                                        .comments__item-msg
+                                            p
+                                                | Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+                            .comments__item-footer
+                                button.comments__item-reply.btn.btn--light Reply
+                                button.comments__item-more.btn.btn--light.btn--more
+                                .comments__item-rating.rating.rating--positive.rating--tiny
+                                    button.btn.btn--light.btn--rating-down
+                                    .rating__value 28
+                                    button.btn.btn--light.btn--rating-up
+                        li.comments__item.comments__item__two-level
+                            .comments__item-header
+                                .comments__item-user
+                                    amp-img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa' width="40" height="40")
+                                .right
+                                    .comments__item-wrapper
+                                        .comments__item-user-name Bob Stewarts
+                                        time.comments__item-time 28 Oct, 11:45 AM
+                                    .comments__item-body
+                                        .comments__item-msg
+                                            p You’re so full of shiness
+                                            p
+                                                | Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+                            .comments__item-footer
+                                button.comments__item-reply.btn.btn--light Reply
+                                button.comments__item-more.btn.btn--light.btn--more
+                                .comments__item-rating.rating.rating--positive.rating--tiny
+                                    button.btn.btn--light.btn--rating-down
+                                    .rating__value 28
+                                    button.btn.btn--light.btn--rating-up
+                    .comments__footer
+                        button.btn.btn--block.btn--large Show 254 more comments
+
+            .fix-block
+                .amp-subscribe
+                    .continue.amp_descr-continue
+                        a.btn.btn--large(href="#!") Continue reading
+                            span.icon_fair 🔥
+            .amp-subscribe.amp-subscribe_no-fix
+                .subscribe__content.container
+                    .subscribe__content__description
+                        .subscribe__text
+                            .subscribe__descr 🔥 Only the most important posts per day. Infographics, analytics, reviews & summaries:
+                    .subscribe_btn__block
+                        a.subscribe_btn(href="#!")
+                            span.descr Our Telegram Channel
+                            span.icon.telegram
+
+            section.article__amp-recommended
+                .article__amp-recommended-title 💼 Related articles
+
+                .article__article__amp-recommended-list
+                    each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+                        article.article__amp-recommended-item
+                            a.article__amp-recommended-item-link(href="#!")
+                                amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                                .article__amp-recommended-item-title= item
+
+                a.btn.btn--large(href="#!") More articles
+            footer.footer
+                .footer__container
+                    .footer__row
+                        .footer__follow-us
+                            .footer__title Follow us and get all crypto news 24/7
+
+                            .social.social--border.social--wide
+                                a.social__link.social__link--fb(href="#!")
+                                a.social__link.social__link--tg(href="#!")
+                                a.social__link.social__link--tw(href="#!")
+                                a.social__link.social__link--yt(href="#!")
+                                a.social__link.social__link--rd(href="#!")
+                                a.social__link.social__link--rs(href="#!")
+
+                        .footer__subscribe
+                            .footer__title ✉ Subscribe to daily newsletter
+
+                            form.form--row.footer__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
+                                .input
+                                    input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+                                .input
+                                    button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+                                .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
+                                    a(href="#!") Privacy Policy
+
+                    nav.footer__nav
+                        ul.footer__nav-list
+                            each category in navFooter
+                                li.footer__nav-item
+                                    a.footer__nav-link(href="#!")= category.name
+
+                                    if category.childs
+                                        ul.footer__nav-child-list
+                                            each child in category.childs
+                                                li.footer__nav-child-item
+                                                    a.footer__nav-child-link(href="#!")= child.name
+
+                    .footer__copy
+                        .footer__copy-text © 2018 U.Today. All rights reserved
+                        a.footer__copy-link(href="#!") Terms and conditions

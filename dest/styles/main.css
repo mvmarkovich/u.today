@@ -7822,6 +7822,9 @@ transition {
   .article_new .comments__item-rating{
     flex-direction: row;
   }
+  .article_new .comments__item__two-level{
+    margin-left: 35px;
+  }
 }
 
 @media screen and (max-width: 479px){
