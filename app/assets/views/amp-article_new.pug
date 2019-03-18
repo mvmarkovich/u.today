@@ -140,14 +140,14 @@ html(lang="en" dir="ltr" ⚡)
                     amp-img(src='https://u.today/sites/default/files/styles/880/public/2018-11/Colorado%20watchdog%20gets%20rid%20of%20fraud%20ICOs.jpg?itok=k4gorROz', layout='responsive', width='16', height='10')
                     .under_article__main-img
                         .title You may also like:
-                        ul.under_main-img__list
-                            li.under_main-img__item
+                        .under_main-img__list
+                            a.under_main-img__item(href="#!")
                                 | 🔥
                                 span.red TOP STORY
                                 |  Bitcoin Price Prediction for November: The Market Is Wound Up and Waiting
-                            li.under_main-img__item
+                            a.under_main-img__item(href="#!")
                                 | 🚀 Original Bitcoin Fork, BCH, Gets Exchanges’ Seal of Approval for Upcoming Fork
-                            li.under_main-img__item
+                            a.under_main-img__item(href="#!")
                                 | 💎 Brave Rewards Now Available for Android
                 section.article__content
                     p
@@ -168,12 +168,12 @@ html(lang="en" dir="ltr" ⚡)
                         | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
                     p
                         | It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
-                    .article__related
+                    a.article__related(href='#!')
                         .article__related-body
-                            a.article__related-link.link-plain(href='#!')
-                                | 👉 MUST READ Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
-                        a(href='#!')
-                            amp-img.article__related-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp' width="95px" height="59px")
+                            .article__related-link
+                                | 👉 <span class="red">MUST READ</span> Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
+                        .article__related_img
+                            amp-img.article__related-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp' width="88px" height="59px")
                     p
                         | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
                     blockquote
@@ -206,8 +206,7 @@ html(lang="en" dir="ltr" ⚡)
             .fix-block
                 .amp-subscribe
                     .continue.amp_descr-continue
-                        a.btn.btn--large(href="#!") Continue reading
-                            span.icon_fair 🔥
+                        a.btn.btn--large(href="#!") <span class="icon">👉</span>Continue reading
             .amp-subscribe.amp-subscribe_no-fix
                 .subscribe__content.container
                     .subscribe__content__description
