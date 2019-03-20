@@ -6541,6 +6541,7 @@ transition {
     background: #fff;
     padding-top: .8rem;
     padding-bottom: 1.7rem;
+    height: 100%;
   }
 
   .header__nav-item:hover:before {
@@ -6602,6 +6603,7 @@ transition {
     right: -16px;
     width: 205px;
     display: block;
+    height: 100vh;
   }
 
   .mobile-menu-back.show {
@@ -7394,6 +7396,7 @@ transition {
 
 .article_new .author_block .author__item-name{
   font-size: 15px;
+  cursor: pointer;
 }
 
 .article_new .comments__item-reply{
@@ -7943,4 +7946,9 @@ transition {
   .index-price .price-index__tabs .price-index__title{
     width: 55px;
   }
+}
+
+.article_new .comments__item-user-name{
+  text-decoration: none;
+  color: #263238;
 }
