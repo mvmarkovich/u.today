@@ -7245,6 +7245,10 @@ transition {
   }
   .index-price .aside-menu-block{
     max-width: 100%;
+    display: block;
+  }
+  .index-price .aside-block{
+    display: block;
   }
   .index-price .main-category-block{
     width: 100%;
@@ -7681,7 +7685,8 @@ transition {
   font-weight: 600;
 }
 
-.article_new .link-text{
+
+.article_new .article__content a{
   text-decoration: none;
   border-bottom: 0;
   color: #2196F3;

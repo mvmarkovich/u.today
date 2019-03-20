@@ -230,8 +230,8 @@
     });
   }
 
-  $(".price-index__header .btn").on("click", function() {
-    $(" .price-index__aside").toggleClass("active");
+  $(".index-price .price-index__header .btn").on("click", function() {
+    $(".index-price .price-index__aside").toggleClass("active");
   });
 
 })(jQuery);
