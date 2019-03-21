@@ -1,0 +1,86 @@
+extends layouts/layout.pug
+
+block title
+    title Author | u.today
+
+block content
+    .content-container
+        main.main-block
+            .author-block
+                .author-block__name Konstantin Konstantinopolsky
+                .author-block__image
+                    img(src="img/content/author_page/author_avatar.png")
+                .author-block__description
+                    p Alex covers all things crypto — from major projects, which are fighting tooth and nail to gain the upper hand in the burgeoning industry, to the latest regulatory trends around the world.
+                    p He’s a firm believer that Blockchain has the potential to reshape pretty much every business out there, and cryptocurrencies are only a stepping stone to the upcoming decentralized revolution.
+        aside.aside-block
+            a.card.card--related(href="#!")
+                .related_body
+                    .title-mark 🔥 TOP STORY
+                    .related_link Ethereum Price Analysis from Twitter: From $145 to $200 and Higher? What’s the Chance of Ethereum Breaking Out?
+                .related_img
+                    img.related-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+            section.card
+                .card__title &#x2709; Got no time? Subscribe!
+                .card__body
+                    form.form--col(action='#' method='get')
+                        .input
+                            input.input__elem(type='text' name='email' placeholder='Email' required='')
+                        .input
+                            button.btn.btn--input(type='submit') Subscribe
+                    .text-tiny
+                        | By pressing the &ldquo;Subscribe button&rdquo; you agree with our <a href='#!'> Privacy Policy</a>
+            section.card.card--something
+                .something
+                    img(src='img/something/square.png' width='300' height='250' alt='something-square')
+
+
+        section.author-article
+            .news-featured__header
+                .news-featured__title Konstantin’s articles
+
+            .news-featured__list
+                each item in newsFeatured
+                    article.news-featured__item
+                        a.news-featured__item-link(href="#!")
+                            .news-featured__item-img-wrapper
+                                img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
+                            .news-featured__item-title= item.title
+                        .news-featured__item-info
+                            time.humble.humble--tiny Nov 07
+                            a.humble.humble--comments.humble--tiny(href="#!") 256
+                            .humble.humble--views.humble--tiny(href="#!") 123.5k
+                            button.humble.humble--share.humble--tiny Share
+                each item in newsFeatured
+                    article.news-featured__item
+                        a.news-featured__item-link(href="#!")
+                            .news-featured__item-img-wrapper
+                                img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
+                            .news-featured__item-title= item.title
+                        .news-featured__item-info
+                            time.humble.humble--tiny Nov 07
+                            a.humble.humble--comments.humble--tiny(href="#!") 256
+                            .humble.humble--views.humble--tiny(href="#!") 123.5k
+                            button.humble.humble--share.humble--tiny Share
+                each item in newsFeatured
+                    article.news-featured__item
+                        a.news-featured__item-link(href="#!")
+                            .news-featured__item-img-wrapper
+                                img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
+                            .news-featured__item-title= item.title
+                        .news-featured__item-info
+                            time.humble.humble--tiny Nov 07
+                            a.humble.humble--comments.humble--tiny(href="#!") 256
+                            .humble.humble--views.humble--tiny(href="#!") 123.5k
+                            button.humble.humble--share.humble--tiny Share
+                each item in newsFeatured
+                    article.news-featured__item
+                        a.news-featured__item-link(href="#!")
+                            .news-featured__item-img-wrapper
+                                img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
+                            .news-featured__item-title= item.title
+                        .news-featured__item-info
+                            time.humble.humble--tiny Nov 07
+                            a.humble.humble--comments.humble--tiny(href="#!") 256
+                            .humble.humble--views.humble--tiny(href="#!") 123.5k
+                            button.humble.humble--share.humble--tiny Share
