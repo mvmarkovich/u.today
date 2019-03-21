@@ -7352,7 +7352,8 @@ transition {
 
 .article_new .author_block .author__item-user-avatar{
   width: 64px;
-  height: 64px;
+height: 64px;
+    border-radius: 2px;
 }
 
 .article_new .author_block .author__item-msg p{
