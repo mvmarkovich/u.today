@@ -8078,3 +8078,10 @@ transition {
     margin: 1.5rem 0;
   }
 }
+
+
+@media screen and (max-width: 784px){
+  .news__item + .news__item{
+    margin-top: 1rem;
+  }
+}
