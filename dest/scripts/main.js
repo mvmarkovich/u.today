@@ -233,7 +233,9 @@
   $(".index-price .price-index__header .btn").on("click", function() {
     $(".index-price .price-index__aside").toggleClass("active");
   });
-
+  $(".subscribe__close").on("click", function() {
+    $(".subscribe").addClass("hide");
+  });
 })(jQuery);
 
 //
@@ -288,9 +290,5 @@ function validate(subscribe__form,subscribe__email) {
     return false;
   }
 }
-
-$(".subscribe__close").on("click", function() {
-  $(".subscribe").addClass("hide");
-});
 
 
