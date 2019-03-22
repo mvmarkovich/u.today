@@ -110,17 +110,11 @@ html(lang="en" dir="ltr" ⚡)
             .article
                 .article_new__header
                     .row
-                        .switch
-                            a.switch_arrow.switch_back(href='')
-                                span Prev
-                            a.switch_arrow.switch_next(href='')
-                                span Next article
+                        time.author__item-time.humble Oct 27’2018, 11:27 AM
                         .humble.humble--views 123k
                         .humble.humble--like 31
                         .humble.humble--chat 256
-                h1.article__title
-                    | Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
-                    .title-mark 🔥 Hot
+                h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
 
                 section.author_block
                     ul.author__list
@@ -131,7 +125,6 @@ html(lang="en" dir="ltr" ⚡)
                                 .right
                                     .author__item-wrapper
                                         a.author__item-name.humble(href="#!") Konstantin Konstantinopolsky
-                                        time.author__item-time.humble Oct 27’2018, 11:27 AM
                                         .author__item-tag.humble ⭐ Featured
                                     .author__item-body
                                         .author__item-msg
@@ -155,20 +148,6 @@ html(lang="en" dir="ltr" ⚡)
                         | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
                         a.link-text(href='#!') Crypto Invest Summit
                         | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
-                    h2 Women of Crypto as opening act
-                    p
-                        | It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
-                    p
-                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-                    h2 Ladies only
-                    p
-                        | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:
-                    p
-                        | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
-                        a.link-text(href='#!') Crypto Invest Summit
-                        | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
-                    p
-                        | It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
                     a.article__related(href='#!')
                         .article__related-body
                             .article__related-link
@@ -182,17 +161,24 @@ html(lang="en" dir="ltr" ⚡)
                             | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
                             a.link-text(href='#!') made up roughly 20 percent
                             |  of the speakers.
-                    p
-                        | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
-                    ul
-                        li This is a sample of a list.
-                        li
-                            | Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.
-                        li
-                            | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
-                    h2 Scaling community and activism
-                    p
-                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                    table
+                        tbody
+                            tr
+                                td Subunit
+                                td Symbol
+                                td Value (of 1 BTC)
+                            tr
+                                td 'millibit'
+                                td mBTC
+                                td 1/1000
+                            tr
+                                td ‘bit’
+                                td μBTC
+                                td 1⁄1000000
+                            tr
+                                td ‘satoshi’
+                                td satoshi
+                                td 1⁄100000000
                 section.article__panel
                     section.article__tags.btns-spacer
                         a.btn.btn--hash-tag(href='#!') #MaltaBlockchainSummit
@@ -205,9 +191,11 @@ html(lang="en" dir="ltr" ⚡)
                                 .humble.humble--favorites 17
                             .humble.humble--views 123.5k
             .fix-block
-                .amp-subscribe
-                    .continue.amp_descr-continue
-                        a.btn.btn--large(href="#!") <span class="icon">👉</span>Continue reading
+                .row
+                    .amp_descr-continue
+                        a.btn(href="#!") <span class="icon">👉</span>Continue reading
+                    .switch
+                        a.btn(href='#!') Next article <span class="icon">🚀</span>
             .amp-subscribe.amp-subscribe_no-fix
                 .subscribe__content.container
                     .subscribe__content__description
@@ -217,18 +205,6 @@ html(lang="en" dir="ltr" ⚡)
                         a.subscribe_btn(href="#!")
                             span.descr Our Telegram Channel
                             span.icon.telegram
-
-            section.article__amp-recommended
-                .article__amp-recommended-title 💼 Related articles
-
-                .article__article__amp-recommended-list
-                    each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
-                        article.article__amp-recommended-item
-                            a.article__amp-recommended-item-link(href="#!")
-                                amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
-                                .article__amp-recommended-item-title= item
-
-                a.btn.btn--large(href="#!") More articles
             footer.footer
                 .footer__container
                     .footer__row
