@@ -8203,13 +8203,11 @@ transition {
 }
 
 @media screen and (max-width: 380px){
-  .fix-block{
-    right: auto;
-    left: 3px;
-    bottom: calc(2rem + 48px);
+  .fix-block .switch{
+    max-width: 135px;
   }
-  .fix-block .row{
-    justify-content: flex-start;
+  .share__circle{
+    width: 20px;
   }
   .footer{
     z-index: 100;
