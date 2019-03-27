@@ -1767,11 +1767,7 @@ blockquote em {
 }
 
 .share__circle--fb,.share__circle--tg,.share__circle--tw {
-  -webkit-animation-name: rollIn;
-  animation-name: rollIn;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  opacity: 0;
+  opacity: 1;
 }
 
 .share__circle--tg {
@@ -2708,19 +2704,23 @@ blockquote em {
 }
 
 .header_article {
-  margin: 1rem 0 0;
+  margin: 1rem 0;
   position: relative;
   z-index: 99;
   display: block;
   text-decoration: none;
+  width: 100%;
+
+  background: linear-gradient(96.44deg, #FFCDD2 49.68%, #EA80FC 100.62%);
+  border-radius: 2px;
 }
+
 
 .header_article .header_article__row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  background: #263238;
+  min-height: 64px;
+  padding-right: 20px;
 }
 
 .header_article .title-mark {
@@ -2730,26 +2730,33 @@ blockquote em {
 }
 
 .header_article .header_article__title {
-  color: #fff;
-  font-size: 1.375rem;
-  line-height: 2.25rem;
-  display: block;
+  font-size: 1.125rem;
+  line-height: 1.8;
   text-decoration: none;
+  color: #263238;
+  margin-left: 20px;
+  display: inline-block;
 }
 
-.header_article .header_article__descr {
-  margin-right: 2rem;
+.header_article .header_article__title .bold{
+  font-weight: 600;
 }
+
+.header_article .header_article__descr .emoji{
+  font-size: 24px;
+  line-height: 48px;
+}
+
 
 .header_article .header_article__image img {
-  width: 160px;
-  height: 96px;
+  width: 132px;
+  height: 64px;
   border-radius: 2px;
   border: 1px solid #CFD8DC;
 }
 
 .header_article .header_article__image {
-  max-width: 160px;
+  max-width: 132px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -6827,10 +6834,6 @@ transition {
     margin-top: 33px;
   }
 
-  .header_article .header_article__row {
-    align-items: flex-start;
-  }
-
   .subscribe .subscribe__content {
     padding: 22px 1rem;
   }
@@ -6877,20 +6880,6 @@ transition {
     font-size: 0.8125rem;
   }
 
-  .header_article .header_article__image img {
-    width: 96px;
-    height: 64px;
-  }
-
-  .header_article .header_article__image {
-    max-width: 96px;
-    min-width: 96px;
-  }
-
-  .header_article .header_article__descr {
-    margin-right: 1rem;
-  }
-
   .subscribe .subscribe__subtitle {
     max-width: 100%;
   }
@@ -6906,17 +6895,9 @@ transition {
     margin-top: 10px;
   }
 
-  .header_article .header_article__title {
-    line-height: 1.5rem;
-    font-size: 0.8125rem;
-  }
 }
 
 @media screen and (max-width: 479px) {
-  .header_article {
-    width: calc(100vw - 17px);
-    margin-left: -1rem;
-  }
 
   .category-item h2 {
     margin-right: 87px;
@@ -7271,6 +7252,25 @@ transition {
   .index-price .cryptocurrency_price .cryptocurrency_price__share .right{
     display: flex;
     width: 180px;
+  }
+  .header_article .header_article__image{
+    display: none;
+  }
+  .header_article .header_article__title .bold{
+    display: block;
+  }
+  .header_article .header_article__title{
+    text-align: center;
+  }
+  .header_article .header_article__row{
+    padding: 10px 15px;
+  }
+  .header_article.header_article-with-image .header_article__row{
+    padding-left: 15px;
+  }
+  .header_article .header_article__title{
+    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -8199,6 +8199,8 @@ transition {
   .fix-block .switch .icon{
     font-size: 18px;
     margin-left: 12px;
+    position: relative;
+    top: 4px;
   }
 }
 
@@ -8216,3 +8218,41 @@ transition {
   }
 }
 
+.mega-history{
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 240px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mega-history .history_tag{
+  padding: 4px 10px;
+  background: linear-gradient(91.55deg, #FFCDD2 49.68%, #EA80FC 100.62%);
+  border-radius: 2px;
+  position: absolute;
+  min-width: 168px;
+  top: 15px;
+  color: #263238;
+  font-weight: 600;
+  left: 15px;
+
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.mega-history .bottom_descr{
+  background-color: rgba(38, 50, 56, .65);
+  padding: 12px 15px;
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+}

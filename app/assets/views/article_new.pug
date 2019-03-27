@@ -5,6 +5,16 @@ block title
 
 block content
     .content-container.article_new
+        a.header_article.header_article-with-image(href="#!")
+            .header_article__row
+                .header_article__image
+                    img(src='img/content/article_header/item_1.png', alt='')
+                .header_article__descr
+                    .header_article__title You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
+        a.header_article(href="#!")
+            .header_article__row
+                .header_article__descr
+                    .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
         main.main-block
             include blocks/article-infinite-scroll.pug
             .article
@@ -98,6 +108,9 @@ block content
                                 .humble.humble--like 31
                                 .humble.humble--favorites 17
                             .humble.humble--views 123.5k
+                a.mega-history(href="#!" style="background-image: url(img/content/mega-history/item_1.png);")
+                    .history_tag ⛏ Editor’s pick
+                    .bottom_descr Tron’s Justin Sun Calls Binance Coin the New Bitcoin — Is Now the Time to Invest?
                 .something.something--content
                     .something__content-long
                         img(src='img/something/long.png' width='728' height='90' alt='something-wide')

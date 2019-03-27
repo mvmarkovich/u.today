@@ -98,15 +98,16 @@ html(lang="en" dir="ltr" ⚡)
                 button.mobile-menu__btn(on="tap:sidebar.toggle")
                     include ../img/icons/burger.svg
 
+            a.header_article.header_article-with-image(href="#!")
+                .header_article__row
+                    .header_article__image
+                        amp-img(src='img/content/article_header/item_1.png', width="132px", height="64px", alt='')
+                    .header_article__descr
+                        .header_article__title You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
             a.header_article(href="#!")
                 .header_article__row
                     .header_article__descr
-                        .title-mark 🔥 TOP STORY
-                        .header_article__title
-                            | Ethereum Price Analysis from Twitter: From $145 to $200 and Higher? What’s the Chance of Ethereum Breaking Out?
-                    .header_article__image
-                        .image
-                            amp-img(src='img/content/article_header/item_1.png', width="96px" height="64px" alt='')
+                        .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
             .article
                 .article_new__header
                     .row
@@ -190,21 +191,15 @@ html(lang="en" dir="ltr" ⚡)
                                 .humble.humble--like 31
                                 .humble.humble--favorites 17
                             .humble.humble--views 123.5k
+                a.mega-history(href="#!" style="background-image: url(img/content/mega-history/item_1.png);")
+                    .history_tag ⛏ Editor’s pick
+                    .bottom_descr Tron’s Justin Sun Calls Binance Coin the New Bitcoin — Is Now the Time to Invest?
             .fix-block
                 .row
                     .amp_descr-continue
                         a.btn(href="#!") <span class="icon">👉</span>Continue reading
                     .switch
                         a.btn(href='#!') Next article <span class="icon">🚀</span>
-            .amp-subscribe.amp-subscribe_no-fix
-                .subscribe__content.container
-                    .subscribe__content__description
-                        .subscribe__text
-                            .subscribe__descr 🔥 Only the most important posts per day. Infographics, analytics, reviews & summaries:
-                    .subscribe_btn__block
-                        a.subscribe_btn(href="#!")
-                            span.descr Our Telegram Channel
-                            span.icon.telegram
             footer.footer
                 .footer__container
                     .footer__row
