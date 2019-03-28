@@ -7200,31 +7200,6 @@ transition {
   .index-price .price-index_chart.chart-row .tradingview-widget-container{
     max-width: 100%;
   }
-
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .price{
-    font-size: 35px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .name{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .price:after{
-    width: 21px;
-    height: 18px;
-    background-size: cover;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .date{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .change{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price cryptocurrency_price .cryptocurrency_price__block{
-    padding: 20px 30px;
-    height: 210px;
-  }
   .index-price .aside-menu-block{
     max-width: 100%;
     display: block;
@@ -7271,6 +7246,31 @@ transition {
   .header_article .header_article__title{
     margin-left: 0;
     text-align: center;
+  }
+
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .price{
+    font-size: 35px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .name{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .price:after{
+    width: 21px;
+    height: 18px;
+    background-size: cover;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .date{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .change{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block{
+    padding: 20px 30px;
+    height: 210px;
   }
 }
 
