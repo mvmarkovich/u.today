@@ -2704,7 +2704,7 @@ blockquote em {
 }
 
 .header_article {
-  margin: 1rem 0;
+  margin: 0 0 2rem;
   position: relative;
   z-index: 99;
   display: block;
@@ -5635,6 +5635,7 @@ transition {
     display: none;
   }
 
+
   .something--aside {
     padding-top: 9px;
     padding-bottom: 9px;
@@ -7208,7 +7209,8 @@ transition {
     display: block;
     max-width: 100%;
   }
-  .index-price .main-category-block{
+  .index-price .main-category-block
+  .index-price .main-block{
     width: 100%;
   }
   .index-price .price-index_chart.chart-row .tradingview-widget-container{
@@ -7544,15 +7546,12 @@ transition {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
-  background: #F5F5F5;
   border: none;
-
-  padding: 32px;
+    padding: 0;
 }
 
-.article_new .article__panel .humble--views{
-  margin-right: 0;
+.article_new .article__panel-col .left{
+    display: flex;
 }
 
 .article_new .article__panel-col{
@@ -7694,7 +7693,7 @@ transition {
   top: 3px;
 }
 .article_new .article_new__header{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .article_new .article{
@@ -7775,9 +7774,6 @@ transition {
   }
   .article_new .article__tags{
     margin-bottom: 1rem;
-  }
-  .article_new .article__panel{
-    padding: 32px 16px;
   }
   .article_new .article__related{
     padding: 1rem 15px;
@@ -8127,6 +8123,9 @@ transition {
   .article_new .author_block{
     margin: 1rem 0;
   }
+    .article_new .article__tags{
+        margin-bottom: 0;
+    }
 }
 
 .article_new .comments__item-body p{
@@ -8217,11 +8216,14 @@ transition {
   }
 }
 
+
+
 .mega-history{
   position: relative;
   display: block;
   text-decoration: none;
   height: 240px;
+  margin-bottom: 1.5rem;
 
   background-size: cover;
   background-position: center;
@@ -8254,4 +8256,16 @@ transition {
   width: 100%;
   bottom: 0;
 
+}
+
+.article_new .article__panel .article__tags{
+    margin-bottom: 1rem;
+}
+
+.article_new .article__panel .article__panel-row{
+    padding: 0;
+}
+
+.article_new .article__content a:hover .article__related-link{
+  color: #651fff;
 }
