@@ -4598,7 +4598,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .price-index__title {
-  color: #78909C;
+  color: #fff;
   font-weight: 500;
   font-size: 0.8125rem;
   line-height: 1.9;
@@ -4613,19 +4613,18 @@ main > .article:nth-last-child(2):after {
 }
 
 .price-index__table {
-  border-bottom: 1px solid #CFD8DC;
   padding: 0 16px;
   background: #CFD8DC;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .price-index__body {
   padding-top: .5rem;
   padding-bottom: .5rem;
   max-height: 100%;
-  overflow: hidden;
 }
 
 .price-index__aside.active .price-index__body {
@@ -8239,7 +8238,7 @@ transition {
   top: 15px;
   color: #263238;
   font-weight: 600;
-  left: 15px;
+  left: 15px;.custom-select-wrapper
 
   font-size: 1.125rem;
   line-height: 1.8;
@@ -8269,3 +8268,169 @@ transition {
 .article_new .article__content a:hover .article__related-link{
   color: #651fff;
 }
+
+.price-index__body div.container {
+  margin: 34px auto;
+  width: 260px;
+  background-color: transparent;
+}
+
+.price-index__body div.dropdown {
+  position: relative;
+  border: 1px solid #CFD8DC;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.price-index__body{
+  padding: 0;
+}
+
+.price-index__body div.dropdown > div.caption {
+  background-color: #fff;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  position: relative;
+  color: #263238;
+}
+
+.price-index__body div.dropdown > div.list {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 2px 2px;
+  display: none;
+  border: 1px solid #CFD8DC;
+  border-top: 0;
+}
+
+.price-index__body div.dropdown > div.list > div.item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  position: relative;
+  height: 40px;
+}
+
+.price-index__body div.dropdown > div.list > div.item.selected {
+  font-weight: bold;
+}
+.price-index__body div.dropdown.open > div.list {
+  display: block;
+}
+ё .tabs__btn{
+  padding-bottom: 0;
+}
+
+
+.price-index__aside{
+  border-radius: 0;
+  border: none;
+}
+
+.price-index__body div.dropdown.open{
+  border-radius: 2px 2px 0 0;
+}
+
+.price-index__body div.dropdown > div.list > div.item a {
+  text-decoration: none;
+}
+
+.price-index__body div.dropdown > div.list > div.item:before{
+  content: '';
+  width: 4px;
+  height: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.price-index__body div.dropdown > div.list > div.item:hover:before{
+  background: #263238;
+}
+.price-index__body div.dropdown > div.list > div.item:last-child{
+  margin-bottom: 10px;
+}
+
+.price-index__body div.dropdown > div.list > div.item .tabs__btn{
+  padding-bottom: 0;
+}
+
+.price-index__body div.dropdown > div.caption:after{
+  content: '';
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDEwIDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMCA1TDUgMEwwIDVMMTAgNVoiIGZpbGw9IiMyNjMyMzgiLz4KPC9zdmc+Cg==');
+  width: 10px;
+  height: 5px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+}
+
+.price-index__body div.dropdown.open > div.caption:after{
+  transform: rotate(180deg);
+}
+
+
+@media (max-width: 1151px){
+  .price-index__body div.dropdown > div.list{
+    position: static;
+    border: none;
+  }
+  .price-index__body div.dropdown.open{
+    border-radius: 2px;
+  }
+}
+
+.article_new .article .img.caption{
+  margin: 1.5rem 0 2.5rem;
+}
+
+.article_new .article .img.caption p,
+.article_new .article .img.caption a{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 32px;
+
+  color: #78909C;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 784px){
+  .article_new .article .img.caption{
+    margin: .5rem 0 2.5rem;
+  }
+  .article_new .article .img.caption p,
+  .article_new .article .img.caption a{
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+.banner-fitted .top_banner__desktop{
+  display: none;
+}
+
+@media screen and (min-width: 784px){
+  .banner-fitted .top_banner__desktop{
+    display: block;
+  }
+  .banner-fitted .top_banner__mobile{
+    display: none;
+  }
+}
+

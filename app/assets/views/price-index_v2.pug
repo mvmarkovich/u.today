@@ -7,295 +7,96 @@ block content
     .main-aside-container.index-price
         aside.aside-menu-block
             .price-index__aside
-                .price-index__header
-                    button.btn.btn--arrow-down-before.btn--pseudo Choose coin
-                .price-index__table
-                    .price-index__title Coins
-                    .price-index__tabs.tabs.tabs--small
-                        .price-index__tabs-item
-                            .price-index__title Daily
-                        .price-index__tabs-item
-                            .price-index__title Monthly
-
                 .price-index__body
-                    ul.tabs.tabs--vertical
-                        li.tabs__item
-                            a(href='/priceindex/bitcoin-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Bitcoin
-                            .price-index__coin-short
-                                .short BTC
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.05%
-                                .monthly_value.value.up
-                                    | 2%
-                        li.tabs__item
-                            a(href='/priceindex/ethereum-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Ethereum
-                            .price-index__coin-short
-                                .short ETH
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.13%
-                                .monthly_value.value.done
-                                    | -5.36%
-                        li.tabs__item
-                            a(href='/priceindex/ripple-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Ripple
-                            .price-index__coin-short
-                                .short XRP
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.79%
-                                .monthly_value.value.done
-                                    | -2.96%
-                        li.tabs__item
-                            a(href='/priceindex/tron-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Tron
-                            .price-index__coin-short
-                                .short TRX
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.09%
-                                .monthly_value.value.done
-                                    | -7.77%
-                        li.tabs__item
-                            a(href='/priceindex/litecoin-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Litecoin
-                            .price-index__coin-short
-                                .short LTC
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.23%
-                                .monthly_value.value.up
-                                    | 24.92%
-                        li.tabs__item
-                            a(href='/priceindex/neo-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name NEO
-                            .price-index__coin-short
-                                .short NEO
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.54%
-                                .monthly_value.value.up
-                                    | 2.9%
-                        li.tabs__item
-                            a(href='/priceindex/cardano-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Cardano
-                            .price-index__coin-short
-                                .short ADA
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.8%
-                                .monthly_value.value.up
-                                    | 9.77%
-                        li.tabs__item
-                            a(href='/priceindex/stellar-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Stellar
-                            .price-index__coin-short
-                                .short XLM
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.99%
-                                .monthly_value.value.up
-                                    | 36.36%
-                        li.tabs__item
-                            a(href='/priceindex/eos-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name EOS
-                            .price-index__coin-short
-                                .short EOS
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.26%
-                                .monthly_value.value.up
-                                    | 7.34%
-                        li.tabs__item
-                            a(href='/priceindex/monero-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Monero
-                            .price-index__coin-short
-                                .short XMR
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 1.6%
-                                .monthly_value.value.up
-                                    | 2.87%
-                        li.tabs__item
-                            a(href='/priceindex/dash-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Dash
-                            .price-index__coin-short
-                                .short DASH
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.11%
-                                .monthly_value.value.up
-                                    | 5.85%
-                        li.tabs__item
-                            a(href='/priceindex/nem-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name NEM
-                            .price-index__coin-short
-                                .short XEM
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.97%
-                                .monthly_value.value.up
-                                    | 15.09%
-                        li.tabs__item
-                            a(href='/priceindex/ethereum-classic-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Ethereum Classic
-                            .price-index__coin-short
-                                .short ETC
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.23%
-                                .monthly_value.value.done
-                                    | -0.67%
-                        li.tabs__item
-                            a(href='/priceindex/tether-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Tether
-                            .price-index__coin-short
-                                .short USDT
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0%
-                                .monthly_value.value.up
-                                    | 1.77%
-                        li.tabs__item
-                            a(href='/priceindex/lisk-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Lisk
-                            .price-index__coin-short
-                                .short LSK
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.21%
-                                .monthly_value.value.up
-                                    | 16.35%
-                        li.tabs__item
-                            a(href='/priceindex/bitcoin-gold-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Bitcoin Gold
-                            .price-index__coin-short
-                                .short BTG
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -0.76%
-                                .monthly_value.value.up
-                                    | 7.77%
-                        li.tabs__item
-                            a(href='/priceindex/zcash-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Zcash
-                            .price-index__coin-short
-                                .short ZEC
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 2.57%
-                                .monthly_value.value.up
-                                    | 1.46%
-                        li.tabs__item
-                            a(href='/priceindex/steem-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Steem
-                            .price-index__coin-short
-                                .short STEEM
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.71%
-                                .monthly_value.value.up
-                                    | 35.1%
-                        li.tabs__item
-                            a(href='/priceindex/bytecoin-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Bytecoin
-                            .price-index__coin-short
-                                .short BTE
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0%
-                                .monthly_value.value.done
-                                    | -3.97%
-                        li.tabs__item
-                            a(href='/priceindex/bitcoin-cash-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Bitcoin Cash
-                            .price-index__coin-short
-                                .short BCH
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.14%
-                                .monthly_value.value.up
-                                    | 11.52%
-                        li.tabs__item
-                            a(href='/priceindex/dogecoin--price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Dogecoin
-                            .price-index__coin-short
-                                .short DOGE
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.92%
-                                .monthly_value.value.done
-                                    | -2.15%
-                        li.tabs__item
-                            a(href='/priceindex/maker-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Maker
-                            .price-index__coin-short
-                                .short MKR
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.8%
-                                .monthly_value.value.up
-                                    | 23.23%
-                        li.tabs__item
-                            a(href='/priceindex/ontology-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Ontology
-                            .price-index__coin-short
-                                .short ONT
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 0.94%
-                                .monthly_value.value.up
-                                    | 64.59%
-                        li.tabs__item
-                            a(href='/priceindex/tezos--price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name Tezos
-                            .price-index__coin-short
-                                .short XTZ
-                            .price-index__coin-trand
-                                .daily_value.value.up
-                                    | 1.38%
-                                .monthly_value.value.up
-                                    | 10.08%
-                        li.tabs__item
-                            a(href='/priceindex/vechain-price-index')
-                                button.tabs__btn.btn.btn--pseudo
-                                    .name VeChain
-                            .price-index__coin-short
-                                .short VET
-                            .price-index__coin-trand
-                                .daily_value.value.done
-                                    | -1.52%
-                                .monthly_value.value.up
-                                    | 19.1%
-                    ul.tabs.tabs--vertical
-
+                    .dropdown.open
+                        .caption Choose coin
+                        .list
+                            .price-index__table
+                                .price-index__title Coins
+                                .price-index__tabs.tabs.tabs--small
+                                    .price-index__tabs-item
+                                        .price-index__title Daily
+                                    .price-index__tabs-item
+                                        .price-index__title Monthly
+                            .item
+                                a(href='/priceindex/ethereum-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Ethereum
+                                .price-index__coin-trand
+                                    .daily_value.value.up 0.13%
+                                    .monthly_value.value.done -5.36%
+                            .item
+                                a(href='/priceindex/ethereum-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Ethereum
+                                .price-index__coin-trand
+                                    .daily_value.value.up
+                                        | 0.13%
+                                    .monthly_value.value.done
+                                        | -5.36%
+                            .item
+                                a(href='/priceindex/ripple-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Ripple
+                                .price-index__coin-trand
+                                    .daily_value.value.done
+                                        | -0.79%
+                                    .monthly_value.value.done
+                                        | -2.96%
+                            .item
+                                a(href='/priceindex/tron-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Tron
+                                .price-index__coin-trand
+                                    .daily_value.value.done
+                                        | -1.09%
+                                    .monthly_value.value.done
+                                        | -7.77%
+                            .item
+                                a(href='/priceindex/litecoin-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Litecoin
+                                .price-index__coin-trand
+                                    .daily_value.value.up
+                                        | 0.23%
+                                    .monthly_value.value.up
+                                        | 24.92%
+                            .item
+                                a(href='/priceindex/neo-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name NEO
+                                .price-index__coin-trand
+                                    .daily_value.value.done
+                                        | -0.54%
+                                    .monthly_value.value.up
+                                        | 2.9%
+                            .item
+                                a(href='/priceindex/cardano-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Cardano
+                                .price-index__coin-trand
+                                    .daily_value.value.done
+                                        | -0.8%
+                                    .monthly_value.value.up
+                                        | 9.77%
+                            .item
+                                a(href='/priceindex/stellar-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name Stellar
+                                .price-index__coin-trand
+                                    .daily_value.value.done
+                                        | -1.99%
+                                    .monthly_value.value.up
+                                        | 36.36%
+                            .item
+                                a(href='/priceindex/eos-price-index')
+                                    button.tabs__btn.btn.btn--pseudo
+                                        .name EOS
+                                .price-index__coin-trand
+                                    .daily_value.value.up
+                                        | 0.26%
+                                    .monthly_value.value.up
+                                        | 7.34%
         .main-category-block
             h1.title Bitcoin BTC Price Index
             p.subtitle The price of Bitcoin is one of the main issues for miners and traders. Here you will find the latest news about the BTC price fluctuations.
