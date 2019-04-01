@@ -8275,7 +8275,7 @@ transition {
   background-color: transparent;
 }
 
-.price-index__body div.dropdown {
+.price-index__body div.aside_dropdown {
   position: relative;
   border: 1px solid #CFD8DC;
   box-sizing: border-box;
@@ -8286,7 +8286,7 @@ transition {
   padding: 0;
 }
 
-.price-index__body div.dropdown > div.caption {
+.price-index__body div.aside_dropdown > div.caption {
   background-color: #fff;
   padding: 12px 16px;
   box-sizing: border-box;
@@ -8301,18 +8301,18 @@ transition {
   color: #263238;
 }
 
-.price-index__body div.dropdown > div.list {
+.price-index__body div.aside_dropdown > div.list {
   position: absolute;
   background-color: #fff;
   width: 100%;
   box-sizing: border-box;
   border-radius: 0 0 2px 2px;
-  display: none;
+  display: block;
   border: 1px solid #CFD8DC;
   border-top: 0;
 }
 
-.price-index__body div.dropdown > div.list > div.item {
+.price-index__body div.aside_dropdown > div.list > div.item {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -8322,13 +8322,13 @@ transition {
   height: 40px;
 }
 
-.price-index__body div.dropdown > div.list > div.item.selected {
+.price-index__body div.aside_dropdown > div.list > div.item.selected {
   font-weight: bold;
 }
-.price-index__body div.dropdown.open > div.list {
-  display: block;
+.price-index__body div.aside_dropdown.open > div.list {
+  display: none;
 }
-ё .tabs__btn{
+.tabs__btn{
   padding-bottom: 0;
 }
 
@@ -8338,15 +8338,15 @@ transition {
   border: none;
 }
 
-.price-index__body div.dropdown.open{
+.price-index__body div.aside_dropdown.open{
   border-radius: 2px 2px 0 0;
 }
 
-.price-index__body div.dropdown > div.list > div.item a {
+.price-index__body div.aside_dropdown > div.list > div.item a {
   text-decoration: none;
 }
 
-.price-index__body div.dropdown > div.list > div.item:before{
+.price-index__body div.aside_dropdown > div.list > div.item:before{
   content: '';
   width: 4px;
   height: 100%;
@@ -8357,18 +8357,18 @@ transition {
   top: 0;
 }
 
-.price-index__body div.dropdown > div.list > div.item:hover:before{
+.price-index__body div.aside_dropdown > div.list > div.item:hover:before{
   background: #263238;
 }
-.price-index__body div.dropdown > div.list > div.item:last-child{
+.price-index__body div.aside_dropdown > div.list > div.item:last-child{
   margin-bottom: 10px;
 }
 
-.price-index__body div.dropdown > div.list > div.item .tabs__btn{
+.price-index__body div.aside_dropdown > div.list > div.item .tabs__btn{
   padding-bottom: 0;
 }
 
-.price-index__body div.dropdown > div.caption:after{
+.price-index__body div.aside_dropdown > div.caption:after{
   content: '';
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDEwIDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMCA1TDUgMEwwIDVMMTAgNVoiIGZpbGw9IiMyNjMyMzgiLz4KPC9zdmc+Cg==');
   width: 10px;
@@ -8379,19 +8379,25 @@ transition {
   position: absolute;
   right: 17px;
   top: 17px;
+
+  transform: rotate(0);
 }
 
-.price-index__body div.dropdown.open > div.caption:after{
+.price-index__body div.aside_dropdown.open > div.caption:after{
   transform: rotate(180deg);
+}
+
+.index-price .price-index__body div.aside_dropdown .item.selected:before{
+  background: #263238;
 }
 
 
 @media (max-width: 1151px){
-  .price-index__body div.dropdown > div.list{
+  .price-index__body div.aside_dropdown > div.list{
     position: static;
     border: none;
   }
-  .price-index__body div.dropdown.open{
+  .price-index__body div.aside_dropdown.open{
     border-radius: 2px;
   }
 }
@@ -8419,18 +8425,28 @@ transition {
     font-size: 13px;
     line-height: 24px;
   }
+
+  .price-index__body div.aside_dropdown > div.caption:after{
+    transform: rotate(180deg);
+  }
+  .price-index__body div.aside_dropdown.open > div.caption:after{
+    transform: rotate(0);
+  }
+  .price-index__body div.aside_dropdown > div.list{
+    display: none;
+  }
+  .price-index__body div.aside_dropdown.open > div.list{
+    display: block;
+  }
 }
 
-.banner-fitted .top_banner__desktop{
-  display: none;
+.banner-fitted{
+  margin: 2rem 0;
 }
 
-@media screen and (min-width: 784px){
+
+@media screen and (min-width: 784px) {
   .banner-fitted .top_banner__desktop{
     display: block;
   }
-  .banner-fitted .top_banner__mobile{
-    display: none;
-  }
 }
-
