@@ -3049,7 +3049,7 @@ blockquote em {
 }
 
 .article__main-img-wrapper {
-  background: #ECEFF1;
+
   overflow: hidden;
   padding-top: 62.5%;
   position: relative;
@@ -8448,5 +8448,27 @@ transition {
 @media screen and (min-width: 784px) {
   .banner-fitted .top_banner__desktop{
     display: block;
+  }
+}
+
+.article_new .disclaimer{
+  padding-top: 0.8rem;
+}
+
+.article_new .disclaimer .disclaimer_text{
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: #90A4AE;
+  margin-bottom: 0;
+
+}
+
+@media (max-width: 479px){
+
+  .article_new .disclaimer{
+    padding: 0.8rem 1rem 0;
   }
 }
