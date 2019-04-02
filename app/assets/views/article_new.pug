@@ -4,17 +4,14 @@ block title
     title Article | u.today
 
 block content
+    section.adsense-bunner.banner.bg-dark-1
+        a.banner_link(target='_blank', href='https://www.cryptodailytrading.com/')
+            img(src='https://u.today/img/datalight.jpg', alt='cryptodailytrading.com')
+    a.header_article(href="#!")
+        .header_article__row
+            .header_article__descr
+                .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
     .content-container.article_new
-        a.header_article.header_article-with-image(href="#!")
-            .header_article__row
-                .header_article__image
-                    img(src='img/content/article_header/item_1.png', alt='')
-                .header_article__descr
-                    .header_article__title You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
-        a.header_article(href="#!")
-            .header_article__row
-                .header_article__descr
-                    .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
         main.main-block
             include blocks/article-infinite-scroll.pug
             .article

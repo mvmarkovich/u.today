@@ -4,14 +4,10 @@ block title
   title Main | u.today
 
 block content
+  section.adsense-bunner.banner.bg-dark-1
+    a.banner_link(target='_blank', href='https://www.cryptodailytrading.com/')
+      img(src='https://u.today/img/datalight.jpg', alt='cryptodailytrading.com')
   include blocks/breaking.pug
-
-  .top_banner.banner-fitted
-    center
-      a.top_banner__image(target='_blank', href='https://www.cryptodailytrading.com/')
-        img(src='https://u.today/img/datalight.jpg', alt='cryptodailytrading.com')
-    br
-
   .main-container
     .top-story-block
       include blocks/top-story.pug
@@ -21,13 +17,9 @@ block content
 
   include blocks/news-featured.pug
 
-  .something.something--wide
-    .something__wide-long
-      img(src="img/something/long.png" width="728" height="90" alt="something-wide")
-
-    .something__wide-square
-      img(src="img/something/square.png" width="300" height="250" alt="something-square")
-
+  section.adsense-bunner.asset.bg-dark-2
+      a.asset_link(target='_blank', href='https://twitter.com/Utoday_en')
+        img(src='https://u.today/img/satoshi_.jpg', alt='u.today')
   .main-aside-container
     .main-news-block
       include blocks/news-category.pug

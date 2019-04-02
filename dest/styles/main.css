@@ -2704,7 +2704,7 @@ blockquote em {
 }
 
 .header_article {
-  margin: 0 0 2rem;
+  margin: 1rem 0;
   position: relative;
   z-index: 99;
   display: block;
@@ -3375,8 +3375,8 @@ main > .article:nth-last-child(2):after {
 }
 
 .main-block > .article:first-child,.main-category-block > .article:first-child,.main-news-block > .article:first-child {
-  margin-top: -2rem;
-  padding-top: 2rem;
+  margin-top: -1rem;
+  padding-top: 1rem;
 }
 
 .footer {
@@ -4956,7 +4956,7 @@ transition {
   }
 
   .content-container {
-    padding-top: 2rem;
+    padding-top: 0;
     padding-bottom: 2rem;
   }
 
@@ -5623,7 +5623,7 @@ transition {
 
   .aside-menu-block {
     max-width: 320px;
-    padding-top: 1.5rem;
+    padding-top: .5rem;
   }
 
   .something--content {
@@ -7232,9 +7232,6 @@ transition {
   .header_article .header_article__image{
     display: none;
   }
-  .header_article .header_article__title .bold{
-    display: block;
-  }
   .header_article .header_article__title{
     text-align: center;
   }
@@ -7246,7 +7243,7 @@ transition {
   }
   .header_article .header_article__title{
     margin-left: 0;
-    text-align: center;
+    text-align: left;
   }
 
   .index-price .cryptocurrency_price .cryptocurrency_price__block .price{
@@ -8440,11 +8437,6 @@ transition {
   }
 }
 
-.banner-fitted{
-  margin: 2rem 0;
-}
-
-
 @media screen and (min-width: 784px) {
   .banner-fitted .top_banner__desktop{
     display: block;
@@ -8467,8 +8459,60 @@ transition {
 }
 
 @media (max-width: 479px){
-
   .article_new .disclaimer{
     padding: 0.8rem 1rem 0;
+  }
+}
+
+.adsense-bunner{
+  width: 100%;
+  max-width: 100%;
+}
+
+.banner{
+  margin: 1rem 0;
+}
+
+.asset{
+  margin: 2rem 0;
+}
+
+.adsense-bunner img{
+  height: 90px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.bg-dark-1{
+  background-color: #181c1f;
+}
+
+.bg-dark-2{
+  background-color: #09090b;
+}
+
+.adsense-bunner a{
+  display: block;
+}
+
+.main-news-block{
+  padding-top: 0;
+  border-top: none;
+}
+
+@media screen and (max-width: 784px) {
+  .adsense-bunner img{
+    height: auto;
+  }
+  .asset{
+    margin: 1rem 0;
+  }
+  .main-block > .article:first-child, .main-category-block > .article:first-child, .main-news-block > .article:first-child{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .content-container{
+    padding-top: 0;
+    margin-top: 1rem;
   }
 }
