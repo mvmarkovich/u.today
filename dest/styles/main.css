@@ -8202,8 +8202,16 @@ transition {
   .fix-block .switch{
     max-width: 135px;
   }
-  .share__circle{
-    width: 20px;
+  .share-and-up{
+    right: 160px;
+    padding: 8px .7rem;
+  }
+  .share__social{
+    justify-content: space-between;
+    width: 100%;
+  }
+  .share__circle + .share__circle{
+    margin: 0;
   }
   .footer{
     z-index: 100;
