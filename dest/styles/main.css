@@ -3495,6 +3495,7 @@ main > .article:nth-last-child(2):after {
   font-size: 0.8125rem;
   line-height: 1.9;
   color: #78909C;
+  margin-right: 20px;
 }
 
 .aside-story {
@@ -8463,7 +8464,7 @@ transition {
 
   color: #90A4AE;
   margin-bottom: 0;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 479px){
