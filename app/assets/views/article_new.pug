@@ -4,7 +4,7 @@ block title
     title Article | u.today
 
 block content
-    section.adsense-bunner.banner.bg-dark-1
+    section.asset.asset-wide.bg-dark-1
         a.banner_link(target='_blank', href='https://www.cryptodailytrading.com/')
             img(src='https://u.today/img/datalight.jpg', alt='cryptodailytrading.com')
     a.header_article(href="#!")
@@ -16,8 +16,14 @@ block content
             include blocks/article-infinite-scroll.pug
             .article
                 .article_new__header
+                    ul.breadcrumbs_list
+                        li.breadcrumbs_item
+                            a.breadcrumbs_link(href="#!") Home
+                        li.breadcrumbs_item
+                            a.breadcrumbs_link(href="#!") Stories
+                        li.breadcrumbs_item
+                            span.breadcrumbs_link Artificial Intelligence
                     .row
-                        time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
                         a.humble.humble--views(href='#!') 123k
                         a.humble.humble--like(href='#!') 31
                         a.humble.humble--chat(href='#!') 256
