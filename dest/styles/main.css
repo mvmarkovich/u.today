@@ -8548,3 +8548,7 @@ transition {
 .article_new .article__related-body .article__related-link a{
   color: #263238;
 }
+
+.article_new .article__related-body .article__related-link a:hover{
+  color: #651fff;
+}
