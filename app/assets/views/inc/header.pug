@@ -30,10 +30,12 @@ header.header
 
       button.header__burger.btn.btn--light.btn--burger
 
-      select.header__lang.input__select.input__select--tiny
-        option(selected) ENG
-        option(value="") ESP
-
+      .header__lang
+          .header__lang_active.input__select.input__select--tiny
+            .header__lang_item ENG
+          .header__lang_dropdown
+            a.header__lang_item(href="#!") ENG
+            a.header__lang_item(href="#!") ESP
     .mobile-menu-back Back
 
     .mobile-menu-lang

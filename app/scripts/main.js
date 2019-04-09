@@ -236,6 +236,12 @@
   $(".subscribe__close").on("click", function() {
     $(".subscribe").addClass("hide");
   });
+  $(document).mouseup(function (e){
+    $('.active-lang').removeClass("active-lang");
+  });
+  $(".header__lang").on("click", function () {
+    $(this).toggleClass("active-lang");
+  });
 })(jQuery);
 
 //
@@ -329,4 +335,3 @@ $(function() {
       }
     });
 });
-

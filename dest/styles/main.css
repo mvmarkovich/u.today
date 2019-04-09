@@ -8499,7 +8499,7 @@ transition {
   }
 }
 
-.adsense-bunner{
+.adsense-asset{
   width: 100%;
   max-width: 100%;
 }
@@ -8512,7 +8512,7 @@ transition {
   margin: 2rem 0;
 }
 
-.adsense-bunner img{
+.asset img{
   height: 90px;
   width: auto;
   margin: 0 auto;
@@ -8526,7 +8526,7 @@ transition {
   background-color: #09090b;
 }
 
-.adsense-bunner a{
+.adsense-asset a{
   display: block;
 }
 
@@ -8695,4 +8695,51 @@ transition {
     	right: -1rem;
     	top: 1px;
 	}
+}
+.header__lang{
+  position: relative;
+  display: none;
+}
+
+
+@media screen and (min-width: 784px){
+  .header__lang{
+    position: relative;
+    display: block;
+  }
+
+  .header__lang.active-lang .header__lang_dropdown{
+    display: block;
+  }
+
+  .header__lang_dropdown{
+    display: none;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border: 1px solid #CFD8DC;
+    height: 100%;
+    background-color: #fff;
+    min-height: 34px;
+    box-sizing: border-box;
+  }
+
+  .header__lang_dropdown .header__lang_item{
+    padding: 0 .75rem;
+  }
+
+  .header__lang_item{
+    color: #263238;
+    font-size: 0.6875rem;
+    display: block;
+    text-decoration: none;
+  }
+
+  .header__lang_dropdown .header__lang_item:hover{
+    background-color: #651FFF;
+    color: #fff;
+  }
 }
