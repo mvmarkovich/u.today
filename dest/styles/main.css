@@ -8704,7 +8704,6 @@ transition {
 
 @media screen and (min-width: 784px){
   .header__lang{
-    position: relative;
     display: block;
   }
 
@@ -8712,7 +8711,7 @@ transition {
     display: block;
   }
 
-  .header__lang_dropdown{
+  .header__lang .header__lang_dropdown{
     display: none;
 
     position: absolute;
@@ -8721,24 +8720,29 @@ transition {
     top: 100%;
     left: 0;
     border: 1px solid #CFD8DC;
-    height: 100%;
     background-color: #fff;
     min-height: 34px;
     box-sizing: border-box;
   }
 
-  .header__lang_dropdown .header__lang_item{
+  .header__lang .header__lang_dropdown .tabs__btn{
     padding: 0 .75rem;
+    line-height: 10px;
+    letter-spacing: inherit;
+    line-height: 16px;
+    min-height: 1px;
+    font-weight: 300;
   }
 
-  .header__lang_item{
+  .header__lang .tabs__btn{
     color: #263238;
     font-size: 0.6875rem;
     display: block;
     text-decoration: none;
+    line-height: 32px;
   }
 
-  .header__lang_dropdown .header__lang_item:hover{
+  .header__lang .header__lang_dropdown .tabs__btn:hover{
     background-color: #651FFF;
     color: #fff;
   }
