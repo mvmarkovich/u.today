@@ -242,6 +242,18 @@
   $(".header__lang").on("click", function () {
     $(this).toggleClass("active-lang");
   });
+
+  //
+  // Slider on MAIN page
+  //
+  $('.slider_top-story').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true
+  });
+
 })(jQuery);
 
 //
