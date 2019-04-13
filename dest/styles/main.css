@@ -4652,6 +4652,7 @@ main > .article:nth-last-child(2):after {
 .price-index__aside.active .price-index__body {
   height: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .price-index__aside.active .price-index__table {
@@ -7222,10 +7223,6 @@ transition {
   .index-price .price-index_chart.chart-row .tradingview-widget-container{
     max-width: 100%;
   }
-  .index-price .aside-menu-block{
-    max-width: 100%;
-    display: block;
-  }
   .index-price .aside-block{
     display: block;
     max-width: 100%;
@@ -7239,6 +7236,30 @@ transition {
   }
   .index-price .price-index_chart.chart-row .tradingview-widget-container:last-child{
     margin-bottom: 0;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .price{
+    font-size: 35px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .name{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .price:after{
+    width: 21px;
+    height: 18px;
+    background-size: cover;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .date{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block .change{
+    line-height: 21px;
+    font-size: 13.8152px;
+  }
+  .index-price .cryptocurrency_price .cryptocurrency_price__block{
+    padding: 20px 30px;
+    height: 210px;
   }
 }
 
@@ -7266,31 +7287,6 @@ transition {
   .header_article .header_article__title{
     margin-left: 0;
     text-align: left;
-  }
-
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .price{
-    font-size: 35px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .name{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .price:after{
-    width: 21px;
-    height: 18px;
-    background-size: cover;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .date{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block .change{
-    line-height: 21px;
-    font-size: 13.8152px;
-  }
-  .index-price .cryptocurrency_price .cryptocurrency_price__block{
-    padding: 20px 30px;
-    height: 210px;
   }
 }
 
@@ -7330,6 +7326,21 @@ transition {
 
 .article_new .tabs--vertical .tabs__item{
   margin-bottom: .5rem;
+}
+
+.article_new .tabs--vertical .tabs__item:before{
+  content: '';
+  width: 4px;
+  height: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.article_new .tabs--vertical .tabs__item--active:before{
+  background: #263238;
 }
 
 
@@ -7773,6 +7784,7 @@ transition {
   .article_new .aside-block{
     display: none;
   }
+  .article_new .index-price .aside-block
   .article_new .under_main-img__item{
     font-size: 13px !important;
     line-height: 24px !important;
@@ -8335,7 +8347,7 @@ transition {
   color: #263238;
 }
 
-.price-index__body div.aside_dropdown > div.list {
+.price-index__body div.aside_dropdown > .aside_dropdown__list {
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -8346,7 +8358,7 @@ transition {
   border-top: 0;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item {
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item{
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -8356,10 +8368,10 @@ transition {
   height: 40px;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item.selected {
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__.item.selected {
   font-weight: bold;
 }
-.price-index__body div.aside_dropdown.open > div.list {
+.price-index__body div.aside_dropdown.open > .aside_dropdown__list {
   display: none;
 }
 .tabs__btn{
@@ -8376,11 +8388,11 @@ transition {
   border-radius: 2px 2px 0 0;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item a {
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item a {
   text-decoration: none;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item:before{
+.price-index__body div.aside_dropdown > .aside_dropdown__list > div.item:before{
   content: '';
   width: 4px;
   height: 100%;
@@ -8391,14 +8403,14 @@ transition {
   top: 0;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item:hover:before{
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item:hover:before{
   background: #263238;
 }
-.price-index__body div.aside_dropdown > div.list > div.item:last-child{
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item:last-child{
   margin-bottom: 10px;
 }
 
-.price-index__body div.aside_dropdown > div.list > div.item .tabs__btn{
+.price-index__body div.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item .tabs__btn{
   padding-bottom: 0;
 }
 
@@ -8466,10 +8478,10 @@ transition {
   .price-index__body div.aside_dropdown.open > div.caption:after{
     transform: rotate(0);
   }
-  .price-index__body div.aside_dropdown > div.list{
+  .price-index__body div.aside_dropdown > .aside_dropdown__list{
     display: none;
   }
-  .price-index__body div.aside_dropdown.open > div.list{
+  .price-index__body div.aside_dropdown.open > .aside_dropdown__list{
     display: block;
   }
 }
@@ -8879,4 +8891,11 @@ transition {
   .slider_top-story .slick-dots li{
     margin-right: 3rem;
   }
+}
+
+.aside-menu-block{
+  border: 1px solid #CFD8DC;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding-top: 0;
 }
