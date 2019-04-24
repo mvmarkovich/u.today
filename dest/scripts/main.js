@@ -243,6 +243,23 @@
     $(this).toggleClass("active-lang");
   });
 
+  var step = 120,
+      table_toggle = $(".toggle-btn"),
+      el = $(".table-wrapper");
+
+  table_toggle .bind("click", function(event) {
+    let ths = $(this),
+        direction = ths.data('direction'),
+        expect = el.scrollLeft() + (step * direction);
+    el.animate({
+      scrollLeft: "+=" + (step * direction) + "px"
+    }, function() {
+      table_toggle .removeClass('active');
+      if (expect != el.scrollLeft() || expect == 0) {
+        ths.addClass('active');
+      };
+    });
+  });
 
   /* aside in price-index */
   $('.aside_dropdown > .caption').on('click', function() {
