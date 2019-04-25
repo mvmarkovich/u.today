@@ -8900,8 +8900,8 @@ transition {
     margin-right: 3rem;
   }
   .article_new .under_main-img__item{
-    font-size: 13px;
-    line-height: 24px;
+    font-size: 13px !important;
+    line-height: 24px !important;
   }
 }
 
