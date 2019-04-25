@@ -3772,6 +3772,7 @@ main > .article:nth-last-child(2):after {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .top-story__img {
