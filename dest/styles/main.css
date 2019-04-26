@@ -8450,28 +8450,31 @@ transition {
   }
 }
 
-.article_new .article .img.caption{
-  margin: 1.5rem 0 2.5rem;
+.article_new .article .caption{
+  margin: 1rem 0 2.5rem;
+  font-size: 11px;
+  line-height: 16px;
+
+  color: #90A4AE;
+  font-weight: 500;
 }
 
-.article_new .article .img.caption p,
-.article_new .article .img.caption a{
+.article_new .article .caption p,
+.article_new .article .caption a{
   font-weight: 500;
-  font-size: 15px;
-  line-height: 32px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #90A4AE;
+  margin-bottom: 0;
+}
 
-  color: #78909C;
+.article_new .article__main-img-wrapper .caption{
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 784px){
-  .article_new .article .img.caption{
-    margin: .5rem 0 2.5rem;
-  }
-  .article_new .article .img.caption p,
-  .article_new .article .img.caption a{
-    font-size: 13px;
-    line-height: 24px;
+  .article_new .article .caption{
+    margin: .5rem 0 1.7rem;
   }
 
   .price-index__body div.aside_dropdown > div.caption:after{
