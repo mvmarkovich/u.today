@@ -7228,7 +7228,6 @@ transition {
   }
   .index-price .aside-block{
     display: block;
-    max-width: 100%;
   }
   .index-price .main-category-block
   .index-price .main-block{
@@ -7785,7 +7784,7 @@ transition {
 
 @media screen and (max-width: 784px){
   .article_new .aside-block{
-    display: none;
+    max-width: 100%;
   }
   .article_new .index-price .aside-block
   .article_new .under_main-img__item{
