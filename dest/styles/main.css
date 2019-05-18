@@ -4154,6 +4154,7 @@ main > .article:nth-last-child(2):after {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 }
 
 .category-item h2 {
@@ -6949,7 +6950,7 @@ transition {
   }
 
   .category-item__info:first-child time.humble {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
 
   .category-info__title {
