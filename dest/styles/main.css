@@ -8999,3 +8999,192 @@ transition {
     font-size: 0.875rem;
   }
 }
+
+
+.modal__entrance{
+  display: block;
+}
+
+.modal__entrance-header{
+  background: #FFFFFF;
+  border-bottom: 1px solid #263238;
+}
+
+.modal__entrance-title{
+  margin-bottom: 0;
+  line-height: 1.4;
+  font-size: 0.9375rem;
+  text-align: center;
+  padding: 13px 0;
+}
+
+.modal__entrance .btn--cross-blue{
+  top: 9px;
+  opacity: 1;
+}
+
+.btn--cross-blue:after{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDEuNDFMMTIuNTkgMEw3IDUuNTlMMS40MSAwTDAgMS40MUw1LjU5IDdMMCAxMi41OUwxLjQxIDE0TDcgOC40MUwxMi41OSAxNEwxNCAxMi41OUw4LjQxIDdMMTQgMS40MVoiIGZpbGw9IiMyOTc5RkYiLz4KPC9zdmc+Cg==");
+  width: 32px;
+  height: 32px;
+
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.modal__entrance .btn--cross-back{
+  right: auto;
+  left: 3px;
+  opacity: 1;
+  top: 8px;
+}
+
+.btn--cross-back:after{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxOCAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDVIMy44M0w3LjQxIDEuNDFMNiAwTDAgNkw2IDEyTDcuNDEgMTAuNTlMMy44MyA3SDE4VjVaIiBmaWxsPSIjMjk3OUZGIi8+Cjwvc3ZnPgo=");
+  width: 32px;
+  height: 32px;
+
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.modal__entrance-content{
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  width: 360px;
+  height: auto;
+  padding: 2rem 1rem;
+}
+
+.modal__entrance-text{
+  color: #263238;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.modal__entrance-text:last-child{
+  margin-bottom: 0;
+}
+
+.modal__entrance-text.bold{
+  font-weight: 600;
+}
+
+.modal__entrance .btn__block{
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #CFD8DC;
+}
+
+.modal__entrance .checkbox__block{
+  margin: 0;
+  padding: 1.5rem 0 2rem;
+}
+
+.modal__entrance .checkbox__block input[type=checkbox] + label:before{
+  border: 2px solid #263238;
+}
+
+.modal__entrance .checkbox__block label{
+  color: #263238;
+  padding-left: 30px;
+}
+
+.modal__entrance .checkbox__block .modal__entrance-link{
+  text-decoration: none;
+  color: #2979FF;
+}
+
+.modal__entrance-caption{
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
+.modal__entrance-hashtags{
+  background: #9575CD;
+  margin-left: -1rem;
+  width: 360px;
+  padding: .675rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__entrance-hashtag{
+  margin-bottom: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  color: #fff;
+
+  margin-right: .7625rem;
+}
+
+.modal__square-step_2 .checkbox__block{
+  padding: 2rem 0;
+}
+
+.modal__square{
+  display: none;
+}
+
+.modal__square:first-of-type {
+  display: block;
+}
+
+.modal__entrance .error-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: none;
+}
+
+.modal__entrance .error-list .error-item{
+  color: #FF5252;
+  font-size: 0.8125rem;
+  line-height: 2;
+}
+
+.modal__entrance .input__elem.valid{
+  border: 1px solid #4CAF50;
+}
+
+.modal__entrance .input{
+    position: relative;
+}
+
+.modal__entrance .internet-dog{
+    position: absolute;
+
+    left: 1rem;
+    top: 0.4rem;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.9;
+}
+
+.modal__entrance  .input-account--name .input__elem{
+    padding: 0 3rem 0 2rem;
+}
+
+.modal__entrance .input__elem.invalid ~ .error-list{
+  display: block;
+}
+
+.input-account--name_counter{
+  position: absolute;
+  right: 1rem;
+  top: .4rem;
+
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+
+    color: #78909C;
+}

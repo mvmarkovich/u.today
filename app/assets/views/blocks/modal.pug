@@ -59,3 +59,133 @@
 
         .modal__square-agree By pressing the “Subscribe button” you agree with our 
           a(href="#!") Privacy Policy
+
+.modal#log_in
+  .modal__square.modal__entrance
+    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+
+    .modal__entrance-header
+      .modal__entrance-title Log in
+
+    .modal__entrance-content
+      form.modal__entrance-form(action="#" method="get")
+        .input
+          input.input__elem(type="text" name="name" onkeyup="checkParams()" placeholder="Account name")
+          ul.error-list
+            li.error-item This field is required.
+        .input
+          input.input__elem(type="password" onkeyup="checkParams()" name="password" placeholder="Brain key")
+          ul.error-list
+            li.error-item This field is required.
+        button.btn.btn--input.btn_login(type="submit" disabled) Log in
+      .btn__block
+        button.btn.btn--wide.btn--input Register
+  .modal__square.modal__entrance
+    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
+    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    .modal__entrance-header
+      .modal__entrance-title Step 1
+    .modal__entrance-content
+      form.modal__entrance-form(action="#" method="get")
+        .input
+          input.input__elem(type="text" onkeyup="checkParams()" name="email" placeholder="Email")
+          ul.error-list
+            li.error-item Please enter a valid email: example@email.com
+        .input.input-account--name
+          span.internet-dog @
+          input.input__elem(type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name")
+          ul.error-list
+            li.error-item Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+          .input-account--name_counter
+            span.counter(data-field="target") 0
+            span.counter /12
+        .modal__entrance-caption Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+        .checkbox__block
+          .checkbox__block_item
+            input#entrance-checkbox_1(type='checkbox' onkeyup="checkParams()")
+            label(for='entrance-checkbox_1') I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a>
+        button.btn.btn--wide.btn--input.btn_step(type="submit" disabled) generate brainkey
+  .modal__square.modal__entrance
+    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
+    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    .modal__entrance-header
+      .modal__entrance-title Step 2
+    .modal__entrance-content
+      .modal__entrance-text The Brainkey is the seed phrase from which your public-private key pairs are generated. You can restore the public-private key pairs from your Brainkey if you lose the keys.
+      .modal__entrance-text.bold The Brainkey itself cannot be restored once lost!
+      .modal__entrance-text ⚠ Write it down on a paper and make a photo:
+      .modal__entrance-hashtags
+        span.modal__entrance-hashtag bedfoot
+        span.modal__entrance-hashtag fueler
+        span.modal__entrance-hashtag indrawn
+        span.modal__entrance-hashtag naw
+        span.modal__entrance-hashtag mutely
+        span.modal__entrance-hashtag judo
+        span.modal__entrance-hashtag cajuput
+        span.modal__entrance-hashtag ounds
+        span.modal__entrance-hashtag soum
+        span.modal__entrance-hashtag turr
+        span.modal__entrance-hashtag bail
+        span.modal__entrance-hashtag gunshot
+      form.modal__entrance-form(action="#" method="get")
+        .checkbox__block
+          .checkbox__block_item
+            input#entrance-checkbox_2(type='checkbox')
+            label(for='entrance-checkbox_2') I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
+        button.btn.btn--input.no-active(type="submit") Finish
+
+.modal#register
+  .modal__square.modal__entrance
+    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
+    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    .modal__entrance-header
+      .modal__entrance-title Step 1
+    .modal__entrance-content
+      form.modal__entrance-form(action="#" method="get")
+        .input
+          input.input__elem(type="text" onkeyup="checkParams()" name="email" placeholder="Email")
+          ul.error-list
+            li.error-item Please enter a valid email: example@email.com
+        .input.input-account--name
+          span.internet-dog @
+          input.input__elem(type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name")
+          ul.error-list
+            li.error-item Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+          .input-account--name_counter
+            span.counter(data-field="target") 0
+            span.counter /12
+        .modal__entrance-caption Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+        .checkbox__block
+          .checkbox__block_item
+            input#entrance-checkbox_3(type='checkbox' onkeyup="checkParams()")
+            label(for='entrance-checkbox_3') I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a>
+        button.btn.btn--wide.btn--input.btn_step(type="submit") generate brainkey
+  .modal__square.modal__entrance
+    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
+    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    .modal__entrance-header
+      .modal__entrance-title Step 2
+    .modal__entrance-content
+      .modal__entrance-text The Brainkey is the seed phrase from which your public-private key pairs are generated. You can restore the public-private key pairs from your Brainkey if you lose the keys.
+      .modal__entrance-text.bold The Brainkey itself cannot be restored once lost!
+      .modal__entrance-text ⚠ Write it down on a paper and make a photo:
+      .modal__entrance-hashtags
+        span.modal__entrance-hashtag bedfoot
+        span.modal__entrance-hashtag fueler
+        span.modal__entrance-hashtag indrawn
+        span.modal__entrance-hashtag naw
+        span.modal__entrance-hashtag mutely
+        span.modal__entrance-hashtag judo
+        span.modal__entrance-hashtag cajuput
+        span.modal__entrance-hashtag ounds
+        span.modal__entrance-hashtag soum
+        span.modal__entrance-hashtag turr
+        span.modal__entrance-hashtag bail
+        span.modal__entrance-hashtag gunshot
+      form.modal__entrance-form(action="#" method="get")
+        .checkbox__block
+          .checkbox__block_item
+            input#entrance-checkbox_4(type='checkbox')
+            label(for='entrance-checkbox_4') I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
+        button.btn.btn--input.no-active(type="submit") Finish
+
