@@ -372,76 +372,94 @@ $(document).ready(function(){
   $("form").submit(function(e) {
     e.preventDefault();
   });
-});
 
+  $("#log_in-form").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 12,
+        maxlength: 12
+      },
+      password: {
+        required: true
+      }
+    },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
 
+  $("#register_step_1").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      account_name: {
+        required: true,
+        minlength: 12,
+        maxlength: 12
+      }
+    },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
+  $("#register_step_3").validate({
+      rules: {
+          email: {
+              required: true,
+              email: true
+          },
+          account_name: {
+              required: true,
+              minlength: 12,
+              maxlength: 12
+          }
+      },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
 
-
-// Email must be an email
-$('.modal__entrance input[name="name"]').on('input', function() {
-  var input=$(this);
-  var is_name=input.val();
-  if(is_name){input.removeClass("invalid").addClass("valid");}
-  else{input.removeClass("valid").addClass("invalid");}
-});
-
-$('.modal__entrance input[name="password"]').on('input', function() {
-    var input=$(this);
-    var res_password = /(?=.*[0-9])[0-9a-zA-Z!@#$%^&*]{6,}/g;
-    var is_password=res_password.test(input.val());
-    if(is_password){input.removeClass("invalid").addClass("valid");}
-    else{input.removeClass("valid").addClass("invalid");}
-});
-
-$('.modal__entrance input[name="email"]').on('input', function() {
-  var input=$(this);
-  var res_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  var is_email=res_email.test(input.val());
-  if(is_email){input.removeClass("invalid").addClass("valid");}
-  else{input.removeClass("valid").addClass("invalid");}
-});
-
-$('.modal__entrance input[name="account-name"]').on('input', function() {
-  var input=$(this);
-  var res_account_name = /(?=.*[0-9])[0-9a-zA-Z!@#$%^&*]{12,}/g;
-  var is_account_name=res_account_name.test(input.val());
-  if(is_account_name){input.removeClass("invalid").addClass("valid");}
-  else{input.removeClass("valid").addClass("invalid");}
-});
-
-$(function () {
-  var target = $('[data-field="target"]');
-  $(document).on('input', '[data-field="item"]', function () {
-    var item = $(this);
-    target.html(item.val().length);
+  $('#log_in-form input').change(function() {
+    if ($("#log_in-form").valid()) {
+      $('#log_in-form .btn_step').prop('disabled', false);
+    } else {
+      $('#log_in-form .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#register_step_1 input').change(function() {
+    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").valid()) {
+      $('#register_step_1 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_1 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#register_step_3 input').change( function() {
+    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").valid()) {
+      $('#register_step_3 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_3 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#entrance-checkbox_2').change(function() {
+    if ($(this).is(':checked')) {
+      $('#register_step_2 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_2 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#entrance-checkbox_4').change(function() {
+    if ($(this).is(':checked')) {
+      $('#register_step_4 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_4 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $(function () {
+    var target = $('[data-field="target"]');
+    $(document).on('input', '[data-field="item"]', function () {
+      var item = $(this);
+      target.html(item.val().length);
+    });
   });
 });
-
-
-
-function checkParams() {
-    var is_name=$('.modal__entrance input[name="name"]').val();
-
-    var res_password = /(?=.*[0-9])[0-9a-zA-Z!@#$%^&*]{6,}/g;
-    var is_password=res_password.test($('.modal__entrance input[name="password"]').val());
-
-    var res_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    var is_email=res_email.test($('.modal__entrance input[name="email"]').val());
-
-    var res_account_name = /(?=.*[0-9])[0-9a-zA-Z!@#$%^&*]{12,}/g;
-    var is_account_name=res_account_name.test($('.modal__entrance input[name="account-name"]').val());
-
-
-      if(is_name && is_password) {
-            $('.btn_login').removeAttr('disabled');
-      } else {
-            $('.btn_login').attr('disabled', 'disabled');
-      }
-
-      if(is_email && is_account_name){
-          $('.btn_step').removeAttr('disabled');
-      } else {
-          $('.btn_step').attr('disabled', 'disabled');
-      }
-}
 

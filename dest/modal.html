@@ -229,20 +229,14 @@
             <div class="modal__entrance-title">Log in</div>
           </div>
           <div class="modal__entrance-content">
-            <form class="modal__entrance-form" action="#" method="get">
+            <form class="modal__entrance-form" id="log_in-form" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" name="name" onkeyup="checkParams()" placeholder="Account name">
-                <ul class="error-list">
-                  <li class="error-item">This field is required.</li>
-                </ul>
+                <input class="input__elem" type="text" maxlength="12" name="name" placeholder="Account name">
               </div>
               <div class="input">
-                <input class="input__elem" type="password" onkeyup="checkParams()" name="password" placeholder="Brain key">
-                <ul class="error-list">
-                  <li class="error-item">This field is required.</li>
-                </ul>
+                <input class="input__elem" type="password" name="password" placeholder="Brain key">
               </div>
-              <button class="btn btn--input btn_login" type="submit" disabled>Log in</button>
+              <button class="btn btn--input btn_step" type="submit" disabled>Log in</button>
             </form>
             <div class="btn__block">
               <button class="btn btn--wide btn--input">Register</button>
@@ -256,24 +250,18 @@
             <div class="modal__entrance-title">Step 1</div>
           </div>
           <div class="modal__entrance-content">
-            <form class="modal__entrance-form" action="#" method="get">
+            <form class="modal__entrance-form" id="register_step_1" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" onkeyup="checkParams()" name="email" placeholder="Email">
-                <ul class="error-list">
-                  <li class="error-item">Please enter a valid email: example@email.com</li>
-                </ul>
+                <input class="input__elem" type="text" name="email" placeholder="Email">
               </div>
               <div class="input input-account--name"><span class="internet-dog">@</span>
-                <input class="input__elem" type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name">
-                <ul class="error-list">
-                  <li class="error-item">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</li>
-                </ul>
+                <input class="input__elem" type="text" data-field="item" name="account_name" maxlength="12" placeholder="Account name">
                 <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
               </div>
               <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
-                  <input id="entrance-checkbox_1" type="checkbox" onkeyup="checkParams()">
+                  <input id="entrance-checkbox_1" type="checkbox">
                   <label for="entrance-checkbox_1">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
                 </div>
               </div>
@@ -292,48 +280,41 @@
             <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
             <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
             <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-            <form class="modal__entrance-form" action="#" method="get">
+            <form class="modal__entrance-form" id="register_step_2" action="#" method="get">
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
                   <input id="entrance-checkbox_2" type="checkbox">
                   <label for="entrance-checkbox_2">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
                 </div>
               </div>
-              <button class="btn btn--input no-active" type="submit">Finish</button>
+              <button class="btn btn--input btn_step" type="submit" disabled>Finish</button>
             </form>
           </div>
         </div>
       </div>
       <div class="modal" id="register">
         <div class="modal__square modal__entrance">
-          <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
           <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
           <div class="modal__entrance-header">
             <div class="modal__entrance-title">Step 1</div>
           </div>
           <div class="modal__entrance-content">
-            <form class="modal__entrance-form" action="#" method="get">
+            <form class="modal__entrance-form" id="register_step_3" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" onkeyup="checkParams()" name="email" placeholder="Email">
-                <ul class="error-list">
-                  <li class="error-item">Please enter a valid email: example@email.com</li>
-                </ul>
+                <input class="input__elem" type="text" name="email" placeholder="Email">
               </div>
               <div class="input input-account--name"><span class="internet-dog">@</span>
-                <input class="input__elem" type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name">
-                <ul class="error-list">
-                  <li class="error-item">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</li>
-                </ul>
+                <input class="input__elem" type="text" data-field="item" maxlength="12" name="account_name" placeholder="Account name">
                 <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
               </div>
               <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
-                  <input id="entrance-checkbox_3" type="checkbox" onkeyup="checkParams()">
+                  <input id="entrance-checkbox_3" type="checkbox">
                   <label for="entrance-checkbox_3">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
                 </div>
               </div>
-              <button class="btn btn--wide btn--input btn_step" type="submit">generate brainkey</button>
+              <button class="btn btn--wide btn--input btn_step" type="submit" disabled>generate brainkey</button>
             </form>
           </div>
         </div>
@@ -348,14 +329,14 @@
             <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
             <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
             <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-            <form class="modal__entrance-form" action="#" method="get">
+            <form class="modal__entrance-form" id="register_step_4" action="#" method="get">
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
                   <input id="entrance-checkbox_4" type="checkbox">
                   <label for="entrance-checkbox_4">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
                 </div>
               </div>
-              <button class="btn btn--input no-active" type="submit">Finish</button>
+              <button class="btn btn--input btn_step" type="submit" disabled>Finish</button>
             </form>
           </div>
         </div>
@@ -454,6 +435,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/jquery-validation/jquery.validate.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/trading_view.js"></script>
   </body>

@@ -9188,3 +9188,17 @@ transition {
 
     color: #78909C;
 }
+
+.modal__entrance .input_error{
+  color: #FF5252;
+  font-size: 0.8125rem;
+  line-height: 2;
+}
+
+.modal__entrance .input__elem,
+.modal__entrance .input__select,
+.modal__entrance input{
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: #263238;
+}

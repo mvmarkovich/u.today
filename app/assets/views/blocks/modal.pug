@@ -68,16 +68,12 @@
       .modal__entrance-title Log in
 
     .modal__entrance-content
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#log_in-form(action="#" method="get")
         .input
-          input.input__elem(type="text" name="name" onkeyup="checkParams()" placeholder="Account name")
-          ul.error-list
-            li.error-item This field is required.
+          input.input__elem(type="text" maxlength="12" name="name" placeholder="Account name")
         .input
-          input.input__elem(type="password" onkeyup="checkParams()" name="password" placeholder="Brain key")
-          ul.error-list
-            li.error-item This field is required.
-        button.btn.btn--input.btn_login(type="submit" disabled) Log in
+          input.input__elem(type="password"  name="password" placeholder="Brain key")
+        button.btn.btn--input.btn_step(type="submit" disabled) Log in
       .btn__block
         button.btn.btn--wide.btn--input Register
   .modal__square.modal__entrance
@@ -86,23 +82,19 @@
     .modal__entrance-header
       .modal__entrance-title Step 1
     .modal__entrance-content
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#register_step_1(action="#" method="get")
         .input
-          input.input__elem(type="text" onkeyup="checkParams()" name="email" placeholder="Email")
-          ul.error-list
-            li.error-item Please enter a valid email: example@email.com
+          input.input__elem(type="text" name="email" placeholder="Email")
         .input.input-account--name
           span.internet-dog @
-          input.input__elem(type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name")
-          ul.error-list
-            li.error-item Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+          input.input__elem(type="text" data-field="item" name="account_name" maxlength="12" placeholder="Account name")
           .input-account--name_counter
             span.counter(data-field="target") 0
             span.counter /12
         .modal__entrance-caption Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
         .checkbox__block
           .checkbox__block_item
-            input#entrance-checkbox_1(type='checkbox' onkeyup="checkParams()")
+            input#entrance-checkbox_1(type='checkbox')
             label(for='entrance-checkbox_1') I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a>
         button.btn.btn--wide.btn--input.btn_step(type="submit" disabled) generate brainkey
   .modal__square.modal__entrance
@@ -127,39 +119,34 @@
         span.modal__entrance-hashtag turr
         span.modal__entrance-hashtag bail
         span.modal__entrance-hashtag gunshot
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#register_step_2(action="#" method="get")
         .checkbox__block
           .checkbox__block_item
             input#entrance-checkbox_2(type='checkbox')
             label(for='entrance-checkbox_2') I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
-        button.btn.btn--input.no-active(type="submit") Finish
+        button.btn.btn--input.btn_step(type="submit" disabled) Finish
 
 .modal#register
   .modal__square.modal__entrance
-    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
     button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
     .modal__entrance-header
       .modal__entrance-title Step 1
     .modal__entrance-content
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#register_step_3(action="#" method="get")
         .input
-          input.input__elem(type="text" onkeyup="checkParams()" name="email" placeholder="Email")
-          ul.error-list
-            li.error-item Please enter a valid email: example@email.com
+          input.input__elem(type="text" name="email" placeholder="Email")
         .input.input-account--name
           span.internet-dog @
-          input.input__elem(type="text" onkeyup="checkParams()" data-field="item" name="account-name" maxlength="12" placeholder="Account name")
-          ul.error-list
-            li.error-item Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
+          input.input__elem(type="text" data-field="item" maxlength="12" name="account_name" placeholder="Account name").
           .input-account--name_counter
             span.counter(data-field="target") 0
             span.counter /12
         .modal__entrance-caption Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
         .checkbox__block
           .checkbox__block_item
-            input#entrance-checkbox_3(type='checkbox' onkeyup="checkParams()")
+            input#entrance-checkbox_3(type='checkbox')
             label(for='entrance-checkbox_3') I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a>
-        button.btn.btn--wide.btn--input.btn_step(type="submit") generate brainkey
+        button.btn.btn--wide.btn--input.btn_step(type="submit" disabled) generate brainkey
   .modal__square.modal__entrance
     button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
     button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
@@ -182,10 +169,10 @@
         span.modal__entrance-hashtag turr
         span.modal__entrance-hashtag bail
         span.modal__entrance-hashtag gunshot
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#register_step_4(action="#" method="get")
         .checkbox__block
           .checkbox__block_item
             input#entrance-checkbox_4(type='checkbox')
             label(for='entrance-checkbox_4') I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
-        button.btn.btn--input.no-active(type="submit") Finish
+        button.btn.btn--input.btn_step(type="submit" disabled) Finish
 
