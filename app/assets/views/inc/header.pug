@@ -2,12 +2,6 @@ header.header
   .header__container
     a.header__logo(href="#!")
 
-    .header__social.social
-      a.social__link.social__link--fb(href="#!fb")
-      a.social__link.social__link--tg(href="#!tg")
-      a.social__link.social__link--tw(href="#!tw")
-      a.social__link.social__link--em(href="#!em")
-
     nav.header__nav
       ul.header__nav-list
         each category, i in nav
@@ -23,19 +17,16 @@ header.header
     .header__panel
       button.header__btn-search.btn.btn--light.btn--search
 
+      button.header__btn-notification.btn.btn--light.btn--notification
+        .notification_value-block
+          .notification_value 1
+
       button.header__account.btn.btn--light.btn--account
 
       //- button.header__account.btn.btn--light
         img(src="https://dummyimage.com/32x32/d8dbde/aaa")
 
       button.header__burger.btn.btn--light.btn--burger
-
-      .header__lang
-          .header__lang_active.input__select.input__select--tiny
-            .tabs__btn.btn.btn--light ENG
-          .header__lang_dropdown
-            a.tabs__btn.btn.btn--light(href="#!") ENG
-            a.tabs__btn.btn.btn--light(href="#!") ESP
     .mobile-menu-back Back
 
     .mobile-menu-lang

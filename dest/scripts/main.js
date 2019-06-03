@@ -303,14 +303,132 @@
 
 
   //
-  // Slider on MAIN page
+  // Slider TOP-STORY on MAIN page
   //
   $('.slider_top-story').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    dots: true
+    dots: true,
+    fade: true
+  });
+
+  //
+  // Slider NEWS-CATEGORIES on MAIN page
+  //
+  $('.new_categories .news-categories__list').slick({
+    infinite: false,
+    slidesToScroll: 2,
+    arrows: true,
+    variableWidth: true,
+    dots: false
+  });
+
+  //
+  // Slider NEWS-CATEGORIES on MAIN page
+  //
+  $('.medium_categories-story_list').slick({
+    infinite: false,
+    slidesToScroll: 1,
+    arrows: true,
+    variableWidth: true,
+    dots: false,
+    prevArrow: $('.medium_categories__prev-button'),
+    nextArrow: $('.medium_categories__next-button'),
+  });
+
+  $("form").submit(function(e) {
+    e.preventDefault();
+  });
+
+  $("#log_in-form").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 12,
+        maxlength: 12
+      },
+      password: {
+        required: true
+      }
+    },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
+
+  $("#register_step_1").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      account_name: {
+        required: true,
+        minlength: 12,
+        maxlength: 12
+      }
+    },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
+  $("#register_step_3").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      account_name: {
+        required: true,
+        minlength: 12,
+        maxlength: 12
+      }
+    },
+    focusInvalid: true,
+    errorClass: "input_error"
+  });
+
+  $('#log_in-form input').change(function() {
+    if ($("#log_in-form").valid()) {
+      $('#log_in-form .btn_step').prop('disabled', false);
+    } else {
+      $('#log_in-form .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#register_step_1 input').change(function() {
+    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").valid()) {
+      $('#register_step_1 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_1 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#register_step_3 input').change( function() {
+    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").valid()) {
+      $('#register_step_3 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_3 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#entrance-checkbox_2').change(function() {
+    if ($(this).is(':checked')) {
+      $('#register_step_2 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_2 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $('#entrance-checkbox_4').change(function() {
+    if ($(this).is(':checked')) {
+      $('#register_step_4 .btn_step').prop('disabled', false);
+    } else {
+      $('#register_step_4 .btn_step').prop('disabled', 'disabled');
+    }
+  });
+  $(function () {
+    var target = $('[data-field="target"]');
+    $(document).on('input', '[data-field="item"]', function () {
+      var item = $(this);
+      target.html(item.val().length);
+    });
   });
 
 })(jQuery);
@@ -367,99 +485,4 @@ function validate(subscribe__form,subscribe__email) {
     return false;
   }
 }
-
-$(document).ready(function(){
-  $("form").submit(function(e) {
-    e.preventDefault();
-  });
-
-  $("#log_in-form").validate({
-    rules: {
-      name: {
-        required: true,
-        minlength: 12,
-        maxlength: 12
-      },
-      password: {
-        required: true
-      }
-    },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
-
-  $("#register_step_1").validate({
-    rules: {
-      email: {
-        required: true,
-        email: true
-      },
-      account_name: {
-        required: true,
-        minlength: 12,
-        maxlength: 12
-      }
-    },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
-  $("#register_step_3").validate({
-      rules: {
-          email: {
-              required: true,
-              email: true
-          },
-          account_name: {
-              required: true,
-              minlength: 12,
-              maxlength: 12
-          }
-      },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
-
-  $('#log_in-form input').change(function() {
-    if ($("#log_in-form").valid()) {
-      $('#log_in-form .btn_step').prop('disabled', false);
-    } else {
-      $('#log_in-form .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#register_step_1 input').change(function() {
-    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").valid()) {
-      $('#register_step_1 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_1 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#register_step_3 input').change( function() {
-    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").valid()) {
-      $('#register_step_3 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_3 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#entrance-checkbox_2').change(function() {
-    if ($(this).is(':checked')) {
-      $('#register_step_2 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_2 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#entrance-checkbox_4').change(function() {
-    if ($(this).is(':checked')) {
-      $('#register_step_4 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_4 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $(function () {
-    var target = $('[data-field="target"]');
-    $(document).on('input', '[data-field="item"]', function () {
-      var item = $(this);
-      target.html(item.val().length);
-    });
-  });
-});
 
