@@ -298,10 +298,6 @@
     }
   });
 
-
-
-
-
   //
   // Slider TOP-STORY on MAIN page
   //
@@ -430,6 +426,7 @@
       target.html(item.val().length);
     });
   });
+
 
 })(jQuery);
 
