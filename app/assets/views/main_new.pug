@@ -1,4 +1,4 @@
-extends layouts/layout_main.pug
+extends layouts/layout_new.pug
 
 block title
     title Main | u.today
@@ -62,8 +62,6 @@ block content
                 section.news
                     .news__header
                         h1.news__title ☕ News: 29 April, Monday
-                        // a.btn.btn--arrow-right.hide-md-down(href="#!") See all
-
                     ul.news__list
                         each item, i in news
                             li.news__item
