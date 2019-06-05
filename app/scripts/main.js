@@ -338,68 +338,27 @@
     e.preventDefault();
   });
 
-  $("#log_in-form").validate({
-    rules: {
-      name: {
-        required: true,
-        minlength: 12,
-        maxlength: 12
-      },
-      password: {
-        required: true
-      }
-    },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
+  $("#log_in-form").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+  $("#register_step_1").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+  $("#register_step_3").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
 
-  $("#register_step_1").validate({
-    rules: {
-      email: {
-        required: true,
-        email: true
-      },
-      account_name: {
-        required: true,
-        minlength: 12,
-        maxlength: 12
-      }
-    },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
-  $("#register_step_3").validate({
-    rules: {
-      email: {
-        required: true,
-        email: true
-      },
-      account_name: {
-        required: true,
-        minlength: 12,
-        maxlength: 12
-      }
-    },
-    focusInvalid: true,
-    errorClass: "input_error"
-  });
 
   $('#log_in-form input').change(function() {
-    if ($("#log_in-form").valid()) {
+    if ($("#log_in-form").validationEngine('validate') == true) {
       $('#log_in-form .btn_step').prop('disabled', false);
     } else {
       $('#log_in-form .btn_step').prop('disabled', 'disabled');
     }
   });
   $('#register_step_1 input').change(function() {
-    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").valid()) {
+    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").validationEngine('validate') == true) {
       $('#register_step_1 .btn_step').prop('disabled', false);
     } else {
       $('#register_step_1 .btn_step').prop('disabled', 'disabled');
     }
   });
   $('#register_step_3 input').change( function() {
-    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").valid()) {
+    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").validationEngine('validate') == true) {
       $('#register_step_3 .btn_step').prop('disabled', false);
     } else {
       $('#register_step_3 .btn_step').prop('disabled', 'disabled');

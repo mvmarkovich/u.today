@@ -235,10 +235,10 @@
           <div class="modal__entrance-content">
             <form class="modal__entrance-form" id="log_in-form" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" maxlength="12" name="name" placeholder="Account name">
+                <input class="input__elem validate[required]" type="text" maxlength="12" name="name" placeholder="Account name">
               </div>
               <div class="input">
-                <input class="input__elem" type="password" name="password" placeholder="Brain key">
+                <input class="input__elem validate[required]" type="password" name="password" placeholder="Brain key">
               </div>
               <button class="btn btn--input btn_step" type="submit" disabled>Log in</button>
             </form>
@@ -256,10 +256,10 @@
           <div class="modal__entrance-content">
             <form class="modal__entrance-form" id="register_step_1" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" name="email" placeholder="Email">
+                <input class="input__elem validate[required,custom[email]]" type="text" name="email" placeholder="Email">
               </div>
               <div class="input input-account--name"><span class="internet-dog">@</span>
-                <input class="input__elem" type="text" data-field="item" name="account_name" maxlength="12" placeholder="Account name">
+                <input class="input__elem validate[required, max-number[5] minSize[12]" type="text" data-field="item" name="account_name" maxlength="12" placeholder="Account name">
                 <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
               </div>
               <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
@@ -305,10 +305,10 @@
           <div class="modal__entrance-content">
             <form class="modal__entrance-form" id="register_step_3" action="#" method="get">
               <div class="input">
-                <input class="input__elem" type="text" name="email" placeholder="Email">
+                <input class="input__elem validate[required,custom[email]]" type="text" name="email" placeholder="Email">
               </div>
               <div class="input input-account--name"><span class="internet-dog">@</span>
-                <input class="input__elem" type="text" data-field="item" maxlength="12" name="account_name" placeholder="Account name">
+                <input class="input__elem validate[required, minSize[12]" type="text" data-field="item" maxlength="12" name="account_name" placeholder="Account name">
                 <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
               </div>
               <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
@@ -439,7 +439,8 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
-    <script src="libs/jquery-validate/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validate/jquery.validationEngine.js"></script>
+    <script src="libs/jquery-validate/jquery.validationEngine-en.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/trading_view.js"></script>
   </body>

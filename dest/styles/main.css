@@ -9182,6 +9182,8 @@ transition {
 
 .modal__entrance .input{
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal__entrance .internet-dog{
@@ -9226,6 +9228,17 @@ transition {
   font-size: 0.8125rem;
   line-height: 1.9;
   color: #263238;
+}
+
+.modal__entrance .formError{
+  position: static !important;
+  order: 2;
+}
+
+.formErrorContent{
+  color: #FF5252;
+  font-size: 0.8125rem;
+  line-height: 2;
 }
 
 .main-page ~ .footer{
