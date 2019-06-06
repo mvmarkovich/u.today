@@ -431,7 +431,7 @@ h5 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: relative;
-  z-index: 96;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -9035,6 +9035,7 @@ transition {
   line-height: 1.4;
   font-size: 0.9375rem;
   text-align: center;
+  font-weight: 600;
   padding: 13px 0;
 }
 
@@ -9776,6 +9777,23 @@ transition {
 
 .main-page .header__social{
   display: none;
+}
+
+.modal__successfully-icon{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzEiIGhlaWdodD0iNTQiIHZpZXdCb3g9IjAgMCA3MSA1NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIzLjAwMDYgNDIuNjc5NUw2LjMyMDYyIDI1Ljk5OTVMMC42NDA2MjUgMzEuNjM5NUwyMy4wMDA2IDUzLjk5OTVMNzEuMDAwNiA1Ljk5OTVMNjUuMzYwNiAwLjM1OTQ5N0wyMy4wMDA2IDQyLjY3OTVaIiBmaWxsPSIjNENBRjUwIi8+Cjwvc3ZnPgo=");
+  background-repeat: no-repeat;
+  background-size: 70px 53px;
+  background-position: center;
+  height: 50px;
+
+  margin: 1rem 0 2.4rem 0;
+}
+
+.modal__successfully-text{
+  line-height: 2rem;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 500;
 }
 
 @media (min-width: 992px){

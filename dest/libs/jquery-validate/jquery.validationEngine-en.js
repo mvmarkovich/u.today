@@ -134,8 +134,8 @@
                     "alertText": "* Numbers only"
                 },
                 "onlyLetterSp": {
-                    "regex": /^[a-zA-Z\ \']+$/,
-                    "alertText": "* Letters only"
+                    "regex": /^[0-5a-zA-Z]+$/,
+                    "alertText": "* The numbers 1-5 are allowed, and the numbers 0-6-7-8-9 are prohibited"
                 },
                 "onlyLetterAccentSp":{
                     "regex": /^[a-z\u00C0-\u017F\ ]+$/i,

@@ -338,46 +338,16 @@
     e.preventDefault();
   });
 
-  $("#log_in-form").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
-  $("#register_step_1").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
-  $("#register_step_3").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+  $('.modal__entrance-form').change(function() {
+    $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+      if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
+          $(this).children(".btn_step").prop('disabled', false);
+      } else {
+          $(this).children(".btn_step").prop('disabled', 'disabled');
+      }
+  });
 
 
-  $('#log_in-form input').change(function() {
-    if ($("#log_in-form").validationEngine('validate') == true) {
-      $('#log_in-form .btn_step').prop('disabled', false);
-    } else {
-      $('#log_in-form .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#register_step_1 input').change(function() {
-    if ($('#entrance-checkbox_1').is(':checked') && $("#register_step_1").validationEngine('validate') == true) {
-      $('#register_step_1 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_1 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#register_step_3 input').change( function() {
-    if ($('#entrance-checkbox_3').is(':checked') && $("#register_step_3").validationEngine('validate') == true) {
-      $('#register_step_3 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_3 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#entrance-checkbox_2').change(function() {
-    if ($(this).is(':checked')) {
-      $('#register_step_2 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_2 .btn_step').prop('disabled', 'disabled');
-    }
-  });
-  $('#entrance-checkbox_4').change(function() {
-    if ($(this).is(':checked')) {
-      $('#register_step_4 .btn_step').prop('disabled', false);
-    } else {
-      $('#register_step_4 .btn_step').prop('disabled', 'disabled');
-    }
-  });
   $(function () {
     var target = $('[data-field="target"]');
     $(document).on('input', '[data-field="item"]', function () {
