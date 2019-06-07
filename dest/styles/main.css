@@ -5880,6 +5880,10 @@ transition {
     align-items: center;
   }
 
+  .header__nav-list{
+    margin: 0 1.5rem;
+  }
+
   .header__nav-link {
     padding-bottom: 2.5rem;
   }
@@ -8727,7 +8731,7 @@ transition {
    .breadcrumbs_item{
     	margin-right: 1rem;
     }
-    
+
 }
 
 
@@ -8735,7 +8739,7 @@ transition {
 	.breadcrumbs_item:last-child .breadcrumbs_link{
 		max-width: 50px;
 		white-space: nowrap;
-	    overflow: hidden; 
+	    overflow: hidden;
 	    text-overflow: ellipsis;
 	    color: #90A4AE;
 	    display: block;
@@ -9260,8 +9264,9 @@ transition {
 .main-page ~ .footer{
   margin-top: 0;
 }
-.main-page ~ .footer .footer__container:before{
-  margin: 0 -30rem;
+
+.main-page .footer__container{
+  padding: 0 1rem;
 }
 
 .main-page .btn--account{
@@ -9273,12 +9278,33 @@ transition {
 }
 
 .main-page .header__nav{
-  margin: 0;
+  margin-top: 15px;
   border-bottom: 0;
+  margin-bottom: 0;
 }
 
 .main-page .header__nav-link{
-  padding: 0;
+  padding: 0 0 12px;
+  font-size: 0.9375rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.main-page .header__nav-item:after{
+  bottom: 0;
+}
+
+.main-page .header__logo{
+  height: 26px;
+  width: 174px;
+}
+
+.main-page .header__container{
+  padding: 0.5rem 1rem;
+}
+
+.main-page .header__container:after{
+  display: none;
 }
 
 .main-page .main-block,
@@ -9301,6 +9327,7 @@ transition {
 
 .main-page .breaking{
   margin: 1rem 0;
+  background-color: #fff;
 }
 
 .main-page .news__item-title-wrapper .title{
@@ -9906,7 +9933,7 @@ transition {
     padding-left: 1rem;
   }
   .main-page .header__container{
-    padding: 0;
+    padding: .5rem 1rem 0;
   }
 }
 
@@ -9914,6 +9941,10 @@ transition {
   .main-page .header__container,
   .main-page .footer__container{
     max-width: 1152px;
+  }
+  .main-page .header__container{
+    height: 3rem;
+    padding: 0 2rem;
   }
 }
 
