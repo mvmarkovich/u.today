@@ -9265,6 +9265,10 @@ transition {
   margin-top: 0;
 }
 
+.main-page {
+  overflow-x: hidden;
+}
+
 .main-page .footer__container{
   padding: 0 1rem;
 }
@@ -9689,10 +9693,6 @@ transition {
   line-height: 1.5rem;
 }
 
-.medium_categories-story{
-  width: 100vw;
-}
-
 .medium_categories-story_item{
   display: flex;
   flex-direction: column;
@@ -9731,6 +9731,10 @@ transition {
 
 .medium_categories-story .slick-initialized .slick-slide{
   display: flex;
+}
+
+.medium_categories-story{
+  width: 100vw;
 }
 
 .medium_categories__slider-nav{
@@ -9976,7 +9980,7 @@ transition {
     max-width: 100%;
   }
   .medium_categories-story{
-    padding-left: 1rem;
+    margin-left: 6rem;
   }
   .about-author{
     padding: 2rem 4rem 1rem 2rem;
