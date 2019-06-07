@@ -68,12 +68,12 @@
       .modal__entrance-title Log in
 
     .modal__entrance-content
-      form.modal__entrance-form#log_in-form(action="#" method="get")
+      form.modal__log_in-form#log_in-form(action="#" method="get")
         .input
           input(type="text" class="input__elem validate[required]" maxlength="12" name="name" placeholder="Account name")
         .input
           input(type="password" class="input__elem validate[required]"  name="password" placeholder="Brain key")
-        button.btn.btn--input.btn_step(type="submit") Log in
+        button.btn.btn--input.btn_step(type="submit" disabled="") Log in
       .btn__block
         button.btn.btn--wide.btn--input Register
   .modal__square.modal__entrance

@@ -334,12 +334,11 @@
     nextArrow: $('.medium_categories__next-button'),
   });
 
-  $(".modal__entrance-form").submit(function(e) {
+  $(".modal__entrance-form, .modal__log_in-form").submit(function(e) {
     e.preventDefault();
   });
-
   $('.modal__entrance-form').change(function() {
-    $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+      $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
       if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
           $(this).children(".btn_step").prop('disabled', false);
       } else {
@@ -347,6 +346,14 @@
       }
   });
 
+  $('.modal__log_in-form').change(function() {
+    $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+    if ($(this).validationEngine('validate') == true) {
+      $(this).children(".btn_step").prop('disabled', false);
+    } else {
+      $(this).children(".btn_step").prop('disabled', 'disabled');
+    }
+  });
 
   $(function () {
     var target = $('[data-field="target"]');
