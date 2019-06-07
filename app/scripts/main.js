@@ -326,7 +326,7 @@
   //
   $('.medium_categories-story_list').slick({
     infinite: false,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     arrows: true,
     variableWidth: true,
     dots: false,
@@ -338,7 +338,7 @@
     e.preventDefault();
   });
   $('.modal__entrance-form').change(function() {
-      $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+      $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
       if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
           $(this).children(".btn_step").prop('disabled', false);
       } else {
@@ -347,7 +347,7 @@
   });
 
   $('.modal__log_in-form').change(function() {
-    $(this).validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+    $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
     if ($(this).validationEngine('validate') == true) {
       $(this).children(".btn_step").prop('disabled', false);
     } else {

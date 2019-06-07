@@ -9175,6 +9175,10 @@ transition {
   border: 1px solid #4CAF50;
 }
 
+.modal__entrance .input__elem.invalid{
+  border: 1px solid #F44336;
+}
+
 .modal__entrance .input{
     position: relative;
     display: flex;
@@ -9222,7 +9226,12 @@ transition {
 .modal__entrance input{
   font-size: 0.8125rem;
   line-height: 1.9;
+  border: 1px solid #CFD8DC;
   color: #263238;
+}
+
+.modal__entrance .btn:disabled{
+  background-color: #CFD8DC;
 }
 
 .modal__entrance .formError{
@@ -9241,6 +9250,18 @@ transition {
 }
 .main-page ~ .footer .footer__container:before{
   margin: 0 -30rem;
+}
+
+.main-page .btn--account{
+  display: block;
+}
+
+.main-page .header{
+  min-height: 1px;
+}
+
+.main-page{
+  padding-bottom: 2.5rem;
 }
 
 .main-page .main-block,
@@ -9345,6 +9366,7 @@ transition {
 .main-page .top-story{
   border: none;
   background-color: #fff;
+  height: auto;
 }
 
 .main-page .top-story_header{
@@ -9394,9 +9416,6 @@ transition {
   display: flex;
 }
 
-.top-story .news__item-time{
-
-}
 
 .main-page .top-story_humble{
   margin-top: .8rem;
@@ -9755,11 +9774,6 @@ transition {
   box-shadow: none;
 }
 
-.main-page .page-container {
-  background: transparent;
-  box-shadow: none;
-}
-
 .main-page .footer{
   background-color: #fff;
   border-top: 6px solid #263238;
@@ -9875,7 +9889,7 @@ transition {
     padding-left: 1rem;
   }
   .main-page .header__container{
-    padding: .5rem 2rem;
+    padding: 0;
 
   }
 }
@@ -9900,7 +9914,10 @@ transition {
     padding: 0;
   }
   .main-page .main-aside-container{
-    margin-left: 7rem;
+    margin-left: 6rem;
+  }
+  .main-page .page-container{
+    max-width: 100%;
   }
   .main-page .main-news-block{
     width: calc(100% - 360px - 3rem);
