@@ -334,7 +334,7 @@
     nextArrow: $('.medium_categories__next-button'),
   });
 
-  $("form").submit(function(e) {
+  $(".modal__entrance-form").submit(function(e) {
     e.preventDefault();
   });
 
