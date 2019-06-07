@@ -431,7 +431,6 @@ h5 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: relative;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
