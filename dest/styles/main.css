@@ -9795,6 +9795,65 @@ transition {
   font-weight: 500;
 }
 
+.about-author{
+  background-color: #F5F5F5;
+  padding: 2rem 2rem 1rem;
+  position: relative;
+}
+
+.about-author_row{
+  display: flex;
+}
+
+.about-author_avatar{
+  max-width: 64px;
+  min-width: 64px;
+  height: 64px;
+
+  margin-right: 2rem;
+  display: block;
+}
+
+.about-author_avatar img{
+  border-radius: 3px;
+}
+
+.about-author .about-author_title{
+  margin: 0;
+  padding: 0;
+}
+
+.about-author_data{
+  display: flex;
+  margin-top: .5rem;
+}
+
+.about-author_name{
+  color: #2979FF;
+  font-size: 17px;
+  text-decoration: none;
+  line-height: 1.5rem;
+}
+
+.about-author .social{
+  margin-left: 1.6rem;
+}
+
+.about-author .social .social__link{
+  margin-right: 1.6rem;
+}
+
+.about-author .social .social__link:last-child{
+  margin-right: 0;
+}
+
+.about-author .about-author_descr{
+  font-size: 17px;
+  line-height: 2rem;
+  margin: .5rem 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 @media (min-width: 992px){
   .main-page .header__container,
   .main-page .footer__container{
@@ -9854,6 +9913,20 @@ transition {
   }
   .medium_categories-story{
     padding-left: 1rem;
+  }
+  .about-author{
+    padding: 2rem 4rem 1rem 2rem;
+    min-height: 185px;
+  }
+  .about-author .social{
+    position: absolute;
+    flex-direction: column;
+    right: 1.5rem;
+    margin-left: 0;
+  }
+  .about-author .social .social__link{
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -9976,7 +10049,27 @@ transition {
   }
   .main-page .news-block{
     margin: .5rem 0;
+  }
+  .about-author_avatar{
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
 
+    margin-right: 1.5rem;
+  }
+  .about-author_data{
+    margin-top: 0;
+  }
+  .about-author_name{
+    font-size: .8125rem;
+  }
+  .about-author .about-author_descr{
+    font-size: .8125rem;
+    line-height: 1.5rem;
+    margin-left: -62px;
+  }
+  .about-author .about-author_title{
+    font-size: 15px;
   }
 }
 
@@ -10003,5 +10096,20 @@ transition {
     max-width: 72px;
     min-width: 72px;
   }
+}
 
+@media (max-width: 430px){
+  .about-author .about-author_descr{
+    font-size: .8125rem;
+    margin-left: -60px;
+  }
+  .about-author{
+    padding: 1.5rem 3rem 1rem 1.5rem;
+  }
+  .about-author_avatar{
+    margin-right: 1.2rem;
+  }
+  .about-author .social{
+    right: .8rem;
+  }
 }
