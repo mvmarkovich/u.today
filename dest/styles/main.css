@@ -3567,6 +3567,18 @@ main > .article:nth-last-child(2):after {
   margin-right: 20px;
 }
 
+.footer__disclaimer{
+  border-bottom: 1px solid #CFD8DC;
+  padding: 1.1875rem 0 .8125rem 0;
+}
+
+.footer__disclaimer-text{
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  color: #78909C;
+  margin-bottom: 0;
+}
+
 .aside-story {
   padding-bottom: .5rem;
   display: flex;
@@ -9260,8 +9272,13 @@ transition {
   min-height: 1px;
 }
 
-.main-page{
-  padding-bottom: 2.5rem;
+.main-page .header__nav{
+  margin: 0;
+  border-bottom: 0;
+}
+
+.main-page .header__nav-link{
+  padding: 0;
 }
 
 .main-page .main-block,
@@ -9890,7 +9907,6 @@ transition {
   }
   .main-page .header__container{
     padding: 0;
-
   }
 }
 
