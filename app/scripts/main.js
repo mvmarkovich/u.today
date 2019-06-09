@@ -315,7 +315,7 @@
   //
   $('.new_categories .news-categories__list').slick({
     infinite: false,
-    slidesToScroll: 2,
+    swipeToSlide: true,
     arrows: true,
     variableWidth: true,
     dots: false
@@ -326,7 +326,7 @@
   //
   $('.medium_categories-story_list').slick({
     infinite: false,
-    slidesToScroll: 2,
+    swipeToSlide: true,
     arrows: true,
     variableWidth: true,
     dots: false,
