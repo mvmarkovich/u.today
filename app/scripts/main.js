@@ -334,7 +334,7 @@
     dots: false,
     responsive: [
       {
-        breakpoint: 580,
+        breakpoint: 961,
         settings: {
           arrows: false
         }

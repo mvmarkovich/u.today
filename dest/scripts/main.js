@@ -331,7 +331,15 @@
     swipeToSlide: true,
     arrows: true,
     variableWidth: true,
-    dots: false
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 961,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
 
   //
