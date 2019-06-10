@@ -298,6 +298,19 @@
     }
   });
 
+  $(window).on('load resize', function() {
+    if ($(window).width() >= '887'){
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 450) {
+          $('.main-page .share-and-up').addClass('show');
+        } else{
+          $('.main-page .share-and-up').removeClass('show');
+        }
+      });
+      return this;
+    }
+  });
+
   //
   // Slider TOP-STORY on MAIN page
   //
@@ -337,6 +350,7 @@
   $(".modal__entrance-form, .modal__log_in-form").submit(function(e) {
     e.preventDefault();
   });
+
   $('.modal__entrance-form').change(function() {
       $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
       if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
@@ -362,6 +376,7 @@
       target.html(item.val().length);
     });
   });
+
 
 
 })(jQuery);
