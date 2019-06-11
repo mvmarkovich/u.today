@@ -2418,6 +2418,10 @@ humble--liked{
   overflow: hidden;
 }
 
+.main-page .currencies__slide-wrapper{
+    height: 1.5rem;
+}
+
 .currencies__info {
   display: flex;
 }
@@ -5130,6 +5134,10 @@ transition {
     height: 3.3rem;
   }
 
+    .main-page .currencies__slide-wrapper{
+        height: 1.5rem;
+    }
+
   .something--content {
     margin: 2rem 0;
   }
@@ -5918,6 +5926,10 @@ transition {
   .header__nav-list {
     display: flex;
     align-items: center;
+  }
+
+  .main-page .header__nav-list{
+      margin: 0 1.5rem;
   }
 
   .header__nav-link {
