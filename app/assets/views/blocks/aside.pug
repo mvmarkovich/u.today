@@ -1,5 +1,5 @@
 section.card
-  .card__title 🔥 Hot Stories
+  h4.card__title 🔥 Hot Stories
 
   .card__body
     each hot in hots
@@ -23,7 +23,7 @@ section.card.card--something
     img(src="img/something/square.png" width="300" height="250" alt="something-square")
 
 section.card
-  .card__title 👓 Topics of current interest
+  h4.card__title 👓 Topics of current interest
 
   .card__body
     .btns-spacer
@@ -31,7 +31,7 @@ section.card
         a.btn.btn--hash-tag(href="#!")= tag
 
 section.card
-  .card__title 🗓 Upcoming events
+  h4.card__title 🗓 Upcoming events
 
   .card__body
     each event in events
@@ -51,7 +51,7 @@ section.card.card--something
     img(src="img/something/square.png" width="300" height="250" alt="something-square")
 
 section.card
-  .card__title ✉ Got no time? Subscribe!
+  h4.card__title ✉ Got no time? Subscribe!
 
   .card__body
     form.form--col(action="#" method="get")

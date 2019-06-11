@@ -1761,6 +1761,10 @@ humble--liked{
   margin-left: 0;
 }
 
+.tabs__item-title{
+  margin-bottom: 0;
+}
+
 .tabs--vertical .tabs__item + .tabs__item {
 }
 
@@ -2410,7 +2414,7 @@ humble--liked{
 
 .currencies__slide-wrapper {
   width: 100%;
-  height: 1.5rem;
+  height: 2.5rem;
   overflow: hidden;
 }
 
@@ -2795,6 +2799,8 @@ humble--liked{
 }
 
 .mobile-menu-back.show {
+  display: block;
+  z-index: 999;
 }
 
 .overflow-hidden {
@@ -3396,6 +3402,15 @@ humble--liked{
   line-height: 1.9;
   margin-bottom: .1rem;
   display: block;
+}
+
+.article__recommended .article__recommended-item-title{
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
 }
 
 .article__recommended-info {
@@ -5112,7 +5127,7 @@ transition {
   }
 
   .currencies__slide-wrapper{
-    height: 1.5rem;
+    height: 3.3rem;
   }
 
   .something--content {
@@ -5291,10 +5306,6 @@ transition {
   .header__nav-item--arrow:hover .header__nav-link:after {
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
-  }
-
-  .header__nav-item--arrow:after {
-    right: 24px;
   }
 
   .header__nav-link {
@@ -5909,10 +5920,6 @@ transition {
     align-items: center;
   }
 
-  .header__nav-list{
-    margin: 0 1.5rem;
-  }
-
   .header__nav-link {
     padding-bottom: 2.5rem;
   }
@@ -6018,6 +6025,15 @@ transition {
     padding: 3.4rem 2rem;
     margin-top: 3.3rem;
     margin-bottom: 3.1rem;
+  }
+
+  .article__recommended .article__recommended-item-title{
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.9;
   }
 
   .article__fact-title,.article__fact strong,.article h4 strong,.article h4-title {
@@ -6710,9 +6726,7 @@ transition {
     height: 100vh;
   }
 
-  .mobile-menu-back.show {
-    display: block;
-    z-index: 999;
+  .main-page .mobile-menu-back.show {
     border-bottom: 1px solid #CFD8DC;
   }
 
@@ -9994,6 +10008,7 @@ body .slick-next{
   background-color: #F5F5F5;
   padding: 2rem 2rem 1rem;
   position: relative;
+  margin: 2.4rem 0 4rem;
 }
 
 .about-author_row{
@@ -10042,7 +10057,7 @@ body .slick-next{
   margin-right: 0;
 }
 
-.about-author .about-author_descr{
+.about-author p{
   font-size: 17px;
   line-height: 2rem;
   margin: .5rem 0 0;
@@ -10163,6 +10178,8 @@ body .slick-next{
   .about-author{
     padding: 2rem 4rem 1rem 2rem;
     min-height: 185px;
+
+    margin: 2rem 0;
   }
   .about-author .social{
     position: absolute;
@@ -10229,7 +10246,7 @@ body .slick-next{
     right: 0;
     top: 48px;
   }
-  .mobile-menu-back{
+  .main-page .mobile-menu-back{
     right: 0;
     top: 49px;
   }
@@ -10333,7 +10350,7 @@ body .slick-next{
   .main-page .asset{
     margin: .5rem 0;
   }
-  .header{
+  .main-page .header{
     margin-bottom: .5rem;
   }
   .about-author_avatar{
@@ -10349,7 +10366,7 @@ body .slick-next{
   .about-author_name{
     font-size: .8125rem;
   }
-  .about-author .about-author_descr{
+  .about-author p{
     font-size: .8125rem;
     line-height: 1.5rem;
     margin-left: -62px;
@@ -10447,7 +10464,7 @@ body .slick-next{
 }
 
 @media (max-width: 430px){
-  .about-author .about-author_descr{
+  .about-author p{
     font-size: .8125rem;
     margin-left: -60px;
   }
