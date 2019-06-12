@@ -302,18 +302,30 @@ block content
                                     a.humble.humble--liked.humble--tiny(href="#!") 7
                 a.show-more.btn--arrow-right(href="#!") Show all
             section.card
-                .card__title ✉ Got no time? Subscribe!
-
                 .card__body
+                    .advertising
+                        a.advertising_link(href="#!") About us
+                        a.advertising_link(href="#!") Adverstizement
+                        a.advertising_link(href="#!") Press realeases
                     form.form--col(action="#" method="get")
+                        .form-subscribe
+                            .title Subscribtion
+                            .toggle-checkbox
+                                input(type="checkbox" class="toggle" id="toggle-checkbox_1" value="")
+                                label(for="toggle-checkbox_1") Push notifications
                         .input
                             input.input__elem(type="text" name="email" placeholder="Email" required)
 
                         .input
                             button.btn.btn--input(type="submit") Subscribe
-
-                    .text-tiny By pressing the “Subscribe button” you agree with our
-                        a(href="#!") Privacy Policy
+                    .text-tiny By pressing the “Subscribe button” you agree with our Privacy Policy
+                    .follow__block
+                        .title Follow & contact
+                        .social
+                            a.social__link.social__link--fb(href="#!fb")
+                            a.social__link.social__link--tg(href="#!tg")
+                            a.social__link.social__link--tw(href="#!tw")
+                            a.social__link.social__link--em(href="#!em")
             section.card.card--something
                 .something
                     img(src="img/content/banner.png" width="360" height="156" alt="something-square")
