@@ -9260,6 +9260,7 @@ body .slick-next{
 
   border-top: 0;
   margin: 2.5rem 0;
+  width: 100% !important;
 }
 
 .article__content table::-webkit-scrollbar-track {
