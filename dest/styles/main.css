@@ -471,6 +471,10 @@ h5 {
   margin-bottom: 1rem;
 }
 
+.top-story-block .slick-track{
+  display: flex;
+}
+
 .news-block {
   max-width: 100%;
 }
@@ -2513,7 +2517,7 @@ humble--liked{
   box-shadow: 13rem 0 0 #fff,-13rem 0 0 #fff;
   min-height: 56px;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .header__container {
