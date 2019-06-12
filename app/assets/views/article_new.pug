@@ -1,7 +1,7 @@
 extends layouts/layout.pug
 
 block title
-    title Article | u.today
+    title Article NEW | u.today
 
 block content
     section.asset.asset-wide.bg-dark-1
@@ -15,6 +15,24 @@ block content
         .main-block
             include blocks/article-infinite-scroll.pug
             .article
+                .article_main-info.article_main-info_v1
+                    button.article_main-info__rating
+                        .rating-value 31
+                    .article_main-info__humble
+                        .humble.mark &#x2B50; Featured
+                        time.author__item-time.humble 27 Oct’18
+                        a.humble.humble--views(href='#!') 123k
+                        a.humble.humble--chat(href='#!') 256
+                .article_main-info.article_main-info_v2
+                    .article_main-info__rating
+                        button.rating-button.rating-down
+                        .rating-value 31
+                        button.rating-button.rating-up
+                    .article_main-info__humble
+                        .humble.mark &#x2B50; Featured
+                        time.author__item-time.humble 27 Oct’18
+                        a.humble.humble--views(href='#!') 123k
+                        a.humble.humble--chat(href='#!') 256
                 .article_new__header
                     ul.breadcrumbs_list
                         li.breadcrumbs_item
