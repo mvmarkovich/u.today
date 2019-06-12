@@ -2511,6 +2511,8 @@ humble--liked{
   z-index: 996;
   box-shadow: 13rem 0 0 #fff,-13rem 0 0 #fff;
   min-height: 56px;
+
+  margin-bottom: 2rem;
 }
 
 .header__container {
@@ -8252,6 +8254,15 @@ transition {
   }
 }
 
+.article .article__main-img-wrapper{
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.article .article__main-img-wrapper img{
+  position: static;
+}
+
 .author-block .author-block__name{
   font-size: 31px;
   line-height: 48px;
@@ -8259,15 +8270,23 @@ transition {
   margin-bottom: 2.5rem;
 }
 
-.author-block .author-block__image{
-  margin: 2.5rem 0;
+.author-block .social{
+  margin-bottom: 1.5rem;
 }
 
-.author-block .author-block__description p{
-  margin-bottom: 0;
-  margin: 2.5rem 0;
+.author-block .social__link{
+  margin-right: 1.6rem;
 }
 
+.author-block__description p{
+  font-size: 1.065rem;
+  line-height: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.author-block .article__main-img-wrapper{
+  margin-bottom: 3rem;
+}
 
 @media screen and (max-width: 1151px){
   .author-block .author-block__name{
@@ -8587,7 +8606,8 @@ transition {
 }
 
 .article_new .article .caption p,
-.article_new .article .caption a{
+.article_new .article .caption a,
+.image-source-text {
   font-size: .785rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 1rem;
@@ -8597,8 +8617,14 @@ transition {
   font-weight: 500;
 }
 
-.article_new .article .caption a{
+.article_new .article .caption a,
+.image-source-text a{
   color: #2196F3;
+}
+
+.article_new .article .caption a:hover,
+.image-source-text a:hover{
+  color: #651fff;
 }
 
 @media screen and (max-width: 784px){
@@ -8766,6 +8792,18 @@ transition {
 	.article_new .article_new__header .humble--chat{
 		display: none
 	}
+
+    .author-block__description p{
+      font-size: 0.875rem;
+    }
+
+    .author-block .article__main-img-wrapper{
+      margin-bottom: 1.5rem;
+    }
+
+    .header{
+      margin-bottom: 1rem;
+    }
 
     .breadcrumbs_link{
         font-size: 0.812rem;
@@ -9362,6 +9400,7 @@ body .slick-next{
 
 .main-page .header{
   min-height: 1px;
+  margin-bottom: 0;
 }
 
 .main-page .header__nav{
@@ -10138,14 +10177,6 @@ body .slick-next{
   margin: 1rem 0 2rem 0;
 }
 
-.article__main .article__main-img-wrapper{
-  margin-bottom: 0;
-  padding-top: 0;
-}
-
-.article__main .article__main-img-wrapper img{
-  position: static;
-}
 
 @media (min-width: 992px){
   .main-page .header__container,

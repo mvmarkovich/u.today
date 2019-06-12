@@ -6,13 +6,18 @@ block title
 block content
     .content-container
         main.main-block
-            .author-block
+            .author-block.article
                 .author-block__name Konstantin Konstantinopolsky
-                .author-block__image
-                    img(src="img/content/author_page/author_avatar.png")
+                .article__main-img-wrapper
+                    img(class="article__main-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-03/den-sergeychuk.jpg?itok=DtWJkKoA")
                 .author-block__description
                     p Alex covers all things crypto — from major projects, which are fighting tooth and nail to gain the upper hand in the burgeoning industry, to the latest regulatory trends around the world.
                     p He’s a firm believer that Blockchain has the potential to reshape pretty much every business out there, and cryptocurrencies are only a stepping stone to the upcoming decentralized revolution.
+                .social
+                    a.social__link.social__link--tg(href="#!tg")
+                    a.social__link.social__link--insta(href="#!insta")
+                    a.social__link.social__link--email(href="#!email")
+                .image-source-text Cover image via <a href="/">u.today</a>
         aside.aside-block
             a.card.card--related(href="#!")
                 .related_body
