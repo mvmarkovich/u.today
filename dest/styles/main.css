@@ -5880,7 +5880,7 @@ transition {
 
   blockquote {
     margin: 2.5rem 0;
-    padding: 2.5rem 4.4rem 3.3rem 4rem;
+    padding: 2.5rem 4rem;
   }
 
   blockquote:before {
@@ -7986,8 +7986,9 @@ transition {
   text-decoration: none;
 }
 
-.article_new .article__related-img{
+.article_new .article__related_img{
   margin-left: 0;
+  max-height: 120px;
 }
 
 .article_new .article__related-link{
@@ -10552,6 +10553,10 @@ body .slick-next{
   .main-page .text-tiny{
     font-size: 0.8125rem;
     line-height: 1.5rem;
+  }
+
+  .article_new .article__content .article__related{
+    padding: 0 0 0 2rem;
   }
 }
 
