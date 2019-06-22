@@ -260,6 +260,10 @@
     $('.modal__square:visible').hide().prev('.modal__square').show();
   });
 
+  $('.accept-cookies').on('click', function() {
+    $(".cookies").detach();
+  });
+
 
 
   /* aside in price-index */
