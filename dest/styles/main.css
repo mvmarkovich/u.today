@@ -6602,7 +6602,7 @@ transition {
   }
 
   .article__content,.article p {
-    font-size: 0.9375rem;
+    font-size: 0.9975rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
   }
@@ -6616,7 +6616,7 @@ transition {
   }
 
   .article ol:not([class]) li,.article ul:not([class]) li {
-    font-size: 0.9375rem;
+    font-size: 0.9975rem;
     line-height: 1.8;
   }
 
@@ -7541,7 +7541,7 @@ transition {
 
 .article_new .author_block .author__item-msg p{
   font-size: 0.9375rem;
-  line-height: 2rem;
+  line-height: 1.8;
   color: #263238;
   font-weight: 500;
   margin-bottom: 0;
@@ -10330,8 +10330,8 @@ body .slick-next{
 }
 
 .about-author p{
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 0.9375rem;
+  line-height: 1.8;
   margin: .5rem 0 0;
   font-family: "Montserrat", sans-serif;
 }
