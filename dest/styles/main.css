@@ -2706,11 +2706,6 @@ humble--liked{
   margin-right: .8rem;
 }
 
-.btn--account{
-  margin-right: 1.5rem;
-  display: none;
-}
-
 .header__search {
   position: absolute;
   left: 0;
@@ -6736,6 +6731,10 @@ transition {
   .header__nav-link {
     height: 3rem;
     padding-left: 1rem;
+  }
+
+  .btn--account{
+    margin-right: 0.8rem;
   }
 
   .header__nav-child-list {
