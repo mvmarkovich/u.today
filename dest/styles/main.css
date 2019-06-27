@@ -9446,6 +9446,10 @@ body .slick-next{
   margin-right: .7625rem;
 }
 
+#register .modal__entrance:first-child .btn--cross-back{
+    display: none;
+}
+
 .modal__square-step_2 .checkbox__block{
   padding: 2rem 0;
 }

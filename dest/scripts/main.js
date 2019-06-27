@@ -3,6 +3,7 @@
   //
   // Header and mobile menu
   //
+  $("#register > div").clone().appendTo("#log_in");
 
   const $header = $(".header"),
     $headerContainer = $(".header__container"),
@@ -265,7 +266,6 @@
   });
 
 
-
   /* aside in price-index */
   $('.aside_dropdown > .caption').on('click', function() {
     $(this).parent().toggleClass('open');
@@ -358,11 +358,7 @@
     prevArrow: $('.medium_categories__prev-button'),
     nextArrow: $('.medium_categories__next-button'),
   });
-
-  $(".modal__entrance-form, .modal__log_in-form").submit(function(e) {
-    e.preventDefault();
-  });
-
+  
   $('.modal__entrance-form').change(function() {
       $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
       if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
@@ -379,6 +375,19 @@
     } else {
       $(this).children(".btn_step").prop('disabled', 'disabled');
     }
+  });
+
+  var entrance_checkbox = 0;
+  $(".modal .modal__entrance .checkbox__block_item").each(function(){
+    entrance_checkbox++;
+    $(this).children(".checkbox").attr("id","entrance-checkbox-" + entrance_checkbox);
+    $(this).children("label").attr("for","entrance-checkbox-" + entrance_checkbox);
+  });
+
+  var entrance_form = 0;
+  $(".modal .modal__entrance form").each(function(){
+    entrance_form++;
+    $(this).attr("id","entrance_form-" + entrance_form);
   });
 
   $(function () {

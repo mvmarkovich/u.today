@@ -223,7 +223,7 @@
             <div class="modal__entrance-title">Log in</div>
           </div>
           <div class="modal__entrance-content">
-            <form class="modal__log_in-form" id="log_in-form" action="#" method="get">
+            <form class="modal__log_in-form" action="#" method="get">
               <div class="input">
                 <input class="input__elem validate[required]" type="text" maxlength="12" name="name" placeholder="Account name">
               </div>
@@ -237,74 +237,16 @@
             </div>
           </div>
         </div>
-        <div class="modal__square modal__entrance">
-          <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
-          <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
-          <div class="modal__entrance-header">
-            <div class="modal__entrance-title">Step 1</div>
-          </div>
-          <div class="modal__entrance-content">
-            <form class="modal__entrance-form" id="register_step_1" action="#" method="get">
-              <div class="input">
-                <input class="input__elem validate[required,custom[email]]" type="text" name="email" placeholder="Email">
-              </div>
-              <div class="input input-account--name"><span class="internet-dog">@</span>
-                <input class="input__elem validate[custom[onlyLetterSp], required, max-number[5] minSize[12]" type="text" data-field="item" name="account_name" maxlength="12" placeholder="Account name">
-                <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
-              </div>
-              <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
-              <div class="checkbox__block">
-                <div class="checkbox__block_item">
-                  <input class="checkbox" id="entrance-checkbox_1" type="checkbox">
-                  <label for="entrance-checkbox_1">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
-                </div>
-              </div>
-              <button class="btn btn--wide btn--input btn_step" type="submit" disabled>generate brainkey</button>
-            </form>
-          </div>
-        </div>
-        <div class="modal__square modal__entrance">
-          <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
-          <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
-          <div class="modal__entrance-header">
-            <div class="modal__entrance-title">Step 2</div>
-          </div>
-          <div class="modal__entrance-content">
-            <div class="modal__entrance-text">The Brainkey is the seed phrase from which your public-private key pairs are generated. You can restore the public-private key pairs from your Brainkey if you lose the keys.</div>
-            <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
-            <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
-            <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-            <form class="modal__entrance-form" id="register_step_2" action="#" method="get">
-              <div class="checkbox__block">
-                <div class="checkbox__block_item">
-                  <input class="checkbox" id="entrance-checkbox_2" type="checkbox">
-                  <label for="entrance-checkbox_2">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
-                </div>
-              </div>
-              <button class="btn btn--input btn--wide btn_step btn_finish" type="submit" disabled>Finish</button>
-            </form>
-          </div>
-        </div>
-        <div class="modal__square modal__entrance">
-          <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
-          <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
-          <div class="modal__entrance-header">
-            <div class="modal__entrance-title">Registration completed</div>
-          </div>
-          <div class="modal__entrance-content">
-            <div class="modal__successfully-icon"></div>
-            <div class="modal__successfully-text">Your registration was successfully completed</div>
-          </div>
-        </div>
       </div>
       <div class="modal" id="register">
         <div class="modal__square modal__entrance">
+          <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
           <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
           <div class="modal__entrance-header">
             <div class="modal__entrance-title">Step 1</div>
           </div>
           <div class="modal__entrance-content">
-            <form class="modal__entrance-form" id="register_step_3" action="#" method="get">
+            <form class="modal__entrance-form" action="#" method="get">
               <div class="input">
                 <input class="input__elem validate[required,custom[email]]" type="text" name="email" placeholder="Email">
               </div>
@@ -315,8 +257,8 @@
               <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
-                  <input class="checkbox" id="entrance-checkbox_3" type="checkbox">
-                  <label for="entrance-checkbox_3">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
+                  <input class="checkbox" type="checkbox">
+                  <label>I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
                 </div>
               </div>
               <button class="btn btn--wide btn--input btn_step" type="submit" disabled>generate brainkey</button>
@@ -334,11 +276,11 @@
             <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
             <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
             <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-            <form class="modal__entrance-form" id="register_step_4" action="#" method="get">
+            <form class="modal__entrance-form" action="#" method="get">
               <div class="checkbox__block">
                 <div class="checkbox__block_item">
-                  <input class="checkbox" id="entrance-checkbox_4" type="checkbox">
-                  <label for="entrance-checkbox_4">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
+                  <input class="checkbox" type="checkbox">
+                  <label>I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
                 </div>
               </div>
               <button class="btn btn--input btn--wide btn_step" type="submit" disabled>Finish</button>
