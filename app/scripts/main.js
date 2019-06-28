@@ -263,8 +263,11 @@
 
   $('.accept-cookies').on('click', function() {
     $(".cookies").detach();
+    var date = new Date();
+    days = 1;
+    date.setTime(+date + (days * 86400000));
+    document.cookie = "accept=1; expires=" + date.toGMTString();
   });
-
 
   /* aside in price-index */
   $('.aside_dropdown > .caption').on('click', function() {
@@ -359,13 +362,14 @@
     nextArrow: $('.medium_categories__next-button'),
   });
 
+
   $('.modal__entrance-form').change(function() {
-      $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
-      if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
-          $(this).children(".btn_step").prop('disabled', false);
-      } else {
-          $(this).children(".btn_step").prop('disabled', 'disabled');
-      }
+    $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
+    if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
+      $(this).children(".btn_step").prop('disabled', false);
+    } else {
+      $(this).children(".btn_step").prop('disabled', 'disabled');
+    }
   });
 
   $('.modal__log_in-form').change(function() {
@@ -375,6 +379,10 @@
     } else {
       $(this).children(".btn_step").prop('disabled', 'disabled');
     }
+  });
+
+  $(".modal__entrance-form").submit(function(e) {
+    e.preventDefault();
   });
 
   var entrance_checkbox = 0;
@@ -401,6 +409,7 @@
 
 
 })(jQuery);
+
 
 //
 // Share
