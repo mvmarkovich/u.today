@@ -3,7 +3,6 @@
   //
   // Header and mobile menu
   //
-  $("#register > div").clone().appendTo("#log_in");
 
   const $header = $(".header"),
     $headerContainer = $(".header__container"),
@@ -245,14 +244,6 @@
     $(this).toggleClass("active-lang");
   });
 
-  $('#log_in .modal__square .btn--wide').click(function() {
-    $('.modal__square:visible').hide().next('.modal__square').show();
-  });
-
-  $('#log_in .modal__square .btn--cross-back').click(function() {
-    $('.modal__square:visible').hide().prev('.modal__square').show();
-  });
-
   $('#register .modal__square .btn--wide').click(function() {
     $('.modal__square:visible').hide().next('.modal__square').show();
   });
@@ -406,6 +397,14 @@
     });
   });
 
+  $(".modal .register").on("click", function () {
+    $('#log_in').removeClass("modal--open modal--fadeIn");
+  });
+
+  $(".modal .sign_in").on("click", function () {
+    $('#register').removeClass("modal--open modal--fadeIn");
+
+  });
 
 
 })(jQuery);
