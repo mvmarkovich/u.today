@@ -4583,11 +4583,12 @@ main > .article:nth-last-child(2):after {
 }
 
 .team__list {
+  margin-right: -.5rem;
+  margin-left: -.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
-  padding: 2rem;
+  padding: 1.5rem 2.5rem;
 }
 
 .team__item {
@@ -4597,6 +4598,8 @@ main > .article:nth-last-child(2):after {
   line-height: 1.9;
   width: calc(50% - 1rem);
   margin-bottom: 1.6rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
 }
 
 .team__img {
@@ -5143,13 +5146,19 @@ transition {
     width: 33%;
   }
 
-  .team__item {
-    width: 21.8%;
-    margin-bottom: 2rem;
-  }
-
   .partners__img {
     max-width: 80px;
+  }
+
+  .team__list{
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+  .team__item{
+    width: calc(100% / 3 - 2rem);
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -5660,7 +5669,7 @@ transition {
   }
 
   .team__item {
-    width: 30%;
+    width: calc(25% - 2rem);
   }
 
   .partners__list {
@@ -6559,7 +6568,7 @@ transition {
   }
 
   .team__item {
-    width: 21.8%;
+    width: calc(100% / 6 - 2rem);
   }
 
   .partners__list {
@@ -9683,6 +9692,10 @@ body .slick-next{
   max-width: 100%;
 }
 
+.main-page.new_about-us .aside-block{
+  width: 240px;
+}
+
 .main-page .aside-news-block{
   max-width: 360px;
 }
@@ -9774,6 +9787,7 @@ body .slick-next{
   padding: .6rem 1rem 1.5rem;
   border: none;
   background: #fff;
+  max-width: 320px;
 }
 
 .main-page .card + .card{
@@ -10856,6 +10870,48 @@ body .slick-next{
   max-width: 768px;
 }
 
+.main-page.new_about-us{
+  box-shadow: 20rem 0 0 #F5F5F5, -20rem 0 0 #F5F5F5;
+  background:  #F5F5F5;
+  padding-top: 1rem;
+}
+
+.main-page.new_about-us .team{
+  background-color: #fff;
+  margin-top: 1rem;
+}
+
+.main-page.new_about-us .team__title{
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #CFD8DC;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  margin-bottom: 0;
+}
+
+.main-page.new_about-us .main-block{
+  background: #fff;
+}
+
+.main-page.new_about-us .main-block h1{
+  border-bottom: 1px solid #CFD8DC;
+  padding: 1.5rem 2rem;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+.main-page.new_about-us .about-logo{
+  margin: 0 2rem 1.5rem;
+}
+
+.main-page.new_about-us .card{
+  height: 100%;
+}
+
+.main-page.new_about-us p{
+  padding: 0 2rem;
+}
+
 @media (min-width: 992px){
   .main-page .header__container,
   .main-page .footer__container{
@@ -10890,6 +10946,9 @@ body .slick-next{
   .main-page .footer__container{
     max-width: 1152px;
   }
+  .main-page.new_about-us .aside-block{
+    width: 320px;
+  }
   .main-page .header__container{
     height: 3rem;
     padding: 0 2rem;
@@ -10908,6 +10967,9 @@ body .slick-next{
 
   .cookies__container{
     max-width: 1152px;
+  }
+  .main-page.new_about-us .card{
+    max-width: 320px;
   }
 }
 
@@ -10969,6 +11031,10 @@ body .slick-next{
     width: calc(100% - 6rem - 328px);
     margin-left: 5rem;
     margin-right: 1rem;
+  }
+  .main-page.new_about-us .main-block{
+    width: 480px;
+    margin: 0;
   }
   .staff__name{
     max-width: 100%;
@@ -11041,6 +11107,10 @@ body .slick-next{
   .main-page .main-block{
     width: calc(100% - 6rem - 248px);
   }
+  .main-page.new_about-us .main-block.new_about-us{
+    width: 480px;
+    margin: 0;
+  }
   .staff__img-wrapper{
     min-width: 115px;
     height: 72px;
@@ -11079,6 +11149,9 @@ body .slick-next{
     height: 3rem;
     padding: 0 0 0 1rem;
   }
+  .main-page.new_about-us{
+    padding-top: 0;
+  }
   .main-page .main-news-block{
     margin-right: 0;
     width: 100%;
@@ -11102,6 +11175,14 @@ body .slick-next{
     margin-bottom: .5rem;
     padding: 0;
     flex-direction: column;
+  }
+  .main-page.new_about-us .aside-block{
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .main-page.new_about-us .card{
+    width: 100%;
+    max-width: 100%;
   }
   .big_categories-story_item:first-child .big_categories-story_item-link{
     max-width: 100%;
@@ -11370,6 +11451,34 @@ body .slick-next{
   }
   .article_main-info_v2 .mark{
     display: none;
+  }
+  .team__list{
+    padding: 1.5rem 1.5rem;
+  }
+  .main-page.new_about-us p{
+    padding: 0;
+  }
+  .main-page.new_about-us .main-block h1{
+    padding: 1rem 0;
+  }
+  .main-page.new_about-us .team__title{
+    padding: 1rem 0;
+  }
+  .main-page.new_about-us {
+    background: #fff;
+    box-shadow: 20rem 0 0 #fff, -20rem 0 0 #fff;
+  }
+  .main-page.new_about-us .about-logo{
+    margin: 0;
+  }
+  .main-page.new_about-us .card{
+    padding: .6rem 0 1.5rem;
+  }
+  .team__list{
+    padding: 1.5rem 0;
+  }
+  .main-page.new_about-us .main-block h1{
+    padding-top: 0;
   }
 }
 
