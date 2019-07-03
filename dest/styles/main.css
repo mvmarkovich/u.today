@@ -11323,6 +11323,10 @@ body .slick-next{
   .main-page .aside-block--mobile-visible{
     margin-top: 1rem;
   }
+  .staff__row{
+    min-height: 56px;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 580px){
