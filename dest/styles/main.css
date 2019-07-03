@@ -578,13 +578,13 @@ aside {
 .btn--pseudo {
   text-transform: none;
   font-weight: 500;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   letter-spacing: normal;
 }
 
 .btn--hash-tag {
   font-weight: 500;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   line-height: 1.9;
   letter-spacing: normal;
   text-decoration: none;
@@ -5055,7 +5055,7 @@ html body li p,html body td p {
 
 h2 span {
   font-weight: 500;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   line-height: 2.1;
   letter-spacing: .015em;
 }
@@ -7368,7 +7368,7 @@ transition {
   letter-spacing: 0.25em;
   font-weight: 600;
   line-height: 16px;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   width: 100%;
   height: 40px;
   text-align: left;
@@ -7403,7 +7403,7 @@ transition {
 .index-price .price-index_text{
   font-weight: 500;
   line-height: 1.5rem;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   color: #263238;
 }
 
@@ -7492,7 +7492,7 @@ transition {
 
 @media (max-width: 380px){
   .index-price .cryptocurrency_price .cryptocurrency_price__share .social-descr{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
   }
   .index-price .cryptocurrency_price .cryptocurrency_price__share .right{
     display: flex;
@@ -7518,7 +7518,7 @@ transition {
 
 .article_new .tabs__item .btn{
   letter-spacing: inherit;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   line-height: 1.5rem;
   text-transform: none;
   padding: 0 16px;
@@ -7986,7 +7986,7 @@ transition {
 
 .article_new .article_new__header .switch span{
   font-weight: 600;
-  font-size: 0.812rem;
+  font-size: 0.8125rem;
   line-height: 16px;
   color: #fff;
   display: block;
@@ -8103,7 +8103,7 @@ transition {
   }
 
   .article_main-info__rating{
-    font-size: 13px;
+    font-size: 0.8125rem;
     padding: .25rem .5rem;
 
     background-color: #2196F3;
@@ -8121,7 +8121,7 @@ transition {
   }
 
   .article_main-info .humble{
-    font-size: 13px;
+    font-size: 0.8125rem;
     margin-right: 1rem;
   }
 
@@ -8163,10 +8163,10 @@ transition {
     padding: 1rem 1rem 1.3rem;
   }
   .article_new .author_block .humble{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
   }
   .article_new .author_block .author__item-name{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     width: 100%;
   }
   .article_new .author_block .right{
@@ -8174,10 +8174,10 @@ transition {
   }
   .article_new .humble--like,
   .article_new .humble--favorites{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
   }
   .article_new .humble--views{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
   }
   .article_new .article__tags{
     margin-bottom: 1rem;
@@ -8229,11 +8229,11 @@ transition {
     position: absolute;
   }
   .article_new .author_block .author__item-msg p{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     line-height: 1.5rem;
   }
   .article_new .article_new__header .switch span{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     line-height: 16px;
   }
   .article_new .humble--views:before{
@@ -8255,7 +8255,7 @@ transition {
     height: 15px;
   }
   .article_new .article_new__header .humble{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     line-height: 16px;
     margin-right: 25px;
   }
@@ -8323,7 +8323,7 @@ transition {
     margin-left: 35px;
   }
   .article_new .under_article__main-img .title{
-    font-size: .785rem;
+    font-size: .8125rem;
     margin-bottom: 0;
   }
   .article_new .under_main-img__list{
@@ -8572,7 +8572,7 @@ transition {
   }
   .fix-block .btn{
     border-radius: 8px;
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     line-height: 16px;
     border: 1px solid #4CAF50;
     height: 48px;
@@ -8834,7 +8834,7 @@ font-size: 1.125rem;
 .article_new .article .caption p,
 .article_new .article .caption a,
 .image-source-text {
-  font-size: .785rem;
+  font-size: .8125rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 1rem;
   margin-bottom: 0;
@@ -8884,7 +8884,7 @@ font-size: 1.125rem;
 
 .article_new .disclaimer .disclaimer_text{
   font-weight: 500;
-  font-size: .785rem;
+  font-size: .8125rem;
   line-height: 1rem;
   letter-spacing: 0.01em;
 
@@ -9033,7 +9033,7 @@ font-size: 1.125rem;
   }
 
   .breadcrumbs_link{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     line-height: 20px;
   }
   .breadcrumbs_item:last-child{
@@ -9071,7 +9071,7 @@ font-size: 1.125rem;
 
 @media screen and (max-width: 784px){
   .breadcrumbs_link{
-    font-size: 0.812rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.01em;
     line-height: 16px;
     padding-right: 1rem
@@ -11438,9 +11438,6 @@ body .slick-next{
   .article_new .under_article__main-img{
     margin-right: -1rem;
     margin-left: -1rem;
-  }
-  .article_main-info{
-    margin: 0 -1rem 1rem;
   }
   .article_main-info_v2 .mark{
     display: none;
