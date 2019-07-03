@@ -4627,7 +4627,7 @@ main > .article:nth-last-child(2):after {
 .team__post {
   color: #78909C;
   font-weight: 500;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 2.1;
   letter-spacing: .015em;
 }
@@ -10776,12 +10776,12 @@ body .slick-next{
   font-size: 1.0625rem;
   text-decoration: none;
   color: #263238;
-  margin-right: 1.8rem;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 253px;
+  display: block;
 }
 
 .staff__name:hover{
@@ -10900,6 +10900,21 @@ body .slick-next{
 
 .about-us .team__list{
   padding: 2rem 0;
+}
+
+.staff__post{
+  font-size: .8125rem;
+  color: #78909C;
+  line-height: 1rem;
+  text-decoration: none;
+}
+
+.staff__post:hover{
+  color: #651fff;
+}
+
+.main-page .personal__info{
+  margin-right: 1.8rem;
 }
 
 .main-page .aside-block--mobile-visible .card__title{
@@ -11027,10 +11042,13 @@ body .slick-next{
     margin-right: 1rem;
   }
   .staff__name{
+    white-space: normal;
+    max-width: 100%;
+  }
+  .main-page .personal__info{
     max-width: 100%;
     width: 100%;
     margin-right: 0;
-    white-space: normal;
   }
   .staff__item .social{
     margin-top: .5rem;
@@ -11317,14 +11335,14 @@ body .slick-next{
   }
   .staff__info p{
     font-size: 0.9375rem;
-    margin-top: 1.7rem;
+    margin-top: .7rem;
     margin-left: -146px;
   }
   .main-page .aside-block--mobile-visible{
     margin-top: 1rem;
   }
   .staff__row{
-    min-height: 56px;
+    min-height: 72px;
     align-items: flex-start;
   }
 }
@@ -11496,14 +11514,19 @@ body .slick-next{
   }
   .staff__info p{
     font-size: 0.8125rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
   .partners__name{
     font-size: 0.8125rem;
   }
+  .staff__post{
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
   .partners__link{
     font-size: 0.8125rem;
-
   }
 }
 
