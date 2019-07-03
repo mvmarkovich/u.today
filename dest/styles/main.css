@@ -10902,6 +10902,16 @@ body .slick-next{
   padding: 2rem 0;
 }
 
+.main-page .aside-block--mobile-visible .card__title{
+  font-size: 1.375rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #CFD8DC;
+  padding: 1rem 1rem 1.4rem 1rem;
+  font-weight: 600;
+  margin: 0 -1rem 1rem;
+  color: #263238;
+}
+
 @media (min-width: 992px){
   .main-page .header__container,
   .main-page .footer__container{
@@ -11310,6 +11320,9 @@ body .slick-next{
     margin-top: 1.7rem;
     margin-left: -146px;
   }
+  .main-page .aside-block--mobile-visible{
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 580px){
@@ -11409,6 +11422,11 @@ body .slick-next{
 
   .about-us .team__list{
     padding: 1rem 0;
+  }
+
+  .main-page .aside-block--mobile-visible .card__title{
+    font-size: 1.0625rem;
+    padding: 0.4rem 1rem 1rem;
   }
 }
 
