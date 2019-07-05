@@ -10060,6 +10060,8 @@ body .slick-next{
   height: 128px;
   overflow: hidden;
   background-color: #fff;
+
+  position: relative;
 }
 
 .categories-story_item-link img{
@@ -10129,6 +10131,8 @@ body .slick-next{
 
 .big_categories-story_item-link{
   display: block;
+
+  position: relative;
 }
 
 .big_categories-story_item-link img{
@@ -10927,6 +10931,21 @@ body .slick-next{
   color: #263238;
 }
 
+.sponsored__mark{
+  line-height: 1.5rem;
+  padding: 0 .5rem;
+
+  background-color: #FF5722;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: .8215rem;
+  color: #fff;
+
+  position: absolute;
+  left: .5rem;
+  bottom: .5rem;
+}
+
 @media (min-width: 992px){
   .main-page .header__container,
   .main-page .footer__container{
@@ -11316,6 +11335,7 @@ body .slick-next{
   .categories-story_item-link{
     min-width: 144px;
     height: 90px;
+
   }
   .main-page .header__container{
     max-width: 480px;
