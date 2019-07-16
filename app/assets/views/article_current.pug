@@ -11,7 +11,7 @@ block content
         .header_article__row
             .header_article__descr
                 .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
-    .content-container.article_new
+    .content-container
         .main-block
             include blocks/article-infinite-scroll.pug
             .article
@@ -19,7 +19,7 @@ block content
                     button.article_main-info__rating
                         .rating-value 31
                     .article_main-info__humble
-                        .humble.mark &#x2B50; Featured
+                        a.humble.mark(href="#!") &#x2B50; Featured
                         time.author__item-time.humble 27 Oct’18
                         a.humble.humble--views(href='#!') 123k
                         a.humble.humble--chat(href='#!') 256
@@ -29,42 +29,30 @@ block content
                         .rating-value 31
                         button.rating-button.rating-up
                     .article_main-info__humble
-                        .humble.mark &#x2B50; Featured
+                        a.humble.mark(href="#!") &#x2B50; Featured
                         time.author__item-time.humble 27 Oct’18
                         a.humble.humble--views(href='#!') 123k
                         a.humble.humble--chat(href='#!') 256
-                .article_new__header
-                    ul.breadcrumbs_list
-                        li.breadcrumbs_item
-                            a.breadcrumbs_link(href="#!") Home
-                        li.breadcrumbs_item
-                            a.breadcrumbs_link(href="#!") Stories
-                        li.breadcrumbs_item
-                            span.breadcrumbs_link Artificial Intelligence
-                    .row
-                        a.humble.humble--views(href='#!') 123k
-                        a.humble.humble--like(href='#!') 31
-                        a.humble.humble--chat(href='#!') 256
-                h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
-                section.author_block
-                    ul.author__list
-                        li.author__item
-                            .author__item-header
-                                a.author__item-user(href='#')
-                                    img.author__item-user-avatar(src='https://dummyimage.com/64x64/d8dbde/aaabad')
-                                .right
-                                    .author__item-wrapper
-                                        a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
-                                        time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
-                                        .author__item-tag.humble &#x2B50; Featured
-                                    .author__item-body
-                                        .author__item-msg
-                                            p
-                                                | I did some quite research, checked a hefty load of sources and here&rsquo;s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
-                section.asset.google-asset.bg-dark-2
-                    a.asset_link(target='_blank', href='https://twitter.com/Utoday_en')
-                        img(src='https://u.today/img/satoshi_.jpg', alt='u.today')
                 .article__main
+                    h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+                        section.author_block
+                            ul.author__list
+                                li.author__item
+                                    .author__item-header
+                                        a.author__item-user(href='#')
+                                            img.author__item-user-avatar(src='https://dummyimage.com/64x64/d8dbde/aaabad')
+                                        .right
+                                            .author__item-wrapper
+                                                a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
+                                                time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
+                                                .author__item-tag.humble &#x2B50; Featured
+                                            .author__item-body
+                                                .author__item-msg
+                                                    p
+                                                        | I did some quite research, checked a hefty load of sources and here&rsquo;s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
+                        section.asset.google-asset.bg-dark-2
+                            a.asset_link(target='_blank', href='https://twitter.com/Utoday_en')
+                                img(src='https://u.today/img/satoshi_.jpg', alt='u.today')
                     .article__main-img-wrapper
                         img.article__main-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-04/Blockchain_Programming_Solidity.jpg?itok=UaG6i57H')
                         .sponsored__mark Sponsored
@@ -81,373 +69,371 @@ block content
                                 | &#x1F48E; Brave Rewards Now Available for Android
                     .disclaimer
                         p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
-                .article__contents
-                    .article__contents-title Contents
+                    .article__contents
+                        .article__contents-title Contents
 
-                    ul.article__contents-list
-                        each content in articleContents
-                            li.article__contents-item
-                                a.article__contents-link.link-pseudo(href="#!")= content
-                section.article__content
-                    p
-                        | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
-                        a(href='#!') Crypto Invest Summit
-                        | , which took place this week at LA&rsquo;s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
-                    h2 Women of Crypto as opening act
-                    p
-                        | It&rsquo;s worth noting, however, that the Women&rsquo;s track took place on the day before the actual conference began. To avoid confusion, the event&rsquo;s agenda page ran the following missive in red capitals: &ldquo;No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.&rdquo;
-                    p
-                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-                    h2 Ladies only
-                    p
-                        | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose&ndash;who was featured both in the Women&rsquo;s track and on the Main Stage&ndash;mentioned her disappointment with the way conference organizers tend to structure panels:
-                    a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
-                        img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
-                    .caption
-                        p This is a caption under a picture inside article text
-                        a(href="#!") This is a caption under a picture inside article text
-                    p
-                        | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
-                        a(href='#!') Crypto Invest Summit
-                        | , which took place this week at LA&rsquo;s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
-                    p
-                        | It&rsquo;s worth noting, however, that the Women&rsquo;s track took place on the day before the actual conference began. To avoid confusion, the event&rsquo;s agenda page ran the following missive in red capitals: &ldquo;No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.&rdquo;
-                    .article__related
-                        .article__related-body
-                            .article__related-link.link-plain
-                                | &#x1F449;
-                                span.red MUST READ
-                                h4.article__related-title
-                                    a(rel='nofollow', target='_blank', href='/bitcoin-price-prediction-how-much-will-btc-cost-in-2019?from=card') Bitcoin Price Prediction: How Much Will BTC Cost in 2019? - Updated
-                        .article__related_img
-                            a(href='/bitcoin-price-prediction-how-much-will-btc-cost-in-2019?from=card')
-                                img.article__related-img(alt='Bitcoin Price Prediction: How Much Will BTC Cost in 2019? - Updated', src='https://u.today/sites/default/files/styles/300/public/2019-05/Bitcoin%20Price%20Prediction%20for%202019.jpg?itok=7_eqJ233')
-                    p
-                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-                    blockquote
+                        ul.article__contents-list
+                            each content in articleContents
+                                li.article__contents-item
+                                    a.article__contents-link.link-pseudo(href="#!")= content
+                    section.article__content
                         p
-                            | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
-                            a(href='#!') made up roughly 20 percent
-                            |  of the speakers.
-                    p
-                        | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
-
-                    table
-                        colgroup
-                            col(width='77')
-                            col(width='62')
-                            col(width='76')
-                            col(width='66')
-                            col(width='132')
-                            col(width='75')
-                            col(width='72')
-                            col(width='78')
-                        tbody
-                            tr
-                                td &nbsp;
-                                td
-                                    p(dir='ltr')
-                                        b Established
-                                td
-                                    p(dir='ltr')
-                                        b Headquarters
-                                td
-                                    p(dir='ltr')
-                                        b Currencies
-                                td
-                                    p(dir='ltr')
-                                        b Contract cost
-                                td
-                                    p(dir='ltr')
-                                        b Number of users
-                                td
-                                    p(dir='ltr')
-                                        b Traffic*(last 6 months)
-                                td
-                                    p(dir='ltr')
-                                        b Countries*
-                            tr
-                                td
-                                    p(dir='ltr')
-                                        a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=1') Hashflare
-                                td
-                                    p(dir='ltr') 2015
-                                td
-                                    p(dir='ltr') Estonia
-                                td
-                                    p(dir='ltr') BTC, LTC, ETH, Dash, ZCash
-                                td
-                                    p(dir='ltr') Bitcoin &mdash; $0.8 per 10 GH/s
-                                    p(dir='ltr') Lite&scy;oin &mdash; $1.8 per 1 MH/s
-                                    p(dir='ltr') Ethereum &mdash; $1.8 per 100 KH/s Zcash &mdash; $1.4 per 1 H/s
-                                    p(dir='ltr') DASH &nbsp;&mdash; $3.2 per 1 MH/s
-                                    br
-                                    br
-                                td
-                                    p(dir='ltr') 2.5 mln
-                                td
-                                    p(dir='ltr') ?
-                                td
-                                    p(dir='ltr') Russia, Ukraine, Brazil, USA, Germany
-                            tr
-                                td
-                                    p(dir='ltr')
-                                        a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=4') Genesis Mining
-                                td
-                                    p(dir='ltr') 2010
-                                td
-                                    p(dir='ltr') Hong-Kong
-                                td
-                                    p(dir='ltr') Bitcoin, Litecoin, Dash, Dogecoin, Monero
-                                td
-                                    p(dir='ltr') 5-year contracts:
-                                    p(dir='ltr') $285 - 1 TH/s
-                                    p(dir='ltr') $1,400 - 5 TH/s
-                                    p(dir='ltr') $6,875 - 25 TH/s
-                                td
-                                    p(dir='ltr') 2 mln
-                                td
-                                    p(dir='ltr') ?
-                                td
-                                    p(dir='ltr') USA, China, Russia, EU
-                            tr
-                                td
-                                    p(dir='ltr')
-                                        a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=409') Hashing 24
-                                td
-                                    p(dir='ltr') 2015
-                                td
-                                    p(dir='ltr') Scotland, Thailand, and Ukraine
-                                td
-                                    p(dir='ltr') Bitcoin
-                                td
-                                    p(dir='ltr') $ 68.5 per 100 Gh/s
-                                    p(dir='ltr') + $0,00033 daily maintenance fee
-                                td
-                                    p(dir='ltr') ?
-                                |
-                                td
-                                    p(dir='ltr') 352.98K
-                                td
-                                    p(dir='ltr') USA, UK, Russia, Spain, China, Thailand, Indonesia
-                    table
-                        colgroup
-                            col(width='158')
-                            col(width='236')
-                            col(width='243')
-                        tbody
-                            tr
-                                td &nbsp;
-                                td
-                                    p.text-align-center(dir='ltr')
-                                        b Pros
-                                td
-                                    p.text-align-center(dir='ltr')
-                                        b Cons
-                            tr
-                                td
-                                    p(dir='ltr')
-                                        b Hardware mining
-                                td
-                                    p(dir='ltr') - The hardware belongs to you, you are free to configure and adjust it
-                                    p(dir='ltr')
-                                        | - Traditional mining is the only way to develop your IT skills and become more tech-savvy
-                                td
-                                    p(dir='ltr') - The hardware is expensive, while minor investment isn&rsquo;t always paid off
-                                    p(dir='ltr')
-                                        | - The hardware is up and running on a 24/7 basis, which results in enormously expensive electricity bills and a lot of heat
-                            tr
-                                td
-                                    p(dir='ltr')
-                                        b Cloud mining
-                                td
-                                    p(dir='ltr') - Absence, or low maintenance cost
-                                    p(dir='ltr')
-                                        | - You don&rsquo;t have to wait for the hardware to be available &ndash; mining starts as soon as you purchase service
-                                    p(dir='ltr') - No hash rate fluctuations
-                                    p(dir='ltr') - No maintenance, no physical space is required
-                                    p(dir='ltr') - Daily payouts
-                                td
-                                    p(dir='ltr')
-                                        | - The initial cost compared to purchase of your own hardware can still be high enough, though it&rsquo;s paid off
-                                    p(dir='ltr') - Some mining companies are scams
-                                    p(dir='ltr')
-                                        | - You don&rsquo;t educate yourself on mining and don&rsquo;t experience such excitement as usual miners do
-
-                    ul
-                        li This is a sample of a list.
-                        li
-                            | Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.
-                        li
+                            | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
+                            a(href='#!') Crypto Invest Summit
+                            | , which took place this week at LA&rsquo;s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
+                        h2 Women of Crypto as opening act
+                        p
+                            | It&rsquo;s worth noting, however, that the Women&rsquo;s track took place on the day before the actual conference began. To avoid confusion, the event&rsquo;s agenda page ran the following missive in red capitals: &ldquo;No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.&rdquo;
+                        p
+                            | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                        h2 Ladies only
+                        p
+                            | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose&ndash;who was featured both in the Women&rsquo;s track and on the Main Stage&ndash;mentioned her disappointment with the way conference organizers tend to structure panels:
+                        a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
+                            img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
+                        .caption
+                            p This is a caption under a picture inside article text
+                            a(href="#!") This is a caption under a picture inside article text
+                        p
+                            | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
+                            a(href='#!') Crypto Invest Summit
+                            | , which took place this week at LA&rsquo;s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
+                        p
+                            | It&rsquo;s worth noting, however, that the Women&rsquo;s track took place on the day before the actual conference began. To avoid confusion, the event&rsquo;s agenda page ran the following missive in red capitals: &ldquo;No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.&rdquo;
+                        .article__related
+                            .article__related-body
+                                .article__related-link.link-plain
+                                    | &#x1F449;
+                                    span.red MUST READ
+                                    h4.article__related-title
+                                        a(rel='nofollow', target='_blank', href='/bitcoin-price-prediction-how-much-will-btc-cost-in-2019?from=card') Bitcoin Price Prediction: How Much Will BTC Cost in 2019? - Updated
+                            .article__related_img
+                                a(href='/bitcoin-price-prediction-how-much-will-btc-cost-in-2019?from=card')
+                                    img.article__related-img(alt='Bitcoin Price Prediction: How Much Will BTC Cost in 2019? - Updated', src='https://u.today/sites/default/files/styles/300/public/2019-05/Bitcoin%20Price%20Prediction%20for%202019.jpg?itok=7_eqJ233')
+                        p
+                            | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                        blockquote
+                            p
+                                | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
+                                a(href='#!') made up roughly 20 percent
+                                |  of the speakers.
+                        p
                             | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
-                    h2 Scaling community and activism
-                    p
-                        | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-                section.article__panel
-                    section.article__tags.btns-spacer
-                        a.btn.btn--hash-tag(href='#!') #MaltaBlockchainSummit
-                        a.btn.btn--hash-tag(href='#!') #Bitcoin
-                        a.btn.btn--hash-tag(href='#!') #Processor
-                    .article__panel-row
-                        .article__panel-col
-                            .left
-                                .humble.humble--views 123.5k
-                                .humble.humble--like 31
-                                .humble.humble--favorites 17
-                section.about-author
-                    .about-author_row
-                        a.about-author_avatar(href="#!author")
-                            img(src="https://dummyimage.com/64x64/d8dbde/aaabad")
-                        .about-author_info
-                            h4.about-author_title About the author
-                            .about-author_data
-                                a.about-author_name(href="#!author") Konstantin Konstantinopolsky
-                                .social
-                                    a.social__link.social__link--ln(href="#!ln")
-                                    a.social__link.social__link--insta(href="#!insta")
-                                    a.social__link.social__link--em(href="#!email")
-                            p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
-                .something.something--content
-                    .something__content-long
-                        img(src='img/something/long.png' width='729' height='90' alt='something-wide')
-                    .something__content-square
-                        img(src='img/something/square.png' width='300' height='250' alt='something-square')
-                a.mega-history(href="#!" style="background-image: url(img/content/mega-history/item_1.png);")
-                    .history_tag ⛏ Editor’s pick
-                    .bottom_descr Tron’s Justin Sun Calls Binance Coin the New Bitcoin — Is Now the Time to Invest?
-                section.article__recommended
-                    .article__recommended-header
-                        .article__recommended-title &#x1F453; Recommended articles
-                        a.btn.btn--arrow-right.hide-xl-down(href='#!') See all
-                    .article__recommended-list-slide
-                        .article__recommended-list
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title Ethereum Breakout in Full Force
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title Ethereum Breakout in Full Force
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                            article.article__recommended-item
-                                a.article__recommended-link(href='#!')
-                                    img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
-                                    h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
-                                .article__recommended-info
-                                    time.humble.humble--tiny Nov 07
-                                    a.humble.humble--comments.humble--tiny(href='#!') 256
-                                    .humble.humble--views.humble--tiny(href='#!') 123.5k
-                                    button.humble.humble--share.humble--tiny.humble--single-icon
-                    a.btn.btn--arrow-right.hide-xl-only(href='#!') See all
-                section.comments
-                    section.author_block.comments_block
-                        ul.author__list
-                            li.author__item
-                                .author__item-header
-                                    a.author__item-user(href='#!')
-                                        img.author__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
+
+                        table
+                            colgroup
+                                col(width='77')
+                                col(width='62')
+                                col(width='76')
+                                col(width='66')
+                                col(width='132')
+                                col(width='75')
+                                col(width='72')
+                                col(width='78')
+                            tbody
+                                tr
+                                    td &nbsp;
+                                    td
+                                        p(dir='ltr')
+                                            b Established
+                                    td
+                                        p(dir='ltr')
+                                            b Headquarters
+                                    td
+                                        p(dir='ltr')
+                                            b Currencies
+                                    td
+                                        p(dir='ltr')
+                                            b Contract cost
+                                    td
+                                        p(dir='ltr')
+                                            b Number of users
+                                    td
+                                        p(dir='ltr')
+                                            b Traffic*(last 6 months)
+                                    td
+                                        p(dir='ltr')
+                                            b Countries*
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=1') Hashflare
+                                    td
+                                        p(dir='ltr') 2015
+                                    td
+                                        p(dir='ltr') Estonia
+                                    td
+                                        p(dir='ltr') BTC, LTC, ETH, Dash, ZCash
+                                    td
+                                        p(dir='ltr') Bitcoin &mdash; $0.8 per 10 GH/s
+                                        p(dir='ltr') Lite&scy;oin &mdash; $1.8 per 1 MH/s
+                                        p(dir='ltr') Ethereum &mdash; $1.8 per 100 KH/s Zcash &mdash; $1.4 per 1 H/s
+                                        p(dir='ltr') DASH &nbsp;&mdash; $3.2 per 1 MH/s
+                                        br
+                                        br
+                                    td
+                                        p(dir='ltr') 2.5 mln
+                                    td
+                                        p(dir='ltr') ?
+                                    td
+                                        p(dir='ltr') Russia, Ukraine, Brazil, USA, Germany
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=4') Genesis Mining
+                                    td
+                                        p(dir='ltr') 2010
+                                    td
+                                        p(dir='ltr') Hong-Kong
+                                    td
+                                        p(dir='ltr') Bitcoin, Litecoin, Dash, Dogecoin, Monero
+                                    td
+                                        p(dir='ltr') 5-year contracts:
+                                        p(dir='ltr') $285 - 1 TH/s
+                                        p(dir='ltr') $1,400 - 5 TH/s
+                                        p(dir='ltr') $6,875 - 25 TH/s
+                                    td
+                                        p(dir='ltr') 2 mln
+                                    td
+                                        p(dir='ltr') ?
+                                    td
+                                        p(dir='ltr') USA, China, Russia, EU
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=409') Hashing 24
+                                    td
+                                        p(dir='ltr') 2015
+                                    td
+                                        p(dir='ltr') Scotland, Thailand, and Ukraine
+                                    td
+                                        p(dir='ltr') Bitcoin
+                                    td
+                                        p(dir='ltr') $ 68.5 per 100 Gh/s
+                                        p(dir='ltr') + $0,00033 daily maintenance fee
+                                    td
+                                        p(dir='ltr') ?
+                                    |
+                                    td
+                                        p(dir='ltr') 352.98K
+                                    td
+                                        p(dir='ltr') USA, UK, Russia, Spain, China, Thailand, Indonesia
+                        table
+                            colgroup
+                                col(width='158')
+                                col(width='236')
+                                col(width='243')
+                            tbody
+                                tr
+                                    td &nbsp;
+                                    td
+                                        p.text-align-center(dir='ltr')
+                                            b Pros
+                                    td
+                                        p.text-align-center(dir='ltr')
+                                            b Cons
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            b Hardware mining
+                                    td
+                                        p(dir='ltr') - The hardware belongs to you, you are free to configure and adjust it
+                                        p(dir='ltr')
+                                            | - Traditional mining is the only way to develop your IT skills and become more tech-savvy
+                                    td
+                                        p(dir='ltr') - The hardware is expensive, while minor investment isn&rsquo;t always paid off
+                                        p(dir='ltr')
+                                            | - The hardware is up and running on a 24/7 basis, which results in enormously expensive electricity bills and a lot of heat
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            b Cloud mining
+                                    td
+                                        p(dir='ltr') - Absence, or low maintenance cost
+                                        p(dir='ltr')
+                                            | - You don&rsquo;t have to wait for the hardware to be available &ndash; mining starts as soon as you purchase service
+                                        p(dir='ltr') - No hash rate fluctuations
+                                        p(dir='ltr') - No maintenance, no physical space is required
+                                        p(dir='ltr') - Daily payouts
+                                    td
+                                        p(dir='ltr')
+                                            | - The initial cost compared to purchase of your own hardware can still be high enough, though it&rsquo;s paid off
+                                        p(dir='ltr') - Some mining companies are scams
+                                        p(dir='ltr')
+                                            | - You don&rsquo;t educate yourself on mining and don&rsquo;t experience such excitement as usual miners do
+
+                        ul
+                            li This is a sample of a list.
+                            li
+                                | Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.
+                            li
+                                | During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.
+                        h2 Scaling community and activism
+                        p
+                            | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                    section.article__panel
+                        section.article__tags.btns-spacer
+                            a.btn.btn--hash-tag(href='#!') #MaltaBlockchainSummit
+                            a.btn.btn--hash-tag(href='#!') #Bitcoin
+                            a.btn.btn--hash-tag(href='#!') #Processor
+                        .article__panel-row
+                            .article__panel-col
+                                .left
+                                    .humble.humble--views 123.5k
+                                    .humble.humble--liked 31
+                                    .humble.humble--favorites 17
+                    section.about-author
+                        .about-author_row
+                            a.about-author_avatar(href="#!author")
+                                img(src="https://dummyimage.com/64x64/d8dbde/aaabad")
+                            .about-author_info
+                                h4.about-author_title About the author
+                                .about-author_data
+                                    a.about-author_name(href="#!author") Konstantin Konstantinopolsky
+                                    .social
+                                        a.social__link.social__link--ln(href="#!ln")
+                                        a.social__link.social__link--insta(href="#!insta")
+                                        a.social__link.social__link--em(href="#!email")
+                                p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
+                    .something.something--content
+                        .something__content-long
+                            img(src='img/something/long.png' width='729' height='90' alt='something-wide')
+                        .something__content-square
+                            img(src='img/something/square.png' width='300' height='250' alt='something-square')
+                    a.mega-history(href="#!" style="background-image: url(img/content/mega-history/item_1.png);")
+                        .history_tag ⛏ Editor’s pick
+                        .bottom_descr Tron’s Justin Sun Calls Binance Coin the New Bitcoin — Is Now the Time to Invest?
+                    section.article__recommended
+                        .article__recommended-header
+                            .article__recommended-title &#x1F453; Recommended articles
+                            a.btn.btn--arrow-right.hide-xl-down(href='#!') See all
+                        .article__recommended-list-slide
+                            .article__recommended-list
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title Ethereum Breakout in Full Force
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title Ethereum Breakout in Full Force
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                                article.article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        img.article__recommended-img(src='https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp')
+                                        h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+                                    .article__recommended-info
+                                        time.humble.humble--tiny Nov 07
+                                        a.humble.humble--comments.humble--tiny(href='#!') 256
+                                        .humble.humble--views.humble--tiny(href='#!') 123.5k
+                                        button.humble.humble--share.humble--tiny.humble--single-icon
+                        a.btn.btn--arrow-right.hide-xl-only(href='#!') See all
+                    section.comments
+                        section.author_block.comments_block
+                            ul.author__list
+                                li.author__item
+                                    .author__item-header
+                                        a.author__item-user(href='#!')
+                                            img.author__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
+                                        .right
+                                            .author__item-wrapper
+                                                a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
+                                                .author__item-position.humble Author
+                                                time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
+                                            .author__item-body
+                                                .title
+                                                    | So what do you think about crypto women at that summit?
+                                            .comments__add
+                                                button.comments__add-attach.btn.btn--light.btn--attach
+                                                form(action='#' method='get')
+                                                    .input
+                                                        textarea.input__elem(name='msg' placeholder='So why not write your own?' required='')
+                                            .comments_block__bottom
+                                                .humble.humble--chat 256
+                                                .right
+                                                    ul.comments__tabs.tabs
+                                                        li.tabs__item.tabs__item--active
+                                                            button.tabs__btn.btn.btn--light.active Popular
+                                                        li.tabs__item
+                                                            button.tabs__btn.btn.btn--light Recent
+                        ul.comments__list
+                            li.comments__item
+                                .comments__item-header
+                                    a.comments__item-user(href='#!')
+                                        img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
                                     .right
-                                        .author__item-wrapper
-                                            a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
-                                            .author__item-position.humble Author
-                                            time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
-                                        .author__item-body
-                                            .title
-                                                | So what do you think about crypto women at that summit?
-                                        .comments__add
-                                            button.comments__add-attach.btn.btn--light.btn--attach
-                                            form(action='#' method='get')
-                                                .input
-                                                    textarea.input__elem(name='msg' placeholder='So why not write your own?' required='')
-                                        .comments_block__bottom
-                                            .humble.humble--chat 256
-                                            .right
-                                                ul.comments__tabs.tabs
-                                                    li.tabs__item.tabs__item--active
-                                                        button.tabs__btn.btn.btn--light.active Popular
-                                                    li.tabs__item
-                                                        button.tabs__btn.btn.btn--light Recent
-                    ul.comments__list
-                        li.comments__item
-                            .comments__item-header
-                                a.comments__item-user(href='#!')
-                                    img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
-                                .right
-                                    .comments__item-wrapper
-                                        a.comments__item-user-name(href='#!') John Blazkovic
-                                        time.comments__item-time 28 Oct, 11:45 AM
-                                    .comments__item-body
-                                        .comments__item-msg
-                                            p
-                                                | Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
-                            .comments__item-footer
-                                button.comments__item-reply.btn.btn--light Reply
-                                button.comments__item-more.btn.btn--light.btn--more
-                                .comments__item-rating.rating.rating--positive.rating--tiny
-                                    button.btn.btn--light.btn--rating-down
-                                    .rating__value 28
-                                    button.btn.btn--light.btn--rating-up
-                        li.comments__item.comments__item__two-level
-                            .comments__item-header
-                                a.comments__item-user(href='#!')
-                                    img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
-                                .right
-                                    .comments__item-wrapper
-                                        a.comments__item-user-name(href='#!') Bob Stewarts
-                                        time.comments__item-time 28 Oct, 11:45 AM
-                                    .comments__item-body
-                                        .comments__item-msg
-                                            p You&rsquo;re so full of shiness
-                                            p
-                                                | Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
-                            .comments__item-footer
-                                button.comments__item-reply.btn.btn--light Reply
-                                button.comments__item-more.btn.btn--light.btn--more
-                                .comments__item-rating.rating.rating--positive.rating--tiny
-                                    button.btn.btn--light.btn--rating-down
-                                    .rating__value 28
-                                    button.btn.btn--light.btn--rating-up
-                    .comments__footer
-                        button.btn.btn--block.btn--large Show 254 more comments
-
-
+                                        .comments__item-wrapper
+                                            a.comments__item-user-name(href='#!') John Blazkovic
+                                            time.comments__item-time 28 Oct, 11:45 AM
+                                        .comments__item-body
+                                            .comments__item-msg
+                                                p
+                                                    | Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+                                .comments__item-footer
+                                    button.comments__item-reply.btn.btn--light Reply
+                                    button.comments__item-more.btn.btn--light.btn--more
+                                    .comments__item-rating.rating.rating--positive.rating--tiny
+                                        button.btn.btn--light.btn--rating-down
+                                        .rating__value 28
+                                        button.btn.btn--light.btn--rating-up
+                            li.comments__item.comments__item__two-level
+                                .comments__item-header
+                                    a.comments__item-user(href='#!')
+                                        img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
+                                    .right
+                                        .comments__item-wrapper
+                                            a.comments__item-user-name(href='#!') Bob Stewarts
+                                            time.comments__item-time 28 Oct, 11:45 AM
+                                        .comments__item-body
+                                            .comments__item-msg
+                                                p You&rsquo;re so full of shiness
+                                                p
+                                                    | Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+                                .comments__item-footer
+                                    button.comments__item-reply.btn.btn--light Reply
+                                    button.comments__item-more.btn.btn--light.btn--more
+                                    .comments__item-rating.rating.rating--positive.rating--tiny
+                                        button.btn.btn--light.btn--rating-down
+                                        .rating__value 28
+                                        button.btn.btn--light.btn--rating-up
+                        .comments__footer
+                            button.btn.btn--block.btn--large Show 254 more comments
             .article-infinite-scroll
                 .article
                     .article_new__header
