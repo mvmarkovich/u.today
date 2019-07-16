@@ -27,8 +27,13 @@ header.header
         .notification_value-block
           .notification_value 1
 
-      button.header__account.btn.btn--light.btn--account(data-modal="register")
-
+      button.header__account.btn.btn--light.btn--account.user--login
+        .user--login__modal
+          .user--login__content
+            .user--login__item
+              a.user--login__descr(href="#!") Waititi Taika
+            .user--login__item
+              a.user--logout(href="#!") Log out
       //- button.header__account.btn.btn--light
         img(src="https://dummyimage.com/32x32/d8dbde/aaa")
 

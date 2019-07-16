@@ -403,7 +403,24 @@
 
   $(".modal .sign_in").on("click", function () {
     $('#register').removeClass("modal--open modal--fadeIn");
+  });
 
+  //
+  // Мини выпадашка профайла в хедере
+  //
+
+  $('.user--login').click(function () {
+    $(this).toggleClass('open');
+    $('.user--login__modal').toggleClass('show');
+    return false;
+  });
+  $(document).on('mouseup', function (e){
+    var bookingform = $(".user--login__modal");
+    if (!bookingform.is(e.target) && !$(e.target).is('.user--login'))
+    {
+      $('.user--login__modal.show').removeClass("show");
+      $('.user--login.open').removeClass("open");
+    }
   });
 
 
