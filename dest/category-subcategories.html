@@ -19,60 +19,60 @@
     <link href="styles/main.css" rel="stylesheet">
   </head>
   <body>
-    <div class="currencies">
-      <div class="currencies__container container">
-        <div class="currencies__slide-wrapper">
-          <div class="currencies__slide"><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">BTC</div>
-                <div class="currencies__trand">0.03%</div>
-              </div>
-              <div class="currencies__price">6315.99</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Eth</div>
-                <div class="currencies__trand">0.22%</div>
-              </div>
-              <div class="currencies__price">196.11</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Ltc</div>
-                <div class="currencies__trand">0.99%</div>
-              </div>
-              <div class="currencies__price">49.19</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Eos</div>
-                <div class="currencies__trand">0.19%</div>
-              </div>
-              <div class="currencies__price">5.16</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Xrp</div>
-                <div class="currencies__trand currencies__trand--down">−0.61%</div>
-              </div>
-              <div class="currencies__price">0.4457</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Ada</div>
-                <div class="currencies__trand">2.31%</div>
-              </div>
-              <div class="currencies__price">0.07145</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">Neo</div>
-                <div class="currencies__trand currencies__trand--down">−0.45%</div>
-              </div>
-              <div class="currencies__price">15.51</div></a><a class="currencies__link" href="#!">
-              <div class="currencies__info">
-                <div class="currencies__name">TRX</div>
-                <div class="currencies__trand">0.67%</div>
-              </div>
-              <div class="currencies__price">0.02241</div></a>
-            <select class="currencies__currency input__select input__select--tiny">
-              <option selected>USD</option>
-              <option value="">EUR</option>
-              <option value="">RUB</option>
-            </select>
+    <div class="main-page">
+      <div class="currencies">
+        <div class="currencies__container container">
+          <div class="currencies__slide-wrapper">
+            <div class="currencies__slide"><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">BTC</div>
+                  <div class="currencies__trand">0.03%</div>
+                </div>
+                <div class="currencies__price">6315.99</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Eth</div>
+                  <div class="currencies__trand">0.22%</div>
+                </div>
+                <div class="currencies__price">196.11</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Ltc</div>
+                  <div class="currencies__trand">0.99%</div>
+                </div>
+                <div class="currencies__price">49.19</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Eos</div>
+                  <div class="currencies__trand">0.19%</div>
+                </div>
+                <div class="currencies__price">5.16</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Xrp</div>
+                  <div class="currencies__trand currencies__trand--down">−0.61%</div>
+                </div>
+                <div class="currencies__price">0.4457</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Ada</div>
+                  <div class="currencies__trand">2.31%</div>
+                </div>
+                <div class="currencies__price">0.07145</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">Neo</div>
+                  <div class="currencies__trand currencies__trand--down">−0.45%</div>
+                </div>
+                <div class="currencies__price">15.51</div></a><a class="currencies__link" href="#!">
+                <div class="currencies__info">
+                  <div class="currencies__name">TRX</div>
+                  <div class="currencies__trand">0.67%</div>
+                </div>
+                <div class="currencies__price">0.02241</div></a>
+              <select class="currencies__currency input__select input__select--tiny">
+                <option selected>USD</option>
+                <option value="">EUR</option>
+                <option value="">RUB</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="page-container container">
       <header class="header">
         <div class="header__container"><a class="header__logo" href="#!"></a>
           <div class="header__social social"><a class="social__link social__link--fb" href="#!fb"></a><a class="social__link social__link--tg" href="#!tg"></a><a class="social__link social__link--tw" href="#!tw"></a><a class="social__link social__link--em" href="#!em"></a></div>
@@ -159,132 +159,134 @@
         </div>
       </header>
       <div class="mobile-menu-cover"></div>
-      <section class="asset asset-wide bg-dark-1"><a class="asset_link" target="_blank" href="https://www.cryptodailytrading.com/"><img src="https://u.today/img/datalight.jpg" alt="cryptodailytrading.com"></a></section>
-      <div class="main-aside-container">
-        <aside class="aside-menu-block">
-          <div class="accordion accordion--open">
-            <div class="accordion__title" @click="accordionOpen">Subcategories</div>
-            <div class="accordion__body">
-              <ul class="tabs tabs--vertical">
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Latest News</a>
-                </li>
-                <li class="tabs__item tabs__item--active"><a class="tabs__btn btn btn--pseudo" href="#!">Bitcoin News</a>
-                  <ul class="tabs__sub tabs__sub--dots">
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Features</a></li>
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Opinions</a></li>
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Artificial Intelligence</a></li>
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">SingUlarity</a></li>
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Infographics</a></li>
-                    <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">ICO Watch</a></li>
-                  </ul>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Ethereum News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Bitcoin Cash News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Ripple News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">EOS News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Litecoin News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Cardano News</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">NEM</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Press releases</a>
-                </li>
-                <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Submit Press releases</a>
-                </li>
-              </ul>
+      <div class="page-container container">
+        <section class="asset asset-wide bg-dark-1"><a class="asset_link" target="_blank" href="https://www.cryptodailytrading.com/"><img src="https://u.today/img/datalight.jpg" alt="cryptodailytrading.com"></a></section>
+        <div class="main-aside-container">
+          <aside class="aside-menu-block">
+            <div class="accordion accordion--open">
+              <div class="accordion__title" @click="accordionOpen">Subcategories</div>
+              <div class="accordion__body">
+                <ul class="tabs tabs--vertical">
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Latest News</a>
+                  </li>
+                  <li class="tabs__item tabs__item--active"><a class="tabs__btn btn btn--pseudo" href="#!">Bitcoin News</a>
+                    <ul class="tabs__sub tabs__sub--dots">
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Features</a></li>
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Opinions</a></li>
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Artificial Intelligence</a></li>
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">SingUlarity</a></li>
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">Infographics</a></li>
+                      <li class="tabs__sub-item"><a class="tabs__btn btn btn--pseudo link-plain" href="#!">ICO Watch</a></li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Ethereum News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Bitcoin Cash News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Ripple News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">EOS News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Litecoin News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Cardano News</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">NEM</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Press releases</a>
+                  </li>
+                  <li class="tabs__item"><a class="tabs__btn btn btn--pseudo" href="#!">Submit Press releases</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </aside>
-        <div class="main-category-block">
-          <div class="category-info">
-            <div class="category-info__body">
-              <h1 class="category-info__title">#Hashtag or 🌎 Category</h1>
-              <div class="category-info__desc">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming</div>
-              <button class="category-info__btn btn btn--arrow-down-before btn--pseudo" onclick="showMore('.category-info__desc')">Show more</button>
+          </aside>
+          <div class="main-category-block">
+            <div class="category-info">
+              <div class="category-info__body">
+                <h1 class="category-info__title">#Hashtag or 🌎 Category</h1>
+                <div class="category-info__desc">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming</div>
+                <button class="category-info__btn btn btn--arrow-down-before btn--pseudo" onclick="showMore('.category-info__desc')">Show more</button>
+              </div>
+              <div class="category-info__img-wrapper"><img class="category-info__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></div>
             </div>
-            <div class="category-info__img-wrapper"><img class="category-info__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></div>
+            <div class="category-item">
+              <div class="category-item__body">
+                <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
+                    <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
+                  <time class="humble">Yesterday, 10:40PM</time>
+                </div>
+                <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
+                <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
+                <div class="category-item__info">
+                  <div class="humble humble--views">123.5k
+                    <div class="humble__inner-text hide-xl-down">views</div>
+                  </div><a class="humble humble--comments" href="#!">256
+                    <div class="humble__inner-text hide-xl-down">comments</div></a>
+                  <button class="humble humble--bookmark">
+                    <div class="hide-xl-down">Add to bookmarks</div>
+                  </button>
+                </div>
+              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
+            </div>
+            <div class="category-item">
+              <div class="category-item__body">
+                <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
+                    <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
+                  <time class="humble">Yesterday, 10:40PM</time>
+                </div>
+                <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
+                <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
+                <div class="category-item__info">
+                  <div class="humble humble--views">123.5k
+                    <div class="humble__inner-text hide-xl-down">views</div>
+                  </div><a class="humble humble--comments" href="#!">256
+                    <div class="humble__inner-text hide-xl-down">comments</div></a>
+                  <button class="humble humble--bookmark">
+                    <div class="hide-xl-down">Add to bookmarks</div>
+                  </button>
+                </div>
+              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
+            </div>
+            <div class="category-item">
+              <div class="category-item__body">
+                <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
+                    <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
+                  <time class="humble">Yesterday, 10:40PM</time>
+                </div>
+                <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
+                <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
+                <div class="category-item__info">
+                  <div class="humble humble--views">123.5k
+                    <div class="humble__inner-text hide-xl-down">views</div>
+                  </div><a class="humble humble--comments" href="#!">256
+                    <div class="humble__inner-text hide-xl-down">comments</div></a>
+                  <button class="humble humble--bookmark">
+                    <div class="hide-xl-down">Add to bookmarks</div>
+                  </button>
+                </div>
+              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
+            </div>
+            <div class="category-item">
+              <div class="category-item__body">
+                <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
+                    <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
+                  <time class="humble">Yesterday, 10:40PM</time>
+                </div>
+                <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
+                <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
+                <div class="category-item__info">
+                  <div class="humble humble--views">123.5k
+                    <div class="humble__inner-text hide-xl-down">views</div>
+                  </div><a class="humble humble--comments" href="#!">256
+                    <div class="humble__inner-text hide-xl-down">comments</div></a>
+                  <button class="humble humble--bookmark">
+                    <div class="hide-xl-down">Add to bookmarks</div>
+                  </button>
+                </div>
+              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
+            </div><a class="btn btn--block btn--large" href="#!">Show more</a>
           </div>
-          <div class="category-item">
-            <div class="category-item__body">
-              <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
-                  <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
-                <time class="humble">Yesterday, 10:40PM</time>
-              </div>
-              <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
-              <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
-              <div class="category-item__info">
-                <div class="humble humble--views">123.5k
-                  <div class="humble__inner-text hide-xl-down">views</div>
-                </div><a class="humble humble--comments" href="#!">256
-                  <div class="humble__inner-text hide-xl-down">comments</div></a>
-                <button class="humble humble--bookmark">
-                  <div class="hide-xl-down">Add to bookmarks</div>
-                </button>
-              </div>
-            </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-          </div>
-          <div class="category-item">
-            <div class="category-item__body">
-              <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
-                  <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
-                <time class="humble">Yesterday, 10:40PM</time>
-              </div>
-              <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
-              <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
-              <div class="category-item__info">
-                <div class="humble humble--views">123.5k
-                  <div class="humble__inner-text hide-xl-down">views</div>
-                </div><a class="humble humble--comments" href="#!">256
-                  <div class="humble__inner-text hide-xl-down">comments</div></a>
-                <button class="humble humble--bookmark">
-                  <div class="hide-xl-down">Add to bookmarks</div>
-                </button>
-              </div>
-            </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-          </div>
-          <div class="category-item">
-            <div class="category-item__body">
-              <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
-                  <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
-                <time class="humble">Yesterday, 10:40PM</time>
-              </div>
-              <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
-              <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
-              <div class="category-item__info">
-                <div class="humble humble--views">123.5k
-                  <div class="humble__inner-text hide-xl-down">views</div>
-                </div><a class="humble humble--comments" href="#!">256
-                  <div class="humble__inner-text hide-xl-down">comments</div></a>
-                <button class="humble humble--bookmark">
-                  <div class="hide-xl-down">Add to bookmarks</div>
-                </button>
-              </div>
-            </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-          </div>
-          <div class="category-item">
-            <div class="category-item__body">
-              <div class="category-item__info"><a class="category-item__info-link humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">
-                  <div class="truncate">Konstantin Konstanovichkonstanovich</div></a>
-                <time class="humble">Yesterday, 10:40PM</time>
-              </div>
-              <h2><a class="category-item__title" href="#!">What Is Decentralized Application (dApp): Explanation for Beginners</a></h2>
-              <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
-              <div class="category-item__info">
-                <div class="humble humble--views">123.5k
-                  <div class="humble__inner-text hide-xl-down">views</div>
-                </div><a class="humble humble--comments" href="#!">256
-                  <div class="humble__inner-text hide-xl-down">comments</div></a>
-                <button class="humble humble--bookmark">
-                  <div class="hide-xl-down">Add to bookmarks</div>
-                </button>
-              </div>
-            </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-          </div><a class="btn btn--block btn--large" href="#!">Show more</a>
         </div>
       </div>
       <footer class="footer">
@@ -522,11 +524,20 @@
           </div>
         </div>
       </div>
+      <div class="cookies">
+        <div class="cookies__container container">
+          <div class="cookies__row">
+            <p class="cookies_text">This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a></p>
+            <div class="btn__block"><a class="btn-link" href="#!">Cookie settings</a>
+              <button class="btn accept-cookies">Accept cookies</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
-    <script src="libs/jquery-validate/jquery.validationEngine.js"></script>
-    <script src="libs/jquery-validate/jquery.validationEngine-en.js"></script>
+    <script src="libs/jquery-validate/jquery.validate.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/trading_view.js"></script>
   </body>

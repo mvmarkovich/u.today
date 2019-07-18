@@ -23,13 +23,13 @@ html(lang="en" dir="ltr")
       link(href="styles/main.css" rel="stylesheet")
 
   body
+    .main-page
+      include ../blocks/currencies.pug
 
-    include ../blocks/currencies.pug
-
-    .page-container.container
       include ../inc/header.pug
 
-      block content
+      .page-container.container
+        block content
 
       include ../inc/footer.pug
 
@@ -37,11 +37,12 @@ html(lang="en" dir="ltr")
 
       include ../blocks/modal.pug
 
+      include ../inc/cookies.pug
+
     block foot
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
       script(src="libs/slick/slick.min.js")
-      script(src="libs/jquery-validate/jquery.validationEngine.js")
-      script(src="libs/jquery-validate/jquery.validationEngine-en.js")
+      script(src="libs/jquery-validate/jquery.validate.min.js")
 
       script(src="scripts/main.js")
       script(src="scripts/trading_view.js")
