@@ -5394,9 +5394,9 @@ transition {
   }
 
   .header__search {
-    left: 250px;
-    right: 100px;
-    top: 23px;
+    left: 205px;
+    right: 180px;
+    top: 8px;
   }
 
   .header__search-input {
@@ -5993,9 +5993,9 @@ transition {
   }
 
   .header__search {
-    left: 250px;
-    right: 100px;
-    top: 33px;
+    left: 265px;
+    right: 250px;
+    top: 8px;
   }
 
   .article__summary-device {
@@ -10785,6 +10785,10 @@ body .slick-next{
 
 .staff__list .personal__info{
   margin-right: 1.8rem;
+}
+
+.aside-block--mobile-visible .card{
+  padding: .6rem 1rem 1.5rem;
 }
 
 .main-page .aside-block--mobile-visible .card__title{
