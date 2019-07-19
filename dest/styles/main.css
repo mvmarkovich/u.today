@@ -6697,6 +6697,10 @@ transition {
     display: flex;
   }
 
+  .main-page .header__account{
+    margin-right: 1rem;
+  }
+
   .accordion--open + .btn,.accordion--open + .btn + .btn {
     display: none;
   }
@@ -9574,13 +9578,12 @@ body .slick-next{
   padding: 0 1rem;
 }
 
-.btn--account{
+.header__account{
   position: relative;
 }
 
-.main-page .btn--account{
+.main-page .header__account{
   display: block;
-  margin-right: 1rem;
 }
 
 .main-page .header{
