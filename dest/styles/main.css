@@ -10194,12 +10194,6 @@ body .slick-next{
 
 .main-page .share-and-up{
   left: calc(50% - 560px - 100px);
-  opacity: 0;
-  transition: .2s;
-}
-
-.main-page .share-and-up.show{
-  opacity: 1;
 }
 
 .main-page .news__item-time{

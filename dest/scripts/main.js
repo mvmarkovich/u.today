@@ -296,19 +296,6 @@
     }
   });
 
-  $(window).on('load resize', function() {
-    if ($(window).width() >= '887'){
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 450) {
-          $('.main-page .share-and-up').addClass('show');
-        } else{
-          $('.main-page .share-and-up').removeClass('show');
-        }
-      });
-      return this;
-    }
-  });
-
   //
   // Slider TOP-STORY on MAIN page
   //
