@@ -342,38 +342,34 @@
 
 
   $('.modal__entrance-form').each(function() {
-    $(this).change(function() {
-      if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
-        $(this).children(".btn_step").prop('disabled', false);
-      } else {
-        $(this).children(".btn_step").prop('disabled', 'disabled');
-      }
-    });
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
       addSuccessCssClassToField: "valid",
       promptPosition : "centerRight",
       scroll: false,
+      onValidationComplete: function(form, status){
+        if (status == true){
+
+          return true;
+        }
+      }
     });
   });
 
   $('.modal__log_in-form').each(function() {
-    $(this).change(function() {
-      if ($(this).validationEngine('validate') == true) {
-        $(this).children(".btn_step").prop('disabled', false);
-      } else {
-        $(this).children(".btn_step").prop('disabled', 'disabled');
-      }
-    });
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
       addSuccessCssClassToField: "valid",
       promptPosition : "centerRight",
       scroll: false,
+      onValidationComplete: function(form, status){
+        if (status == true){
+
+          return true;
+        }
+      }
     });
   });
-
-
 
   $(".modal__entrance-form").submit(function(e) {
     e.preventDefault();

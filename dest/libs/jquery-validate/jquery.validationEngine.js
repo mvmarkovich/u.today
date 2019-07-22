@@ -1289,7 +1289,7 @@
     $.validationEngine = {
         fieldIdCounter: 0,
         defaults: {
-            validationEventTrigger: "input",
+            validationEventTrigger: "blur",
             scroll: true,
             focusFirstField: false,
             showPrompts: true,
