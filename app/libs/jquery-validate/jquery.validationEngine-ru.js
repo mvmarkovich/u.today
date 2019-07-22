@@ -1,1 +1,126 @@
-Date.prototype.ddmmyyyy=function(str,ddmmyyyy){var r=/^(\d+)(-|\/|\.)(\d+)(-|\/|\.)(\d+)$/;var m=str.match(r);return r.test(str)?new Date(m[5],+m[3]-1,+m[1]):false;};(function($){$.fn.validationEngineLanguage=function(){};$.validationEngineLanguage={newLang:function(){$.validationEngineLanguage.allRules={"required":{"regex":"none","alertText":" РџРѕР»Рµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ","alertTextCheckboxMultiple":" Р’С‹ РґРѕР»Р¶РЅС‹ РІС‹Р±СЂР°С‚СЊ РІР°СЂРёР°РЅС‚","alertTextCheckboxe":" РќРµРѕР±С…РѕРґРёРјРѕ РѕС‚РјРµС‚РёС‚СЊ"},"requiredInFunction":{"func":function(field,rules,i,options){return(field.val()=="test")?true:false;},"alertText":" Р—РЅР°С‡РµРЅРёРµРј РїРѕР»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ test"},"minSize":{"regex":"none","alertText":" РњРёРЅРёРјСѓРј ","alertText2":" СЃРёРјРІРѕР»Р°(РѕРІ)"},"maxSize":{"regex":"none","alertText":" РњР°РєСЃРёРјСѓРј ","alertText2":" СЃРёРјРІРѕР»Р°(РѕРІ)"},"groupRequired":{"regex":"none","alertText":" Р’С‹ РґРѕР»Р¶РЅС‹ Р·Р°РїРѕР»РЅРёС‚СЊ РѕРґРЅРѕ РёР· СЃР»РµРґСѓСЋС‰РёС… РїРѕР»РµР№"},"min":{"regex":"none","alertText":" РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ "},"max":{"regex":"none","alertText":" РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ "},"past":{"regex":"none","alertText":" Р”Р°С‚Р° РґРѕ "},"future":{"regex":"none","alertText":" Р”Р°С‚Р° РѕС‚ "},"maxCheckbox":{"regex":"none","alertText":" РќРµР»СЊР·СЏ РІС‹Р±СЂР°С‚СЊ СЃС‚РѕР»СЊРєРѕ РІР°СЂРёР°РЅС‚РѕРІ"},"minCheckbox":{"regex":"none","alertText":" РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІС‹Р±РµСЂРёС‚Рµ ","alertText2":" РѕРїС†РёСЋ(РёРё)"},"equals":{"regex":"none","alertText":" РџРѕР»СЏ РЅРµ СЃРѕРІРїР°РґР°СЋС‚"},"creditCard":{"regex":"none","alertText":" РќРµРІРµСЂРЅС‹Р№ РЅРѕРјРµСЂ РєСЂРµРґРёС‚РЅРѕР№ РєР°СЂС‚С‹"},"phone":{"regex":/^([\+][0-9]{1,3}[ \.\-])?([\(]{1}[0-9]{2,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$/,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ С„РѕСЂРјР°С‚ С‚РµР»РµС„РѕРЅР°"},"email":{"regex":/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i,"alertText":" РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ email"},"email_2":{"regex":/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,"alertText":" РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ email"},"integer":{"regex":/^[\-\+]?\d+$/,"alertText":" РќРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ"},"number":{"regex":/^[\-\+]?((([0-9]{1,3})([,][0-9]{3})*)|([0-9]+))?([\.]([0-9]+))?$/,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№"},"date":{"regex":/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅР°СЏ РґР°С‚Р° (РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІ Р”Р”.MM.Р“Р“Р“Р“ С„РѕСЂРјР°С‚Рµ)"},"date_ru":{"regex":/^(0?[1-9]|[12][0-9]|3[01])[.\/\-](0?[1-9]|1[012])[.\/\-](19|20)\d\d$/,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅР°СЏ РґР°С‚Р°"},"date_before":{"func":function(field,rules,i,options){var date=(new Date()).ddmmyyyy($(field).val());if(date){return date<new Date();}else{return false;}},"alertText":" Р”РѕРєС‚РѕСЂ Р­РјРјРµС‚, Р’С‹?"},"ipv4":{"regex":/^((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))[.]){3}(([0-1]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))$/,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ IP-Р°РґСЂРµСЃ"},"url":{"regex":/^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i,"alertText":" РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ URL"},"onlyNumberSp":{"regex":/^[0-9\ ]+$/,"alertText":" РўРѕР»СЊРєРѕ С‡РёСЃР»Р°"},"onlyLetterSp":{"regex":/^[a-zA-Z\u0400-\u04FF\ \']+$/,"alertText":" РўРѕР»СЊРєРѕ Р±СѓРєРІС‹"},"onlyLetterNumber":{"regex":/^[0-9a-zA-Z\u0400-\u04FF]+$/,"alertText":" Р—Р°РїСЂРµС‰РµРЅС‹ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ СЃРёРјРІРѕР»С‹"},"ajaxUserCall":{"url":"ajaxValidateFieldUser","extraData":"name=eric","alertText":" Р­С‚РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СѓР¶Рµ Р·Р°РЅСЏС‚","alertTextLoad":" РџСЂРѕРІРµСЂРєР°, РїРѕРґРѕР¶РґРёС‚Рµ..."},"ajaxNameCall":{"url":"ajaxValidateFieldName","alertText":" Р­С‚Рѕ РёРјСЏ СѓР¶Рµ Р·Р°РЅСЏС‚Рѕ","alertTextOk":" Р­С‚Рѕ РёРјСЏ РґРѕСЃС‚СѓРїРЅРѕ","alertTextLoad":" РџСЂРѕРІРµСЂРєР°, РїРѕРґРѕР¶РґРёС‚Рµ..."},"validate2fields":{"alertText":" РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ HELLO"}};}};$.validationEngineLanguage.newLang();})(jQuery);
+(function ($) {
+    $.fn.validationEngineLanguage = function () {
+    };
+    $.validationEngineLanguage = {
+        newLang: function () {
+            $.validationEngineLanguage.allRules = {
+                "required": {
+                    "regex": "none",
+                    "alertText": "* This field is required",
+                    "alertTextCheckboxMultiple": "* Please select an option",
+                    "alertTextCheckboxe": "* This checkbox is required",
+                    "alertTextDateRange": "* Both date range fields are required"
+                },
+                "requiredInFunction": {
+                    "func": function (field, rules, i, options) {
+                        return (field.val() == "test") ? true : false;
+                    }, "alertText": "* Field must equal test"
+                },
+                "dateRange": {"regex": "none", "alertText": "* Invalid ", "alertText2": "Date Range"},
+                "dateTimeRange": {"regex": "none", "alertText": "* Invalid ", "alertText2": "Date Time Range"},
+                "minSize": {"regex": "none", "alertText": "* Minimum ", "alertText2": " characters required"},
+                "maxSize": {"regex": "none", "alertText": "* Maximum ", "alertText2": " characters allowed"},
+                "groupRequired": {
+                    "regex": "none",
+                    "alertText": "* You must fill one of the following fields",
+                    "alertTextCheckboxMultiple": "* Please select an option",
+                    "alertTextCheckboxe": "* This checkbox is required"
+                },
+                "min": {"regex": "none", "alertText": "* Minimum value is "},
+                "max": {"regex": "none", "alertText": "* Maximum value is "},
+                "past": {"regex": "none", "alertText": "* Date prior to "},
+                "future": {"regex": "none", "alertText": "* Date past "},
+                "maxCheckbox": {"regex": "none", "alertText": "* Maximum ", "alertText2": " options allowed"},
+                "minCheckbox": {"regex": "none", "alertText": "* Please select ", "alertText2": " options"},
+                "equals": {"regex": "none", "alertText": "* Fields do not match"},
+                "creditCard": {"regex": "none", "alertText": "* Invalid credit card number"},
+                "phone": {
+                    "regex": /^([\+][0-9]{1,3}([ \.\-])?)?([\(][0-9]{1,6}[\)])?([0-9 \.\-]{1,32})(([A-Za-z \:]{1,11})?[0-9]{1,4}?)$/,
+                    "alertText": "* Invalid phone number"
+                },
+                "email": {
+                    "regex": /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    "alertText": "* Invalid email address"
+                },
+                "fullname": {
+                    "regex": /^([a-zA-Z]+[\'\,\.\-]?[a-zA-Z ]*)+[ ]([a-zA-Z]+[\'\,\.\-]?[a-zA-Z ]+)+$/,
+                    "alertText": "* Must be first and last name"
+                },
+                "zip": {"regex": /^\d{5}$|^\d{5}-\d{4}$/, "alertText": "* Invalid zip format"},
+                "integer": {"regex": /^[\-\+]?\d+$/, "alertText": "* Not a valid integer"},
+                "number": {
+                    "regex": /^[\-\+]?((([0-9]{1,3})([,][0-9]{3})*)|([0-9]+))?([\.]([0-9]+))?$/,
+                    "alertText": "* Invalid floating decimal number"
+                },
+                "date": {
+                    "func": function (field) {
+                        var pattern = new RegExp(/^(\d{4})[\/\-\.](0?[1-9]|1[012])[\/\-\.](0?[1-9]|[12][0-9]|3[01])$/);
+                        var match = pattern.exec(field.val());
+                        if (match == null)
+                            return false;
+                        var year = match[1];
+                        var month = match[2] * 1;
+                        var day = match[3] * 1;
+                        var date = new Date(year, month - 1, day);
+                        return (date.getFullYear() == year && date.getMonth() == (month - 1) && date.getDate() == day);
+                    }, "alertText": "* Invalid date, must be in YYYY-MM-DD format"
+                },
+                "ipv4": {
+                    "regex": /^((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))[.]){3}(([0-1]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))$/,
+                    "alertText": "* Invalid IP address"
+                },
+                "url": {
+                    "regex": /^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i,
+                    "alertText": "* Invalid URL"
+                },
+                "onlyNumberSp": {"regex": /^[0-9\ ]+$/, "alertText": "* Numbers only"},
+                "onlyLetterSp": {
+                    "regex": /^[0-5a-zA-Z]+$/,
+                    "alertText": "* The numbers 1-5 are allowed, and the numbers 0-6-7-8-9 are prohibited"
+                },
+                "onlyLetterAccentSp": {
+                    "regex": /^[a-z\u00C0-\u017F\ ]+$/i,
+                    "alertText": "* Letters only (accents allowed)"
+                },
+                "onlyLetterNumber": {"regex": /^[0-9a-zA-Z]+$/, "alertText": "* No special characters allowed"},
+                "ajaxUserCall": {
+                    "url": "ajaxValidateFieldUser",
+                    "extraData": "name=eric",
+                    "alertText": "* This user is already taken",
+                    "alertTextLoad": "* Validating, please wait"
+                },
+                "ajaxUserCallPhp": {
+                    "url": "phpajax/ajaxValidateFieldUser.php",
+                    "extraData": "name=eric",
+                    "alertTextOk": "* This username is available",
+                    "alertText": "* This user is already taken",
+                    "alertTextLoad": "* Validating, please wait"
+                },
+                "ajaxNameCall": {
+                    "url": "ajaxValidateFieldName",
+                    "alertText": "* This name is already taken",
+                    "alertTextOk": "* This name is available",
+                    "alertTextLoad": "* Validating, please wait"
+                },
+                "ajaxNameCallPhp": {
+                    "url": "phpajax/ajaxValidateFieldName.php",
+                    "alertText": "* This name is already taken",
+                    "alertTextLoad": "* Validating, please wait"
+                },
+                "validate2fields": {"alertText": "* Please input HELLO"},
+                "dateFormat": {
+                    "regex": /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$|^(?:(?:(?:0?[13578]|1[02])(\/|-)31)|(?:(?:0?[1,3-9]|1[0-2])(\/|-)(?:29|30)))(\/|-)(?:[1-9]\d\d\d|\d[1-9]\d\d|\d\d[1-9]\d|\d\d\d[1-9])$|^(?:(?:0?[1-9]|1[0-2])(\/|-)(?:0?[1-9]|1\d|2[0-8]))(\/|-)(?:[1-9]\d\d\d|\d[1-9]\d\d|\d\d[1-9]\d|\d\d\d[1-9])$|^(0?2(\/|-)29)(\/|-)(?:(?:0[48]00|[13579][26]00|[2468][048]00)|(?:\d\d)?(?:0[48]|[2468][048]|[13579][26]))$/,
+                    "alertText": "* Invalid Date"
+                },
+                "dateTimeFormat": {
+                    "regex": /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])\s+(1[012]|0?[1-9]){1}:(0?[1-5]|[0-6][0-9]){1}:(0?[0-6]|[0-6][0-9]){1}\s+(am|pm|AM|PM){1}$|^(?:(?:(?:0?[13578]|1[02])(\/|-)31)|(?:(?:0?[1,3-9]|1[0-2])(\/|-)(?:29|30)))(\/|-)(?:[1-9]\d\d\d|\d[1-9]\d\d|\d\d[1-9]\d|\d\d\d[1-9])$|^((1[012]|0?[1-9]){1}\/(0?[1-9]|[12][0-9]|3[01]){1}\/\d{2,4}\s+(1[012]|0?[1-9]){1}:(0?[1-5]|[0-6][0-9]){1}:(0?[0-6]|[0-6][0-9]){1}\s+(am|pm|AM|PM){1})$/,
+                    "alertText": "* Invalid Date or Date Format",
+                    "alertText2": "Expected Format: ",
+                    "alertText3": "mm/dd/yyyy hh:mm:ss AM|PM or ",
+                    "alertText4": "yyyy-mm-dd hh:mm:ss AM|PM"
+                }
+            };
+        }
+    };
+    $.validationEngineLanguage.newLang();
+})(jQuery);

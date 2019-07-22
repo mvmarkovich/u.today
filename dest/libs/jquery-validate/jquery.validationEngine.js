@@ -1289,9 +1289,9 @@
     $.validationEngine = {
         fieldIdCounter: 0,
         defaults: {
-            validationEventTrigger: "blur",
+            validationEventTrigger: "input",
             scroll: true,
-            focusFirstField: true,
+            focusFirstField: false,
             showPrompts: true,
             validateNonVisibleFields: false,
             ignoreFieldsWithClass: 'ignoreMe',
@@ -1326,8 +1326,6 @@
             parentFieldClass: "",
             parentFormClass: "",
             autoHidePrompt: false,
-            autoHideDelay: 10000,
-            fadeDuration: 300,
             prettySelect: false,
             addPromptClass: "",
             usePrefix: "",

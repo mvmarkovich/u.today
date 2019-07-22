@@ -341,23 +341,39 @@
   });
 
 
-  $('.modal__entrance-form').change(function() {
-    $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
-    if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
-      $(this).children(".btn_step").prop('disabled', false);
-    } else {
-      $(this).children(".btn_step").prop('disabled', 'disabled');
-    }
+  $('.modal__entrance-form').each(function() {
+    $(this).change(function() {
+      if ($(this).validationEngine('validate') == true && $(this).find(".checkbox").is(':checked')) {
+        $(this).children(".btn_step").prop('disabled', false);
+      } else {
+        $(this).children(".btn_step").prop('disabled', 'disabled');
+      }
+    });
+    $(this).validationEngine('attach', {
+      addFailureCssClassToField: "invalid",
+      addSuccessCssClassToField: "valid",
+      promptPosition : "centerRight",
+      scroll: false,
+    });
   });
 
-  $('.modal__log_in-form').change(function() {
-    $(this).validationEngine('attach', {addFailureCssClassToField: "invalid", addSuccessCssClassToField: "valid", promptPosition : "centerRight", scroll: false});
-    if ($(this).validationEngine('validate') == true) {
-      $(this).children(".btn_step").prop('disabled', false);
-    } else {
-      $(this).children(".btn_step").prop('disabled', 'disabled');
-    }
+  $('.modal__log_in-form').each(function() {
+    $(this).change(function() {
+      if ($(this).validationEngine('validate') == true) {
+        $(this).children(".btn_step").prop('disabled', false);
+      } else {
+        $(this).children(".btn_step").prop('disabled', 'disabled');
+      }
+    });
+    $(this).validationEngine('attach', {
+      addFailureCssClassToField: "invalid",
+      addSuccessCssClassToField: "valid",
+      promptPosition : "centerRight",
+      scroll: false,
+    });
   });
+
+
 
   $(".modal__entrance-form").submit(function(e) {
     e.preventDefault();
