@@ -5,16 +5,16 @@
   //
 
   const $header = $(".header"),
-    $headerContainer = $(".header__container"),
-    $headerBurger = $(".header__burger"),
-    $mobileMenuCover = $(".mobile-menu-cover"),
-    $headerBtnSearch = $(".header__btn-search"),
-    $headerSearch = $(".header__search"),
-    $headerSearchBtnClose = $(".header__search-close"),
-    $headerSearchInput = $(".header__search-input"),
-    $headerNavList = $(".header__nav-list"),
-    $headerNavLinksList = $(".header__nav-item--arrow"),
-    $headerMobileMenuBack = $(".mobile-menu-back");
+      $headerContainer = $(".header__container"),
+      $headerBurger = $(".header__burger"),
+      $mobileMenuCover = $(".mobile-menu-cover"),
+      $headerBtnSearch = $(".header__btn-search"),
+      $headerSearch = $(".header__search"),
+      $headerSearchBtnClose = $(".header__search-close"),
+      $headerSearchInput = $(".header__search-input"),
+      $headerNavList = $(".header__nav-list"),
+      $headerNavLinksList = $(".header__nav-item--arrow"),
+      $headerMobileMenuBack = $(".mobile-menu-back");
 
   var firstHeaderLoad = true;
 
@@ -92,13 +92,13 @@
 
   function getScrollBarWidth() {
     var $outer = $('<div>').css({
-        visibility: 'hidden',
-        width: 100,
-        overflow: 'scroll'
-      }).appendTo('body'),
-      widthWithScroll = $('<div>').css({
-        width: '100%'
-      }).appendTo($outer).outerWidth();
+          visibility: 'hidden',
+          width: 100,
+          overflow: 'scroll'
+        }).appendTo('body'),
+        widthWithScroll = $('<div>').css({
+          width: '100%'
+        }).appendTo($outer).outerWidth();
     $outer.remove();
     return 100 - widthWithScroll;
   };
@@ -348,9 +348,11 @@
       promptPosition : "centerRight",
       scroll: false,
       onValidationComplete: function(form, status){
-        if (status == true){
-
+        if (status == true && $('.modal__entrance-form').find(".checkbox").is(':checked')){
+          $('.modal__square:visible').hide().next('.modal__square').show();
           return true;
+        } else{
+
         }
       }
     });
@@ -478,4 +480,3 @@ function validate(subscribe__form,subscribe__email) {
     return false;
   }
 }
-
