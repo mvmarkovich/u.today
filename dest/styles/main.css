@@ -3987,7 +3987,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .news__item-time-wrapper {
-  min-width: 6.3rem;
+  min-width: 7.4rem;
   text-align: right;
   display: inline;
 }
