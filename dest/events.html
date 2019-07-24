@@ -488,7 +488,7 @@
           <div class="modal__entrance-title">Log in</div>
         </div>
         <div class="modal__entrance-content">
-          <form class="modal__log_in-form" action="#" method="get">
+          <form class="modal__log_in-form" id="form-log_in" action="#" method="get">
             <div class="input">
               <input class="input__elem validate[required]" type="text" maxlength="12" name="name" placeholder="Account name">
             </div>
@@ -511,12 +511,12 @@
           <div class="modal__entrance-title">Step 1</div>
         </div>
         <div class="modal__entrance-content">
-          <form class="modal__entrance-form" action="#" method="get">
+          <form class="modal__entrance-form" id="generate-brainkey" action="#" method="get">
             <div class="input">
-              <input class="input__elem validate[required,custom[email]]" type="text" name="email" placeholder="Email">
+              <input class="input__elem validate[required,custom[email]]" type="text" name="email" id="email" placeholder="Email">
             </div>
             <div class="input input-account--name"><span class="internet-dog">@</span>
-              <input class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" type="text" data-field="item" maxlength="12" name="account_name" placeholder="Account name">
+              <input class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" type="text" data-field="item" maxlength="12" id="account_name" name="account_name" placeholder="Account name">
               <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
             </div>
             <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
@@ -544,14 +544,14 @@
           <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
           <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
           <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-          <form class="modal__entrance-form" action="#" method="get">
+          <form class="modal__entrance-form" id="recorded-brainkey" action="#" method="get">
             <div class="checkbox__block">
               <div class="checkbox__block_item">
                 <input class="checkbox" type="checkbox">
                 <label>I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
               </div>
             </div>
-            <button class="btn btn--input btn_step" type="submit">Finish</button>
+            <button class="btn btn--input btn_step btn--wide" type="submit" disabled>Finish</button>
           </form>
         </div>
       </div>

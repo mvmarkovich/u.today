@@ -68,7 +68,7 @@
       .modal__entrance-title Log in
 
     .modal__entrance-content
-      form.modal__log_in-form(action="#" method="get")
+      form.modal__log_in-form#form-log_in(action="#" method="get")
         .input
           input(type="text" class="input__elem validate[required]" maxlength="12" name="name" placeholder="Account name")
         .input
@@ -84,12 +84,12 @@
     .modal__entrance-header
       .modal__entrance-title Step 1
     .modal__entrance-content
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#generate-brainkey(action="#" method="get")
         .input
-          input(type="text" class="input__elem validate[required,custom[email]]" name="email" placeholder="Email")
+          input(type="text" class="input__elem validate[required,custom[email]]" name="email" id="email" placeholder="Email")
         .input.input-account--name
           span.internet-dog @
-          input(type="text" data-field="item" class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" maxlength="12" name="account_name" placeholder="Account name").
+          input(type="text" data-field="item" class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" maxlength="12" id="account_name" name="account_name" placeholder="Account name").
           .input-account--name_counter
             span.counter(data-field="target") 0
             span.counter /12
@@ -123,12 +123,12 @@
         span.modal__entrance-hashtag turr
         span.modal__entrance-hashtag bail
         span.modal__entrance-hashtag gunshot
-      form.modal__entrance-form(action="#" method="get")
+      form.modal__entrance-form#recorded-brainkey(action="#" method="get")
         .checkbox__block
           .checkbox__block_item
             input.checkbox(type='checkbox')
             label I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
-        button.btn.btn--input.btn_step(type="submit") Finish
+        button.btn.btn--input.btn_step.btn--wide(type="submit" disabled) Finish
   .modal__square.modal__entrance.registation-completed
     button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
     button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)

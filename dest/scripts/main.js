@@ -340,25 +340,7 @@
     nextArrow: $('.medium_categories__next-button'),
   });
 
-
-  $('.modal__entrance-form').each(function() {
-    $(this).validationEngine('attach', {
-      addFailureCssClassToField: "invalid",
-      addSuccessCssClassToField: "valid",
-      promptPosition : "centerRight",
-      scroll: false,
-      onValidationComplete: function(form, status){
-        if (status == true && $('.modal__entrance-form').find(".checkbox").is(':checked')){
-          $('.modal__square:visible').hide().next('.modal__square').show();
-          return true;
-        } else{
-
-        }
-      }
-    });
-  });
-
-  $('.modal__log_in-form').each(function() {
+  $('#form-log_in').each(function() {
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
       addSuccessCssClassToField: "valid",
@@ -373,6 +355,33 @@
     });
   });
 
+  $('#generate-brainkey').each(function() {
+    $(this).validationEngine('attach', {
+      addFailureCssClassToField: "invalid",
+      addSuccessCssClassToField: "valid",
+      promptPosition : "centerRight",
+      scroll: false,
+      onValidationComplete: function(form, status){
+        if (status == true && $('#generate-brainkey').find(".checkbox").is(':checked')){
+          $('.modal__square:visible').hide().next('.modal__square').show();
+          return true;
+        } else{
+
+        }
+      }
+    });
+  });
+
+  $('#recorded-brainkey').each(function() {
+      $(this).change(function() {
+          if ($('#recorded-brainkey').find(".checkbox").is(':checked')) {
+              $(this).children(".btn_step").prop('disabled', false);
+          } else {
+              $(this).children(".btn_step").prop('disabled', 'disabled');
+          }
+      });
+  });
+
   $(".modal__entrance-form").submit(function(e) {
     e.preventDefault();
   });
@@ -382,12 +391,6 @@
     entrance_checkbox++;
     $(this).children(".checkbox").attr("id","entrance-checkbox-" + entrance_checkbox);
     $(this).children("label").attr("for","entrance-checkbox-" + entrance_checkbox);
-  });
-
-  var entrance_form = 0;
-  $(".modal .modal__entrance form").each(function(){
-    entrance_form++;
-    $(this).attr("id","entrance_form-" + entrance_form);
   });
 
   $(function () {
