@@ -10245,8 +10245,8 @@ body .slick-next{
 }
 
 .modal__successfully-text{
-  line-height: 2rem;
-  font-size: 17px;
+  line-height: 1.5rem;
+  font-size: .8125rem;
   text-align: center;
   font-weight: 500;
 }
@@ -11042,32 +11042,19 @@ body .slick-next{
   line-height: 2rem;
 }
 
-.modal__timeout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-top: 1px solid #263238;
-    padding: 0.5rem 0px;
-}
-
 .timeout__item{
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0px 2px 5px rgba(33, 150, 243, 0.5);
-}
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #CFD8DC;
+  margin: 2.5rem auto 0;
 
-.timeout__descr{
-    margin-bottom: 0;
-    line-height: 1.4;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    padding: 13px 0;
-    margin-right: 1.5rem;
+  font-size: 1.94rem;
+  color: #CFD8DC;
+  font-weight: 600;
 }
 
 .author-block{

@@ -390,8 +390,8 @@
       $(this).change(function() {
           if ($('#recorded-brainkey').find(".checkbox").is(':checked')) {
               $(this).children(".btn_step").prop('disabled', false);
-              window.setTimeout('location.reload()', 3000); //Reloads after three seconds
               modalTimeout();
+              window.setTimeout('location.reload()', 3000); //Reloads after three seconds
           } else {
               $(this).children(".btn_step").prop('disabled', 'disabled');
           }
