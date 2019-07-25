@@ -346,7 +346,7 @@
       $('.timeout__item').html(i);
       if (i <= 3) setTimeout(go, 1000);
       i--;
-    }, 1000);
+    }, 0);
   }
 
   $(".rating-button").bind('click',function() {
