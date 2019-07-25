@@ -7833,6 +7833,8 @@ transition {
 .article_main-info_v2 .rating-value{
   width: 40px;
   text-align: center;
+  cursor: default;
+  line-height: 2.5rem;
 }
 
 .article_main-info_v2 .article_main-info__rating:before{
@@ -7904,6 +7906,11 @@ transition {
 
 .rating-button:active{
   background-color: #1565C0;
+}
+
+.rating-button.voted{
+  background-color: #CFD8DC;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCIgZmlsbD0ibm9uZSI+Cgk8cGF0aCBkPSJNMTIgMkwxMC41OSAwLjU4OTk5Nkw2IDUuMTdMMS40MSAwLjU4OTk5NkwtNi4xNjMzMWUtMDggMkw2IDhMMTIgMloiIGZpbGw9IiM5MEE0QUUiLz4KPC9zdmc+");
 }
 
 .rating-up{

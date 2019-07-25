@@ -349,6 +349,11 @@
     }, 1000);
   }
 
+  $(".rating-button").bind('click',function() {
+    $(".rating-button").removeClass("voted");
+    $(this).addClass("voted");
+  });
+
   $('#form-log_in').each(function() {
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
