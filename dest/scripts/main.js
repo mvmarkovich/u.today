@@ -340,6 +340,15 @@
     nextArrow: $('.medium_categories__next-button'),
   });
 
+  function modalTimeout() {
+    var i = 3;
+    var timerId = setTimeout(function go() {
+      $('.timeout__item').html(i);
+      if (i <= 3) setTimeout(go, 1000);
+      i--;
+    }, 1000);
+  }
+
   $('#form-log_in').each(function() {
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
@@ -376,6 +385,8 @@
       $(this).change(function() {
           if ($('#recorded-brainkey').find(".checkbox").is(':checked')) {
               $(this).children(".btn_step").prop('disabled', false);
+              window.setTimeout('location.reload()', 3000); //Reloads after three seconds
+              modalTimeout();
           } else {
               $(this).children(".btn_step").prop('disabled', 'disabled');
           }

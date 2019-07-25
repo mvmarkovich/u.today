@@ -11035,6 +11035,34 @@ body .slick-next{
   line-height: 2rem;
 }
 
+.modal__timeout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #263238;
+    padding: 0.5rem 0px;
+}
+
+.timeout__item{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(33, 150, 243, 0.5);
+}
+
+.timeout__descr{
+    margin-bottom: 0;
+    line-height: 1.4;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    padding: 13px 0;
+    margin-right: 1.5rem;
+}
+
 .author-block{
   background-color: #fff;
   padding: 1.5rem 1rem;
