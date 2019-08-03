@@ -10199,8 +10199,10 @@ body .slick-next{
   margin-bottom: 0;
 }
 
-.main-page .share-and-up{
-  left: calc(50% - 560px - 100px);
+@media (max-width: 1367px){
+  .share-and-up{
+    left: 1rem;
+  }
 }
 
 .main-page .news__item-time{
