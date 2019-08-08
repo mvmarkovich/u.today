@@ -7973,10 +7973,6 @@ transition {
   justify-content: space-between;
 }
 
-.article{
-  padding-bottom: 2rem;
-}
-
 .article__content .article__related{
   align-items: center;
   display: flex;
@@ -8557,8 +8553,6 @@ transition {
   }
 }
 
-
-
 .mega-history{
   position: relative;
   display: block;
@@ -8580,9 +8574,9 @@ transition {
   top: 15px;
   color: #263238;
   font-weight: 600;
-  left: 15px;.custom-select-wrapper
+  left: 15px;
 
-font-size: 1.125rem;
+  font-size: 1.125rem;
   line-height: 1.8;
 }
 
