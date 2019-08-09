@@ -9394,9 +9394,23 @@ body .slick-next{
   border: 2px solid #263238;
 }
 
+.modal__entrance .checkbox__block input[type=checkbox]{
+  display: block;
+  width: 0;
+  height: 0;
+  min-height: 0;
+  margin-bottom: 0;
+}
+
+.modal__entrance .checkbox__block_item{
+  display: flex;
+  flex-direction: column;
+}
+
 .modal__entrance .checkbox__block label{
   color: #263238;
   padding-left: 30px;
+  order: 1;
 }
 
 .modal__entrance .checkbox__block .modal__entrance-link{

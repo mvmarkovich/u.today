@@ -402,13 +402,6 @@
     e.preventDefault();
   });
 
-  var entrance_checkbox = 0;
-  $(".modal .modal__entrance .checkbox__block_item").each(function(){
-    entrance_checkbox++;
-    $(this).children(".checkbox").attr("id","entrance-checkbox-" + entrance_checkbox);
-    $(this).children("label").attr("for","entrance-checkbox-" + entrance_checkbox);
-  });
-
   $(function () {
     var target = $('[data-field="target"]');
     $(document).on('input', '[data-field="item"]', function () {

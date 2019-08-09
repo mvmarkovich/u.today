@@ -846,8 +846,8 @@
             <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
             <div class="checkbox__block">
               <div class="checkbox__block_item">
-                <input class="checkbox" type="checkbox">
-                <label>I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
+                <input class="validate[required] checkbox" type="checkbox" name="agree-terms" id="agree-terms">
+                <label for="agree-terms">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
               </div>
             </div>
             <button class="btn btn--input btn_step" type="submit">generate brainkey</button>
@@ -871,8 +871,8 @@
           <form class="modal__entrance-form" id="recorded-brainkey" action="#" method="get">
             <div class="checkbox__block">
               <div class="checkbox__block_item">
-                <input class="checkbox" type="checkbox">
-                <label>I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
+                <input class="validate[required] checkbox" type="checkbox" id="accept-brainkey" name="accept-brainkey">
+                <label for="accept-brainkey">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
               </div>
             </div>
             <button class="btn btn--input btn_step btn--wide" type="submit" disabled>Finish</button>
