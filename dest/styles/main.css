@@ -10331,11 +10331,13 @@ body .slick-next{
 
 .main-page .top-story__img-wrapper{
   display: block;
-  padding-top: 50%;
+  padding-top: 0;
+  background-color: #fff;
 }
 
 .main-page .top-story__img{
-  height: 100%;
+  position: static;
+  border-radius: 0;
 }
 
 .main-page .top-story .news__item-time{
@@ -11236,6 +11238,9 @@ body .slick-next{
   .card .advertising{
     display: block;
   }
+  .big_categories-story_mark{
+      width: 100%;
+  }
 }
 
 @media (max-width: 1100px){
@@ -11500,6 +11505,9 @@ body .slick-next{
   }
   .main-block_center .event-block{
     max-width: 480px;
+  }
+  .big_categories-story_mark{
+    width: auto;
   }
 }
 
