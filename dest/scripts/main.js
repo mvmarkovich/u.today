@@ -255,7 +255,7 @@
   $('.accept-cookies').on('click', function() {
     $(".cookies").detach();
     var date = new Date();
-    days = 1;
+    days = 365;
     date.setTime(+date + (days * 86400000));
     document.cookie = "accept=1; expires=" + date.toGMTString();
   });

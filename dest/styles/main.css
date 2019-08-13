@@ -9560,6 +9560,14 @@ body .slick-next{
   order: 2;
 }
 
+.modal__giveaway{
+  border-radius: 14px;
+}
+
+.modal__giveaway .modal__close{
+  opacity: .5;
+}
+
 .formErrorContent{
   color: #FF5252;
   font-size: 0.8125rem;
