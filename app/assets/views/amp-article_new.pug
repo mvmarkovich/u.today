@@ -209,6 +209,17 @@ html(lang="en" dir="ltr" ⚡)
                 a.mega-history(href="#!" style="background-image: url(img/content/mega-history/item_1.png);")
                     .history_tag ⛏ Editor’s pick
                     .bottom_descr Tron’s Justin Sun Calls Binance Coin the New Bitcoin — Is Now the Time to Invest?
+                section.article__amp-recommended
+                    .article__amp-recommended-title 👓 Recommended articles
+
+                    .article__article__amp-recommended-list
+                        each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+                            article.article__amp-recommended-item
+                                a.article__amp-recommended-item-link(href="#!")
+                                    amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                                    .article__amp-recommended-item-title= item
+                    a.btn.btn--background--blue.btn--full(href='#!')
+                        span.btn--text Show more articles
             .fix-block
                 .row
                     .amp_descr-continue
