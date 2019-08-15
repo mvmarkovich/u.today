@@ -9582,6 +9582,7 @@ body .slick-next{
 
 .modal__giveaway{
   border-radius: 14px;
+  max-width: 620px;
 }
 
 .modal__giveaway .modal__close{
