@@ -90,7 +90,7 @@ html(lang="en" dir="ltr" ⚡)
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
 
-        .container.page-container.amp_page-container.article_new
+        .container.page-container.amp_page-container
             header.header
                 a.header__logo(href="/")
                     include ../img/icons/logo.svg
@@ -109,12 +109,12 @@ html(lang="en" dir="ltr" ⚡)
                     .header_article__descr
                         .header_article__title 👋 You may also like: <span class="bold"> Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate' </span>
             .article
-                .article_new__header
-                    .row
-                        time.author__item-time.humble Oct 27’2018, 11:27 AM
-                        .humble.humble--views 123k
-                        .humble.humble--like 31
-                        .humble.humble--chat 256
+                .article__header
+                    .article__header--row
+                        time.humble.author__item-time Oct 27’2018, 11:27 AM
+                        .humble.humble--icon.humble--views.humble--tiny.humble--views__bold 123k
+                        .humble.humble--icon.humble--liked.humble--tiny.humble--liked__bold 31
+                        .humble.humble--icon.humble--comments.humble--tiny.humble--comments__bold 256
                 h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
 
                 section.author_block
@@ -190,9 +190,9 @@ html(lang="en" dir="ltr" ⚡)
                     .article__panel-row
                         .article__panel-col
                             .left
-                                .humble.humble--views 123.5k
-                                .humble.humble--like 31
-                                .humble.humble--favorites 17
+                                .humble.humble--icon.humble--views 123.5k
+                                .humble.humble--icon.humble--liked.humble--liked__blue 31
+                                .humble.humble--icon.humble--favorites.humble--favorites__blue 17
                 section.about-author
                     .about-author_row
                         a.about-author_avatar(href="#!author")
@@ -212,12 +212,24 @@ html(lang="en" dir="ltr" ⚡)
                 section.article__amp-recommended
                     .article__amp-recommended-title 👓 Recommended articles
 
-                    .article__article__amp-recommended-list
-                        each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview', '5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+                    .article__amp-recommended-list.article__amp-recommended-list--yellow
+                        each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview']
                             article.article__amp-recommended-item
                                 a.article__amp-recommended-item-link(href="#!")
-                                    amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                                    .article__amp-recommended-wrapper--img
+                                        amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                                        .promoted__mark Promoted
                                     .article__amp-recommended-item-title= item
+
+                    .article__amp-recommended-list
+                        each item in ['5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token', 'Monero Price Prediction 2018\\20\\25']
+                            article.article__amp-recommended-item
+                                a.article__amp-recommended-item-link(href="#!")
+                                    .article__amp-recommended-wrapper--img
+                                        amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp" layout="fixed" width="96" height="64")
+                                        .promoted__mark Promoted
+                                    .article__amp-recommended-item-title= item
+
                     a.btn.btn--background--blue.btn--full(href='#!')
                         span.btn--text Show more articles
             .fix-block
