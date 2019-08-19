@@ -9971,6 +9971,14 @@ body .slick-next{
   height: auto;
 }
 
+.asset .adform-adbox{
+  width: 100%;
+}
+
+.asset iframe{
+  width: 100%;
+}
+
 .categories-story_item:last-child{
   margin-bottom: 0;
 }
