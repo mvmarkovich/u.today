@@ -9971,12 +9971,12 @@ body .slick-next{
   height: auto;
 }
 
-.asset .adform-adbox{
+.asset {
   width: 100%;
 }
 
-.asset iframe{
-  width: 100%;
+.asset > *{
+  width: 100%!important;
 }
 
 .categories-story_item:last-child{
