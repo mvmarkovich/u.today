@@ -11610,18 +11610,20 @@ body .slick-next{
   .article__recommended .promoted__mark{
     display: none;
   }
-
-    .asset-adform{
-        height: 60px;
-    }
-    .asset-adform iframe{
-        position: absolute;
-        left: -124px;
-        right: 0;
-        width: 100%;
-        transform: scale(.66);
-        top: -14px;
-    }
+  .asset-adform{
+    height: 60px;
+  }
+  .asset-adform iframe{
+    position: absolute;
+    left: -131px;
+    right: 0;
+    width: 768px;
+    transform: scale(.66);
+    top: -15px;
+  }
+  .adform-adbox{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 580px){
@@ -11855,7 +11857,7 @@ body .slick-next{
     width: 100%;
   }
   .asset-adform iframe{
-    left: -204px;
+    left: -215px;
     top: -25px;
     transform: scale(.439);
   }
