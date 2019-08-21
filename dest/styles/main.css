@@ -1025,6 +1025,7 @@ aside {
 .btn--background--blue{
   background: #2979FF;
   box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35);
+  border: 1px solid #2979FF;
 }
 
 .btn--background--blue:hover{
@@ -1300,8 +1301,12 @@ aside {
   overflow: hidden;
 
   padding: .6rem 1rem 1.5rem;
-  border: none;
   background: #fff;
+  border: 1px solid #CFD8DC;
+}
+
+.main-page .card{
+  border: none;
 }
 
 .card + .card {
@@ -7517,7 +7522,7 @@ transition {
 
 .tabs__item .btn{
   letter-spacing: inherit;
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   line-height: 1.5rem;
   text-transform: none;
   padding: 0 1rem .5rem;
