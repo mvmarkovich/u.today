@@ -267,7 +267,7 @@
 
   $('.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item').on('click', function() {
     $('.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item').removeClass('selected');
-    $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text( $(this).children().children('.tabs__btn, .daily_value').text());
+    $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text( $(this).children().children('.tabs__btn, .daily_value, .monthly_value').text());
   });
 
   $(document).on('keyup', function(evt) {

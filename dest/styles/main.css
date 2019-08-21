@@ -4937,8 +4937,8 @@ main > .article:nth-last-child(2):after {
 }
 
 .price-index_chart.chart-row .tradingview-widget-container {
-  width: 100% !important;
-  max-width: 352px;
+  width: 100%;
+  max-width: 326px;
 }
 
 .simple__form {
