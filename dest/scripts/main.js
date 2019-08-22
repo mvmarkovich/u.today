@@ -231,6 +231,12 @@
     });
   }
 
+  $(window).on('load resize', function() {
+    if ($(window).width() <= '784'){
+      $(".price-index__aside").addClass("price-index__aside--close");
+    }
+  });
+
   $(".price-index__header .btn").on("click", function() {
     $(".price-index__aside").toggleClass("price-index__aside--close");
   });
@@ -283,9 +289,6 @@
         }
       });
       return this;
-    }
-    else   {
-
     }
   });
 
