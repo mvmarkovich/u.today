@@ -4712,18 +4712,14 @@ main > .article:nth-last-child(2):after {
     max-height: 100%
 }
 
-.price-index__aside.active .price-index__body {
+.price-index__aside--close .price-index__body {
     height: 0;
     padding: 0;
     overflow: hidden
 }
 
-.price-index__aside.active .price-index__table {
+.price-index__aside--close .price-index__table {
     display: none
-}
-
-.price-index__aside.active .btn:before {
-    transform: rotate(0)
 }
 
 .price-index__coin-short {
@@ -7210,11 +7206,15 @@ transition {
     padding: 0 1rem
 }
 
-.index-price .price-index__header .btn:before {
+.price-index__header .btn:before {
     position: absolute;
     right: 15px;
     margin-right: 0;
     transform: rotate(180deg)
+}
+
+.price-index__aside--close .btn:before {
+    transform: rotate(0)
 }
 
 .index-price .cryptocurrency_price .cryptocurrency_price__share .social-descr {

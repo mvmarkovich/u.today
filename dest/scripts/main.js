@@ -231,15 +231,18 @@
     });
   }
 
-  $(".index-price .price-index__header .btn").on("click", function() {
-    $(".index-price .price-index__aside").toggleClass("active");
+  $(".price-index__header .btn").on("click", function() {
+    $(".price-index__aside").toggleClass("price-index__aside--close");
   });
+
   $(".subscribe__close").on("click", function() {
     $(".subscribe").addClass("hide");
   });
+
   $(document).mouseup(function (e){
     $('.active-lang').removeClass("active-lang");
   });
+
   $(".header__lang").on("click", function () {
     $(this).toggleClass("active-lang");
   });
@@ -258,16 +261,6 @@
     days = 365;
     date.setTime(+date + (days * 86400000));
     document.cookie = "accept=1; expires=" + date.toGMTString();
-  });
-
-  /* aside in price-index */
-  $('.aside_dropdown > .caption').on('click', function() {
-    $(this).parent().toggleClass('open');
-  });
-
-  $('.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item').on('click', function() {
-    $('.aside_dropdown > .aside_dropdown__list > .aside_dropdown__item').removeClass('selected');
-    $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text( $(this).children().children('.tabs__btn, .daily_value, .monthly_value').text());
   });
 
   $(document).on('keyup', function(evt) {
