@@ -328,16 +328,16 @@ a, button {
     text-decoration: none
 }
 
-.article__recommended-link, .top-story--link, .humble--author, .author__item-name, .aside-story__link, .author__item-name, .card .advertising_link, .show-more, .categories-story_item-title, .top-story__mark, .categories-story_mark, .medium_categories-story_item-title, .medium_categories-story_mark, .big_categories-story_mark, .top-story .title__block, .big_categories-story_item-title, .breaking, .category-item__list-link, .footer__nav-child-link, .footer__nav-link, .link-plain, .news-categories__item-link, .news-category__item-title, .news-featured__item-link, .news-feed__item-title, .news__item-title, .team__item, .top-story__link, a.category-item__title {
+.article__recommended-link, .top-story--link, .staff__name, .humble--author, .author__item-name, .aside-story__link, .author__item-name, .card .advertising_link, .show-more, .categories-story_item-title, .top-story__mark, .categories-story_mark, .medium_categories-story_item-title, .medium_categories-story_mark, .big_categories-story_mark, .top-story .title__block, .big_categories-story_item-title, .breaking, .category-item__list-link, .footer__nav-child-link, .footer__nav-link, .link-plain, .news-categories__item-link, .news-category__item-title, .news-featured__item-link, .news-feed__item-title, .news__item-title, .team__item, .top-story__link, a.category-item__title {
     color: #263238;
     text-decoration: none
 }
 
-.article__recommended-link:hover, .humble--author:hover, .top-story--link:hover, .author__item-name:hover, .article__related .article__related-link a:hover, .author__item-name:hover, .comments__item-user-name:hover, .about-author_name:hover, .under_main-img__item:hover, .article_main-info .mark:hover, .card .advertising_link:hover, .show-more:hover, .user--login__descr:hover, .top-story__mark:hover, .categories-story_item-title:hover, .categories-story_mark:hover, .medium_categories-story_mark:hover, .medium_categories-story_item-title:hover, .top-story__title:hover, .big_categories-story_item-title:hover, .big_categories-story_mark:hover, .user--logout:hover, .aside-story__link:hover, .breaking:hover, .category-item__list-link:hover, .footer__nav-child-link:hover, .footer__nav-link:hover, .link-plain:hover, .news-categories__item-link:hover, .news-category__item-title:hover, .news-featured__item-link:hover, .news-feed__item-title:hover, .news__item-title:hover, .team__item:hover, .top-story__link:hover, a.category-item__title:hover {
+.article__recommended-link:hover, .humble--author:hover, .staff__name:hover, .top-story--link:hover, .author__item-name:hover, .article__related .article__related-link a:hover, .author__item-name:hover, .comments__item-user-name:hover, .about-author_name:hover, .under_main-img__item:hover, .article_main-info .mark:hover, .card .advertising_link:hover, .show-more:hover, .user--login__descr:hover, .top-story__mark:hover, .categories-story_item-title:hover, .categories-story_mark:hover, .medium_categories-story_mark:hover, .medium_categories-story_item-title:hover, .top-story__title:hover, .big_categories-story_item-title:hover, .big_categories-story_mark:hover, .user--logout:hover, .aside-story__link:hover, .breaking:hover, .category-item__list-link:hover, .footer__nav-child-link:hover, .footer__nav-link:hover, .link-plain:hover, .news-categories__item-link:hover, .news-category__item-title:hover, .news-featured__item-link:hover, .news-feed__item-title:hover, .news__item-title:hover, .team__item:hover, .top-story__link:hover, a.category-item__title:hover {
     color: #651fff
 }
 
-.article__recommended-link:active, .humble--author:active, .top-story--link:active, .author__item-name:active, .article__related .article__related-link a:active, .author__item-name:active, .comments__item-user-name:active, .under_main-img__item:active, .about-author_name:active, .under_main-img__item:active, .article_main-info .mark:active, .card .advertising_link:active, .show-more:active, .user--login__descr:active, .top-story__mark:active, .categories-story_item-title:active, .categories-story_mark:active, .medium_categories-story_mark:active, .medium_categories-story_item-title:active, .top-story__title:active, .big_categories-story_item-title:active, .user--logout:active, .big_categories-story_mark:active, .aside-story__link:active, .breaking:active, .category-item__list-link:active, .footer__nav-child-link:active, .footer__nav-link:active, .link-plain:active, .news-categories__item-link:active, .news-category__item-title:active, .news-featured__item-link:active, .news-feed__item-title:active, .news__item-title:active, .team__item:active, .top-story__link:active, a.category-item__title:active {
+.article__recommended-link:active, .humble--author:active, .staff__name:active, .top-story--link:active, .author__item-name:active, .article__related .article__related-link a:active, .author__item-name:active, .comments__item-user-name:active, .under_main-img__item:active, .about-author_name:active, .under_main-img__item:active, .article_main-info .mark:active, .card .advertising_link:active, .show-more:active, .user--login__descr:active, .top-story__mark:active, .categories-story_item-title:active, .categories-story_mark:active, .medium_categories-story_mark:active, .medium_categories-story_item-title:active, .top-story__title:active, .big_categories-story_item-title:active, .user--logout:active, .big_categories-story_mark:active, .aside-story__link:active, .breaking:active, .category-item__list-link:active, .footer__nav-child-link:active, .footer__nav-link:active, .link-plain:active, .news-categories__item-link:active, .news-category__item-title:active, .news-featured__item-link:active, .news-feed__item-title:active, .news__item-title:active, .team__item:active, .top-story__link:active, a.category-item__title:active {
     color: #1a237e
 }
 
@@ -7861,7 +7861,6 @@ transition {
     .article_main-info__rating {
         font-size: .8125rem;
         padding: .25rem .5rem;
-        background-color: #2196f3
     }
 
     .article_main-info__humble {
@@ -10330,16 +10329,11 @@ body .slick-next {
     line-height: 1.5rem;
     font-size: 1.0625rem;
     text-decoration: none;
-    color: #263238;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 253px;
     display: block
-}
-
-.staff__name:hover {
-    color: #651fff
 }
 
 .staff__item .social__link {
