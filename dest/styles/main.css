@@ -9669,6 +9669,11 @@ body .slick-next {
 
 .article .asset{
     margin: 2.2rem 0;
+    height: auto;
+}
+
+.article .asset img{
+    width: 100%;
 }
 
 .categories-story_item:last-child {
@@ -11371,10 +11376,6 @@ body .slick-next {
 
     .adform-adbox {
         width: 100% !important
-    }
-
-    .article .asset{
-        margin: 1.5rem 0
     }
 }
 
