@@ -9667,6 +9667,10 @@ body .slick-next {
     text-align: center
 }
 
+.article .asset{
+    margin: 2.2rem 0;
+}
+
 .categories-story_item:last-child {
     margin-bottom: 0
 }
@@ -10878,6 +10882,14 @@ body .slick-next {
         padding: 1rem
     }
 
+    .article .asset{
+        height: auto;
+    }
+
+    .article .asset{
+        margin: 1.7rem 0;
+    }
+
     .staff__name {
         white-space: normal;
         max-width: 100%
@@ -11359,6 +11371,10 @@ body .slick-next {
 
     .adform-adbox {
         width: 100% !important
+    }
+
+    .article .asset{
+        margin: 1.5rem 0
     }
 }
 
