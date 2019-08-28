@@ -10888,11 +10888,8 @@ body .slick-next {
     }
 
     .article .asset{
-        height: auto;
-    }
-
-    .article .asset{
         margin: 1.7rem 0;
+        height: auto;
     }
 
     .staff__name {
