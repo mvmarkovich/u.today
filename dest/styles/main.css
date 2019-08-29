@@ -479,7 +479,6 @@ h5 {
 }
 
 .aside-category-block {
-    padding-top: 2.5rem;
     margin-top: 0 !important
 }
 
@@ -5693,10 +5692,6 @@ transition {
     }
 
     .main-category-block {
-        padding-top: 1.5rem
-    }
-
-    .aside-category-block {
         padding-top: 1.5rem
     }
 
