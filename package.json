@@ -12,7 +12,8 @@
     "gulp-if": "^2.0.2",
     "postcss": "^7.0.5",
     "postcss-nested-ancestors": "^2.0.0",
-    "postcss-responsive-type": "^1.0.0"
+    "postcss-responsive-type": "^1.0.0",
+    "yuicompressor": "^2.4.8"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
