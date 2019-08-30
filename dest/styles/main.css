@@ -3307,10 +3307,6 @@ blockquote em {
     margin-bottom: 1.5rem
 }
 
-.article__recommended {
-    margin-bottom: 2.5rem
-}
-
 .article__recommended-header {
     margin-bottom: 1.5rem;
     display: flex;
@@ -3668,7 +3664,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .main-page .comments {
-    margin-bottom: 0
+    margin: 2rem 0 0;
 }
 
 .comments {
@@ -5999,10 +5995,6 @@ transition {
         font-weight: 500;
         font-size: 17px;
         line-height: 1.9
-    }
-
-    .article__recommended {
-        margin-bottom: 3rem
     }
 
     .article__recommended-item {
