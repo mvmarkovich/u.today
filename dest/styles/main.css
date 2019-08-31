@@ -3208,10 +3208,16 @@ blockquote em {
 }
 
 .article__related-link {
-    font-weight: 500;
-    font-size: .8125rem;
+    font-weight: 600;
+    font-size: .9375rem;
     line-height: 1.9;
-    padding-right: 2rem
+    padding: 0 1rem 0 2rem;
+}
+
+.article__related-link .red {
+    color: #f44336;
+    margin-left: 5px;
+    font-weight: 600;
 }
 
 .article__related-panel {
@@ -3224,7 +3230,6 @@ blockquote em {
     max-width: 88px;
     min-width: 88px;
     min-height: 55px;
-    margin-left: 1rem
 }
 
 .article__subscribe {
@@ -7795,11 +7800,11 @@ transition {
     justify-content: space-between
 }
 
-.article__content .article__related {
+.article__related {
     align-items: center;
     display: flex;
-    padding: .7rem 2rem;
-    text-decoration: none
+    text-decoration: none;
+    padding: 0;
 }
 
 .article__related_img {
@@ -7807,27 +7812,11 @@ transition {
     max-height: 120px
 }
 
-.article__related-link {
-    font-weight: 600
-}
-
 .article .article__content a {
     text-decoration: none;
     border-bottom: 0;
     color: #2196f3;
     display: inline-block
-}
-
-.article__related-body .article__related-link .red {
-    color: #f44336;
-    margin-left: 5px
-}
-
-.article__related-body .article__related-link {
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    color: #263238
 }
 
 @media screen and (max-width: 1152px) {
@@ -10803,10 +10792,6 @@ body .slick-next {
         line-height: 1.5rem
     }
 
-    .article__content .article__related {
-        padding: 0 0 0 2rem
-    }
-
     .cookies__container {
         max-width: 1152px
     }
@@ -10995,6 +10980,22 @@ body .slick-next {
 
     .article__recommended-list-slide--yellow .article__recommended-item-title {
         padding-left: 1rem
+    }
+
+    .article__related-link{
+        padding-left: 0;
+    }
+
+    .article__related{
+        padding: 1rem;
+    }
+
+    .article__related-link{
+        font-size: .875rem;
+    }
+
+    .article__related .article__related-link a{
+        font-size: .875rem;
     }
 }
 
@@ -11645,6 +11646,14 @@ body .slick-next {
 
     .asset-adform {
         height: 40px
+    }
+
+    .article__related-link{
+        font-size: .8125rem;
+    }
+
+    .article__related .article__related-link a{
+        font-size: .8125rem;
     }
 }
 
