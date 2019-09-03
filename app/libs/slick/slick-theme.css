@@ -133,6 +133,7 @@
     list-style: none;
 
     text-align: center;
+    z-index: 8;
 }
 .slick-dots li
 {
