@@ -1039,7 +1039,11 @@ aside {
     z-index: 996
 }
 
-.something--content {
+.something--content{
+    margin: 1rem 0;
+}
+
+.article .something--content {
     margin: 1rem -1rem
 }
 
@@ -2507,8 +2511,7 @@ blockquote em {
     position: relative;
     z-index: 996;
     box-shadow: 13rem 0 0 #fff, -13rem 0 0 #fff;
-    min-height: 56px;
-    margin-bottom: 1.5rem
+    min-height: 56px
 }
 
 .header__container {
@@ -4943,12 +4946,8 @@ h2 span {
     letter-spacing: .015em
 }
 
-transition {
-    display: none
-}
-
 @media (min-width: 380px) {
-    .something--content {
+    .article .something--content {
         margin: 1.5rem 0
     }
 
@@ -5086,7 +5085,7 @@ transition {
         height: 1.5rem
     }
 
-    .something--content {
+    .article .something--content {
         margin: 2rem 0
     }
 
@@ -5695,7 +5694,7 @@ transition {
         padding-top: .5rem
     }
 
-    .something--content {
+    .article .something--content {
         margin: 3rem 0
     }
 
@@ -8596,10 +8595,6 @@ transition {
         margin-bottom: 1.5rem
     }
 
-    .header {
-        margin-bottom: 1rem
-    }
-
     .breadcrumbs_link {
         font-size: .8125rem;
         line-height: 20px
@@ -9237,7 +9232,6 @@ body .slick-next {
 
 .main-page .header {
     min-height: 1px;
-    margin-bottom: 1rem
 }
 
 .main-page .header__nav {
@@ -9838,7 +9832,8 @@ body .slick-next {
 
 .main-page .page-container {
     background: transparent;
-    box-shadow: none
+    box-shadow: none;
+    margin-top: 1rem;
 }
 
 .main-page .footer {
@@ -10705,6 +10700,10 @@ body .slick-next {
     min-width: 1rem;
 }
 
+.card--something .something__content-square{
+    display: block;
+}
+
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
         max-width: 768px
@@ -11218,10 +11217,6 @@ body .slick-next {
         margin: .5rem 0
     }
 
-    .main-page .header {
-        margin-bottom: .5rem
-    }
-
     .about-author_avatar {
         height: 40px;
         min-width: 40px;
@@ -11391,6 +11386,10 @@ body .slick-next {
     }
     .main-container .top-story-block{
         margin-bottom: .5rem;
+    }
+
+    .something--content{
+        margin: .5rem 0;
     }
 }
 
