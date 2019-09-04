@@ -1029,7 +1029,6 @@ aside {
 }
 
 .something {
-    background: #032e61;
     display: flex;
     align-items: center;
     justify-content: center
@@ -1045,13 +1044,23 @@ aside {
 }
 
 .something__content-long{
+    width: 100%;
+}
+
+.something__content-long img{
     max-width: 728px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.something__content-square{
     width: 100%;
 }
 
 .something__content-square img{
     max-width: 300px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .something__content-square > * {
