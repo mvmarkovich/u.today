@@ -1044,6 +1044,16 @@ aside {
     margin: 1rem -1rem
 }
 
+.something__content-long{
+    max-width: 728px;
+    width: 100%;
+}
+
+.something__content-square img{
+    max-width: 300px;
+    width: 100%;
+}
+
 .something__content-square > * {
     -webkit-transform: scale(.9);
     transform: scale(.9)
@@ -3383,10 +3393,6 @@ blockquote em {
     display: flex;
     align-items: center;
     flex-wrap: wrap
-}
-
-.article__recommended .btn {
-    margin-bottom: 2rem
 }
 
 main:not(.scroll-end) > .article:after {
@@ -5979,10 +5985,6 @@ transition {
     .article__recommended-item {
         width: calc(100% / 3 - 1rem);
         min-width: calc(100% / 3 - 1rem)
-    }
-
-    .article__recommended .btn {
-        margin-bottom: 0
     }
 
     .article--scroll-show {
@@ -9291,7 +9293,8 @@ body .slick-next {
 }
 
 .main-page .content-container {
-    background: transparent
+    background: transparent;
+    width: 100%;
 }
 
 .main-page .article__main {
