@@ -3889,7 +3889,7 @@ main > .article:nth-last-child(2):after {
 .news__item {
     align-items: baseline;
     padding: .5rem 0;
-    border-bottom: 1px solid #cfd8dc;
+    border-bottom: 1px solid #eceff1;
 }
 
 .news__item:last-child{
