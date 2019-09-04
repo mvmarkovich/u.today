@@ -1039,12 +1039,12 @@ aside {
     z-index: 996
 }
 
-.something--content{
-    margin: 1rem 0;
+.article .something--content{
+    margin: 1.5rem -1rem;
 }
 
-.article .something--content {
-    margin: 1rem -1rem
+.something--content{
+    margin: 1rem 0;
 }
 
 .something__content-long{
@@ -4948,9 +4948,8 @@ h2 span {
 
 @media (min-width: 380px) {
     .article .something--content {
-        margin: 1.5rem 0
+        margin: 1.5rem 0;
     }
-
     .something__content-square > * {
         -webkit-transform: scale(1);
         transform: scale(1)
@@ -5083,10 +5082,6 @@ h2 span {
 
     .main-page .currencies__slide-wrapper {
         height: 1.5rem
-    }
-
-    .article .something--content {
-        margin: 2rem 0
     }
 
     .something__wide-square {
@@ -5692,10 +5687,6 @@ h2 span {
     .aside-menu-block {
         max-width: 320px;
         padding-top: .5rem
-    }
-
-    .article .something--content {
-        margin: 3rem 0
     }
 
     .something__content-square {
@@ -9577,15 +9568,6 @@ body .slick-next {
     text-align: center
 }
 
-.article .asset{
-    margin: 2.2rem 0;
-    height: auto;
-}
-
-.article .asset img{
-    width: 100%;
-}
-
 .categories-story_item:last-child {
     margin-bottom: 0
 }
@@ -10704,6 +10686,14 @@ body .slick-next {
     display: block;
 }
 
+.main-page .article .asset{
+    margin: 1.5rem 0;
+}
+
+.article .asset img{
+    width: 100%;
+}
+
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
         max-width: 768px
@@ -10814,11 +10804,6 @@ body .slick-next {
 
     .main-page .article__main {
         padding: 1rem
-    }
-
-    .article .asset{
-        margin: 1.7rem 0;
-        height: auto;
     }
 
     .staff__name {
