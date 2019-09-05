@@ -10342,22 +10342,6 @@ body .slick-next {
     border-bottom: 0
 }
 
-.about-us .content-block__title {
-    padding: 2rem 0
-}
-
-.about-us .content-block__descr {
-    padding: 2rem 0
-}
-
-.about-us .staff__item {
-    padding: 2rem 0
-}
-
-.about-us .team__list {
-    padding: 2rem 0
-}
-
 .staff__post {
     font-size: .8125rem;
     color: #78909c;
@@ -11481,22 +11465,6 @@ body .slick-next {
 
     .author-article .news-featured__item {
         width: 48%
-    }
-
-    .about-us .content-block__title {
-        padding: 1rem 0
-    }
-
-    .about-us .content-block__descr {
-        padding: 1rem 0
-    }
-
-    .about-us .staff__item {
-        padding: 1rem 3.3rem 1rem 0
-    }
-
-    .about-us .team__list {
-        padding: 1rem 0
     }
 
     .aside-block--mobile-visible .card__title {
