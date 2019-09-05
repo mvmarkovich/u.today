@@ -1031,7 +1031,10 @@ aside {
 .something {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+
+    width: 100%;
+    text-align: center;
 }
 
 .something--top {
@@ -1049,6 +1052,8 @@ aside {
 
 .something__content-long{
     width: 100%;
+    text-align: center;
+    max-height: 90px;
 }
 
 .something__content-long img{
@@ -1059,6 +1064,7 @@ aside {
 
 .something__content-square{
     width: 100%;
+    text-align: center;
 }
 
 .something__content-square img{
@@ -3197,7 +3203,7 @@ blockquote em {
 .article__contents-item:before {
     content: "";
     display: block;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvgwidth='24'height='24'viewBox='002424'fill='%23CFD8DC'xmlns='http://www.w3.org/2000/svg'%3E%3Cpathd='M710L1215L1710H7Z'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 10L12 15L17 10H7Z'/%3E %3C/svg%3E");
     width: 24px;
     height: 24px;
     margin-right: .5rem;
@@ -8474,7 +8480,8 @@ h2 span {
 }
 
 .asset {
-    margin: 1rem 0
+    margin: 1rem 0;
+    max-height: 90px;
 }
 
 .asset img {
@@ -10694,6 +10701,10 @@ body .slick-next {
     width: 100%;
 }
 
+#google-center-div{
+    display: block;
+}
+
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
         max-width: 768px
@@ -11672,16 +11683,15 @@ body .slick-next {
     .news-feed{
         padding: 1.5rem 1rem;
     }
-}
 
-@media (max-width: 430px) {
+    .about-author {
+        padding: 1rem 3rem 1rem 1rem;
+        margin: 2rem -1rem;
+    }
+
     .about-author p {
         font-size: .8125rem;
         margin-left: -60px
-    }
-
-    .about-author {
-        padding: 1.5rem 3rem 1rem 1.5rem
     }
 
     .about-author_avatar {
@@ -11691,7 +11701,9 @@ body .slick-next {
     .about-author .social {
         right: .8rem
     }
+}
 
+@media (max-width: 430px) {
     .staff__item .social {
         flex-direction: column;
         position: absolute;
