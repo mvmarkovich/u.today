@@ -8481,11 +8481,9 @@ h2 span {
 
 .asset {
     margin: 1rem 0;
-    max-height: 90px;
 }
 
 .asset img {
-    height: 90px;
     width: auto;
     margin: 0 auto
 }
@@ -10688,6 +10686,8 @@ body .slick-next {
 #google-center-div{
     display: block;
 }
+
+
 
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
