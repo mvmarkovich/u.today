@@ -641,7 +641,7 @@ aside {
     color: #fff
 }
 
-.btn--account:after, .btn--arrow-down:after, .btn--arrow-right:after, .btn--attach:after, .btn--burger:after, .btn--cross-white:after, .btn--cross:after, .btn--dropdown:after, .btn--info-white:after, .btn--info:after, .btn--lightning-white:after, .btn--more:after, .btn--rating-down:after, .btn--rating-up:after, .btn--search:after, .btn--notification:after {
+.btn--account:after, .btn--arrow-down:after, .btn--arrow-right:after, .btn--attach:after, .btn--burger:after, .btn--cross-white:after, .btn--cross:after, .btn--dropdown:after, .btn--info-white:after, .btn--info:after, .btn--lightning-white:after, .btn--more:after, .btn--rating-down:after, .btn--rating-up:after, .btn--search:after, .btn--notification:after, .fixed-banner-close:after {
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -10687,7 +10687,69 @@ body .slick-next {
     display: block;
 }
 
+.fixed-banner{
+    position: fixed;
+    right: 50px;
+    bottom: 75px;
+    animation: fixed-banner 4s infinite;
+    z-index: 100;
+}
 
+@keyframes fixed-banner {
+     0% {bottom: 75px }
+     50% { bottom: 90px }
+     100% { bottom: 75px }
+}
+
+.fixed-banner-wrapper{
+    position: relative;
+}
+
+.fixed-banner-img{
+    width: 100%;
+}
+
+.fixed-banner-mask{
+    display: flex;
+}
+
+.fixed-banner-img--wrapper{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .42s;
+    transform: scale(.1);
+}
+
+.fixed-banner-close{
+    position: absolute;
+    right: -.25rem;
+    top: -.25rem;
+    opacity: 0;
+    transform: scale(.1);
+    transition: .42s
+}
+
+.fixed-banner-close:after{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDEuNDFMMTIuNTkgMEw3IDUuNTlMMS40MSAwTDAgMS40MUw1LjU5IDdMMCAxMi41OUwxLjQxIDE0TDcgOC40MUwxMi41OSAxNEwxNCAxMi41OUw4LjQxIDdMMTQgMS40MVoiIGZpbGw9IiMyOTc5RkYiLz4KPC9zdmc+Cg==");
+    width: 32px;
+    height: 32px;
+}
+
+.fixed-banner:hover {
+    animation: 0s;
+}
+
+.fixed-banner:hover .fixed-banner-close{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fixed-banner:hover .fixed-banner-img--wrapper{
+    opacity: 1;
+    transform: scale(1);
+}
 
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
@@ -11370,6 +11432,26 @@ body .slick-next {
 
     .something--content{
         margin: .5rem 0;
+    }
+
+    .fixed-banner{
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .fixed-banner img{
+        width: 120px;
+    }
+
+    .fixed-banner-close{
+        right: -0.85rem;
+        top: -0.55rem;
+    }
+
+    @keyframes fixed-banner {
+        0% {bottom: 0 }
+        50% { bottom: 1rem }
+        100% { bottom: 0 }
     }
 }
 

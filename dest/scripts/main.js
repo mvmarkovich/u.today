@@ -260,6 +260,10 @@
     $('.modal__square:visible').hide().prev('.modal__square').show();
   });
 
+  $('.fixed-banner-close').click(function() {
+    $(".fixed-banner").remove()
+  });
+
   $('.accept-cookies').on('click', function() {
     $(".cookies").detach();
     var date = new Date();
