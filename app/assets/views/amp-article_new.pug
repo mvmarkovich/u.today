@@ -150,6 +150,18 @@ html(lang="en" dir="ltr" ⚡)
                             amp-img.article__related-img(src='https://u.today/sites/default/files/styles/300/public/node-14829.jpg?itok=ToZpi6kq', layout='responsive', width="135px", height="85px")
                     p
                         | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
+                    .article__subscribe
+                        .article__subscribe-title ✉ Sign up to daily updates
+
+                        form.form--row.article__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
+                            .input
+                                input.article__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+                            .input
+                                button.btn.btn--wide.btn--input.input--blue(type="submit") Sign up
+
+                            .article__subscribe-agree By subscribing you agree with
+                                a(href="#!") Privacy Policy
                     blockquote
                         p
                             | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
