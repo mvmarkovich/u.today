@@ -1053,12 +1053,9 @@ aside {
 .something__content-long{
     width: 100%;
     text-align: center;
-    max-height: 90px;
 }
 
 .something__content-long img{
-    max-width: 728px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -1068,8 +1065,6 @@ aside {
 }
 
 .something__content-square img{
-    max-width: 300px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -1098,6 +1093,18 @@ aside {
     left: 0;
     height: 48px;
     z-index: 98
+}
+
+.something--header{
+    margin: 0;
+}
+
+.something__header-long{
+    width: 100%;
+}
+
+.something__header-long img{
+    margin: 0 auto;
 }
 
 .something__wrapper {
@@ -11453,6 +11460,10 @@ body .slick-next {
         50% { bottom: 1rem }
         100% { bottom: 0 }
     }
+
+    .main-page .page-container{
+        margin-top: .5rem;
+    }
 }
 
 @media (max-width: 580px) {
@@ -11616,6 +11627,7 @@ body .slick-next {
         font-size: .8125rem;
         line-height: 1.5rem
     }
+
 }
 
 @media (max-width: 520px) {
