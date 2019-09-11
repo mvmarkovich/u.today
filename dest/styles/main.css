@@ -412,7 +412,8 @@ h5 {
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .main-block, .main-category-block, .main-news-block {
@@ -999,17 +1000,20 @@ aside {
 .btn--background--blue {
     background: #2979ff;
     box-shadow: 0 16px 24px rgba(33, 150, 243, 0.35);
-    border: 1px solid #2979ff
+    border: 1px solid #2979ff;
+    color: #fff;
 }
 
 .btn--background--blue:hover {
     background: #2196f3;
-    border: 0
+    border: 1px solid #2196f3;
+    color: #fff;
 }
 
 .btn--background--blue:active {
     background: #1565c0;
-    border: 0
+    border: 1px solid #1565c0;
+    color: #fff;
 }
 
 .btn--full {
@@ -1315,6 +1319,12 @@ aside {
 
 .card--no-padding {
     padding: 0 !important
+}
+
+.card .btn--background--blue{
+    width: 100%;
+    margin-top: 2.5rem;
+    min-height: 40px;
 }
 
 .card__title {
@@ -4132,7 +4142,6 @@ main > .article:nth-last-child(2):after {
 .news-categories {
     margin-bottom: 1.8rem;
     background-color: #fff;
-    padding: 1rem 1.5rem;
 }
 
 .news-categories__title {
@@ -4145,7 +4154,8 @@ main > .article:nth-last-child(2):after {
 .news-categories__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
 }
 
 .news-categories__item {
@@ -9323,14 +9333,6 @@ body .slick-next {
     display: block
 }
 
-.main-page .news__item-time-wrapper {
-    text-align: left
-}
-
-.main-page .news__item-time-wrapper {
-    min-width: 1rem
-}
-
 .main-page .news__item-time {
     display: block;
     line-height: 1.5rem
@@ -10696,16 +10698,16 @@ body .slick-next {
 
 .fixed-banner{
     position: fixed;
-    right: 50px;
-    bottom: 75px;
+    right: 2rem;
+    bottom: 2rem;
     animation: fixed-banner 4s infinite;
     z-index: 100;
 }
 
 @keyframes fixed-banner {
-     0% {bottom: 75px }
-     50% { bottom: 90px }
-     100% { bottom: 75px }
+     0% {bottom: 2rem }
+     50% { bottom: 3rem }
+     100% { bottom: 2rem }
 }
 
 .fixed-banner-wrapper{

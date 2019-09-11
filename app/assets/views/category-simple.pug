@@ -5,6 +5,7 @@ block title
 
 block content
   .main-aside-container
+    <!— the start of content category —>
     .main-category-block
       include blocks/category-info.pug
       include blocks/category-item.pug
@@ -19,5 +20,9 @@ block content
 
       a.btn.btn--block.btn--large(href="#!") Show more
 
+    <!— the end of content category —>
+
+    <!— the start of sidebar —>
     aside.aside-category-block
       include blocks/aside.pug
+    <!— the end of sidebar —>

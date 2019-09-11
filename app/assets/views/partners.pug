@@ -1,25 +1,71 @@
 extends layouts/layout.pug
 
 block title
-  title Our partners | u.today
+    title Our partners New | u.today
 
 block content
-  .content-container
-    main.main-block
-      h1 Our partners
-      p Here's the list of our partners. If you want to become one of those, send an email to this address: 
-        a(href="mailto:partners@u.today") partners@u.today
+    .main-container
+        .content-container
+            .main-block_center
+                main.main-block
+                    section.content-block
+                        .content-block__title Contact the core team
+                        .content-block__descr
+                            p If you want to become a partner, send an email to <a class="link" href="mailto:partners@u.today">partners@u.today</a>.
+                        .radio__block
+                            .radio__block-title Choose category to display:
+                            .radio__block_item
+                                input.radio(type='radio' name="radio" id="radio_1" checked)
+                                label(for="radio_1") Aggregator
+                            .radio__block_item
+                                input.radio(type='radio' name="radio" id="radio_2")
+                                label(for="radio_2") Events
+                            .radio__block_item
+                                input.radio(type='radio' name="radio" id="radio_3")
+                                label(for="radio_3") Mass Media
+                            .radio__block_item
+                                input.radio(type='radio' name="radio" id="radio_4")
+                                label(for="radio_4") Some other category
 
-    section.partners__list
-      each i in [1,2,3,4,5]
-        a.partners__item(href="#!")
-          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-10/Decent.jpg?itok=3uiQCNgX")
-
-        a.partners__item(href="#!")
-          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-09/shift_money_logo.png?itok=ee1f8RDF")
-
-        a.partners__item(href="#!")
-          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/23.jpg?itok=PGCRBFdm")
-
-        a.partners__item(href="#!")
-          img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/8_0.jpg?itok=Ub3J42ak")
+                    section.partners__list
+                        .partners__item
+                            a.img-link(href="#!")
+                                img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-10/Decent.jpg?itok=3uiQCNgX")
+                            .partners__info
+                                .partners__name Blockchain & Bitcoin Conference Stockholm
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .partners__row
+                                    a.partners__link(href="#!") https://stockholm.bc.events
+                                    .store
+                                        a.store__link.store__link--as(href="#!as")
+                        .partners__item
+                            a.img-link(href="#!")
+                                img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-09/shift_money_logo.png?itok=ee1f8RDF")
+                            .partners__info
+                                .partners__name SophiaTX
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .partners__row
+                                    a.partners__link(href="#!") https://sophiatx.com
+                                    .store
+                                        a.store__link.store__link--gp(href="#!pm")
+                                        a.store__link.store__link--as(href="#!as")
+                        .partners__item
+                            a.img-link(href="#!")
+                                img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/23.jpg?itok=PGCRBFdm")
+                            .partners__info
+                                .partners__name BC Conference
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .partners__row
+                                    a.partners__link(href="#!") https://bc-conference.org
+                                    .store
+                                        a.store__link.store__link--as(href="#!as")
+                        .partners__item
+                            a.img-link(href="#!")
+                                img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-08/8_0.jpg?itok=Ub3J42ak")
+                            .partners__info
+                                .partners__name Blockchain Futurist Conference
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .partners__row
+                                    a.partners__link(href="#!") https://bcfc.edu
+                                    .store
+                                        a.store__link.store__link--gp(href="#!pm")

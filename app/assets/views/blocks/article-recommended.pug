@@ -1,32 +1,45 @@
 section.article__recommended
   .article__recommended-header
-    .article__recommended-title 👓 Recommended articles
-    a.btn.btn--arrow-right.hide-xl-down(href="#!") See all
-
+    .article__recommended-title &#x1F453; Recommended articles
+  .article__recommended-list-slide.article__recommended-list-slide--yellow
+    .article__recommended-list
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title Ethereum Breakout in Full Force
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
   .article__recommended-list-slide
     .article__recommended-list
-      each item in articleRecomended
-        article.article__recommended-item
-          a.article__recommended-link(href="#!")
-            img.article__recommended-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp")
-            .article__recommended-item-title= item
-
-          .article__recommended-info
-            time.humble.humble--tiny Nov 07
-            a.humble.humble--comments.humble--tiny(href="#!") 256
-            .humble.humble--views.humble--tiny(href="#!") 123.5k
-            button.humble.humble--share.humble--tiny.humble--single-icon
-
-      each item in articleRecomended
-        article.article__recommended-item
-          a.article__recommended-link(href="#!")
-            img.article__recommended-img(src="https://u.today/sites/default/files/styles/600x/public/2018-11/The%20red%20market%20is%20dragging%20NANO%20down.jpg?itok=Vk_rsYGp")
-            .article__recommended-item-title= item
-
-          .article__recommended-info
-            time.humble.humble--tiny Nov 07
-            a.humble.humble--comments.humble--tiny(href="#!") 256
-            .humble.humble--views.humble--tiny(href="#!") 123.5k
-            button.humble.humble--share.humble--tiny.humble--single-icon
-
-  a.btn.btn--arrow-right.hide-xl-only(href="#!") See all
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title Ethereum Breakout in Full Force
+      article.article__recommended-item
+        a.article__recommended-link(href='#!')
+          .article__recommended-wrapper--img
+            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs')
+            .promoted__mark Promoted
+          h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+  a.btn.btn--background--blue.btn--full(href='#!')
+    span.btn--text Show more articles

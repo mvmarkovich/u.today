@@ -1,30 +1,77 @@
 section.card
-  .card__title 🔥 Hot Stories
+  .card__title Press Releases
+  .card__body
+    article.aside-story
+      a.aside-story__img-wrapper(href="#!")
+        img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
 
+      .aside-story__body
+        a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+        .aside-story__info
+          time.humble.humble--tiny 12:25 AM
+          a.humble.humble--comments.humble--tiny(href="#!") 256
+          a.humble.humble--liked.humble--tiny(href="#!") 7
+
+    article.aside-story
+      a.aside-story__img-wrapper(href="#!")
+        img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Building_blockchain_apps_in_2019.JPG.jpg?itok=rjlw-sfo")
+
+      .aside-story__body
+        a.aside-story__link(href="#!") Analyst Predicts When Bitcoin Price Will Hit $100,000 Based on Power-Law Growth Model
+
+        .aside-story__info
+          time.humble.humble--tiny 12:25 AM
+          a.humble.humble--comments.humble--tiny(href="#!") 256
+          a.humble.humble--liked.humble--tiny(href="#!") 7
+  a.btn.btn--background--blue(href="#!") Submit Press Release
+
+section.card
+  .card__title Popular
   .card__body
     each hot in hots
       article.aside-story
         a.aside-story__img-wrapper(href="#!")
-          img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-01/News%202_2.jpg?itok=_gVXBcnq")
+          img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ")
 
         .aside-story__body
           a.aside-story__link(href="#!")= hot
 
           .aside-story__info
-            time.humble.humble--tiny 12:25AM
+            time.humble.humble--tiny 12:25 AM
             a.humble.humble--comments.humble--tiny(href="#!") 256
-            button.humble.humble--share.humble--tiny.humble--single-icon(@click="share('#1', '#2', '#3', $event)")
-
-  .card__footer
-    a.btn.btn--arrow-right(href="#!") See all
+            a.humble.humble--liked.humble--tiny(href="#!") 7
+  a.show-more.btn--arrow-right(href="#!") Show all
 
 section.card
-  .card__title 👓 Topics of current interest
-
   .card__body
-    .btns-spacer
-      each tag in tags
-        a.btn.btn--hash-tag(href="#!")= tag
+    .advertising
+      a.advertising_link(href="#!") About us
+      a.advertising_link(href="#!") Adverstizement
+      a.advertising_link(href="#!") Press realeases
+    form.form--col(action="#" method="get")
+      .form-subscribe
+        .title Subscribtion
+        .toggle-checkbox
+          input(type="checkbox" class="toggle" id="toggle-checkbox_1" value="")
+          label(for="toggle-checkbox_1") Push notifications
+      .input
+        input.input__elem(type="text" name="email" placeholder="Email" required)
+
+      .input
+        button.btn.btn--input(type="submit") Subscribe
+    .text-tiny By pressing the “Subscribe button” you agree with our Privacy Policy
+    .follow__block
+      .title Follow & contact
+      .social
+        a.social__link.social__link--fb(href="#!fb")
+        a.social__link.social__link--tg(href="#!tg")
+        a.social__link.social__link--tw(href="#!tw")
+        a.social__link.social__link--em(href="#!em")
+
+section.card.card--something
+  .something
+    img(src="img/content/banner.png" width="360" height="156" alt="something-square")
 
 section.card
   .card__title 🗓 Upcoming events
@@ -42,21 +89,5 @@ section.card
   .card__footer
     a.btn.btn--arrow-right(href="#!") See all
 
-section.card.card--something
-  .something
-    .something__content-square(style="background-color: #032e61")
-      img(src="img/something/square.png" alt="something-square")
 
-section.card
-  .card__title ✉ Got no time? Subscribe!
 
-  .card__body
-    form.form--col(action="#" method="get")
-      .input
-        input.input__elem(type="text" name="email" placeholder="Email" required)
-
-      .input
-        button.btn.btn--input(type="submit") Subscribe
-
-    .text-tiny By pressing the “Subscribe button” you agree with our 
-        a(href="#!") Privacy Policy

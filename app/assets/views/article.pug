@@ -1,0 +1,25 @@
+extends layouts/layout.pug
+
+block title
+    title Article New | u.today
+
+block content
+    .something.something--content
+        .something__content-long(style="background-color: #032e61")
+            img(src="img/something/long.png" alt="something-wide")
+
+        .something__content-square(style="background-color: #032e61")
+            img(src="img/something/square.png" alt="something-square")
+    .main-container
+        .content-container
+            <!— the start of content article —>
+            main.main-block
+                include blocks/article.pug
+            <!— the end of content article —>
+
+            include blocks/aside-menu-block.pug
+
+        .fix-block
+            .row
+                .switch
+                    a.btn(href='#!') Next article <span class="icon">🚀</span>
