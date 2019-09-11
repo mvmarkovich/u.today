@@ -1325,6 +1325,7 @@ aside {
     width: 100%;
     margin-top: 2.5rem;
     min-height: 40px;
+    box-shadow: none;
 }
 
 .card__title {
@@ -11447,7 +11448,6 @@ body .slick-next {
         right: 1rem;
         bottom: 1rem;
     }
-
 
     .fixed-banner img{
         width: 120px;
