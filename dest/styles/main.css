@@ -10368,16 +10368,19 @@ body .slick-next {
 }
 
 .sponsored__mark {
-    line-height: 1.5rem;
+    line-height: 1.3rem;
     padding: 0 .5rem;
-    background-color: #ff5722;
-    border-radius: 2px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 0 0 0 4px;
     display: inline-block;
     font-size: .8215rem;
     color: #fff;
     position: absolute;
-    left: .5rem;
-    bottom: .5rem
+    right: 0;
+    top: 0;
+    opacity: .4;
+    text-shadow: 1px 1px 2px #262626, 0 0 1em #262626;
 }
 
 .promoted__mark {
@@ -10751,14 +10754,6 @@ body .slick-next {
 .fixed-banner:hover .fixed-banner-img--wrapper{
     opacity: 1;
     transform: scale(1);
-}
-
-.card .sponsored__mark{
-    line-height: 1rem;
-    padding: 0 .1rem;
-    font-size: .6875rem;
-    left: .2rem;
-    bottom: .2rem;
 }
 
 @media (min-width: 992px) {
