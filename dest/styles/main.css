@@ -10672,6 +10672,10 @@ body .slick-next {
     min-width: 1px;
 }
 
+.categories-story .news__item-time-wrapper{
+    min-width: 1px;
+}
+
 .card--something .something__content-square{
     display: block;
 }
