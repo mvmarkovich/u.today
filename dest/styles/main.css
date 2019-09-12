@@ -1036,6 +1036,7 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     width: 100%;
     text-align: center;
@@ -1324,9 +1325,10 @@ aside {
 .card .btn--background--blue{
     width: 100%;
     padding: 0;
-    margin-top: 2.5rem;
-    min-height: 40px;
+    margin-top: 1rem;
     box-shadow: none;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .card__title {
@@ -3668,15 +3670,17 @@ main > .article:nth-last-child(2):after {
 }
 
 .aside-story__img {
-    border-radius: 2px
+    border-radius: 2px;
+    width: 100%;
 }
 
 .aside-story__img-wrapper {
-    width: 40px;
-    min-width: 40px;
+    width: 72px;
+    min-width: 72px;
     background: #eceff1;
     border-radius: 2px;
-    margin-right: .5rem
+    margin-right: .5rem;
+    position: relative;
 }
 
 .aside-story__info {
@@ -5740,7 +5744,7 @@ h2 span {
     }
 
     .card {
-        padding: 1.4rem 1.8rem 2rem
+        padding: .6rem 1rem 1.2rem
     }
 
     .card + .card {
@@ -6088,8 +6092,6 @@ h2 span {
     }
 
     .aside-story__img-wrapper {
-        width: 64px;
-        min-width: 64px;
         margin-right: 1rem
     }
 
@@ -9591,6 +9593,7 @@ body .slick-next {
 .categories-story_item-link {
     display: block;
     min-width: 224px;
+    max-width: 224px;
     height: 140px;
     overflow: hidden;
     background-color: #fff;
@@ -10750,6 +10753,14 @@ body .slick-next {
     transform: scale(1);
 }
 
+.card .sponsored__mark{
+    line-height: 1rem;
+    padding: 0 .1rem;
+    font-size: .6875rem;
+    left: .2rem;
+    bottom: .2rem;
+}
+
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
         max-width: 768px
@@ -10820,12 +10831,12 @@ body .slick-next {
     }
 
     .main-page .main-news-block {
-        width: calc(100% - 240px - 3rem)
+        width: calc(100% - 280px - 3rem)
     }
 
     .main-page .main-news-block ~ .aside-news-block {
-        min-width: 240px;
-        max-width: 240px
+        min-width: 280px;
+        max-width: 280px
     }
 
     .main-page .share-and-up {
@@ -11037,6 +11048,7 @@ body .slick-next {
 
     .categories-story_item-link {
         min-width: 144px;
+        max-width: 144px;
         height: 90px
     }
 
@@ -11076,7 +11088,7 @@ body .slick-next {
     }
 
     .main-page .main-news-block {
-        width: calc(100% - 240px - 3rem)
+        width: calc(100% - 280px - 3rem)
     }
 
     .main-page .humble {
