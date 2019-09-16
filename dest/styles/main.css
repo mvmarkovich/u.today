@@ -1040,6 +1040,7 @@ aside {
 
     width: 100%;
     text-align: center;
+    overflow: hidden;
 }
 
 .something--top {
