@@ -10756,6 +10756,10 @@ body .slick-next {
     transform: scale(1);
 }
 
+.views-infinite-scroll-content-wrapper{
+    width: 100%;
+}
+
 @media (min-width: 992px) {
     .main-page .header__container, .main-page .footer__container {
         max-width: 768px
