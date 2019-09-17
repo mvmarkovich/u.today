@@ -11107,10 +11107,6 @@ body .slick-next {
         right: 1rem;
     }
 
-    .main-container .top-story-block .top-story__title{
-
-    }
-
     .medium_categories-story_item-title{
        font-size: .9375rem;
     }
@@ -11488,6 +11484,10 @@ body .slick-next {
 
     .main-block {
         margin: 0 auto;
+        order: 2;
+    }
+
+    .main-category-block{
         order: 2;
     }
 
