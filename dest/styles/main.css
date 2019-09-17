@@ -11245,7 +11245,26 @@ body .slick-next {
 
     .main-page .main-news-block {
         margin-right: 0;
-        width: 100%
+        width: 100%;
+        order: 2;
+    }
+
+    .main-page .main-news-block ~ .aside-news-block{
+        width: 100%;
+        order: 1;
+        max-width: 100%;
+        margin: .5rem 0;
+    }
+
+    .aside-story__link{
+        font-size: .8125rem;
+        line-height: 1.5rem;
+    }
+
+    .aside-story__img-wrapper{
+        max-width: 144px;
+        min-width: 144px;
+        margin-right: 1rem;
     }
 
     .main-page .main-aside-container {
@@ -11737,6 +11756,11 @@ body .slick-next {
         padding: 1rem;
         font-size: .8125rem;
         line-height: 1.5rem
+    }
+
+    .aside-story__img-wrapper{
+        max-width: 72px;
+        min-width: 72px;
     }
 }
 
