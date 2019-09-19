@@ -1081,8 +1081,18 @@ aside {
     text-align: center;
 }
 
+.something__content-long > ins{
+    display: block !important;
+    margin: 0 auto !important;
+}
+
 .something__content-long img{
     margin: 0 auto;
+}
+
+.something__content-square > ins{
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 .something__content-square{
