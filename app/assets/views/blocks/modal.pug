@@ -69,7 +69,7 @@
 
 .modal#log_in
   .modal__square.modal__entrance
-    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
 
     .modal__entrance-header
       .modal__entrance-title Log in
@@ -80,14 +80,13 @@
           input(type="text" class="input__elem validate[required]" maxlength="12" name="name" placeholder="Account name")
         .input
           input(type="password" class="input__elem validate[required]" name="password" placeholder="Brain key")
-        button.btn.btn--input.btn_step(type="submit") Log in
+        button.btn.btn--input.btn--accent.btn_step(type="submit") Log in
       .btn__block
         button.btn.btn--wide.btn--input.register(data-modal="register") Register
 
 .modal#register
   .modal__square.modal__entrance
-    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
-    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
     .modal__entrance-header
       .modal__entrance-title Step 1
     .modal__entrance-content
@@ -97,20 +96,19 @@
         .input.input-account--name
           span.internet-dog @
           input(type="text" data-field="item" class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" maxlength="12" id="account_name" name="account_name" placeholder="Account name").
-          .input-account--name_counter
+          .input__counter
             span.counter(data-field="target") 0
             span.counter /12
         .modal__entrance-caption Exactly 12 characters, lower case, latin symbols and digits 1-5 only.
-        .checkbox__block
-          .checkbox__block_item
-            input(type='checkbox' name="agree-terms" id="agree-terms" class="validate[required] checkbox")
-            label(for="agree-terms") I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a>
-        button.btn.btn--input.btn_step(type="submit") generate brainkey
+        .input
+          input(type='checkbox' name="agree-terms" id="agree-terms" class="validate[required] input__checkbox")
+          label(for="agree-terms" class="input__checkbox-label") I accept <a href="#!"> Terms and Conditions </a>
+        button.btn.btn--input.btn--accent.btn_step(type="submit") generate brainkey
       .btn__block
           button.btn.btn--input.sign_in(data-modal="log_in") Or Sign In
   .modal__square.modal__entrance
-    button.modal__close.btn.btn--light.btn--cross-back(data-back-modal)
-    button.modal__close.btn.btn--light.btn--cross-blue(data-close-modal)
+    button.modal__back.btn.btn--light.btn--back(data-back-modal)
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
     .modal__entrance-header
       .modal__entrance-title Step 2
     .modal__entrance-content
@@ -131,11 +129,10 @@
         span.modal__entrance-hashtag bail
         span.modal__entrance-hashtag gunshot
       form.modal__entrance-form#recorded-brainkey(action="#" method="get")
-        .checkbox__block
-          .checkbox__block_item
-            input(type='checkbox' class="validate[required] checkbox" id="accept-brainkey" name="accept-brainkey")
-            label(for="accept-brainkey") I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a>
-        button.btn.btn--input.btn_step.btn--wide(type="submit" disabled) Finish
+        .input
+            input(type='checkbox' class="validate[required] input__checkbox" id="accept-brainkey" name="accept-brainkey")
+            label(for="accept-brainkey" class="input__checkbox-label") I accept <a href="#!">I recorded my Brainkey</a>
+        button.btn.btn--input.btn--accent.btn--wide.btn_step(type="submit" disabled) Finish
   .modal__square.modal__entrance
     .modal__entrance-header
       .modal__entrance-title Registration completed

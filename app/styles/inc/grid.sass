@@ -1,0 +1,129 @@
+.container
+  max-width: $container-sm-px
+  margin: * auto
+  padding: * 1rem
+
+@media $md
+  .container
+    max-width: $container-md-px
+
+@media $lg
+  .container
+    max-width: $container-lg-px
+
+@media $xl
+  .container
+    max-width: $container-xl-px
+
+
+.page-container
+  background: transparent
+  padding: @xl-down 0
+  margin-top: .5rem @sm 1rem
+
+.content-container
+  box: space-between wrap
+  position: relative
+  z-index: 96
+  padding-bottom: 1px @md 2px
+  width: 100%
+
+.main-block
+  width: 100% @md 480px @xl 736px
+  order: @md-down 2
+
+.event-block
+  width: 100% @xl 736px
+
+.aside-block
+  max-width: 240px @xl 360px
+  width: 100%
+
+  &--mobile-visible
+    display: @md-down block
+    order: @md-down 2
+    max-width: @md-down 100%
+
+.main-container
+  box: space-between
+  flex-wrap: wrap
+  margin: 1rem 0 1.5rem 0 @md-down .5rem auto
+  position: relative
+  z-index: 96
+  max-width: @md-down 480px
+
+.top-story-block
+  max-width: 100%
+
+.news-block
+  max-width: 100%
+
+.main-aside-container
+  box: space-between
+  flex-wrap: wrap @md nowrap
+
+  &--vertical
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    .aside-menu-block
+      order: 1
+      max-width: 480px @md 768px @xl 800px
+
+    .main-category-block
+      order: 2
+      width: 100%
+      max-width: 480px @md 768px @xl 800px
+
+
+.main-news-block
+  width: 100% @md 480px @xl 640px
+  order: @md-down 2
+
+  & > div
+    margin: .5rem * @sm 1rem *
+
+    &:first-child
+      margin-top: 0
+
+
+.aside-news-block
+  @extend .aside-block
+  margin-bottom: 0.5rem @sm 1rem
+  width: @md-down 100%
+  order: @md-down 1
+  max-width: @md-down 100%
+
+.main-category-block
+  width: 100% @md 440px @xl 800px
+  background-color: #fff
+  padding: 2rem 1rem @sm 1.5rem 2rem
+
+.aside-category-block
+  @extend .aside-block
+
+.aside-menu-block
+  max-width: 100% @md 280px @xl 320px
+  width: 100%
+
+.content-block
+  background: #fff
+  width: 100%
+
+  & + &
+    margin-top: .5rem @md 1rem
+
+.main-block_center
+  width: 100%
+  box:
+  justify-content: center
+
+  .main-block
+    max-width: 768px
+    width: 100%
+
+aside
+  position: relative
+  z-index: 7

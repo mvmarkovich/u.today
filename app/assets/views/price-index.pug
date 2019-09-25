@@ -4,11 +4,11 @@ block title
     title Price index | u.today
 
 block content
-    .main-aside-container.index-price
+    .main-aside-container
         aside.aside-menu-block
             .price-index__aside
                 .price-index__header
-                    button.btn.btn--arrow-down-before.btn--pseudo Choose coin
+                    button.btn.btn--arrow-up-before.btn--light Choose coin
                 .price-index__table
                     .price-index__title Coins
                     .price-index__tabs.tabs.tabs--small
@@ -25,14 +25,11 @@ block content
                                 .price-index__coin-trand(class=coin.coin_daily__trand === false ? 'price-index__coin-trand--down' : '')= coin.price_daily
                                 .price-index__coin-trand(class=coin.coin_monthly__trand === false ? 'price-index__coin-trand--down' : '')= coin.price_monthly
         .main-category-block
-            h1.title Bitcoin BTC Price Index
-            p.subtitle The price of Bitcoin is one of the main issues for miners and traders. Here you will find the latest news about the BTC price fluctuations.
-            .price-index_text
-                p.price-index_text__descr 🔹 Read the most important and
-                    a.price-index_text__link(href="#") hot news about Bitcoin (BTC)
-                p.price-index_text__descr 🔹 Check the latest
-                    a.price-index_text__link(href="#") Bitcoin (BTC) Price Prediction
-
+            h1 Bitcoin BTC Price Index
+            p The price of Bitcoin is one of the main issues for miners and traders. Here you will find the latest news about the BTC price fluctuations.
+            ul
+                li 🔹 Read the most important and <a href="#!">hot news about Bitcoin (BTC)</a>
+                li 🔹 Check the latest <a href="#!">Bitcoin (BTC) Price Prediction</a>
 
             .price-index_chart.chart-row
                 .tradingview-widget-container
@@ -71,6 +68,20 @@ block content
                     .name Bitcoin (BTC)
                     .price $ 3 848.53
                     .change +1.31% day
+                    .date 26 Feb 2019 02:36 GMT
+
+            .cryptocurrency_price.price-down
+                .cryptocurrency_price__share
+                    .social.social--border.social--wide
+                        span.social-descr Share this now:
+                        .social
+                            a.social__link.social__link--fb(href="#!")
+                            a.social__link.social__link--tg(href="#!")
+                            a.social__link.social__link--tw(href="#!")
+                .cryptocurrency_price__block
+                    .name Bitcoin (BTC)
+                    .price $ 3 848.53
+                    .change -1.31% day
                     .date 26 Feb 2019 02:36 GMT
             include blocks/news-category.pug
 

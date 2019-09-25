@@ -1,0 +1,70 @@
+.something
+  box: center middle
+  background-color: #fff
+  overflow: hidden
+  text-align: center
+  width: 100%
+
+  &--top
+    height: @sm 90px
+    position: relative
+    z-index: 996
+
+  &--content
+    margin: 1rem -1rem @sm 1rem 0
+
+  &__content
+
+    &-long
+      width: 100%
+      text-align: center
+      display: @xl-down none
+
+      img
+        margin: * auto
+
+      * > ins
+        display: block !important
+        margin: 0 auto !important
+
+    &-square
+      display: @xl none
+      width: 100%
+      text-align: center
+
+      img
+        margin: * auto
+
+      * > ins
+        display: block !important
+        margin: 0 auto !important
+
+  &--aside
+    padding: @xl 9px *
+    height: @xl-down 200px
+
+    > *
+      transform: @xl-down scale(.76)
+
+    > img
+      min-width: 300px
+
+  &--wide
+    margin-bottom: 1rem @xl 2rem
+    margin: @sm-down * -1rem
+
+
+  &-long
+    display: @md-down none
+
+  &-square
+    display: @md none
+
+  &--footer
+    position: fixed null 0 0 0
+    height: 48px
+    z-index: 98
+
+  &__wrapper
+    margin-bottom: 1rem @xl 1.5rem
+    border-bottom: $border

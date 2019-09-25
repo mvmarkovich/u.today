@@ -4,20 +4,29 @@ block title
   title Category subcategories | u.today
 
 block content
-  section.asset.asset-wide.bg-dark-1
-    a.asset_link(target='_blank', href='https://www.cryptodailytrading.com/')
-      img(src='https://u.today/img/datalight.jpg', alt='cryptodailytrading.com')
-  .main-aside-container
+  .something.something--content
+    .something__content-long(style="background-color: #032e61")
+      img(src="img/something/long.png" alt="something-wide")
 
-    include blocks/aside-menu-block.pug
+    .something__content-square(style="background-color: #032e61")
+      img(src="img/something/square.png" alt="something-square")
 
-    <!— the start of content category —>
-    .main-category-block
-      include blocks/category-info.pug
-      include blocks/category-item.pug
-      include blocks/category-item.pug
-      include blocks/category-item.pug
-      include blocks/category-item.pug
-    <!— the end of content category —>
+  .main-aside-container.main-aside-container--vertical
 
-      a.btn.btn--block.btn--large(href="#!") Show more
+    aside.aside-menu-block
+
+      .accordion.accordion--horizontal
+        .accordion__body
+          ul.tabs.tabs--horizontal
+            each item, i in nav[0].childs
+              li.tabs__item(class=[i === 1 ? 'tabs__item--active' : ''])
+                a.tabs__btn.btn.btn--pseudo(href="#!")= item.name
+
+      <!— the start of content category —>
+      .main-category-block
+        include blocks/category-info.pug
+        include blocks/category-item.pug
+        include blocks/category-item.pug
+        include blocks/category-item.pug
+        include blocks/category-item.pug
+      <!— the end of content category —>

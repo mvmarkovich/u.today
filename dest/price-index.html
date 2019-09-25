@@ -154,11 +154,11 @@
       </header>
       <div class="mobile-menu-cover"></div>
       <div class="page-container container">
-        <div class="main-aside-container index-price">
+        <div class="main-aside-container">
           <aside class="aside-menu-block">
             <div class="price-index__aside">
               <div class="price-index__header">
-                <button class="btn btn--arrow-down-before btn--pseudo">Choose coin</button>
+                <button class="btn btn--arrow-up-before btn--light">Choose coin</button>
               </div>
               <div class="price-index__table">
                 <div class="price-index__title">Coins</div>
@@ -253,12 +253,12 @@
             </div>
           </aside>
           <div class="main-category-block">
-            <h1 class="title">Bitcoin BTC Price Index</h1>
-            <p class="subtitle">The price of Bitcoin is one of the main issues for miners and traders. Here you will find the latest news about the BTC price fluctuations.</p>
-            <div class="price-index_text">
-              <p class="price-index_text__descr">🔹 Read the most important and<a class="price-index_text__link" href="#">hot news about Bitcoin (BTC)</a></p>
-              <p class="price-index_text__descr">🔹 Check the latest<a class="price-index_text__link" href="#">Bitcoin (BTC) Price Prediction</a></p>
-            </div>
+            <h1>Bitcoin BTC Price Index</h1>
+            <p>The price of Bitcoin is one of the main issues for miners and traders. Here you will find the latest news about the BTC price fluctuations.</p>
+            <ul>
+              <li>🔹 Read the most important and <a href="#!">hot news about Bitcoin (BTC)</a></li>
+              <li>🔹 Check the latest <a href="#!">Bitcoin (BTC) Price Prediction</a></li>
+            </ul>
             <div class="price-index_chart chart-row">
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
@@ -288,6 +288,19 @@
                 <div class="name">Bitcoin (BTC)</div>
                 <div class="price">$ 3 848.53</div>
                 <div class="change">+1.31% day</div>
+                <div class="date">26 Feb 2019 02:36 GMT</div>
+              </div>
+            </div>
+            <div class="cryptocurrency_price price-down">
+              <div class="cryptocurrency_price__share">
+                <div class="social social--border social--wide"><span class="social-descr">Share this now:</span>
+                  <div class="social"><a class="social__link social__link--fb" href="#!"></a><a class="social__link social__link--tg" href="#!"></a><a class="social__link social__link--tw" href="#!"></a></div>
+                </div>
+              </div>
+              <div class="cryptocurrency_price__block">
+                <div class="name">Bitcoin (BTC)</div>
+                <div class="price">$ 3 848.53</div>
+                <div class="change">-1.31% day</div>
                 <div class="date">26 Feb 2019 02:36 GMT</div>
               </div>
             </div>
@@ -458,12 +471,7 @@
       <div class="share-post" id="share-post"><a class="share__square share__square--tg" id="share-post-link-tg" href="#!"></a><a class="share__square share__square--tw" id="share-post-link-tw" href="#!"></a><a class="share__square share__square--fb" id="share-post-link-fb" href="#!"></a>
         <button class="btn btn--light share__square share__square--close" onclick="shareHide()"></button>
       </div>
-      <div class="fixed-banner">
-        <div class="fixed-banner-wrapper"><a class="fixed-banner-mask" href="#!" target="_blank"><img class="fixed-banner-general" src="img/something/fixed-banner-general.png">
-            <div class="fixed-banner-img--wrapper"><img class="fixed-banner-img" src="img/something/fixed-banner-mask.png"></div></a>
-          <button class="fixed-banner-close btn btn--light"></button>
-        </div>
-      </div>
+      <!-- include ../inc/fixed-banner-->
     </div>
     <div class="modal" id="subscribe-form">
       <div class="modal__item">
@@ -527,7 +535,7 @@
     </div>
     <div class="modal" id="log_in">
       <div class="modal__square modal__entrance">
-        <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
         <div class="modal__entrance-header">
           <div class="modal__entrance-title">Log in</div>
         </div>
@@ -539,7 +547,7 @@
             <div class="input">
               <input class="input__elem validate[required]" type="password" name="password" placeholder="Brain key">
             </div>
-            <button class="btn btn--input btn_step" type="submit">Log in</button>
+            <button class="btn btn--input btn--accent btn_step" type="submit">Log in</button>
           </form>
           <div class="btn__block">
             <button class="btn btn--wide btn--input register" data-modal="register">Register</button>
@@ -549,8 +557,7 @@
     </div>
     <div class="modal" id="register">
       <div class="modal__square modal__entrance">
-        <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
-        <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
         <div class="modal__entrance-header">
           <div class="modal__entrance-title">Step 1</div>
         </div>
@@ -561,16 +568,14 @@
             </div>
             <div class="input input-account--name"><span class="internet-dog">@</span>
               <input class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" type="text" data-field="item" maxlength="12" id="account_name" name="account_name" placeholder="Account name">
-              <div class="input-account--name_counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
+              <div class="input__counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
             </div>
             <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
-            <div class="checkbox__block">
-              <div class="checkbox__block_item">
-                <input class="validate[required] checkbox" type="checkbox" name="agree-terms" id="agree-terms">
-                <label for="agree-terms">I accept <a class="modal__entrance-link" href="#!">Terms and Conditions</a></label>
-              </div>
+            <div class="input">
+              <input class="validate[required] input__checkbox" type="checkbox" name="agree-terms" id="agree-terms">
+              <label class="input__checkbox-label" for="agree-terms">I accept <a href="#!"> Terms and Conditions </a></label>
             </div>
-            <button class="btn btn--input btn_step" type="submit">generate brainkey</button>
+            <button class="btn btn--input btn--accent btn_step" type="submit">generate brainkey</button>
           </form>
           <div class="btn__block">
             <button class="btn btn--input sign_in" data-modal="log_in">Or Sign In</button>
@@ -578,8 +583,8 @@
         </div>
       </div>
       <div class="modal__square modal__entrance">
-        <button class="modal__close btn btn--light btn--cross-back" data-back-modal></button>
-        <button class="modal__close btn btn--light btn--cross-blue" data-close-modal></button>
+        <button class="modal__back btn btn--light btn--back" data-back-modal></button>
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
         <div class="modal__entrance-header">
           <div class="modal__entrance-title">Step 2</div>
         </div>
@@ -589,13 +594,11 @@
           <div class="modal__entrance-text">⚠ Write it down on a paper and make a photo:</div>
           <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
           <form class="modal__entrance-form" id="recorded-brainkey" action="#" method="get">
-            <div class="checkbox__block">
-              <div class="checkbox__block_item">
-                <input class="validate[required] checkbox" type="checkbox" id="accept-brainkey" name="accept-brainkey">
-                <label for="accept-brainkey">I accept <a class="modal__entrance-link" href="#!">I recorded my Brainkey</a></label>
-              </div>
+            <div class="input">
+              <input class="validate[required] input__checkbox" type="checkbox" id="accept-brainkey" name="accept-brainkey">
+              <label class="input__checkbox-label" for="accept-brainkey">I accept <a href="#!">I recorded my Brainkey</a></label>
             </div>
-            <button class="btn btn--input btn_step btn--wide" type="submit" disabled>Finish</button>
+            <button class="btn btn--input btn--accent btn--wide btn_step" type="submit" disabled>Finish</button>
           </form>
         </div>
       </div>

@@ -1,0 +1,68 @@
+.accordion
+  border-radius: 2px
+  border: $border
+  background-color: $neutral
+  margin-bottom: 1rem
+
+  + .btn,
+  + .btn + .btn
+    display: @md-down flex
+
+  &--open
+
+    + .btn,
+    + .btn + .btn
+      display: @md-down none
+
+    ^&__title:after
+      transform: scaleY(1) @md scaleY(-1)
+
+    ^&__body
+      display: none @md block
+
+  &__title
+    text: $text-caps
+    padding: .44rem 1rem
+    cursor: pointer
+    user-select: none
+    box: center space-between
+
+    &:after
+      content: ""
+      display: block
+      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+      size: 24px
+      transform: @md-down scaleY(-1)
+
+  &__body
+    border-top: $border
+    display: block @md none
+    padding-top: .5rem
+    padding-bottom: .5rem
+
+    &--content
+      padding: 1rem @xl 1rem 1rem 2rem 1rem
+
+  &--horizontal
+    margin-bottom: 0
+    border: none
+    border-bottom: 1px solid #263238
+
+    .accordion__body
+      display: @md block
+      border: none
+      padding: 0
+      padding-left: 1.5rem @md 2.5rem
+
+    .tabs__item
+      margin: 0 1.5rem 0 0 @md 0 2.5rem 0 0
+
+      &--active
+
+        .tabs__btn
+          color: $pseudo-neutral-900
+
+    .tabs__btn
+      padding: .5rem 0
+      text: #78909C 15px 24px 600
+      white-space: nowrap

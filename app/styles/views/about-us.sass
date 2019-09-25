@@ -1,0 +1,101 @@
+.about-logo
+  size: 100% 50px @md 435px 65px @xl 652px 97px
+  background: svg-load("icons/logo.svg" fill: $pseudo-neutral-900) no-repeat left top / contain
+  margin-top: 2rem @md 3rem @xl 0
+  margin-bottom: @md-down 2.4rem
+
+.team
+  margin-top: 2.1rem @xl 3rem
+  order: 9
+
+  &__title
+    text: $header-tiny @md $header-small @xl $header-large
+    margin-bottom: 1.6rem
+
+  &__list
+    box: space-between wrap
+    padding: 1rem @sm 2rem
+
+  &__item
+    @extend .link-plain
+    display: block
+    text: $body-small
+    width: 47% @sm 30% @xl 21.8%
+    margin-bottom: 1.6rem @sm 2rem
+
+  &__img
+    @extend .img-cover
+    border-radius: 2px
+
+    &-wrapper
+      @extend .img-cover-wrapper
+      padding-top: 62.5%
+      margin-bottom: 1rem
+      background: svg-load("icons/greeting.svg", fill: 	#B0BFC6) no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
+      border-radius: 2px
+
+  &__post
+    text: $pseudo-neutral-400 $body-tiny
+
+.content-block
+
+  &__descr
+    padding: 1rem @sm 1.5rem 2rem
+
+.staff
+
+  &__item
+    box:
+    align-items: flex-start
+    position: relative
+    padding: 1rem 3.3rem 1.5rem 1rem @sm 2rem
+
+    & + &
+      border-top: $border
+
+    .social
+      margin-top: @xl-down .5rem
+      box: @sm-down vertical
+      position: @sm-down absolute 16px 16px null null
+
+      &__link
+        margin: 0 0 1rem @xl 0 0 0 1.5rem @sm 0 1.5rem 0 0
+
+    .staff__info
+
+      p
+        text: 13px 24px 500
+        margin: .5rem 0 0 -138px  @sm .5rem 0 0 -184px @xl 0
+
+  &__name
+    @extend .link-plain
+    text: 13px 1.8 600
+    overflow: hidden
+    text-overflow: ellipsis
+    max-width: 253px
+    display: block
+    white-space: normal
+
+  &__post
+    @extend .link-plain
+    text: #78909C 13px 1.8
+
+  &__row
+    box: wrap @xl center
+    display: @xl-down block
+    height: 72px @sm 100px @xl auto
+
+  &__info
+    margin-left: 1.5rem @xl 2rem
+
+  &__img
+    @extend .img
+    width: 100%
+    border-radius: 2px
+
+    &-wrapper
+      min-width: 116px @sm 160px
+      max-width: 116px @sm 160px
+      height: 72px @sm 100px
+      background: svg-load("icons/greeting.svg", fill: 	#B0BFC6) no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
+      border-radius: 2px

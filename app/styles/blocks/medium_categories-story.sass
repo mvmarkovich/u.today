@@ -1,0 +1,95 @@
+.medium_categories-story
+  width: 100vw
+  margin-top: 1rem
+  max-width: @xl-down 768px
+
+  .news__item-time-wrapper
+    min-width: 1px
+
+  .slick-track
+    display: flex
+
+  .humble--comments
+    margin-right: 0
+
+  &_item
+    max-width: 280px
+    width: 100%
+    background-color: #fff
+    margin-right: 1rem
+    box: column
+
+    &-link
+      display: block
+      background: #eceff1
+      overflow: hidden
+      position: relative
+      height: 175px
+
+      img
+        width: 100%
+
+    &-header
+      box: flex-start center
+      padding: 1rem
+
+    &-title
+      @extend .link-plain
+      text: 13px 24px 500
+      padding: 1rem
+      display: block
+
+  &_mark
+    @extend .link-plain
+    text: $pseudo-neutral-300 13px 16px
+    margin-right: 1rem
+
+.medium_categories
+
+  &__slider-nav
+    display: inline-flex
+    position: relative
+    margin-top: 1.5rem
+    z-index: 100
+    margin-left: @sm-down 1rem
+
+    .slick-arrow
+      size: 18px
+      background-image: svg-load("icons/slider-arrow_left.svg" fill: #2979ff)
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      cursor: pointer
+      position: static
+      margin-top: 0
+
+      &:hover
+        background-image: svg-load("icons/slider-arrow_left.svg" fill: #2196F3)
+
+      &:active
+        background-image: svg-load("icons/slider-arrow_left.svg" fill: #1565C0)
+
+    &:before
+      content: ''
+      background-repeat: no-repeat
+      background-size: 18px 20px
+      background-position: center
+      size: 2rem
+      margin-left: -1rem
+      position: absolute -8px null null 50%
+      background-image: svg-load("icons/i.swipe.svg" fill: $pseudo-neutral-200)
+      cursor: default
+
+    .slick-disabled
+      background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
+
+      &:hover
+        background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
+
+      &:active
+        background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
+
+
+  &__next-button
+    transform: rotate(180deg)
+    margin-left: 75px

@@ -1,0 +1,91 @@
+.big_categories-story
+  width: 100%
+  box-shadow: 60rem 0 0 #fff, -60rem 0 0 #fff
+  padding: 0 @xl 1.5rem 0 1rem @md 1.5rem .9rem 1rem
+  margin: @xl-down 0 auto
+  max-width: @xl-down 768px
+  background-color: #fff @md-down transparent
+
+  &_list
+    box: flex space-between wrap
+
+  &_item
+    box:
+    flex-direction: column @md-down row
+    width: 32% @md-down 100%
+    padding: @md-down 1rem
+    background-color: #fff
+
+    &:first-child
+      margin-bottom: @md-down .5rem
+      padding: @md-down 0
+      width: @md-down 100%
+      flex-direction: column
+
+      ^&-footer
+        padding: @md-down 1rem
+        margin-left: @md-down 0
+        .mobile_humble
+          display: none
+
+      ^&-link
+        min-width: 1px
+        max-width: 100%
+
+      ^&-header
+        display: @md-down flex
+        padding: @md-down 1rem
+
+      ^&-title
+        font-size: @md-down .9375rem
+
+
+    &:last-child
+      border-top: @md-down $border
+
+    &-header
+      box: flex wrap
+      margin-bottom: .8rem @md-down 0
+      display: @md-down none
+
+    &-title
+      text: $pseudo-neutral-900 .8125rem  1.5rem 500 @md .9375rem @xl 1.0625rem
+      @extend .link-plain
+      
+    &-link
+      display: block
+      position: relative
+      min-width: @md-down 144px @sm-down 72px
+      max-width: @md-down 144px @sm-down 72px
+
+      img
+        width: 100%
+
+    &-footer
+      margin-top: 1rem @md-down 0
+      padding: @md-down 0
+      order: @md-down 2
+      margin-left: @md-down 1rem
+
+  &_mark
+    margin-right: 1rem
+    text: $pseudo-neutral-300 .8125rem 1.5rem
+    width: auto @xl-down auto @md 100%
+    @extend .link-plain
+
+  .mobile_humble
+    display: block @md none
+
+  .news__item-time-wrapper
+    min-width: 1px
+
+
+.sponsored__mark
+  padding: 0 .5rem
+  background-color: #ff5722
+  border-radius: 2px
+  display: inline-block
+  position: absolute null null 8px 8px
+  text: $neutral .8215rem 1.5rem
+
+

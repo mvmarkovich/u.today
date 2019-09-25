@@ -1,0 +1,44 @@
+.news-featured
+  border-bottom: $border
+  padding-bottom: 0 @xl 1.4rem
+  margin-bottom: 1rem @xl 1.9rem
+
+  &__header
+    box: center
+
+  &__title
+    text: $header-small @xl $header-standart
+    margin-right: 1.1rem
+
+  &__list
+    box: space-between
+    flex-wrap: wrap
+
+  &__item
+    margin-top: 2rem
+    width: 100% @sm 48% @md 31% @xl 23%
+
+    &-link
+      @extend .link-plain
+      display: block
+      margin-bottom: .5rem @md .3rem @xl .6rem
+
+    &-img
+      @extend .img-cover
+      border-radius: 2px
+      border: $border
+
+      &-wrapper
+        @extend .img-cover-wrapper
+        padding-top: 62.5%
+        margin-bottom: .5rem @md .7rem @xl 1rem
+
+    &-title
+      text: $body-standart
+
+    &-info
+      box: center wrap
+
+  &__footer
+    margin-top: 0.4rem
+    margin-bottom: 1rem

@@ -1,0 +1,50 @@
+.news
+  padding: 1.2rem .9rem .7rem @xl 1.2rem 1rem .9rem
+  height: 100%
+  background-color: $neutral
+
+  &__header
+    box: center
+
+  .title
+    margin-bottom: 0
+
+  &__title
+    text: 600 15px 1.4
+
+  &__list
+    @extend .list-reset
+
+  &__item
+    display: @md flex
+    align-items: baseline
+    padding: .5rem 0
+    border-bottom: 1px solid #ECEFF1
+
+    &:last-child
+      border-bottom: 0
+
+    &-time
+      margin-right: .3rem @md 1rem
+
+      &-wrapper
+        min-width: 7.4rem
+        text: right
+        display: inline
+
+    &-title
+      text: $body-small @xl $body-standart
+      margin-right: .2rem @xl .7rem
+      @extend .link-plain
+
+      &-wrapper
+        display: inline
+
+    &-info
+      display: inline-flex
+      align-items: center
+      vertical-align: middle
+
+  &__footer
+    margin-top: 1rem
+    margin-bottom: .7rem

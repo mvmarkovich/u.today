@@ -10,9 +10,4 @@ aside.aside-menu-block
                     li.tabs__item(class=[ i === 1 ? 'tabs__item--active' : '' ])
                         a.tabs__btn.btn.btn--pseudo(href="#!")= item.name
 
-                        if i === 1
-                            ul.tabs__sub.tabs__sub--dots
-                                each itemChild, i in nav[1].childs
-                                    li.tabs__sub-item
-                                        a.tabs__btn.btn.btn--pseudo.link-plain(href="#!")= itemChild.name
 <!— the end of menu sidebar —>

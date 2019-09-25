@@ -1,0 +1,627 @@
+.article
+  position: relative
+  z-index: 5
+
+  &__summary
+    box: center
+    flex-wrap: wrap
+    margin-bottom: 0.7rem @md 1.3rem
+
+    &-device
+      display: block @xl none
+      margin: 1.1rem * .8rem
+
+    &-bookmarks
+      font-size: @xl-down 0
+
+      &:before
+        margin-right: @xl-down 0
+
+  &__label
+    text: 11px 16px 600
+    letter-spacing: 0.01em
+    box: inline-flex center
+    margin-bottom: 1rem
+
+    &:before
+      content: ''
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      size: 1rem
+      margin-right: 1rem
+
+    &--original
+      &:before
+        background-image: svg-load("icons/logotype.svg", fill: $pseudo-neutral-900)
+
+    &--tweet
+      &:before
+        background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
+
+  &__info
+    box: center
+    margin-bottom: 1.5rem @xl 1.3rem
+
+  &__panel
+    box:
+    margin-bottom: 2.4rem @xl 3.2rem
+    min-height: 48px
+
+    &-separator
+      background: $pseudo-neutral-100
+      height: 1px @xl 46px
+      width: 100% @xl 1px
+      margin: .4rem 0 @xl 0 1.1rem
+
+    &-row
+      box: center wrap middle
+      padding: .7rem 0 .4rem @xl 0
+
+    &-col
+      box: center middle
+      width: 100% @xl auto
+
+      & + &
+        margin-top: .4rem @xl 0
+
+  &__title
+    margin-top: 0
+    margin-bottom: .8rem
+
+    &-mark
+      text: $body-tiny
+      text: $pseudo-neutral-900
+      margin-left: .4rem
+
+  &__mark
+    text: $body-standart @xl $body-large
+    text: $pseudo-neutral-900
+    margin-top: 0
+    margin-bottom: 1rem @xl 1.4rem
+
+  &__main
+    background-color: #fff
+    padding: 1rem @xl 1.5rem 1rem
+
+  &_main
+
+    &-info
+      box:
+      align-items: center
+      margin-bottom: 1rem
+      background-color: #fff
+
+      &__rating
+        box:
+        background-color: #2979ff
+        color: #fff
+        text: 13px 16px 600 @xl 15px
+        align-items: center
+
+      .rating-button
+        @extend .btn--light
+        background-image: svg-load("icons/i.chevron-down.svg" fill: $neutral)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 24px
+        background-color: #2979ff
+        size: 2rem @xl 2.5rem
+        cursor: pointer
+        border-right: 1px solid #fff
+        transition: .15s
+
+        &.voted
+          background-color: $pseudo-neutral-100
+          background-image: svg-load("icons/i.chevron-down.svg" fill: $pseudo-neutral-300)
+
+      .rating-value
+        size: 2rem @xl 2.5rem
+        text-align: center
+        cursor: default
+        line-height: 2rem @xl 2.5rem
+
+      .rating-up
+        transform: rotate(180deg)
+
+      &__humble
+        box: center middle
+        padding: .25rem 1rem @xl .5rem 1.5rem .5rem
+        width: 100%
+
+        .humble
+          text: 13px @xl 15px
+          margin-right: @md-down .7rem
+
+        .mark
+          display: @sm-down none
+
+  &__main-img
+    position: absolute 0 null null 0
+    @extend .img
+
+    &-wrapper
+      background: $pseudo-neutral-50
+      overflow: hidden
+      padding-top: 62.5%
+      position: relative
+      margin: @sm-down * -1rem
+
+      img
+        position: absolute 0 null null 0
+        @extend .img
+
+  &__contents
+    margin-bottom: 2.2rem @xl 2.6rem
+    font-family: $font
+
+    &-title
+      text: $header-tiny
+      margin-bottom: 1.6rem
+
+    &-list
+      @extend .list-reset
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 2rem
+      position: relative
+
+      & + &
+        margin-top: 1.5rem
+
+      &:before
+        content: ""
+        display: block
+        background: svg-load("icons/triangle_down.svg" fill: $pseudo-neutral-100)
+        size: 24px
+        margin-right: .5rem
+        position: absolute 0 null null 0
+
+    &-link
+      @extend .link-plain
+      height: 22px
+      border-bottom: 0
+
+  &__related
+    background-color: #f5f5f5
+    margin: 2.5rem 0 @xl-down 1.7rem 0
+    box: space-between center
+    padding: @xl-down 1rem
+
+    &-link
+      padding: 0 1rem 0 2rem
+      padding-left: @xl-down 0
+      font-family: $font
+
+      a
+        @extend .link-plain
+        text: #263238 13px 1.9 600 @xl 15px
+
+      .red
+        text: #f44336 13px 1.9 600 @xl 15px
+        margin-left: 5px
+
+    .article__related-title
+      padding: 0
+      margin: 0
+
+    &_img
+      max-height: 120px
+
+    &-img
+      max-width: 88px @xl 192px
+      min-width: 88px @xl 192px
+      min-height: 55px @xl 120px
+
+  table
+    max-width: 736px
+    display: block
+    overflow-x: auto
+    border-top: 0
+    margin: 1.5rem * @xl 2rem *
+
+    td
+      min-width: 170px
+
+    &::-webkit-scrollbar-track
+      border-radius: 10px
+      background-color: #78909c
+      width: 6px
+
+    &::-webkit-scrollbar
+      height: 8px
+      border-radius: 10px
+      background-color: #78909c
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      background-color: #4e616d
+
+  &__subscribe
+    border: $border
+    font-family: $font
+    border-radius: 2px
+    padding: 1.4rem 2rem 1.5rem
+    margin: 2.5rem * @xl 3.4rem *
+    box: left wrap
+
+    &-col
+      order: 3
+      width: @md-down 100%
+
+      & + &
+        margin-left: 0 @md .9rem @xl 2rem
+
+      &:first-child
+        width: @md 66%
+        min-width: @md 280px
+        order: 1
+
+    &-title
+      text: $header-tiny
+      margin-bottom: 1.6rem
+
+    &-form
+      margin-bottom: 1rem
+
+    &-input
+      width: 100%
+
+    &-agree
+      text: $pseudo-neutral-400 $body-tiny
+      order: 2 @md 4
+      margin-bottom: 2.2rem @md 0
+
+  &__fact, h4
+    background: $neutral-100
+    padding: 1.3rem 2rem @xl 3.4rem 2rem
+    margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
+    margin: @sm-down * -1rem
+
+    &-title, strong
+      text: $header-standart center @xl $header-large
+      font-family: $font
+      margin-bottom: .6rem @xl 2.4rem
+      display: block
+
+    &-text, p
+      text: $body-standart center @xl $body-large
+      text: $pseudo-neutral-900
+      font-family: $font
+      margin-bottom: 0
+
+  &__tags
+    margin-bottom: 1.5rem
+
+  &__recommended
+
+    &-header
+      box: center
+      margin-bottom: 1.5rem
+
+    &-title
+      text: $header-tiny
+      margin-right: 1.5rem
+
+    .article__recommended-item-title
+      @extend .link-plain
+      background-color: transparent
+      margin: 1rem 0 0
+      padding: 0
+      text: #263238 13px 1.8 500
+
+    &-list
+      box: left
+      flex-wrap: nowrap @md wrap
+      margin: @md * -.51rem * -.5rem
+      margin-bottom: .5rem @md 0
+      overflow: auto @md hidden
+      padding: * 1rem @sm * 0
+
+      &::-webkit-scrollbar-track
+        border-radius: 10px
+        background-color: transparent
+        width: 6px
+
+      &::-webkit-scrollbar
+        height: 8px
+        border-radius: 10px
+        background-color: transparent
+
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: transparent
+
+      &:after
+        content: ""
+        display: block
+        min-width: 1rem @sm 1px
+        size: 1rem @sm 1px
+
+      &-slide
+        margin: @sm-down 1rem -1rem
+        max-height: @md-down 280px
+        overflow: hidden
+
+        &--yellow
+          background-color: #fffcc0
+          margin: 0 -1rem 1.5rem
+          padding: 1rem
+
+          .article__recommended-item
+            background-color: #fffcc0
+            width: @xl-down 100%
+            margin-left: @md-down 0
+
+            &:last-child
+              margin-bottom: 0
+
+          .article__recommended-link
+            box: horizontal @xl vertical
+
+          .article__recommended-item-title
+            margin-left: 1rem
+            margin-top: 0
+
+          .article__recommended-wrapper--img
+            max-width: 216px @md-down 96px
+            min-width: 216px @md-down 96px
+
+          .article__recommended-list
+            display: @md-down block
+            padding-bottom: @md-down 0
+            margin-bottom: @md-down 0
+            overflow: hidden
+
+    &-item
+      width: 185px @sm calc(45% - 1rem) @md calc(50% - 1rem) @xl calc(100% / 3 - 1rem)
+      min-width: 185px @sm calc(45% - 1rem) @md calc(50% - 1rem) @xl calc(100% / 3 - 1rem)
+      margin: * .5rem
+      margin-bottom: 1.5rem
+
+      &:first-child
+        margin-left: @md-down 0
+      &:last-child
+        margin-right: @md-down 0
+        margin-bottom: 0
+
+    &-img
+      display: block
+      max-width: 100%
+      width: 100%
+      border-radius: 2px
+      
+    &-wrapper--img
+      position: relative
+
+    &-link
+      text: $body-small
+      margin-bottom: .1rem
+      display: block
+      @extend .link-plain
+
+    &-info
+      box: center wrap
+
+    .btn
+      margin-bottom: 2rem @xl 0
+      box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35)
+
+  .something--content
+    margin: 1.5rem -1rem @sm 1.5rem 0
+
+.author
+
+  &_block
+    margin: 2rem 0
+    position: relative
+
+    .author__item
+
+      &-msg
+
+        p
+          text: #263238 .8125rem 1.8 500 @md .9375rem
+          margin: 0
+
+  &__list
+    @extend .list-reset
+
+  &__item
+
+    &-header
+      box:
+
+    &-user
+      size: 40px @md 64px
+      min-width: 40px @md 64px
+      border-radius: 2px
+      position: absolute 8px null null 0 @md relative
+      margin-right: 2rem
+
+      img
+        width: 100%
+
+    &-name
+      @extend .link-plain
+      text: #263238 500
+      cursor: pointer
+
+    &-wrapper
+      box:
+      flex-wrap: wrap
+      margin-bottom: 1rem
+      margin-left: @md-down 55px
+
+.under_article__main
+
+  &-img
+    margin: @sm-down * -1rem
+    padding: 1rem 1rem 1.5rem @md 2.5rem 2rem
+    background: #f5f5f5
+
+    .title
+      text: #90a4ae 13px 1.5rem @md 15px
+      margin-bottom: 7px
+
+.under_main-img
+
+  &__list
+    padding-left: 0
+    margin-top: 1.2rem
+
+  &__item
+    @extend .link-plain
+    text: 13px 1.8 600 @md 15px
+    display: block
+
+    .red
+      color: #f44336
+
+    & + &
+      margin-top: 1rem
+
+.disclaimer
+  margin-top: .8rem
+
+  &_text
+    text: #90A4AE .8125rem 1rem 500
+
+.about-author
+  background-color: #f5f5f5
+  position: relative
+  padding: 1rem 3rem 1rem 1rem @sm 2rem 4rem 1rem 2rem @xl 2rem 2rem 1rem
+  margin: 2rem -1rem @sm 2rem 0 @xl 2.4rem 0 3rem
+
+  &_row
+    box:
+
+  .about-author_title
+    margin: 0
+    padding: 0
+    font-size: @xl-down 15px
+
+  &_data
+    box: flex center
+    margin-top: .5rem
+
+  &_name
+    @extend .link-plain
+    text: #2979FF 13px 1.8 600 none none @sm 15px @xl 17px
+
+  &_avatar
+    max-width: 40px @sm 64px
+    min-width: 40px @sm 64px
+    size: 40px @sm 64px
+    margin-right: 1.2rem @md 2rem
+    display: block
+
+    img
+      @extend .img
+      border-radius: 2px
+
+  .social
+    box: @xl-down vertical
+    position: @xl-down absolute
+    right: .8rem @sm 1.5rem @xl 0
+    top: 50px @sm 60px @xl 0
+
+    &__link
+      margin-left: @xl 1.5rem
+      margin-bottom: @xl-down 1rem
+
+  p
+    text: 13px 1.8 500 @sm 15px @xl 17px
+    margin: .5rem 0 0
+    margin-left: -55px @sm -83px @xl 0
+    margin-top: 1rem @xl 0
+
+.mega-history
+  @extend .link-plain
+  color: #fff
+  position: relative
+  display: block
+  text-decoration: none
+  height: 240px
+  margin-bottom: 1.5rem
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  .history_tag
+    background-color: #2196F3
+    padding: 0 1rem
+    border-radius: 2px
+    position: absolute 16px null null 16px
+    text: $neutral 13px 32px 600 @xl 17px 40px
+
+  .bottom_descr
+    background-color: rgba(38, 50, 56, .65)
+    text: .8125rem 1.9
+    position: absolute null 0 0 0
+    padding: .75rem 1rem
+
+.promoted__mark
+  text: $neutral 13px 16px
+  padding: 0 .5rem
+  background-color: #2196f3
+  border-radius: 2px
+  display: inline-block
+  position: absolute null null 8px 8px
+
+main:not(.scroll-end) > .article:after
+  content: ""
+  display: block
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  transform: translateY(100%)
+  height: 100vh
+  background: linear-gradient(180deg, #263238 0%, rgba(38, 50, 56, 0) 100%)
+  opacity: 0
+  transition: .5s ease
+  pointer-events: none
+  margin-left: -50vw
+  margin-right: -50vw
+
+main > .article
+
+  &:nth-last-child(2)
+    z-index: 4
+
+    &:after
+      opacity: 1
+
+.fix-block
+  position: fixed null 0 0 null
+  z-index: 99
+  padding: 1rem
+  width: 100%
+  display: @md none
+
+  .row
+    box:
+    justify-content: flex-end
+
+  .switch
+    max-width: 160px
+    width: 100%
+
+    .btn
+      text: $neutral 13px 16px
+      text-transform: none
+      letter-spacing: normal
+      background-color: #4caf50
+      box-shadow: 0 4px 8px rgba(27, 94, 32, 0.5)
+      border-radius: 8px
+      border: 1px solid #4caf50
+      height: 3rem
+      width: 100%
+
+    .icon
+      text: 18px 16px
+      margin-left: .75rem
+      position: relative
+      top: 4px

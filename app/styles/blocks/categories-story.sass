@@ -1,0 +1,51 @@
+.categories-story
+
+  .news__item-time-wrapper
+    min-width: 1px
+
+  .humble--author
+    margin-top: .5rem
+
+  &_mark
+    text: #90a4ae 13px 1.5rem
+    margin-right: 1rem
+    @extend .link-plain
+
+  &_item
+    padding: @xl-down 1rem
+    margin-bottom: @md 1rem
+    box:
+    background-color: #fff
+
+    & + &
+      border-top: @md-down 1px solid #cfd8dc
+
+
+    &-link
+      display: block
+      min-width: 72px @xl 224px @sm 144px
+      max-width: @sm-down 72px
+      height: 48px @xl 140px @sm 90px
+      overflow: hidden
+      background-color: #fff
+      position: relative
+
+      img
+        width: 100%
+
+    &-info
+      padding: 0 0 0 1rem @xl 1rem 1.5rem .6rem
+      background-color: #fff
+      width: 100%
+
+    &-humble
+      box: wrap
+      margin-bottom: .3rem @md-down 0
+      order: @md-down 2
+
+
+    &-title
+      @extend .link-plain
+      text: 13px 1.5rem @xl 15px
+
+

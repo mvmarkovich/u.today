@@ -130,9 +130,14 @@
     }, 200);
   }
 
+  function backModal() {
+    $('.modal__square:visible').hide().prev('.modal__square').show();
+  }
+
   $("[data-modal]").on("click", openModal);
   $(".modal").on("click", closeModal);
   $("[data-close-modal]").on("click", closeModal);
+  $("[data-back-modal]").on("click", backModal);
 
   $(".modal > *").on("click", function () {
     event.stopPropagation();
@@ -256,14 +261,6 @@
     $('.modal__square:visible').hide().next('.modal__square').show();
   });
 
-  $('#register .modal__square .btn--cross-back').click(function() {
-    $('.modal__square:visible').hide().prev('.modal__square').show();
-  });
-
-  $('.fixed-banner-close').click(function() {
-    $(".fixed-banner").remove()
-  });
-
   $('.accept-cookies').on('click', function() {
     $(".cookies").detach();
     var date = new Date();
@@ -307,6 +304,17 @@
         }
       }
     ]
+  });
+
+  //
+  // Slider NEWS-CATEGORIES on MAIN page
+  //
+  $('.tabs--horizontal').slick({
+    infinite: false,
+    swipeToSlide: true,
+    arrows: false,
+    variableWidth: true,
+    dots: false
   });
 
   //
@@ -358,7 +366,7 @@
       promptPosition : "centerRight",
       scroll: false,
       onValidationComplete: function(form, status){
-        if (status == true && $('#generate-brainkey').find(".checkbox").is(':checked')){
+        if (status == true && $('#generate-brainkey').find(".input__checkbox").is(':checked')){
           $('.modal__square:visible').hide().next('.modal__square').show();
           return true;
         } else{
@@ -370,7 +378,7 @@
 
   $('#recorded-brainkey').each(function() {
       $(this).change(function() {
-          if ($('#recorded-brainkey').find(".checkbox").is(':checked')) {
+          if ($('#recorded-brainkey').find(".input__checkbox").is(':checked')) {
               $(this).children(".btn_step").prop('disabled', false);
               $(this).children(".btn_step").on('click', function(){
                 modalTimeout();

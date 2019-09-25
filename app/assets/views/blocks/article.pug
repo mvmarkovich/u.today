@@ -1,15 +1,16 @@
 .article
-  .article_main-info.article_main-info_v2
+  .article_main-info
     .article_main-info__rating
       button.rating-button.rating-down
       .rating-value 31
       button.rating-button.rating-up
     .article_main-info__humble
-      a.humble.mark(href="#!") &#x2B50; Featured
       time.author__item-time.humble 27 Oct’18
       a.humble.humble--views(href='#!') 123k
-      a.humble.humble--chat(href='#!') 256
+      a.humble.humble--comments(href='#!') 256
   .article__main
+    span.article__label.article__label--original U.TODAY Original Article
+    span.article__label.article__label--tweet Tweet-based article
     h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
 
     section.author_block
@@ -37,13 +38,10 @@
       .title You may also like:
       .under_main-img__list
         a.under_main-img__item(href='#!')
-          | &#x1F525;
           span.red TOP STORY
           |  Bitcoin Price Prediction for November: The Market Is Wound Up and Waiting
-        a.under_main-img__item(href='#!')
-          | &#x1F680; Original Bitcoin Fork, BCH, Gets Exchanges&rsquo; Seal of Approval for Upcoming Fork
-        a.under_main-img__item(href='#!')
-          | &#x1F48E; Brave Rewards Now Available for Android
+        a.under_main-img__item(href='#!') Original Bitcoin Fork, BCH, Gets Exchanges&rsquo; Seal of Approval for Upcoming Fork
+        a.under_main-img__item(href='#!') Brave Rewards Now Available for Android
     .disclaimer
       p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
@@ -78,7 +76,7 @@
       p!= articleTexts[3]
 
       blockquote
-        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
         img(src="https://dummyimage.com/64x64/d8dbde/aaa")
         strong Bob Stewarts
@@ -87,7 +85,7 @@
       p!= articleTexts[0]
 
       blockquote
-        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
         strong Bob Stewarts
         em CEO of uToday
@@ -95,14 +93,14 @@
       p!= articleTexts[1]
 
       blockquote
-        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
         strong Bob Stewarts
 
       p!= articleTexts[2]
 
       blockquote
-        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
       p!= articleTexts[5]
 
@@ -133,11 +131,10 @@
 
       h2 Reclaiming sovereignty
 
-      a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
-        img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
-      .caption
-        p This is a caption under a picture inside article text
-        a(href="#!") This is a caption under a picture inside article text
+      figure
+        a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
+          img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
+        figcaption Cover image via <a href="#!"> 123rf.com </a>
 
       p!= articleTexts[1]
 
@@ -319,5 +316,4 @@
       .something__content-square
         img(src="img/something/square.png" width="300" height="250" alt="something-square")
 
-    include comments.pug
 
