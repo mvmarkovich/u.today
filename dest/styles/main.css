@@ -1593,7 +1593,7 @@ aside {
 
 .card--miners {
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card--miners .card__body .aside-story--miners {
@@ -6783,6 +6783,10 @@ transition {
 
   .social--wide .social__link {
     width: 2.7rem;
+  }
+
+  .card--miners {
+    margin-bottom: 1.5rem;
   }
 
   .form__group {
