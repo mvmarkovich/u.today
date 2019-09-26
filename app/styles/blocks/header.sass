@@ -121,7 +121,7 @@
         @extend .list-reset
         display: none
         position: absolute
-        top: @md-down -56px
+        top: @md-down 0
         bottom: @md-down 0
         width: @md-down 205px
         overflow: @md-down auto
@@ -162,9 +162,9 @@
 
   &__search
     position: absolute
-    left: 0 @md 219px @xl 215px
-    right: 0 @md 100px @xl 100px
-    top: 12px @md 23px @xl 33px
+    left: 16px @md 215px @xl 240px
+    right: 16px @md 185px @xl 210px
+    top: 8px @md 10px @xl 8px
     display: none
 
     &-form
@@ -230,14 +230,11 @@
       border-bottom: @md-down $border
 
     ^&__nav
-      position: @md-down absolute 144px 0px null null
+      position: @md-down absolute 88px 0px null null
       width: @md-down 205px
       display: @md-down block
       height: 100vh
       background-color: #fff
-
-    .mobile-menu-lang
-      display: flex
 
 .mobile-menu
 
@@ -249,7 +246,6 @@
     display: none
     align-items: flex-end
     justify-content: center
-
 
   &-cover
     position: fixed 0 0 -82px 0

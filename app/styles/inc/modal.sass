@@ -146,6 +146,10 @@
   &__entrance
     align-items: inherit
 
+    .modal__close
+      opacity: 1
+      filter: @md-down none
+
     &-header
       background-color: #fff
       border-bottom: 1px solid #263238
@@ -262,6 +266,14 @@
     &-text
       text: .8125rem 1.5rem 500
       text-align: center
+
+  &__giveaway
+    border-radius: 12px
+    max-width: 620px
+
+    .modal__close
+      opacity: @md 1
+      filter: @md-down none
 
 
 

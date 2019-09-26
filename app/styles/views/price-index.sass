@@ -9,13 +9,13 @@
     max-height: 40px @md 100%
 
     .price-index__header .btn:before
-      transform: rotate(180deg)
+      transform: @md-down rotate(180deg)
 
     &--close
       max-height: 100% @md 40px
 
       .price-index__header .btn:before
-        transform: rotate(0) @md rotate(180deg)
+        transform: @md-down rotate(0) @md rotate(180deg)
 
   &__title
     text: $neutral $body-small

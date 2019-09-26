@@ -36,13 +36,11 @@
   width: 100% @xl 736px
 
 .aside-block
-  max-width: 240px @xl 360px
+  max-width: 240px @md-down 100% @xl 320px
   width: 100%
-
-  &--mobile-visible
-    display: @md-down block
-    order: @md-down 2
-    max-width: @md-down 100%
+  display: @md-down block
+  order: @md-down 1
+  margin-bottom: .5rem @sm 1rem
 
 .main-container
   box: space-between
@@ -61,21 +59,23 @@
 .main-aside-container
   box: space-between
   flex-wrap: wrap @md nowrap
+  align-items: flex-start
 
   &--vertical
     flex-direction: column
     justify-content: center
     align-items: center
-    width: 100%
+    max-width: 480px @md 768px @xl 800px
+    margin: 0 auto
 
     .aside-menu-block
       order: 1
-      max-width: 480px @md 768px @xl 800px
+      width: 100%
+      max-width: 100%
 
     .main-category-block
       order: 2
       width: 100%
-      max-width: 480px @md 768px @xl 800px
 
 
 .main-news-block
@@ -97,15 +97,16 @@
   max-width: @md-down 100%
 
 .main-category-block
-  width: 100% @md 440px @xl 800px
+  width: 100% @md 440px @xl 768px
   background-color: #fff
   padding: 2rem 1rem @sm 1.5rem 2rem
+  order: @md-down 2
 
 .aside-category-block
   @extend .aside-block
 
 .aside-menu-block
-  max-width: 100% @md 280px @xl 320px
+  max-width: 100% @md 240px @xl 320px
   width: 100%
 
 .content-block

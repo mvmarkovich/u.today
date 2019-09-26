@@ -49,12 +49,19 @@
       &:active:before
         background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
 
-  &__circle
+  &__social
+    margin-top: 0 @md-l -4rem
     background-color: #fff
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.5)
+    border-radius: 8px
+    padding: .5rem @md-l 1rem .5rem
+    overflow: hidden
+    display: @md-l-down flex
+
+  &__circle
+    background-color: transparent
     size: 32px
     display: block
-    border-radius: 50%
-    box-shadow: 0px 2px 8px rgba(33, 150, 243, 0.15)
     box: center middle
 
     & + &
@@ -69,45 +76,48 @@
       size: 24px
 
     &--fb
-      &:hover:before
+      &:before
         background-image: svg-load("icons/social/facebook.svg", fill: $fb-color)
 
-      &:before, &:active:before
-        background-image: svg-load("icons/social/facebook.svg", fill: $pseudo-neutral-900)
+      &:active:before
+        background-image: svg-load("icons/social/facebook.svg", fill: $accent-1-dark)
 
     &--tg
-      margin-top: @md-l -4rem
-
-      &:hover:before
+      &:before
         background-image: svg-load("icons/social/telegram.svg", fill: $tg-color)
 
-      &:before, &:active:before
-        background-image: svg-load("icons/social/telegram.svg", fill: $pseudo-neutral-900)
+      &:active:before
+        background-image: svg-load("icons/social/telegram.svg", fill: $accent-1-dark)
 
     &--tw
-      &:hover:before
+      &:before
         background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
 
-      &:before, &:active:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $pseudo-neutral-900)
+      &:active:before
+        background-image: svg-load("icons/social/twitter.svg", fill: $accent-1-dark)
 
     &--up
       size: 48px
-      box-shadow: 0px 8px 24px rgba(33, 150, 243, 0.15)
+      border-radius: 8px
+      box-shadow: 0px 4px 8px rgba(33, 150, 243, 0.5)
       margin-top: auto !important
+      display: none @md-l flex
+
+      &:before
+        background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-light)
+        size: 18px 24px
+        transform: rotate(90deg)
 
       &:hover:before
         background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-medium)
 
-      &:before, &:active:before
-        background-image: svg-load("icons/arrow_long.svg", fill: $pseudo-neutral-900)
-        size: 18px 24px
-        transform: rotate(90deg)
+      &:active:before
+        background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-dark)
+
 
   &-and-up
     position: fixed
-    left: auto @md-l 1rem @xl calc(50% - 560px - 67px)
-    right: @md-l-down 1rem
+    left: 1rem @md-l 1rem @xl calc(50% - 560px - 67px)
     top: @md-l 50%
     bottom: 1rem
     box: horizontal center middle @md-l vertical top
