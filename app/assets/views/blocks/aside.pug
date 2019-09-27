@@ -1,4 +1,4 @@
-section.card.card--mobile-visible
+section.card.card--press--release.card--mobile-visible
   .card__title Press Releases
   .card__body
     article.aside-story
@@ -11,7 +11,17 @@ section.card.card--mobile-visible
         .aside-story__info
           time.humble.humble--tiny 12:25 AM
 
-  a.btn.btn--accent.btn--small(href="#!") Submit Press Release
+    article.aside-story
+      a.aside-story__img-wrapper(href="#!")
+        img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+        .sponsored__mark Promo
+      .aside-story__body
+        a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+        .aside-story__info
+          time.humble.humble--tiny 12:25 AM
+
+  a.btn.btn--accent(href="#!") Submit Press Release
 
 section.card
   .card__title Popular
@@ -60,7 +70,7 @@ section.card.card--something
     img(src="img/content/banner.png" width="360" height="156" alt="something-square")
 
 section.card
-  .card__title 🗓 Upcoming events
+  .card__title Upcoming events
 
   .card__body
     each event in events

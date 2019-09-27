@@ -77,7 +77,7 @@
   margin-top: 1rem @md 0 @xl .4rem
 
 .slick-arrow
-  background-image: svg-load("icons/slick-arrow.svg" fill: #B0BEC5)
+  background-image: svg-load("icons/slick-arrow.svg" fill: $neutral) @sm svg-load("icons/slick-arrow.svg" fill: #B0BEC5)
   background-color: transparent
   background-position: center
   background-size: contain
@@ -100,7 +100,7 @@
 
 .slick-next
   transform: rotate(180deg)
-  right: -2.8rem
+  right: 0 @sm -2.8rem
 
 .slick-prev
-  left: -2.8rem
+  left: 0 @sm -2.8rem

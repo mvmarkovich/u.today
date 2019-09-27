@@ -235,12 +235,6 @@
     });
   }
 
-  $(window).on('load resize', function() {
-    if ($(window).width() <= '784'){
-      $(".price-index__aside").addClass("price-index__aside--close");
-    }
-  });
-
   $(".price-index__header .btn").on("click", function() {
     $(".price-index__aside").toggleClass("price-index__aside--close");
   });
@@ -304,17 +298,6 @@
         }
       }
     ]
-  });
-
-  //
-  // Slider NEWS-CATEGORIES on MAIN page
-  //
-  $('.tabs--horizontal').slick({
-    infinite: false,
-    swipeToSlide: true,
-    arrows: false,
-    variableWidth: true,
-    dots: false
   });
 
   //

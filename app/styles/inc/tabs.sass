@@ -23,18 +23,11 @@
     &-title
       margin-bottom: 0
 
-    &:after
-      content: ""
-      height: 4px
-      position: absolute null 0 -1px 0
-
-    &:hover
-      &:after
-        background: $accent-1-medium
-
     &--active
-      &:after
-        background: $pseudo-neutral-900
+
+      .tabs__btn
+        &:after
+          background-color: $pseudo-neutral-900
 
     &--sub-open
       ^^&__sub
@@ -44,6 +37,15 @@
     padding-bottom: .9rem @md 1.6rem
     text: $pseudo-neutral-900 .8125rem 1.5rem normal
     text-transform: none
+
+    &:after
+      content: ""
+      height: 4px
+      position: absolute null 0 -1px 0
+
+    &:hover
+      &:after
+        background: $accent-1-medium
 
     &:hover
       text: $pseudo-neutral-900
@@ -57,15 +59,15 @@
       & + ^^&__item
         margin-top: @xl .5rem
 
-      &:after
-        size: 4px 100%
-        position: absolute 0 auto auto 0
-
     ^&__btn
       padding: 0 1rem
       min-height: 40px
       width: 100%
       justify-content: flex-start
+
+      &:after
+        size: 100% 4px @md 4px 100%
+        position: absolute null 0 0 0 @md absolute 0 auto auto 0
 
   &__sub
     @extend .list-reset

@@ -22,13 +22,13 @@
   &--tweet
     padding-top: @md-down .9rem
 
-    ^&__title:before
-      content: ""
-      display: inline-block
-      background: svg-load("icons/social/twitter.svg" fill: #1DA1F2)
-      size: 24px
-      margin-bottom: -0.4rem
-      margin-right: .5rem
+  &--press--release
+
+    .aside-story
+      display: none @md flex
+
+      &:first-child
+        display: @md-down flex
 
   &--no-padding
     padding: 0 !important
