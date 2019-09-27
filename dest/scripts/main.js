@@ -398,16 +398,14 @@
   //
 
   $('.user--login').click(function () {
-    $(this).toggleClass('open');
-    $('.user--login__modal').toggleClass('show');
+    $(this).toggleClass('user--login--open');
     return false;
   });
   $(document).on('mouseup', function (e){
     var bookingform = $(".user--login__modal");
     if (!bookingform.is(e.target) && !$(e.target).is('.user--login'))
     {
-      $('.user--login__modal.show').removeClass("show");
-      $('.user--login.open').removeClass("open");
+      $('.user--login--open').removeClass("user--login--open");
     }
   });
 

@@ -357,16 +357,16 @@ a,button {
   border-color: #1565C0;
 }
 
-.about-author_name,.article__contents-link,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.footer__nav-child-link,.footer__nav-link,.humble--author,.image-source-text a,.input__checkbox-label a,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__link,.price-index__header .btn,.show-more,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__mark,.top-story__title,.under_main-img__item,.user--logout,a.category-item__title,figcaption a {
+.about-author_name,.article__contents-link,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.footer__nav-child-link,.footer__nav-link,.humble--author,.image-source-text a,.input__checkbox-label a,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__link,.price-index__header .btn,.show-more,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__mark,.top-story__title,.under_main-img__item,.user--login__descr,.user--logout,a.category-item__title,figcaption a {
   color: #263238;
   text-decoration: none;
 }
 
-.about-author_name:hover,.article__contents-link:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.image-source-text a:hover,.input__checkbox-label a:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__link:hover,.price-index__header .btn:hover,.show-more:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover {
+.about-author_name:hover,.article__contents-link:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.image-source-text a:hover,.input__checkbox-label a:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__link:hover,.price-index__header .btn:hover,.show-more:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--login__descr:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover {
   color: #2196F3;
 }
 
-.about-author_name:active,.article__contents-link:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.image-source-text a:active,.input__checkbox-label a:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__link:active,.price-index__header .btn:active,.show-more:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--logout:active,a.category-item__title:active,figcaption a:active {
+.about-author_name:active,.article__contents-link:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.image-source-text a:active,.input__checkbox-label a:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__link:active,.price-index__header .btn:active,.show-more:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--login__descr:active,.user--logout:active,a.category-item__title:active,figcaption a:active {
   color: #1565C0;
 }
 
@@ -3334,6 +3334,100 @@ blockquote em {
   overflow: hidden;
 }
 
+.user--login {
+  position: relative;
+}
+
+.user--login--open:hover:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM18.36 16.83C16.93 15.09 13.46 14.5 12 14.5C10.54 14.5 7.07 15.09 5.64 16.83C4.62 15.49 4 13.82 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 13.82 19.38 15.49 18.36 16.83ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z'/%3E %3C/svg%3E");
+}
+
+.user--login--open:active:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM18.36 16.83C16.93 15.09 13.46 14.5 12 14.5C10.54 14.5 7.07 15.09 5.64 16.83C4.62 15.49 4 13.82 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 13.82 19.38 15.49 18.36 16.83ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z'/%3E %3C/svg%3E");
+}
+
+.user--login--open .user--login__modal {
+  display: block;
+}
+
+.user--login__modal {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  padding: 0 1rem;
+  width: 240px;
+  z-index: 997;
+  box-shadow: 0 2px 5px rgba(33, 150, 243, .5);
+  display: none;
+}
+
+.user--login__modal:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  -webkit-filter: drop-shadow(1px -0.5px 2.8px rgba(33, 150, 243, 0.5));
+  filter: drop-shadow(1px -0.5px 2.8px rgba(33, 150, 243, 0.5));
+  background: linear-gradient(to right bottom, transparent 50%, white 50%);
+  z-index: -1;
+}
+
+.user--login__item {
+  position: relative;
+}
+
+.user--login__item + .user--login__item {
+  border-top: 1px solid #CFD8DC;
+}
+
+.user--login__descr {
+  font-size: 0.8125rem;
+  line-height: 3.375rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  display: flex;
+  align-items: center;
+}
+
+.user--login__descr:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: .6rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V20H20V17C20 14.34 14.67 13 12 13Z'/%3E %3C/svg%3E");
+}
+
+.user--login__descr:hover:before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%232196F3' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V20H20V17C20 14.34 14.67 13 12 13Z'/%3E %3C/svg%3E");
+}
+
+.user--login__descr:active:before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%231565C0' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 5.9C13.16 5.9 14.1 6.84 14.1 8C14.1 9.16 13.16 10.1 12 10.1C10.84 10.1 9.9 9.16 9.9 8C9.9 6.84 10.84 5.9 12 5.9ZM12 14.9C14.97 14.9 18.1 16.36 18.1 17V18.1H5.9V17C5.9 16.36 9.03 14.9 12 14.9ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 13C9.33 13 4 14.34 4 17V20H20V17C20 14.34 14.67 13 12 13Z'/%3E %3C/svg%3E");
+}
+
+.user--login .user--logout {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.8125rem;
+  line-height: 3.375rem;
+  font-weight: 600;
+  padding-left: 2.2rem;
+}
+
+.user--login .user--logout:after {
+  margin-left: 0;
+  position: absolute;
+  left: 0;
+}
+
 .article {
   position: relative;
   z-index: 5;
@@ -4759,6 +4853,11 @@ main > .article:nth-last-child(2):after {
 
 .big_categories-story .news__item-time-wrapper {
   min-width: 1px;
+  margin-right: .7rem;
+}
+
+.big_categories-story .news__item-time {
+  margin-right: 0;
 }
 
 .sponsored__mark {
@@ -7215,6 +7314,10 @@ transition {
 
   .big_categories-story .mobile_humble {
     display: none;
+  }
+
+  .big_categories-story .news__item-time-wrapper {
+    margin-right: 1rem;
   }
 
   .news__item {

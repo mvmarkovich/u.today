@@ -272,3 +272,75 @@
 
 .overflow-hidden
   overflow: hidden
+
+.user--login
+  position: relative
+
+  &--open
+
+    &:hover:after
+      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-900)
+
+    &:active:after
+      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-900)
+
+    ^&__modal
+      display: block
+
+  &__modal
+    position: absolute 40px 0 null null
+    background-color: #fff
+    padding: 0 1rem
+    width: 240px
+    z-index: 997
+    box-shadow: 0 2px 5px rgba(33, 150, 243, .5)
+    display: none
+
+    &:after
+      content: ''
+      position: absolute -12px 0 null null
+      size: 12px
+      filter: drop-shadow(1px -0.5px 2.8px rgba(33, 150, 243, 0.5))
+      background: linear-gradient(to right bottom, transparent 50%, white 50%)
+      z-index: -1
+
+  &__item
+    position: relative
+
+    & + &
+      border-top: $border
+
+  &__descr
+    @extend .link-plain
+    text: 13px 54px 600
+    text-transform: none
+    letter-spacing: normal
+    box: center
+
+    &:before
+      content: ""
+      display: block
+      size: 24px
+      margin-right: .6rem
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      background-image: svg-load("icons/user.svg", fill: $pseudo-neutral-900)
+
+    &:hover:before
+      background-image: svg-load("icons/user.svg", fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/user.svg", fill: $accent-1-dark)
+
+  .user--logout
+    text-transform: none
+    letter-spacing: normal
+    text: 13px 54px 600
+    padding-left: 2.2rem
+
+    &:after
+      margin-left: 0
+      position: absolute null null null 0
+
+
