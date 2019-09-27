@@ -1456,6 +1456,10 @@ aside {
   border-radius: 0;
 }
 
+.card--something img {
+  height: auto;
+}
+
 .card .advertising {
   justify-content: space-between;
   display: block;
