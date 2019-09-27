@@ -1519,12 +1519,12 @@ aside {
 }
 
 .card .toggle-checkbox .toggle:checked:before {
-  background-color: #b79fea;
+  background-color: #2979FF;
 }
 
 .card .toggle-checkbox .toggle:checked:after {
   left: 1rem;
-  background-color: #651fff;
+  background-color: #1565C0;
 }
 
 .card .toggle-checkbox label {
