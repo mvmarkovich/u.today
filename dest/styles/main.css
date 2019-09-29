@@ -4893,6 +4893,7 @@ main > .article:nth-last-child(2):after {
 
 .medium_categories-story_item {
   max-width: 280px;
+  height: auto;
   width: 100%;
   background-color: #fff;
   margin-right: 1rem;
