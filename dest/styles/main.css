@@ -4862,7 +4862,6 @@ main > .article:nth-last-child(2):after {
 
 .promoted__mark,.sponsored__mark {
   border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0px 0px 0px 2px;
   color: #FFFFFF;
   font-size: 0.6875rem;
   line-height: 1rem;
@@ -4870,8 +4869,43 @@ main > .article:nth-last-child(2):after {
   padding: 0 .5rem;
   text-shadow: -2px 2px 8px black;
   position: absolute;
+}
+
+.promoted__mark-top-left,.sponsored__mark-top-left {
+  border-radius: 0 2px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.promoted__mark-top-right,.sponsored__mark-top-right {
+  border-radius: 0 0 0 2px;
+  position: absolute;
   top: 0;
   right: 0;
+}
+
+.promoted__mark-bottom-right,.sponsored__mark-bottom-right {
+  border-radius: 2px 0 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.promoted__mark-bottom-left,.sponsored__mark-bottom-left {
+  border-radius: 0 2px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.promoted__mark-center,.sponsored__mark-center {
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -9px;
+  margin-left: -39px;
 }
 
 .medium_categories-story {

@@ -86,11 +86,33 @@
 
 .sponsored__mark, .promoted__mark
   border: 1px solid rgba(255, 255, 255, 0.4)
-  border-radius: 0px 0px 0px 2px
   text: $neutral 11px 16px 500
   padding: 0 .5rem
   text-shadow: -2px 2px 8px black
-  position: absolute 0 0 null null
+  position: absolute
 
+  &-top-left
+    border-radius: 0 2px 0 0
+    position: absolute 0 null null 0
+
+  &-top-right
+    border-radius: 0 0 0 2px
+    position: absolute 0 0 null null
+
+  &-bottom-right
+    border-radius: 2px 0 0 0
+    position: absolute null 0 0 null
+
+  &-bottom-left
+    border-radius: 0 2px 0 0
+    position: absolute null null 0 0
+
+  &-center
+    border-radius: 2px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -9px
+    margin-left: -39px
 
 
