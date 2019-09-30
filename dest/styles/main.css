@@ -4868,13 +4868,15 @@ main > .article:nth-last-child(2):after {
   font-weight: 500;
   padding: 0 .5rem;
   text-shadow: -2px 2px 8px black;
+  border-radius: 0 0 0 2px;
   position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .promoted__mark-top-left,.sponsored__mark-top-left {
   border-radius: 0 2px 0 0;
-  position: absolute;
-  top: 0;
+  right: auto;
   left: 0;
 }
 
@@ -4887,16 +4889,16 @@ main > .article:nth-last-child(2):after {
 
 .promoted__mark-bottom-right,.sponsored__mark-bottom-right {
   border-radius: 2px 0 0 0;
-  position: absolute;
-  right: 0;
+  top: auto;
   bottom: 0;
 }
 
 .promoted__mark-bottom-left,.sponsored__mark-bottom-left {
   border-radius: 0 2px 0 0;
-  position: absolute;
-  bottom: 0;
+  top: auto;
+  right: auto;
   left: 0;
+  bottom: 0;
 }
 
 .promoted__mark-center,.sponsored__mark-center {
@@ -4904,6 +4906,7 @@ main > .article:nth-last-child(2):after {
   position: absolute;
   top: 50%;
   left: 50%;
+  right: auto;
   margin-top: -9px;
   margin-left: -39px;
 }

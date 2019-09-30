@@ -89,11 +89,13 @@
   text: $neutral 11px 16px 500
   padding: 0 .5rem
   text-shadow: -2px 2px 8px black
-  position: absolute
+  border-radius: 0 0 0 2px
+  position: absolute 0 0 null null
 
   &-top-left
     border-radius: 0 2px 0 0
-    position: absolute 0 null null 0
+    right: auto
+    left: 0
 
   &-top-right
     border-radius: 0 0 0 2px
@@ -101,17 +103,22 @@
 
   &-bottom-right
     border-radius: 2px 0 0 0
-    position: absolute null 0 0 null
+    top: auto
+    bottom: 0
 
   &-bottom-left
     border-radius: 0 2px 0 0
-    position: absolute null null 0 0
+    top: auto
+    right: auto
+    left: 0
+    bottom: 0
 
   &-center
     border-radius: 2px
     position: absolute
     top: 50%
     left: 50%
+    right: auto
     margin-top: -9px
     margin-left: -39px
 
