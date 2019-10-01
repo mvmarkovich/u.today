@@ -6,7 +6,8 @@
 
   &__title
     text: $header-tiny @md $header-small @xl $header-large
-    margin-top: @md-down 1rem
+    max-width: @md-down calc(100% - 72px - 1rem)
+
   &__desc
     text: $body-small @xl $body-large
     margin-top: 1.5rem @md .5rem @xl .3rem

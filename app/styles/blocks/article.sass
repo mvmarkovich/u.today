@@ -44,7 +44,7 @@
     margin-bottom: 1.5rem @xl 1.3rem
 
   &__panel
-    box:
+    box: wrap
     margin-bottom: 2.4rem @xl 3.2rem
     min-height: 48px
 
@@ -55,15 +55,32 @@
       margin: .4rem 0 @xl 0 1.1rem
 
     &-row
-      box: center wrap middle
+      box: wrap center
       padding: .7rem 0 .4rem @xl 0
+      width: 100%
 
     &-col
-      box: center middle
+      box: center
       width: 100% @xl auto
 
       & + &
         margin-top: .4rem @xl 0
+
+    .humble
+      text: 13px 2.1 600 @sm 15px
+      margin-right: @sm-down .7rem
+
+      &--liked
+        color: $pseudo-neutral-900
+
+        &:before
+          background-image: svg-load("icons/liked.svg" fill: $accent-1-light)
+
+      &--bookmark
+        color: $pseudo-neutral-900
+
+        &:before
+          background-image: svg-load("icons/bookmark.svg" fill: $accent-1-light)
 
   &__title
     margin-top: 0
@@ -344,16 +361,17 @@
             background-color: #fffcc0
             width: @xl-down 100%
             margin-left: @md-down 0
+            margin-bottom: @xl 0
 
             &:last-child
-              margin-bottom: 0
+              margin-bottom: @xl-down 0
 
           .article__recommended-link
             box: horizontal @xl vertical
 
           .article__recommended-item-title
-            margin-left: 1rem
-            margin-top: 0
+            margin-left: @xl-down 1rem
+            margin-top: @xl-down 0
 
           .article__recommended-wrapper--img
             max-width: 216px @md-down 96px
