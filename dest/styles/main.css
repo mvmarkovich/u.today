@@ -5694,11 +5694,6 @@ main > .article:nth-last-child(2):after {
   font-weight: normal;
 }
 
-.event {
-  background-color: #fff;
-  padding: 1.5rem 1rem;
-}
-
 .event__title {
   margin-top: 0;
   margin-bottom: .9rem;
@@ -6899,10 +6894,6 @@ transition {
   .categories-story_item-link {
     min-width: 144px;
     height: 90px;
-  }
-
-  .event {
-    padding: 1.5rem 2rem;
   }
 
   .event-block {
