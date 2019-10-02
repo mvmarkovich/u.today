@@ -10,16 +10,14 @@ block content
 
         .something__content-square(style="background-color: #032e61")
             img(src="img/something/square.png" alt="something-square")
-    .main-container
-        .content-container
-            <!— the start of content article —>
-            main.main-block
-                include blocks/article.pug
-            <!— the end of content article —>
+    .main-aside-container
+        main.main-news-block
+            include blocks/article.pug
 
+        aside.aside-menu-block
             include blocks/aside-menu-block.pug
 
         .fix-block
             .row
                 .switch
-                    a.btn(href='#!') Next article <span class="icon">🚀</span>
+                    a.btn(href='#!') Next article

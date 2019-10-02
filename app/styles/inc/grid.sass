@@ -28,9 +28,12 @@
   padding-bottom: 1px @md 2px
   width: 100%
 
+
 .main-block
   width: 100% @md 480px @xl 712px
+  padding: 1rem @sm 1rem 1.5rem @md 2rem 1.5rem @xl 2rem
   order: @md-down 2
+  background-color: $neutral
 
 .event-block
   width: 100% @xl 736px
@@ -88,14 +91,6 @@
     &:first-child
       margin-top: 0
 
-
-.aside-news-block
-  @extend .aside-block
-  margin-bottom: 0.5rem @sm 1rem
-  width: @md-down 100%
-  order: @md-down 1
-  max-width: @md-down 100%
-
 .main-category-block
   width: 100% @md 480px @xl 712px
   background-color: #fff
@@ -116,12 +111,14 @@
   & + &
     margin-top: .5rem @md 1rem
 
-.main-block_center
+.main-center-block
   width: 100%
   box:
   justify-content: center
 
   .main-block
+    background-color: transparent
+    padding: 0
     max-width: 768px
     width: 100%
 

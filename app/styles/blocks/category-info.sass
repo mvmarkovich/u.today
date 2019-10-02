@@ -1,8 +1,8 @@
 .category-info
   box: left space-between
   border-bottom: $border
-  padding-bottom: .6rem @md 1.1rem @xl 2rem
   position: relative
+  padding-bottom: .6rem @md 1.1rem @xl 2rem
 
   &__title
     text: $header-tiny @md $header-small @xl $header-large
@@ -38,6 +38,8 @@
       min-width: 72px @md 144px @xl 224px
       height: 45px @md 90px @xl 140px
       position: @md-down absolute 0 0 null null
+      right: @md-down 16px
+      top: @md-down 16px
 
 @media screen and (max-width: 479px)
   .category-item h2
