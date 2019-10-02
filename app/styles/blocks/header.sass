@@ -26,10 +26,19 @@
   &__logo
     display: block
     background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
-    size: 130px 24px @md 176px 33px
-    min-width: 130px @md 176px
+    size: 125px 19px @md 132px 20px
+    min-width: 130px @md 132px
     position: relative
-    top: 3px @xl 1px
+
+    &-news
+      size: 140px 14px @md 219px 20px
+      min-width: 140px @md 219px
+      background: svg-load("icons/logo-news.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+
+    &-101
+      size: 125px 14px @md 177px 20px
+      min-width: 125px @md 177px
+      background: svg-load("icons/logo-101.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
 
   &__social
     width: 236px @xl 161px
