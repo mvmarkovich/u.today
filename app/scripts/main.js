@@ -143,7 +143,6 @@
     event.stopPropagation();
   });
 
-
   var currencyValue = $(".currencies__currency span");
 
   $("[data-set-currency]").on("click", setCurrency);
@@ -267,6 +266,11 @@
     if ( (evt.keyCode || evt.which) === 27 ) {
       $('.aside_dropdown').removeClass('open');
     }
+  });
+
+  $('.aside-menu-block').theiaStickySidebar({
+    additionalMarginTop: 16,
+    MinWidth: 784
   });
 
   //
