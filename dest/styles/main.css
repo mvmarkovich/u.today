@@ -5479,6 +5479,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .categories-story_item {
+  align-items: flex-start;
   background-color: #fff;
   display: flex;
 }
@@ -5489,7 +5490,6 @@ main > .article:nth-last-child(2):after {
 .categories-story_item-link {
   display: block;
   min-width: 72px;
-  height: 48px;
   overflow: hidden;
   background-color: #fff;
   position: relative;
@@ -6893,7 +6893,6 @@ transition {
 
   .categories-story_item-link {
     min-width: 144px;
-    height: 90px;
   }
 
   .event-block {
@@ -8437,7 +8436,6 @@ transition {
 
   .categories-story_item-link {
     min-width: 224px;
-    height: 140px;
   }
 
   .categories-story_item-info {
@@ -8955,6 +8953,10 @@ transition {
 
   .categories-story_item {
     padding: 1rem;
+  }
+
+  .categories-story_item-link {
+    top: 6px;
   }
 
   .staff__item .social {
