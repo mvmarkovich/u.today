@@ -3665,6 +3665,10 @@ blockquote em {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%232979FF' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M17 3H7C5.9 3 5 3.9 5 5V21L12 18L19 21V5C19 3.9 18.1 3 17 3ZM17 18L12 15.82L7 18V5H17V18Z'/%3E %3C/svg%3E");
 }
 
+.article .social__link {
+  margin-right: 1.5rem;
+}
+
 .article__title {
   margin-top: 0;
   margin-bottom: .8rem;
@@ -4233,6 +4237,7 @@ blockquote em {
 }
 
 .about-author .social__link {
+  margin-right: 0;
 }
 
 .about-author p {
