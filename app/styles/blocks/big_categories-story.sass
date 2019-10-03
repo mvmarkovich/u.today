@@ -55,8 +55,9 @@
     &-link
       display: block
       position: relative
-      min-width: @md-down 144px @sm-down 72px
-      max-width: @md-down 144px @sm-down 72px
+      min-width: 72px @sm 144px @md 1px
+      max-width: 72px @sm 144px @md 100%
+      top: @sm-down 6px
 
       img
         width: 100%
@@ -70,7 +71,7 @@
   &_mark
     margin-right: 1rem
     text: $pseudo-neutral-300 .8125rem 1.5rem
-    width: auto @xl-down auto @md 100%
+    width: auto @md 100% @xl auto
     @extend .link-plain
 
   .mobile_humble

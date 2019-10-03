@@ -521,6 +521,10 @@ h5 {
   margin-bottom: 0;
 }
 
+.main-news-block .something--content {
+  margin-bottom: .5rem;
+}
+
 .main-category-block {
   width: 100%;
   background-color: #fff;
@@ -1377,6 +1381,7 @@ aside {
 }
 
 .card--mobile-visible {
+  margin: .5rem 0;
 }
 
 .card + .card {
@@ -2297,6 +2302,7 @@ blockquote em {
 }
 
 .accordion .tabs--vertical {
+  padding-left: 1rem;
 }
 
 .accordion .tabs--vertical .tabs__item:after {
@@ -3946,7 +3952,7 @@ blockquote em {
 }
 
 .article__tags {
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
 }
 
 .article__recommended-header {
@@ -4124,7 +4130,7 @@ blockquote em {
 
 .author__item-name {
   color: #263238;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -4235,7 +4241,7 @@ blockquote em {
   font-weight: 500;
   margin: .5rem 0 0;
   margin-left: -55px;
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
 
 .mega-history {
@@ -4969,6 +4975,8 @@ main > .article:nth-last-child(2):after {
 .big_categories-story_item-link {
   display: block;
   position: relative;
+  min-width: 72px;
+  max-width: 72px;
 }
 
 .big_categories-story_item-link img {
@@ -6783,6 +6791,10 @@ transition {
     margin-bottom: 1rem;
   }
 
+  .main-news-block .something--content {
+    margin-bottom: 1rem;
+  }
+
   .main-category-block {
     padding: 1.5rem 2rem;
   }
@@ -6796,6 +6808,10 @@ transition {
   }
 
   .something--content {
+    margin: 1rem 0;
+  }
+
+  .card--mobile-visible {
     margin: 1rem 0;
   }
 
@@ -6832,12 +6848,20 @@ transition {
     height: 14px;
   }
 
+  .accordion .tabs--vertical {
+    padding-left: 1.5rem;
+  }
+
   .article__panel .humble {
     font-size: 0.9375rem;
   }
 
   .article__main {
     padding: 1rem 1.5rem;
+  }
+
+  .article__tags {
+    margin-bottom: 1.5rem;
   }
 
   .article__recommended-list {
@@ -6892,7 +6916,8 @@ transition {
 
   .about-author p {
     font-size: 0.9375rem;
-    margin-left: -83px;
+    margin-left: -82px;
+    margin-top: 1rem;
   }
 
   .fix-block .switch {
@@ -6914,6 +6939,11 @@ transition {
 
   .big_categories-story {
     margin: 1rem auto;
+  }
+
+  .big_categories-story_item-link {
+    min-width: 144px;
+    max-width: 144px;
   }
 
   .news-featured__item {
@@ -7146,6 +7176,10 @@ transition {
     right: auto;
     bottom: auto;
     left: 0;
+  }
+
+  .accordion .tabs--vertical {
+    padding-left: 0;
   }
 
   .accordion--open .accordion__title:after {
@@ -7398,6 +7432,10 @@ transition {
     margin-right: 2rem;
   }
 
+  .about-author p {
+    margin-left: -95px;
+  }
+
   .article--scroll-show {
     width: 480px;
   }
@@ -7510,6 +7548,11 @@ transition {
 
   .big_categories-story_item-title {
     font-size: .9375rem;
+  }
+
+  .big_categories-story_item-link {
+    min-width: 1px;
+    max-width: 100%;
   }
 
   .big_categories-story_mark {
@@ -8182,9 +8225,8 @@ transition {
   }
 
   .about-author p {
-    font-size: 1.0625rem;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: .5rem;
   }
 
   .mega-history .history_tag {
@@ -8372,6 +8414,10 @@ transition {
 
   .big_categories-story_item-title {
     font-size: 1.0625rem;
+  }
+
+  .big_categories-story_mark {
+    width: auto;
   }
 
   .news {
@@ -8938,6 +8984,10 @@ transition {
     margin-top: 0;
   }
 
+  .author__item-wrapper {
+    min-height: 3rem;
+  }
+
   .about-author .about-author_title {
     font-size: 0.9375rem;
   }
@@ -8966,10 +9016,6 @@ transition {
 
   .big_categories-story {
     max-width: 768px;
-  }
-
-  .big_categories-story_mark {
-    width: auto;
   }
 
   .medium_categories-story {
@@ -9090,8 +9136,7 @@ transition {
   }
 
   .big_categories-story_item-link {
-    min-width: 72px;
-    max-width: 72px;
+    top: 6px;
   }
 
   .medium_categories__slider-nav {
@@ -9253,7 +9298,6 @@ transition {
 
 .accordion .tabs--vertical {
   flex-direction: row;
-  padding-left: 1.5rem;
   overflow-x: auto;
   padding-bottom: 3rem;
 }
@@ -9517,11 +9561,6 @@ transition {
 .big_categories-story_item-header {
   margin-bottom: 0;
   display: none;
-}
-
-.big_categories-story_item-link {
-  min-width: 144px;
-  max-width: 144px;
 }
 
 .big_categories-story_item-footer {
