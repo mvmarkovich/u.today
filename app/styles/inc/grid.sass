@@ -85,11 +85,14 @@
   width: 100% @md 480px @xl 712px
   order: @md-down 2
 
-  & > div
+  & > *
     margin: .5rem * @sm 1rem *
 
     &:first-child
       margin-top: 0
+
+    &:last-child
+      margin-bottom: 0
 
 .main-category-block
   width: 100% @md 480px @xl 712px
@@ -103,6 +106,14 @@
 .aside-menu-block
   max-width: 100% @md 240px @xl 360px
   width: 100%
+
+  .inner-wrapper-sticky
+
+    & > *
+      margin-top: .5rem @sm 1rem
+
+      &:first-child
+        margin-top: 0
 
 .content-block
   background: #fff
