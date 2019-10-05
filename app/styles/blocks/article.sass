@@ -199,7 +199,7 @@
 
   &__related
     background-color: #f5f5f5
-    margin: 2.5rem 0 @xl-down 1.7rem 0
+    margin: 1.7rem -1rem @sm 1.7rem 0 @xl 2.5rem 0
     box: space-between center
     padding: @xl-down 1rem
 
@@ -354,13 +354,13 @@
         size: 1rem @sm 1px
 
       &-slide
-        margin: 1.5rem -1rem 0 @sm 1.5rem 0 0 @xl 1.5rem -1rem 0
+        margin: 1.5rem -1rem 0 @sm 1.5rem 0 0
         overflow: hidden
 
         &--yellow
           background-color: #fffcc0
           margin: 0 -1rem 1.5rem @sm 0 -1.5rem 1.5rem @xl 0 -2rem 1.5rem
-          padding: 1rem
+          padding: 1rem @sm 1rem 1.5rem @xl 1rem 2rem
 
           .article__recommended-item
             background-color: #fffcc0
@@ -379,8 +379,8 @@
             margin-top: @xl-down 0
 
           .article__recommended-wrapper--img
-            max-width: 216px @md-down 96px
-            min-width: 216px @md-down 96px
+            max-width: @xl-down 208px @md-down 96px
+            min-width: @xl-down 208px @md-down 96px
 
           .article__recommended-list
             display: @md-down block
