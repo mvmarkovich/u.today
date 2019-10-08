@@ -5552,7 +5552,6 @@ main > .article:nth-last-child(2):after {
 }
 
 .categories-story_item-humble {
-  margin-bottom: .3rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -9606,7 +9605,6 @@ transition {
 }
 
 .categories-story_item-humble {
-  margin-bottom: 0;
   order: 2;
 }
 
