@@ -1132,6 +1132,7 @@ aside {
 
 .something__content-long {
   text-align: center;
+  display: inherit;
 }
 
 .something__content-long img {
@@ -1140,12 +1141,13 @@ aside {
   height: auto;
 }
 
-.something__content-long * > ins {
+.something__content-long > ins {
   display: block !important;
   margin: 0 auto !important;
 }
 
 .something__content-square {
+  display: inherit;
   text-align: center;
 }
 
@@ -1155,7 +1157,7 @@ aside {
   height: auto;
 }
 
-.something__content-square * > ins {
+.something__content-square > ins {
   display: block !important;
   margin: 0 auto !important;
 }
