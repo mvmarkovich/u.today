@@ -544,6 +544,14 @@ h5 {
   margin-top: 0;
 }
 
+.aside-menu-block > * {
+  margin-top: .5rem;
+}
+
+.aside-menu-block > *:first-child {
+  margin-top: 0;
+}
+
 .content-block {
   background: #fff;
   width: 100%;
@@ -6805,6 +6813,10 @@ transition {
   }
 
   .aside-menu-block .inner-wrapper-sticky > * {
+    margin-top: 1rem;
+  }
+
+  .aside-menu-block > * {
     margin-top: 1rem;
   }
 
