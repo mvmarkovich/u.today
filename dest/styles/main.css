@@ -581,22 +581,19 @@ aside {
 
 .btn {
   color: #263238;
-  font-weight: 600;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  text-decoration: none;
+  font-weight: 400;
   line-height: unset;
   min-height: 2rem;
   padding: 0 .7rem;
   border-radius: 2px;
+  text-decoration: none;
   border: 1px solid #CFD8DC;
   background: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   outline: 0;
   cursor: pointer;
@@ -3424,6 +3421,7 @@ blockquote em {
   position: absolute;
   right: -.5rem;
   top: 0;
+  line-height: 1rem;
 }
 
 .header .notification_value {
@@ -3933,6 +3931,10 @@ blockquote em {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+.article__subscribe .social__link {
+  margin-right: 0;
 }
 
 .article__subscribe-col {
@@ -6522,8 +6524,6 @@ main > .article:nth-last-child(2):after {
 
 .price-index__header .btn {
   line-height: 40px;
-  text-transform: uppercase;
-  letter-spacing: .25em;
   justify-content: flex-start;
   width: 100%;
   padding: 0 1rem;
@@ -7532,7 +7532,7 @@ transition {
   }
 
   .article__subscribe-col:first-child {
-    width: 66%;
+    width: 61%;
     min-width: 280px;
   }
 
@@ -8901,7 +8901,7 @@ transition {
   }
 
   .price-index_chart.chart-row .tradingview-widget-container {
-    max-width: 326px;
+    max-width: 310px;
   }
 
   .cryptocurrency_price__block {
