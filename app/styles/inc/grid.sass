@@ -1,7 +1,7 @@
 .container
   max-width: $container-sm-px
   margin: * auto
-  padding: * 1rem
+  padding: * 1rem @xl * .5rem
 
 @media $md
   .container
@@ -82,7 +82,7 @@
 
 
 .main-news-block
-  width: 100% @md 480px @xl 712px
+  width: 100% @md 480px @xl 760px
   order: @md-down 2
 
   & > *
@@ -107,7 +107,7 @@
   @extend .aside-block
 
 .aside-menu-block
-  max-width: 100% @md 240px @xl 360px
+  max-width: 100% @md 240px @xl 350px
   width: 100%
 
   .inner-wrapper-sticky
