@@ -183,7 +183,7 @@ a,button {
 
 .title-mark {
   color: #f44336;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1rem;
   text-transform: uppercase;
   letter-spacing: .25em;
@@ -1436,12 +1436,8 @@ aside {
 
 .card .btn--accent {
   width: 100%;
-  margin-top: 1.2rem;
-  font-size: 13px;
-  line-height: 24px;
-  text-transform: none;
-  letter-spacing: normal;
-  padding: 0;
+  min-height: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card--tweet {
@@ -1467,15 +1463,16 @@ aside {
 }
 
 .card__title--border {
-  text-transform: uppercase;
   color: #263238;
-  font-size: 0.6875rem;
-  line-height: 2.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
   font-weight: 600;
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   margin-bottom: 0;
-  letter-spacing: .25em;
   border-bottom: 1px solid #CFD8DC;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .card__desc {
@@ -1603,7 +1600,7 @@ aside {
 
 .card .text-tiny {
   color: #90a4ae;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
 }
 
 .card .follow__block {
@@ -1666,8 +1663,9 @@ aside {
 
 .card--miners .card__body .aside-story__text {
   color: #78909C;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1rem;
+  margin-top: .5rem;
 }
 
 .form__group {
@@ -1858,12 +1856,8 @@ textarea.input__elem {
   padding-right: .75rem;
   padding-left: .75rem;
   color: #263238;
-  font-weight: 600;
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  text-decoration: none;
+  font-size: 0.8125rem;
+  font-variant: none;
   line-height: 1.1;
   background-size: 24px 24px;
   background-position: 47px center;
@@ -2116,7 +2110,7 @@ blockquote em {
 
 .tabs__item + .tabs__item {
   margin-left: 1.5rem;
-  margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
 .tabs__item-title {
@@ -2337,7 +2331,6 @@ blockquote em {
 
 .accordion {
   border-radius: 2px;
-  border: 1px solid #CFD8DC;
   background-color: #FFFFFF;
 }
 
@@ -2372,12 +2365,10 @@ blockquote em {
 }
 
 .accordion__title {
-  font-weight: 600;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  padding: .44rem 1rem;
+  font-weight: 600;
+  padding: .5rem 1rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2713,11 +2704,8 @@ blockquote em {
 
 .modal__item-header-title {
   color: #90A4AE;
-  font-weight: 600;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
   text-align: center;
   width: 100%;
   margin-bottom: .5rem;
@@ -3130,14 +3118,13 @@ blockquote em {
 
 .currencies__link {
   color: #263238;
+  font-size: 0.8125rem;
+  line-height: 1.6;
   font-weight: 600;
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: .25em;
+  font-variant: none;
   text-transform: uppercase;
-  text-decoration: none;
   display: flex;
-  padding: .22rem 0;
+  padding: .1rem 0;
   flex-wrap: nowrap;
 }
 
@@ -3146,7 +3133,7 @@ blockquote em {
 }
 
 .currencies__name {
-  margin-right: .4rem;
+  margin-right: .5rem;
   margin-bottom: .1rem;
   height: 15px;
   display: inline-block;
@@ -3168,7 +3155,7 @@ blockquote em {
 .currencies__price {
   color: #78909C;
   width: 100%;
-  margin-left: .2rem;
+  margin-left: .5rem;
 }
 
 .currencies__currency {
@@ -3341,11 +3328,9 @@ blockquote em {
 
 .header__nav-child-link {
   color: #263238;
-  font-weight: 600;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+  font-weight: 600;
   text-decoration: none;
   text-transform: none;
   letter-spacing: normal;
@@ -3479,11 +3464,9 @@ blockquote em {
 }
 
 .mobile-menu-back {
-  font-weight: 600;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+  font-weight: 600;
   line-height: 3.4375rem;
   padding-left: 44px;
   position: absolute;
@@ -3625,7 +3608,7 @@ blockquote em {
 }
 
 .article__label {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -3809,6 +3792,12 @@ blockquote em {
 .article__main-img-wrapper {
   overflow: hidden;
   position: relative;
+}
+
+.article__content p iframe {
+  margin-top: 1rem;
+  max-width: 728px;
+  width: 100%;
 }
 
 .article__contents {
@@ -5068,7 +5057,7 @@ main > .article:nth-last-child(2):after {
 .promoted__mark,.sponsored__mark {
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: #FFFFFF;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1rem;
   font-weight: 500;
   padding: 0 .5rem;
@@ -5266,10 +5255,6 @@ main > .article:nth-last-child(2):after {
   border-bottom: 0;
 }
 
-.news__item-time {
-  margin-right: .3rem;
-}
-
 .news__item-time-wrapper {
   min-width: 7.4rem;
   text-align: right;
@@ -5375,8 +5360,8 @@ main > .article:nth-last-child(2):after {
 .rate-billet__name {
   color: #000;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 0.9375rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   white-space: nowrap;
   text-transform: uppercase;
   display: inline-flex;
@@ -5404,8 +5389,8 @@ main > .article:nth-last-child(2):after {
 .rate-billet__price {
   color: #000;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 0.9375rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   white-space: nowrap;
   text-transform: uppercase;
   display: inline-flex;
@@ -6387,7 +6372,7 @@ main > .article:nth-last-child(2):after {
 
 .profile__item--name {
   color: #78909C;
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   line-height: 1.8;
   letter-spacing: .01em;
   -webkit-user-select: none;
@@ -6581,11 +6566,9 @@ main > .article:nth-last-child(2):after {
 
 .price-index__coin-short {
   background: #F5F5F5;
-  font-weight: 600;
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  font-weight: 500;
   border-radius: 2px;
   padding: .1rem .2rem;
   margin-left: .5rem;
@@ -7661,7 +7644,6 @@ transition {
   .aside-story__img-wrapper {
     width: 72px;
     min-width: 72px;
-    margin-right: 0.5rem;
   }
 
   .breaking {
@@ -7716,10 +7698,6 @@ transition {
 
   .news__item {
     display: flex;
-  }
-
-  .news__item-time {
-    margin-right: 1rem;
   }
 
   .news-featured__item {
@@ -8089,10 +8067,6 @@ transition {
     align-items: center;
   }
 
-  .card .text-tiny {
-    font-size: 0.8125rem;
-  }
-
   .card--related {
     padding: 1rem;
     display: flex;
@@ -8108,10 +8082,6 @@ transition {
   .card--miners {
     padding: 0;
     margin-bottom: 2rem;
-  }
-
-  .card--miners .card__body .aside-story__text {
-    font-size: 0.8125rem;
   }
 
   .form__group {
@@ -8209,6 +8179,10 @@ transition {
     margin: 0 1.5rem;
     display: flex;
     align-items: center;
+  }
+
+  .header__nav-child-link {
+    font-size: 0.6875rem;
   }
 
   .header__search {
@@ -8470,10 +8444,6 @@ transition {
   .aside-story--miners .btn:last-child {
     margin-left: .75rem;
     margin-top: 0;
-  }
-
-  .aside-story__img-wrapper {
-    margin-right: 1rem;
   }
 
   .aside-story__text {
@@ -9317,7 +9287,6 @@ transition {
 }
 
 .accordion {
-  border: none;
   border-bottom: 1px solid #263238;
 }
 
@@ -9783,6 +9752,10 @@ transition {
 
   .article__summary-bookmarks:before {
     margin-right: 0;
+  }
+
+  .article__content p iframe {
+    height: 300px;
   }
 
   .article__related {

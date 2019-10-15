@@ -72,12 +72,6 @@ html(lang="en" dir="ltr" ⚡)
                 a.social__link.social__link--tw(href='#!tw')
                 a.social__link.social__link--em(href='#!em')
 
-            .sidebar__lang
-                .sidebar__lang-item.active
-                    a.sidebar__lang-link(href='#!en') English
-                .sidebar__lang-item
-                    a.sidebar__lang-link(href='#!es') Español
-
             nav.sidebar__nav
                 ul.sidebar__nav-list
                     each category in navFooter
@@ -94,8 +88,6 @@ html(lang="en" dir="ltr" ⚡)
             header.header
                 a.header__logo(href="/")
                     include ../img/icons/logo.svg
-                    include ../img/icons/logo-news.svg
-                    include ../img/icons/logo-101.svg
 
                 button.mobile-menu__btn(on="tap:sidebar.toggle")
                     include ../img/icons/burger.svg
@@ -106,8 +98,10 @@ html(lang="en" dir="ltr" ⚡)
                         .humble.humble--icon.humble--views.humble--tiny.humble--views__bold 123k
                         .humble.humble--icon.humble--liked.humble--tiny.humble--liked__bold 31
                         .humble.humble--icon.humble--comments.humble--tiny.humble--comments__bold 256
-                span.article__label.article__label--original U.TODAY Original Article
-                span.article__label.article__label--tweet Tweet-based article
+                span.article__label U.TODAY Original Article
+                    include ../img/icons/logotype.svg
+                span.article__label Tweet-based article
+                    include ../img/icons/social/twitter.svg
                 h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
                 section.asset.asset-wide(style="background-color: #192047;")
                     a.asset--link(target='_blank', href='https://www.cryptodailytrading.com/')
@@ -121,7 +115,7 @@ html(lang="en" dir="ltr" ⚡)
                                 .right
                                     .author__item-wrapper
                                         a.author__item-name.humble(href="#!") Konstantin Konstantinopolsky
-                                        .author__item-tag.humble ⭐ Featured
+                                        .author__item-tag.humble Featured
                                     .author__item-body
                                         .author__item-msg
                                             p
@@ -133,13 +127,12 @@ html(lang="en" dir="ltr" ⚡)
                         .title You may also like:
                         .under_main-img__list
                             a.under_main-img__item(href="#!")
-                                | 🔥
                                 span.red TOP STORY
                                 |  Bitcoin Price Prediction for November: The Market Is Wound Up and Waiting
                             a.under_main-img__item(href="#!")
-                                | 🚀 Original Bitcoin Fork, BCH, Gets Exchanges’ Seal of Approval for Upcoming Fork
+                                | Original Bitcoin Fork, BCH, Gets Exchanges’ Seal of Approval for Upcoming Fork
                             a.under_main-img__item(href="#!")
-                                | 💎 Brave Rewards Now Available for Android
+                                | Brave Rewards Now Available for Android
                     .disclaimer
                         p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
                 section.article__content
@@ -150,13 +143,13 @@ html(lang="en" dir="ltr" ⚡)
                     p(dir="ltr")
                         .article__related
                             a.article__related-link(href="#!")
-                                | 👉 <span class="red">MUST READ</span> Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
+                                | <span class="red">MUST READ</span> Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
                             a.article__related-img--wrapper(href="#!")
                                 amp-img.article__related-img(src='https://u.today/sites/default/files/styles/300/public/node-14829.jpg?itok=ToZpi6kq', layout='responsive', width="135px", height="85px")
                     p
                         | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
                     .article__subscribe
-                        .article__subscribe-title ✉ Sign up to daily updates
+                        .article__subscribe-title Sign up to daily updates
 
                         form.form--row.article__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
                             .input
@@ -279,7 +272,7 @@ html(lang="en" dir="ltr" ⚡)
                                     a.social__link.social__link--fb(href="#!fb")
                             p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
                 section.article__amp-recommended
-                    .article__amp-recommended-title 👓 Recommended articles
+                    .article__amp-recommended-title Recommended articles
 
                     .article__amp-recommended-list.article__amp-recommended-list--yellow
                         each item in ['Decentralization and Social Platforms: ONO’s Bashir Modanov Exclusive', 'Crypto Prices Can Be Predicted, Says Science', 'Trust Arms Race in the Age of Cryptography: Max Borders Interview']
@@ -338,4 +331,4 @@ html(lang="en" dir="ltr" ⚡)
                     .amp-subscribe.amp-subscribe_no-fix.non_amp_version
                         .subscribe__content.container
                             .subscribe_btn__block
-                                a.subscribe_btn(href="#!") 👀 View non-AMP version
+                                a.subscribe_btn(href="#!") View non-AMP version
