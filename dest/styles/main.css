@@ -6490,8 +6490,6 @@ main > .article:nth-last-child(2):after {
 }
 
 .price-index__aside {
-  border: 1px solid #CFD8DC;
-  border-radius: 2px;
   background-color: #FFFFFF;
   overflow: hidden;
   max-height: 40px;
@@ -6516,6 +6514,7 @@ main > .article:nth-last-child(2):after {
 
 .price-index__header .btn {
   line-height: 40px;
+  font-weight: 600;
   justify-content: flex-start;
   width: 100%;
   padding: 0 1rem;
