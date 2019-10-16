@@ -3795,9 +3795,9 @@ blockquote em {
 }
 
 .article__content iframe {
-  margin-top: 1rem;
+  margin: 1.5rem 0;
   max-width: 728px;
-  width: 100%;
+  width: 100% !important;
 }
 
 .article__contents {
