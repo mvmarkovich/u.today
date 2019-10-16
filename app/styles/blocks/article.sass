@@ -332,7 +332,7 @@
     .article__recommended-item-title
       @extend .link-plain
       background-color: transparent
-      margin: 1rem 0 0
+      margin: 1rem 0 0 0  @md 0 0 0 1rem @xl 1rem 0 0 0
       padding: 0
       text: #263238 13px 1.8 500
 
@@ -340,9 +340,7 @@
       box: left
       flex-wrap: nowrap @md wrap
       margin: @md * -.51rem * -.5rem
-      margin-bottom: .5rem @md 0
       overflow: auto @md hidden
-      padding: * 1rem @sm * 0
 
       &::-webkit-scrollbar-track
         border-radius: 10px
@@ -367,6 +365,7 @@
       &-slide
         margin: 1.5rem -1rem 0 @sm 1.5rem 0 0
         overflow: hidden
+        padding: @sm-down 1rem
 
         &--yellow
           background-color: #fffcc0
@@ -375,39 +374,21 @@
 
           .article__recommended-item
             background-color: #fffcc0
-            width: @xl-down 100%
-            margin-left: @md-down 0
             margin-bottom: @xl 0
 
             &:last-child
               margin-bottom: @xl-down 0
 
-          .article__recommended-link
-            box: horizontal @xl vertical
-
-          .article__recommended-item-title
-            margin-left: @xl-down 1rem
-            margin-top: @xl-down 0
-
-          .article__recommended-wrapper--img
-            max-width: @xl-down 208px @md-down 96px
-            min-width: @xl-down 208px @md-down 96px
-
-          .article__recommended-list
-            display: @md-down block
-            padding-bottom: @md-down 0
-            margin-bottom: @md-down 0
-            padding: @sm-down 0
-            overflow: hidden
 
     &-item
-      width: 185px @sm calc(45% - 1rem) @md calc(50% - 1rem) @xl calc(100% / 3 - 1rem)
-      min-width: 185px @sm calc(45% - 1rem) @md calc(50% - 1rem) @xl calc(100% / 3 - 1rem)
+      width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
+      min-width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
       margin: * .5rem
-      margin-bottom: 1.5rem
+      margin-bottom: 0 @md 1rem @xl 0
 
       &:first-child
         margin-left: @md-down 0
+
       &:last-child
         margin-right: @md-down 0
         margin-bottom: 0
@@ -420,18 +401,20 @@
       
     &-wrapper--img
       position: relative
+      max-width: @md 208px @xl 100%
+      min-width: @md 208px @xl 1px
 
     &-link
+      @extend .link-plain
       text: $body-small
       margin-bottom: .1rem
-      display: block
-      @extend .link-plain
+      box: vertical @md horizontal @xl vertical
 
     &-info
       box: center wrap
 
     .btn
-      margin: 0 0 1.5rem @sm 2rem * @xl 0
+      margin: 1.5rem 0
       box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35)
 
   .something--content
