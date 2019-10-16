@@ -3794,7 +3794,7 @@ blockquote em {
   position: relative;
 }
 
-.article__content p iframe {
+.article__content iframe {
   margin-top: 1rem;
   max-width: 728px;
   width: 100%;
@@ -9728,7 +9728,7 @@ transition {
     margin-right: 0;
   }
 
-  .article__content p iframe {
+  .article__content iframe {
     height: 300px;
   }
 
