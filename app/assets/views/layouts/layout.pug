@@ -23,26 +23,25 @@ html(lang="en" dir="ltr")
       link(href="styles/main.css" rel="stylesheet")
 
   body
-    .main-page
 
-      .something.something--header(style="background-color: #222863")
-        a.something__header-long(href="#!")
-          img(src="img/something/iqmining_1-long.png" alt="something-header")
+    .something.something--header(style="background-color: #222863")
+      a.something__header-long(href="#!")
+        img(src="img/something/iqmining_1-long.png" alt="something-header")
 
-      include ../blocks/currencies.pug
+    include ../blocks/currencies.pug
 
-      include ../inc/header.pug
+    include ../inc/header.pug
 
-      .page-container.container
-        block content
+    .page-container.container
+      block content
 
-      include ../inc/footer.pug
+    include ../inc/footer.pug
 
-      include ../inc/fixed-banner.pug
+    include ../inc/fixed-banner.pug
 
-      include ../inc/share.pug
+    include ../inc/share.pug
 
-      // include ../inc/fixed-banner
+    // include ../inc/fixed-banner
 
     include ../blocks/modal.pug
 

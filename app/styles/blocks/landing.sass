@@ -1,0 +1,221 @@
+.landing
+
+  & ~ .footer
+    margin-top: 0
+
+  &__title
+    text: $neutral 600 22px @md 31px @xl 43px
+    text-align: center
+    margin-bottom: 2rem @xl 2.75rem
+
+  &__subtitle
+    text: 600 22px @md 24px @xl 31px
+    text-align: center
+    margin-bottom: 4rem
+
+  &__descr
+    text: $pseudo-neutral-900 500 14px @xl 18px
+    text-align: center
+    margin-bottom: 0
+
+  &__mark
+    text: $neutral 500 15px 1.8 @xl 24px
+    text-align: center
+
+  &__caption
+    margin-top: 1.5rem
+    display: block
+    text-align: center
+
+  .text-link
+    @extend .link-plain
+    text: $accent-1-light
+
+  .btn--block
+    justify-content: center
+    margin-top: 3rem
+
+    .btn
+      min-width: 230px
+
+  .border-top
+    border-top: $border
+
+  .text-grey
+    text: $pseudo-neutral-200
+
+  h3
+    text: 600 15px @xl 24px
+    text-align: center
+    margin-bottom: 3rem
+
+  h2 ~ h3
+    margin-top: -3rem
+
+  &__section
+
+    .container
+      padding: 4rem *
+
+    &-big
+      .container
+        padding: 4rem * @xl 90px * 75px
+
+    &-large
+      .container
+        padding: 4rem * @xl 4rem * 130px
+
+    &-background
+      background-image: url("../img/content/background/bg-landing-1.png")
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+
+      &--map
+        background-image: url("../img/content/background/bg-landing-2.png")
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+
+      h1, h2, p
+        text: $neutral
+
+  &__benefits
+
+    &-list
+      @extend .list-reset
+      box: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+      margin-top: 0 @md -2.5rem @xl -3rem
+
+    &-item
+      text: 500 14px 1.8 @xl 17px
+      width: 100% @md 48%
+      display: inline-flex
+      align-items: flex-start
+      margin-top: 0 @md 2.5rem @xl 3rem
+
+      & + &
+        margin-top: 2rem
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/i.landing__certificate.svg', fill: #1977CC)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        size: 57px 49px
+        min-width: 57px
+        display: block
+        margin-right: 2rem @xl 2.5rem
+
+  &__request
+
+    &-list
+      @extend .list-reset
+      box: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+      margin-top: 0 @md 2.5rem @xl 3rem
+
+    &-item
+      text: 500 14px 1.8 @xl 17px
+      width: 100% @md 48%
+      display: inline-flex
+      align-items: flex-start
+      margin-top: 0 @md 2.5rem @xl 3rem
+
+      & + &
+        margin-top: 2rem
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/i.landing__correct.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        size: 57px
+        min-width: 57px
+        display: block
+        margin-right: 2rem @xl 2.5rem
+
+  &__location
+
+    &-list
+      @extend .list-reset
+      box: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+      margin-top: -1.5rem
+
+    &-item
+      text: $neutral 500 14px 1.8 @xl 17px
+      width: 49% @sm 30% @md 26%
+      display: inline-flex
+      align-items: flex-start
+      margin-top: 1.5rem
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/i.landing__location.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        size: 21px 31px
+        min-width: 21px
+        display: block
+        margin-right: .75rem
+
+  &__statistics
+
+    &-list
+      @extend .list-reset
+      box: middle
+      flex-wrap: wrap
+
+    &-item
+      display: @sm flex @md block
+      align-items: center
+      justify-content: center
+      width: 100% @md auto
+
+      & + &
+        margin-left: @md 60px @xl 80px
+        margin-top: @sm-down 1.5rem
+
+    &-caption
+      text: $neutral 500 14px 1.8 @md 17px
+      min-width: @sm 240px @md 1px
+      text-align: @sm-down center
+
+    &-value
+      text: $neutral 600 1.8 31px @md 43px @xl 47px
+      text-align: @sm-down center
+
+  &-center-container
+    max-width: 768px
+    margin: 0 auto
+
+  &__partners
+    box:
+    flex-wrap: wrap @md nowrap
+    align-items: center
+    justify-content: space-between @md center
+    margin-top: 1.5rem @md 2rem @xl 3rem
+
+    &-img
+
+      &--wrapper
+        width: @md-down 31%
+        margin-top: @md-down 1.25rem
+
+        & + &
+          margin-left: @md 1.25rem
+
+
+
+
+
+
+
