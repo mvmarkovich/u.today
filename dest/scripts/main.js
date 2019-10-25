@@ -232,7 +232,19 @@
       $(window).on("scroll", articleInfiniteScroll);
       $(window).on("resize", articleInfiniteScroll);
     });
-  }
+  };
+
+  $(".btn--close-something").on("click", function() {
+    $(".something--footer").addClass('hide');
+  });
+
+  $(window).on('resize scroll', function() {
+
+      $('.share-and-up').each(function(){
+        var height = $('.something--footer').outerHeight();
+        $(this).css('margin-bottom', height);
+      });
+  });
 
   $(".price-index__header .btn").on("click", function() {
     $(".price-index__aside").toggleClass("price-index__aside--close");

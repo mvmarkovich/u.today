@@ -55,7 +55,6 @@
     margin-bottom: 1rem @xl 2rem
     margin: @sm-down * -1rem
 
-
   &-long
     display: @md-down none
 
@@ -63,9 +62,20 @@
     display: @md none
 
   &--footer
-    position: fixed null 0 0 0
-    height: 48px
+    display: flex @md none
+    position: fixed null 16px 16px 16px
     z-index: 98
+    flex-direction: column
+    align-items: flex-end
+    background-color: transparent
+
+    &.hide
+      height: 0
+      display: none
+
+  &__footer
+
+    &-long
 
   &__wrapper
     margin-bottom: 1rem @xl 1.5rem
