@@ -6270,8 +6270,25 @@ main > .article:nth-last-child(2):after {
   letter-spacing: .015em;
 }
 
-.content-block__descr {
+.content-block .content-block__descr {
   padding: 1rem;
+}
+
+.content-block .content-block__descr p:last-child {
+  margin-bottom: 0;
+}
+
+.content-block__descr {
+  padding: 0;
+  background-color: #fff;
+}
+
+.content-block__descr .article__main {
+  padding: 0;
+}
+
+.content-block__descr .article__main p {
+  margin-bottom: 0;
 }
 
 .staff__item {
@@ -7342,7 +7359,7 @@ transition {
     margin-bottom: 2rem;
   }
 
-  .content-block__descr {
+  .content-block .content-block__descr {
     padding: 1.5rem 2rem;
   }
 

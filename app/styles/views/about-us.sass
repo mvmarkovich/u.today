@@ -39,8 +39,22 @@
 
 .content-block
 
-  &__descr
+  .content-block__descr
     padding: 1rem @sm 1.5rem 2rem
+
+    p
+      &:last-child
+        margin-bottom: 0
+
+  &__descr
+    padding: 0
+    background-color: #fff
+
+    .article__main
+      padding: 0
+
+      p
+        margin-bottom: 0
 
 .staff
 
