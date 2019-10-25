@@ -232,18 +232,17 @@
       $(window).on("scroll", articleInfiniteScroll);
       $(window).on("resize", articleInfiniteScroll);
     });
-  };
+  }
+
+  $(window).on('resize scroll', function() {
+      if ($(window).width() <= 888) {
+        $('.share-and-up').css('margin-bottom', $('.something--footer').height());
+      }
+  });
 
   $(".btn--close-something").on("click", function() {
     $(".something--footer").addClass('hide');
-  });
-
-  $(window).on('resize scroll', function() {
-
-      $('.share-and-up').each(function(){
-        var height = $('.something--footer').outerHeight();
-        $(this).css('margin-bottom', height);
-      });
+    $('.share-and-up').css('margin-bottom', '0');
   });
 
   $(".price-index__header .btn").on("click", function() {

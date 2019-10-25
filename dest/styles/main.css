@@ -2530,6 +2530,7 @@ blockquote em {
   height: 48px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(33, 150, 243, 0.5);
+  background-color: #FFFFFF;
   margin-top: auto !important;
   display: none;
 }
@@ -5163,7 +5164,7 @@ main > .article:nth-last-child(2):after {
   display: inline-flex;
   position: relative;
   margin-top: 1.5rem;
-  z-index: 100;
+  z-index: 0;
 }
 
 .medium_categories__slider-nav .slick-arrow {
@@ -7514,6 +7515,7 @@ transition {
 
   .something--footer {
     display: none;
+    height: 0;
   }
 
   .social--border .social__link {
