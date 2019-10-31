@@ -3924,8 +3924,8 @@ blockquote em {
   margin: 0;
 }
 
-.article__related_img {
-  max-height: 120px;
+.article__related_img a {
+  display: flex;
 }
 
 .article__related-img {
