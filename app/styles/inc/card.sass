@@ -41,6 +41,7 @@
       margin-bottom: 0 @xl 0
       border-bottom: $border
       box: center
+      justify-content: space-between
       min-height: 2.5rem
 
   &__desc
@@ -196,10 +197,46 @@
 
       .aside-story--miners
         padding: 1rem
+        align-items: flex-start @xs center @md flex-start @xl center
+
+      .aside-story__name
+        min-width: 115px
 
       .aside-story__text
         text: #78909C 13px 16px
         margin-top: .5rem
+
+      .aside-story__img
+
+        &-wrapper
+          max-width: 85px
+          min-width: 85px
+          background: transparent
+
+          margin-top: 1rem @xs 0 @md 1rem @xl 0
+
+  &__body
+    &-counter
+      background-color: #fff
+      counter-reset: section
+
+      .btn--block
+        .btn
+          &:last-child
+            margin-top: @md 0
+
+      .aside-story
+        &:before
+          counter-increment: section
+          content: "#" counter(section)
+          text: $pseudo-neutral-200 13px 1.8
+          margin-right: .25rem
+          position: relative @xs static @md relative @xl static
+          top: -3px
+
+  &__mark
+    text: $pseudo-neutral-200 13px 1.8 400
+
 
 
 

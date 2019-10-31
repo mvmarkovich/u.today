@@ -79,9 +79,13 @@
 
   &__row
     box: space-between
-    align-items: flex-start
+    align-items: center @md flex-start @xl center
     width: 100%
     margin-top: 0
+
+    &-center
+      display: block @xs flex @md block @xl flex
+      align-items: center
 
   &__link
     text: $pseudo-neutral-900 13px 1.9 500
