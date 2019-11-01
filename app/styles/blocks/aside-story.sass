@@ -55,6 +55,9 @@
         margin-left: .75rem @md 0 @xl .75rem
         margin-top: 0 @md .75rem @xl 0
 
+    a.aside-story__name
+      @extend .link-plain
+
   &__name
     text: $pseudo-neutral-900 13px 16px 600
 
@@ -84,7 +87,7 @@
     margin-top: 0
 
     &-center
-      display: block @xs flex @md block @xl flex
+      display: flex @md block @xl flex
       align-items: center
 
   &__link
