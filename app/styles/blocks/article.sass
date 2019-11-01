@@ -422,6 +422,12 @@
   .something--content
     margin: @sm-down 1.5rem -1rem
 
+  &--mobile-visible
+    display: block @md none
+
+  .card
+    margin: 1rem 0
+
 .author
 
   &_block
@@ -601,9 +607,10 @@ main > .article
 
 .fix-block
   position: fixed null 0 0 null
-  z-index: 99
+  z-index: 3
   padding: 1rem
   width: 100%
+  background-color: transparent
   display: @md-l none
 
   .row

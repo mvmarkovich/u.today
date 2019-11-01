@@ -190,7 +190,7 @@
   if ($articles.length) {
     var viewHeight = $(window).height();
     var $articleContainer = $(".article-infinite-scroll");
-    var $articleInContainer = $(".main-block > .article:first-child");
+    var $articleInContainer = $(".main-news-block > .article:first-child");
     var stop = false;
 
     function articleInfiniteScroll() {
@@ -206,7 +206,7 @@
         return;
       }
 
-      var articlePrev = $(".main-block > .article:last").get(0);
+      var articlePrev = $(".main-news-block > .article:last").get(0);
       var articleRect = article.getBoundingClientRect();
       var articlePrevRect = articlePrev.getBoundingClientRect();
 
@@ -216,7 +216,7 @@
         $(article).addClass("article--full-show")
 
         var articleDetach = $(article).detach();
-        $(".main-block > .article:last").after(articleDetach[0]);
+        $(".main-news-block > .article:last").after(articleDetach[0]);
       }
 
       if (articleRect.top - viewHeight * 1.35 < 0) {

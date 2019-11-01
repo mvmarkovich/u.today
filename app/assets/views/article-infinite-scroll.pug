@@ -4,15 +4,18 @@ block title
   title Article Infinite | u.today
 
 block content
-  .content-container
-    main.main-block
+  .main-aside-container
+    main.main-news-block
+
       include blocks/article-infinite-scroll.pug
+
       +article-infinite-scroll(1)
 
       .article-infinite-scroll
-        each i in [2,3,4,5,6,7,8,9]
+        each i in [2,3,4]
           +article-infinite-scroll(i)
 
-    aside.aside-block
-      include blocks/aside.pug
+    aside.aside-menu-block
+
+      include blocks/aside-menu-block.pug
 

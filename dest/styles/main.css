@@ -506,6 +506,8 @@ h5 {
 
 .main-news-block {
   width: 100%;
+  position: relative;
+  z-index: 99;
 }
 
 .main-news-block > * {
@@ -1230,7 +1232,7 @@ aside {
   right: 16px;
   bottom: 16px;
   left: 16px;
-  z-index: 98;
+  z-index: 106;
   flex-direction: column;
   align-items: flex-end;
   background-color: transparent;
@@ -4113,6 +4115,14 @@ blockquote em {
 .article .something--content {
 }
 
+.article--mobile-visible {
+  display: block;
+}
+
+.article .card {
+  margin: 1rem 0;
+}
+
 .author_block {
   margin: 2rem 0;
   position: relative;
@@ -4328,9 +4338,10 @@ main > .article:nth-last-child(2):after {
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: 3;
   padding: 1rem;
   width: 100%;
+  background-color: transparent;
 }
 
 .fix-block .row {
@@ -7849,6 +7860,10 @@ transition {
   .article__recommended-link {
     display: flex;
     flex-direction: row;
+  }
+
+  .article--mobile-visible {
+    display: none;
   }
 
   .author_block .author__item-msg p {
