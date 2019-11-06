@@ -206,7 +206,7 @@ a,button {
   line-height: 1.9;
 }
 
-.about-author_avatar img,.article > img,.article__main-img,.aside-story__img,.card--related .related_img img,.event__main-img,.img,.partners__img,.rate-billet-img,.staff__img,.top-story__img-wrapper,img:not([class]) {
+.about-author_avatar img,.article > img,.article__main-img,.aside-story__img,.card--related .related_img img,.event__main-img,.img,.landing__benefits-img,.partners__img,.rate-billet-img,.staff__img,.top-story__img-wrapper,img:not([class]) {
   display: block;
   max-width: 100%;
 }
@@ -357,16 +357,16 @@ a,button {
   border-color: #1565C0;
 }
 
-.about-author_avatar img.caption a,.about-author_name,.article > img.caption a,.article__contents-link,.article__main-img.caption a,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story--miners a.aside-story__name,.aside-story__img.caption a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card--related .related_img img.caption a,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.event__main-img.caption a,.footer__nav-child-link,.footer__nav-link,.humble--author,.image-source-text a,.img.caption a,.input__checkbox-label a,.landing .text-link,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__img.caption a,.partners__link,.price-index__header .btn,.rate-billet-img.caption a,.show-more,.staff__img.caption a,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__img-wrapper.caption a,.top-story__mark,.top-story__title,.under_main-img__item,.user--login__descr,.user--logout,a.category-item__title,figcaption a,img:not([class]).caption a {
+.about-author_avatar img.caption a,.about-author_name,.article > img.caption a,.article__contents-link,.article__main-img.caption a,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story--miners a.aside-story__name,.aside-story__img.caption a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card--related .related_img img.caption a,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.event__main-img.caption a,.footer__nav-child-link,.footer__nav-link,.humble--author,.image-source-text a,.img.caption a,.input__checkbox-label a,.landing .text-link,.landing__benefits-img.caption a,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__img.caption a,.partners__link,.price-index__header .btn,.rate-billet-img.caption a,.show-more,.staff__img.caption a,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__img-wrapper.caption a,.top-story__mark,.top-story__title,.under_main-img__item,.user--login__descr,.user--logout,a.category-item__title,figcaption a,img:not([class]).caption a {
   color: #263238;
   text-decoration: none;
 }
 
-.about-author_avatar img.caption a:hover,.about-author_name:hover,.article > img.caption a:hover,.article__contents-link:hover,.article__main-img.caption a:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story--miners a.aside-story__name:hover,.aside-story__img.caption a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related .related_img img.caption a:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.event__main-img.caption a:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.image-source-text a:hover,.img.caption a:hover,.input__checkbox-label a:hover,.landing .text-link:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__img.caption a:hover,.partners__link:hover,.price-index__header .btn:hover,.rate-billet-img.caption a:hover,.show-more:hover,.staff__img.caption a:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__img-wrapper.caption a:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--login__descr:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover,img:not([class]).caption a:hover {
+.about-author_avatar img.caption a:hover,.about-author_name:hover,.article > img.caption a:hover,.article__contents-link:hover,.article__main-img.caption a:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story--miners a.aside-story__name:hover,.aside-story__img.caption a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related .related_img img.caption a:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.event__main-img.caption a:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.image-source-text a:hover,.img.caption a:hover,.input__checkbox-label a:hover,.landing .text-link:hover,.landing__benefits-img.caption a:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__img.caption a:hover,.partners__link:hover,.price-index__header .btn:hover,.rate-billet-img.caption a:hover,.show-more:hover,.staff__img.caption a:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__img-wrapper.caption a:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--login__descr:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover,img:not([class]).caption a:hover {
   color: #2196F3;
 }
 
-.about-author_avatar img.caption a:active,.about-author_name:active,.article > img.caption a:active,.article__contents-link:active,.article__main-img.caption a:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story--miners a.aside-story__name:active,.aside-story__img.caption a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related .related_img img.caption a:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.event__main-img.caption a:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.image-source-text a:active,.img.caption a:active,.input__checkbox-label a:active,.landing .text-link:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__img.caption a:active,.partners__link:active,.price-index__header .btn:active,.rate-billet-img.caption a:active,.show-more:active,.staff__img.caption a:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__img-wrapper.caption a:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--login__descr:active,.user--logout:active,a.category-item__title:active,figcaption a:active,img:not([class]).caption a:active {
+.about-author_avatar img.caption a:active,.about-author_name:active,.article > img.caption a:active,.article__contents-link:active,.article__main-img.caption a:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story--miners a.aside-story__name:active,.aside-story__img.caption a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related .related_img img.caption a:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.event__main-img.caption a:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.image-source-text a:active,.img.caption a:active,.input__checkbox-label a:active,.landing .text-link:active,.landing__benefits-img.caption a:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__img.caption a:active,.partners__link:active,.price-index__header .btn:active,.rate-billet-img.caption a:active,.show-more:active,.staff__img.caption a:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__img-wrapper.caption a:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--login__descr:active,.user--logout:active,a.category-item__title:active,figcaption a:active,img:not([class]).caption a:active {
   color: #1565C0;
 }
 
@@ -5944,9 +5944,6 @@ main > .article:nth-last-child(2):after {
 }
 
 .landing__benefits-item {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.8;
   width: 100%;
   display: inline-flex;
   align-items: flex-start;
@@ -5957,17 +5954,20 @@ main > .article:nth-last-child(2):after {
   margin-top: 2rem;
 }
 
-.landing__benefits-item:before {
-  content: '';
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='57' height='50' viewBox='0 0 57 50' fill='%231977CC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.375 33.13V38H52.2442C53.5591 38 54.625 36.9338 54.625 35.6072V4.76778C54.625 3.44628 53.5813 2.375 52.2442 2.375H4.75585C3.44094 2.375 2.375 3.44119 2.375 4.76778V35.6072C2.375 36.9287 3.41871 38 4.75585 38H9.5V33.13C8.03084 31.6308 7.125 29.5774 7.125 27.3125C7.125 22.7216 10.8466 19 15.4375 19C20.0284 19 23.75 22.7216 23.75 27.3125C23.75 29.5774 22.8442 31.6308 21.375 33.13ZM11.875 34.8251V44.1749L15.4375 40.6125L19 44.1749V34.8251C17.9203 35.338 16.7124 35.625 15.4375 35.625C14.1626 35.625 12.9547 35.338 11.875 34.8251ZM9.5 40.375H4.76175C2.13044 40.375 0 38.2482 0 35.6247V4.75025C0 2.11389 2.13191 0 4.76175 0H52.2383C54.8696 0 57 2.12676 57 4.75025V35.6247C57 38.2611 54.8681 40.375 52.2383 40.375H21.375V49.875L15.4375 43.9375L9.5 49.875V40.375ZM7.125 11.875V14.25H49.875V11.875H7.125ZM28.5 19V21.375H49.875V19H28.5ZM35.625 26.125V28.5H49.875V26.125H35.625ZM15.4375 33.25C18.7167 33.25 21.375 30.5917 21.375 27.3125C21.375 24.0333 18.7167 21.375 15.4375 21.375C12.1583 21.375 9.5 24.0333 9.5 27.3125C9.5 30.5917 12.1583 33.25 15.4375 33.25Z'/%3E %3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 57px;
-  height: 49px;
-  min-width: 57px;
+.landing__benefits-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.landing__benefits-img--wrapper {
   display: block;
   margin-right: 2rem;
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  top: 3px;
 }
 
 .landing__request-list {
@@ -5994,15 +5994,17 @@ main > .article:nth-last-child(2):after {
 
 .landing__request-item:before {
   content: '';
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M16.7401 27.6498C15.9535 26.8632 14.6753 26.8632 13.8887 27.6498C13.1021 28.4364 13.1021 29.7147 13.8887 30.5013L23.1806 39.7932C23.5739 40.1865 24.0655 40.3832 24.6063 40.3832C24.6555 40.3832 24.6555 40.3832 24.7046 40.3832C25.2454 40.334 25.7862 40.0882 26.1795 39.6457L49.4339 11.77C50.1222 10.9342 50.0238 9.65599 49.188 8.91854C48.3523 8.23025 47.074 8.32858 46.3366 9.16436L24.4588 35.3685L16.7401 27.6498Z' fill='%23FF0000'/%3E %3Cpath d='M43.5834 5.13287C32.2758 -1.94667 17.7726 -0.275112 8.33321 9.16428C-2.77774 20.2752 -2.77774 38.4165 8.33321 49.5275C13.8887 55.083 21.214 57.8853 28.4902 57.8853C35.7664 57.8853 43.0918 55.083 48.6473 49.5275C58.1358 40.0389 59.7582 25.4866 52.6295 14.179C52.0395 13.2448 50.8105 12.9499 49.8764 13.5398C48.9422 14.1298 48.6473 15.3589 49.2372 16.293C55.3827 26.0273 53.9569 38.5149 45.7958 46.676C36.2581 56.2137 20.6732 56.2137 11.1355 46.676C1.59781 37.1383 1.59781 21.5535 11.1355 12.0158C19.2967 3.90378 31.735 2.47804 41.4694 8.52515C42.4035 9.11511 43.6326 8.82013 44.2226 7.88602C44.8125 6.95192 44.5175 5.72283 43.5834 5.13287Z' fill='%23C8C8C8'/%3E %3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Ccircle cx='24' cy='24' r='23' stroke='%23CFD8DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E %3Cpath d='M12 24.7273L19.5 32L36 16' stroke='%23CFD8DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 57px;
-  height: 57px;
-  min-width: 57px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   display: block;
   margin-right: 2rem;
+  position: relative;
+  top: 3px;
 }
 
 .landing__location-list {
@@ -6020,19 +6022,19 @@ main > .article:nth-last-child(2):after {
   line-height: 1.8;
   width: 49%;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 1.5rem;
 }
 
 .landing__location-item:before {
   content: '';
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='32' viewBox='0 0 21 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M10.5 0C4.70098 0 0 4.70098 0 10.5C0 12.3651 0.50085 14.1094 1.35345 15.6266C1.49507 15.8786 1.64351 16.1267 1.80469 16.3656L10.5 31.5L19.1953 16.3656C19.3292 16.1674 19.4447 15.9574 19.5641 15.75L19.6468 15.6266C20.4986 14.1094 21 12.3651 21 10.5C21 4.70098 16.2986 0 10.5 0ZM10.5 5.25C13.3993 5.25 15.75 7.60056 15.75 10.5C15.75 13.3993 13.3993 15.75 10.5 15.75C7.60056 15.75 5.25 13.3993 5.25 10.5C5.25 7.60056 7.60056 5.25 10.5 5.25Z' fill='%23FF0000'/%3E %3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M20 9.5C20 15 12 24.25 12 24.25C12 24.25 4 15 4 9.5C4 5.08172 7.58172 1.5 12 1.5C16.4183 1.5 20 5.08172 20 9.5Z' stroke='%23F44336' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E %3Ccircle cx='12' cy='9.5' r='4' stroke='%23F44336' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 21px;
-  height: 31px;
-  min-width: 21px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
   display: block;
   margin-right: .75rem;
 }
@@ -7002,7 +7004,7 @@ figure {
   margin: 2.3rem 0 2.1rem;
 }
 
-.about-author_avatar img.caption,.article > img.caption,.article__main-img.caption,.aside-story__img.caption,.card--related .related_img img.caption,.event__main-img.caption,.img.caption,.partners__img.caption,.rate-billet-img.caption,.staff__img.caption,.top-story__img-wrapper.caption,figcaption,img:not([class]).caption {
+.about-author_avatar img.caption,.article > img.caption,.article__main-img.caption,.aside-story__img.caption,.card--related .related_img img.caption,.event__main-img.caption,.img.caption,.landing__benefits-img.caption,.partners__img.caption,.rate-billet-img.caption,.staff__img.caption,.top-story__img-wrapper.caption,figcaption,img:not([class]).caption {
   color: #78909C;
   font-size: 0.8125rem;
   line-height: 1rem;
@@ -7011,7 +7013,7 @@ figure {
   font-family: 'Montserrat', sans-serif;
 }
 
-.about-author_avatar img.caption a,.article > img.caption a,.article__main-img.caption a,.aside-story__img.caption a,.card--related .related_img img.caption a,.event__main-img.caption a,.img.caption a,.partners__img.caption a,.rate-billet-img.caption a,.staff__img.caption a,.top-story__img-wrapper.caption a,figcaption a,img:not([class]).caption a {
+.about-author_avatar img.caption a,.article > img.caption a,.article__main-img.caption a,.aside-story__img.caption a,.card--related .related_img img.caption a,.event__main-img.caption a,.img.caption a,.landing__benefits-img.caption a,.partners__img.caption a,.rate-billet-img.caption a,.staff__img.caption a,.top-story__img-wrapper.caption a,figcaption a,img:not([class]).caption a {
   color: #2979FF;
 }
 
@@ -9170,12 +9172,16 @@ transition {
   }
 
   .landing__benefits-item {
-    font-size: 1.0625rem;
     margin-top: 3rem;
   }
 
-  .landing__benefits-item:before {
+  .landing__benefits-name {
+    font-size: 1.0625rem;
+  }
+
+  .landing__benefits-img--wrapper {
     margin-right: 2.5rem;
+    top: 7px;
   }
 
   .landing__request-list {
@@ -9189,6 +9195,7 @@ transition {
 
   .landing__request-item:before {
     margin-right: 2.5rem;
+    top: 7px;
   }
 
   .landing__location-item {
@@ -9645,7 +9652,7 @@ transition {
     margin-left: -1rem;
   }
 
-  .about-author_avatar img.caption,.article > img.caption,.article__main-img.caption,.aside-story__img.caption,.card--related .related_img img.caption,.event__main-img.caption,.img.caption,.partners__img.caption,.rate-billet-img.caption,.staff__img.caption,.top-story__img-wrapper.caption,figcaption,img:not([class]).caption {
+  .about-author_avatar img.caption,.article > img.caption,.article__main-img.caption,.aside-story__img.caption,.card--related .related_img img.caption,.event__main-img.caption,.img.caption,.landing__benefits-img.caption,.partners__img.caption,.rate-billet-img.caption,.staff__img.caption,.top-story__img-wrapper.caption,figcaption,img:not([class]).caption {
     margin-left: 1rem;
   }
 }

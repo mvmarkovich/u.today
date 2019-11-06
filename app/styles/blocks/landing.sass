@@ -90,7 +90,6 @@
       margin-top: 0 @md -2.5rem @xl -3rem
 
     &-item
-      text: 500 14px 1.8 @xl 17px
       width: 100% @md 48%
       display: inline-flex
       align-items: flex-start
@@ -99,16 +98,19 @@
       & + &
         margin-top: 2rem
 
-      &:before
-        content: ''
-        background-image: svg-load('icons/i.landing__certificate.svg', fill: #1977CC)
-        background-repeat: no-repeat
-        background-position: center
-        background-size: contain
-        size: 57px 49px
-        min-width: 57px
+    &-name
+      text: 500 14px 1.8 @xl 17px
+
+    &-img
+      @extend .img
+
+      &--wrapper
         display: block
         margin-right: 2rem @xl 2.5rem
+        min-width: 48px
+        size: 48px
+        position: relative
+        top: 3px @xl 7px
 
   &__request
 
@@ -135,10 +137,12 @@
         background-repeat: no-repeat
         background-position: center
         background-size: contain
-        size: 57px
-        min-width: 57px
+        size: 48px
+        min-width: 48px
         display: block
         margin-right: 2rem @xl 2.5rem
+        position: relative
+        top: 3px @xl 7px
 
   &__location
 
@@ -153,7 +157,7 @@
       text: $neutral 500 14px 1.8 @xl 17px
       width: 49% @sm 30% @md 26%
       display: inline-flex
-      align-items: flex-start
+      align-items: center
       margin-top: 1.5rem
 
       &:before
@@ -162,8 +166,8 @@
         background-repeat: no-repeat
         background-position: center
         background-size: contain
-        size: 21px 31px
-        min-width: 21px
+        size: 24px
+        min-width: 24px
         display: block
         margin-right: .75rem
 
