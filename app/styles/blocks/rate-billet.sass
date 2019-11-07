@@ -7,6 +7,7 @@
 
   &__info
     box:
+    align-items: center
     width: @xl-down 100%
     margin-bottom: @xl-down 1rem
     flex-wrap: @xs-down wrap
@@ -15,14 +16,14 @@
     box: center
 
   &__caption
-    text: #9BACBF 13px 16px 500
+    text: #9BACBF 12px 16px 500
     margin-right: 1rem
 
   &__name
-    text: #000 500 13px 16px
-    white-space: nowrap
-    display: inline-flex
-    align-items: center
+    text: #000 500 12px 16px
+    position: relative
+    white-space: @xl nowrap
+    padding-left: 29px
 
     &:before
       content: ''
@@ -33,12 +34,18 @@
       background-size: contain
       background-image: svg-load('icons/rate-billet.svg', stroke="#FF2E00", stroke-opacity="0.85")
       margin-right: .5rem
+      position: absolute
+      top: 1px
+      left: 0
 
     b
       padding: 0 .2rem
 
+    strong
+      padding: 0 .2rem
+
   &__price
-    text: #000 500 13px 16px
+    text: #000 500 12px 16px
     white-space: nowrap
     text-transform: uppercase
     display: inline-flex
@@ -55,7 +62,11 @@
     b
       padding: 0 .2rem
 
+    strong
+      padding: 0 .2rem
+
   .btn--block
+    width: auto @xl 100% @xs-down 100%
     margin-left: 1rem @xs-down 0
     margin-top: @xs-down 1rem
     justify-content: flex-end @xs-down flex-start @xl flex-start
@@ -63,6 +74,7 @@
   .btn
     min-width: 61px
     font-weight: 600
+    white-space: nowrap
 
   &-img
     @extend .img

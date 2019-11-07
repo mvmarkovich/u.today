@@ -3338,7 +3338,7 @@ blockquote em {
 
 .header__nav-child-link {
   color: #263238;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   line-height: 1.4;
   font-weight: 600;
   text-decoration: none;
@@ -3618,7 +3618,7 @@ blockquote em {
 }
 
 .article__label {
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   line-height: 1rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -5361,6 +5361,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .rate-billet__info {
+  align-items: center;
   display: flex;
 }
 
@@ -5371,7 +5372,7 @@ main > .article:nth-last-child(2):after {
 
 .rate-billet__caption {
   color: #9BACBF;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
   margin-right: 1rem;
@@ -5380,11 +5381,10 @@ main > .article:nth-last-child(2):after {
 .rate-billet__name {
   color: #000;
   font-weight: 500;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 1rem;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
+  position: relative;
+  padding-left: 29px;
 }
 
 .rate-billet__name:before {
@@ -5397,16 +5397,23 @@ main > .article:nth-last-child(2):after {
   background-size: contain;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23FF2E00' stroke-opacity='0.85'%3E %3Crect x='4.5' y='4.5' width='4' height='4' rx='2'/%3E %3Crect x='2.5' y='2.5' width='8' height='8' rx='4'/%3E %3Cpath d='M0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5Z'/%3E %3C/svg%3E");
   margin-right: .5rem;
+  position: absolute;
+  top: 1px;
+  left: 0;
 }
 
 .rate-billet__name b {
   padding: 0 .2rem;
 }
 
+.rate-billet__name strong {
+  padding: 0 .2rem;
+}
+
 .rate-billet__price {
   color: #000;
   font-weight: 500;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   white-space: nowrap;
   text-transform: uppercase;
@@ -5428,7 +5435,12 @@ main > .article:nth-last-child(2):after {
   padding: 0 .2rem;
 }
 
+.rate-billet__price strong {
+  padding: 0 .2rem;
+}
+
 .rate-billet .btn--block {
+  width: auto;
   margin-left: 1rem;
   justify-content: flex-end;
 }
@@ -5436,6 +5448,7 @@ main > .article:nth-last-child(2):after {
 .rate-billet .btn {
   min-width: 61px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .rate-billet-img--wrapper {
@@ -8993,7 +9006,12 @@ transition {
     margin-bottom: 1.5rem;
   }
 
+  .rate-billet__name {
+    white-space: nowrap;
+  }
+
   .rate-billet .btn--block {
+    width: 100%;
     justify-content: flex-start;
   }
 
@@ -9516,6 +9534,7 @@ transition {
   }
 
   .rate-billet .btn--block {
+    width: 100%;
     margin-left: 0;
     margin-top: 1rem;
     justify-content: flex-start;
