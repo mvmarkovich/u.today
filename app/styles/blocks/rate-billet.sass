@@ -21,10 +21,8 @@
   &__name
     text: #000 500 13px 16px
     white-space: nowrap
-    text-transform: uppercase
     display: inline-flex
     align-items: center
-    margin-right: .5rem
 
     &:before
       content: ''
@@ -36,9 +34,8 @@
       background-image: svg-load('icons/rate-billet.svg', stroke="#FF2E00", stroke-opacity="0.85")
       margin-right: .5rem
 
-    span
-      text: 600
-      margin-left: .2rem
+    b
+      padding: 0 .2rem
 
   &__price
     text: #000 500 13px 16px
@@ -46,6 +43,7 @@
     text-transform: uppercase
     display: inline-flex
     align-items: center
+    margin-left: .5rem
 
     &:before
       content: ''
@@ -54,9 +52,8 @@
       display: block
       margin-right: .5rem
 
-    span
-      text: 600
-      margin-right: .2rem
+    b
+      padding: 0 .2rem
 
   .btn--block
     margin-left: 1rem @xs-down 0
@@ -65,15 +62,12 @@
 
   .btn
     min-width: 61px
-
-  .btn--accent-3
-    border-radius: 3px 0 0 3px
-
-  .btn--accent-4
-    border-radius: 0 3px 3px 0
+    font-weight: 600
 
   &-img
     @extend .img
 
     &--wrapper
+      display: block
+      max-width: 126px
 

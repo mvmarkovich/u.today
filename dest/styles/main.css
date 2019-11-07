@@ -799,6 +799,14 @@ aside {
   background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%);
 }
 
+.btn--radius-left {
+  border-radius: 2px 0 0 2px;
+}
+
+.btn--radius-right {
+  border-radius: 0 2px 2px 0;
+}
+
 .btn--account:after,.btn--arrow-down:after,.btn--arrow-right:after,.btn--attach:after,.btn--back:after,.btn--burger:after,.btn--cross-white:after,.btn--cross:after,.btn--dropdown:after,.btn--info-white:after,.btn--info:after,.btn--lightning-white:after,.btn--more:after,.btn--notification:after,.btn--rating-down:after,.btn--rating-up:after,.btn--search:after {
   content: "";
   display: block;
@@ -5375,10 +5383,8 @@ main > .article:nth-last-child(2):after {
   font-size: 0.8125rem;
   line-height: 1rem;
   white-space: nowrap;
-  text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  margin-right: .5rem;
 }
 
 .rate-billet__name:before {
@@ -5393,9 +5399,8 @@ main > .article:nth-last-child(2):after {
   margin-right: .5rem;
 }
 
-.rate-billet__name span {
-  font-weight: 600;
-  margin-left: .2rem;
+.rate-billet__name b {
+  padding: 0 .2rem;
 }
 
 .rate-billet__price {
@@ -5407,6 +5412,7 @@ main > .article:nth-last-child(2):after {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  margin-left: .5rem;
 }
 
 .rate-billet__price:before {
@@ -5418,9 +5424,8 @@ main > .article:nth-last-child(2):after {
   margin-right: .5rem;
 }
 
-.rate-billet__price span {
-  font-weight: 600;
-  margin-right: .2rem;
+.rate-billet__price b {
+  padding: 0 .2rem;
 }
 
 .rate-billet .btn--block {
@@ -5430,17 +5435,12 @@ main > .article:nth-last-child(2):after {
 
 .rate-billet .btn {
   min-width: 61px;
-}
-
-.rate-billet .btn--accent-3 {
-  border-radius: 3px 0 0 3px;
-}
-
-.rate-billet .btn--accent-4 {
-  border-radius: 0 3px 3px 0;
+  font-weight: 600;
 }
 
 .rate-billet-img--wrapper {
+  display: block;
+  max-width: 126px;
 }
 
 .news-featured {
