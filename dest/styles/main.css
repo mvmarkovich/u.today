@@ -5398,7 +5398,8 @@ main > .article:nth-last-child(2):after {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23FF2E00' stroke-opacity='0.85'%3E %3Crect x='4.5' y='4.5' width='4' height='4' rx='2'/%3E %3Crect x='2.5' y='2.5' width='8' height='8' rx='4'/%3E %3Cpath d='M0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5Z'/%3E %3C/svg%3E");
   margin-right: .5rem;
   position: absolute;
-  top: 1px;
+  top: 50%;
+  margin-top: -7px;
   left: 0;
 }
 
@@ -9529,15 +9530,34 @@ transition {
 }
 
 @media (max-width: 439px) {
+  .rate-billet {
+    padding-top: .5rem;
+  }
+
   .rate-billet__info {
+    display: block;
     flex-wrap: wrap;
   }
 
+  .rate-billet__name {
+    line-height: 2.25rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .rate-billet__price {
+    line-height: 2.25rem;
+    vertical-align: middle;
+  }
+
   .rate-billet .btn--block {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 1rem;
+    vertical-align: middle;
+    display: inline-block;
     justify-content: flex-start;
+  }
+
+  .rate-billet-img--wrapper {
+    max-width: 96px;
   }
 }
 
@@ -10347,7 +10367,7 @@ transition {
 
   .rate-billet__info {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
 
   .news-category__item {
