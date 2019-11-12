@@ -5932,6 +5932,10 @@ main > .article:nth-last-child(2):after {
   margin-top: -3rem;
 }
 
+.landing__section {
+  background-color: #fff;
+}
+
 .landing__section .container {
   padding-top: 4rem;
   padding-bottom: 4rem;
