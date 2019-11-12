@@ -5855,8 +5855,8 @@ main > .article:nth-last-child(2):after {
   min-width: 72px;
   height: 45px;
   position: absolute;
-  right: 24px;
   top: 16px;
+  right: 0;
 }
 
 .landing ~ .footer {
@@ -8150,8 +8150,6 @@ transition {
     min-width: 144px;
     height: 90px;
     position: relative;
-    right: 0;
-    top: 0;
   }
 
   .landing__title {
@@ -9173,7 +9171,6 @@ transition {
     margin-left: 2rem;
     min-width: 224px;
     height: 140px;
-    top: 0;
   }
 
   .landing__title {
@@ -10092,8 +10089,6 @@ transition {
   position: absolute;
   top: 0;
   right: 0;
-  right: 16px;
-  top: 16px;
 }
 
 .category-item__info {
