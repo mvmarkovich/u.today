@@ -1,7 +1,7 @@
 .cels__widget
   box: center space-between
   flex-wrap: wrap
-  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
   border-radius: 16px
   margin: .5rem 0 1rem @md 1rem 0 2rem
 
@@ -43,7 +43,7 @@
     padding: .625rem @xl .625rem .625rem .625rem 1.5rem
     width: 100% @xl 50%
     border-radius: 0 0 16px 16px @xl 0 16px 16px 0
-    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+    box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
     background-color: #32325D
 
     &--value
@@ -68,6 +68,7 @@
     margin-top: .75rem @xs 0
 
     .input
+      box:
       margin-right: .75rem
       margin-bottom: 0
 
@@ -78,6 +79,7 @@
     max-width: 60px
     min-width: 60px
     border: 1px solid $pseudo-neutral-100
+    -moz-appearance: textfield
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button
@@ -89,12 +91,12 @@
     min-width: 88px
     text-transform: uppercase
 
-  #interest_per_week
+  #interest_per_week,
+  #interest_per_year
     &:before
       content: '$'
       text: #20C589 600 17px 24px
 
-  #interest_per_year,
   #interest_rate
     &:after
       content: '%'
