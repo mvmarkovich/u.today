@@ -429,17 +429,9 @@
     }
   });
 
-  /*
-  $("#celc__widget-input").on('keyup change', function(){
-
-    $('#interest_rate').text($('option:selected').data('rate'));
-
-    var res = $('#select-crypto option:selected').data('rate') * $('#select-crypto option:selected').data('cost');
-
-    $('#interest_per_year').text(res);
-
-  });
-  */
+  //
+  // Article Celsius Widget (Calculator)
+  //
 
   const $select_crypto = $("#select_crypto"),
         $cels__widget_year = $("#interest_per_year"),
@@ -454,7 +446,7 @@
     $amount_year = Math.abs($('#select_crypto option:selected').data('cost')) * Math.abs($('#select_crypto option:selected').data('rate'));
     $amount_year_percent = $amount_year / 100;
     $amount_year_res = $cels__widget_input.val() * $amount_year_percent;
-    $cels__widget_year.text($amount_year_res.toFixed(2));
+    $cels__widget_year.text($amount_year_res.toFixed(1));
   }
 
   function interest_week() {
