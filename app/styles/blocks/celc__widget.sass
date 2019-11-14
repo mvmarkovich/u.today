@@ -1,0 +1,103 @@
+.cels__widget
+  box: center space-between
+  flex-wrap: wrap
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+  border-radius: 16px
+  margin: .5rem 0 1rem @md 1rem 0 2rem
+
+  &-info
+    box: center
+    justify-content: center @xl flex-start
+    flex-wrap: wrap @xs nowrap
+    width: 100% @xl 50%
+    padding: .625rem
+
+  &-select
+    box:
+
+  &-option
+    text-transform: uppercase
+
+  &-img
+    @extend .img
+
+    &--wrapper
+      display: block
+      max-width: 44px
+      min-width: 44px
+      margin-right: 1.5rem @sm 2rem
+
+  &-caption
+    text: #32325D 600 13px 13px
+    text-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+    margin-right: .75rem
+    display: block
+
+  &-signature
+    text: $neutral 500 13px 13px
+
+  &-output
+    box: center
+    justify-content: @xl-down space-between
+    flex-wrap: wrap @sm nowrap
+    padding: .625rem @xl .625rem .625rem .625rem 1.5rem
+    width: 100% @xl 50%
+    border-radius: 0 0 16px 16px @xl 0 16px 16px 0
+    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+    background-color: #32325D
+
+    &--value
+      text: #20C589 600 17px 24px
+      max-width: 75px
+      text-overflow: clip
+
+  &-list
+    @extend .list-reset
+    box:
+    width: @sm-down 100%
+    justify-content: @xl-down center
+
+  &-item
+    width: auto @sm 33%
+
+    & + &
+      margin-left: @sm-down 2rem
+
+  .form--row
+    box:
+    margin-top: .75rem @xs 0
+
+    .input
+      margin-right: .75rem
+      margin-bottom: 0
+
+      &:last-child
+        margin-right: 0
+
+  .input__elem
+    max-width: 60px
+    min-width: 60px
+    border: 1px solid $pseudo-neutral-100
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+  .input__select
+    max-width: 88px
+    min-width: 88px
+    text-transform: uppercase
+
+  #interest_per_week
+    &:before
+      content: '$'
+      text: #20C589 600 17px 24px
+
+  #interest_per_year,
+  #interest_rate
+    &:after
+      content: '%'
+      text: #20C589 600 17px 24px
+
+

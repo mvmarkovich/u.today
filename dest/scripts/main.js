@@ -413,13 +413,14 @@
   });
 
   //
-  // Мини выпадашка профайла в хедере
+  // Header Profile
   //
 
   $('.user--login').click(function () {
     $(this).toggleClass('user--login--open');
     return false;
   });
+
   $(document).on('mouseup', function (e){
     var bookingform = $(".user--login__modal");
     if (!bookingform.is(e.target) && !$(e.target).is('.user--login'))
@@ -427,6 +428,46 @@
       $('.user--login--open').removeClass("user--login--open");
     }
   });
+
+  /*
+  $("#celc__widget-input").on('keyup change', function(){
+
+    $('#interest_rate').text($('option:selected').data('rate'));
+
+    var res = $('#select-crypto option:selected').data('rate') * $('#select-crypto option:selected').data('cost');
+
+    $('#interest_per_year').text(res);
+
+  });
+  */
+
+  const $select_crypto = $("#select_crypto"),
+        $cels__widget_year = $("#interest_per_year"),
+        $cels__widget_week = $("#interest_per_week"),
+        $cels__widget_input = $("#cels__widget-input");
+
+  function interest_rate() {
+    $('#interest_rate').text($('#select_crypto option:selected').data('rate'));
+  }
+
+  function interest_year() {
+    $amount_year = Math.abs($('#select_crypto option:selected').data('cost')) * Math.abs($('#select_crypto option:selected').data('rate'));
+    $amount_year_percent = $amount_year / 100;
+    $amount_year_res = $cels__widget_input.val() * $amount_year_percent;
+    $cels__widget_year.text($amount_year_res.toFixed(2));
+  }
+
+  function interest_week() {
+    $amount_week_res = $amount_year_res / 52;
+    $cels__widget_week.text($amount_week_res.toFixed(2));
+  }
+
+  $select_crypto.on("change", interest_rate);
+  $select_crypto.on("change", interest_year);
+  $select_crypto.on("change", interest_week);
+  $cels__widget_input.on("keyup keydown keypress", interest_rate);
+  $cels__widget_input.on("keyup keydown keypress", interest_year);
+  $cels__widget_input.on("keyup keydown keypress", interest_week);
 
 
 })(jQuery);
