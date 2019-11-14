@@ -1,9 +1,10 @@
 .cels__widget
   box: center space-between
   flex-wrap: wrap
+  position: relative
   box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
   border-radius: 16px
-  margin: .5rem 0 1rem @md 1rem 0 2rem
+  margin: .5rem 0 2.5rem @md 1rem 0 3.5rem
 
   &-info
     box: center
@@ -101,5 +102,12 @@
     &:after
       content: '%'
       text: #20C589 600 17px 24px
+
+  .widget__mark
+    position: absolute
+    bottom: -1.5rem
+    text: 11px 1.8
+    width: 100%
+    text-align: center
 
 

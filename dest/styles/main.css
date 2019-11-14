@@ -4933,9 +4933,10 @@ main > .article:nth-last-child(2):after {
 
 .cels__widget {
   flex-wrap: wrap;
+  position: relative;
   box-shadow: 0 0 24px rgba(33, 150, 243, 0.15);
   border-radius: 16px;
-  margin: .5rem 0 1rem;
+  margin: .5rem 0 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -5060,6 +5061,15 @@ main > .article:nth-last-child(2):after {
   font-weight: 600;
   font-size: 1.0625rem;
   line-height: 1.5rem;
+}
+
+.cels__widget .widget__mark {
+  position: absolute;
+  bottom: -1.5rem;
+  font-size: 0.6875rem;
+  line-height: 1.8;
+  width: 100%;
+  text-align: center;
 }
 
 .top-story {
@@ -8204,7 +8214,7 @@ transition {
   }
 
   .cels__widget {
-    margin: 1rem 0 2rem;
+    margin: 1rem 0 3.5rem;
   }
 
   .top-story_header {
