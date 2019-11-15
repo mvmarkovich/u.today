@@ -453,6 +453,9 @@
     $cels__widget_week.text($amount_week_res.toFixed(2));
   }
 
+  $(window).on("load", interest_rate);
+  $(window).on("load", interest_year);
+  $(window).on("load", interest_week);
   $select_crypto.on("change", interest_rate);
   $select_crypto.on("change", interest_year);
   $select_crypto.on("change", interest_week);
