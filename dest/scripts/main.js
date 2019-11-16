@@ -430,6 +430,15 @@
   });
 
   //
+  // Button show more
+  //
+
+  $(".btn--show").on("click", function () {
+    $(this).parent().addClass("content--open");
+    $(this).addClass("btn--show--open");
+  });
+
+  //
   // Article Celsius Widget (Calculator)
   //
   const $select_crypto = $("#select_crypto"),
