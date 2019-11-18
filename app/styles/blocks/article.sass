@@ -2,11 +2,9 @@
   position: relative
   z-index: 5
 
-  iframe
-    margin: 1.5rem 0
-    max-width: 728px
-    width: 100% !important
-    height: @xl-down 300px !important
+  .image-popup-vertical-fit
+    display: block
+    margin-bottom: 1.5rem
 
   &__summary
     box: center
@@ -185,6 +183,12 @@
       margin: @sm-down * -1rem
 
   &__content
+
+    iframe
+      margin: 1.5rem 0
+      max-width: 728px
+      width: 100% !important
+      height: @xl-down 300px !important
 
   &__contents
     margin-bottom: 2.2rem @xl 2.6rem
