@@ -441,17 +441,17 @@
   //
   // Article Celsius Widget (Calculator)
   //
-  const $select_crypto = $("#select_crypto"),
-        $cels__widget_year = $("#interest_per_year"),
-        $cels__widget_week = $("#interest_per_week"),
-        $cels__widget_input = $("#cels__widget-input");
+  const $select_crypto = $(".select_crypto"),
+      $cels__widget_year = $(".interest_per_year"),
+      $cels__widget_week = $(".interest_per_week"),
+      $cels__widget_input = $(".cels__widget-input");
 
   function interest_rate() {
-    $('#interest_rate').text($('#select_crypto option:selected').data('rate'));
+    $('.interest_rate').text($('.select_crypto option:selected').data('rate'));
   }
 
   function interest_year() {
-    $amount_year = Math.abs($('#select_crypto option:selected').data('cost')) * Math.abs($('#select_crypto option:selected').data('rate'));
+    $amount_year = Math.abs($('.select_crypto option:selected').data('cost')) * Math.abs($('.select_crypto option:selected').data('rate'));
     $amount_year_percent = $amount_year / 100;
     $amount_year_res = $cels__widget_input.val() * $amount_year_percent;
     $cels__widget_year.text($amount_year_res.toFixed(1));
