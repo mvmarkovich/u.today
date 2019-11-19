@@ -8561,21 +8561,21 @@ transition {
   }
 
   .landing__benefits-list {
-    margin-top: -2.5rem;
+    margin-top: -2rem;
   }
 
   .landing__benefits-item {
     width: 48%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
 
   .landing__request-list {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
 
   .landing__request-item {
     width: 48%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
 
   .landing__location-item {
@@ -9623,14 +9623,6 @@ transition {
     padding-bottom: 130px;
   }
 
-  .landing__benefits-list {
-    margin-top: -3rem;
-  }
-
-  .landing__benefits-item {
-    margin-top: 3rem;
-  }
-
   .landing__benefits-name {
     font-size: 1.0625rem;
   }
@@ -9640,13 +9632,8 @@ transition {
     top: 7px;
   }
 
-  .landing__request-list {
-    margin-top: 3rem;
-  }
-
   .landing__request-item {
     font-size: 1.0625rem;
-    margin-top: 3rem;
   }
 
   .landing__request-item:before {

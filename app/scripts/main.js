@@ -441,6 +441,7 @@
   //
   // Article Celsius Widget (Calculator)
   //
+
   const $select_crypto = $(".select_crypto"),
       $cels__widget_year = $(".interest_per_year"),
       $cels__widget_week = $(".interest_per_week"),
