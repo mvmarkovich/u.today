@@ -439,6 +439,31 @@
   });
 
   //
+  // Button show more
+  //
+
+  $(".news__item").hide();
+  $(".news__item:hidden").slice(0, 5).show();
+
+  if($(".news__item").length < 6){
+    $('.news .btn--block').hide();
+  }
+
+  function main_news_sorting() {
+    $('.news .btn').on('click', function(){
+      $(".news__item:hidden").slice(0, 5).show();
+
+      if($(".news__item:hidden").length < 1){
+        $('.news .btn--block').hide();
+      }
+
+    });
+  }
+
+
+  $(window).on("load", main_news_sorting);
+
+  //
   // Article Celsius Widget (Calculator)
   //
 

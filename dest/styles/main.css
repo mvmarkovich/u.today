@@ -5603,11 +5603,11 @@ main > .article:nth-last-child(2):after {
 .news__item {
   align-items: baseline;
   padding: .5rem 0;
-  border-bottom: 1px solid #ECEFF1;
+  border-top: 1px solid #ECEFF1;
 }
 
-.news__item:last-child {
-  border-bottom: 0;
+.news__item:first-child {
+  border-top: 0;
 }
 
 .news__item-time-wrapper {
@@ -5636,6 +5636,25 @@ main > .article:nth-last-child(2):after {
 .news__footer {
   margin-top: 1rem;
   margin-bottom: .7rem;
+}
+
+.news .btn--block {
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.news .btn--block .btn {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.news .btn--block .btn--arrow-down:after {
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  margin-top: -12px;
 }
 
 .author-block__name {
