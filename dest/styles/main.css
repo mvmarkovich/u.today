@@ -5085,7 +5085,7 @@ main > .article:nth-last-child(2):after {
   text-transform: uppercase;
 }
 
-.cels__widget .interest_per_week:before,.cels__widget .interest_per_year:before {
+.cels__widget #interest_per_week:before,.cels__widget #interest_per_year:before,.cels__widget .interest_per_week:before,.cels__widget .interest_per_year:before {
   content: '$';
   color: #20C589;
   font-weight: 600;
@@ -5093,7 +5093,7 @@ main > .article:nth-last-child(2):after {
   line-height: 1.5rem;
 }
 
-.cels__widget .interest_rate:after {
+.cels__widget #interest_rate:after,.cels__widget .interest_rate:after {
   content: '%';
   color: #20C589;
   font-weight: 600;
