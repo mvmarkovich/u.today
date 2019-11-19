@@ -3965,8 +3965,8 @@ blockquote em {
 
 .article twitter-widget {
   overflow: hidden;
-  max-width: 500px;
-  width: 100%;
+  max-width: 500px !important;
+  width: 100% !important;
 }
 
 .article table {
