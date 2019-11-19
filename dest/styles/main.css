@@ -852,6 +852,7 @@ aside {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 10L12 15L17 10H7Z'/%3E %3C/svg%3E");
   width: 18px;
   height: 24px;
+  margin-left: .6rem;
 }
 
 .btn--arrow-down:hover:after {
@@ -5580,7 +5581,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .news {
-  padding: 1.2rem .9rem .7rem;
+  padding: 1.2rem 1rem .9rem;
   height: 100%;
   background-color: #FFFFFF;
 }
@@ -5639,22 +5640,16 @@ main > .article:nth-last-child(2):after {
 }
 
 .news .btn--block {
-  margin: 1rem 0;
-  justify-content: center;
+  margin: 1rem -1rem -.9rem;
+  width: auto;
+  border-top: 1px solid #CFD8DC;
 }
 
 .news .btn--block .btn {
   position: relative;
-  max-width: 300px;
   width: 100%;
   font-weight: 600;
-}
-
-.news .btn--block .btn--arrow-down:after {
-  position: absolute;
-  right: .5rem;
-  top: 50%;
-  margin-top: -12px;
+  border: none;
 }
 
 .author-block__name {
@@ -9416,10 +9411,6 @@ transition {
 
   .big_categories-story ~ .main-aside-container .main-news-block {
     width: 728px;
-  }
-
-  .news {
-    padding: 1.2rem 1rem .9rem;
   }
 
   .news__item-title {
