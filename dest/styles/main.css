@@ -3687,7 +3687,7 @@ blockquote em {
 }
 
 .article__panel {
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.1rem;
   min-height: 48px;
   display: flex;
   flex-wrap: wrap;
@@ -3703,6 +3703,7 @@ blockquote em {
 .article__panel-row {
   padding: .7rem 0 .4rem;
   width: 100%;
+  margin-top: .5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -3881,7 +3882,7 @@ blockquote em {
 }
 
 .article__contents {
-  margin-bottom: 2.2rem;
+  margin: 2rem 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -4083,7 +4084,7 @@ blockquote em {
 }
 
 .article__tags {
-  margin-bottom: .5rem;
+  margin-bottom: 0;
 }
 
 .article__recommended-header {
@@ -4142,13 +4143,13 @@ blockquote em {
 }
 
 .article__recommended-list-slide {
-  margin: 1.5rem -1rem 0;
+  margin: 1rem -1rem 0;
   overflow: hidden;
 }
 
 .article__recommended-list-slide--yellow {
   background-color: #fffcc0;
-  margin: 0 -1rem 1.5rem;
+  margin: 0 -1rem 1rem;
   padding: 1rem;
 }
 
@@ -7685,10 +7686,6 @@ transition {
     margin: 1.7rem 0;
   }
 
-  .article__tags {
-    margin-bottom: 1.5rem;
-  }
-
   .article__recommended-list:after {
     min-width: 1px;
     width: 1px;
@@ -7696,11 +7693,11 @@ transition {
   }
 
   .article__recommended-list-slide {
-    margin: 1.5rem 0 0;
+    margin: 1rem 0 0;
   }
 
   .article__recommended-list-slide--yellow {
-    margin: 0 -1rem 1.5rem;
+    margin: 0 -1rem 1rem;
   }
 
   .article__recommended-item {
@@ -8245,6 +8242,10 @@ transition {
 
   .article__summary {
     margin-bottom: 1.3rem;
+  }
+
+  .article__panel-row {
+    margin-top: 1.2rem;
   }
 
   .article__subscribe-col + .article__subscribe-col {
@@ -9050,7 +9051,7 @@ transition {
   }
 
   .article__panel {
-    margin-bottom: 3.2rem;
+    margin-bottom: 2.5rem;
   }
 
   .article__panel-separator {
@@ -9106,7 +9107,7 @@ transition {
   }
 
   .article__contents {
-    margin-bottom: 2.6rem;
+    margin: 2.5rem 0;
   }
 
   .article__related {
@@ -10026,7 +10027,7 @@ transition {
   }
 
   .article__main-img-wrapper {
-    margin: 0 -1rem 1.5rem;
+    margin: 0 -1rem 2rem;
   }
 
   .article__fact,.article h4 {
@@ -10035,6 +10036,10 @@ transition {
   }
 
   .article__recommended-list-slide {
+    padding: 0 1rem;
+  }
+
+  .article__recommended-list-slide--yellow {
     padding: 1rem;
   }
 
