@@ -4655,11 +4655,9 @@ main > .article:nth-last-child(2):after {
 }
 
 .cookies .btn__block {
+  justify-content: center;
   margin: 0 0 0 2rem;
-  min-width: 258px;
-  max-width: 258px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -4668,6 +4666,9 @@ main > .article:nth-last-child(2):after {
   font-size: .8125rem;
   line-height: 1rem;
   text-decoration: none;
+  display: block;
+  margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .cookies .accept-cookies {
@@ -4679,6 +4680,7 @@ main > .article:nth-last-child(2):after {
   line-height: 1.4;
   letter-spacing: normal;
   text-transform: none;
+  white-space: nowrap;
 }
 
 .aside-story {
