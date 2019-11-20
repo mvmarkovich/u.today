@@ -508,6 +508,7 @@ h5 {
   width: 100%;
   position: relative;
   z-index: 99;
+  overflow: hidden;
 }
 
 .main-news-block > * {
@@ -6066,6 +6067,7 @@ main > .article:nth-last-child(2):after {
 .categories-story_item-title {
   font-size: 0.8125rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .category-info {
