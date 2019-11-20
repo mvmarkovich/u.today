@@ -7469,6 +7469,7 @@ p {
   font-family: Georgia, serif;
   margin: 0;
   margin-bottom: 1.5rem;
+  word-break: break-word;
 }
 
 .article__content + img,.article__content p + img {
