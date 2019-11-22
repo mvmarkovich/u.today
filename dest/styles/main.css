@@ -4823,6 +4823,27 @@ main > .article:nth-last-child(2):after {
 .comments {
 }
 
+.comments h2 {
+  color: #263238;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.comments #social-login-block-form {
+  border-bottom: 1px solid #CFD8DC;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.comments #social-login-block-form .plugin .footer {
+  display: none;
+}
+
+.comments #social-login-block-form .plugin #providers .provider {
+  display: none;
+}
+
 .comments textarea.form-textarea {
   padding: .5rem 1rem;
   font-weight: 500;
@@ -4877,7 +4898,8 @@ main > .article:nth-last-child(2):after {
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid #CFD8DC;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .comments .comment-form article {
@@ -7809,13 +7831,19 @@ transition {
   }
 
   .comments {
-    padding: 0 1rem 1.5rem;
+    padding: 1.5rem 1rem 1.5rem;
     margin: 0 -1rem;
     border-top: 16px solid #F5F5F5;
   }
 
+  .comments #social-login-block-form {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   .comments .comment-form {
-    padding: 1.5rem 0 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .comments .comment-form article {
@@ -10134,6 +10162,10 @@ transition {
 
   .footer__copy-text {
     margin-bottom: 1rem;
+  }
+
+  .comments {
+    padding-top: 1rem;
   }
 
   .comments .form-submit {
