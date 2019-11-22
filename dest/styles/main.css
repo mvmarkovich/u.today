@@ -7831,7 +7831,7 @@ transition {
   }
 
   .comments {
-    padding: 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 1rem 0;
     margin: 0 -1rem;
     border-top: 16px solid #F5F5F5;
   }
