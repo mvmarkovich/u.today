@@ -1,70 +1,125 @@
 section.comments
-  section.author_block.comments_block
-    ul.author__list
-      li.author__item
-        .author__item-header
-          a.author__item-user(href='#!')
-            img.author__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
-          .right
-            .author__item-wrapper
-              a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
-              .author__item-position.humble Author
-              time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
-            .author__item-body
-              .title
-                | So what do you think about crypto women at that summit?
-            .comments__add
-              button.comments__add-attach.btn.btn--light.btn--attach
-              form(action='#' method='get')
-                .input
-                  textarea.input__elem(name='msg' placeholder='So why not write your own?' required='')
-            .comments_block__bottom
-              .humble.humble--chat 256
-              .right
-                ul.comments__tabs.tabs
-                  li.tabs__item.tabs__item--active
-                    button.tabs__btn.btn.btn--light.active Popular
-                  li.tabs__item
-                    button.tabs__btn.btn.btn--light Recent
-  ul.comments__list
-    li.comments__item
-      .comments__item-header
-        a.comments__item-user(href='#!')
-          img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
-        .right
-          .comments__item-wrapper
-            a.comments__item-user-name(href='#!') John Blazkovic
-            time.comments__item-time 28 Oct, 11:45 AM
-          .comments__item-body
-            .comments__item-msg
-              p
-                | Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
-      .comments__item-footer
-        button.comments__item-reply.btn.btn--light Reply
-        button.comments__item-more.btn.btn--light.btn--more
-        .comments__item-rating.rating.rating--positive.rating--tiny
-          button.btn.btn--light.btn--rating-down
-          .rating__value 28
-          button.btn.btn--light.btn--rating-up
-    li.comments__item.comments__item__two-level
-      .comments__item-header
-        a.comments__item-user(href='#!')
-          img.comments__item-user-avatar(src='https://dummyimage.com/40x40/d8dbde/aaa')
-        .right
-          .comments__item-wrapper
-            a.comments__item-user-name(href='#!') Bob Stewarts
-            time.comments__item-time 28 Oct, 11:45 AM
-          .comments__item-body
-            .comments__item-msg
-              p You&rsquo;re so full of shiness
-              p
-                | Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
-      .comments__item-footer
-        button.comments__item-reply.btn.btn--light Reply
-        button.comments__item-more.btn.btn--light.btn--more
-        .comments__item-rating.rating.rating--positive.rating--tiny
-          button.btn.btn--light.btn--rating-down
-          .rating__value 28
-          button.btn.btn--light.btn--rating-up
-  .comments__footer
-    button.btn.btn--block.btn--large Show 254 more comments
+  section#node-story-field-comments.field.field--name-field-comments.field--type-comment.field--label-hidden.comment-wrapper
+    // h2.title.comment-form__title LEAVE A COMMENT
+    form#ajax-comments-reply-form-node-17794-field-comments-0-0.comment-comments-form.comment-form.ajax-comments-reply-form-node-17794-field_comments-0-0.ajax-comments-form-add(data-drupal-selector='comment-form-2', action='/comment/reply/node/17794/field_comments', method='post', accept-charset='UTF-8', data-drupal-form-fields='edit-field-comment-0-value--2,edit-ajax-comments-reply-form-node-17794-field-comments-0-0')
+      article
+        a(href='/user/15921')
+          img(src='https://cdntrack.com/sites/default/files/styles/thumbnail/public/pictures/2019-11/picture-15921-1574011897.jpeg?itok=wPsyFV4a', alt='Profile picture for user sergey.sergeychik', itemprop='image')
+      .right
+        input(data-drupal-selector='edit-form-html-id', type='hidden', name='form_html_id', value='ajax-comments-reply-form-node-17794-field-comments-0-0')
+        input(data-drupal-selector='edit-wrapper-html-id', type='hidden', name='wrapper_html_id', value='node-story-field-comments')
+        input(autocomplete='off', data-drupal-selector='form-ftylw58-o3eo7xlxcb0q1gsj-oochhsjdjasilnuwga', type='hidden', name='form_build_id', value='form-ftylW58-O3EO7XlxCb0Q1GSJ_OoCHHsjdjAsILnuwGA')
+        input(data-drupal-selector='edit-comment-comments-form-form-token-2', type='hidden', name='form_token', value='Ca93UEKnhvhX9hbpdQzN7dWEBIq-CViWwDDhOzVgzHU')
+        input(data-drupal-selector='edit-comment-comments-form-2', type='hidden', name='form_id', value='comment_comments_form')
+        .js-form-item.form-item.js-form-type-textarea.form-item-field-comment-0-value.js-form-item-field-comment-0-value
+          // label.label_v2(for='edit-field-comment-0-value--2') Comment
+          p sergey.sergeychik
+          div
+            textarea#edit-field-comment-0-value--2.js-text-full.text-full.form-textarea.input_v3(data-drupal-selector='edit-field-comment-0-value', name='field_comment[0][value]', rows='3', cols='60', placeholder='Your comment')
+        input#edit-ajax-comments-reply-form-node-17794-field-comments-0-0.button.button--primary.js-form-submit.form-submit.btn_v2.btn_violette_2.create_release_btn(data-drupal-selector='edit-ajax-comments-reply-form-node-17794-field-comments-0-0', type='submit', name='op', value='Send')
+    a#new
+    a#comment-2
+    article.js-ajax-comments-id-2.js-comment.new(data-comment-user-id='1')
+      // mark(data-comment-timestamp='1574279326') new
+      footer
+        article
+          a(href='/user/15921')
+            img(src='img/content/comments/avatar_1.png', alt='Profile picture for user 1', itemprop='image')
+        p(style='')
+          span foradmin
+          |  on Wed, 11/20/2019 - 19:48
+        // <a href="/comment/2#comment-2" hreflang="en">Permalink</a>
+      div(style='padding:10px;')
+        // <h3><a href="/comment/2#comment-2" class="permalink" rel="bookmark" hreflang="en">test</a></h3>
+        ul.links.inline
+          li.comment-reply
+            a.use-ajax.js-use-ajax-comments.js-ajax-comments-reply.js-ajax-comments-reply-17794-field_comments-2(href='/ajax_comments/reply/node/17794/field_comments/2', data-wrapper-html-id='node-story-field-comments') Reply
+        div
+          div Comment
+          | Africa has been baying for a system which it can shape and built on its own without being beholden to former colonizers Or other systems, and Blockchain can be such a system, but it needs to be more than another copy-job, it needs to be a truly African solution.
+    .indented
+      a#comment-3
+      article.js-ajax-comments-id-3.js-comment.new(data-comment-user-id='1')
+        // mark(data-comment-timestamp='1574279361') new
+        footer
+          article
+            a(href='/user/15936')
+              img(src='https://cdntrack.com/sites/default/files/styles/thumbnail/public/pictures/2019-11/picture-15936-1574323814.jpeg?itok=LLewDXff', alt='Profile picture for user Михаил.Маркович', itemprop='image')
+          p(style='')
+            span foradmin
+            |  on Wed, 11/20/2019 - 19:49
+          p.visually-hidden
+            | In reply to
+            a.permalink(href='/comment/2#comment-2', rel='bookmark', hreflang='en') test
+            |  by
+            span foradmin
+          // <a href="/comment/3#comment-3" hreflang="en">Permalink</a>
+        div(style='padding:10px;')
+          // <h3><a href="/comment/3#comment-3" class="permalink" rel="bookmark" hreflang="en">reply on test</a></h3>
+          ul.links.inline
+            li.comment-reply
+              a.use-ajax.js-use-ajax-comments.js-ajax-comments-reply.js-ajax-comments-reply-17794-field_comments-3(href='/ajax_comments/reply/node/17794/field_comments/3', data-wrapper-html-id='node-story-field-comments') Reply
+          div
+            div Comment
+            | You’re so full of shiness
+    .indented
+      a#comment-3
+      article.js-ajax-comments-id-3.js-comment.new(data-comment-user-id='1')
+        // mark(data-comment-timestamp='1574279361') new
+        footer
+          article
+          p(style='')
+            span foradmin
+            |  on Wed, 11/20/2019 - 19:49
+          p.visually-hidden
+            | In reply to
+            a.permalink(href='/comment/2#comment-2', rel='bookmark', hreflang='en') test
+            |  by
+            span foradmin
+          // <a href="/comment/3#comment-3" hreflang="en">Permalink</a>
+        div(style='padding:10px;')
+          // <h3><a href="/comment/3#comment-3" class="permalink" rel="bookmark" hreflang="en">reply on test</a></h3>
+          ul.links.inline
+            li.comment-forbidden
+              a(href='/user/login?destination=/stellar-lumens-xlm-to-post-another-37-percent-gain-after-recent-pump-crypto-trader-says%23comment-form') Log in
+              |  or
+              a(href='/user/register?destination=/stellar-lumens-xlm-to-post-another-37-percent-gain-after-recent-pump-crypto-trader-says%23comment-form') register
+              |  to post comments
+          div
+            div Comment
+            | You’re so full of shiness
+    a#comment-4
+    article.js-ajax-comments-id-4.js-comment.new(data-comment-user-id='1')
+      // mark(data-comment-timestamp='1574279381') new
+      footer
+        article
+          a(href='/user/15921')
+            img(src='img/content/comments/avatar_2.png', alt='Profile picture for user 2', itemprop='image')
+        p(style='')
+          span foradmin
+          |  on Wed, 11/20/2019 - 19:49
+        // <a href="/comment/4#comment-4" hreflang="en">Permalink</a>
+      div(style='padding:10px;')
+        // <h3><a href="/comment/4#comment-4" class="permalink" rel="bookmark" hreflang="en">comment 2</a></h3>
+        ul.links.inline
+          li.comment-reply
+            a.use-ajax.js-use-ajax-comments.js-ajax-comments-reply.js-ajax-comments-reply-17794-field_comments-4(href='/ajax_comments/reply/node/17794/field_comments/4', data-wrapper-html-id='node-story-field-comments') Reply
+    a#comment-8
+    article.js-ajax-comments-id-8.js-comment.new(data-comment-user-id='15921')
+      // mark(data-comment-timestamp='1574342762') new
+      footer
+        article
+          a(href='/user/15921')
+            img(src='https://cdntrack.com/sites/default/files/styles/thumbnail/public/pictures/2019-11/picture-15921-1574011897.jpeg?itok=wPsyFV4a', alt='Profile picture for user sergey.sergeychik', itemprop='image')
+        p(style='')
+          span sergey.sergeychik
+          |  on Thu, 11/21/2019 - 13:26
+        // <a href="/comment/8#comment-8" hreflang="en">Permalink</a>
+      div(style='padding:10px;')
+        // <h3><a href="/comment/8#comment-8" class="permalink" rel="bookmark" hreflang="en">(No subject)</a></h3>
+        ul.links.inline
+          li.comment-reply
+            a.use-ajax.js-use-ajax-comments.js-ajax-comments-reply.js-ajax-comments-reply-17794-field_comments-8(href='/ajax_comments/reply/node/17794/field_comments/8', data-wrapper-html-id='node-story-field-comments') Reply
+        div
+          div Comment
+          |         май коммент

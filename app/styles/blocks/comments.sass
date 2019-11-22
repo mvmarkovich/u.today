@@ -1,0 +1,142 @@
+.comments
+  padding: @sm 0 1rem 1.5rem
+  margin: @sm 0 -1rem
+  border-top: @sm 16px solid $neutral-100
+
+  textarea.form-textarea
+    @extend .input__elem
+    padding: .5rem 1rem
+    font-weight: 500
+    resize: none
+    margin-top: .5rem
+
+    &::placeholder
+      font-weight: 500
+
+    &:focus,
+    &:active
+
+      &::placeholder
+        color: transparent
+
+    &:valid
+      border: $border
+
+    &:hover
+      border-color: $accent-1-light
+
+    &:focus
+      border-color: $accent-1-medium
+
+  .form-submit
+    @extend .btn--accent
+    cursor: pointer
+    min-height: 32px
+    max-width: 81px
+    margin-top: .5rem
+    margin-left: @sm-down -56px
+
+  .comment-form
+    display: flex
+    align-items: flex-start
+    border-bottom: 1px solid $pseudo-neutral-100
+    padding: 1rem 0 @sm 1.5rem 0 1rem
+
+    article
+      border: 1px solid $pseudo-neutral-100
+      min-width: 32px @sm 56px
+      max-width: 32px @sm 56px
+      height: 32px @sm 56px
+      border-radius: 50%
+      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
+
+    .right
+      margin-left: 1.5rem
+      width: 100%
+
+  article
+    img
+      @extend .img
+      border-radius: 50%
+
+  .js-form-item
+
+    & > div
+      margin-top: @sm-down 15px
+      margin-left: @sm-down -56px
+
+    p
+      margin-bottom: 0
+      text: $pseudo-neutral-900 600 13px 16px @sm 15px 24px
+      position: @sm-down relative
+      top: @sm-down 5px
+
+  .js-comment
+    margin: 1.5rem 0 @sm 2rem 0
+
+    &:last-child
+      margin-bottom: 0
+
+    & > div
+      padding: 0 !important
+      display: flex
+      flex-direction: column
+      margin-top: @sm -25px
+      margin-left: @sm 80px
+
+      & > div
+        order: 1
+        text: $pseudo-neutral-900 500 13px 16px @sm 15px 32px
+        margin-top: @sm-down 0.5rem
+
+        & > div
+          display: none
+
+    footer
+      display: flex
+
+      article
+        margin-right: 1.5rem
+        border: 1px solid $pseudo-neutral-100
+        min-width: 32px @sm 56px
+        max-width: 32px @sm 56px
+        height: 32px @sm 56px
+        border-radius: 50%
+        background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
+
+      & > p
+        text: $pseudo-neutral-400 13px 16px 500
+        margin-bottom: 0
+
+        span
+          text: $pseudo-neutral-900 15px 24px 600
+          display: inline-flex
+          margin-right: 1rem
+
+  ul.links.inline
+    @extend .list-reset
+    order: 2
+
+    .comment-reply
+
+      a
+        @extend .link-plain
+        text: $pseudo-neutral-200 600 13px 16px @sm 15px 24px
+        text-transform: uppercase
+
+    .comment-forbidden
+      text: $pseudo-neutral-200 500 13px 16px @sm 15px 24px
+      margin-top: @sm-down 0.5rem
+
+      a
+        @extend .link-plain
+        color: #2979FF
+        font-weight: 600
+
+
+  .indented
+    margin: 1rem 0 1rem 2.5rem @sm 1.5rem 0 1.5rem 80px
+
+  .visually-hidden
+    display: none
+
