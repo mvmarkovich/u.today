@@ -288,7 +288,7 @@
   });
 
   //
-  // Slider TOP-STORY on MAIN page
+  // Slider topStory on MAIN page
   //
   $('.slider_top-story').slick({
     infinite: true,
@@ -300,7 +300,7 @@
   });
 
   //
-  // Slider NEWS-CATEGORIES on MAIN page
+  // Slider newsCategories on MAIN page
   //
   $('.new_categories .news-categories__list').slick({
     infinite: false,
@@ -319,7 +319,7 @@
   });
 
   //
-  // Slider NEWS-CATEGORIES on MAIN page
+  // Slider newsCategories on MAIN page
   //
   $('.medium_categories-story_list').slick({
     infinite: false,
@@ -327,8 +327,38 @@
     arrows: true,
     variableWidth: true,
     dots: false,
-    prevArrow: $('.medium_categories__prev-button'),
-    nextArrow: $('.medium_categories__next-button'),
+    prevArrow: $('.medium_categories-story .slider__nav-prev'),
+    nextArrow: $('.medium_categories-story .slider__nav-next'),
+  });
+
+  //
+  // Slider pressReleases on MAIN page
+  //
+  $('.press-releases__slider').slick({
+    infinite: true,
+    slidesToScroll: 1,
+    dots: false,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+  });
+
+  //
+  // Long Slider pressReleases on MAIN page
+  //
+  $('.press-releases__slider-long').slick({
+    infinite: false,
+    slidesToScroll: 1,
+    dots: false,
+    variableWidth: true,
+    prevArrow: $('.press-releases .slider__nav-prev'),
+    nextArrow: $('.press-releases .slider__nav-next')
   });
 
   function modalTimeout() {
@@ -492,7 +522,6 @@
   $cels__widget_input.on("keyup keydown keypress", interest_rate);
   $cels__widget_input.on("keyup keydown keypress", interest_year);
   $cels__widget_input.on("keyup keydown keypress", interest_week);
-
 
 })(jQuery);
 

@@ -61,6 +61,9 @@ block content
                         a.big_categories-story_mark(href="#!") Press releases
                         .news__item-time-wrapper
                             time.news__item-time.humble Aug 29
+
+    include blocks/press-releases-long
+
     .main-aside-container
         main.main-news-block
             .something.something--content(style="background-color: #e5edff")
@@ -73,6 +76,8 @@ block content
             .news-block
                 include blocks/news.pug
             <!— the end of news —>
+
+            include blocks/press-releases.pug
 
             .top-story-block
                 .top-story.slider_top-story
@@ -304,6 +309,6 @@ block content
                 a.medium_categories-story_item-link(href="#!")
                     img(src="https://u.today/sites/default/files/styles/1200x/public/2019-04/What%20Are%20Masternodes%20Is%20It%20Still%20Profitable%20to%20Run%20One.jpg?itok=IK1IiqpT")
                 a.medium_categories-story_item-title(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
-        .medium_categories__slider-nav
-            .medium_categories__prev-button
-            .medium_categories__next-button
+        .slider__nav.slider__nav-icon--swipe
+            button.slider__nav-arrow.slider__nav-prev
+            button.slider__nav-arrow.slider__nav-next

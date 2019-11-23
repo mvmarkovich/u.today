@@ -1,0 +1,19 @@
+.press-releases
+
+    .press-releases__header
+
+        .press-releases__info
+            h3.press-releases__title Press releases
+
+            .btn--block
+                a.btn.btn--pseudo(href="#!See all") See all
+                a.btn.btn--pseudo(href="#!Submit") Submit
+
+    .press-releases__slider
+        each pressRelease, i in pressReleases
+            a.press-releases__item(href="#!" + i)
+                .press-releases__inner
+                    .press-releases__item-img--wrapper
+                        img(src="" + pressRelease.src)
+
+                    h4.press-releases__item-name= pressRelease.name

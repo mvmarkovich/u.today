@@ -1,0 +1,95 @@
+.press-releases
+  width: 100%
+  background-color: $neutral
+  padding: 1.2rem 0 1.5rem
+  margin: 1rem 0
+
+  &__header
+    box:
+    justify-content: space-between
+    margin-bottom: 1.2rem
+    padding: 0 1rem @sm 0 1.5rem @xl 0 2rem
+
+  &__info
+    box: center
+
+  &__slider
+    padding: * 1rem @sm * 1.5rem @xl * 2rem
+
+  &__title
+    text: 600 13px 16px
+    margin-bottom: 0
+    white-space: pre
+    margin-right: 1rem
+
+  .btn
+    min-height: 1rem
+    margin-right: 1rem
+    font-weight: 600
+    color: $pseudo-neutral-300
+
+    &:hover
+      color: $accent-1-medium
+
+    &:active
+      color: $accent-1-dark
+
+  &__item
+    @extend .link-plain
+    margin-right: 1.5rem
+    max-width: 205px
+    width: 100%
+
+    &-img
+      @extend .img
+
+      &--wrapper
+        min-width: 205px
+        max-width: 205px
+
+    &-name
+      text: 500 13px 1.8
+      margin-bottom: 0
+      margin-top: 1rem
+
+  &-long
+    padding: 1.2rem 1.5rem 1.5rem @xl .75rem 0 .65rem
+    padding: @sm-down * 1rem
+    box-shadow: 60rem 0 0 #fff, -60rem 0 0 #fff
+
+    .slider__nav
+      display: @xs-down none
+
+    ^&__header
+      margin-bottom: 1.2rem @xl .75rem
+      padding: 0
+
+    ^&__inner
+      display: block @xl flex
+      align-items: @xl flex-start
+
+    ^&__slider
+      padding: 0
+
+      .slick-list
+        margin-left: 0
+
+    ^&__item
+      margin-right: 1.5rem @xl 1rem
+      margin-left: 0
+      max-width: 205px @md 224px @xl 363px
+
+      &-img
+
+        &--wrapper
+          min-width: 205px @md 224px @xl 96px
+          max-width: 205px @md 224px @xl 96px
+          margin-right: @xl .75rem
+
+      &-name
+        position: @xl relative
+        top: @xl -6px
+        margin-top: 1rem @xl 0
+
+
+

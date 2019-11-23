@@ -45,52 +45,6 @@
     text: $pseudo-neutral-300 13px 16px
     margin-right: 1rem
 
-.medium_categories
-
-  &__slider-nav
-    display: inline-flex
-    position: relative
+  .slider__nav
     margin-top: 1.5rem
-    z-index: 0
-    margin-left: @sm-down 1rem
 
-    .slick-arrow
-      size: 18px
-      background-image: svg-load("icons/slider-arrow_left.svg" fill: #2979ff)
-      background-size: contain
-      background-position: center
-      background-repeat: no-repeat
-      cursor: pointer
-      position: static
-      margin-top: 0
-
-      &:hover
-        background-image: svg-load("icons/slider-arrow_left.svg" fill: #2196F3)
-
-      &:active
-        background-image: svg-load("icons/slider-arrow_left.svg" fill: #1565C0)
-
-    &:before
-      content: ''
-      background-repeat: no-repeat
-      background-size: 18px 20px
-      background-position: center
-      size: 2rem
-      margin-left: -1rem
-      position: absolute -8px null null 50%
-      background-image: svg-load("icons/i.swipe.svg" fill: $pseudo-neutral-200)
-      cursor: default
-
-    .slick-disabled
-      background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
-
-      &:hover
-        background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
-
-      &:active
-        background-image: svg-load("icons/slider-arrow_left.svg" fill: $pseudo-neutral-200)
-
-
-  &__next-button
-    transform: rotate(180deg)
-    margin-left: 75px
