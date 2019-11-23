@@ -5464,7 +5464,7 @@ main > .article:nth-last-child(2):after {
 
 .big_categories-story {
   width: 100%;
-  box-shadow: 60rem 0 0 #fff, -60rem 0 0 #fff;
+  box-shadow: 48rem 0 0 #fff, -48rem 0 0 #fff;
   padding: 0;
   margin: .5rem auto;
   background-color: #fff;
@@ -5478,7 +5478,7 @@ main > .article:nth-last-child(2):after {
 
 .big_categories-story_item {
   flex-direction: column;
-  width: 32%;
+  width: 31.3%;
   background-color: #fff;
   display: flex;
 }
@@ -5796,7 +5796,7 @@ main > .article:nth-last-child(2):after {
   width: 100%;
   background-color: #FFFFFF;
   padding: 1.2rem 0 1.5rem;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .press-releases__header {
@@ -5860,8 +5860,9 @@ main > .article:nth-last-child(2):after {
 }
 
 .press-releases-long {
-  padding: 1.2rem 1.5rem 1.5rem;
-  box-shadow: 60rem 0 0 #fff, -60rem 0 0 #fff;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  box-shadow: 48rem 0 0 #fff, -48rem 0 0 #fff;
 }
 
 .press-releases-long .slider__nav {
@@ -8046,11 +8047,20 @@ transition {
     max-width: 144px;
   }
 
+  .press-releases {
+    margin: 1rem 0;
+  }
+
   .press-releases__header {
     padding: 0 1.5rem;
   }
 
   .press-releases__slider {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .press-releases-long {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
   }
@@ -8726,7 +8736,7 @@ transition {
   }
 
   .big_categories-story {
-    padding: 1.5rem .9rem 1rem;
+    padding: 1.5rem 0 1rem;
   }
 
   .big_categories-story_item-title {
@@ -8754,13 +8764,19 @@ transition {
     display: flex;
   }
 
+  .press-releases-long {
+    padding: 1.2rem 0 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .press-releases-long .press-releases__item {
-    max-width: 224px;
+    max-width: 240px;
   }
 
   .press-releases-long .press-releases__item-img--wrapper {
-    min-width: 224px;
-    max-width: 224px;
+    min-width: 240px;
+    max-width: 240px;
   }
 
   .news-featured__item {
@@ -9634,10 +9650,6 @@ transition {
     line-height: 2;
   }
 
-  .big_categories-story {
-    padding: 1.5rem 0 1rem;
-  }
-
   .big_categories-story_item-title {
     font-size: 1.0625rem;
   }
@@ -10392,11 +10404,6 @@ transition {
 
   .big_categories-story_item-link {
     top: 6px;
-  }
-
-  .press-releases-long {
-    padding-right: 1rem;
-    padding-left: 1rem;
   }
 
   .categories-story_item-link {
