@@ -37,20 +37,20 @@
   &__item
     @extend .link-plain
     margin-right: 1.5rem
-    max-width: 205px
+    max-width: 176px @sm 205px
     width: 100%
 
     &-img
       @extend .img
 
       &--wrapper
-        min-width: 205px
-        max-width: 205px
+        min-width: 176px @sm 205px
+        max-width: 176px @sm 205px
 
     &-name
       text: 500 13px 1.8
       margin-bottom: 0
-      margin-top: 1rem
+      margin-top: .7rem
 
   &-long
     padding: @md 1.2rem 0 1.5rem @xl .75rem 0 .65rem
@@ -77,19 +77,19 @@
     ^&__item
       margin-right: 1.5rem @xl 1rem
       margin-left: 0
-      max-width: 205px @md 240px @xl 363px
+      max-width: 176px @sm 205px @md 240px @xl 363px
 
       &-img
 
         &--wrapper
-          min-width: 205px @md 240px @xl 96px
-          max-width: 205px @md 240px @xl 96px
+          min-width: 176px @sm 205px @md 240px @xl 96px
+          max-width: 176px @sm 205px @md 240px @xl 96px
           margin-right: @xl .75rem
 
       &-name
         position: @xl relative
         top: @xl -6px
-        margin-top: 1rem @xl 0
+        margin-top: .7rem @xl 0
 
 
 

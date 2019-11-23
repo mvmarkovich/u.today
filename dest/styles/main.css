@@ -5462,6 +5462,10 @@ main > .article:nth-last-child(2):after {
   width: 100%;
 }
 
+.top-story_humble .humble:last-child {
+  margin-right: 0;
+}
+
 .big_categories-story {
   width: 100%;
   box-shadow: 48rem 0 0 #fff, -48rem 0 0 #fff;
@@ -5626,6 +5630,9 @@ main > .article:nth-last-child(2):after {
 
 .medium_categories-story .humble--comments {
   margin-right: 0;
+}
+
+.medium_categories-story_list {
 }
 
 .medium_categories-story_item {
@@ -5842,13 +5849,13 @@ main > .article:nth-last-child(2):after {
 
 .press-releases__item {
   margin-right: 1.5rem;
-  max-width: 205px;
+  max-width: 176px;
   width: 100%;
 }
 
 .press-releases__item-img--wrapper {
-  min-width: 205px;
-  max-width: 205px;
+  min-width: 176px;
+  max-width: 176px;
 }
 
 .press-releases__item-name {
@@ -5856,7 +5863,7 @@ main > .article:nth-last-child(2):after {
   font-size: 0.8125rem;
   line-height: 1.8;
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: .7rem;
 }
 
 .press-releases-long {
@@ -5888,16 +5895,16 @@ main > .article:nth-last-child(2):after {
 .press-releases-long .press-releases__item {
   margin-right: 1.5rem;
   margin-left: 0;
-  max-width: 205px;
+  max-width: 176px;
 }
 
 .press-releases-long .press-releases__item-img--wrapper {
-  min-width: 205px;
-  max-width: 205px;
+  min-width: 176px;
+  max-width: 176px;
 }
 
 .press-releases-long .press-releases__item-name {
-  margin-top: 1rem;
+  margin-top: .7rem;
 }
 
 .rate-billet {
@@ -8060,9 +8067,27 @@ transition {
     padding-left: 1.5rem;
   }
 
+  .press-releases__item {
+    max-width: 205px;
+  }
+
+  .press-releases__item-img--wrapper {
+    min-width: 205px;
+    max-width: 205px;
+  }
+
   .press-releases-long {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+  }
+
+  .press-releases-long .press-releases__item {
+    max-width: 205px;
+  }
+
+  .press-releases-long .press-releases__item-img--wrapper {
+    min-width: 205px;
+    max-width: 205px;
   }
 
   .news-featured__item {
@@ -10404,6 +10429,14 @@ transition {
 
   .big_categories-story_item-link {
     top: 6px;
+  }
+
+  .medium_categories-story_list {
+    margin-left: 1rem;
+  }
+
+  .medium_categories-story .slider__nav {
+    margin-left: 1rem;
   }
 
   .categories-story_item-link {
