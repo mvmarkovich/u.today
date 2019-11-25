@@ -143,6 +143,14 @@
     event.stopPropagation();
   });
 
+  $(".modal .register").on("click", function () {
+    $('#log_in').removeClass("modal--open modal--fadeIn");
+  });
+
+  $(".modal .sign_in").on("click", function () {
+    $('#register').removeClass("modal--open modal--fadeIn");
+  });
+
   var currencyValue = $(".currencies__currency span");
 
   $("[data-set-currency]").on("click", setCurrency);
@@ -375,6 +383,9 @@
     $(this).addClass("voted");
   });
 
+  //
+  // Form Validation
+  //
   $('#form-log_in').each(function() {
     $(this).validationEngine('attach', {
       addFailureCssClassToField: "invalid",
@@ -421,7 +432,22 @@
       });
   });
 
-  $(".modal__entrance-form").submit(function(e) {
+  $('.comment-form').each(function() {
+    $(this).validationEngine('attach', {
+      scroll: false,
+      onValidationComplete: function(form, status){
+        if (status == true){
+          $(form).find(".validation__panel").remove();
+          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__successful'>Successful</div>");
+        } else{
+          $(form).find(".validation__panel").remove();
+          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Error</div>");
+        }
+      }
+    });
+  });
+
+  $(".modal__entrance-form, .comment-form").submit(function(e) {
     e.preventDefault();
   });
 
@@ -431,14 +457,6 @@
       var item = $(this);
       target.html(item.val().length);
     });
-  });
-
-  $(".modal .register").on("click", function () {
-    $('#log_in').removeClass("modal--open modal--fadeIn");
-  });
-
-  $(".modal .sign_in").on("click", function () {
-    $('#register').removeClass("modal--open modal--fadeIn");
   });
 
   //
