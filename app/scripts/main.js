@@ -467,6 +467,12 @@
     $(this).addClass("btn--show--open");
   });
 
+  if($(".about-author p").text().length > 135){
+    $('.about-author .btn').show();
+  } else {
+    $('.about-author .btn').hide();
+  }
+
   //
   // Button load more in News main
   //
@@ -485,7 +491,6 @@
     if($(".news__item:hidden").length < 1){
       $('.news .btn--block').hide();
     }
-
   });
 
   //

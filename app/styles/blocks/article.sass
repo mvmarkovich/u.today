@@ -364,6 +364,7 @@
     margin-bottom: 0
 
   &__recommended
+    margin-top: 1.5rem
 
     &-header
       box: center
@@ -457,7 +458,7 @@
       box: center wrap
 
     .btn
-      margin: 1.5rem 0
+      margin: 1.5rem 0 0
       box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35)
 
   .something--content
@@ -549,7 +550,7 @@
 .about-author
   background-color: #f5f5f5
   position: relative
-  padding: 1rem 3rem 1rem 1rem @sm 2rem 4rem 1rem 2rem @xl 2rem 2rem 1rem
+  padding: 1rem @sm 2rem 2rem 1rem
   margin: 2rem -1rem @sm 2rem 0 @xl 2.4rem 0 3rem
 
   &_row
@@ -562,8 +563,16 @@
 
   &_data
     box: flex center
+    flex-wrap: @xl-down wrap
     margin-top: .5rem
 
+  &_info
+    position: relative
+
+    &.content--open
+      p
+        max-height: 100%
+    
   &_name
     @extend .link-plain
     text: #2979FF 13px 1.8 600 none none @sm 15px @xl 17px
@@ -580,21 +589,37 @@
       border-radius: 2px
 
   .social
-    box: @xl-down vertical
-    position: @xl-down absolute
-    right: .8rem @sm 1.5rem @xl 0
-    top: 50px @sm 60px @xl 0
+    box:
+    width: @xl-down 100%
+    margin-top: @xl-down .5rem
+    justify-content: @xl-down flex-start
 
     &__link
-      margin-right: 0
+      margin-right: 1.5rem
       margin-left: @xl 1.5rem
-      margin-bottom: @xl-down 1rem
 
   p
     text: 13px 1.8 500 @sm 15px
     margin: .5rem 0 0
     margin-left: -55px @sm -82px @md -95px @xl 0
     margin-top: .5rem @sm 1rem @xl .5rem
+    max-height: 81px
+    overflow: hidden
+
+  .btn
+    font-weight: 600
+    margin-left: -55px @sm -82px @md -95px @xl 0
+
+    &:before
+      content: ''
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 50%)
+      width: 100%
+      height: 64px
+      position: absolute
+      display: block
+      bottom: 31px
+      left: -55px @sm -82px @md -95px @xl 0
+
 
 .mega-history
   @extend .link-plain

@@ -427,16 +427,16 @@ a,button {
   border-color: #1565C0;
 }
 
-.about-author_avatar img.caption a,.about-author_name,.article > img.caption a,.article__contents-link,.article__main-img.caption a,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story--miners a.aside-story__name,.aside-story__img.caption a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card--related .related_img img.caption a,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.cels__widget-img.caption a,.comments article img.caption a,.comments ul.links.inline .comment-forbidden a,.comments ul.links.inline .comment-reply a,.event__main-img.caption a,.footer__nav-child-link,.footer__nav-link,.humble--author,.humble--link,.image-source-text a,.img.caption a,.input__checkbox-label a,.landing .text-link,.landing__benefits-img.caption a,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.memories__news-avatar.caption a,.memories__news-data,.memories__news-img.caption a,.memories__people-img.caption a,.memories__people-item,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__img.caption a,.partners__link,.press-releases__item,.press-releases__item-img.caption a,.price-index__header .btn,.rate-billet-img.caption a,.show-more,.staff__img.caption a,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__img-wrapper.caption a,.top-story__mark,.top-story__title,.under_main-img__item,.user--login__descr,.user--logout,a.category-item__title,figcaption a,img:not([class]).caption a {
+.about-author_avatar img.caption a,.about-author_name,.article > img.caption a,.article__contents-link,.article__main-img.caption a,.article__recommended-link,.article__recommended .article__recommended-item-title,.article__related-link a,.aside-story--miners a.aside-story__name,.aside-story__img.caption a,.aside-story__link,.author__item-name,.big_categories-story_item-title,.big_categories-story_mark,.breaking,.card--related,.card--related .related_img img.caption a,.card .advertising_link,.categories-story_item-title,.categories-story_mark,.category-item__list-link,.cels__widget-img.caption a,.comments .js-comment footer > p a,.comments .js-comment footer > p span,.comments article img.caption a,.comments ul.links.inline .comment-forbidden a,.comments ul.links.inline .comment-reply a,.event__main-img.caption a,.footer__nav-child-link,.footer__nav-link,.humble--author,.humble--link,.image-source-text a,.img.caption a,.input__checkbox-label a,.landing .text-link,.landing__benefits-img.caption a,.link-plain,.medium_categories-story_item-title,.medium_categories-story_mark,.mega-history,.memories__news-avatar.caption a,.memories__news-data,.memories__news-img.caption a,.memories__people-img.caption a,.memories__people-item,.news-categories__item-link,.news-category__item-title,.news-featured__item-link,.news-feed__item-title,.news__item-title,.partners__img.caption a,.partners__link,.press-releases__item,.press-releases__item-img.caption a,.price-index__header .btn,.rate-billet-img.caption a,.show-more,.staff__img.caption a,.staff__name,.staff__post,.team__item,.top-story--link,.top-story__img-wrapper.caption a,.top-story__mark,.top-story__title,.under_main-img__item,.user--login__descr,.user--logout,a.category-item__title,figcaption a,img:not([class]).caption a {
   color: #263238;
   text-decoration: none;
 }
 
-.about-author_avatar img.caption a:hover,.about-author_name:hover,.article > img.caption a:hover,.article__contents-link:hover,.article__main-img.caption a:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story--miners a.aside-story__name:hover,.aside-story__img.caption a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related .related_img img.caption a:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.cels__widget-img.caption a:hover,.comments article img.caption a:hover,.comments ul.links.inline .comment-forbidden a:hover,.comments ul.links.inline .comment-reply a:hover,.event__main-img.caption a:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.humble--link:hover,.image-source-text a:hover,.img.caption a:hover,.input__checkbox-label a:hover,.landing .text-link:hover,.landing__benefits-img.caption a:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.memories__news-avatar.caption a:hover,.memories__news-data:hover,.memories__news-img.caption a:hover,.memories__people-img.caption a:hover,.memories__people-item:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__img.caption a:hover,.partners__link:hover,.press-releases__item-img.caption a:hover,.press-releases__item:hover,.price-index__header .btn:hover,.rate-billet-img.caption a:hover,.show-more:hover,.staff__img.caption a:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__img-wrapper.caption a:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--login__descr:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover,img:not([class]).caption a:hover {
+.about-author_avatar img.caption a:hover,.about-author_name:hover,.article > img.caption a:hover,.article__contents-link:hover,.article__main-img.caption a:hover,.article__recommended-link:hover,.article__recommended .article__recommended-item-title:hover,.article__related-link a:hover,.aside-story--miners a.aside-story__name:hover,.aside-story__img.caption a:hover,.aside-story__link:hover,.author__item-name:hover,.big_categories-story_item-title:hover,.big_categories-story_mark:hover,.breaking:hover,.card--related .related_img img.caption a:hover,.card--related:hover,.card .advertising_link:hover,.categories-story_item-title:hover,.categories-story_mark:hover,.category-item__list-link:hover,.cels__widget-img.caption a:hover,.comments .js-comment footer > p a:hover,.comments .js-comment footer > p span:hover,.comments article img.caption a:hover,.comments ul.links.inline .comment-forbidden a:hover,.comments ul.links.inline .comment-reply a:hover,.event__main-img.caption a:hover,.footer__nav-child-link:hover,.footer__nav-link:hover,.humble--author:hover,.humble--link:hover,.image-source-text a:hover,.img.caption a:hover,.input__checkbox-label a:hover,.landing .text-link:hover,.landing__benefits-img.caption a:hover,.link-plain:hover,.medium_categories-story_item-title:hover,.medium_categories-story_mark:hover,.mega-history:hover,.memories__news-avatar.caption a:hover,.memories__news-data:hover,.memories__news-img.caption a:hover,.memories__people-img.caption a:hover,.memories__people-item:hover,.news-categories__item-link:hover,.news-category__item-title:hover,.news-featured__item-link:hover,.news-feed__item-title:hover,.news__item-title:hover,.partners__img.caption a:hover,.partners__link:hover,.press-releases__item-img.caption a:hover,.press-releases__item:hover,.price-index__header .btn:hover,.rate-billet-img.caption a:hover,.show-more:hover,.staff__img.caption a:hover,.staff__name:hover,.staff__post:hover,.team__item:hover,.top-story--link:hover,.top-story__img-wrapper.caption a:hover,.top-story__mark:hover,.top-story__title:hover,.under_main-img__item:hover,.user--login__descr:hover,.user--logout:hover,a.category-item__title:hover,figcaption a:hover,img:not([class]).caption a:hover {
   color: #2196F3;
 }
 
-.about-author_avatar img.caption a:active,.about-author_name:active,.article > img.caption a:active,.article__contents-link:active,.article__main-img.caption a:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story--miners a.aside-story__name:active,.aside-story__img.caption a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related .related_img img.caption a:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.cels__widget-img.caption a:active,.comments article img.caption a:active,.comments ul.links.inline .comment-forbidden a:active,.comments ul.links.inline .comment-reply a:active,.event__main-img.caption a:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.humble--link:active,.image-source-text a:active,.img.caption a:active,.input__checkbox-label a:active,.landing .text-link:active,.landing__benefits-img.caption a:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.memories__news-avatar.caption a:active,.memories__news-data:active,.memories__news-img.caption a:active,.memories__people-img.caption a:active,.memories__people-item:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__img.caption a:active,.partners__link:active,.press-releases__item-img.caption a:active,.press-releases__item:active,.price-index__header .btn:active,.rate-billet-img.caption a:active,.show-more:active,.staff__img.caption a:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__img-wrapper.caption a:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--login__descr:active,.user--logout:active,a.category-item__title:active,figcaption a:active,img:not([class]).caption a:active {
+.about-author_avatar img.caption a:active,.about-author_name:active,.article > img.caption a:active,.article__contents-link:active,.article__main-img.caption a:active,.article__recommended-link:active,.article__recommended .article__recommended-item-title:active,.article__related-link a:active,.aside-story--miners a.aside-story__name:active,.aside-story__img.caption a:active,.aside-story__link:active,.author__item-name:active,.big_categories-story_item-title:active,.big_categories-story_mark:active,.breaking:active,.card--related .related_img img.caption a:active,.card--related:active,.card .advertising_link:active,.categories-story_item-title:active,.categories-story_mark:active,.category-item__list-link:active,.cels__widget-img.caption a:active,.comments .js-comment footer > p a:active,.comments .js-comment footer > p span:active,.comments article img.caption a:active,.comments ul.links.inline .comment-forbidden a:active,.comments ul.links.inline .comment-reply a:active,.event__main-img.caption a:active,.footer__nav-child-link:active,.footer__nav-link:active,.humble--author:active,.humble--link:active,.image-source-text a:active,.img.caption a:active,.input__checkbox-label a:active,.landing .text-link:active,.landing__benefits-img.caption a:active,.link-plain:active,.medium_categories-story_item-title:active,.medium_categories-story_mark:active,.mega-history:active,.memories__news-avatar.caption a:active,.memories__news-data:active,.memories__news-img.caption a:active,.memories__people-img.caption a:active,.memories__people-item:active,.news-categories__item-link:active,.news-category__item-title:active,.news-featured__item-link:active,.news-feed__item-title:active,.news__item-title:active,.partners__img.caption a:active,.partners__link:active,.press-releases__item-img.caption a:active,.press-releases__item:active,.price-index__header .btn:active,.rate-billet-img.caption a:active,.show-more:active,.staff__img.caption a:active,.staff__name:active,.staff__post:active,.team__item:active,.top-story--link:active,.top-story__img-wrapper.caption a:active,.top-story__mark:active,.top-story__title:active,.under_main-img__item:active,.user--login__descr:active,.user--logout:active,a.category-item__title:active,figcaption a:active,img:not([class]).caption a:active {
   color: #1565C0;
 }
 
@@ -4157,6 +4157,10 @@ blockquote em {
   margin-bottom: 0;
 }
 
+.article__recommended {
+  margin-top: 1.5rem;
+}
+
 .article__recommended-header {
   margin-bottom: 1.5rem;
   display: flex;
@@ -4272,7 +4276,7 @@ blockquote em {
 }
 
 .article__recommended .btn {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
   box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35);
 }
 
@@ -4374,7 +4378,7 @@ blockquote em {
 .about-author {
   background-color: #f5f5f5;
   position: relative;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem;
   margin: 2rem -1rem;
 }
 
@@ -4391,6 +4395,14 @@ blockquote em {
   margin-top: .5rem;
   display: flex;
   align-items: center;
+}
+
+.about-author_info {
+  position: relative;
+}
+
+.about-author_info.content--open p {
+  max-height: 100%;
 }
 
 .about-author_name {
@@ -4416,12 +4428,11 @@ blockquote em {
 }
 
 .about-author .social {
-  right: .8rem;
-  top: 50px;
+  display: flex;
 }
 
 .about-author .social__link {
-  margin-right: 0;
+  margin-right: 1.5rem;
 }
 
 .about-author p {
@@ -4431,6 +4442,24 @@ blockquote em {
   margin: .5rem 0 0;
   margin-left: -55px;
   margin-top: .5rem;
+  max-height: 81px;
+  overflow: hidden;
+}
+
+.about-author .btn {
+  font-weight: 600;
+  margin-left: -55px;
+}
+
+.about-author .btn:before {
+  content: '';
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 50%);
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  display: block;
+  bottom: 31px;
+  left: -55px;
 }
 
 .mega-history {
@@ -4891,6 +4920,8 @@ main > .article:nth-last-child(2):after {
 }
 
 .comments {
+  padding: 0 1rem 1.3rem;
+  border-bottom: 8px solid #F5F5F5;
 }
 
 .comments h2 {
@@ -4972,13 +5003,16 @@ main > .article:nth-last-child(2):after {
   margin-bottom: 1.5rem;
 }
 
-.comments .comment-form article {
+.comments .comment-form a {
   border: 1px solid #CFD8DC;
   min-width: 32px;
   max-width: 32px;
   height: 32px;
   border-radius: 50%;
   background: #d2d5da url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1.5 4V5.5C1.5 9.65 3.71 13.28 7 15.3V20H22V18C22 15.34 16.67 14 14 14C14 14 13.83 14 13.75 14C9 14 5 10 5 5.5V4H1.5ZM14 4C12.9391 4 11.9217 4.42143 11.1716 5.17157C10.4214 5.92172 10 6.93913 10 8C10 9.06087 10.4214 10.0783 11.1716 10.8284C11.9217 11.5786 12.9391 12 14 12C15.0609 12 16.0783 11.5786 16.8284 10.8284C17.5786 10.0783 18 9.06087 18 8C18 6.93913 17.5786 5.92172 16.8284 5.17157C16.0783 4.42143 15.0609 4 14 4Z'/%3E %3C/svg%3E") no-repeat center / 30px;
+  display: block;
+  float: left;
+  margin-right: 1.5rem;
 }
 
 .comments .comment-form .right {
@@ -4988,6 +5022,11 @@ main > .article:nth-last-child(2):after {
 
 .comments article img {
   border-radius: 50%;
+}
+
+.comments .js-form-item {
+  float: left;
+  width: 100%;
 }
 
 .comments .js-form-item > div {
@@ -5049,13 +5088,13 @@ main > .article:nth-last-child(2):after {
   margin-bottom: 0;
 }
 
-.comments .js-comment footer > p span {
+.comments .js-comment footer > p a,.comments .js-comment footer > p span {
   color: #263238;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-weight: 600;
   display: inline-flex;
-  margin-right: 1rem;
+  margin-right: .5rem;
 }
 
 .comments ul.links.inline {
@@ -7916,7 +7955,7 @@ transition {
   }
 
   .about-author {
-    padding: 2rem 4rem 1rem 2rem;
+    padding: 2rem 2rem 1rem;
     margin: 2rem 0;
   }
 
@@ -7931,15 +7970,18 @@ transition {
     height: 64px;
   }
 
-  .about-author .social {
-    right: 1.5rem;
-    top: 60px;
-  }
-
   .about-author p {
     font-size: 0.9375rem;
     margin-left: -82px;
     margin-top: 1rem;
+  }
+
+  .about-author .btn {
+    margin-left: -82px;
+  }
+
+  .about-author .btn:before {
+    left: -82px;
   }
 
   .fix-block .switch {
@@ -7960,9 +8002,10 @@ transition {
   }
 
   .comments {
-    padding: 1.5rem 1rem 0;
+    padding: 1.5rem 1rem 1.5rem;
     margin: 0 -1rem;
     border-top: 16px solid #F5F5F5;
+    border-bottom: 16px solid #F5F5F5;
   }
 
   .comments #social-login-block-form {
@@ -7970,15 +8013,23 @@ transition {
     margin-bottom: 2rem;
   }
 
+  .comments .form-submit {
+    margin-left: 80px;
+  }
+
   .comments .comment-form {
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
   }
 
-  .comments .comment-form article {
+  .comments .comment-form a {
     min-width: 56px;
     max-width: 56px;
     height: 56px;
+  }
+
+  .comments .js-form-item {
+    width: calc(100% - 80px);
   }
 
   .comments .js-form-item p {
@@ -8625,6 +8676,14 @@ transition {
 
   .about-author p {
     margin-left: -95px;
+  }
+
+  .about-author .btn {
+    margin-left: -95px;
+  }
+
+  .about-author .btn:before {
+    left: -95px;
   }
 
   .article--scroll-show {
@@ -9504,17 +9563,11 @@ transition {
   }
 
   .about-author {
-    padding: 2rem 2rem 1rem;
     margin: 2.4rem 0 3rem;
   }
 
   .about-author_name {
     font-size: 1.0625rem;
-  }
-
-  .about-author .social {
-    right: 0;
-    top: 0;
   }
 
   .about-author .social__link {
@@ -9524,6 +9577,14 @@ transition {
   .about-author p {
     margin-left: 0;
     margin-top: .5rem;
+  }
+
+  .about-author .btn {
+    margin-left: 0;
+  }
+
+  .about-author .btn:before {
+    left: 0;
   }
 
   .mega-history .history_tag {
@@ -10384,21 +10445,18 @@ transition {
   }
 
   .comments {
-    padding-top: 1rem;
-  }
-
-  .comments .form-submit {
-    margin-left: -56px;
+    margin: 0 -1rem;
   }
 
   .comments .js-form-item > div {
     margin-top: 15px;
-    margin-left: -56px;
   }
 
   .comments .js-form-item p {
     position: relative;
     top: 5px;
+    margin-top: -30px;
+    margin-left: 56px;
   }
 
   .comments .js-comment > div > div {
@@ -11123,14 +11181,14 @@ transition {
     font-size: 0.9375rem;
   }
 
-  .about-author .social {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+  .about-author_data {
+    flex-wrap: wrap;
   }
 
-  .about-author .social__link {
-    margin-bottom: 1rem;
+  .about-author .social {
+    width: 100%;
+    margin-top: .5rem;
+    justify-content: flex-start;
   }
 
   .aside-story--tweets .text-small {
