@@ -9620,6 +9620,7 @@ transition {
   }
 
   .about-author .social__link {
+    margin-right: 0;
     margin-left: 1.5rem;
   }
 
