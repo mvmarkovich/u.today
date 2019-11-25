@@ -438,10 +438,10 @@
       onValidationComplete: function(form, status){
         if (status == true){
           $(form).find(".validation__panel").remove();
-          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__successful'>Successful</div>");
+          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__successful'>Your comment was submitted successfully</div>");
         } else{
           $(form).find(".validation__panel").remove();
-          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Error</div>");
+          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Pleasem enter the text</div>");
         }
       }
     });

@@ -4946,7 +4946,6 @@ main > .article:nth-last-child(2):after {
 }
 
 .comments .validation__panel {
-  color: #FFFFFF;
   font-size: 0.8125rem;
   line-height: 1.6;
   font-weight: 600;
@@ -4958,11 +4957,13 @@ main > .article:nth-last-child(2):after {
 }
 
 .comments .validation__successful {
-  background-color: #4CAF50;
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .comments .validation__error {
-  background-color: #B71C1C;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 .comments textarea.form-textarea {
@@ -5113,7 +5114,7 @@ main > .article:nth-last-child(2):after {
   line-height: 1.5rem;
   font-weight: 600;
   display: inline-flex;
-  margin-right: .5rem;
+  margin-right: .1rem;
 }
 
 .comments ul.links.inline {
