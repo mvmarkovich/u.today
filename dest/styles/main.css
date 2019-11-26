@@ -5072,9 +5072,7 @@ main > .article:nth-last-child(2):after {
   padding: 0 !important;
   display: flex;
   flex-direction: column;
-}
-
-.comments .js-comment > div > div {
+  margin-top: 0.5rem;
   order: 1;
   color: #263238;
   font-weight: 500;
@@ -8085,9 +8083,6 @@ transition {
   .comments .js-comment > div {
     margin-top: -25px;
     margin-left: 80px;
-  }
-
-  .comments .js-comment > div > div {
     font-size: 0.9375rem;
     line-height: 2rem;
   }
@@ -10503,7 +10498,7 @@ transition {
   }
 
   .comments .js-form-item > div {
-    margin-top: 15px;
+    margin-top: 1.5rem;
   }
 
   .comments .js-form-item p {
@@ -10513,8 +10508,8 @@ transition {
     margin-left: 56px;
   }
 
-  .comments .js-comment > div > div {
-    margin-top: 0.5rem;
+  .comments ul.links.inline {
+    margin-top: .4rem;
   }
 
   .comments ul.links.inline .comment-forbidden {

@@ -97,7 +97,7 @@
     width: 100% @sm calc(100% - 80px)
 
     & > div
-      margin-top: @sm-down 15px
+      margin-top: @sm-down 1.5rem
       box: vertical
 
     p
@@ -118,13 +118,12 @@
       padding: 0 !important
       display: flex
       flex-direction: column
-      margin-top: @sm -25px
+      margin-top: 0.5rem @sm -25px
       margin-left: @sm 80px
+      order: 1
+      text: $pseudo-neutral-900 500 13px 16px @sm 15px 32px
 
       & > div
-        order: 1
-        text: $pseudo-neutral-900 500 13px 16px @sm 15px 32px
-        margin-top: @sm-down 0.5rem
 
         & > div
           display: none
@@ -154,6 +153,7 @@
   ul.links.inline
     @extend .list-reset
     order: 2
+    margin-top: @sm-down .4rem
 
     .comment-reply
 
