@@ -3932,18 +3932,19 @@ blockquote em {
   width: 100% !important;
 }
 
-.article__content h2 em {
+.article__content h2 em,.article__content h3 em {
   display: inline-flex;
   align-items: center;
   font-style: normal;
 }
 
-.article__content h2 em:after {
+.article__content h2 em:after,.article__content h3 em:after {
   content: 'Promoted';
   color: #B0BEC5;
   font-size: 11px;
   line-height: 18px;
   text-align: center;
+  white-space: nowrap;
   padding: 0 .5rem;
   border-radius: 2px;
   border: 1px solid #CFD8DC;
@@ -9431,7 +9432,7 @@ transition {
   }
 
   .share-and-up {
-    left: calc(50% - 560px - 67px);
+    left: calc(50% - 560px - 112px);
   }
 
   .header__container {
