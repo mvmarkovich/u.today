@@ -1797,7 +1797,7 @@ aside {
 }
 
 .card--miners .card__body .aside-story__img-wrapper {
-  max-width: 85px;
+  max-width: 75px;
   min-width: 1px;
   width: 100%;
   background: transparent;
@@ -7885,7 +7885,7 @@ transition {
 
 @media (min-width: 380px) {
   .card--miners .card__body .aside-story__img-wrapper {
-    min-width: 85px;
+    min-width: 75px;
   }
 
   .card__body-counter .aside-story:before {
@@ -9328,7 +9328,7 @@ transition {
   }
 
   .aside-menu-block {
-    max-width: 350px;
+    max-width: 336px;
   }
 
   .btn--celsius {
