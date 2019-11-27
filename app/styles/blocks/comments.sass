@@ -8,6 +8,25 @@
   h2
     text: $pseudo-neutral-900 600 22px 1.4
 
+  .comment-wrapper
+
+    .form-img--wrapper
+      float: @sm left
+      margin-right: 1.5rem
+      border-radius: 50%
+      border: 1px solid #CFD8DC
+      min-width: 32px @sm 56px
+      max-width: 32px @sm 56px
+      height: 32px @sm 56px
+      border-radius: 50%
+      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
+      display: block
+
+      img
+        @extend .img
+        border-radius: 50%
+
+
   #social-login-block-form
     border-bottom: 1px solid $pseudo-neutral-100
     padding-bottom: 1rem @sm 1.5rem
@@ -93,8 +112,7 @@
       border-radius: 50%
 
   .js-form-item
-    float: left
-    width: 100% @sm calc(100% - 80px)
+    width: 100%
 
     & > div
       margin-top: @sm-down 1.5rem
