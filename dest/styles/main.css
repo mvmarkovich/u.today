@@ -4951,6 +4951,30 @@ main > .article:nth-last-child(2):after {
   border-radius: 50%;
 }
 
+.comments .comment-wrapper > div .js-form-item {
+  width: 100%;
+}
+
+.comments .comment-wrapper > div .form-submit {
+  margin-left: 0;
+}
+
+.comments .comment-wrapper > div .comment-form {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.comments .comment-wrapper > div .form-submit {
+  margin-right: .3rem;
+}
+
+.comments .comment-wrapper > div .js-form-item p {
+  margin-left: 0;
+  margin-top: -10px;
+}
+
 .comments #social-login-block-form {
   border-bottom: 1px solid #CFD8DC;
   padding-bottom: 1rem;
@@ -5175,7 +5199,11 @@ main > .article:nth-last-child(2):after {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: 0;
-  margin-top: -2rem;
+}
+
+.comments .indented .js-form-item p {
+  margin-left: 0;
+  margin-top: -10px;
 }
 
 .comments .indented .form-submit {
@@ -8071,6 +8099,15 @@ transition {
     min-width: 56px;
     max-width: 56px;
     height: 56px;
+  }
+
+  .comments .comment-wrapper > div .comment-form {
+    margin-left: 80px;
+    margin-top: -1rem;
+  }
+
+  .comments .comment-wrapper > div .form-submit {
+    margin-right: 1rem;
   }
 
   .comments #social-login-block-form {

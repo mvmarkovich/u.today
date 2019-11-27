@@ -441,7 +441,7 @@
           $(form).find(".js-form-item > div").append("<div class='validation__panel validation__successful'>Your comment was submitted successfully</div>");
         } else{
           $(form).find(".validation__panel").remove();
-          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Pleasem enter the text</div>");
+          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Please enter the text</div>");
         }
       }
     });
