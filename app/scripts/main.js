@@ -464,15 +464,15 @@
   //
 
   $('.user--login').click(function () {
-    $(this).toggleClass('user--login--open');
+    $('.user--login__modal').toggleClass('user--login__modal-open');
     return false;
   });
 
   $(document).on('mouseup', function (e){
     var bookingform = $(".user--login__modal");
-    if (!bookingform.is(e.target) && !$(e.target).is('.user--login'))
+    if (!bookingform.is(e.target) && !$(e.target).is('.user--login__modal'))
     {
-      $('.user--login--open').removeClass("user--login--open");
+      $('.user--login__modal-open').removeClass("user--login__modal-open");
     }
   });
 

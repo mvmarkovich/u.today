@@ -301,7 +301,9 @@
       display: block
 
   &__modal
-    position: absolute 40px 0 null null
+    position: absolute
+    top: 48px
+    right: 62px @md 16px @xl 32px
     background-color: #fff
     padding: 0 1rem
     width: 240px
@@ -316,6 +318,19 @@
       filter: drop-shadow(1px -0.5px 2.8px rgba(33, 150, 243, 0.5))
       background: linear-gradient(to right bottom, transparent 50%, white 50%)
       z-index: -1
+
+    &-open
+      display: block
+
+    .user--logout
+      text-transform: none
+      letter-spacing: normal
+      text: 13px 54px 600
+      padding-left: 2.2rem
+
+      &:after
+        margin-left: 0
+        position: absolute null null null 0
 
   &__item
     position: relative
@@ -345,15 +360,5 @@
 
     &:active:before
       background-image: svg-load("icons/user.svg", fill: $accent-1-dark)
-
-  .user--logout
-    text-transform: none
-    letter-spacing: normal
-    text: 13px 54px 600
-    padding-left: 2.2rem
-
-    &:after
-      margin-left: 0
-      position: absolute null null null 0
 
 
