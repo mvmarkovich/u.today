@@ -5804,6 +5804,7 @@ main > .article:nth-last-child(2):after {
   color: #90A4AE;
   font-size: 0.8125rem;
   line-height: 1rem;
+  font-weight: 500;
   margin-right: 1rem;
 }
 
@@ -6364,7 +6365,8 @@ main > .article:nth-last-child(2):after {
 .categories-story_mark {
   color: #90a4ae;
   font-size: 0.8125rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
+  font-weight: 500;
   margin-right: 1rem;
 }
 
@@ -6398,6 +6400,7 @@ main > .article:nth-last-child(2):after {
 .categories-story_item-humble {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .categories-story_item-title {
