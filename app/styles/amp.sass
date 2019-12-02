@@ -521,8 +521,22 @@ textarea.input__elem
   margin-top: 2.2rem
   margin-bottom: 2.5rem
 
-  > :last-child
-    margin-bottom: 0
+  h2, h3
+    em
+      display: inline-flex
+      align-items: center
+      font-style: normal
+
+      &:after
+        content: 'Promoted'
+        text: $pseudo-neutral-200 11px 18px
+        text-align: center
+        white-space: nowrap
+        padding: 0 .5rem
+        border-radius: 2px
+        border: 1px solid $pseudo-neutral-100
+        font-style: normal
+        margin-left: 1rem
 
 .article__contents
   font-family: 'Montserrat', sans-serif
