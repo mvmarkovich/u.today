@@ -5987,6 +5987,7 @@ main > .article:nth-last-child(2):after {
 .press-releases__item-img--wrapper {
   min-width: 176px;
   max-width: 176px;
+  position: relative;
 }
 
 .press-releases__item-name {
