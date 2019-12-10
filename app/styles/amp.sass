@@ -1004,6 +1004,10 @@ body
   padding-right: 1rem
   padding-left: 1rem
 
+.btn--full
+  min-height: 48px
+  width: 100%
+
 .btn--input
   display: flex
   width: 100%
@@ -1055,6 +1059,11 @@ body
   letter-spacing: normal
   border-bottom: 1px dashed #fff
 
+.btn--accent
+  background: $accent-1-light
+  border-color: $accent-1-light
+  text: #fff
+
 .btn--accent-3
   background: linear-gradient(135deg, #00B964 35.53%, #06CE72 93.42%)
   border: none
@@ -1070,6 +1079,9 @@ body
 
 .btn--radius-right
   border-radius: 0 2px 2px 0
+
+.btn--small
+  min-height: 32px
 
 .btn--big
   min-height: 40px
@@ -1227,13 +1239,10 @@ body
       font-size: .8125rem
       font-weight: 500
       line-height: 1.9
-      margin-top: @sm -3px
-      margin-left: @sm 1rem
-      padding: .5rem 1rem @sm 0
-      background-color: $neutral @sm transparent
+      padding: .5rem 1rem
+      background-color: $neutral
 
     &-link
-      display: @sm flex
       text-decoration: none
       color: #263238
       align-items: flex-start
@@ -1241,7 +1250,7 @@ body
     &-img
       display: block
       overflow: hidden
-      width: 100% @sm 96px
+      width: 100%
       min-width: 96px
       border: 1px solid #cfd8dc
       border-radius: 2px
@@ -1372,40 +1381,8 @@ body
 .article__related-link .red
   color: #f44336
 
-.amp_page-container .fix-block
-  position: fixed
-  z-index: 99
-  right: 0
-  bottom: 0
-  left: 0
-  max-width: 688px
-  margin: 0 auto
-
 .continue:before
   display: none
-
-.amp_page-container .fix-block:before
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
-  height: 95px
-  content: ''
-  -webkit-transform: translateY(-100%)
-  transform: translateY(-100%)
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 100%)
-
-.fix-block
-  .amp_descr-continue
-    margin: 0
-    background: transparent
-
-  .amp-subscribe
-    padding: 0
-
-  .icon_fair
-    margin-left: 15px
-    font-size: 15px
 
 .author_block
   .author__item-header
@@ -1536,59 +1513,12 @@ body
   .author__item-name
     cursor: pointer
 
-.amp_page-container .fix-block .row
-  display: flex
-  justify-content: space-between
-  align-items: flex-end
-  flex-direction: column
-  z-index: 99
-  width: 100%
-  max-width: 528px
-  margin: 0 auto
-  padding: 1rem
-  background: #fff
-
-  > div
-    margin-bottom: 1rem
-
-    &:last-child
-      margin-bottom: 0
-
-.fix-block
-  .btn
-    border-radius: 3px
-    font-size: .8125rem
-    line-height: 2rem
-    border: 1px solid #4caf50
-    height: 32px
-    width: 100%
-
-  .amp_descr-continue
-    width: 100%
-    padding: 0
-
-  .switch
-    width: 100%
-
-    .btn
-      color: #4caf50
-      background: transparent
-      text-transform: none
-      letter-spacing: inherit
-
-    .icon
-      font-size: 18px
-      margin-right: 0.8rem
-
-  .amp_descr-continue .btn
-    color: #fff
-
 .about-author
   background-color: #f5f5f5
   position: relative
   padding: 2rem 1rem 1.5rem @sm 2rem 2rem 1rem
   min-height: 185px
-  margin: 1.5rem -1rem @sm 1.5rem 0
+  margin: 1.5rem -1rem 0 @sm 1.5rem 0 0
 
 .about-author_row
   display: flex
@@ -2033,8 +1963,17 @@ amp-list
     text-align: center
 
 .comments
-  padding: 1rem 1rem 1.3rem
+  padding: 0 1rem 1.3rem
   margin: 0 -1rem
+
+  &__login
+    box: center
+    padding: 1.5rem 0
+    border-bottom: 1px solid #CFD8DC
+
+    &-icon
+      box:
+      margin-right: 1.2rem
 
   h2
     text: $pseudo-neutral-900 600 22px 1.4
@@ -2269,3 +2208,11 @@ amp-list
 
   .visually-hidden
     display: none
+
+.fix-block
+  position: fixed null 0 0 0
+  background-color: $neutral
+  padding: 1rem
+  z-index: 99
+  max-width: 544px
+  margin: 0 auto
