@@ -3238,7 +3238,6 @@ blockquote em {
 }
 
 .currencies__link + .currencies__link {
-  margin-left: 1.5rem;
 }
 
 .currencies__name {
@@ -8605,6 +8604,10 @@ transition {
     height: 24px;
   }
 
+  .currencies__slide {
+    justify-content: space-between;
+  }
+
   .header__container {
     padding: 0.5rem 1rem 0px;
     max-width: 768px;
@@ -11256,6 +11259,10 @@ transition {
   .card--related .related_img {
     order: 1;
     margin-bottom: 1rem;
+  }
+
+  .currencies__link + .currencies__link {
+    margin-left: 1.5rem;
   }
 
   .header__nav {
