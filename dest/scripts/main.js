@@ -515,36 +515,42 @@
   // Article Celsius Widget (Calculator)
   //
 
-  const $select_crypto = $(".select_crypto"),
-      $cels__widget_year = $(".interest_per_year"),
-      $cels__widget_week = $(".interest_per_week"),
+  const $cels_widget = $(".cels__widget"),
       $cels__widget_input = $(".cels__widget-input");
 
-  function interest_rate() {
-    $('.interest_rate').text($('.select_crypto option:selected').data('rate'));
-  }
+  $(window).on("load", function(){
+    $cels_widget.find('.interest_rate').text($cels_widget.find('.select_crypto option:selected').data('rate'));
 
-  function interest_year() {
-    $amount_year = Math.abs($('.select_crypto option:selected').data('cost')) * Math.abs($('.select_crypto option:selected').data('rate'));
+    $amount_year = Math.abs($cels_widget.find('.select_crypto option:selected').data('cost')) * Math.abs($cels_widget.find('.select_crypto option:selected').data('rate'));
     $amount_year_percent = $amount_year / 100;
-    $amount_year_res = $cels__widget_input.val() * $amount_year_percent;
-    $cels__widget_year.text($amount_year_res.toFixed(1));
-  }
+    $amount_year_res = $cels_widget.find(".cels__widget-input").val() * $amount_year_percent;
+    $cels_widget.find(".interest_per_year").text($amount_year_res.toFixed(1));
 
-  function interest_week() {
     $amount_week_res = $amount_year_res / 52;
-    $cels__widget_week.text($amount_week_res.toFixed(2));
-  }
+    $cels_widget.find(".interest_per_week").text($amount_week_res.toFixed(2));
+  });
 
-  $(window).on("load", interest_rate);
-  $(window).on("load", interest_year);
-  $(window).on("load", interest_week);
-  $select_crypto.on("change", interest_rate);
-  $select_crypto.on("change", interest_year);
-  $select_crypto.on("change", interest_week);
-  $cels__widget_input.on("keyup keydown keypress", interest_rate);
-  $cels__widget_input.on("keyup keydown keypress", interest_year);
-  $cels__widget_input.on("keyup keydown keypress", interest_week);
+  $cels_widget.on("change", function(){
+    $(this).find('.interest_rate').text($(this).find('.select_crypto option:selected').data('rate'));
+
+    $amount_year = Math.abs($(this).find('.select_crypto option:selected').data('cost')) * Math.abs($(this).find('.select_crypto option:selected').data('rate'));
+    $amount_year_percent = $amount_year / 100;
+    $amount_year_res = $(this).find(".cels__widget-input").val() * $amount_year_percent;
+    $(this).find(".interest_per_year").text($amount_year_res.toFixed(1));
+
+    $amount_week_res = $amount_year_res / 52;
+    $(this).find(".interest_per_week").text($amount_week_res.toFixed(2));
+  });
+
+  $cels__widget_input.on("keyup keydown keypress", function(){
+    $amount_year = Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('cost')) * Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('rate'));
+    $amount_year_percent = $amount_year / 100;
+    $amount_year_res = $(this).parents('.cels__widget').find(".cels__widget-input").val() * $amount_year_percent;
+    $(this).parents('.cels__widget').find(".interest_per_year").text($amount_year_res.toFixed(1));
+
+    $amount_week_res = $amount_year_res / 52;
+    $(this).parents('.cels__widget').find(".interest_per_week").text($amount_week_res.toFixed(2));
+  });
 
 })(jQuery);
 
