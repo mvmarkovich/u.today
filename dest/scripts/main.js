@@ -518,17 +518,15 @@
   const $cels_widget = $(".cels__widget"),
       $cels__widget_input = $(".cels__widget-input");
 
-  $(window).on("load", function(){
-    $cels_widget.find('.interest_rate').text($cels_widget.find('.select_crypto option:selected').data('rate'));
+  $cels_widget.find('.interest_rate').text($cels_widget.find('.select_crypto option:selected').data('rate'));
 
-    $amount_year = Math.abs($cels_widget.find('.select_crypto option:selected').data('cost')) * Math.abs($cels_widget.find('.select_crypto option:selected').data('rate'));
-    $amount_year_percent = $amount_year / 100;
-    $amount_year_res = $cels_widget.find(".cels__widget-input").val() * $amount_year_percent;
-    $cels_widget.find(".interest_per_year").text($amount_year_res.toFixed(1));
+  $amount_year = Math.abs($cels_widget.find('.select_crypto option:selected').data('cost')) * Math.abs($cels_widget.find('.select_crypto option:selected').data('rate'));
+  $amount_year_percent = $amount_year / 100;
+  $amount_year_res = $cels_widget.find(".cels__widget-input").val() * $amount_year_percent;
+  $cels_widget.find(".interest_per_year").text($amount_year_res.toFixed(1));
 
-    $amount_week_res = $amount_year_res / 52;
-    $cels_widget.find(".interest_per_week").text($amount_week_res.toFixed(2));
-  });
+  $amount_week_res = $amount_year_res / 52;
+  $cels_widget.find(".interest_per_week").text($amount_week_res.toFixed(2));
 
   $cels_widget.on("change", function(){
     $(this).find('.interest_rate').text($(this).find('.select_crypto option:selected').data('rate'));
