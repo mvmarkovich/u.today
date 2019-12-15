@@ -17,6 +17,11 @@ section.comments
     // h2.title.comment-form__title LEAVE A COMMENT
     a.form-img--wrapper(href='/user/15921')
       img(src='https://cdntrack.com/sites/default/files/styles/thumbnail/public/pictures/2019-11/picture-15921-1574011897.jpeg?itok=wPsyFV4a', alt='Profile picture for user sergey.sergeychik', itemprop='image')
+    div(style='')
+      .js-ajax-comments-messages(role='contentinfo', aria-label='Error message')
+        div(role='alert')
+          h2.visually-hidden Error message
+          |                     Message field is required.
     form#ajax-comments-reply-form-node-17794-field-comments-0-0.comment-comments-form.comment-form.ajax-comments-reply-form-node-17794-field_comments-0-0.ajax-comments-form-add(data-drupal-selector='comment-form-2', action='/comment/reply/node/17794/field_comments', method='post', accept-charset='UTF-8', data-drupal-form-fields='edit-field-comment-0-value--2,edit-ajax-comments-reply-form-node-17794-field-comments-0-0')
       input(data-drupal-selector='edit-form-html-id', type='hidden', name='form_html_id', value='ajax-comments-reply-form-node-17794-field-comments-0-0')
       input(data-drupal-selector='edit-wrapper-html-id', type='hidden', name='wrapper_html_id', value='node-story-field-comments')

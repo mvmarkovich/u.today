@@ -727,6 +727,10 @@ aside {
   min-height: 48px;
 }
 
+.btn--huge {
+  min-height: 56px;
+}
+
 .btn--full {
   width: 100%;
 }
@@ -902,6 +906,24 @@ aside {
   background-color: #2cd99a;
   color: #FFFFFF;
   border-color: #20C589;
+}
+
+.btn--tooltip {
+  background-color: #2196F3;
+  border-color: #2196F3;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn--tooltip:hover {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.btn--tooltip:active {
+  background-color: #2196F3;
+  border-color: #2196F3;
 }
 
 .btn--account:after,.btn--arrow-down:after,.btn--arrow-right:after,.btn--attach:after,.btn--back:after,.btn--burger:after,.btn--cross-white:after,.btn--cross:after,.btn--dropdown:after,.btn--info-white:after,.btn--info:after,.btn--lightning-white:after,.btn--more:after,.btn--notification:after,.btn--rating-down:after,.btn--rating-up:after,.btn--search:after {
@@ -2502,6 +2524,62 @@ blockquote em {
 
 .accordion__body--content {
   padding: 1rem;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip__content {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1rem;
+  position: absolute;
+  top: 72px;
+  z-index: 24;
+  display: none;
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15);
+}
+
+.tooltip__content:after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 16px;
+  background-color: transparent;
+}
+
+.tooltip__content:before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid #FFFFFF;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -16px;
+}
+
+.tooltip__content-img--wrapper {
+  max-width: 130px;
+  margin-bottom: 1rem;
+}
+
+.tooltip__content p {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+}
+
+.tooltip:hover .tooltip__content {
+  display: block;
 }
 
 .share__square {
@@ -10507,6 +10585,10 @@ transition {
   blockquote {
     margin-right: -1rem;
     margin-left: -1rem;
+  }
+
+  .tooltip {
+    margin: 0 1rem;
   }
 
   .header__container--sticky {
