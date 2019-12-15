@@ -432,19 +432,8 @@
       });
   });
 
-  $('.comment-form').each(function() {
-    $(this).validationEngine('attach', {
-      scroll: false,
-      onValidationComplete: function(form, status){
-        if (status == true){
-          $(form).find(".validation__panel").remove();
-          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__successful'>Your comment was submitted successfully</div>");
-        } else{
-          $(form).find(".validation__panel").remove();
-          $(form).find(".js-form-item > div").append("<div class='validation__panel validation__error'>Please enter the text</div>");
-        }
-      }
-    });
+  $(".comments .form-submit").click(function() {
+    $('.js-ajax-comments-messages').parent().addClass('show');
   });
 
   $(".modal__entrance-form, .comment-form").submit(function(e) {

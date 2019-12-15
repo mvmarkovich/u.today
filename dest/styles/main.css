@@ -5018,6 +5018,20 @@ main > .article:nth-last-child(2):after {
   line-height: 1.4;
 }
 
+.comments .comment-wrapper .js-ajax-comments-messages {
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+}
+
+.comments .comment-wrapper div[aria-label="Error message"] {
+  background-color: #f8d7da;
+}
+
+.comments .comment-wrapper div[aria-label="Status message"] {
+  background-color: #d4edda;
+}
+
 .comments .comment-wrapper .form-img--wrapper {
   margin-right: 1.5rem;
   border-radius: 50%;
