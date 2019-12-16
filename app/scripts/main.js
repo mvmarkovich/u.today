@@ -470,9 +470,9 @@
   //
 
   $(".btn--show").on("click", function () {
-    $(this).parent().addClass("content--open");
-    $(this).addClass("btn--show--open");
-  });
+        $(this).parent().addClass("content--open");
+        $(this).addClass("btn--show--open");
+    });
 
   if($(".about-author p").text().length > 135){
     $('.about-author .btn').show();

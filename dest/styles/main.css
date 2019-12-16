@@ -361,6 +361,10 @@ a,button {
   margin-right: 5rem;
 }
 
+.article-infinite-scroll_ .cels__widget {
+  display: none;
+}
+
 .footer__copy-link,.link {
   color: #2196F3;
   border-bottom: 1px solid #CFD8DC;
