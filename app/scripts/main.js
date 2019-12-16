@@ -432,10 +432,6 @@
       });
   });
 
-  $(".comments .form-submit").click(function() {
-    $('.js-ajax-comments-messages').parent().addClass('show');
-  });
-
   $(".modal__entrance-form, .comment-form").submit(function(e) {
     e.preventDefault();
   });
@@ -469,7 +465,7 @@
   // Button show more
   //
 
-  $(".btn--show").on("click", function () {
+  $(".main-news-block").on("click", ".btn--show", function () {
         $(this).parent().addClass("content--open");
         $(this).addClass("btn--show--open");
     });
@@ -504,10 +500,9 @@
   // Article Celsius Widget (Calculator)
   //
 
-  const $cels_widget = $(".cels__widget"),
-      $cels__widget_input = $(".cels__widget-input");
+  const $cels_widget = $(".cels__widget");
 
-  $(window).on("load scroll", function(){
+  $(window).on("load", document, function(){
     $cels_widget.find('.interest_rate').text($cels_widget.find('.select_crypto option:selected').data('rate'));
 
     $amount_year = Math.abs($cels_widget.find('.select_crypto option:selected').data('cost')) * Math.abs($cels_widget.find('.select_crypto option:selected').data('rate'));
@@ -519,7 +514,7 @@
     $cels_widget.find(".interest_per_week").text($amount_week_res.toFixed(2));
   });
 
-  $cels_widget.on("change", function(){
+  $(".main-news-block").on("change", ".cels__widget", function(){
     $(this).find('.interest_rate').text($(this).find('.select_crypto option:selected').data('rate'));
 
     $amount_year = Math.abs($(this).find('.select_crypto option:selected').data('cost')) * Math.abs($(this).find('.select_crypto option:selected').data('rate'));
@@ -531,7 +526,7 @@
     $(this).find(".interest_per_week").text($amount_week_res.toFixed(2));
   });
 
-  $cels__widget_input.on("keyup keydown keypress", function(){
+  $(".main-news-block").on("keyup keydown keypress", ".cels__widget-input", function(){
     $amount_year = Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('cost')) * Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('rate'));
     $amount_year_percent = $amount_year / 100;
     $amount_year_res = $(this).parents('.cels__widget').find(".cels__widget-input").val() * $amount_year_percent;
