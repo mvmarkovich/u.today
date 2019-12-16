@@ -502,7 +502,7 @@
 
   const $cels_widget = $(".cels__widget");
 
-  $(window).on("load", document, function(){
+  $(window).on("load scroll", document, function(){
     $cels_widget.find('.interest_rate').text($cels_widget.find('.select_crypto option:selected').data('rate'));
 
     $amount_year = Math.abs($cels_widget.find('.select_crypto option:selected').data('cost')) * Math.abs($cels_widget.find('.select_crypto option:selected').data('rate'));
