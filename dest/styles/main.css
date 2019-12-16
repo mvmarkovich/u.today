@@ -6643,6 +6643,7 @@ main > .article:nth-last-child(2):after {
 
 .category-item__img-wrapper {
   margin-left: 1rem;
+  max-width: 72px;
   min-width: 72px;
   height: 45px;
   position: absolute;
@@ -9160,6 +9161,7 @@ transition {
   }
 
   .category-item__img-wrapper {
+    max-width: 144px;
     min-width: 144px;
     height: 90px;
     position: relative;
@@ -10205,6 +10207,7 @@ transition {
 
   .category-item__img-wrapper {
     margin-left: 2rem;
+    max-width: 224px;
     min-width: 224px;
     height: 140px;
   }
