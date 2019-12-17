@@ -527,6 +527,8 @@
   });
 
   $(document).on("keyup keydown keypress", ".cels__widget-input", function(){
+    $(this).parents('.cels__widget').find('.interest_rate').text($(this).parents('.cels__widget').find('.select_crypto option:selected').data('rate'));
+
     $amount_year = Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('cost')) * Math.abs($(this).parents('.cels__widget').find('.select_crypto option:selected').data('rate'));
     $amount_year_percent = $amount_year / 100;
     $amount_year_res = $(this).parents('.cels__widget').find(".cels__widget-input").val() * $amount_year_percent;
