@@ -307,44 +307,6 @@
       border-radius: 10px
       background-color: #4e616d
 
-  &__subscribe
-    border: $border
-    font-family: $font
-    border-radius: 2px
-    padding: 1.4rem 2rem 1.5rem
-    margin: 2.5rem * @xl 3.4rem *
-    box: left wrap
-
-    .social__link
-      margin-right: 0
-
-    &-col
-      order: 3
-      width: @md-down 100%
-
-      & + &
-        margin-left: 0 @md .9rem @xl 2rem
-
-      &:first-child
-        width: @md 61%
-        min-width: @md 280px
-        order: 1
-
-    &-title
-      text: $header-tiny
-      margin-bottom: 1.6rem
-
-    &-form
-      margin-bottom: 1rem
-
-    &-input
-      width: 100%
-
-    &-agree
-      text: $pseudo-neutral-400 $body-tiny
-      order: 2 @md 4
-      margin-bottom: 2.2rem @md 0
-
   &__fact, h4
     background: $neutral-100
     padding: 1.3rem 2rem @xl 3.4rem 2rem
@@ -514,34 +476,6 @@
       margin-left: @md-down 55px
       min-height: @xl-down 3rem
 
-.under_article__main
-
-  &-img
-    margin: * -1rem @sm 1rem 0 0
-    padding: 1rem 2rem @sm 1rem 1rem 1.5rem @md 2.5rem 2rem
-    background: #f5f5f5
-
-    .title
-      text: #90a4ae 13px 1.5rem @md 15px
-      margin-bottom: 7px
-
-.under_main-img
-
-  &__list
-    padding-left: 0
-    margin-top: 1.2rem
-
-  &__item
-    @extend .link-plain
-    text: 13px 1.8 600 @md 15px
-    display: block
-
-    .red
-      color: #f44336
-
-    & + &
-      margin-top: 1rem
-
 .disclaimer
   margin-top: .8rem
   padding: @sm-down 0 1rem
@@ -624,31 +558,6 @@
       left: 1rem @sm 2rem @xl 0
       right: 1rem @sm 2rem @xl 0
 
-.mega-history
-  @extend .link-plain
-  color: #fff
-  position: relative
-  display: block
-  text-decoration: none
-  height: 240px
-  margin-bottom: 1.5rem
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
-
-  .history_tag
-    background-color: #2196F3
-    padding: 0 1rem
-    border-radius: 2px
-    position: absolute 16px null null 16px
-    text: $neutral 13px 32px 600 @xl 17px 40px
-
-  .bottom_descr
-    background-color: rgba(38, 50, 56, .65)
-    text: .8125rem 1.9
-    position: absolute null 0 0 0
-    padding: .75rem 1rem
-
 main:not(.scroll-end) > .article:after
   content: ""
   display: block
@@ -673,33 +582,3 @@ main > .article
     &:after
       opacity: 1
 
-.fix-block
-  position: fixed null 0 0 null
-  z-index: 3
-  padding: 1rem
-  width: 100%
-  background-color: transparent
-  display: @md-l none
-
-  .row
-    box:
-    justify-content: flex-end
-
-  .switch
-    max-width: 115px @sm 160px
-    width: 100%
-
-    .btn
-      text: $neutral 13px 16px
-      text-transform: none
-      letter-spacing: normal
-      background-color: #4caf50
-      box-shadow: 0 4px 8px rgba(27, 94, 32, 0.5)
-      border-radius: 8px
-      border: 1px solid #4caf50
-      height: 3rem
-      width: 100%
-
-    .icon
-      text: 18px 16px
-      margin-left: .75rem

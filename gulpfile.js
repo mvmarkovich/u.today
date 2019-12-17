@@ -82,7 +82,7 @@
   gulp.task('postcss', function () {
     return (
       gulp
-      .src(['app/styles/main.sss'])
+      .src(['app/styles/*.sss'])
       .pipe(sourcemaps.init())
       .pipe(
         postcss(processors, {

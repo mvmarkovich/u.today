@@ -3,6 +3,9 @@ extends layouts/layout-landing.pug
 block title
     title Landing | u.today
 
+block head
+    link(href="styles/main.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'")
+
 block content
     .landing
         section.landing__section.landing__section-background

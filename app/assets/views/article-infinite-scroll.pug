@@ -3,6 +3,9 @@ extends layouts/layout.pug
 block title
   title Article Infinite | u.today
 
+block head
+  link(href="styles/article.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'")
+
 block content
   .main-aside-container
     main.main-news-block

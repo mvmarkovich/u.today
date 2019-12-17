@@ -3,6 +3,9 @@ extends layouts/layout.pug
 block title
     title Article | u.today
 
+block head
+    link(href="styles/article.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'")
+
 block content
     .something.something--content
         .something__content-long(style="background-color: #032e61")
@@ -17,7 +20,3 @@ block content
         aside.aside-menu-block
             include blocks/aside-menu-block.pug
 
-        .fix-block
-            .row
-                .switch
-                    a.btn(href='#!') Next article
