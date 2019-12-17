@@ -141,7 +141,12 @@
         align-items: center
 
       .rating-button
-        @extend .btn--light
+        margin: 0
+        padding: 0
+        outline: 0
+        border: 0
+        background: transparent
+        cursor: pointer
         background-image: svg-load("icons/i.chevron-down.svg" fill: $neutral)
         background-position: center
         background-repeat: no-repeat
@@ -177,7 +182,7 @@
           display: @sm-down none
 
   &__main-img
-    @extend .img
+    
 
     &-wrapper
       overflow: hidden
@@ -221,7 +226,6 @@
       margin-bottom: 1.6rem
 
     &-list
-      @extend .list-reset
       margin-bottom: 1.45rem
 
     &-item
@@ -240,7 +244,7 @@
         position: absolute 0 null null 0
 
     &-link
-      @extend .link-plain
+      
       height: 22px
       border-bottom: 0
 
@@ -256,7 +260,6 @@
       font-family: $font
 
       a
-        @extend .link-plain
         text: #263238 13px 1.9 600 @xl 15px
 
       .red
@@ -340,7 +343,6 @@
       margin-right: 1.5rem
 
     .article__recommended-item-title
-      @extend .link-plain
       background-color: transparent
       margin: 1rem 0 0 0  @md 0 0 0 1rem @xl 1rem 0 0 0
       padding: 0
@@ -414,7 +416,7 @@
       min-width: @md 208px @xl 1px
 
     &-link
-      @extend .link-plain
+      
       text: $body-small
       margin-bottom: .1rem
       box: vertical @md horizontal @xl vertical
@@ -446,9 +448,6 @@
           text: #263238 .8125rem 1.8 500 @md .9375rem
           margin: 0
 
-  &__list
-    @extend .list-reset
-
   &__item
 
     &-header
@@ -465,7 +464,7 @@
         width: 100%
 
     &-name
-      @extend .link-plain
+      
       text: #263238 600
       cursor: pointer
 
@@ -511,7 +510,7 @@
         max-height: 100%
     
   &_name
-    @extend .link-plain
+    
     text: #2979FF 13px 1.8 600 none none @sm 15px @xl 17px
 
   &_avatar
@@ -522,7 +521,7 @@
     display: block
 
     img
-      @extend .img
+      
       border-radius: 2px
 
   .social

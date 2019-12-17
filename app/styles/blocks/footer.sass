@@ -45,7 +45,7 @@
     position: relative
 
     &-list
-      @extend .list-reset
+      
       box: wrap @md space-between
 
     &-item
@@ -63,12 +63,11 @@
 
     &-link
       text: $header-tiny @md $header-super-tiny @xl $header-tiny
-      @extend .link-plain
+      
 
     &-child
 
       &-list
-        @extend .list-reset
         margin-top: 1rem
         display: @md-down none
 
@@ -80,7 +79,7 @@
       &-link
         text: $body-tiny @xl $body-small
         text: $pseudo-neutral-900
-        @extend .link-plain
+        
 
   &__copy
     box: wrap @md center
@@ -94,7 +93,6 @@
 
     &-link
       text: $body-small
-      @extend .link
       text: $pseudo-neutral-400
 
   &__disclaimer

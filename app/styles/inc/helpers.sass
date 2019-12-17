@@ -165,3 +165,42 @@
     .slider__nav-prev
       margin-right: 5rem
 
+.sponsored__mark, .promoted__mark
+  border: 1px solid rgba(255, 255, 255, 0.4)
+  text: $neutral 13px 16px 500
+  padding: 0 .5rem
+  text-shadow: -2px 2px 8px black
+  border-radius: 0 0 0 2px
+  position: absolute 0 0 null null
+
+  &-top-left
+    border-radius: 0 2px 0 0
+    right: auto
+    left: 0
+
+  &-top-right
+    border-radius: 0 0 0 2px
+    position: absolute 0 0 null null
+
+  &-bottom-right
+    border-radius: 2px 0 0 0
+    top: auto
+    bottom: 0
+
+  &-bottom-left
+    border-radius: 0 2px 0 0
+    top: auto
+    right: auto
+    left: 0
+    bottom: 0
+
+  &-center
+    border-radius: 2px
+    position: absolute
+    top: 50%
+    left: 50%
+    right: auto
+    margin-top: -9px
+    margin-left: -39px
+
+

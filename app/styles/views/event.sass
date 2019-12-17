@@ -14,7 +14,6 @@
 
   &__main-img
     position: absolute 0 null null 0
-    @extend .img
 
     &-wrapper
       background: $pseudo-neutral-50
@@ -54,7 +53,7 @@
       text: $body-small
 
   &__speakers
-    @extend .list-reset
+    
     margin-bottom: 1.3rem @md 1.7rem @xl 3.3rem
 
     &-item
@@ -77,7 +76,6 @@
         background-image: svg-load("icons/greeting.svg", fill: $pseudo-neutral-900)
 
     &-link
-      @extend .link-decorate
 
       &:before
         background-image: svg-load("icons/greeting.svg", fill: $accent-1-medium)
