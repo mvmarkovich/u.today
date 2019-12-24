@@ -1,19 +1,24 @@
 .article--mobile-visible
     include top-bots.pug
 .article
-  .article_main-info
-    .article_main-info__rating
-      button.rating-button.rating-down.btn--accent
-      .rating-value 31
-      button.rating-button.rating-up.btn--accent
-    .article_main-info__humble
-      time.author__item-time.humble 27 Oct’18
-      a.humble.humble--views(href='#!') 123k
-      a.humble.humble--comments(href='#!') 256
   .article__main
     span.article__label.article__label--original U.TODAY Original Article
     span.article__label.article__label--tweet Tweet-based article
+    span.article__label.article__label--interviews Interviews
+
     h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+
+    .article_main-info
+      .article_main-info__humble
+        time.author__item-time.humble Monday, November 11 — 8:15 PM
+        .humble.humble--tiny.humble--comments 256
+        .humble.humble--tiny.humble--liked 31
+        .humble.humble--tiny.humble--views 125k
+        .social
+          span.social__link--name Share:
+          a.social__link.social__link--tiny.social__link--tg(href="#!")
+          a.social__link.social__link--tiny.social__link--tw(href="#!")
+          a.social__link.social__link--tiny.social__link--fb(href="#!")
 
     section.author_block
       ul.author__list
@@ -24,8 +29,6 @@
             .right
               .author__item-wrapper
                 a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
-                time.author__item-time.humble Oct 27&rsquo;2018, 11:27 AM
-                .author__item-tag.humble &#x2B50; Featured
               .author__item-body
                 .author__item-msg
                   p

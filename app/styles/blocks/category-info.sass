@@ -1,8 +1,7 @@
 .category-info
-  box: left space-between
   border-bottom: $border
   position: relative
-  padding-bottom: .6rem @md 1.1rem @xl 2rem
+  padding-bottom: 1.7rem @md 2.5rem @xl 3rem
 
   &__title
     text: $header-tiny @md $header-small @xl $header-large
@@ -12,30 +11,16 @@
     text: $body-small @xl $body-large
     margin-top: 1.5rem @md .5rem @xl .3rem
     margin-bottom: .6rem @md .5rem
-    max-height: 6.1rem @xl 7.6rem
-    overflow: hidden
     position: relative
-
-    &:after
-      content: ""
-      position: absolute null 0 0 0
-      height: 4rem
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
-
-    &--open
-      max-height: unset !important
-
-      &:after
-        display: none
 
   &__img
     border-radius: 2px
 
     &-wrapper
-      margin-left: 1rem @xl 2rem
-      min-width: 72px @md 144px @xl 224px
-      height: 45px @md 90px @xl 140px
-      position: @md-down absolute 0 0 null null
+      margin: 2rem -1rem 0
+
+      figcaption
+        margin: .75rem 1rem 0
 
 @media screen and (max-width: 479px)
   .category-item h2

@@ -49,6 +49,7 @@
   visibility: hidden
 
 .truncate
+  text: $pseudo-neutral-400 11px 24px
   text-overflow: ellipsis
   overflow: hidden
   white-space: nowrap
@@ -95,8 +96,11 @@
   border: none
   outline: none
   margin-top: -20px
-
   z-index: 2
+
+  &.slick-disabled
+    cursor: default
+    opacity: .25
 
 .slick-next
   transform: rotate(180deg)
@@ -105,6 +109,7 @@
 
 .slick-prev
   left: 0 @sm -2.8rem
+
 
 .slider__nav
   position: relative

@@ -1,12 +1,15 @@
 section.news
   .news__header
-    .news__title News: 29 April, Monday
+    .icon.icon--clock
+    .news__title Latest news
+    .btn--block
+      a.btn.btn--pseudo(href="#!") See all
 
   ul.news__list
     each item, i in news
       li.news__item
         .news__item-time-wrapper
-          time.news__item-time.humble 1 hour ago
+          time.news__item-time.humble= item.date
 
         .news__item-title-wrapper
           h2.title
@@ -14,7 +17,6 @@ section.news
 
           .news__item-info
             a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-            a.humble.humble--liked.humble--tiny.humble--liked_bold(href="#!") 7
 
   .btn--block
     button.btn.btn--arrow-down.btn--big Show more news

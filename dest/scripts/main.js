@@ -369,6 +369,32 @@
     nextArrow: $('.press-releases .slider__nav-next')
   });
 
+  //
+  // Slider newsCalendar
+  //
+  $('.news-calendar__list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    swipeToSlide: true,
+    arrows: true,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1152,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
   function modalTimeout() {
     var i = 3;
     var timerId = setTimeout(function go() {

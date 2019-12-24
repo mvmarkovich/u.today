@@ -1,21 +1,49 @@
 .news
-  padding: 1.2rem 1rem .9rem
   height: 100%
   background-color: $neutral
 
+  .icon
+    margin-right: 1.5rem
+
+  .btn--block
+    width: auto
+    border-top: 1px solid $pseudo-neutral-100
+
+    .btn
+      position: relative
+      width: 100%
+      font-weight: 600
+      border: none
+
   &__header
     box: center
+    padding: .75rem 1.5rem @xl * 2rem
+    border-bottom: 1px solid #CFD8DC
+
+    .btn--block
+      border: none
+      margin: 0
+      margin-left: 1.5rem
+
+      .btn
+        text: #90A4AE
+        min-height: 1.5rem
+        margin-right: 1rem
 
   .title
     margin-bottom: 0
+    display: inline
 
   &__title
     text: 600 15px 1.4
 
+    &:before
+      content: ''
+
   &__item
-    display: @md flex
+    display: flex
     align-items: baseline
-    padding: .5rem 0
+    padding: .75rem 1.5rem @xl * 2rem
     border-top: 1px solid #ECEFF1
 
     &:first-child
@@ -24,9 +52,8 @@
     &-time
 
       &-wrapper
-        min-width: 7.4rem
-        text: right
         display: inline
+        min-width: 3rem
 
     &-title
       text: $body-small @xl $body-standart
@@ -44,14 +71,3 @@
   &__footer
     margin-top: 1rem
     margin-bottom: .7rem
-
-  .btn--block
-    margin: 1rem -1rem -.9rem
-    width: auto
-    border-top: 1px solid $pseudo-neutral-100
-
-    .btn
-      position: relative
-      width: 100%
-      font-weight: 600
-      border: none

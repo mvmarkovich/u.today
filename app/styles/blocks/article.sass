@@ -23,22 +23,28 @@
         margin-right: @xl-down 0
 
   &__label
-    text: 11px 16px 600
+    text: 13px 16px 600
     letter-spacing: 0.01em
-    box: inline-flex center
+    display: inline-flex
+    align-items: center
     margin-bottom: 1rem
+    margin-right: 1rem @md 1.5rem @xl 2rem
 
     &:before
       content: ''
       background-position: center
       background-size: contain
       background-repeat: no-repeat
-      size: 1rem
-      margin-right: 1rem
+      size: 24px
+      margin-right: .5rem
 
     &--original
       &:before
-        background-image: svg-load("icons/logotype.svg", fill: $pseudo-neutral-900)
+        background-image: svg-load("icons/article__label-u.svg", fill: $pseudo-neutral-900)
+
+    &--interviews
+      &:before
+        background-image: svg-load("icons/article__label-interviews.svg", fill: $pseudo-neutral-900)
 
     &--tweet
       &:before
@@ -128,50 +134,10 @@
   &_main
 
     &-info
-      box:
-      align-items: center
       margin-bottom: .5rem
-      background-color: #fff
-
-      &__rating
-        box:
-        background-color: #2979ff
-        color: #fff
-        text: 13px 16px 600 @xl 15px
-        align-items: center
-
-      .rating-button
-        margin: 0
-        padding: 0
-        outline: 0
-        border: 0
-        background: transparent
-        cursor: pointer
-        background-image: svg-load("icons/i.chevron-down.svg" fill: $neutral)
-        background-position: center
-        background-repeat: no-repeat
-        background-size: 24px
-        size: 2rem @xl 2.5rem
-        cursor: pointer
-        border-right: 1px solid #fff
-        transition: .15s
-
-        &.voted
-          background-color: $pseudo-neutral-100
-          background-image: svg-load("icons/i.chevron-down.svg" fill: $pseudo-neutral-300)
-
-      .rating-value
-        size: 2rem @xl 2.5rem
-        text-align: center
-        cursor: default
-        line-height: 2rem @xl 2.5rem
-
-      .rating-up
-        transform: rotate(180deg)
 
       &__humble
-        box: center middle
-        padding: .25rem 1rem @xl .5rem 1.5rem .5rem
+        box: center wrap
         width: 100%
 
         .humble
@@ -182,7 +148,6 @@
           display: @sm-down none
 
   &__main-img
-    
 
     &-wrapper
       overflow: hidden
@@ -219,11 +184,10 @@
 
   &__contents
     margin: 2rem 0 @xl 2.5rem 0
-    font-family: $font
 
     &-title
-      text: $header-tiny
-      margin-bottom: 1.6rem
+      text: 600 17px 1.4 @xl 22px
+      margin-bottom: 1.3rem
 
     &-list
       margin-bottom: 1.45rem
@@ -233,52 +197,44 @@
       position: relative
 
       & + &
-        margin-top: 1.5rem
+        margin-top: 1rem
 
       &:before
-        content: ""
-        display: block
-        background: svg-load("icons/triangle_down.svg" fill: $pseudo-neutral-100)
+        content: "•"
+        text: $accent-1-light 500 17px 24px
         size: 24px
+        text-align: center
         margin-right: .5rem
         position: absolute 0 null null 0
 
     &-link
-      
-      height: 22px
       border-bottom: 0
+      text: $accent-1-light 500 15px 1.8 @xl 17px
 
   &__related
-    background-color: #f5f5f5
-    margin: 1.7rem -1rem @sm 1.7rem 0 @xl 2.5rem 0
-    box: space-between center
-    padding: @xl-down 1rem
+    margin: 1.7rem 0 @xl 2.5rem 0
 
-    &-link
-      padding: 0 1rem 0 2rem
-      padding-left: @xl-down 0
-      font-family: $font
+    &-flame
+      text: $accent-2-medium 500 15px 1.8 @xl 17px
+      display: inline-flex
+      align-items: center
+      text-transform: uppercase
+      margin-left: -10px
 
-      a
-        text: #263238 13px 1.9 600 @xl 15px
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
 
-      .red
-        text: #f44336 13px 1.9 600 @xl 15px
-        margin-left: 5px
-
-    .article__related-title
-      padding: 0
-      margin: 0
-
-    &_img
-
-      a
-        display: flex
-
-    &-img
-      max-width: 88px @xl 192px
-      min-width: 88px @xl 192px
-      min-height: 55px @xl 120px
+    &-blockquote
+      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
+      font-style: italic
+      border-left: 4px solid $accent-2-medium
+      padding: .5rem 1rem
 
   twitter-widget
     overflow: hidden
@@ -318,14 +274,12 @@
 
     &-title, strong
       text: $header-standart center @xl $header-large
-      font-family: $font
       margin-bottom: .6rem @xl 2.4rem
       display: block
 
     &-text, p
       text: $body-standart center @xl $body-large
       text: $pseudo-neutral-900
-      font-family: $font
       margin-bottom: 0
 
   &__tags
@@ -439,13 +393,40 @@
   &_block
     margin: 2rem 0
     position: relative
+    border: 1px solid #C4C4C4
+    border-radius: 0 8px 8px 8px
+    padding: 1rem @md 1.5rem 1.5rem 1rem
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute 0 null null -13px
+      border: 8px solid transparent
+      border-right: 8px solid $neutral
+      border-top: 8px solid $neutral
+      display: block
+      width: 0
+      height: 0
+      z-index: 2
+
+    &:after
+      content: ''
+      position: absolute -1px null null -16px
+      border: 8px solid transparent
+      border-right: 8px solid #C4C4C4
+      border-top: 8px solid #C4C4C4
+      display: block
+      width: 0
+      height: 0
 
     .author__item
 
       &-msg
+        margin: @md-down 2rem 0 0 -55px
 
         p
-          text: #263238 .8125rem 1.8 500 @md .9375rem
+          text: #263238 15px 1.8 500 @md 17px
+          font-style: italic
           margin: 0
 
   &__item
@@ -455,25 +436,26 @@
 
     &-user
       size: 40px @md 64px
+      border-radius: 50%
       min-width: 40px @md 64px
-      border-radius: 2px
-      position: absolute 8px null null 0 @md relative
-      margin-right: 2rem
+      margin-right: 1rem @md 1.5rem
 
       img
-        width: 100%
+        border-radius: 50%
+        max-width: 100%
+        display: block
 
     &-name
-      
-      text: #263238 600
+      text: #263238 15px 1.4 600 @xl 17px
+      font-style: italic
       cursor: pointer
+      white-space: normal
+      display: block
 
     &-wrapper
       box:
       flex-wrap: wrap
       margin-bottom: 1rem
-      margin-left: @md-down 55px
-      min-height: @xl-down 3rem
 
 .disclaimer
   margin-top: .8rem
