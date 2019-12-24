@@ -514,7 +514,7 @@
     $('.news .btn--block').hide();
   }
 
-  $('.news .btn').on('click', function(){
+  $('.news .btn--show').on('click', function(){
     $(".news__item:hidden").slice(0, 5).show();
 
     if($(".news__item:hidden").length < 1){

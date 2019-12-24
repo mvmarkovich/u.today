@@ -429,17 +429,16 @@
   align-items: center;
 }
 
-.news__header .btn--block {
-  border: none;
-  margin: 0;
+.news__header .btns-spacer {
   margin-left: 1.5rem;
-  padding: 0;
+  margin-bottom: 0;
 }
 
-.news__header .btn--block .btn {
+.news__header .btns-spacer .btn {
   color: #90A4AE;
   min-height: 1.5rem;
   margin-right: 1rem;
+  font-weight: 600;
 }
 
 .news .btn--arrow-down-before:before {
@@ -978,6 +977,7 @@
   color: #90A4AE;
   min-height: 1.5rem;
   margin-right: 1rem;
+  font-weight: 600;
 }
 
 .news-calendar__title {
