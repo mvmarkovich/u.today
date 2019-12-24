@@ -8,12 +8,14 @@
   .btn--block
     width: auto
     border-top: 1px solid $pseudo-neutral-100
+    padding: * 1.2rem @xl * 1.6rem
 
     .btn
       position: relative
       width: 100%
       font-weight: 600
       border: none
+      justify-content: flex-start
 
   &__header
     box: center
@@ -24,11 +26,15 @@
       border: none
       margin: 0
       margin-left: 1.5rem
+      padding: 0
 
       .btn
         text: #90A4AE
         min-height: 1.5rem
         margin-right: 1rem
+
+  .btn--arrow-down-before:before
+    margin-right: 2rem
 
   .title
     margin-bottom: 0

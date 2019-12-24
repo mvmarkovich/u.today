@@ -2221,7 +2221,8 @@ blockquote em {
 
 .humble {
   color: #78909C;
-  font-size: 0.6875rem;
+  font-weight: 500;
+  font-size: 0.8125rem;
   line-height: 1.5rem;
   letter-spacing: 0.01em;
   text-decoration: none;
