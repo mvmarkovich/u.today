@@ -414,12 +414,20 @@
   padding-left: 1.2rem;
 }
 
-.news .btn--block .btn {
+.news .btn--block .btn--arrow-down-before {
   position: relative;
   width: 100%;
   font-weight: 600;
   border: none;
   justify-content: flex-start;
+}
+
+.news .btn--block .btn--arrow-down {
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  border: none;
 }
 
 .news__header {
