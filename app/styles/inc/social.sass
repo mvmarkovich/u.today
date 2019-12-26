@@ -19,6 +19,10 @@
     ^&__link
       width: 100% @md 2.7rem @xl 4.5rem
 
+  &__title
+    text: 13px 16px 600 $pseudo-neutral-900
+    margin-right: 1.5rem
+
   &__link
     size: 1.5rem
     background-position: center
@@ -43,6 +47,9 @@
       &:active
         background-image: svg-load("icons/social/facebook.svg" fill: $pseudo-neutral-900)
 
+      &-paint
+        background-image: svg-load("icons/social/facebook.svg" fill: $fb-color)
+
     &--tg
       background-image: svg-load("icons/social/telegram.svg" fill: $pseudo-neutral-200)
 
@@ -52,6 +59,9 @@
       &:active
         background-image: svg-load("icons/social/telegram.svg" fill: $pseudo-neutral-900)
 
+      &-paint
+        background-image: svg-load("icons/social/telegram.svg" fill: $tg-color)
+
     &--tw
       background-image: svg-load("icons/social/twitter.svg" fill: $pseudo-neutral-200)
 
@@ -60,6 +70,9 @@
 
       &:active
         background-image: svg-load("icons/social/twitter.svg" fill: $pseudo-neutral-900)
+
+      &-paint
+        background-image: svg-load("icons/social/twitter.svg" fill: $tw-color)
 
     &--em
       background-image: svg-load("icons/social/email.svg" fill: $pseudo-neutral-200)

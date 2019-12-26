@@ -1,5 +1,5 @@
 section.card.card--press--release.card--mobile-visible
-  .card__title Press Releases
+  h4.card__title Press Releases
   .card__body
     article.aside-story
       a.aside-story__img-wrapper(href="#!")
@@ -21,10 +21,11 @@ section.card.card--press--release.card--mobile-visible
         .aside-story__info
           time.humble.humble--tiny 12:25 AM
 
-  a.btn.btn--accent(href="#!") Submit Press Release
+  .card__footer
+    a.btn.btn--accent(href="#!") Submit Press Release
 
 section.card
-  .card__title Popular
+  h4.card__title Popular
   .card__body
     each hot in hots
       article.aside-story
@@ -37,40 +38,36 @@ section.card
           .aside-story__info
             time.humble.humble--tiny 12:25 AM
 
-  a.show-more.btn--arrow-right(href="#!") Show all
+  .card__footer
+    a.btn.btn--light.btn--arrow-right(href="#!") Show more
 
 section.card
-  .card__body
-    .advertising
-      a.advertising_link(href="#!") About us
-      a.advertising_link(href="#!") Adverstizement
-      a.advertising_link(href="#!") Press realeases
-    form.form--col(action="#" method="get")
-      .form-subscribe
-        .title Subscribtion
-        .toggle-checkbox
-          input(type="checkbox" class="toggle" id="toggle-checkbox_1" value="")
-          label(for="toggle-checkbox_1") Push notifications
-      .input
-        input.input__elem(type="text" name="email" placeholder="Email" required)
-
-      .input
-        button.btn.btn--input(type="submit") Subscribe
-    .text-tiny By pressing the “Subscribe button” you agree with our Privacy Policy
-    .follow__block
-      .title Follow & contact
+  .card__title
+    .card__social
+      .social__title Follow us:
       .social
-        a.social__link.social__link--fb(href="#!fb")
-        a.social__link.social__link--tg(href="#!tg")
-        a.social__link.social__link--tw(href="#!tw")
-        a.social__link.social__link--em(href="#!em")
+        a.social__link.social__link--fb-paint(href="#!fb")
+        a.social__link.social__link--tg-paint(href="#!tg")
+        a.social__link.social__link--tw-paint(href="#!tw")
+
+  .card__body
+    form.card__subscribe(action="#" method="get")
+      .card__subscribe-title Subscribe to daily newsletter
+
+      .form--row
+        .input.form--col
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        .input
+          button.btn.btn--accent.btn--input(type="submit") Subscribe
+    .text-tiny By pressing the “Subscribe button” you agree with our <a href="#!"> Privacy Policy </a>
 
 section.card.card--something
   .something
     img(src="img/content/banner.png" width="360" height="156" alt="something-square")
 
 section.card
-  .card__title Upcoming events
+  h4.card__title Upcoming events
 
   .card__body
     each event in events
@@ -83,7 +80,21 @@ section.card
             .humble.humble--tiny Las Vegas, USA
 
   .card__footer
-    a.btn.btn--arrow-right(href="#!") See all
+    a.btn.btn--light.btn--arrow-right(href="#!") See all
+
+section.card.card--article
+  h4.card__title.card__title-flame WARNING: HOT CONTENT!
+
+  .card__body
+    article.aside-article
+      a.aside-article__img-wrapper(href="#!")
+        img.aside-article__img(src="https://u.today/sites/default/files/styles/736x/public/2019-12/1569.jpg?itok=8QFbKLNM")
+        .promoted__mark.promoted__mark-top-left Promo
+      .aside-article__body
+        a.aside-article__link(href="#!") Exclusive Interview with John McAfee: Epstein Didn’t Kill Himself, Bitcoin to Hit $1 million, & “Russian Roulette”
+
+        .aside-article__info
+          span.humble.humble--comments.humble--tiny.humble--comments_bold 256
 
 
 

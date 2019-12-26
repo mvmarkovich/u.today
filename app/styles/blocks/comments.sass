@@ -8,6 +8,25 @@
   h2
     text: $pseudo-neutral-900 600 22px 1.4
 
+  .form-img--wrapper
+    float: @sm left
+    margin-right: 1.5rem
+    border-radius: 50%
+    border: 1px solid #CFD8DC
+    min-width: 32px @sm 56px
+    max-width: 32px @sm 56px
+    height: 32px @sm 56px
+    border-radius: 50%
+    background: svg-load("icons/user_logged.svg", fill: #CFD8DC) no-repeat center / contain
+    display: block
+
+    img
+      border-radius: 50%
+
+  .social_login
+    margin: 0 !important
+    padding-left: @sm 80px
+
   .comment-wrapper
 
     .js-ajax-comments-messages
@@ -18,21 +37,6 @@
 
     div[aria-label="Status message"]
       background-color: #d4edda
-
-    .form-img--wrapper
-      float: @sm left
-      margin-right: 1.5rem
-      border-radius: 50%
-      border: 1px solid #CFD8DC
-      min-width: 32px @sm 56px
-      max-width: 32px @sm 56px
-      height: 32px @sm 56px
-      border-radius: 50%
-      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
-      display: block
-
-      img
-        border-radius: 50%
 
     & > div
       .js-form-item

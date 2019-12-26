@@ -3,6 +3,11 @@ extends layouts/layout.pug
 block title
     title Author | u.today
 
+block head
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet")
+    link(href="styles/defaults.css" rel="stylesheet")
+    link(href="styles/article.css" rel="stylesheet")
+
 block content
     .main-aside-container
         main.main-news-block
@@ -19,73 +24,7 @@ block content
                         a.social__link.social__link--tg(href="#!tg")
                         a.social__link.social__link--insta(href="#!insta")
                         a.social__link.social__link--em(href="#!email")
-        aside.aside-menu-block
-            a.card.card--related(href="#!")
-                .related_body
-                    .title-mark TOP STORY
-                    .related_link Ethereum Price Analysis from Twitter: From $145 to $200 and Higher? What’s the Chance of Ethereum Breaking Out?
-                .related_img
-                    img(src='https://news.u.today/sites/default/files/styles/300/public/2019-08/Ethereum_Founder_Vitalik_Buterin_Disagrees_with_CZ_Binance_about_New_Blockchains_Solving_Capacity_Issues.JPG.jpg?itok=zeMAUUUz')
-            section.card
-                .card__title &#x2709; Got no time? Subscribe!
-                .card__body
-                    form.form--col(action='#' method='get')
-                        .input
-                            input.input__elem(type='text' name='email' placeholder='Email' required='')
-                        .input
-                            button.btn.btn--input(type='submit') Subscribe
-                    .text-tiny
-                        | By pressing the &ldquo;Subscribe button&rdquo; you agree with our <a href='#!'> Privacy Policy</a>
-            section.card.card--something
-                .something
-                    img(src='img/something/square.png' alt='something-square')
+
 
     section.author-article
-        .news-featured__header
-            .news-featured__title Konstantin’s articles
-
-        .news-featured__list
-            each item in newsFeatured
-                article.news-featured__item
-                    a.news-featured__item-link(href="#!")
-                        .news-featured__item-img-wrapper
-                            img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
-                        .news-featured__item-title= item.title
-                    .news-featured__item-info
-                        time.humble.humble--tiny Nov 07
-                        a.humble.humble--comments.humble--tiny(href="#!") 256
-                        .humble.humble--views.humble--tiny(href="#!") 123.5k
-                        button.humble.humble--share.humble--tiny Share
-            each item in newsFeatured
-                article.news-featured__item
-                    a.news-featured__item-link(href="#!")
-                        .news-featured__item-img-wrapper
-                            img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
-                        .news-featured__item-title= item.title
-                    .news-featured__item-info
-                        time.humble.humble--tiny Nov 07
-                        a.humble.humble--comments.humble--tiny(href="#!") 256
-                        .humble.humble--views.humble--tiny(href="#!") 123.5k
-                        button.humble.humble--share.humble--tiny Share
-            each item in newsFeatured
-                article.news-featured__item
-                    a.news-featured__item-link(href="#!")
-                        .news-featured__item-img-wrapper
-                            img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
-                        .news-featured__item-title= item.title
-                    .news-featured__item-info
-                        time.humble.humble--tiny Nov 07
-                        a.humble.humble--comments.humble--tiny(href="#!") 256
-                        .humble.humble--views.humble--tiny(href="#!") 123.5k
-                        button.humble.humble--share.humble--tiny Share
-            each item in newsFeatured
-                article.news-featured__item
-                    a.news-featured__item-link(href="#!")
-                        .news-featured__item-img-wrapper
-                            img.news-featured__item-img(src="https://u.today/sites/default/files/styles/large/public/2018-11/photo_2018-11-19_22-11-32.jpg?itok=wQ4KYJ9y")
-                        .news-featured__item-title= item.title
-                    .news-featured__item-info
-                        time.humble.humble--tiny Nov 07
-                        a.humble.humble--comments.humble--tiny(href="#!") 256
-                        .humble.humble--views.humble--tiny(href="#!") 123.5k
-                        button.humble.humble--share.humble--tiny Share
+        include blocks/news-featured

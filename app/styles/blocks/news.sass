@@ -7,8 +7,8 @@
 
   .btn--block
     width: auto
-    border-top: 1px solid $pseudo-neutral-100
-    padding: * 1.2rem @xl * 1.6rem
+    border-top: 1px solid #ECEFF1
+    padding: * 1rem @sm * 7.6rem @xl * 8rem
 
     .btn--arrow-down-before
       position: relative
@@ -26,8 +26,8 @@
 
   &__header
     box: center
-    padding: .75rem 1.5rem @xl * 2rem
-    border-bottom: 1px solid #CFD8DC
+    padding: .75rem 1rem @sm 1.5rem @xl * 2rem
+    border-bottom: 1px solid #ECEFF1
 
     .btns-spacer
       margin-left: 1.5rem
@@ -53,9 +53,9 @@
       content: ''
 
   &__item
-    display: flex
+    display: @sm flex
     align-items: baseline
-    padding: .75rem 1.5rem @xl * 2rem
+    padding: .75rem 1rem @sm * 1.5rem @xl * 2rem
     border-top: 1px solid #ECEFF1
 
     &:first-child
@@ -64,13 +64,12 @@
     &-time
 
       &-wrapper
-        display: inline
-        min-width: 3rem
+        display: @sm inline
+        min-width: 6.4rem
 
     &-title
       text: $body-small @xl $body-standart
       margin-right: .2rem @xl .7rem
-      
 
       &-wrapper
         display: inline
