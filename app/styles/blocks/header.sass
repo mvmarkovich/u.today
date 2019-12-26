@@ -329,8 +329,19 @@
       padding-left: 2.2rem
 
       &:after
-        margin-left: 0
-        position: absolute null null null 0
+        content: ''
+        background-image: svg-load("icons/logout-variant.svg", fill: $pseudo-neutral-900)
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        size: 24px
+        position: absolute 16px null null 0
+
+      &:hover:after
+        background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-medium)
+
+      &:active:after
+        background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-dark)
 
   &__item
     position: relative

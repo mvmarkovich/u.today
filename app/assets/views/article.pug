@@ -5,8 +5,8 @@ block title
 
 block head
     link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet")
-    link(href="styles/defaults.css" rel="stylesheet")
-    link(href="styles/article.css" rel="stylesheet")
+    link(rel="preload" href="styles/defaults.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+    link(rel="preload" href="styles/article.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
 
 block content
     .something.something--content
