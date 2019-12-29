@@ -19,7 +19,9 @@
     gulpWatchPug = require('gulp-watch-pug'),
     cssbeautify = require('gulp-cssbeautify'),
     stripCssComments = require('gulp-strip-css-comments'),
-    cssDeclarationSorter = require('css-declaration-sorter');
+    cssDeclarationSorter = require('css-declaration-sorter'),
+    critical = require('critical').stream;
+
 
   //write html by pug
   gulp.task('views', function buildHTML() {
@@ -30,7 +32,29 @@
           pretty: true
         })
       )
-      .pipe(gulp.dest('dest/'));
+      .pipe(gulp.dest('dist/'));
+  });
+
+  gulp.task('critical', function () {
+    return gulp.src('dest/*.html')
+        .pipe(critical({
+          base: 'dest/',
+          inline: true,
+          css: ['dest/styles/defaults.css','dest/styles/main.css','dest/styles/article.css'],
+          dest: 'dest/styles/critical.css',
+          dimensions: [{
+            width: 320,
+            height: 480
+          },{
+            width: 1024,
+            height: 768
+          },{
+            width: 1920,
+            height: 1080
+          }]
+        }))
+        .on('error', function(err) { log.error(err.message); })
+        .pipe(gulp.dest('dest/'));
   });
 
   const processors = [
