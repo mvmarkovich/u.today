@@ -112,8 +112,7 @@
     margin: 1rem 0
 
   &__mark
-    text: $body-standart @xl $body-large
-    text: $pseudo-neutral-900
+    text: $pseudo-neutral-900 500 13px 1.8 @md 15px
     margin-top: 0
     margin-bottom: 1rem @xl 1.4rem
 
@@ -156,6 +155,9 @@
       figcaption
         margin-bottom: 0
 
+      .disclaimer
+        padding: @sm-down 0 1rem
+
   &__content
 
     iframe
@@ -182,7 +184,7 @@
           margin-left: 1rem
 
   &__contents
-    margin: 2rem 0 @xl 2.5rem 0
+    margin: 1.7rem 0 @xl 2.5rem 0
 
     &-title
       text: 600 17px 1.4 @xl 22px
@@ -200,7 +202,7 @@
 
       &:before
         content: "•"
-        text: $accent-1-light 500 17px 24px
+        text: $accent-1-light 500 15px 24px @md 17px 1.8
         size: 24px
         text-align: center
         margin-right: .5rem
@@ -391,10 +393,15 @@
   &--mobile-visible
     display: block @md none
 
+  .card__title
+    padding: .5rem 1rem
+    margin: 0
+    background-color: transparent
+
 .author
 
   &_block
-    margin: 2rem 0
+    margin: 1.3rem 0 @md 2rem 0
     position: relative
     border: 1px solid #C4C4C4
     border-radius: 0 8px 8px 8px
@@ -462,7 +469,6 @@
 
 .disclaimer
   margin-top: .8rem
-  padding: @sm-down 0 1rem
 
   &_text
     text: #90A4AE .8125rem 1rem 500
@@ -530,17 +536,20 @@
   .btn
     font-weight: 600
     margin-left: -55px @sm -82px @md -95px @xl 0
+    position: relative
+    z-index: 2
 
     &:before
       content: ''
       background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 50%)
-      width: @xl 100%
+      width: 383px @xl 568px
       height: 64px
       position: absolute
       display: block
-      bottom: 38px @xl 31px
-      left: 1rem @sm 2rem @xl 0
-      right: 1rem @sm 2rem @xl 0
+      bottom: 8px
+      left: 0
+      right: 0
+      z-index: -1
 
 main:not(.scroll-end) > .article:after
   content: ""

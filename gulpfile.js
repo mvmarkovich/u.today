@@ -32,7 +32,7 @@
           pretty: true
         })
       )
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('dest/'));
   });
 
   gulp.task('critical', function () {
