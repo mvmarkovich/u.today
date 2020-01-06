@@ -11,7 +11,6 @@
   .form-img--wrapper
     float: @sm left
     margin-right: 1.5rem
-    border-radius: 50%
     border: 1px solid #CFD8DC
     min-width: 32px @sm 56px
     max-width: 32px @sm 56px
@@ -23,20 +22,34 @@
     img
       border-radius: 50%
 
+    & ~ div
+      position: absolute
+      top: 40px @sm 70px @md 31px
+      left: 0 @md 80px
+      right: 0
+
+      & ~ form
+        .js-form-item p
+          margin-bottom: 45px @sm 67px @md 30px
+
   .social_login
     margin: 0 !important
     padding-left: @sm 80px
 
   .comment-wrapper
+    position: relative
 
     .js-ajax-comments-messages
       text: $neutral 13px 24px
+      text-align: center
 
     div[aria-label="Error message"]
       background-color: #f8d7da
+      color: #721c24
 
     div[aria-label="Status message"]
       background-color: #d4edda
+      color: #155724
 
     & > div
       .js-form-item
@@ -115,7 +128,7 @@
     min-height: 32px
     max-width: 81px
     margin-top: .5rem
-    margin-left: @sm 80px
+    margin-left: @md 80px
 
   .comment-form
     border-bottom: 1px solid $pseudo-neutral-100
@@ -128,7 +141,7 @@
       max-width: 32px @sm 56px
       height: 32px @sm 56px
       border-radius: 50%
-      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
+      background: svg-load("icons/user_logged.svg", fill: #CFD8DC) no-repeat center / contain
       display: block
       float: left
       margin-right: 1.5rem
@@ -174,6 +187,9 @@
 
         & > div
           display: none
+          
+    & ~ div
+      position: static
 
     footer
       display: flex
@@ -185,7 +201,7 @@
         max-width: 32px @sm 56px
         height: 32px @sm 56px
         border-radius: 50%
-        background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
+        background: svg-load("icons/user_logged.svg", fill: #CFD8DC) no-repeat center / contain
 
       & > p
         text: $pseudo-neutral-400 13px 16px 500
@@ -221,6 +237,18 @@
   .indented
     margin: 1rem 0 1rem 2.5rem @sm 1.5rem 0 1.5rem 80px
 
+    & > div[style]
+
+      & ~ div
+        .js-form-item p
+          margin-bottom: 45px @md 30px
+
+      .js-ajax-comments-messages[aria-label="Error message"]
+        position: absolute
+        bottom: 176px
+        right: 0
+        left: 0 @sm 80px @md 80px
+
     .js-form-item
       width: 100%
 
@@ -232,7 +260,7 @@
       margin-bottom: 0
       padding-bottom: 0
       border-bottom: 0
-      margin-top: @sm -1rem
+      margin-top: @sm -1.5rem
 
     .js-form-item p
       margin-left: 0
@@ -243,3 +271,29 @@
 
   .visually-hidden
     display: none
+    
+.comments .comment-wrapper .indented
+  position: relative 0 0 0
+
+.comments .indented > div[style]
+  margin: 0
+
+.comments .form-img--wrapper ~ div[style]
+  margin: 0
+
+.comments .comment-wrapper .js-comment ~ div[style]
+  margin-left: @sm 80px
+  margin-bottom: 20px
+
+.comments #social-login-block-form .js-form-item
+  position: static
+  margin-top: 10px
+
+.comments #social-login-block-form .form-img--wrapper
+  margin-top: 10px
+
+.comments #social-login-block-form .form-submit
+  margin-left: @sm 80px
+
+.comments #social-login-block-form .js-form-item p
+  margin-top: @sm-down -40px
