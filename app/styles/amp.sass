@@ -46,7 +46,7 @@
   line-height: 1.9
   color: #78909c
 
-.article > img, .article__main-img, .article__main-img-wrapper img, .article__related-img, .img, img:not([class])
+.article > img, .article__main-img, .article__main-img-wrapper img, .img, img:not([class])
   display: block
   max-width: 100%
 
@@ -137,46 +137,42 @@ h5
   margin-bottom: 0.6rem
 
 blockquote
+  margin: 2.5rem 0 1.7rem
   position: relative
-  margin: 1.5rem -1rem @sm 1.5rem 0
-  padding: 1.3rem 1rem @sm 1.3rem 2.1rem
-  background: #f5f5f5
+  border-left: 4px solid $accent-1-light
+  padding: .5rem 1rem
+
+  &:before
+    content: ""
+    display: block
+    background: svg-load("icons/quote.svg" fill: $accent-1-light) center / cover
+    size: 1.5rem
+    position: absolute -26px null null -14px
 
   p
-    font-family: "Montserrat", sans-serif
-
-    &:first-child
-      font-size: .9375rem
-      font-weight: 500
-      line-height: 2.1
-      margin: 0
-      color: #263238
+    text: $pseudo-neutral-900 500 15px 1.8
+    font-style: italic
 
   img
     display: block
-    float: left
-    width: 3rem
-    height: 3rem
-    margin-top: .9rem
-    margin-right: .5rem
     border-radius: 50%
+    margin-right: .5rem
+    size: 3rem
+    float: left
 
   strong
-    font-family: 'Montserrat', sans-serif
-    font-size: 1.0625rem
-    font-weight: 600
-    line-height: 1.4
-    display: block
+    text: $header-tiny
     margin-top: 1rem
+    display: block
 
   em
-    font-family: 'Montserrat', sans-serif
-    font-size: .8125rem
-    font-weight: 500
+    text: $body-small
+    text: $pseudo-neutral-400
     font-style: normal
-    line-height: 1.9
     display: block
-    color: #78909c
+
+.article blockquote p
+  margin-bottom: 0
 
 .form__group
   margin-bottom: 2rem
@@ -561,37 +557,6 @@ textarea.input__elem
 .article__contents-link
   height: 22px
 
-.article__related
-  font-family: 'Montserrat', sans-serif
-  display: flex
-  margin: 1.5rem -1rem @sm 1.5rem 0
-  background: #f5f5f5
-  align-items: center
-  justify-content: space-between
-  text-decoration: none
-  padding: 1rem @sm 0 0 0 1rem
-
-.article__related-title
-  font-size: .8125rem
-  font-weight: 600
-  line-height: 1.2
-  margin-bottom: 0.3rem
-
-.article__related-link
-  text: #263238 11px 1.9 600
-  text-decoration: none
-  padding-right: 1rem
-
-.article__related-panel
-  display: flex
-  margin-top: 0
-  align-items: center
-
-.article__related-img
-  width: 88px @sm 135px
-  height: 56px @sm 85px
-  border-radius: 2px @sm 0
-
 .article__fact, .article h4
   margin-top: 2.6rem
   margin-bottom: 2.2rem
@@ -599,7 +564,6 @@ textarea.input__elem
   background: #f5f5f5
 
 .article__fact-title, .article__fact strong
-  font-family: 'Montserrat', sans-serif
   font-size: 27px
   font-weight: 600
   line-height: 1.4
@@ -608,8 +572,7 @@ textarea.input__elem
   text-align: center
 
 .article
-  h4 strong, h4-title
-    font-family: 'Montserrat', sans-serif
+  h4 strong
     font-size: 27px
     font-weight: 600
     line-height: 1.4
@@ -618,7 +581,6 @@ textarea.input__elem
     text-align: center
 
 .article__fact-text, .article__fact p
-  font-family: 'Montserrat', sans-serif
   font-size: 15px
   font-weight: 500
   line-height: 2.1
@@ -628,7 +590,6 @@ textarea.input__elem
 
 .article
   h4 p, h4-text
-    font-family: 'Montserrat', sans-serif
     font-size: 15px
     font-weight: 500
     line-height: 2.1
@@ -798,7 +759,6 @@ main
   color: #78909c
 
 figure
-  font-family: 'Montserrat', sans-serif
   margin: 1.5rem 0
 
 .article__content figure img
@@ -864,7 +824,6 @@ p
   margin-bottom: 1.7rem
 
 .article__content
-  font-family: Georgia, serif
   font-size: .875rem
   line-height: 1.75
   margin: 0
@@ -872,7 +831,6 @@ p
 
 .article
   p
-    font-family: Georgia, serif
     font-size: .875rem
     line-height: 1.75
     margin: 0
@@ -882,7 +840,6 @@ p
     margin: 2rem 0
 
   ol:not([class]) li, ul:not([class]) li
-    font-family: Georgia, serif
     font-size: .875rem
     line-height: 1.75
 
@@ -927,7 +884,6 @@ table
 
 html body
   li p, td p
-    font-family: 'Montserrat', sans-serif
     font-size: .8125rem
     font-weight: 500
     line-height: 1.9
@@ -1382,31 +1338,8 @@ body
       font-size: 20px
       margin-right: 0.8rem
 
-.article__related-link .red
-  color: #f44336
-
 .continue:before
   display: none
-
-.author_block
-  .author__item-header
-    display: flex
-
-  .right
-    margin-left: 35px
-
-.author__list
-  list-style-type: none
-  margin: 0
-  padding-left: 0
-
-.author_block
-  margin: 1.5rem 0
-
-  .author__item-user-avatar
-    position: relative
-    top: 6px
-    border-radius: 2px
 
 .btn--more:after
   display: none
@@ -1439,57 +1372,14 @@ body
 .under_article__main-img
   padding: 15px 16px 20px
 
-.author_block
-  .author__item-name
-    text: 13px 2.1 600
-    width: 100%
-
-  .right
-    margin-left: 15px
-
 .article__tags
   margin-bottom: 1rem
 
 .article
   padding-bottom: 0
 
-.author_block
-  position: relative
-
-.author_block
-  .right
-    margin-left: 0
-
-  .author__item-user-avatar
-    width: 40px
-    height: 40px
-
-  .author__item-wrapper
-    margin-left: 55px
-    margin-bottom: 1rem
-    min-height: 40px
-
-  .author__item-name
-    margin-right: 0
-
-.author__item-user
-  top: -3px
-  left: 0
-  position: absolute
-
-.author_block .author__item-msg p
-  font-size: .8125rem
-  line-height: 1.5rem
-  color: #263238
-  font-weight: 500
-  margin-bottom: 0
-  font-family: "Montserrat", sans-serif
-
 .article__main-img
   height: auto
-
-.author_block .tabs__item
-  list-style: none
 
 .article__main-img-wrapper
   padding-top: 0
@@ -1511,11 +1401,6 @@ body
     text-transform: none
     font-weight: 600
     border-radius: 8px
-
-.author_block
-
-  .author__item-name
-    cursor: pointer
 
 .about-author
   background-color: #f5f5f5
@@ -1562,18 +1447,17 @@ body
 
 .article .about-author p
   margin: .5rem 0 0 -60px
-  font-family: "Montserrat", sans-serif
   font-size: .8125rem
   line-height: 1.5rem
 
 
 .disclaimer
+  margin-top: .5rem
 
   .disclaimer_text
     text: #90a4ae 13px 16px 500
     letter-spacing: .01em
     margin-bottom: 0
-    font-family: "Montserrat", sans-serif
 
 .footer__disclaimer
   border-bottom: 1px solid #cfd8dc
@@ -1594,6 +1478,33 @@ body
 .article__amp-recommended-wrapper--img
   position: relative
 
+.article
+
+  &__related
+    margin: 1.7rem 0
+
+    &-flame
+      text: $accent-2-medium 500 15px 1.8
+      display: inline-flex
+      align-items: center
+      text-transform: uppercase
+      margin-left: -10px
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
+
+    &-blockquote
+      text: $pseudo-neutral-900 500 15px 1.8
+      font-style: italic
+      border-left: 4px solid $accent-2-medium
+      padding: .5rem 1rem
+
 .asset
   width: 100%
   text-align: center
@@ -1607,11 +1518,7 @@ body
   max-height: 65px
   height: 100%
 
-.article__content .article__related-img img
-  margin-bottom: 0
-
 .article__subscribe
-  font-family: 'Montserrat', sans-serif
   background: #EEE
   padding: 1.5rem 1rem
   margin: 1.5rem -1rem @sm 1.5rem 0
@@ -1667,13 +1574,14 @@ body
   display: flex
 
 .article__label
-  font-size: .8125rem
-  line-height: 1rem
-  font-weight: 600
+  text: 13px 16px 600
+  letter-spacing: 0.01em
+  display: inline-flex
+  align-items: center
   margin-bottom: 1rem
+  margin-right: 1rem
   position: relative
-  display: block
-  padding-left: 2rem
+  padding-left: 1.5rem
 
   svg
     width: 16px
@@ -1687,15 +1595,18 @@ amp-list
 .twitter-tweet
   background-color: #eee
   padding: 1.25rem 1rem
-  font-family: "Montserrat", sans-serif
   margin: 1.5rem -1rem @sm 1.5rem 0
+  border-left: none
+
+  &:before
+    display: none
 
   p
     font-size: .8125rem
     line-height: 1.8
     font-weight: 500
-    font-family: 'Montserrat', sans-serif
     margin: 0.75rem 0
+    font-style: normal
 
     a
       text-decoration: none
@@ -1741,98 +1652,6 @@ amp-list
   color: #78909C
   font-weight: 500
 
-.rate-billet
-  padding: .5rem 0 1rem @sm 1rem 0
-  border-top: 1px solid #EEE
-  border-bottom: 1px solid #EEE
-  margin: 1rem 0
-  display: flex
-  align-items: center
-  justify-content: space-between
-  flex-wrap: wrap
-
-.rate-billet__info
-  display: flex
-  align-items: center
-  flex-wrap: wrap
-
-.rate-billet__sponcer
-  display: flex
-  align-items: center
-  margin-top: 1rem
-  width: 100%
-
-.rate-billet__caption
-  color: #9BACBF
-  font-size: .75rem
-  line-height: 1rem
-  font-weight: 500
-  margin-right: 1rem
-  margin-top: -10px
-
-.rate-billet__name
-  color: #000
-  font-weight: 500
-  font-size: .75rem
-  line-height: 2.25rem @sm 1rem
-  white-space: nowrap
-  display: inline-flex
-  align-items: center
-  position: relative
-  padding-left: 29px
-
-  &:before
-    content: ''
-    width: 13px
-    height: 13px
-    display: block
-    background-position: center
-    background-repeat: no-repeat
-    background-size: contain
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23FF2E00' stroke-opacity='0.85'%3E %3Crect x='4.5' y='4.5' width='4' height='4' rx='2'/%3E %3Crect x='2.5' y='2.5' width='8' height='8' rx='4'/%3E %3Cpath d='M0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5Z'/%3E %3C/svg%3E")
-    position: absolute
-    left: 0
-    top: 50%
-    margin-top: -7px
-
-  b, strong
-    padding: 0 0.2rem
-
-.rate-billet__price
-  color: #000
-  font-weight: 500
-  font-size: .75rem
-  line-height: 2.25rem @sm 1rem
-  white-space: nowrap
-  text-transform: uppercase
-  display: inline-flex
-  align-items: center
-  margin-left: 0.5rem
-
-  &:before
-    content: ''
-    background-color: #C4C4C4
-    width: 21px
-    height: 1px
-    display: block
-    margin-right: 0.5rem
-
-  b, strong
-    padding: 0 0.2rem
-
-.rate-billet
-  .btn--block
-    margin-left: 1rem
-    justify-content: flex-end
-    width: auto
-
-  .btn
-    min-width: 61px
-    font-weight: 600
-
-.rate-billet-img--wrapper
-  display: block
-
 .cels__widget
   flex-wrap: wrap
   box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
@@ -1877,7 +1696,6 @@ amp-list
     font-weight: 500
     font-size: .8125rem
     line-height: .8125rem
-    font-family: 'Montserrat', sans-serif
     margin-bottom: 0
 
   .amount-crypt
@@ -1905,7 +1723,6 @@ amp-list
   line-height: 1.5rem
   max-width: 75px
   text-overflow: clip
-  font-family: "Montserrat", sans-serif
 
 .cels__widget-list
   list-style: none
@@ -2018,7 +1835,6 @@ amp-list
       .js-form-item p
         margin-left: 0
         margin-top: -10px
-        font-family: $font
 
   #social-login-block-form
     border-bottom: 1px solid $pseudo-neutral-100
@@ -2121,7 +1937,6 @@ amp-list
       margin-top: -30px
       margin-left: 56px
       margin-bottom: .5rem
-      font-family: $font
 
   .js-comment
     margin: 1.5rem 0
@@ -2136,7 +1951,6 @@ amp-list
       margin-top: 0.5rem
       order: 1
       text: $pseudo-neutral-900 500 13px 16px
-      font-family: $font
 
       & > div
 
@@ -2157,13 +1971,11 @@ amp-list
 
       & > p
         text: $pseudo-neutral-400 13px 16px 500
-        font-family: $font
         margin-bottom: 0
 
         span, a
           @extend .link-plain
           text: $pseudo-neutral-900 13px 16px 600
-          font-family: $font
           display: inline-flex
           margin-right: .1rem
 
@@ -2220,3 +2032,75 @@ amp-list
   z-index: 99
   max-width: 544px
   margin: 0 auto
+
+.author
+
+  &_block
+    margin: 1.3rem 0
+    position: relative
+    border: 1px solid #C4C4C4
+    border-radius: 0 8px 8px 8px
+    padding: 1rem
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute 0 null null -13px
+      border: 8px solid transparent
+      border-right: 8px solid $neutral
+      border-top: 8px solid $neutral
+      display: block
+      width: 0
+      height: 0
+      z-index: 2
+
+    &:after
+      content: ''
+      position: absolute -1px null null -16px
+      border: 8px solid transparent
+      border-right: 8px solid #C4C4C4
+      border-top: 8px solid #C4C4C4
+      display: block
+      width: 0
+      height: 0
+
+    .author__item
+
+      &-msg
+        margin: 2rem 0 0 -55px
+
+        p
+          text: #263238 15px 1.8 500
+          font-style: italic
+          margin: 0
+
+  &__list
+    @extend .list-reset
+
+  &__item
+
+    &-header
+      box:
+
+    &-user
+      size: 40px
+      border-radius: 50%
+      min-width: 40px
+      margin-right: 1rem
+
+      img
+        border-radius: 50%
+        max-width: 100%
+        display: block
+
+    &-name
+      text: #263238 15px 1.4 600
+      font-style: italic
+      cursor: pointer
+      white-space: normal
+      display: block
+
+    &-wrapper
+      box:
+      flex-wrap: wrap
+      margin-bottom: 1rem
