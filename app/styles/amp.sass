@@ -1185,9 +1185,10 @@ body
   margin-bottom: 0.8rem
 
 .article__amp-recommended
-  margin: 0 -1rem @sm 0 0 1.5rem
-  padding: 2rem 1rem 1rem @sm 1.2rem 0 0
-  background-color: #EEEEEE @sm transparent
+  margin: 0 -1rem @sm 0
+  padding: 2rem 1rem 1rem @sm 1.2rem 0 .1rem
+  box-shadow: 7rem 0 0 #f5f5f5, -7rem 0 0 #f5f5f5
+  background-color: #f5f5f5
 
   &-item
     margin-bottom: 1rem @sm 1.5rem
@@ -1478,32 +1479,39 @@ body
 .article__amp-recommended-wrapper--img
   position: relative
 
-.article
+.article__related
+  font-family: 'Montserrat', sans-serif
+  display: flex
+  margin: 1.5rem -1rem @sm 1.5rem 0
+  background: #f5f5f5
+  align-items: center
+  justify-content: space-between
+  text-decoration: none
+  padding: 1rem @sm 0 0 0 1rem
 
-  &__related
-    margin: 1.7rem 0
+.article__related-title
+  font-size: .8125rem
+  font-weight: 600
+  line-height: 1.2
+  margin-bottom: 0.3rem
 
-    &-flame
-      text: $accent-2-medium 500 15px 1.8
-      display: inline-flex
-      align-items: center
-      text-transform: uppercase
-      margin-left: -10px
+.article__related-link
+  text: #263238 11px 1.9 600
+  text-decoration: none
+  padding-right: 1rem
 
-      &:before
-        content: ''
-        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
-        background-size: contain
-        background-position: center
-        background-repeat: no-repeat
-        size: 24px
-        margin-right: .5rem
+.article__related-panel
+  display: flex
+  margin-top: 0
+  align-items: center
 
-    &-blockquote
-      text: $pseudo-neutral-900 500 15px 1.8
-      font-style: italic
-      border-left: 4px solid $accent-2-medium
-      padding: .5rem 1rem
+.article__related-img
+  width: 88px @sm 135px
+  height: 56px @sm 85px
+  border-radius: 2px @sm 0
+
+.article__related-link .red
+  color: #f44336
 
 .asset
   width: 100%
