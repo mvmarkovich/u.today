@@ -54,12 +54,13 @@
     display: none @md block
 
     &-list
-      
+      list-style: none
+      padding: 0
       box: vertical @md horizontal space-between @xl center
       background: @md-down #fff
       padding-top: @md-down .8rem
       padding-bottom: @md-down 1.7rem
-      margin: @xl 0 1.5rem
+      margin: 0 @xl 0 1.5rem
 
       &.visibility-hidden
         visibility: @xl-down visible
@@ -128,7 +129,9 @@
     &-child
 
       &-list
-        
+        list-style: none
+        padding: 0
+        margin: 0
         display: none
         position: absolute
         top: @md-down 0

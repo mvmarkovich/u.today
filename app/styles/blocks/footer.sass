@@ -45,7 +45,9 @@
     position: relative
 
     &-list
-      
+      list-style: none
+      padding: 0
+      margin: 0
       box: wrap @md space-between
 
     &-item
@@ -63,11 +65,14 @@
 
     &-link
       text: $header-tiny @md $header-super-tiny @xl $header-tiny
-      
+
 
     &-child
 
       &-list
+        list-style: none
+        padding: 0
+        margin: 0
         margin-top: 1rem
         display: @md-down none
 
@@ -94,6 +99,9 @@
     &-link
       text: $body-small
       text: $pseudo-neutral-400
+
+      & + &
+        margin-left: 1.5rem
 
   &__disclaimer
     border-bottom: 1px solid $pseudo-neutral-100

@@ -191,26 +191,38 @@
       margin-bottom: 1.3rem
 
     &-list
+      list-style: none
+      padding: 0
+      margin: 0
       margin-bottom: 1.45rem
 
     &-item
-      padding-left: 2rem
+      color: $accent-1-light
       position: relative
+      padding-left: 1rem
+
+      &:before
+        content: ''
+        width: 4px
+        height: 4px
+        display: block
+        border-radius: 50%
+        background-color: $accent-1-light
+        position: absolute 13px null null 0
 
       & + &
         margin-top: 1rem
 
-      &:before
-        content: "•"
-        text: $accent-1-light 500 15px 24px @md 17px 1.8
-        size: 24px
-        text-align: center
-        margin-right: .5rem
-        position: absolute 0 null null 0
-
     &-link
       border-bottom: 0
       text: $accent-1-light 500 15px 1.8 @xl 17px
+      text-decoration: none
+
+      &:hover
+        text: $accent-1-medium
+
+      &:active
+        text: $accent-1-dark
 
   &__related
     margin: 1.7rem 0 @xl 2.5rem 0
