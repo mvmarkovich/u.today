@@ -58,14 +58,8 @@
       &:nth-child(even)
         width: @sm-down 40%
 
-      // &:last-child
-      //   position: @md absolute
-      //   top: 80px @xl 96px
-      //   right: 24px @xl 32px
-
     &-link
       text: $header-tiny @md $header-super-tiny @xl $header-tiny
-
 
     &-child
 
@@ -82,23 +76,19 @@
           margin-top: 0.94rem @xl 1rem
 
       &-link
-        text: $body-tiny @xl $body-small
-        text: $pseudo-neutral-900
-        
+        text: $pseudo-neutral-900 $body-tiny @xl $body-small
 
   &__copy
     box: wrap @md center
     padding: 1.5rem * @md 1rem * @xl 1.1rem *
 
     &-text
-      text: $body-small
-      text: $pseudo-neutral-400
+      text: $pseudo-neutral-400 $body-small
       margin-right: 2rem
       margin-bottom: @sm-down 1rem
 
     &-link
-      text: $body-small
-      text: $pseudo-neutral-400
+      text: $pseudo-neutral-400 $body-small
 
       & + &
         margin-left: 1.5rem

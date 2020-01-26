@@ -9,7 +9,6 @@
     height: @xl 3rem
     padding: .5rem 1rem @xl 0 2rem @md 0.5rem 1rem 0px
     position: relative
-    will-change: transform
     max-width: @xl 1152px @md 768px @md-down 480px
     margin: 0 auto
 
@@ -30,16 +29,10 @@
     min-width: 130px @md 132px
     position: relative
 
-
     &-news
       size: 140px 14px @md 219px 20px
       min-width: 140px @md 219px
       background: svg-load("icons/logo-news.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
-
-    &-101
-      size: 125px 14px @md 177px 20px
-      min-width: 125px @md 177px
-      background: svg-load("icons/logo-101.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
 
   &__social
     width: 236px @xl 161px
@@ -55,11 +48,9 @@
 
     &-list
       list-style: none
-      padding: 0
+      padding: .8rem 0 1.7rem @md 0
       box: vertical @md horizontal space-between @xl center
       background: @md-down #fff
-      padding-top: @md-down .8rem
-      padding-bottom: @md-down 1.7rem
       margin: 0 @xl 0 1.5rem
 
       &.visibility-hidden
@@ -119,12 +110,11 @@
           margin-right: @md-down 0.8rem
 
     &-link
-      text: $pseudo-neutral-900 600 0.9375rem 1.4 normal
+      text: $pseudo-neutral-900 600 15px 1.4 normal
       text-decoration: none
       box: space-between center @md left center
       padding: 0 0 .75rem @md-down 0 0 0 1rem
       height: @md-down 3rem
-
 
     &-child
 
@@ -170,7 +160,6 @@
 
   &__panel
     box: center space-between
-    // width: 129px @xs 164px @md 230px @xl 187px
 
   &__btn-search
     margin-right: .8rem @md 1.5rem
@@ -190,7 +179,7 @@
 
     &-input
       background: #fff @md $neutral-100
-      border-color: #fff !important @md $neutral-100 !important
+      border-color: #fff @md $neutral-100
       min-height: 32px
       padding-left: 2rem
 

@@ -7,21 +7,6 @@
     display: block
     margin-bottom: .8rem
 
-  &__summary
-    box: center
-    flex-wrap: wrap
-    margin-bottom: 0.7rem @md 1.3rem
-
-    &-device
-      display: block @xl none
-      margin: 1.1rem * .8rem
-
-    &-bookmarks
-      font-size: @xl-down 0
-
-      &:before
-        margin-right: @xl-down 0
-
   &__label
     text: 13px 16px 600
     letter-spacing: 0.01em
@@ -50,9 +35,14 @@
       &:before
         background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
 
-  &__info
-    box: center
-    margin-bottom: 1.5rem @xl 1.3rem
+  &__title
+    margin-top: 0
+    margin-bottom: .8rem
+
+    &-mark
+      text: $body-tiny
+      text: $pseudo-neutral-900
+      margin-left: .4rem
 
   &__panel
     box: wrap
@@ -98,15 +88,6 @@
 
     &__link
       margin-right: 1.5rem
-
-  &__title
-    margin-top: 0
-    margin-bottom: .8rem
-
-    &-mark
-      text: $body-tiny
-      text: $pseudo-neutral-900
-      margin-left: .4rem
 
   .card
     margin: 1rem 0
@@ -163,8 +144,8 @@
     iframe
       margin: 1.5rem 0
       max-width: 728px
-      width: 100% !important
-      height: @xl-down 300px !important
+      width: 100% 
+      height: @xl-down 300px 
 
     h2, h3
       em
@@ -182,6 +163,22 @@
           border: 1px solid $pseudo-neutral-100
           font-style: normal
           margin-left: 1rem
+
+  h4
+    background: $neutral-100
+    padding: 1.3rem 2rem @xl 3.4rem 2rem
+    margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
+    margin: @sm-down * -1rem
+
+    strong
+      text: $header-standart center @xl $header-large
+      margin-bottom: .6rem @xl 2.4rem
+      display: block
+
+    p
+      text: $body-standart center @xl $body-large
+      text: $pseudo-neutral-900
+      margin-bottom: 0
 
   &__contents
     margin: 1.7rem 0 @xl 2.5rem 0
@@ -251,12 +248,12 @@
 
   twitter-widget
     overflow: hidden
-    max-width: 500px !important
-    width: 100% !important
+    max-width: 500px 
+    width: 100% 
 
   table
     max-width: 736px
-    width: 100% !important
+    width: 100% 
     display: block
     overflow-x: auto
     border-top: 0
@@ -268,36 +265,6 @@
 
     td
       min-width: 170px
-
-    &::-webkit-scrollbar-track
-      border-radius: 10px
-      background-color: #78909c
-      width: 6px
-
-    &::-webkit-scrollbar
-      height: 8px
-      border-radius: 10px
-      background-color: #78909c
-
-    &::-webkit-scrollbar-thumb
-      border-radius: 10px
-      background-color: #4e616d
-
-  &__fact, h4
-    background: $neutral-100
-    padding: 1.3rem 2rem @xl 3.4rem 2rem
-    margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
-    margin: @sm-down * -1rem
-
-    &-title, strong
-      text: $header-standart center @xl $header-large
-      margin-bottom: .6rem @xl 2.4rem
-      display: block
-
-    &-text, p
-      text: $body-standart center @xl $body-large
-      text: $pseudo-neutral-900
-      margin-bottom: 0
 
   &__tags
     margin-bottom: 0
@@ -315,7 +282,7 @@
 
     .article__recommended-item-title
       background-color: transparent
-      margin: 1rem 0 0 0  @md 0 0 0 1rem @xl 1rem 0 0 0
+      margin: 1rem 0 0 0 @md 0 0 0 1rem @xl 1rem 0 0 0
       padding: 0
       text: #263238 13px 1.8 500
 
@@ -324,20 +291,6 @@
       flex-wrap: nowrap @md wrap
       margin: @md * -.51rem * -.5rem
       overflow: auto @md hidden
-
-      &::-webkit-scrollbar-track
-        border-radius: 10px
-        background-color: transparent
-        width: 6px
-
-      &::-webkit-scrollbar
-        height: 8px
-        border-radius: 10px
-        background-color: transparent
-
-      &::-webkit-scrollbar-thumb
-        border-radius: 10px
-        background-color: transparent
 
       &:after
         content: ""
@@ -387,17 +340,9 @@
       min-width: @md 208px @xl 1px
 
     &-link
-      
       text: $body-small
       margin-bottom: .1rem
       box: vertical @md horizontal @xl vertical
-
-    &-info
-      box: center wrap
-
-    .btn
-      margin: 1.5rem 0 0
-      box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35)
 
   .something--content
     margin: @sm-down 1.5rem -1rem
