@@ -144,8 +144,6 @@
     iframe
       margin: 1.5rem 0
       max-width: 728px
-      width: 100% 
-      height: @xl-down 300px 
 
     h2, h3
       em
@@ -248,12 +246,12 @@
 
   twitter-widget
     overflow: hidden
-    max-width: 500px 
-    width: 100% 
+    max-width: 500px !important
+    width: 100% !important
 
   table
     max-width: 736px
-    width: 100% 
+    width: 100%
     display: block
     overflow-x: auto
     border-top: 0
@@ -265,6 +263,20 @@
 
     td
       min-width: 170px
+
+    &::-webkit-scrollbar-track
+      border-radius: 10px
+      background-color: #78909c
+      width: 6px
+
+    &::-webkit-scrollbar
+      height: 8px
+      border-radius: 10px
+      background-color: #78909c
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      background-color: #4e616d
 
   &__tags
     margin-bottom: 0
@@ -291,6 +303,20 @@
       flex-wrap: nowrap @md wrap
       margin: @md * -.51rem * -.5rem
       overflow: auto @md hidden
+
+      &::-webkit-scrollbar-track
+        border-radius: 10px
+        background-color: transparent
+        width: 6px
+
+      &::-webkit-scrollbar
+        height: 8px
+        border-radius: 10px
+        background-color: transparent
+
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: transparent
 
       &:after
         content: ""
