@@ -31,17 +31,8 @@
     text: $body-small
     margin-top: @md-down 1rem
 
-    a
-      @extend .link-decorate
-
   &__checkbox
     display: none
-
-    &:checked
-
-      & + ^&-label
-        &:before
-          background: svg-load("icons/checkbox_marked.svg" fill: $accent-1-dark) center / contain
 
     &-label
       text: $pseudo-neutral-400 $body-small
@@ -55,10 +46,8 @@
         display: block
         size: 24px
         margin-right: .5rem
-        background: svg-load("icons/checkbox_blank.svg" fill: $pseudo-neutral-900) center / contain
 
       a
-        @extend .link-plain
         text-decoration: none
         color: #2979ff
 
@@ -81,7 +70,6 @@
     min-height: 40px
     outline: 0
     text: $body-small
-    font-family: $font
     width: 100%
 
     &::placeholder
@@ -101,16 +89,12 @@
       border-color: $pseudo-neutral-100
 
   &__select
-    @extend .input__elem
     cursor: pointer
     text-transform: none
     letter-spacing: normal
     position: relative
-    display: block
     width: 100%
     min-height: 40px
-    appearance: none
-    background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
     background-position: calc(100% - 6px) center
     background-repeat: no-repeat
     background-size: 24px 24px

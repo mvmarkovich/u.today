@@ -29,24 +29,7 @@
     color: $pseudo-neutral-900 600
 
   &--link
-    @extend .link-plain
     cursor: pointer
-
-  &--views,
-  &--comments,
-  &--liked,
-  &--bookmark,
-  &--share,
-  &--info,
-  &--liked
-    &:before
-      content: ""
-      display: block
-      size: 14px @sm 24px
-      margin-right: .6rem
-      background-size: contain
-      background-position: center
-      background-repeat: no-repeat
 
   &--views
     &:before
@@ -95,7 +78,6 @@
       background-image: svg-load("icons/liked_bold.svg" fill: $pseudo-neutral-200)
 
   &--author
-    @extend .link-plain
     cursor: pointer
 
   &__img

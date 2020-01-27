@@ -65,7 +65,12 @@
       display: none
 
   &--pseudo
-    @extend .btn--light
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    background: transparent
+    cursor: pointer
     text-transform: none
     text: 500 13px
     letter-spacing: normal
@@ -201,38 +206,6 @@
       background-color: $accent-1-medium
       border-color: $accent-1-medium
 
-  &--arrow-down,
-  &--dropdown,
-  &--arrow-right,
-  &--rating-up,
-  &--rating-down,
-  &--attach,
-  &--more,
-  &--search,
-  &--account,
-  &--burger,
-  &--info,
-  &--cross,
-  &--info-white,
-  &--lightning-white,
-  &--cross-white,
-  &--notification,
-  &--back
-    &:after
-      content: ""
-      display: block
-      background-repeat: no-repeat
-      background-position: center
-
-  &--info-before,
-  &--arrow-down-before,
-  &--arrow-up-before
-    &:before
-      content: ""
-      display: block
-      background-repeat: no-repeat
-      background-position: center
-
   &--arrow-down
     &:after
       background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
@@ -244,9 +217,6 @@
 
     &:active:after
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
 
   &--arrow-down-before
     &:before
@@ -260,9 +230,6 @@
     &:active:before
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
 
-    &:disabled:before, &^&--disabled:before
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
-
   &--arrow-up-before
     &:before
       background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-900)
@@ -275,25 +242,19 @@
     &:active:before
       background-image: svg-load("icons/triangle_up.svg", fill: $accent-1-dark)
 
-    &:disabled:before, &^&--disabled:before
-      background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-300)
-
   &--dropdown
     &:after
       background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
       size: 18px 24px
 
     &:hover
-      color: $pseudo-neutral-900
+      text: $pseudo-neutral-900
 
       &:after
         background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
 
     &:active:after
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
 
   &--arrow-right
     &:after
@@ -307,21 +268,6 @@
     &:active:after
       background-image: svg-load("icons/triangle_right.svg", fill: $accent-1-dark)
 
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_right.svg", fill: $pseudo-neutral-300)
-
-  &--rating-up
-    &:after
-      background-image: svg-load("icons/chevron.svg", fill: $pseudo-neutral-200)
-      transform: rotate(-90deg)
-      size: 24px
-
-  &--rating-down
-    &:after
-      background-image: svg-load("icons/chevron.svg", fill: $pseudo-neutral-200)
-      transform: rotate(90deg)
-      size: 24px
-
   &--attach
     &:after
       background-image: svg-load("icons/attach.svg", fill: $pseudo-neutral-200)
@@ -332,9 +278,6 @@
 
     &:active:after
       background-image: svg-load("icons/attach.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/attach.svg", fill: $pseudo-neutral-300)
 
   &--attach-dark
     &:after
@@ -353,9 +296,6 @@
     &:active:after
       background-image: svg-load("icons/more_horizontal.svg", fill: $accent-1-dark)
 
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/more_horizontal.svg", fill: $pseudo-neutral-300)
-
   &--search
     &:after
       background-image: svg-load("icons/search.svg", fill: $pseudo-neutral-900)
@@ -366,9 +306,6 @@
 
     &:active:after
       background-image: svg-load("icons/search.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/search.svg", fill: $pseudo-neutral-300)
 
   &--account
     &:after
@@ -381,9 +318,6 @@
     &:active:after
       background-image: svg-load("icons/no_avatar.svg", fill: $accent-1-dark)
 
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-300)
-
   &--notification
     &:after
       background-image: svg-load("icons/notification.svg", fill: $pseudo-neutral-900)
@@ -395,10 +329,6 @@
     &:active:after
       background-image: svg-load("icons/notification.svg", fill: $accent-1-dark)
 
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/notification.svg", fill: $pseudo-neutral-300)
-
-
   &--burger
     &:after
       background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-900)
@@ -409,9 +339,6 @@
 
     &:active:after
       background-image: svg-load("icons/burger.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-300)
 
   &--info
     &:after
@@ -425,17 +352,11 @@
     &:active:after
       background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
 
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
-
   &--info-white
     &:after
       background-image: svg-load("icons/information.svg", fill: #fff)
       size: 20px
       margin-left: .9em
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-200)
 
   &--info-before
     &:before
@@ -449,18 +370,12 @@
     &:active:before
       background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
 
-    &:disabled:before, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
-
   &--lightning-white
     &:after
       background-image: svg-load("icons/lightning.svg", fill: #fff)
       size: 20px
       margin-left: .9em
       margin-right: -0.3rem
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/lightning.svg", fill: $pseudo-neutral-200)
 
   &--cross
     &:after
@@ -472,9 +387,6 @@
 
     &:active:after
       background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/cross.svg", fill: $pseudo-neutral-300)
 
   &--cross-white
     &:after
