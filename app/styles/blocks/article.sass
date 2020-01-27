@@ -290,6 +290,20 @@
       margin: @md * -.51rem * -.5rem
       overflow: auto @md hidden
 
+      &::-webkit-scrollbar-track
+        border-radius: 10px
+        background-color: transparent
+        width: 6px
+
+      &::-webkit-scrollbar
+        height: 8px
+        border-radius: 10px
+        background-color: transparent
+
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: transparent
+
       &:after
         content: ""
         display: block
@@ -393,6 +407,11 @@
           text: #263238 15px 1.8 500 @md 17px
           font-style: italic
           margin: 0
+
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
 
   &__item
 

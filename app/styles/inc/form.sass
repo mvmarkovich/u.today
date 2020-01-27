@@ -1,4 +1,5 @@
 .form
+
   &__group
     margin-bottom: 2rem @md 2.5rem @xl 3rem
 
@@ -22,9 +23,6 @@
 
   &--large-space
     margin-bottom: .4rem @md 1.4rem
-
-    + .btn
-      margin-top: -.4rem
 
   &--btn-space
     margin-bottom: .4rem @md 2rem
@@ -70,12 +68,6 @@
     .input
       width: 100%
 
-      + .input
-        margin-left: @xl 2rem
-
-    + .btn
-      margin-top: 1rem
-
   &__label
     text: $pseudo-neutral-400 $body-tiny
 
@@ -108,12 +100,6 @@
       background: $neutral-100
       border-color: $pseudo-neutral-100
 
-    textarea&
-      padding: .6rem *
-      resize: none
-      display: block
-      height: 48px
-
   &__select
     @extend .input__elem
     cursor: pointer
@@ -144,6 +130,7 @@
       line-height: 1.1
       background-size: 24px 24px
       background-position: 47px center
+
     &:valid
       border-color: #CFD8DC
 
@@ -154,8 +141,7 @@
       border-color: #90A4AE
 
   &__error
-    text: $body-tiny
-    text: $accent-2-medium
+    text: $accent-2-medium $body-tiny
     display: none
     margin-bottom: -.5rem
 
