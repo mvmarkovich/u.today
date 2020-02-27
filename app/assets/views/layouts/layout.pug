@@ -25,28 +25,12 @@ html(lang="en" dir="ltr")
 
   body
 
-    .something.something--header(style="background-color: #222863")
-      a.something__header-long(href="#!")
-        img(src="img/something/iqmining_1-long.png" alt="something-header")
-
-    include ../blocks/currencies.pug
-
     include ../inc/header.pug
 
     .page-container.container
       block content
 
     include ../inc/footer.pug
-
-    // include ../inc/fixed-banner.pug
-
-    include ../inc/cookies.pug
-
-    include ../inc/share.pug
-
-    include ../blocks/modal.pug
-
-    include ../blocks/sticky-banner.pug
 
     block foot
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")

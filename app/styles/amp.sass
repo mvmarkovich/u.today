@@ -83,6 +83,9 @@
   text-decoration: none
   color: #2196F3
 
+.amp_ads
+  margin: 50px 0 50px 0
+
 .link-pseudo
   text-decoration: none
   color: #263238
@@ -811,10 +814,15 @@ ul:not([class])
       margin-top: 1rem
 
     &:before
+      content: ''
       position: absolute
       left: -1.1rem
+      top: 10px
       display: block
-      content: "•"
+      background-color: #263238
+      width: 5px
+      height: 5px
+      border-radius: 50%
 
 p
   font-size: .8125rem

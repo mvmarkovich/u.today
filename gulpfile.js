@@ -40,7 +40,7 @@
         .pipe(critical({
           base: 'dest/',
           inline: true,
-          css: ['dest/styles/defaults.css','dest/styles/main.css','dest/styles/article.css'],
+          css: ['dest/styles/defaults.css','dest/styles/main.css','dest/styles/defaults.css'],
           dest: 'dest/styles/critical.css',
           dimensions: [{
             width: 320,
@@ -83,18 +83,6 @@
       path: 'app/assets/img/'
     }),
     require('autoprefixer'),
-    require('postcss-pxtorem')({
-      selectorBlackList: [
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        '.btn',
-        '.sticky-nav__nav-link',
-        '.hero-blocks__item li'
-      ]
-    }),
     require('postcss-unique-selectors'),
     require('css-mqpacker')({
       sort: true
@@ -123,7 +111,6 @@
         extname: '.css'
       }))
       //.pipe(sourcemaps.write('/'))
-      .pipe(uglifycss())
       .pipe(gulp.dest('dest/styles/'))
     );
   });

@@ -1,0 +1,111 @@
+.article
+  position: relative
+  z-index: 5
+  overflow: hidden
+
+  .image-popup-vertical-fit
+    display: block
+    margin-bottom: .8rem
+
+  .social
+
+    &__link
+      margin-right: 1.5rem
+
+  &__title
+    margin-top: 0
+    margin-bottom: .8rem
+
+    &-mark
+      text: $body-tiny
+      text: $pseudo-neutral-900
+      margin-left: .4rem
+
+  &__main
+    background-color: #fff
+    padding: 1.5rem 1rem
+
+    .card--miners
+      border: 1px solid #CFD8DC
+      margin: 1.5rem -1rem @sm 1.7rem 0 @xl 2.5rem 0
+
+      .aside-story__img-wrapper
+        margin-top: @xl-down 0
+
+      .aside-story--miners
+        align-items: @xl-down center
+
+  &__main-img
+
+    &-wrapper
+      overflow: hidden
+      position: relative
+      margin: 0 0 1.5rem @sm-down 0 -1rem 1rem
+
+      figcaption
+        margin-bottom: 0
+
+  &__content
+
+    iframe
+      margin: 1.5rem 0
+      max-width: 728px
+      width: 100% !important
+      height: @xl-down 300px !important
+
+    h2, h3
+      em
+        display: inline-flex
+        align-items: center
+        font-style: normal
+
+        &:after
+          content: 'Promoted'
+          text: $pseudo-neutral-200 11px 18px
+          text-align: center
+          white-space: nowrap
+          padding: 0 .5rem
+          border-radius: 2px
+          border: 1px solid $pseudo-neutral-100
+          font-style: normal
+          margin-left: 1rem
+
+  &__contents
+    margin: 2rem 0 @xl 2.5rem 0
+
+    &-title
+      text: 600 17px 1.4 @xl 22px
+      margin-bottom: 1.3rem
+
+    &-list
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 2rem
+      position: relative
+
+      & + &
+        margin-top: 1rem
+
+      &:before
+        content: "•"
+        text: $accent-1-light 500 17px 24px
+        size: 24px
+        text-align: center
+        margin-right: .5rem
+        position: absolute 0 null null 0
+
+    &-link
+      border-bottom: 0
+      text: $accent-1-light 500 15px 1.8 @xl 17px
+
+  .something--content
+    margin: @sm-down 1.5rem -1rem
+
+.disclaimer
+  margin-top: .8rem
+  padding: @sm-down 0 1rem
+
+  &_text
+    text: #90A4AE .8125rem 1rem 500
+    margin-bottom: 0

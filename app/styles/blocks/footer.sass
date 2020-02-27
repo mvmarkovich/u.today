@@ -28,7 +28,6 @@
 
   &__subscribe
     width: @md-down 100%
-    display: none
 
     &-form
       height: auto @md 40px
@@ -46,9 +45,7 @@
     position: relative
 
     &-list
-      list-style: none
-      padding: 0
-      margin: 0
+
       box: wrap @md space-between
 
     &-item
@@ -59,15 +56,17 @@
       &:nth-child(even)
         width: @sm-down 40%
 
+    // &:last-child
+    //   position: @md absolute
+    //   top: 80px @xl 96px
+    //   right: 24px @xl 32px
     &-link
-      text: $header-tiny @md $header-super-tiny @xl $header-tiny
+      @extend .link-plain
+      text: $pseudo-neutral-900 $header-tiny @md $header-super-tiny @xl $header-tiny
 
     &-child
 
       &-list
-        list-style: none
-        padding: 0
-        margin: 0
         margin-top: 1rem
         display: @md-down none
 
@@ -77,22 +76,23 @@
           margin-top: 0.94rem @xl 1rem
 
       &-link
-        text: $pseudo-neutral-900 $body-tiny @xl $body-small
+        text: $body-tiny @xl $body-small
+        text: $pseudo-neutral-900
+
 
   &__copy
     box: wrap @md center
     padding: 1.5rem * @md 1rem * @xl 1.1rem *
 
     &-text
-      text: $pseudo-neutral-400 $body-small
+      text: $body-small
+      text: $pseudo-neutral-400
       margin-right: 2rem
       margin-bottom: @sm-down 1rem
 
     &-link
-      text: $pseudo-neutral-400 $body-small
-
-      & + &
-        margin-left: 1.5rem
+      text: $body-small
+      text: $pseudo-neutral-400
 
   &__disclaimer
     border-bottom: 1px solid $pseudo-neutral-100

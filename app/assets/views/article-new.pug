@@ -1,0 +1,463 @@
+extends layouts/layout.pug
+
+block title
+    title Article | u.today
+
+block head
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="styles/article-new.css")
+
+block content
+    .main-aside-container
+        main.main-news-block
+            .article
+                .article__main
+                    span.article__label.article__label--original U.TODAY Original Article
+                    span.article__label.article__label--tweet Tweet-based article
+                    span.article__label.article__label--interviews Interviews
+
+                    h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+
+                    .article_main-info
+                        .article_main-info__humble
+                            time.author__item-time.humble Monday, November 11 — 8:15 PM
+                            .humble.humble--tiny.humble--comments 256
+                            .humble.humble--tiny.humble--liked 31
+                            .humble.humble--tiny.humble--views 125k
+                            .social
+                                span.social__link--name Share:
+                                a.social__link.social__link--tiny.social__link--tg(href="#!")
+                                a.social__link.social__link--tiny.social__link--tw(href="#!")
+                                a.social__link.social__link--tiny.social__link--fb(href="#!")
+
+                    .cels__widget
+                        .cels__widget-info
+                            a.cels__widget-img--wrapper(href="#!" rel="nofollow" target="_blank")
+                                img.cels__widget-img(src="img/content/crypt/mini_celsius.svg")
+
+                            span.cels__widget-caption Put your <br> crypto to <br> work
+
+                            form.form--row
+                                .input
+                                    input(type="number" class="input__elem cels__widget-input" value="10" placeholder="0")
+
+                                .input
+                                    select.input__select.select_crypto
+                                        option.cels__widget-option(value='ETH', selected='', data-rate="3.60", data-cost="187.55") eth
+                                        option.cels__widget-option(value='BTC', data-rate="4.15", data-cost="8790.2") btc
+                                        option.cels__widget-option(value='DASH', data-rate="6.00", data-cost="69.91") dash
+                                        option.cels__widget-option(value='BCH', data-rate="3.50", data-cost="279.70") bch
+                                        option.cels__widget-option(value='LTC', data-rate="4.30", data-cost="59.64") ltc
+                                        option.cels__widget-option(value='ZEC', data-rate="4.00", data-cost="36.46") zec
+                                        option.cels__widget-option(value='BTG', data-rate="6.50", data-cost="8.28") btg
+                                        option.cels__widget-option(value='XRP', data-rate="3.00", data-cost="0.26") xrp
+                                        option.cels__widget-option(value='OMG', data-rate="3.75", data-cost="0.97") omg
+                                        option.cels__widget-option(value='TUSD', data-rate="8.30", data-cost="1.00") tusd
+                                        option.cels__widget-option(value='GUSD', data-rate="8.30", data-cost="0.99") gusd
+                                        option.cels__widget-option(value='PAX', data-rate="8.30", data-cost="1.00") pax
+                                        option.cels__widget-option(value='USDC', data-rate="8.30", data-cost="1.00") usdc
+                                        option.cels__widget-option(value='DAI', data-rate="6.50", data-cost="1.01") dai
+                                        option.cels__widget-option(value='ZRX', data-rate="4.50", data-cost="0.29") zrx
+
+                        .cels__widget-output
+
+                            ul.cels__widget-list
+                                li.cels__widget-item
+                                    .interest_per_week.cels__widget-output--value 0.00
+                                    p.cels__widget-signature Interest per week
+
+                                li.cels__widget-item
+                                    .interest_per_year.cels__widget-output--value 0.00
+                                    p.cels__widget-signature Interest per year
+
+                                li.cels__widget-item
+                                    .interest_rate.cels__widget-output--value 0.0
+                                    p.cels__widget-signature Interest rate
+
+                            a.btn.btn--big.btn--celsius(href="#!" rel="nofollow" target="_blank") Join Now!
+
+                        .widget__mark Sponsored by <a href="https://celsius.network" rel="nofollow" target="_blank"> Celsius.Network </a>
+
+                    section.author_block
+                        ul.author__list
+                            li.author__item
+                                .author__item-header
+                                    a.author__item-user(href='#')
+                                        img.author__item-user-avatar(src='https://dummyimage.com/64x64/d8dbde/aaabad')
+                                    .right
+                                        .author__item-wrapper
+                                            a.author__item-name.humble(href='#!') Konstantin Konstantinopolsky
+                                        .author__item-body
+                                            .author__item-msg
+                                                p
+                                                    | I did some quite research, checked a hefty load of sources and here&rsquo;s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
+
+                    .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+
+                    .article__main-img-wrapper
+                        img.article__main-img(src="https://news.u.today/sites/default/files/styles/1200x/public/2019-09/BitPay_Suspends_Bitcoin_Donations_to_Hong_Kong_Free_Press_without_Notification.JPG.jpg?itok=M8YJr0SX")
+                        figcaption Cover image via <a href="#!"> 123rf.com </a>
+                        .disclaimer
+                            p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+
+                    section.article__content
+                        .article__contents
+                            .article__contents-title Contents
+
+                            ul.article__contents-list
+                                each content in articleContents
+                                    li.article__contents-item
+                                        a.article__contents-link.link-pseudo(href="#!")= content
+
+                        | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women.
+
+                        p!= articleTexts[0]
+
+                        h2
+                            em Women of Crypto as opening act
+
+                        p!= articleTexts[1]
+
+                        p!= articleTexts[2]
+
+                        h2 Ladies only
+
+                        p!= articleTexts[3]
+
+                        blockquote
+                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+
+                            img(src="https://dummyimage.com/64x64/d8dbde/aaa")
+                            strong Bob Stewarts
+                            em CEO of uToday
+
+                        p!= articleTexts[0]
+
+                        blockquote
+                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+
+                            strong Bob Stewarts
+                            em CEO of uToday
+
+                        p!= articleTexts[1]
+
+                        blockquote
+                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+
+                            strong Bob Stewarts
+
+                        p!= articleTexts[2]
+
+                        blockquote
+                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+
+                        p!= articleTexts[5]
+
+                        ul
+                            each li in articleList
+                                li= li
+
+                        h2 Scaling community and activism
+
+                        p!= articleTexts[2]
+
+                        .article__related
+                            .article__related-flame Must Read
+
+                            .article__related-blockquote Exclusive Interview with John McAfee: Epstein Didn’t Kill Himself, Bitcoin to Hit $1 million, & “Russian Roulette” — <a href="#!"> READ MORE </a>
+
+                        p!= articleTexts[3]
+
+                        h2 Reclaiming sovereignty
+
+                        p!= articleTexts[1]
+
+                        .something.something--content
+                            .something__content-long
+                                img(src="img/something/long.png" width="728" height="90" alt="something-wide")
+
+                            .something__content-square
+                                img(src="img/something/square.png" width="300" height="250" alt="something-square")
+
+                        p!= articleTexts[2]
+
+                        h2 Reclaiming sovereignty
+
+                        figure
+                            a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
+                                img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
+                            figcaption Cover image via <a href="#!"> 123rf.com </a>
+
+                        p!= articleTexts[1]
+
+                        p!= articleTexts[3]
+
+                        p!= articleTexts[1]
+
+                        h2 Adding value despite challenges
+
+                        p!= articleTexts[0]
+
+                        ol
+                            li Change the terms and conditions of the ToU
+                            li
+                                | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                                ol
+                                    li Change the terms and conditions of the ToU
+                                    li
+                                        | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                            li or Change other conditions for use of the U.Today Sites.
+
+                        p!= articleTexts[0]
+
+                        ul
+                            li Change the terms and conditions of the ToU
+                            li
+                                | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                                ul
+                                    li Change the terms and conditions of the ToU
+                                    li
+                                        | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                            li or Change other conditions for use of the U.Today Sites.
+
+                        table(align='center')
+                            tbody
+                                tr
+                                    th  
+                                    th Loan-to-Value
+                                    th Interest Rates
+                                    th Native Token
+                                    th Assets
+                                    th Registered
+                                tr
+                                    td BlockFi
+                                    td 50%
+                                    td 3-12%
+                                    td No
+                                    td 5
+                                    td USA
+                                tr
+                                    td YouHodler
+                                    td 90%
+                                    td >4,5%
+                                    td No
+                                    td 16
+                                    td Cyprus/Switzerland
+                                tr
+                                    td Crypto.com
+                                    td 50%
+                                    td 8-18%
+                                    td Required
+                                    td 16
+                                    td Malta
+
+                        table
+                            colgroup
+                                col
+                                col
+                            tbody
+                                tr
+                                    td
+                                        p(dir='ltr')
+                                            strong Pros
+                                    td
+                                        p(dir='ltr')
+                                            strong Cons
+                                tr
+                                    td
+                                        ol
+                                            li(dir='ltr')
+                                                p(dir='ltr', role='presentation') Incorporated in South Korea, which has a very reliable legislation.
+                                            li(dir='ltr')
+                                                p(dir='ltr', role='presentation') High-level security toolkit.
+                                            li(dir='ltr')
+                                                p(dir='ltr', role='presentation') Active IEO policy, many rare assets available.
+                                    td
+                                        ol
+                                            li(dir='ltr')
+                                                p(dir='ltr', role='presentation') Cumbersome interface.
+                                            li(dir='ltr')
+                                                p(dir='ltr', role='presentation') High fees, especially without the PROB being staked.
+
+
+                        p!= articleTexts[2]
+
+                        p
+                            strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+                        p
+                            em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+                    .article__panel
+                        section.article__tags.btns-spacer
+                            a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit
+                            a.btn.btn--hash-tag(href="#!") #Bitcoin
+                            a.btn.btn--hash-tag(href="#!") #Processor
+                        .article__panel-row
+                            .article__panel-col
+                                .left
+                                    .humble.humble--liked 31
+                                    .humble.humble--bookmark 17
+                                    .humble.humble--views 123.5k
+
+                    .about-author
+                        .about-author_row
+                            a.about-author_avatar(href="#!author")
+                                img(src="https://dummyimage.com/64x64/d8dbde/aaabad")
+                            .about-author_info
+                                h4.about-author_title About the author
+                                .about-author_data
+                                    a.about-author_name(href="#!author") Konstantin Konstantinopolsky
+                                    .social
+                                        a.social__link.social__link--ln(href="#!ln")
+                                        a.social__link.social__link--insta(href="#!insta")
+                                        a.social__link.social__link--em(href="#!email")
+                                p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
+
+                    .article__recommended
+                        .article__recommended-header
+                            .article__recommended-title &#x1F453; Recommended articles
+                        .article__recommended-list-slide.article__recommended-list-slide--yellow
+                            .article__recommended-list
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT')
+                                            .sponsored__mark Promoted
+                                        h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y')
+                                            .sponsored__mark Promoted
+                                        h4.article__recommended-item-title Ethereum Breakout in Full Force
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs')
+                                            .sponsored__mark Promo
+                                        h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+                        .article__recommended-list-slide
+                            .article__recommended-list
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT')
+                                            .sponsored__mark Promo
+                                        h4.article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y')
+                                            .sponsored__mark Promo
+                                        h4.article__recommended-item-title Ethereum Breakout in Full Force
+                                .article__recommended-item
+                                    a.article__recommended-link(href='#!')
+                                        .article__recommended-wrapper--img
+                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs')
+                                            .sponsored__mark Promo
+                                        h4.article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+
+                    .something.something--content
+                        .something__content-long
+                            img(src="img/something/long.png" width="728" height="90" alt="something-wide")
+
+                        .something__content-square
+                            img(src="img/something/square.png" width="300" height="250" alt="something-square")
+
+        aside.aside-menu-block
+
+            section.card.card--miners.card--mobile-visible
+                h4.card__title Top tranding bot
+                    span.card__mark Promoted
+
+                .card__body.card__body-counter
+                    .aside-story.aside-story--miners
+                        .aside-story__body.aside-story__row
+                            .aside-story__descr
+                                .aside-story__row-center
+                                    .aside-story__info
+                                        a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") HaasOnline
+                                        span.aside-story__signature Sale 30%!
+                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
+                                        img.aside-story__img(src="img/content/crypt/haasonline.png")
+
+                            .btn--block
+                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+
+                    .aside-story.aside-story--miners
+                        .aside-story__body.aside-story__row
+                            .aside-story__descr
+                                .aside-story__row-center
+                                    .aside-story__info
+                                        a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Margin
+                                        span.aside-story__signature Sale 30%!
+                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
+                                        img.aside-story__img(src="img/content/crypt/margin.png")
+
+                            .btn--block
+                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+
+                    .aside-story.aside-story--miners
+                        .aside-story__body.aside-story__row
+                            .aside-story__descr
+                                .aside-story__row-center
+                                    .aside-story__info
+                                        a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Zignaly
+                                        span.aside-story__signature Sale 30%!
+                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
+                                        img.aside-story__img(src="img/content/crypt/zignaly.png")
+
+                            .btn--block
+                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+
+
+            section.card.card--press--release.card--mobile-visible
+                h4.card__title Press Releases
+                .card__body
+                    article.aside-story
+                        a.aside-story__img-wrapper(href="#!")
+                            img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+                            .promoted__mark.promoted__mark-top-left Promo
+                        .aside-story__body
+                            a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                            .aside-story__info
+                                time.humble.humble--tiny 12:25 AM
+
+                    article.aside-story
+                        a.aside-story__img-wrapper(href="#!")
+                            img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+                            .sponsored__mark.sponsored__mark-bottom-right Promo
+                        .aside-story__body
+                            a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                            .aside-story__info
+                                time.humble.humble--tiny 12:25 AM
+
+                .card__footer
+                    a.btn.btn--accent(href="#!") Submit Press Release
+
+            section.card
+                h4.card__title Popular
+                .card__body
+                    each hot in hots
+                        article.aside-story
+                            a.aside-story__img-wrapper(href="#!")
+                                img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ")
+                                .sponsored__mark.sponsored__mark-bottom-right Promo
+                            .aside-story__body
+                                a.aside-story__link(href="#!")= hot
+
+                                .aside-story__info
+                                    time.humble.humble--tiny 12:25 AM
+
+                .card__footer
+                    a.btn.btn--light.btn--arrow-right(href="#!") Show more
+
+
+

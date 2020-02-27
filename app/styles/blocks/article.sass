@@ -1,19 +1,91 @@
+.container
+  max-width: $container-sm-px
+  margin: * auto
+  padding: * 16px @xl * 8px
+
+@media $md
+  .container
+    max-width: $container-md-px
+
+@media $xl
+  .container
+    max-width: $container-xl-px
+
+.page-container
+  margin: 24px auto
+
+.something
+  display: none
+
+.cookies
+  display: none
+
+.currencies
+  display: none
+
+.aside-menu-block
+  display: none
+
+.share-post
+  display: none
+
+.share-and-up
+  display: none
+
+.modal
+  display: none
+
+.main-news-block
+  width: 100% @md 760px
+  order: @md-down 2
+  position: relative
+  z-index: 99
+  margin: 0 auto
+
+aside
+  position: relative
+  z-index: 7
+
+.form
+
+  &--row
+    display: flex
+
+    .input
+      margin-right: 16px
+      margin-bottom: 0
+
+.input
+  margin-bottom: 16px
+  position: relative
+
+select, input
+  border: $border
+  box: center top
+  text: $body-small
+  border-radius: 2px
+  padding: 0 16px
+  min-height: 40px
+  outline: 0
+  width: 100%
+  text-transform: none
+  position: relative
+
+  &:hover
+    border-color: $accent-1-light
+
 .article
   position: relative
   z-index: 5
   overflow: hidden
-
-  .image-popup-vertical-fit
-    display: block
-    margin-bottom: .8rem
 
   &__label
     text: 13px 16px 600
     letter-spacing: 0.01em
     display: inline-flex
     align-items: center
-    margin-bottom: 1rem
-    margin-right: 1rem @md 1.5rem @xl 2rem
+    margin-bottom: 16px
+    margin-right: 16px @md 18px @xl 32px
 
     &:before
       content: ''
@@ -21,89 +93,46 @@
       background-size: contain
       background-repeat: no-repeat
       size: 24px
-      margin-right: .5rem
+      margin-right: 8px
 
     &--original
       &:before
-        background-image: svg-load("icons/article__label-u.svg", fill: $pseudo-neutral-900)
+        background-image: resolve("icons/article__label-u.svg")
 
     &--interviews
       &:before
-        background-image: svg-load("icons/article__label-interviews.svg", fill: $pseudo-neutral-900)
+        background-image: resolve("icons/article__label-interviews.svg")
 
     &--tweet
       &:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
+        background-image: resolve("icons/social/twitter.svg")
 
   &__title
     margin-top: 0
-    margin-bottom: .8rem
+    margin-bottom: 8px
 
     &-mark
-      text: $body-tiny
-      text: $pseudo-neutral-900
-      margin-left: .4rem
+      text: $pseudo-neutral-900 $body-tiny
+      margin-left: 4px
 
   &__panel
-    box: wrap
-    margin-bottom: 2.1rem @xl 2.5rem
-    min-height: 48px
-
-    &-separator
-      background: $pseudo-neutral-100
-      height: 1px @xl 46px
-      width: 100% @xl 1px
-      margin: .4rem 0 @xl 0 1.1rem
-
-    &-row
-      box: wrap center
-      padding: .7rem 0 .4rem @xl 0
-      width: 100%
-      margin-top: .5rem @md 1.2rem
-
-    &-col
-      box: center
-      width: 100% @xl auto
-
-      & + &
-        margin-top: .4rem @xl 0
-
-    .humble
-      text: 13px 2.1 600 @sm 15px
-      margin-right: @sm-down .7rem
-
-      &--liked
-        color: $pseudo-neutral-900
-
-        &:before
-          background-image: svg-load("icons/liked.svg" fill: $accent-1-light)
-
-      &--bookmark
-        color: $pseudo-neutral-900
-
-        &:before
-          background-image: svg-load("icons/bookmark.svg" fill: $accent-1-light)
-
-  .social
-
-    &__link
-      margin-right: 1.5rem
+    display: none
 
   .card
-    margin: 1rem 0
+    margin: 16px 0
 
   &__mark
     text: $pseudo-neutral-900 500 13px 1.8 @md 15px
     margin-top: 0
-    margin-bottom: 1rem @xl 1.4rem
+    margin-bottom: 16px @xl 32px
 
   &__main
     background-color: #fff
-    padding: 1.5rem 1rem
+    padding: 18px 16px
 
     .card--miners
       border: 1px solid #CFD8DC
-      margin: 1.5rem -1rem @sm 1.7rem 0 @xl 2.5rem 0
+      margin: 18px -16px @sm 26px 0 @xl 28px 0
 
       .aside-story__img-wrapper
         margin-top: @xl-down 0
@@ -114,35 +143,26 @@
   &_main
 
     &-info
-      margin-bottom: .5rem
-
-      &__humble
-        box: center wrap
-        width: 100%
-
-        .humble
-          margin-right: @md-down .7rem
-
-        .mark
-          display: @sm-down none
+      display: none
+      margin-bottom: 8px
 
   &__main-img
 
     &-wrapper
       overflow: hidden
       position: relative
-      margin: 0 0 1.5rem @sm-down 0 -1rem 1rem
+      margin: 0 0 18px @sm-down 0 -16px 16px
 
       figcaption
         margin-bottom: 0
 
       .disclaimer
-        padding: @sm-down 0 1rem
+        padding: @sm-down 0 16px
 
   &__content
 
     iframe
-      margin: 1.5rem 0
+      margin: 18px 0
       max-width: 728px
 
     h2, h3
@@ -156,45 +176,44 @@
           text: $pseudo-neutral-200 11px 18px
           text-align: center
           white-space: nowrap
-          padding: 0 .5rem
+          padding: 0 8px
           border-radius: 2px
           border: 1px solid $pseudo-neutral-100
           font-style: normal
-          margin-left: 1rem
+          margin-left: 16px
 
   h4
     background: $neutral-100
-    padding: 1.3rem 2rem @xl 3.4rem 2rem
-    margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
-    margin: @sm-down * -1rem
+    padding: 22px 32px @xl 56px 32px
+    margin: 40px * 2.32px @xl 52px * 3px
+    margin: @sm-down * -16px
 
     strong
       text: $header-standart center @xl $header-large
-      margin-bottom: .6rem @xl 2.4rem
+      margin-bottom: 6px @xl 40px
       display: block
 
     p
-      text: $body-standart center @xl $body-large
-      text: $pseudo-neutral-900
+      text: $pseudo-neutral-900 $body-standart center @xl $body-large
       margin-bottom: 0
 
   &__contents
-    margin: 1.7rem 0 @xl 2.5rem 0
+    margin: 24px 0 @xl 28px 0
 
     &-title
       text: 600 17px 1.4 @xl 22px
-      margin-bottom: 1.3rem
+      margin-bottom: 24px
 
     &-list
       list-style: none
       padding: 0
       margin: 0
-      margin-bottom: 1.45rem
+      margin-bottom: 24px
 
     &-item
       color: $accent-1-light
       position: relative
-      padding-left: 1rem
+      padding-left: 16px
 
       &:before
         content: ''
@@ -206,7 +225,7 @@
         position: absolute 13px null null 0
 
       & + &
-        margin-top: 1rem
+        margin-top: 16px
 
     &-link
       border-bottom: 0
@@ -220,7 +239,7 @@
         text: $accent-1-dark
 
   &__related
-    margin: 1.7rem 0 @xl 2.5rem 0
+    margin: 24px 0 @xl 28px 0
 
     &-flame
       text: $accent-2-medium 500 15px 1.8 @xl 17px
@@ -236,13 +255,13 @@
         background-position: center
         background-repeat: no-repeat
         size: 24px
-        margin-right: .5rem
+        margin-right: 8px
 
     &-blockquote
       text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
       font-style: italic
       border-left: 4px solid $accent-2-medium
-      padding: .5rem 1rem
+      padding: 8px 16px
 
   twitter-widget
     overflow: hidden
@@ -255,7 +274,7 @@
     display: block
     overflow-x: auto
     border-top: 0
-    margin: 1.5rem * @xl 2rem *
+    margin: 18px * @xl 32px *
 
     p, ol:not([class]), ul:not([class])
       margin: 0
@@ -268,27 +287,27 @@
     margin-bottom: 0
 
   &__recommended
-    margin-top: 1.5rem
+    margin-top: 18px
 
     &-header
       box: center
-      margin-bottom: 1.5rem
+      margin-bottom: 18px
 
     &-title
       text: $header-tiny
-      margin-right: 1.5rem
+      margin-right: 18px
 
     .article__recommended-item-title
       background-color: transparent
-      margin: 1rem 0 0 0 @md 0 0 0 1rem @xl 1rem 0 0 0
+      margin: 0 0 0 16px @xl 16px 0 0 0
       padding: 0
       text: #263238 13px 1.8 500
 
     &-list
       box: left
-      flex-wrap: nowrap @md wrap
-      margin: @md * -.51rem * -.5rem
-      overflow: auto @md hidden
+      flex-wrap: wrap
+      margin: * -.516px * -8px
+      overflow: hidden
 
       &::-webkit-scrollbar-track
         border-radius: 10px
@@ -307,18 +326,18 @@
       &:after
         content: ""
         display: block
-        min-width: 1rem @sm 1px
-        size: 1rem @sm 1px
+        min-width: 16px @sm 1px
+        size: 16px @sm 1px
 
       &-slide
-        margin: 1rem -1rem 0 @sm 1rem 0 0
+        margin: 16px -16px 0 @sm 16px 0 0
         overflow: hidden
-        padding: @sm-down 0 1rem
+        padding: @sm-down 0 16px
 
         &--yellow
           background-color: #fffcc0
-          margin: 0 -1rem 1rem @sm 0 -1rem 1rem
-          padding: 1rem @sm-down 1rem
+          margin: 0 -16px 16px @sm 0 -16px 16px
+          padding: 16px @sm-down 16px
 
           .article__recommended-item
             background-color: #fffcc0
@@ -328,16 +347,12 @@
               margin-bottom: @xl-down 0
 
     &-item
-      width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
-      min-width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
-      margin: * .5rem
-      margin-bottom: 0 @md 1rem @xl 0
-
-      &:first-child
-        margin-left: @md-down 0
+      width: 100% @xl calc(100% / 3 - 16px)
+      min-width: 100% @xl calc(100% / 3 - 16px)
+      margin: * 8px
+      margin-bottom: 16px @xl 0
 
       &:last-child
-        margin-right: @md-down 0
         margin-bottom: 0
 
     &-img
@@ -348,34 +363,33 @@
       
     &-wrapper--img
       position: relative
-      max-width: @md 208px @xl 100%
-      min-width: @md 208px @xl 1px
+      max-width: 132px @sm 208px @xl 100%
+      min-width: 132px @sm 208px @xl 1px
 
     &-link
       text: $body-small
-      margin-bottom: .1rem
-      box: vertical @md horizontal @xl vertical
+      margin-bottom: .16px
+      box: horizontal @xl vertical
 
   .something--content
-    margin: @sm-down 1.5rem -1rem
+    margin: @sm-down 18px -16px
 
   &--mobile-visible
     display: block @md none
 
   .card__title
-    padding: .5rem 1rem
+    padding: 8px 16px
     margin: 0
     background-color: transparent
 
 .author
 
   &_block
-    margin: 1.3rem 0 @md 2rem 0
+    margin: 22px 0 @md 32px 0
     position: relative
     border: 1px solid #C4C4C4
     border-radius: 0 8px 8px 8px
-    padding: 1rem @md 1.5rem 1.5rem 1rem
-    position: relative
+    padding: 16px @md 18px 18px 16px
 
     &:before
       content: ''
@@ -401,7 +415,7 @@
     .author__item
 
       &-msg
-        margin: @md-down 2rem 0 0 -55px
+        margin: @md-down 32px 0 0 -55px
 
         p
           text: #263238 15px 1.8 500 @md 17px
@@ -422,7 +436,7 @@
       size: 40px @md 64px
       border-radius: 50%
       min-width: 40px @md 64px
-      margin-right: 1rem @md 1.5rem
+      margin-right: 16px @md 18px
 
       img
         border-radius: 50%
@@ -439,20 +453,20 @@
     &-wrapper
       box:
       flex-wrap: wrap
-      margin-bottom: 1rem
+      margin-bottom: 16px
 
 .disclaimer
-  margin-top: .8rem
+  margin-top: 8px
 
   &_text
-    text: #90A4AE .8125rem 1rem 500
+    text: #90A4AE 13px 16px 500
     margin-bottom: 0
 
 .about-author
   background-color: #f5f5f5
   position: relative
-  padding: 1rem @sm 2rem 2rem 1rem
-  margin: 2rem -1rem @sm 2rem 0 @xl 2.4rem 0 3rem
+  padding: 16px @sm 32px 32px 16px
+  margin: 32px -16px @sm 32px 0 @xl 40px 0 48px
 
   &_row
     box:
@@ -465,7 +479,7 @@
   &_data
     box: flex center
     flex-wrap: @xl-down wrap
-    margin-top: .5rem
+    margin-top: 8px
 
   &_info
     position: @xl relative
@@ -482,7 +496,7 @@
     max-width: 40px @sm 64px
     min-width: 40px @sm 64px
     size: 40px @sm 64px
-    margin-right: 1.2rem @md 2rem
+    margin-right: 1.32px @md 32px
     display: block
 
     img
@@ -492,60 +506,18 @@
   .social
     box:
     width: @xl-down 100%
-    margin-top: @xl-down .5rem
+    margin-top: @xl-down 8px
     justify-content: @xl-down flex-start
 
     &__link
-      margin-right: 1.5rem @xl 0
-      margin-left: @xl 1.5rem
+      margin-right: 18px @xl 0
+      margin-left: @xl 18px
 
   p
     text: 13px 1.8 500 @sm 15px
-    margin: .5rem 0 0
+    margin: 8px 0 0
     margin-left: -55px @sm -82px @md -95px @xl 0
-    margin-top: .5rem @sm 1rem @xl .5rem
-    max-height: 81px
-    overflow: hidden
+    margin-top: 8px @sm 16px @xl 8px
 
   .btn
-    font-weight: 600
-    margin-left: -55px @sm -82px @md -95px @xl 0
-    position: relative
-    z-index: 2
-
-    &:before
-      content: ''
-      background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 50%)
-      width: 383px @xl 568px
-      height: 64px
-      position: absolute
-      display: block
-      bottom: 8px
-      left: 0
-      right: 0
-      z-index: -1
-
-main:not(.scroll-end) > .article:after
-  content: ""
-  display: block
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  transform: translateY(100%)
-  height: 100vh
-  background: linear-gradient(180deg, #263238 0%, rgba(38, 50, 56, 0) 100%)
-  opacity: 0
-  transition: .5s ease
-  pointer-events: none
-  margin-left: -50vw
-  margin-right: -50vw
-
-main > .article
-
-  &:nth-last-child(2)
-    z-index: 4
-
-    &:after
-      opacity: 1
-
+    display: none !important

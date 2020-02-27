@@ -287,6 +287,8 @@
     }
   });
 
+  /*
+
   var sidebar = new StickySidebar('.aside-menu-block', {
     containerSelector: '.main-aside-container',
     innerWrapperSelector: '.sidebar__inner',
@@ -294,6 +296,9 @@
     bottomSpacing: 16,
     minWidth: 784
   });
+
+
+   */
 
   //
   // Slider topStory on MAIN page

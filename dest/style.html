@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#263238">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#263238">
-    <title>Profile | u.today</title>
+    <title>Style | u.today</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/defaults.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -92,46 +92,168 @@
     </header>
     <div class="mobile-menu-cover"></div>
     <div class="page-container container">
-      <div class="main-center-block">
-        <main class="main-block">
-          <section class="content-block">
-            <div class="profile__info">
-              <div class="profile__row"><a class="humble humble--liked humble--dark" href="#!like">+7245</a>
-                <div class="user__info">
-                  <div class="user__img">
-                    <div class="no--avatar">W</div>
-                    <!----><a class="add--img" href="#!add--photo"></a>
-                  </div>
-                  <div class="username">waitititaika1</div>
-                </div><a class="user--logout" href="#!logout">Log out</a>
-              </div>
-              <div class="profile__list">
-                <div class="profile__item">
-                  <div class="profile__item--value">125</div>
-                  <div class="profile__item--name">Articles</div>
-                </div>
-                <div class="profile__item">
-                  <div class="profile__item--value">usermail@gmail.com</div>
-                  <div class="profile__item--name">Registered 27 Sep 2018</div>
-                </div>
-                <div class="profile__item">
-                  <div class="profile__item--value">0</div>
-                  <div class="profile__item--name">Comments</div>
-                </div>
-              </div>
+      <div class="style__container">
+        <section class="style__elem">
+          <pre class="style__code">h1-h5</pre>
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?</h1>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?</h2>
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?</h3>
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?</h4>
+          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?</h5>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">p</pre>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, fuga cum! Incidunt qui dolores, expedita necessitatibus, ipsam vel omnis dolorum, nostrum unde consequatur odio sed reiciendis ullam sint.</p>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.input<b>.input--error</b>
+   input.input__elem
+   .input__error</pre>
+          <form action="#" method="get">
+            <div class="input input--error">
+              <input class="input__elem" type="text" placeholder="Email" required value="user@gmail.com#">
+              <div class="input__error">E-mail can’t contain symbols</div>
             </div>
-            <form class="profile__form">
-              <div class="input">
-                <label class="input__label">Name (optional)</label>
-                <input class="input__elem" type="text" value="Taika Waititi">
-              </div>
-              <div class="input">
-                <label class="input__label">About you (optional)</label>
-                <textarea class="input__elem">I’m a New Zealand filmmaker, actor, and comedian. I was nominated for an Academy Award for my 2004 short film Two Cars, One Night. My feature films Boy and Hunt for the Wilderpeople have each been the top-grossing New Zealand film, with the latter still holding that title as of 2018.</textarea>
-              </div>
-            </form>
-          </section>
-        </main>
+            <div class="input">
+              <input class="input__elem" type="text" placeholder="Email" required>
+              <div class="input__error">E-mail can’t contain symbols</div>
+            </div>
+            <div class="input">
+              <input class="input__elem" type="text" placeholder="Email" required value="user@gmail.com">
+              <div class="input__error">E-mail can’t contain symbols</div>
+            </div>
+            <div class="input">
+              <input class="input__elem" type="text" placeholder="Disabled" disabled required>
+              <div class="input__error">E-mail can’t contain symbols</div>
+            </div>
+            <input type="text" placeholder="Input tag without a class">
+          </form>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.btn
+.btn--light
+.btn--arrow-right
+.btn--arrow-down
+.btn--hash-tag
+.btn--disabled
+.btn--big</pre>
+          <div class="btns-spacer">
+            <button class="btn">btn</button><a class="btn" href="#!">link</a>
+            <button class="btn btn--light" href="#!">light</button>
+            <button class="btn btn--arrow-right">arrow</button>
+            <button class="btn btn--arrow-down">arrow</button>
+            <button class="btn btn--info">info</button>
+            <button class="btn btn--pseudo">Pseudo</button>
+            <button class="btn btn--pseudo btn--info-before">Pseudo</button>
+            <button class="btn btn--hash-tag">#HashTag</button>
+            <button class="btn" disabled>btn disabled</button>
+            <button class="btn btn--arrow-right" disabled>btn disabled</button><a class="btn btn--disabled" href="#!">link disabled</a><a class="btn btn--arrow-right btn--disabled" href="#!">link disabled</a>
+            <button class="btn btn--accent-2">accent-2</button>
+            <button class="btn btn--accent-2 btn--lightning-white">accent-2</button>
+            <button class="btn btn--accent">accent</button><a class="btn btn--accent">accent</a><a class="btn btn--accent btn--info-white">accent</a>
+            <button class="btn btn--accent" disabled>accent</button><a class="btn btn--accent btn--disabled">accent</a>
+          </div><br>
+          <div class="btns-spacer"><a class="btn btn--big" href="#!">link</a>
+            <button class="btn btn--arrow-right btn--big">arrow</button><a class="btn btn--accent btn--big">accent</a>
+          </div>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.link
+.link-decorate
+.link-text <i>(only this with visited style)</i>
+.link-pseudo
+.link-plain</pre>
+          <h1><a class="link" href="#!">link</a> <a class="link-decorate" href="#!">link-decorate</a> <a class="link-text" href="#!">link-text</a> <a class="link-pseudo" href="#!">link-pseudo</a> <a class="link-plain" href="#!">link-plain</a></h1>
+          <h2><a class="link" href="#!">link</a> <a class="link-decorate" href="#!">link-decorate</a> <a class="link-text" href="#!">link-text</a> <a class="link-pseudo" href="#!">link-pseudo</a> <a class="link-plain" href="#!">link-plain</a></h2>
+          <h3><a class="link" href="#!">link</a> <a class="link-decorate" href="#!">link-decorate</a> <a class="link-text" href="#!">link-text</a> <a class="link-pseudo" href="#!">link-pseudo</a> <a class="link-plain" href="#!">link-plain</a></h3>
+          <div class="links-spacer"><a class="link" href="#!">link</a><a class="link-decorate" href="#!">link-decorate</a><a class="link-text" href="#!">link-text</a><a class="link-pseudo" href="#!">link-pseudo</a><a class="link-plain" href="#!">link-plain</a></div>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.humble
+.humble--link
+.humble--views
+.humble--comments
+.humble--bookmark
+.humble--tiny
+.humble--single-icon
+.humble--accent</pre>
+          <div class="article__panel"><a class="humble humble--link" href="#!">⭐ Featured</a><a class="humble humble--link" href="#!"><img class="humble__img" src="https://dummyimage.com/24x24/d8dbde/aaa">Konstantin Konstanovich</a>
+            <time class="humble">Oct 31, 11:25AM (updated)</time>
+            <time class="humble">Nov 07</time>
+          </div>
+          <div class="article__panel">
+            <div class="humble humble--views">123.5k views</div><a class="humble humble--comments" href="#!">256 comments</a>
+            <button class="humble humble--bookmark">Add to bookmarks</button>
+          </div>
+          <div class="article__panel">
+            <div class="humble humble--views humble--tiny">123.5k views</div><a class="humble humble--comments humble--tiny" href="#!">256 comments</a>
+            <button class="humble humble--share humble--tiny">Share</button>
+          </div>
+          <div class="article__panel">
+            <button class="humble humble--bookmark humble--single-icon"></button>
+            <div class="humble humble--comments humble--single-icon"></div>
+            <button class="humble humble--share humble--single-icon"></button>
+          </div>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.tabs
+  .tabs__item<b>.tabs__item--active</b>
+     button.tabs__btn</pre>
+          <ul class="tabs">
+            <li class="tabs__item">
+              <button class="tabs__btn btn btn--light">Popular</button>
+            </li>
+            <li class="tabs__item tabs__item--active">
+              <button class="tabs__btn btn btn--light">Active</button>
+            </li>
+            <li class="tabs__item">
+              <button class="tabs__btn btn btn--light">Recent</button>
+            </li>
+          </ul>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">ul.tabs<b>.tabs--vertical</b>
+  li.tabs__item<b>.tabs__item--sub-open</b>
+     button.tabs__btn
+
+     ul.tabs__sub
+       li.tabs__sub-item
+         button.tabs__btn.btn.btn--pseudo</pre>
+          <ul class="tabs tabs--vertical">
+            <li class="tabs__item">
+              <button class="tabs__btn btn btn--light">Popular</button>
+            </li>
+            <li class="tabs__item tabs__item--active tabs__item--sub-open">
+              <button class="tabs__btn btn btn--light">Active</button>
+              <ul class="tabs__sub">
+                <li class="tabs__sub-item">
+                  <button class="tabs__btn btn btn--pseudo">Sub item</button>
+                </li>
+                <li class="tabs__sub-item">
+                  <button class="tabs__btn btn btn--pseudo">Sub item</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item">
+              <button class="tabs__btn btn btn--light">Recent</button>
+            </li>
+          </ul>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">.accordion.accordion--open
+  .accordion__title
+  .accordion__body<b>.accordion__body--content</b></pre>
+          <p>On mobile .accordion--open works reverse. Default closed.</p>
+          <div class="accordion accordion--open">
+            <div class="accordion__title">Accordion</div>
+            <div class="accordion__body accordion__body--content">Content</div>
+          </div>
+        </section>
+        <section class="style__elem">
+          <pre class="style__code">(onclick="share('<b>telegram-url</b>', '<b>twitter-url</b>', '<b>facebook-url</b>')")</pre>
+          <button class="humble humble--share humble--tiny" onclick="share('#1', '#2', '#3', event)">Share</button><br><br><br>
+          <button class="humble humble--share" onclick="share('#4', '#5', '#6', event)">Share</button>
+        </section>
       </div>
     </div>
     <footer class="footer">
