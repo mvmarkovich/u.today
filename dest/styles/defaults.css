@@ -1682,16 +1682,6 @@ aside {
 .card__body-counter .btn--block .btn:last-child {
 }
 
-.card__body-counter .aside-story:before {
-  counter-increment: section;
-  content: "#" counter(section);
-  color: #B0BEC5;
-  font-size: 13px;
-  line-height: 1.3;
-  margin-right: .25rem;
-  display: none;
-}
-
 .card__mark {
   color: #90A4AE;
   font-size: 13px;
@@ -2323,6 +2313,10 @@ textarea.input__elem {
   flex-direction: row;
 }
 
+.aside-story--miners .aside-story__row {
+  align-items: flex-start;
+}
+
 .aside-story--miners .btn {
   min-width: 64px;
   max-width: 64px;
@@ -2340,6 +2334,14 @@ textarea.input__elem {
   font-size: 13px;
   line-height: 16px;
   font-weight: 600;
+}
+
+.aside-story__signature {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #F44336;
+  display: block;
+  margin-top: 16px;
 }
 
 .aside-story__img {
@@ -4049,10 +4051,6 @@ blockquote em {
 @media (min-width: 380px) {
   .card--miners .card__body .aside-story__img-wrapper {
     min-width: 75px;
-  }
-
-  .card__body-counter .aside-story:before {
-    display: inline-block;
   }
 }
 

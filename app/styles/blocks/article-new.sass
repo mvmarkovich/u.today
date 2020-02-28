@@ -22,6 +22,7 @@ p
 
 .container
   width: 100%
+  padding: 0 16px
   margin-right: auto
   margin-left: auto
   box-sizing: border-box
@@ -33,12 +34,8 @@ p
 
 .main-news-block
   width: 100%
-  order: 2
   margin-right: 0
   background-color: #fff
-
-.aside-menu-block
-  order: 1
 
 .btn
   color: #263238
@@ -420,15 +417,14 @@ figure
   line-height: 1.2
   color: #F44336
   display: block
-  margin-top: 4px
+  margin-top: 16px
 
 .card--miners
   padding: 0
   margin-bottom: 16px
 
-  .aside-story__info
-    display: block
-    width: 115px
+  .aside-story__row
+    align-items: flex-start
 
   .aside-story
     &:first-child
@@ -1349,8 +1345,6 @@ a
     justify-content: flex-start
 
 @media (min-width: 785px)
-  .main-news-block
-    width: 480px
 
   .container
     max-width: 768px
@@ -1454,8 +1448,8 @@ a
     margin-right: 24px
 
   .header__container
-    max-width: 768px
-    padding: 8px 16px 0
+    max-width: 736px
+    padding: 16px 16px 8px
 
   .header__logo
     width: 132px
@@ -1499,16 +1493,6 @@ a
   .main-aside-container
     flex-wrap: nowrap
 
-  .main-news-block
-    order: 1
-    margin-right: 16px
-
-  .aside-menu-block
-    order: 2
-
-  .card--mobile-visible, .card
-    display: block
-
   .card--press--release .aside-story
     display: flex
 
@@ -1549,6 +1533,9 @@ a
       width: 33%
 
 @media (min-width: 1152px)
+  .card
+    display: block
+
   .header__container
     flex-wrap: nowrap
     max-width: 1152px

@@ -537,29 +537,6 @@ textarea.input__elem
         font-style: normal
         margin-left: 1rem
 
-.article__contents
-  font-family: 'Montserrat', sans-serif
-  margin-bottom: 2.2rem
-
-.article__contents-title
-  font-size: 1.0625rem
-  font-weight: 600
-  line-height: 1.4
-  margin-bottom: 1.6rem
-
-.article__contents-list
-  margin-bottom: 1.45rem
-
-.article__contents-item
-  position: relative
-  padding-left: 2rem
-
-  .article__contents-item
-    margin-top: 1.5rem
-
-.article__contents-link
-  height: 22px
-
 .article__fact, .article h4
   margin-top: 2.6rem
   margin-bottom: 2.2rem
@@ -850,6 +827,37 @@ p
   ol:not([class]) li, ul:not([class]) li
     font-size: .875rem
     line-height: 1.75
+
+  &__contents
+    margin: 1.7rem 0
+
+    &-title
+      text: 600 17px 1.4
+      margin-bottom: 1.3rem
+
+    &-list
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 1.6rem
+      position: relative
+
+      & + &
+        margin-top: 1rem
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 10px
+        display: block
+        background-color: $accent-1-light
+        size: 5px
+        border-radius: 50%
+
+    &-link
+      border-bottom: 0
+      text: $accent-1-light 500 15px 1.8
 
 p
   ol, p, ul
