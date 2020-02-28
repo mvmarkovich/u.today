@@ -2211,7 +2211,7 @@ blockquote em {
   content: '';
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 12px;
   display: block;
   background-color: #2979FF;
   width: 5px;
