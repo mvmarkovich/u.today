@@ -92,13 +92,26 @@ block content
                                                 p
                                                     | I did some quite research, checked a hefty load of sources and here&rsquo;s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
 
-                    .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
-
                     .article__main-img-wrapper
-                        img.article__main-img(src="https://news.u.today/sites/default/files/styles/1200x/public/2019-09/BitPay_Suspends_Bitcoin_Donations_to_Hong_Kong_Free_Press_without_Notification.JPG.jpg?itok=M8YJr0SX")
+                        img.article__main-img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2309_0.jpg?itok=lIvSRX4o")
+
+                        a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
+                            .banner__wrapper
+                                .banner__info
+                                    p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                                    .banner__img-wrapper
+                                        img.banner__img(src="img/something/banner-tiny.png")
+
+                                    .banner__rating
+                                        span.banner__rating-value 4.8/5
+                                        .banner__rating-img--wrapper
+                                            img(src="img/icons/rating-5.svg")
+
+                                .btn.btn--banner Read more
+
                         figcaption Cover image via <a href="#!"> 123rf.com </a>
-                        .disclaimer
-                            p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+                    .disclaimer
+                        p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
                     section.article__content
                         .article__contents
@@ -117,18 +130,18 @@ block content
                             em Women of Crypto as opening act
 
                         a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
-                            .banner__info
-                                p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
-                                .banner__img-wrapper
-                                    img.banner__img(src="img/something/banner-tiny.png")
+                            .banner__wrapper
+                                .banner__info
+                                    p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                                    .banner__img-wrapper
+                                        img.banner__img(src="img/something/banner-tiny.png")
 
-                                .banner__rating
-                                    span.banner__rating-value 4.8/5
-                                    .banner__rating-img--wrapper
-                                        img(src="img/icons/rating-5.svg")
+                                    .banner__rating
+                                        span.banner__rating-value 4.8/5
+                                        .banner__rating-img--wrapper
+                                            img(src="img/icons/rating-5.svg")
 
-                            .btn.btn--banner Read more
-
+                                .btn.btn--banner Read more
 
                         p!= articleTexts[1]
 
@@ -385,7 +398,7 @@ block content
 
         aside.aside-menu-block
 
-            section.card.card--miners.card--mobile-visible
+            .card.card--miners.card--mobile-visible
                 h4.card__title Top tranding bot
                     span.card__mark Promoted
 
@@ -428,7 +441,7 @@ block content
                             .btn--block
                                 a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
 
-            section.card.card--press--release.card--mobile-visible
+            .card.card--press--release.card--mobile-visible
                 h4.card__title Press Releases
                 .card__body
                     article.aside-story
@@ -454,7 +467,20 @@ block content
                 .card__footer
                     a.btn.btn--accent(href="#!") Submit Press Release
 
-            section.card
+            .card.card--banner
+                a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
+                    .banner__wrapper
+                        .banner__info
+                            p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                            .banner__img-wrapper
+                                img.banner__img(src="img/something/banner-tiny.png")
+
+                            .banner__rating
+                                span.banner__rating-value 4.8/5
+                                .banner__rating-img--wrapper
+                                    img(src="img/icons/rating-5.svg")
+
+            .card
                 h4.card__title Popular
                 .card__body
                     each hot in hots
