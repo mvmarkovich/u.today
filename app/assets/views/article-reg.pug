@@ -9,6 +9,9 @@ block head
     link(rel="stylesheet" href="styles/banners.css")
 
 block content
+
+    include blocks/breaking.pug
+
     .main-aside-container
         main.main-news-block
             .article
@@ -94,25 +97,28 @@ block content
                                                     | I did some quite research, checked a hefty load of sources and here&rsquo;s my superb mining platforms overview. In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low.
 
                     .article__main-img-wrapper
-                        img.article__main-img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2309_0.jpg?itok=lIvSRX4o")
+                        picture
+                            source(srcset='https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg.webp', type='image/webp')
+                            img.article__main-img.lazy(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al', style='')
 
-                        a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
-                            .banner__wrapper
-                                .banner__info
-                                    p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
-                                    .banner__img-wrapper
-                                        img.banner__img(src="img/something/banner-tiny.png")
+                        a.asset.asset--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
+                            .asset__wrapper
+                                .asset__info
+                                    p.asset__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                                    .asset__img-wrapper
+                                        img.asset__img(src="img/something/banner-tiny.png")
 
-                                    .banner__rating
-                                        span.banner__rating-value 4.8/5
-                                        .banner__rating-img--wrapper
+                                    .asset__rating
+                                        span.asset__rating-value 4.8/5
+                                        .asset__rating-img--wrapper
                                             img(src="img/icons/rating-5.svg")
 
-                                .btn.btn--banner Read more
+                                .btn.btn--asset Read more
 
                         figcaption Cover image via <a href="#!"> 123rf.com </a>
-                    .disclaimer
-                        p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+
+                        .disclaimer
+                            p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
                     section.article__content
                         .article__contents
@@ -130,19 +136,19 @@ block content
                         h2
                             em Women of Crypto as opening act
 
-                        a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
-                            .banner__wrapper
-                                .banner__info
-                                    p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
-                                    .banner__img-wrapper
-                                        img.banner__img(src="img/something/banner-tiny.png")
+                        a.asset.asset--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
+                            .asset__wrapper
+                                .asset__info
+                                    p.asset__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                                    .asset__img-wrapper
+                                        img.asset__img(src="img/something/banner-tiny.png")
 
-                                    .banner__rating
-                                        span.banner__rating-value 4.8/5
-                                        .banner__rating-img--wrapper
+                                    .asset__rating
+                                        span.asset__rating-value 4.8/5
+                                        .asset__rating-img--wrapper
                                             img(src="img/icons/rating-5.svg")
 
-                                .btn.btn--banner Read more
+                                .btn.btn--asset Read more
 
                         p!= articleTexts[1]
 
@@ -399,53 +405,39 @@ block content
 
         aside.aside-menu-block
 
-            .card.card--miners.card--mobile-visible
+            .card.card--widget.card--mobile-visible
                 h4.card__title Top tranding bot
                     span.card__mark Promoted
 
-                .card__body.card__body-counter
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") HaasOnline
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/haasonline.png")
+                .card__body
+                    a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                        .card--widget__row
+                            .card--widget__img-wrapper
+                                img.card--widget__img(src="img/content/crypt/IQ-Mining.png")
 
-                                    span.aside-story__signature 30% discount till 29 Feb
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+                            .card--widget__info
+                                .card--widget__title IQ Mining
+                                span.card--widget__signature 40% discount till 8 march
 
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Margin
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/margin.png")
+                        .btn--block
+                            .btn.btn--small.btn--accent-3 Website
 
-                                span.aside-story__signature 30% discount till 29 Feb
+                    a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                        .card--widget__row
+                            .card--widget__img-wrapper
+                                img.card--widget__img(src="img/content/crypt/CryptoUniverse.png")
 
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+                            .card--widget__info
+                                .card--widget__title CryptoUniverse
+                                span.card--widget__signature Cashback up to 20%
 
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Zignaly
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/zignaly.png")
-
-                                span.aside-story__signature 30% discount till 29 Feb
-
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+                        .btn--block
+                            .btn.btn--small.btn--accent-3 Website
 
             .card.card--press--release.card--mobile-visible
                 h4.card__title Press Releases
                 .card__body
-                    article.aside-story
+                    .aside-story
                         a.aside-story__img-wrapper(href="#!")
                             img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
                             .promoted__mark.promoted__mark-top-left Promo
@@ -453,9 +445,9 @@ block content
                             a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
 
                             .aside-story__info
-                                time.humble.humble--tiny 12:25 AM
+                                .humble.humble--tiny 12:25 AM
 
-                    article.aside-story
+                    .aside-story
                         a.aside-story__img-wrapper(href="#!")
                             img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
                             .sponsored__mark.sponsored__mark-bottom-right Promo
@@ -463,22 +455,22 @@ block content
                             a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
 
                             .aside-story__info
-                                time.humble.humble--tiny 12:25 AM
+                               .humble.humble--tiny 12:25 AM
 
                 .card__footer
                     a.btn.btn--accent(href="#!") Submit Press Release
 
-            .card.card--banner
-                a.banner.banner--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
-                    .banner__wrapper
-                        .banner__info
-                            p.banner__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
-                            .banner__img-wrapper
-                                img.banner__img(src="img/something/banner-tiny.png")
+            .card.card--asset.card--mobile-visible
+                a.asset.asset--tiny(href="#!" rel="nofollow nooperner" style="background-color: #000000")
+                    .asset__wrapper
+                        .asset__info
+                            p.asset__descr Ledger Nano Wallet —  Family Pack <strong> 37% OFF </strong>
+                            .asset__img-wrapper
+                                img.asset__img(src="img/something/banner-tiny.png")
 
-                            .banner__rating
-                                span.banner__rating-value 4.8/5
-                                .banner__rating-img--wrapper
+                            .asset__rating
+                                span.asset__rating-value 4.8/5
+                                .asset__rating-img--wrapper
                                     img(src="img/icons/rating-5.svg")
 
             .card
