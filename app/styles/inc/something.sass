@@ -1,6 +1,5 @@
 .something
-  box: center middle
-  background-color: #fff
+  box: center middle vertical
   overflow: hidden
   text-align: center
   position: relative
@@ -75,10 +74,17 @@
       height: 0
       display: none
 
-  &__footer
-
-    &-long
-
   &__wrapper
     margin-bottom: 1rem @xl 1.5rem
     border-bottom: $border
+
+  &--conditions
+    text: $pseudo-neutral-400 500 13px 20px center
+    margin-bottom: .75rem
+    padding: 0 1rem
+
+    a:not([class])
+      text: $pseudo-neutral-400
+      text-decoration: underline
+
+
