@@ -1041,9 +1041,13 @@ body
   text: #fff
 
 .btn--accent-3
-  background: linear-gradient(135deg, #00B964 35.53%, #06CE72 93.42%)
+  background: #4CAF50
   border: none
+  border-radius: 0
+  font-weight: 400
   color: #fff
+  padding: 0 5px 0 5px
+  text-align: center
 
 .btn--accent-4
   background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
@@ -2128,3 +2132,77 @@ amp-list
       box:
       flex-wrap: wrap
       margin-bottom: 1rem
+
+.card
+  margin: 1.7rem 0
+
+  &__title
+    color: #263238
+    font-size: .8125rem
+    line-height: 1.4
+    font-weight: 600
+    padding: .219rem 1rem
+    min-height: 40px
+    border-bottom: 1px solid #cfd8dc
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__mark
+    color: #90a4ae
+    font-size: .8125rem
+    line-height: 1.8
+    font-weight: 500
+
+  &__body
+    padding: 1.3rem 1rem 1.5rem
+
+  &--widget
+
+    &__title
+      font-size: 15px
+      line-height: 1.6
+      font-weight: 700
+
+    &__signature
+      color: #263238
+      font-size: 13px
+      line-height: 1.5
+      font-weight: 500
+
+    &__item
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      justify-content: space-between
+      color: #263238
+      text-decoration: none
+
+      & + &
+        margin-top: 24px
+
+      .btn
+        width: 100%
+        min-height: 24px
+
+      .btn--block
+        margin-left: 20px
+        width: auto
+
+    &__row
+      display: flex
+      align-items: center
+
+    &__info
+      margin-left: 8px
+
+    &__img
+      max-width: 100%
+      display: block
+
+      &-wrapper
+        max-width: 48px
+        min-width: 48px
+
+
