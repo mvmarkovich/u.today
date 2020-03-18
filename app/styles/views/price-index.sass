@@ -21,17 +21,16 @@
   &__header
 
     .btn
-      
       line-height: 40px
       font-weight: 600
       justify-content: flex-start
       width: 100%
       padding: 0 1rem
 
-      &:before
-        position: absolute
-        right: 1rem
-        margin-right: 0
+    &:before
+      position: absolute
+      right: 1rem
+      margin-right: 0
 
   &__tabs-item
     margin-right: 15px
@@ -93,7 +92,7 @@
       box: space-between wrap
 
       .tradingview-widget-container
-        width: 100%
+        width: 100% !important
         max-width: 100% @xl 310px
         margin-bottom: @xl-down 5rem
 
@@ -166,10 +165,9 @@
       color: #FF5252
 
 .tradingview-widget-container
-  height: 368px
-  width: 100%
+  height: 368px !important
+  width: 100% !important
 
   iframe
-    height: 100%
-    width: 100%
-
+    height: 100% !important
+    width: 100% !important

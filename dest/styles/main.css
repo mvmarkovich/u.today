@@ -1622,7 +1622,7 @@
   padding: 0 1rem;
 }
 
-.price-index__header .btn:before {
+.price-index__header:before {
   position: absolute;
   right: 1rem;
   margin-right: 0;
@@ -1712,7 +1712,7 @@
 }
 
 .price-index_chart.chart-row .tradingview-widget-container {
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
 }
 
@@ -1805,13 +1805,13 @@
 }
 
 .tradingview-widget-container {
-  height: 368px;
-  width: 100%;
+  height: 368px !important;
+  width: 100% !important;
 }
 
 .tradingview-widget-container iframe {
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .landing ~ .footer {

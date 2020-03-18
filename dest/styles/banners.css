@@ -1,3 +1,7 @@
+.header{
+    margin-bottom: 0;
+}
+
 .something{
     flex-direction: column;
     background-color: transparent;
@@ -47,6 +51,11 @@
     align-items: center;
     justify-content: space-between;
     color: #263238;
+    text-decoration: none;
+}
+
+.card--widget__item:hover{
+    color: #2196F3;
 }
 
 .card--widget__item + .card--widget__item{
@@ -237,6 +246,104 @@
     display: block;
 }
 
+.currencies {
+    padding: 0;
+    position: relative;
+    z-index: 997;
+    background: #263238;
+}
+
+.currencies__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.currencies__slide {
+    overflow: auto;
+    margin-right: 0;
+    padding-bottom: 3rem;
+    display: flex;
+}
+
+.currencies__slide-wrapper {
+    width: 100%;
+    height: 1.5rem;
+    overflow: hidden;
+}
+
+.currencies__link {
+    color: #263238;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 600;
+    font-variant: none;
+    text-transform: uppercase;
+    display: flex;
+    padding: .1rem 0;
+    flex-wrap: nowrap;
+}
+
+.currencies__link + .currencies__link {
+    margin-left: 1rem;
+}
+
+.currencies__name {
+    margin-right: .5rem;
+    margin-bottom: .1rem;
+    height: 15px;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.currencies__info {
+    display: flex;
+}
+
+.currencies__trand {
+    color: #8bc34a;
+}
+
+.currencies__trand--down {
+    color: #F44336;
+}
+
+.currencies__price {
+    color: #78909C;
+    width: 100%;
+    margin-left: .5rem;
+}
+
+.currencies__currency {
+    display: none;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.currencies__currency span {
+    width: 33px;
+}
+
+.article__content h2 em,.article__content h3 em {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+}
+
+.article__content h2 em:after,.article__content h3 em:after {
+    content: 'Promoted';
+    color: #B0BEC5;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 .5rem;
+    border-radius: 2px;
+    border: 1px solid #CFD8DC;
+    font-style: normal;
+    margin-left: 1rem;
+}
+
 @media (min-width: 480px) {
     .article__main-img-wrapper .asset{
         top: -55px;
@@ -270,6 +377,14 @@
     .hide-md-up{
         display: none;
     }
+
+    .currencies__slide {
+        justify-content: space-between;
+    }
+
+    .currencies__link + .currencies__link {
+        margin-left: 1.5rem;
+    }
 }
 
 @media (min-width: 1151px) {
@@ -287,6 +402,10 @@
         margin-left: 16px;
         margin-top: 0;
         width: auto;
+    }
+
+    .main-news-block {
+        width: 760px;
     }
 }
 
@@ -402,5 +521,15 @@
     .article__main-img-wrapper{
         margin-left: -16px;
         margin-right: -16px;
+    }
+
+    .main-news-block .card--widget {
+        margin: 0 -1rem;
+        border-top: 16px solid #f5f5f5;
+        border-bottom: 16px solid #f5f5f5;
+    }
+
+    .card--widget .card__title{
+        margin-top: 0;
     }
 }

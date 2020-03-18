@@ -269,7 +269,6 @@ textarea.input__elem
 
 .input__select
   position: relative
-  display: block
   display: flex
   width: 100%
   min-height: 40px
@@ -288,25 +287,6 @@ textarea.input__elem
 
   option
     height: 36px
-
-.input__select--tiny
-  font-size: .8125rem
-  font-weight: 600
-  line-height: 1.4
-  line-height: 1.1
-  width: 75px
-  min-width: 75px
-  height: 32px
-  min-height: 32px
-  padding-right: .75rem
-  padding-left: .75rem
-  text-decoration: none
-  letter-spacing: .25em
-  text-transform: uppercase
-  text-transform: uppercase
-  color: #263238
-  background-position: 47px center
-  background-size: 24px 24px
 
 .input__select:valid
   border-color: #cfd8dc
@@ -345,7 +325,9 @@ textarea.input__elem
       border-left: 0
 
 .social--wide .social__link
-  width: 100%
+  width: 4.5rem
+  text-align: center
+  line-height: 3.2rem
 
 .social__link
   width: 1.5rem
@@ -353,31 +335,6 @@ textarea.input__elem
   background-repeat: no-repeat
   background-position: center
   position: relative
-  background-repeat: no-repeat
-
-.social__link--fb
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M17 2V6H15C14.3 6 14 6.8 14 7.5V10H17V14H14V22H10V14H7V10H10V6C10 3.8 11.8 2 14 2H17Z'/%3E %3C/svg%3E")
-
-.social__link--tg
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M9.80012 18.6L10.1001 14.4L17.8001 7.50005C18.1001 7.20005 17.7001 7.00005 17.3001 7.30005L7.80012 13.3L3.60012 12C2.70012 11.7 2.70012 11.1 3.80012 10.7L19.8001 4.50005C20.5001 4.20005 21.2001 4.70005 20.9001 5.80005L18.2001 18.6C18.0001 19.5 17.5001 19.7 16.7001 19.3L12.6001 16.2L10.6001 18.1C10.4001 18.5 10.2001 18.6 9.80012 18.6Z'/%3E %3C/svg%3E")
-
-.social__link--tw
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M22.5001 6C21.7001 6.3 20.9001 6.6 20.0001 6.7C20.9001 6.2 21.6001 5.3 21.9001 4.3C21.1001 4.8 20.1001 5.1 19.2001 5.4C18.4001 4.5 17.3001 4 16.0001 4C13.6001 4 11.7001 5.9 11.7001 8.3C11.7001 8.6 11.7001 9 11.8001 9.3C8.3001 9.1 5.1001 7.4 3.0001 4.8C2.6001 5.4 2.4001 6.2 2.4001 6.9C2.4001 8.4 3.2001 9.7 4.3001 10.5C3.6001 10.5 2.9001 10.3 2.4001 10C2.4001 12.1 3.9001 13.8 5.8001 14.2C5.4001 14.3 5.1001 14.4 4.7001 14.4C4.4001 14.4 4.2001 14.4 3.9001 14.3C4.4001 16 6.0001 17.2 7.9001 17.3C6.4001 18.5 4.6001 19.1 2.6001 19.1C2.3001 19.1 1.9001 19.1 1.6001 19C3.4001 20.3 5.7001 21 8.1001 21C16.0001 21 20.3001 14.5 20.3001 8.8C20.3001 8.6 20.3001 8.4 20.3001 8.2C21.2001 7.6 21.9001 6.9 22.5001 6Z'/%3E %3C/svg%3E")
-
-.social__link--em
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z'/%3E %3C/svg%3E")
-
-.social__link--yt
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M10 15L15.2 12L10 9V15ZM21.6 7.2C21.7 7.7 21.8 8.3 21.9 9.1C22 9.9 22 10.6 22 11.2V12C22 14.2 21.8 15.8 21.6 16.8C21.3 17.7 20.8 18.3 19.9 18.5C19.4 18.6 18.6 18.7 17.3 18.8C16 18.9 14.8 18.9 13.7 18.9L12 19C7.8 19 5.2 18.8 4.2 18.6C3.3 18.3 2.7 17.8 2.5 16.9C2.4 16.4 2.3 15.8 2.2 15C2.1 14.2 2.1 13.5 2.1 12.9L2 12C2 9.8 2.2 8.2 2.4 7.2C2.7 6.3 3.2 5.7 4.1 5.5C4.6 5.4 5.4 5.3 6.8 5.2C8.1 5.1 9.3 5.1 10.4 5.1L12 5C16.2 5 18.8 5.2 19.8 5.4C20.7 5.7 21.3 6.3 21.6 7.2Z'/%3E %3C/svg%3E")
-
-.social__link--rd
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M22 11.5C22 10.1 20.9 9.00001 19.5 9.00001C18.9 9.00001 18.3 9.20001 17.9 9.60001C16.4 8.70001 14.6 8.10001 12.5 8.00001L13.6 4.00001L17 5.00001C17 6.10001 17.9 7.00001 19 7.00001C20.1 7.00001 21 6.10001 21 5.00001C21 3.90001 20.1 3.00001 19 3.00001C18.3 3.00001 17.6 3.40001 17.3 4.00001L13.3 3.00001C13 2.90001 12.8 3.10001 12.7 3.40001L11.5 8.00001C9.5 8.10001 7.6 8.70001 6.1 9.60001C5.7 9.20001 5.1 9.00001 4.5 9.00001C3.1 9.00001 2 10.1 2 11.5C2 12.4 2.4 13.1 3.1 13.6L3 14.5C3 18.1 7 21 12 21C17 21 21 18.1 21 14.5L20.9 13.6C21.6 13.1 22 12.4 22 11.5ZM9 11.8C9.7 11.8 10.2 12.4 10.2 13C10.2 13.6 9.7 14.2 9 14.2C8.3 14.2 7.8 13.7 7.8 13C7.8 12.3 8.3 11.8 9 11.8ZM15.8 17.2C14 18.3 10 18.3 8.2 17.2C8 17 7.9 16.7 8.1 16.5C8.3 16.3 8.6 16.2 8.8 16.4C10 17.3 14 17.3 15.2 16.4C15.4 16.2 15.7 16.3 15.9 16.5C16.1 16.7 16 17 15.8 17.2ZM15 14.2C14.3 14.2 13.8 13.6 13.8 13C13.8 12.3 14.4 11.8 15 11.8C15.7 11.8 16.2 12.4 16.2 13C16.2 13.7 15.7 14.2 15 14.2Z'/%3E %3C/svg%3E")
-
-.social__link--ln
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23B0BEC5' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M21 21H17V14.2C17 13.1 15.8 12.3 14.7 12.3C13.6 12.3 13 13.2 13 14.3V21H9V9H13V11C13.7 9.9 15.4 9.2 16.5 9.2C19 9.2 21 11.2 21 13.7V21ZM7 21H3V9H7V21ZM5 3C6.1 3 7 3.9 7 5C7 6.1 6.1 7 5 7C3.9 7 3 6.1 3 5C3 3.9 3.9 3 5 3Z'/%3E %3C/svg%3E")
-
-.social__link--rs
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23CFD8DC' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M6.2 15.6C7.4 15.6 8.4 16.6 8.4 17.8C8.4 19 7.4 20 6.2 20C5 20 4 19 4 17.8C4 16.6 5 15.6 6.2 15.6ZM4 4.40002C12.6 4.40002 19.6 11.4 19.6 20H16.8C16.7 13 11 7.30002 4 7.30002V4.40002ZM4 10.1C9.5 10.1 13.9 14.5 13.9 20H11.1C11.1 16.1 7.9 12.9 4 12.9V10.1Z'/%3E %3C/svg%3E")
 
 .humble
   font-size: .8125rem
@@ -388,9 +345,6 @@ textarea.input__elem
   margin-right: 1.3rem
   padding: 0
   cursor: default
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
   user-select: none
   white-space: nowrap
   text-decoration: none
@@ -462,23 +416,6 @@ textarea.input__elem
 .article
   position: relative
   z-index: 5
-  background: #fff
-
-.article__summary
-  display: flex
-  margin-bottom: .7rem
-  flex-wrap: wrap
-  align-items: center
-
-.article__summary-device
-  display: block
-  margin-top: 1.1rem
-  margin-bottom: 0.8rem
-
-.article__info
-  display: flex
-  margin-bottom: 1.5rem
-  align-items: center
 
 .article__title
   margin-top: 0
@@ -537,7 +474,7 @@ textarea.input__elem
         font-style: normal
         margin-left: 1rem
 
-.article__fact, .article h4
+.article h4
   margin-top: 2.6rem
   margin-bottom: 2.2rem
   padding: 1.3rem 2rem
@@ -577,72 +514,6 @@ textarea.input__elem
     text-align: center
     color: #263238
 
-.article__tags
-  margin-bottom: 1.5rem
-
-.article__recommended
-  margin-bottom: 2.5rem
-
-.article__recommended-header
-  display: flex
-  margin-bottom: 1.5rem
-  align-items: center
-
-.article__recommended-title
-  font-size: 1.0625rem
-  font-weight: 600
-  line-height: 1.4
-  margin-right: 1.5rem
-
-.article__recommended-list
-  display: flex
-  overflow: auto
-  margin-bottom: .5rem
-  padding-right: 1rem
-  padding-left: 1rem
-  flex-wrap: nowrap
-  align-items: flex-start
-
-  &:after
-    display: block
-    width: 1rem
-    min-width: 1rem
-    height: 1rem
-    content: ""
-
-.article__recommended-list-slide
-  overflow: hidden
-
-.article__recommended-item
-  width: 185px
-  min-width: 185px
-  margin-right: .5rem
-  margin-bottom: 1.5rem
-  margin-left: 0.5rem
-
-.article__recommended-img
-  display: block
-  width: 100%
-  max-width: 100%
-  margin-bottom: 1rem
-  border: 1px solid #cfd8dc
-  border-radius: 2px
-
-.article__recommended-link
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 1.9
-  display: block
-  margin-bottom: 0.1rem
-
-.article__recommended-info
-  display: flex
-  align-items: center
-  flex-wrap: wrap
-
-.article__recommended .btn
-  margin-bottom: 2rem
-
 main
   &:not(.scroll-end) > .article:after
     position: absolute
@@ -667,11 +538,19 @@ main
     &:after
       opacity: 1
 
-.footer__container:before
-  display: block
-  margin: 0 -1rem
-  content: ''
-  border-bottom: 3px solid #263238
+.footer
+  margin-top: 2rem
+  position: relative
+  z-index: 150
+  background: #fff
+
+  &__container
+    padding: 0 1rem @md 0
+
+  &:before
+    display: block
+    content: ''
+    border-bottom: 3px solid #263238
 
 .footer__row
   display: flex
@@ -695,11 +574,17 @@ main
 
 .footer__nav-list
   display: flex
+  justify-content: space-between
   flex-wrap: wrap
+  margin-top: -1.5rem
 
 .footer__nav-item
-  width: 60%
+  width: 60% @md 33% @xl auto
   white-space: nowrap
+  margin-top: 1.5rem
+
+.footer__nav-item:nth-child(even)
+  width: 30% @md 33% @xl auto
 
 .footer__nav-link
   font-size: 1.0625rem
@@ -708,6 +593,7 @@ main
 
 .footer__nav-child-list
   margin-top: 1rem
+  display: none @sm block
 
 .footer__nav-child-item .footer__nav-child-item
   margin-top: 0.94rem
@@ -875,20 +761,6 @@ table
   overflow-y: hidden
   display: block
 
-  &::-webkit-scrollbar-track
-    border-radius: 10px
-    background-color: #78909c
-    width: 6px
-
-  &::-webkit-scrollbar
-    height: 8px
-    border-radius: 10px
-    background-color: #78909c
-
-  &::-webkit-scrollbar-thumb
-    border-radius: 10px
-    background-color: #4e616d
-
   td
     font-size: .8125rem
     font-weight: 500
@@ -917,29 +789,37 @@ body
   background: #f5f5f5
 
 .container
-  max-width: 560px
+  max-width: 768px @xl 1150px
   margin: 0 auto
-  padding: 0 1rem
 
-.page-container
+.main-aside-container
+  box: space-between wrap
+
+.main-news-block
+  width: 100% @md 480px @xl 760px
+  order: 1 @xl 2
   background: #fff
-  box-shadow: 4rem 0 0 #fff, -4rem 0 0 #fff
+  padding: 1rem
+
+.aside-menu-block
+  width: 100% @md 240px @xl 360px
+  order: 1 @xl 2
 
 .header
-  display: flex
-  height: 56px
-  margin: 0 -1rem 1rem
-  padding: 1rem
-  border-bottom: 1px solid #cfd8dc
-  align-items: center
-  justify-content: space-between
+  height: 48px
+  margin: 0 0 1rem
+  background: #fff
+  padding: .7rem 0
 
-.header__logo
-  height: 20px
+  &__container
+    box: space-between center
 
-  svg
-    display: block
-    width: 100%
+  &__logo
+    height: 20px
+
+    svg
+      display: block
+      width: 100%
 
 .mobile-menu__btn
   display: flex
@@ -1078,46 +958,6 @@ body
   width: 100% @sm auto
   margin-top: 1rem @sm 0
 
-body
-  .footer
-    position: relative
-    z-index: 150
-    background: #fff
-
-    form a
-      color: #78909c
-
-  .footer__row
-    padding-top: 1.6rem
-    padding-bottom: 1.6rem
-    flex-wrap: wrap
-
-  .footer__title
-    margin-bottom: 0.8rem
-
-  .footer__follow-us
-    width: 100%
-    margin-right: 0
-
-  .footer
-    .social, .social__link
-      width: 100%
-
-  .footer__nav-list
-    justify-content: space-between
-
-  .footer__nav-item
-    width: auto
-
-  .footer__nav-link
-    font-size: 1.0625rem
-    font-weight: 600
-    line-height: 1.4
-
-  .footer__nav-child-list
-    display: block
-    margin-bottom: 1rem
-
 .sidebar
   width: 260px
   min-width: 260px
@@ -1176,39 +1016,19 @@ body
   text-decoration: none
   color: #263238
 
-.continue
-  position: relative
-  z-index: 9
-  display: flex
-  margin: -70px -1px 0
-  padding: 1rem 0 0
-  background: #fff
-  justify-content: center
-
-  &:before
-    position: absolute
-    top: 20px
-    right: 0
-    left: 0
-    height: 176px
-    content: ''
-    -webkit-transform: translateY(-100%)
-    transform: translateY(-100%)
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 100%)
-
 .article__main-img
   width: 100%
   height: 100%
 
-.article__amp-summary
-  display: flex
-  margin-bottom: 0.8rem
-
 .article__amp-recommended
-  margin: 0 -1rem @sm 0
-  padding: 2rem 1rem 1rem @sm 1.2rem 0 .1rem
-  box-shadow: 7rem 0 0 #f5f5f5, -7rem 0 0 #f5f5f5
-  background-color: #f5f5f5
+  border-top: 16px solid #F5F5F5
+  border-bottom: 16px solid #F5F5F5
+  margin: 0 -1rem
+  padding: 1.5rem 1rem
+
+  &-title
+    text: 600 21px 1.4
+    margin-bottom: 1.2rem
 
   &-item
     margin-bottom: 1rem @sm 1.5rem
@@ -1217,47 +1037,21 @@ body
       margin-bottom: 0
 
     &-title
-      font-size: .8125rem
-      font-weight: 500
-      line-height: 1.9
+      text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
       padding: .5rem 1rem
       background-color: $neutral
+      width: 100%
 
     &-link
+      text: $pseudo-neutral-900
       text-decoration: none
-      color: #263238
-      align-items: flex-start
+      box:
 
     &-img
       display: block
-      overflow: hidden
       width: 100%
-      min-width: 96px
-      border: 1px solid #cfd8dc
-      border-radius: 2px
-      background: #eceff1
-
-  &-title
-    font-size: 1.375rem
-    font-weight: 600
-    line-height: 1.4
-    margin-bottom: 1.2rem
-
-.article__title--category
-  margin-top: 1.5rem
-
-.article__main-img-wrapper--category
-  margin-top: 1.5rem
-  margin-bottom: 1.5rem
-
-.article__mark--category
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 1.9
-  margin-bottom: 0
-
-.article__recommended-wrapper--img
-  position: relative
+      max-width: 72px @sm 144px @xl 218px
+      min-width: 72px @sm 144px @xl 218px
 
 .promoted__mark
   border: 1px solid rgba(255, 255, 255, 0.4)
@@ -1280,121 +1074,11 @@ body
     overflow: auto
     max-height: 100%
 
-.amp-subscribe
-  z-index: 99
-  width: 100%
-  max-width: 100%
-  margin: 0 auto
-  padding: 20px 0
-  background: #fff
-
-.amp-subscribe_no-fix
-  position: static
-  margin: 1.5rem 0
-  background: #263238
-
-.amp-subscribe
-  .subscribe__descr
-    font-size: 13px
-    font-weight: 500
-    line-height: 24px
-    color: #fff
-
-  .subscribe_btn__block
-    .subscribe_btn
-      display: flex
-      box-sizing: border-box
-      height: 56px
-      padding: 0 25px
-      text-decoration: none
-      text-transform: uppercase
-      border: 1px solid #448aff
-      border-radius: 2px
-      align-items: center
-      justify-content: space-between
-
-    .descr
-      font-size: 13px
-      font-weight: 600
-      line-height: 16px
-      letter-spacing: .25em
-      color: #fff
-
-    .icon
-      &.telegram:after
-        position: relative
-        top: 4px
-        content: url(./img/icons/i.amp-telegram.svg)
-
-      &.bell:after
-        position: relative
-        top: 4px
-        content: url(./img/icons/i.amp-bell.svg)
-
-  .subscribe__text
-    display: flex
-
-  .subscribe__icons
-    margin-right: 7px
-
-  .subscribe__content__description
-    margin-bottom: 15px
-
-.amp_descr-continue
-  padding: 20px
-
-  .btn
-    position: relative
-    max-width: 528px
-    background: #4caf50
-    border: 0
-    font-size: 17px
-    line-height: 24px
-    letter-spacing: 0
-    text-transform: none
-
-    .icon
-      position: relative
-      top: -4px
-      font-size: 20px
-      margin-right: 0.8rem
-
-.continue:before
-  display: none
-
-.btn--more:after
-  display: none
-
-.tabs__item .btn.active
-  border-bottom: 2px solid #263238
-  position: relative
-  bottom: -1px
-
-.humble--chat
-  font-weight: 600
-  font-size: 15px
-  line-height: 24px
-
-.article
-  padding-bottom: 2rem
-
 .link-text
   text-decoration: none
   border-bottom: 0
   color: #2196f3
   padding-left: 5px
-
-.aside-block
-  display: none
-
-.under_main-img__item
-  font-size: 0.8125rem
-
-.under_article__main-img
-  padding: 15px 16px 20px
-
-.article__tags
-  margin-bottom: 1rem
 
 .article
   padding-bottom: 0
@@ -1405,30 +1089,11 @@ body
 .article__main-img-wrapper
   padding-top: 0
 
-
-.non_amp_version
-  margin: 0
-  background-color: #fff
-
-  .container
-    padding: 0
-
-  .subscribe_btn__block .subscribe_btn
-    border: 0
-    background: #2979ff
-    color: #fff
-    text-align: center
-    justify-content: center
-    text-transform: none
-    font-weight: 600
-    border-radius: 8px
-
 .about-author
   background-color: #f5f5f5
   position: relative
   padding: 2rem 1rem 1.5rem @sm 2rem 2rem 1rem
-  min-height: 185px
-  margin: 1.5rem -1rem 0 @sm 1.5rem 0 0
+  margin: 1.5rem -1rem 0 @sm 1.5rem 0
 
 .about-author_row
   display: flex
@@ -1470,7 +1135,6 @@ body
   margin: .5rem 0 0 -60px
   font-size: .8125rem
   line-height: 1.5rem
-
 
 .disclaimer
   margin-top: .5rem
@@ -1639,6 +1303,8 @@ amp-list
     a
       text-decoration: none
       border-bottom: 0
+
+
 
 .tweet_header
   display: flex
@@ -1811,354 +1477,103 @@ amp-list
     width: 100%
     text-align: center
 
-.comments
-  padding: 0 1rem 1.3rem
-  margin: 0 -1rem
+.card
+  background-color: #fff
+  border-radius: 2px
+  overflow: hidden
+  display: @md-down none
 
-  &__login
-    box: center
-    padding: 1.5rem 0
-    border-bottom: 1px solid #CFD8DC
+  &--mobile-visible
+    display: @md-down block
+    margin: .5rem 0 @sm 1rem 0
 
-    &-icon
-      box:
-      margin-right: 1.2rem
+  & + &
+    margin-top: 1rem
 
-  h2
-    text: $pseudo-neutral-900 600 22px 1.4
-
-  .comment-wrapper
-
-    .form-img--wrapper
-      margin-right: 1.5rem
-      border-radius: 50%
-      border: 1px solid #CFD8DC
-      min-width: 32px
-      max-width: 32px
-      height: 32px
-      border-radius: 50%
-      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
-      display: block
-
-      img
-        @extend .img
-        border-radius: 50%
-
-    & > div
-      .js-form-item
-        width: 100%
-
-      .form-submit
-        margin-left: 0
-
-      .comment-form
-        margin-left: 0
-        margin-bottom: 0
-        padding-bottom: 0
-        border-bottom: 0
-
-      .form-submit
-        margin-right: .3rem
-
-      .js-form-item p
-        margin-left: 0
-        margin-top: -10px
-
-  #social-login-block-form
-    border-bottom: 1px solid $pseudo-neutral-100
-    padding-bottom: 1rem
-    margin-bottom: 1.5rem
-
-    .plugin .footer
-      display: none
-
-    .plugin #providers .provider
-      display: none
-
-  .validation__panel
-    text: 13px 1.6 600
-    border-radius: 2px 2px 0 0
-    text-align: center
-    padding: .1rem 0
-    position: relative
-    bottom: -2px
-
-  .validation__successful
-    background-color: #d4edda
-    color: #155724
-
-  .validation__error
-    background-color: #f8d7da
-    color: #721c24
-
-  textarea.form-textarea
-    order: 1
-    @extend .input__elem
-    padding: .5rem 1rem
-    font-weight: 500
-    resize: none
-
-    &::placeholder
-      font-weight: 500
-
-    &:focus,
-    &:active
-
-      &::placeholder
-        color: transparent
-
-    &:valid
-      border: $border
-
-    &:hover
-      border-color: $accent-1-light
-
-    &:focus
-      border-color: $accent-1-medium
-
-  .form-submit
-    @extend .btn--accent
-    cursor: pointer
-    min-height: 32px
-    max-width: 81px
-    margin-top: .5rem
-    border-radius: 2px
-    background-color: #2196F3
-    color: #fff
-    border: none
-
-  .comment-form
-    border-bottom: 1px solid $pseudo-neutral-100
-    padding-bottom: 1rem
-    margin-bottom: 1.5rem
-
-    a
-      border: 1px solid $pseudo-neutral-100
-      min-width: 32px
-      max-width: 32px
-      height: 32px
-      border-radius: 50%
-      background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
-      display: block
-      float: left
-      margin-right: 1.5rem
-
-    .formError
-      display: none
-
-  article
-    img
-      @extend .img
-      border-radius: 50%
-
-  .js-form-item
+  .btn--accent
     width: 100%
 
-    & > div
-      margin-top: 1.5rem
-      box: vertical
+  &--tweet
+    padding-top: @md-down .9rem
 
-    p
-      text: $pseudo-neutral-900 600 13px 16px
-      position: relative
-      top: 5px
-      margin-top: -30px
-      margin-left: 56px
-      margin-bottom: .5rem
+  &--press--release
 
-  .js-comment
-    margin: 1.5rem 0
+    .aside-story
+      display: none @md flex
 
-    &:last-child
-      margin-bottom: 0
+    &:first-child
+      display: @md-down flex
 
-    & > div
-      padding: 0
-      display: flex
-      flex-direction: column
-      margin-top: 0.5rem
-      order: 1
-      text: $pseudo-neutral-900 500 13px 16px
-
-      & > div
-
-        & > div
-          display: none
-
-    footer
-      display: flex
-
-      article
-        margin-right: 1.5rem
-        border: 1px solid $pseudo-neutral-100
-        min-width: 32px
-        max-width: 32px
-        height: 32px
-        border-radius: 50%
-        background: #d2d5da svg-load("icons/greeting.svg", fill: #fff) no-repeat center / 30px
-
-      & > p
-        text: $pseudo-neutral-400 13px 16px 500
-        margin-bottom: 0
-
-        span, a
-          @extend .link-plain
-          text: $pseudo-neutral-900 13px 16px 600
-          display: inline-flex
-          margin-right: .1rem
-
-  ul.links.inline
-    @extend .list-reset
-    order: 2
-    margin-top: .4rem
-
-    .comment-reply
-
-      a
-        @extend .link-plain
-        text: $pseudo-neutral-200 600 13px 16px
-        text-transform: uppercase
-
-    .comment-forbidden
-      text: $pseudo-neutral-200 500 13px 16px
-      margin-top: 0.5rem
-
-      a
-        @extend .link-plain
-        color: #2979FF
-        font-weight: 600
-
-  .indented
-    margin: 1rem 0 1rem 2.5rem
-
-    .js-form-item
-      width: 100%
-
-    .form-submit
-      margin-left: 0
-
-    .comment-form
-      margin-left: 0
-      margin-bottom: 0
-      padding-bottom: 0
-      border-bottom: 0
-
-    .js-form-item p
-      margin-left: 0
-      margin-top: -10px
-
-    .form-submit
-      margin-right: .3rem
-
-  .visually-hidden
-    display: none
-
-.fix-block
-  position: fixed null 0 0 0
-  background-color: $neutral
-  padding: 1rem
-  z-index: 99
-  max-width: 544px
-  margin: 0 auto
-
-.author
-
-  &_block
-    margin: 1.3rem 0
-    position: relative
-    border: 1px solid #C4C4C4
-    border-radius: 0 8px 8px 8px
-    padding: 1rem
-    position: relative
-
-    &:before
-      content: ''
-      position: absolute 0 null null -13px
-      border: 8px solid transparent
-      border-right: 8px solid $neutral
-      border-top: 8px solid $neutral
-      display: block
-      width: 0
-      height: 0
-      z-index: 2
-
-    &:after
-      content: ''
-      position: absolute -1px null null -16px
-      border: 8px solid transparent
-      border-right: 8px solid #C4C4C4
-      border-top: 8px solid #C4C4C4
-      display: block
-      width: 0
-      height: 0
-
-    .author__item
-
-      &-msg
-        margin: 2rem 0 0 -55px
-
-        p
-          text: #263238 15px 1.8 500
-          font-style: italic
-          margin: 0
-
-  &__list
-    @extend .list-reset
-
-  &__item
-
-    &-header
-      box:
-
-    &-user
-      size: 40px
-      border-radius: 50%
-      min-width: 40px
-      margin-right: 1rem
-
-      img
-        border-radius: 50%
-        max-width: 100%
-        display: block
-
-    &-name
-      text: #263238 15px 1.4 600
-      font-style: italic
-      cursor: pointer
-      white-space: normal
-      display: block
-
-    &-wrapper
-      box:
-      flex-wrap: wrap
-      margin-bottom: 1rem
-
-.card
-  margin: 1.7rem 0
+    ^&__footer
+      border: none
+      margin-bottom: .7rem @xl 1.1rem
 
   &__title
-    color: #263238
-    font-size: .8125rem
-    line-height: 1.4
-    font-weight: 600
-    padding: .219rem 0
+    text: $pseudo-neutral-900 13px 1.4 600
+    padding: .219rem 1rem
     min-height: 40px
-    border-bottom: 1px solid #cfd8dc
-    margin: 0
-    display: flex
-    align-items: center
-    justify-content: space-between
+    border-bottom: $border
+    margin-bottom: 0
+    box: center space-between
 
-  &__mark
-    color: #90a4ae
-    font-size: .8125rem
-    line-height: 1.8
-    font-weight: 500
+  &__desc
+    text: $body-small
+    margin: -.2rem * .9rem @xl -.7rem * 1rem
+
+  &__list
+
+    &-item
+      border-top: 1px solid $pseudo-neutral-50
+      padding: .7rem * @xl 1rem *
+
+      &:last-child
+        padding-bottom: 0
+
+    &-title
+      text: $header-super-tiny @xl $header-tiny
+      margin-bottom: .5rem
+
+    &-link
+      text: $body-small
+      @extend .link-decorate
+
+  &__social
+    box: center
+    min-height: 64px
+
+    .social__link
+      margin-right: 1.5rem
+
+  &__footer
+    padding: .219rem 1rem
+    min-height: 40px
+    border-top: $border
+    box: center space-between
+
+    .btn
+      font-weight: 600
+
+  &--something
+    padding: 0
+    border: 0
+    border-radius: 0
+
+    img
+      height: auto
+
+  .text-tiny
+    text: #90a4ae
 
   &__body
-    padding: 1.3rem 0
+    padding: 1.3rem 1rem 1.5rem @xl * * 1.2rem
+
+  &__mark
+    text: $pseudo-neutral-300 13px 1.8 500
 
   &--widget
+
+    ^&__title
+      margin-top: @sm-down 0
 
     &__title
       font-size: 15px
@@ -2173,7 +1588,7 @@ amp-list
 
     &__item
       display: flex
-      flex-wrap: nowrap
+      flex-wrap: @md wrap @xl nowrap
       align-items: center
       justify-content: space-between
       color: #263238
@@ -2187,8 +1602,9 @@ amp-list
         min-height: 24px
 
       .btn--block
-        margin-left: 20px
-        width: auto
+        margin-top: @md 8px @xl 0
+        margin-left: @md 0 @xl 20px
+        width: @md 100% @xl auto
 
     &__row
       display: flex
@@ -2200,4 +1616,90 @@ amp-list
     &__img
       display: block
 
+.aside-story
+  box: left
+  padding-bottom: .5rem @xl .9rem
 
+  & + &
+    padding-top: .9rem @xl 1.4rem
+    border-top: 1px solid $pseudo-neutral-50
+
+  &__name
+    text: $pseudo-neutral-900 13px 16px 600
+
+  &__img
+    border-radius: 2px
+    width: 100%
+
+    &-wrapper
+      position: relative
+      width: 72px @sm 144px @md 72px
+      min-width: 72px @sm 144px @md 72px
+      border-radius: 2px
+      margin-right: 1rem
+
+  &__info
+    box: center
+
+  &__body
+    margin-top: -6px
+
+  &__row
+    box: space-between
+    align-items: center @md flex-start @xl center
+    width: 100%
+    margin-top: 0
+
+    &-center
+      display: flex
+      flex-wrap: nowrap @md wrap
+      align-items: center
+
+  &__link
+    text: $pseudo-neutral-900 13px 1.9 500
+    text-decoration: none
+    display: block
+
+  &__info
+    margin-top: .1em
+
+  &__text
+    text: $body-tiny @xl $body-small
+    margin-top: .1rem @xl .7em
+
+.share
+
+  &__social
+    margin-top: 0 @md-l -4rem
+    background-color: #fff
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.5)
+    border-radius: 8px
+    padding: .5rem @md-l 1rem .5rem
+    overflow: hidden
+    display: @md-l-down flex
+    z-index: 202
+
+  &__circle
+    background-color: transparent
+    size: 32px
+    box: center middle
+
+    & + &
+      margin-top: @md-l 1rem
+      margin-left: @md-l-down 1rem
+
+    svg
+      display: block
+      size: 24px
+
+  &-and-up
+    position: fixed
+    left: 1rem @md-l 1rem @xl calc(50% - 560px - 112px)
+    top: @md-l 50%
+    bottom: 1rem
+    box: horizontal center middle @md-l vertical top
+    z-index: 201
+
+@media (max-width: 1367px)
+  .share-and-up
+    left: 1rem
