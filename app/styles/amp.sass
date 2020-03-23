@@ -971,6 +971,73 @@ body
   width: 100% @md 240px @xl 360px
   order: 1 @xl 2
 
+.something
+  box: center middle vertical
+  overflow: hidden
+  text-align: center
+  position: relative
+
+  &--top
+    height: @sm 90px
+    position: relative
+    z-index: 996
+
+  &--content
+    margin: 1rem 0 @sm 1rem 0
+
+  &__content
+
+    &-long
+      text-align: center
+      display: inherit @xl-down none
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+    &-scale
+      transform: scale(0.89)
+
+    &-square
+      display: inherit @xl none
+      text-align: center
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+  &--aside
+    padding: @xl 9px *
+    height: @xl-down 200px
+
+    > *
+      transform: @xl-down scale(.76)
+
+    > img
+      min-width: 300px
+
+  &--wide
+    margin-bottom: 1rem @xl 2rem
+    margin: @sm-down * -1rem
+
+  &-long
+    display: @md-down none
+
+  &-square
+    display: @md none
+
+  &__wrapper
+    margin-bottom: 1rem @xl 1.5rem
+    border-bottom: $border
+
 .header
   margin: 0 0 1rem
   background: #fff
@@ -1543,6 +1610,7 @@ amp-list
     padding: 0
     border: 0
     border-radius: 0
+    display: none @xl block
 
     img
       height: auto

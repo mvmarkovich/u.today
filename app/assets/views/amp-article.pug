@@ -112,6 +112,7 @@ html(lang="en" dir="ltr" ⚡)
                         include ../img/icons/burger.svg
 
         .container.page-container
+
             .main-aside-container
                 .main-news-block
                     .article
@@ -168,6 +169,12 @@ html(lang="en" dir="ltr" ⚡)
                             figcaption Cover image via <a href="#!"> 123rf.com </a>
                             .disclaimer
                                 p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+
+                        .something.something__content-long(style="background-color: #032e61")
+                            amp-img(src="img/something/long.png" alt="something-wide" layout="responsive" width="728" height="90")
+
+                        .something.something__content-square(style="background-color: #032e61")
+                            amp-img(src="img/something/square.png" alt="something-wide" layout="responsive" width="300" height="250")
 
                         section.article__content
                             .article__contents
@@ -407,6 +414,10 @@ html(lang="en" dir="ltr" ⚡)
                                         .humble.humble--tiny 12:25 AM
                         .card__footer
                             a.btn.btn--accent(href="#!") Submit Press Release
+
+                    .card.card--something
+                        .something
+                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
 
                     .card
                         h4.card__title Popular
