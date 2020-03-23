@@ -92,8 +92,24 @@ html(lang="en" dir="ltr" ⚡)
                 a.header__logo(href="/")
                     include ../img/icons/logo.svg
 
-                button.mobile-menu__btn(on="tap:sidebar.toggle")
-                    include ../img/icons/burger.svg
+                nav.header__nav
+                    ul.header__nav-list
+                        each category, i in nav
+                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
+                                a.header__nav-link(href="/" + i)= category.name
+
+                                if category.childs
+                                    ul.header__nav-child-list
+                                        each child, i in category.childs
+                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
+                                                a.header__nav-child-link(href="#!c" + i)= child.name
+
+                .header__panel
+                    button.btn.btn--search.btn--light.header__btn-search
+                        include ../img/icons/search.svg
+
+                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
+                        include ../img/icons/burger.svg
 
         .container.page-container
             .main-aside-container
@@ -146,6 +162,7 @@ html(lang="en" dir="ltr" ⚡)
                         section.asset.asset-wide(style="background-color: #192047;")
                             a.asset--link(target='_blank', href='https://www.cryptodailytrading.com/')
                                 amp-img.asset--img(src='https://u.today/img/iqmblue.gif', layout='responsive', width='528', height='65')
+
                         .article__main-img-wrapper
                             amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', layout='responsive', width='16', height='10')
                             figcaption Cover image via <a href="#!"> 123rf.com </a>
@@ -166,56 +183,26 @@ html(lang="en" dir="ltr" ⚡)
                                 a.link-text(href='#!') Crypto Invest Summit
                                 | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
 
-                            blockquote.twitter-tweet
-                                .tweet_header
-                                    a.tweet_author-img--wrapper(href="#!")
-                                        amp-img.tweet_author-img(src="img/icons/social/twitter.svg" layout='responsive', width='24', height='24')
-                                    a.tweet_author(href="#!")
-                                        span.tweet_author-name Ripple
-                                        span.tweet_author-screenName @Ripple
-
-                                p We’re honored to be named one of the <a href="#!"> #LinkedInTopStartups </a> (again!) Interested in joining our award-winning team? Learn more about <a href="#!"> #RippleLife: https://t.co/cpLCnAt4ne </a>. <a href="#!"> pic.twitter.com/bFtghTdh3c </a>
-
-                                time.tweet_time-updated September 4, 2019
-
                             h2
                                 em Women of Crypto as opening act
 
                             p It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
 
-                            p(dir="ltr")
-                                .article__related
-                                    a.article__related-link(href="#!")
-                                        | <span class="red">MUST READ</span> Africa’s Blockchain Potential Limitless But Its Implementation the True Struggle
-                                    a.article__related-img--wrapper(href="#!")
-                                        amp-img.article__related-img(src='https://u.today/sites/default/files/styles/300/public/node-14829.jpg?itok=ToZpi6kq', layout='responsive', width="135px", height="85px")
+                            .article__related
+                                .article__related-flame Must Read
+
+                                .article__related-blockquote Exclusive Interview with John McAfee: Epstein Didn’t Kill Himself, Bitcoin to Hit $1 million, & “Russian Roulette” — <a href="#!"> READ MORE </a>
+
                             p
                                 | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-                            .article__subscribe
-                                .article__subscribe-title Sign up to daily updates
 
-                                form.form--row.article__subscribe-form(target="_top" action-xhr="https://example.com/subscribe" method="post")
-                                    .input
-                                        input.article__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
-
-                                    .input
-                                        button.btn.btn--wide.btn--input.input--blue(type="submit") Sign up
-
-                                    .article__subscribe-agree By subscribing you agree with
-                                        a(href="#!") Privacy Policy
                             ul
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Name: Bitcoin
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Ticker: BTC
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Market Cap: $148 229 848 980
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Price: $8 163,79
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Volume (24h): $23 837 066 530
-                                li(dir='ltr')
-                                    p(dir='ltr', role='presentation') Change (7d): 9.12%
+                                li(dir='ltr') Name: Bitcoin
+                                li(dir='ltr') Ticker: BTC
+                                li(dir='ltr') Market Cap: $148 229 848 980
+                                li(dir='ltr') Price: $8 163,79
+                                li(dir='ltr') Volume (24h): $23 837 066 530
+                                li(dir='ltr') Change (7d): 9.12%
                             blockquote
                                 p
                                     | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women
@@ -334,15 +321,18 @@ html(lang="en" dir="ltr" ⚡)
                             .article__amp-recommended-list
                                 each item in ['5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token']
                                     .article__amp-recommended-item
-                                        a.article__amp-recommended-item-link(href="#!")
-                                            .article__amp-recommended-wrapper--img
-                                                amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/400/public/2019-11/1269.jpg?itok=TAl2iO6R" layout="responsive" width="218" height="136")
-                                                .promoted__mark Promoted
-                                            .article__amp-recommended-item-title= item
+                                        a.article__amp-recommended-wrapper--img(href="#!")
+                                            amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/400/public/2019-11/1269.jpg?itok=TAl2iO6R" layout="responsive" width="218" height="136")
+                                            .promoted__mark Promoted
+                                        .article__amp-recommended-info
+                                            .article__amp-recommended-row
+                                                a.humble(href="#!") News
+                                                .humble.humble--time 21 hours 31 minutes ago
+                                            a.article__amp-recommended-item-title(href="#!")= item
 
-                                    .asset.asset-wide(style="background-color: #192047;")
-                                        a.asset--link(target='_blank', href='https://www.cryptodailytrading.com/')
-                                            amp-img.asset--img(src='https://u.today/img/iqmblue.gif', layout='responsive', width='528', height='65')
+                                            a.humble.humble--author(href="#!")
+                                                amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                                                | Yuri Molchan
 
                         .card.card--widget
                             .card__title Top tranding bot
@@ -405,7 +395,6 @@ html(lang="en" dir="ltr" ⚡)
                                     .btn.btn--small.btn--accent-3 Website
 
                     .card.card--press--release
-                        h4.card__title Press Releases
                         .card__body
                             .aside-story
                                 a.aside-story__img-wrapper(href="#!")
@@ -416,17 +405,6 @@ html(lang="en" dir="ltr" ⚡)
 
                                     .aside-story__info
                                         .humble.humble--tiny 12:25 AM
-
-                            .aside-story
-                                a.aside-story__img-wrapper(href="#!")
-                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
-                                    .promoted__mark Promo
-                                .aside-story__body
-                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
-
-                                    .aside-story__info
-                                        .humble.humble--tiny 12:25 AM
-
                         .card__footer
                             a.btn.btn--accent(href="#!") Submit Press Release
 

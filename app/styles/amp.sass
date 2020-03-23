@@ -77,11 +77,11 @@
 
 .footer__copy-link, .link
   text-decoration: none
-  color: #2196F3
+  color: $accent-1-light
 
 .input__text a, .link-decorate, a:not([class]), .link-text
   text-decoration: none
-  color: #2196F3
+  color: $accent-1-light
 
 .amp_ads
   margin: 50px 0 50px 0
@@ -138,6 +138,22 @@ h5
   font-size: 14px
   line-height: 1.4
   margin-bottom: 0.6rem
+
+ul:not([class])
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1.5rem
+  list-style: none
+
+  ul
+    margin: 1rem 0 @xl 1.5rem 0 2rem
+
+  li
+    text: 500 13px 1.8 @md 15px
+    position: relative
+
+    + li
+      margin-top: .5rem
 
 blockquote
   margin: 2.5rem 0 1.7rem
@@ -344,7 +360,6 @@ textarea.input__elem
   height: 24px
   margin-right: 1.3rem
   padding: 0
-  cursor: default
   user-select: none
   white-space: nowrap
   text-decoration: none
@@ -360,7 +375,7 @@ textarea.input__elem
 
 .humble--accent
   margin-right: .3rem
-  color: #2196F3
+  color: $accent-1-light
 
 .humble--large
   font-size: .9375rem
@@ -395,11 +410,11 @@ textarea.input__elem
 
 .humble__img
   display: block
-  width: 24px
-  min-width: 24px
-  height: 24px
   margin-right: .5rem
   border-radius: 50%
+
+.humble--author
+  margin-top: .5rem
 
 .humble--views:before
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23B0BEC5' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 6C15.79 6 19.17 8.13 20.82 11.5C19.17 14.87 15.79 17 12 17C8.21 17 4.83 14.87 3.18 11.5C4.83 8.13 8.21 6 12 6ZM12 4C7 4 2.73 7.11 1 11.5C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 11.5C21.27 7.11 17 4 12 4ZM12 9C13.38 9 14.5 10.12 14.5 11.5C14.5 12.88 13.38 14 12 14C10.62 14 9.5 12.88 9.5 11.5C9.5 10.12 10.62 9 12 9ZM12 7C9.52 7 7.5 9.02 7.5 11.5C7.5 13.98 9.52 16 12 16C14.48 16 16.5 13.98 16.5 11.5C16.5 9.02 14.48 7 12 7Z'/%3E %3C/svg%3E")
@@ -416,6 +431,37 @@ textarea.input__elem
 .article
   position: relative
   z-index: 5
+
+  &__related
+    margin: 1.7rem 0 @xl 2.5rem 0
+
+    &-flame
+      text: $accent-2-medium 500 15px 1.8 @xl 17px
+      display: inline-flex
+      align-items: center
+      text-transform: uppercase
+      margin-left: -10px
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
+
+    &-blockquote
+      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
+      font-style: italic
+      border-left: 4px solid $accent-2-medium
+      padding: .5rem 1rem
+
+  ul:not([class]), ol:not([class])
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+
+    li
+      text: 500 13px 1.8 @md 15px
 
 .article__title
   margin-top: 0
@@ -553,12 +599,7 @@ main
     border-bottom: 3px solid #263238
 
 .footer__row
-  display: flex
-  padding-top: 1.6rem
-  padding-bottom: 1.6rem
-  border-bottom: 1px solid #cfd8dc
-  flex-wrap: wrap
-  justify-content: space-between
+  display: none
 
 .footer__title
   font-size: .8125rem
@@ -694,145 +735,6 @@ p
   margin: 0
   margin-bottom: 1.7rem
 
-.article__content
-  font-size: .875rem
-  line-height: 1.75
-  margin: 0
-  margin-bottom: 1.7rem
-
-.article
-  p
-    font-size: .875rem
-    line-height: 1.75
-    margin: 0
-    margin-bottom: 1.7rem
-
-  ol:not([class]), ul:not([class])
-    margin: 2rem 0
-
-  ol:not([class]) li, ul:not([class]) li
-    font-size: .875rem
-    line-height: 1.75
-
-  &__contents
-    margin: 1.7rem 0
-
-    &-title
-      text: 600 17px 1.4
-      margin-bottom: 1.3rem
-
-    &-list
-      margin-bottom: 1.45rem
-
-    &-item
-      padding-left: 1.6rem
-      position: relative
-
-      & + &
-        margin-top: 1rem
-
-      &:before
-        content: ''
-        position: absolute
-        left: 0
-        top: 12px
-        display: block
-        background-color: $accent-1-light
-        size: 5px
-        border-radius: 50%
-
-    &-link
-      border-bottom: 0
-      text: $accent-1-light 500 15px 1.8
-
-p
-  ol, p, ul
-    margin-top: -0.7rem
-
-table
-  width: 100%
-  max-width: 736px
-  margin-bottom: 1.7rem
-  border-collapse: collapse
-  border: 1px solid #cfd8dc
-  border-top: none
-  border-radius: 2px
-  overflow-x: auto
-  overflow-y: hidden
-  display: block
-
-  td
-    font-size: .8125rem
-    font-weight: 500
-    line-height: 2.1
-    padding: .75rem 1rem
-    vertical-align: top
-    border-top: 1px solid #dee2e6
-    border-right: 1px solid #dee2e6
-
-html body
-  li p, td p
-    font-size: .8125rem
-    font-weight: 500
-    line-height: 1.9
-    margin: 0
-    padding: 0
-
-h2 span
-  font-size: 13px
-  font-weight: 500
-  line-height: 2.1
-  letter-spacing: 0.015em
-
-body
-  font-size: 1rem
-  background: #f5f5f5
-
-.container
-  max-width: 768px @xl 1150px
-  margin: 0 auto
-
-.main-aside-container
-  box: space-between wrap
-
-.main-news-block
-  width: 100% @md 480px @xl 760px
-  order: 1 @xl 2
-  background: #fff
-  padding: 1rem
-
-.aside-menu-block
-  width: 100% @md 240px @xl 360px
-  order: 1 @xl 2
-
-.header
-  height: 48px
-  margin: 0 0 1rem
-  background: #fff
-  padding: .7rem 0
-
-  &__container
-    box: space-between center
-
-  &__logo
-    height: 20px
-
-    svg
-      display: block
-      width: 100%
-
-.mobile-menu__btn
-  display: flex
-  padding: 0
-  cursor: pointer
-  border: 0
-  outline: 0
-  background: transparent
-  align-items: center
-
-  path
-    fill: #263238
-
 .btn
   font-family: 'Montserrat', sans-serif
   font-size: 13px
@@ -958,6 +860,240 @@ body
   width: 100% @sm auto
   margin-top: 1rem @sm 0
 
+.article__content
+  font-size: .875rem
+  line-height: 1.75
+  margin: 0
+  margin-bottom: 1.7rem
+
+.article
+  p
+    font-size: .875rem
+    line-height: 1.75
+    margin: 0
+    margin-bottom: 1.7rem
+
+  ol:not([class]), ul:not([class])
+    margin: 2rem 0
+
+  ol:not([class]) li, ul:not([class]) li
+    font-size: .875rem
+    line-height: 1.75
+
+  &__contents
+    margin: 1.7rem 0
+
+    &-title
+      text: 600 17px 1.4
+      margin-bottom: 1.3rem
+
+    &-list
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 1.6rem
+      position: relative
+
+      & + &
+        margin-top: .5rem
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 12px
+        display: block
+        background-color: $accent-1-light
+        size: 5px
+        border-radius: 50%
+
+    &-link
+      border-bottom: 0
+      text: $accent-1-light 500 15px 1.8
+
+p
+  ol, p, ul
+    margin-top: -0.7rem
+
+table
+  width: 100%
+  max-width: 736px
+  margin-bottom: 1.7rem
+  border-collapse: collapse
+  border: 1px solid #cfd8dc
+  border-top: none
+  border-radius: 2px
+  overflow-x: auto
+  overflow-y: hidden
+  display: block
+
+  td
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 2.1
+    padding: .75rem 1rem
+    vertical-align: top
+    border-top: 1px solid #dee2e6
+    border-right: 1px solid #dee2e6
+
+html body
+  li p, td p
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 1.9
+    margin: 0
+    padding: 0
+
+h2 span
+  font-size: 13px
+  font-weight: 500
+  line-height: 2.1
+  letter-spacing: 0.015em
+
+body
+  font-size: 1rem
+  background: #f5f5f5
+
+.container
+  max-width: 768px @xl 1150px
+  margin: 0 auto
+
+.main-aside-container
+  box: space-between wrap
+
+.main-news-block
+  width: 100% @md 480px @xl 760px
+  order: 1 @xl 2
+  background: #fff
+  padding: 1rem
+
+.aside-menu-block
+  width: 100% @md 240px @xl 360px
+  order: 1 @xl 2
+
+.header
+  margin: 0 0 1rem
+  background: #fff
+  padding: .7rem 0
+
+  &__container
+    box: space-between center wrap
+    padding: 0 1rem
+
+  &__logo
+    height: 20px
+
+    svg
+      display: block
+      width: 100%
+
+  &__panel
+    box: center
+
+  &__nav
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl 740px
+    display: none @md block
+    margin-top: 1rem @xl 0
+
+    &-list
+      margin: 0
+      padding: 0
+      list-style: none
+      box: horizontal space-between @xl center
+      margin: @xl 0 1.5rem
+
+    &-item
+      position: relative
+
+      &:after
+        content: ""
+        height: 4px
+        position: absolute auto 0 -1px 0
+        z-index: 997
+        display: none
+
+      &:hover
+        ^^&-child-list
+          display: block
+
+        &:after
+          background: $accent-1-medium
+
+      &--active:after
+        background: $pseudo-neutral-900
+
+      & + &
+        margin-left: 1.4rem
+
+      &--arrow
+        &:hover
+
+          &:after
+            right: 24px
+
+        ^^^&-link
+
+          &:after
+            transform: scaleY(-1)
+
+        &:after
+          right: 24px
+
+        ^^&-link:after
+          content: ""
+          display: block
+          background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
+          size: 24px 12px
+
+    &-link
+      text: $pseudo-neutral-900 600 0.9375rem 1.4 normal
+      text-decoration: none
+      box: left center
+
+    &-child
+
+      &-list
+        margin: 0
+        padding: 0
+        list-style: none
+        display: none
+        position: absolute 33px null null
+        padding-top: .5rem
+        border-radius: 2px
+        border: 1px solid $pseudo-neutral-300
+        min-width: 190px
+        background: #fff
+        z-index: 997
+
+      &-item
+        border-left: 4px solid transparent
+        margin-bottom: .5rem
+
+        &--active
+          border-color: $pseudo-neutral-900
+
+        &:hover
+          background: $neutral-100
+
+      &-link
+        text: $pseudo-neutral-900 11px 1.4 600
+        text-decoration: none
+        text-transform: none
+        letter-spacing: normal
+        white-space: nowrap
+        height: 2.5rem
+        box: center
+        padding: * .8rem
+
+.mobile-menu__btn
+  display: @md none
+  margin-left: 1rem
+
+  path
+    fill: #263238
+
 .sidebar
   width: 260px
   min-width: 260px
@@ -996,8 +1132,6 @@ body
   margin-bottom: 4px
   padding-left: 1rem
   text-decoration: none
-  letter-spacing: .25em
-  text-transform: uppercase
   color: #263238
   align-items: center
 
@@ -1032,26 +1166,29 @@ body
 
   &-item
     margin-bottom: 1rem @sm 1.5rem
+    box:
 
     &:last-child
       margin-bottom: 0
 
     &-title
       text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
-      padding: .5rem 1rem
+      text-decoration: none
       background-color: $neutral
       width: 100%
-
-    &-link
-      text: $pseudo-neutral-900
-      text-decoration: none
-      box:
+      display: block
 
     &-img
       display: block
       width: 100%
       max-width: 72px @sm 144px @xl 218px
       min-width: 72px @sm 144px @xl 218px
+
+  &-info
+    padding: 0 1.5rem .6rem
+
+  &-row
+    margin-bottom: .5rem
 
 .promoted__mark
   border: 1px solid rgba(255, 255, 255, 0.4)
@@ -1077,7 +1214,7 @@ body
 .link-text
   text-decoration: none
   border-bottom: 0
-  color: #2196f3
+  color: $accent-1-light
   padding-left: 5px
 
 .article
@@ -1163,40 +1300,6 @@ body
 .article__amp-recommended-wrapper--img
   position: relative
 
-.article__related
-  font-family: 'Montserrat', sans-serif
-  display: flex
-  margin: 1.5rem -1rem @sm 1.5rem 0
-  background: #f5f5f5
-  align-items: center
-  justify-content: space-between
-  text-decoration: none
-  padding: 1rem @sm 0 0 0 1rem
-
-.article__related-title
-  font-size: .8125rem
-  font-weight: 600
-  line-height: 1.2
-  margin-bottom: 0.3rem
-
-.article__related-link
-  text: #263238 11px 1.9 600
-  text-decoration: none
-  padding-right: 1rem
-
-.article__related-panel
-  display: flex
-  margin-top: 0
-  align-items: center
-
-.article__related-img
-  width: 88px @sm 135px
-  height: 56px @sm 85px
-  border-radius: 2px @sm 0
-
-.article__related-link .red
-  color: #f44336
-
 .asset
   width: 100%
   text-align: center
@@ -1207,63 +1310,7 @@ body
 
 .asset--img
   width: 100%
-  max-height: 65px
   height: 100%
-
-.article__subscribe
-  background: #EEE
-  padding: 1.5rem 1rem
-  margin: 1.5rem -1rem @sm 1.5rem 0
-
-.article__subscribe-col
-  order: 3
-
-  .article__subscribe-col
-    margin-left: 0
-
-  &:first-child
-    order: 1
-
-.input--blue
-  background: #2979FF
-  border-radius: 2px
-  color: #fff
-  border: 1px solid #2979FF
-
-.article__subscribe-title
-  font-size: .8125rem
-  font-weight: 600
-  line-height: 1rem
-  margin-bottom: 1.3rem
-
-.article__subscribe-input
-  width: 100%
-
-.article__subscribe .input
-  &:nth-child(1)
-    width: calc(100% - 86px)
-    margin-right: 0
-
-  margin-bottom: 0
-
-  &:nth-child(2)
-    margin-right: 0
-    left: -1px
-
-.article__subscribe-agree
-  text: 11px 24px 500
-  letter-spacing: .015em
-  color: #78909c
-  order: 2
-  margin-top: 1rem
-
-  a
-    color: #2979FF
-    text-decoration: none
-
-.article__subscribe .form--row
-  flex-wrap: wrap
-  display: flex
 
 .article__label
   text: 13px 16px 600
@@ -1283,68 +1330,6 @@ body
 
 amp-list
   height: 0
-
-.twitter-tweet
-  background-color: #eee
-  padding: 1.25rem 1rem
-  margin: 1.5rem -1rem @sm 1.5rem 0
-  border-left: none
-
-  &:before
-    display: none
-
-  p
-    font-size: .8125rem
-    line-height: 1.8
-    font-weight: 500
-    margin: 0.75rem 0
-    font-style: normal
-
-    a
-      text-decoration: none
-      border-bottom: 0
-
-
-
-.tweet_header
-  display: flex
-  align-items: center
-
-.tweet_author-img--wrapper
-  width: 24px
-  height: 24px
-  margin-right: 0.5rem
-
-.tweet_author-img
-  max-width: 100%
-  display: block
-  width: auto
-  height: auto
-  margin: 0
-
-.tweet_author-name
-  font-size: .6875rem
-  line-height: 1.8
-  color: #263238
-  font-weight: 600
-  display: block
-
-.tweet_author-screenName
-  font-size: .6875rem
-  line-height: 1.8
-  color: #78909C
-  font-weight: 500
-  display: block
-
-.tweet_author
-  text-decoration: none
-
-.tweet_time-updated
-  font-size: .6875rem
-  line-height: 1.8
-  letter-spacing: .01em
-  color: #78909C
-  font-weight: 500
 
 .cels__widget
   flex-wrap: wrap
@@ -1506,7 +1491,7 @@ amp-list
 
     ^&__footer
       border: none
-      margin-bottom: .7rem @xl 1.1rem
+      margin-bottom: .7rem
 
   &__title
     text: $pseudo-neutral-900 13px 1.4 600
@@ -1552,6 +1537,7 @@ amp-list
 
     .btn
       font-weight: 600
+      min-height: 32px
 
   &--something
     padding: 0
