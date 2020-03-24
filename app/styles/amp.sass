@@ -432,6 +432,36 @@ textarea.input__elem
   position: relative
   z-index: 5
 
+  &__lead
+    box:
+    margin: 1.7rem 0
+    background: #C4C4C4
+    border-radius: 0 4px 8px 8px
+    padding: .75rem 1rem
+    position: relative
+
+    &-img
+      border-radius: 50%
+      margin-right: 1rem
+      min-width: 40px
+
+    &-name
+      text: 700 15px 1.8
+
+    &-desc
+      text: 500 15px 1.8
+      margin-bottom: 0
+
+    &:before
+      content: ''
+      position: absolute
+      left: -16px
+      top: 0
+      width: 0
+      height: 0
+      border-top: 16px solid #C4C4C4
+      border-left: 16px solid transparent
+
   &__related
     margin: 1.7rem 0 @xl 2.5rem 0
 
