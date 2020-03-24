@@ -435,8 +435,8 @@ textarea.input__elem
   &__lead
     box:
     margin: 1.7rem 0
-    background: #C4C4C4
-    border-radius: 0 4px 8px 8px
+    background: rgba(196, 196, 196, .3)
+    border-radius: 4px 4px 8px 8px
     padding: .75rem 1rem
     position: relative
 
@@ -456,16 +456,6 @@ textarea.input__elem
     &-desc
       text: 500 15px 1.8
       margin-bottom: 0
-
-    &:before
-      content: ''
-      position: absolute
-      left: -16px
-      top: 0
-      width: 0
-      height: 0
-      border-top: 16px solid #C4C4C4
-      border-left: 16px solid transparent
 
   &__related
     margin: 1.7rem 0 @xl 2.5rem 0
@@ -491,6 +481,9 @@ textarea.input__elem
       font-style: italic
       border-left: 4px solid $accent-2-medium
       padding: .5rem 1rem
+
+  .card
+    margin: 0 -1rem
 
   ul:not([class]), ol:not([class])
     margin: 2rem 0 @xl 2.1rem 0 3rem
@@ -1000,7 +993,7 @@ body
   width: 100% @md 480px @xl 760px
   order: 1 @xl 2
   background: #fff
-  padding: 1rem
+  padding: 1rem 1rem 0
 
 .aside-menu-block
   width: 100% @md 240px @xl 360px
@@ -1594,6 +1587,7 @@ amp-list
     ^&__footer
       border: none
       margin-bottom: .7rem
+      margin-top: -20px
 
   &__title
     text: $pseudo-neutral-900 13px 1.4 600
@@ -1654,7 +1648,7 @@ amp-list
     text: #90a4ae
 
   &__body
-    padding: 1.3rem 1rem 1.5rem @xl * * 1.2rem
+    padding: .8rem 1rem .8rem
 
   &__mark
     text: $pseudo-neutral-300 13px 1.8 500
@@ -1707,10 +1701,10 @@ amp-list
 
 .aside-story
   box: left
-  padding-bottom: .5rem @xl .9rem
+  padding-bottom: .5rem
 
   & + &
-    padding-top: .9rem @xl 1.4rem
+    padding-top: .9rem
     border-top: 1px solid $pseudo-neutral-50
 
   &__name
