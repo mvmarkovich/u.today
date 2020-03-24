@@ -1343,7 +1343,6 @@ body
 .about-author .about-author_title
   margin: 0
   padding: 0
-  text: 13px 16px 600
 
 .about-author_data
   display: flex
@@ -1352,10 +1351,11 @@ body
 
 .about-author_name
   text-decoration: none
-  text: #2979ff 13px 24px 600
-  margin-right: 1.6rem
+  text: #2979ff 600 13px 1.8 @sm 15px @xl 17px
+  margin-right: @xl 1.6rem
 
 .about-author .social
+  margin-top: .5rem @xl 0
 
   .social__link
     margin-right: 1.6rem
@@ -1365,8 +1365,7 @@ body
 
 .article .about-author p
   margin: .5rem 0 0 -60px
-  font-size: .8125rem
-  line-height: 1.5rem
+  text: 15px 1.8
 
 .disclaimer
   margin-top: .5rem
