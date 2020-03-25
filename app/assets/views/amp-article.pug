@@ -11,20 +11,19 @@ html(lang="en" dir="ltr" ⚡)
 
         style(amp-boilerplate='').
             body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+
         noscript
             style(amp-boilerplate='').
                 body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
 
-        script(custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js', async='')
+        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
         script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js")
+        script(async='', custom-element="amp-script" src='https://cdn.ampproject.org/v0/amp-script-0.1.js')
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
         style(amp-custom="")
             include ../../../dest/styles/amp.css
-
-        //- link(href="styles/amp.css" rel="stylesheet")
 
         script(type='application/ld+json').
             {
@@ -331,6 +330,13 @@ html(lang="en" dir="ltr" ⚡)
                                                 include ../img/icons/social/telegram.svg
                                             a.social__link.social__link--tw(href="#!")
                                                 include ../img/icons/social/twitter.svg
+                                            a.social__link.social__link--ln(href="#!")
+                                                include ../img/icons/social/LinkedIn.svg
+                                            a.social__link.social__link--insta(href="#!")
+                                                include ../img/icons/social/Instagram.svg
+                                            a.social__link.social__link--em(href="#!")
+                                                include ../img/icons/social/email.svg
+
                                     p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
 
                         .article__amp-recommended
