@@ -971,7 +971,10 @@ body
     box: center
     flex-wrap: wrap
     margin-bottom: .3rem @md .4rem @xl .8rem
-    max-width: @md-down calc(100% - 72px - 1rem)
+    max-width: 70% @md unset
+
+    .humble__img
+      min-width: 24px
 
     &:last-child
       margin-bottom: 0
@@ -981,7 +984,7 @@ body
       margin-bottom: 1.2rem
 
     &-link
-      max-width: @sm 40% @xl unset
+      max-width: 100% @sm 100% @xl unset
 
     & ~ h2
       margin-right: @sm-down 0
