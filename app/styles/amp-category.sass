@@ -155,41 +155,6 @@ ul:not([class])
     + li
       margin-top: .5rem
 
-blockquote
-  margin: 2.5rem 0 1.7rem
-  position: relative
-  border-left: 4px solid $accent-1-light
-  padding: .5rem 1rem
-
-  &:before
-    content: ""
-    display: block
-    background: svg-load("icons/quote.svg" fill: $accent-1-light) center / cover
-    size: 1.5rem
-    position: absolute -26px null null -14px
-
-  p
-    text: $pseudo-neutral-900 500 15px 1.8
-    font-style: italic
-
-  img
-    display: block
-    border-radius: 50%
-    margin-right: .5rem
-    size: 3rem
-    float: left
-
-  strong
-    text: $header-tiny
-    margin-top: 1rem
-    display: block
-
-  em
-    text: $body-small
-    text: $pseudo-neutral-400
-    font-style: normal
-    display: block
-
 .article blockquote p
   margin-bottom: 0
 
@@ -353,264 +318,41 @@ textarea.input__elem
   position: relative
 
 .humble
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 2.1
+  text: $pseudo-neutral-300 500 13px 2.1
+  letter-spacing: .015em
+  white-space: nowrap
+  text-decoration: none
   display: inline-flex
   height: 24px
   margin-right: 1.3rem
   padding: 0
   user-select: none
-  white-space: nowrap
-  text-decoration: none
-  letter-spacing: .015em
-  color: #90a4ae
   border: 0
   outline: 0
   background: transparent
   align-items: center
-
-.humble__inner-text
-  margin-left: 0.25rem
-
-.humble--accent
-  margin-right: .3rem
-  color: $accent-1-light
-
-.humble--large
-  font-size: .9375rem
-  font-weight: 500
-  line-height: 2.1
-  margin-right: 1.7rem
-  color: #263238
-
-.humble--bookmark, .humble--comments, .humble--link, .humble--share, .humble--views, .humble--liked, .humble--favorites
-  cursor: pointer
-
-.humble--icon:before
-  content: ''
-  width: 20px
-  height: 20px
-  display: block
-  background-size: contain
-  background-position: center
-  background-repeat: no-repeat
-  margin-right: 0.5rem
-
-.humble--tiny
-  margin-right: .7rem
-
-  &:before
-    width: 12px
-    height: 12px
-    margin-right: 0.3rem
-
-.humble--single-icon:before
-  margin-right: 0
-
-.humble__img
-  display: block
-  margin-right: .5rem
-  border-radius: 50%
-
-.humble--author
-  margin-top: .5rem
-
-.humble--views:before
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23B0BEC5' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12 6C15.79 6 19.17 8.13 20.82 11.5C19.17 14.87 15.79 17 12 17C8.21 17 4.83 14.87 3.18 11.5C4.83 8.13 8.21 6 12 6ZM12 4C7 4 2.73 7.11 1 11.5C2.73 15.89 7 19 12 19C17 19 21.27 15.89 23 11.5C21.27 7.11 17 4 12 4ZM12 9C13.38 9 14.5 10.12 14.5 11.5C14.5 12.88 13.38 14 12 14C10.62 14 9.5 12.88 9.5 11.5C9.5 10.12 10.62 9 12 9ZM12 7C9.52 7 7.5 9.02 7.5 11.5C7.5 13.98 9.52 16 12 16C14.48 16 16.5 13.98 16.5 11.5C16.5 9.02 14.48 7 12 7Z'/%3E %3C/svg%3E")
-
-.humble--views__bold:before
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNiA4QzkuMzEzNzEgOCAxMiA0IDEyIDRDMTIgNCA5LjMxMzcxIDAgNiAwQzIuNjg2MjkgMCAwIDQgMCA0QzAgNCAyLjY4NjI5IDggNiA4Wk02IDYuNUM3LjM4MDcxIDYuNSA4LjUgNS4zODA3MSA4LjUgNEM4LjUgMi42MTkyOSA3LjM4MDcxIDEuNSA2IDEuNUM0LjYxOTI5IDEuNSAzLjUgMi42MTkyOSAzLjUgNEMzLjUgNS4zODA3MSA0LjYxOTI5IDYuNSA2IDYuNVoiIGZpbGw9IiNCMEJFQzUiLz4KPHBhdGggZD0iTTcgNEM3IDQuNTUyMjggNi41NTIyOCA1IDYgNUM1LjQ0NzcyIDUgNSA0LjU1MjI4IDUgNEM1IDMuNDQ3NzIgNS40NDc3MiAzIDYgM0M2LjU1MjI4IDMgNyAzLjQ0NzcyIDcgNFoiIGZpbGw9IiNCMEJFQzUiLz4KPC9zdmc+Cg==)
-
-.humble--liked__bold:before
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMSAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgNFYxMEgwVjRIMlpNNCAxMEMzLjQ1IDEwIDMgOS41NSAzIDlWNEMzIDMuNyAzLjEgMy40NSAzLjMgMy4zTDYuNiAwTDcuMTUgMC41NUM3LjMgMC43IDcuMzUgMC44NSA3LjM1IDEuMDVWMS4yTDYuODUgNEgxMEMxMC41NSA0IDExIDQuNDUgMTEgNVY1LjVDMTEgNS42NSAxMSA1Ljc1IDEwLjk1IDUuODVMOS40NSA5LjRDOS4zIDkuNzUgOC45NSAxMCA4LjU1IDEwSDRaIiBmaWxsPSIjQjBCRUM1Ii8+Cjwvc3ZnPgo=)
-
-.humble--comments__bold:before
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgMEgxQzAuNDUgMCAwIDAuNDUgMCAxVjdDMCA3LjU1IDAuNDUgOCAxIDhIOEwxMCAxMFYxQzEwIDAuNDUgOS41NSAwIDkgMFoiIGZpbGw9IiNCMEJFQzUiLz4KPC9zdmc+Cg==)
-
-.article
   position: relative
-  z-index: 5
 
-  &__lead
-    box:
-    margin: 1.7rem 0
-    background: rgba(196, 196, 196, .3)
-    border-radius: 4px 4px 8px 8px
-    padding: .75rem 1rem
-    position: relative
+  &__inner-text
+    margin-left: 0.25rem
 
-    &-img
-      border-radius: 50%
-      min-width: 40px
+  &--tiny
+    margin-right: .7rem
 
-      &--wrapper
-        display: block
-        text-decoration: none
-        margin-right: 1rem
-
-    &-name
-      text: $pseudo-neutral-900 700 15px 1.8
-      text-decoration: none
-
-    &-desc
-      text: 500 15px 1.8
-      margin-bottom: 0
-
-  &__related
-    margin: 1.7rem 0 @xl 2.5rem 0
-
-    &-flame
-      text: $accent-2-medium 500 15px 1.8 @xl 17px
-      display: inline-flex
-      align-items: center
-      text-transform: uppercase
-      margin-left: -10px
-
-      &:before
-        content: ''
-        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
-        background-size: contain
-        background-position: center
-        background-repeat: no-repeat
-        size: 24px
-        margin-right: .5rem
-
-    &-blockquote
-      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
-      font-style: italic
-      border-left: 4px solid $accent-2-medium
-      padding: .5rem 1rem
-
-  .card
-    margin: 0 -1rem
-
-  ul:not([class]), ol:not([class])
-    margin: 2rem 0 @xl 2.1rem 0 3rem
-
-    li
-      text: 500 13px 1.8 @md 15px
-
-.article__title
-  margin-top: 0
-  margin-bottom: 0.8rem
-
-.article__title-mark
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 2.1
-  margin-left: .4rem
-  letter-spacing: .015em
-  color: #263238
-
-.article__mark
-  font-size: .9375rem
-  font-weight: 500
-  line-height: 2.1
-  margin-top: 0
-  margin-bottom: 1rem
-  color: #263238
-
-.article__main-img
-  position: absolute
-  top: 0
-  left: 0
-
-.article__main-img-wrapper
-  position: relative
-  overflow: hidden
-  margin-bottom: 2rem
-  padding-top: 62.5%
-
-  img
-    position: absolute
-    top: 0
-    left: 0
-
-.article__content
-  margin-top: 2.2rem
-  margin-bottom: 2.5rem
-
-  h2, h3
-    em
-      display: inline-flex
-      align-items: center
-      font-style: normal
-
-      &:after
-        content: 'Promoted'
-        text: $pseudo-neutral-200 11px 18px
-        text-align: center
-        white-space: nowrap
-        padding: 0 .5rem
-        border-radius: 2px
-        border: 1px solid $pseudo-neutral-100
-        font-style: normal
-        margin-left: 1rem
-
-.article h4
-  margin-top: 2.6rem
-  margin-bottom: 2.2rem
-  padding: 1.3rem 2rem
-  background: #f5f5f5
-
-.article__fact-title, .article__fact strong
-  font-size: 27px
-  font-weight: 600
-  line-height: 1.4
-  display: block
-  margin-bottom: .6rem
-  text-align: center
-
-.article
-  h4 strong
-    font-size: 27px
-    font-weight: 600
-    line-height: 1.4
+  &__img
     display: block
-    margin-bottom: .6rem
-    text-align: center
+    margin-right: .5rem
+    border-radius: 50%
 
-.article__fact-text, .article__fact p
-  font-size: 15px
-  font-weight: 500
-  line-height: 2.1
-  margin-bottom: 0
-  text-align: center
-  color: #263238
+  &--author
+    margin-top: .5rem
 
-.article
-  h4 p, h4-text
-    font-size: 15px
-    font-weight: 500
-    line-height: 2.1
-    margin-bottom: 0
-    text-align: center
-    color: #263238
+  &--icon
+    padding-left: 1.3rem
 
-main
-  &:not(.scroll-end) > .article:after
-    position: absolute
-    right: 0
-    bottom: 0
-    left: 0
-    display: block
-    height: 100vh
-    margin-right: -50vw
-    margin-left: -50vw
-    content: ''
-    transition: .5s ease
-    -webkit-transform: translateY(100%)
-    transform: translateY(100%)
-    pointer-events: none
-    opacity: 0
-    background: linear-gradient(180deg, #263238 0, rgba(38, 50, 56, 0) 100%)
-
-  > .article:nth-last-child(2)
-    z-index: 4
-
-    &:after
-      opacity: 1
+    svg
+      size: 16px
+      position: absolute 4px null null 0
 
 .footer
   margin-top: 2rem
@@ -693,12 +435,6 @@ main
   line-height: 1.9
   color: #78909c
 
-figure
-  margin: 1.5rem 0
-
-.article__content figure img
-  margin-bottom: 0
-
 figcaption
   font-size: .8125rem
   font-weight: 500
@@ -763,6 +499,9 @@ p
   margin: 0
   margin-bottom: 1.7rem
 
+  ol, p, ul
+    margin-top: -0.7rem
+
 .btn
   font-family: 'Montserrat', sans-serif
   font-size: 13px
@@ -823,17 +562,6 @@ p
   -webkit-transform: rotate(90deg)
   transform: rotate(90deg)
 
-.btn--hash-tag
-  font-size: 13px
-  font-weight: 500
-  line-height: 1.9
-  text-decoration: none
-  letter-spacing: normal
-  text-transform: none
-  border-color: #2979ff
-  background: #2979ff
-  color: #fff
-
 .btn--block
   display: flex
   width: 100%
@@ -875,94 +603,6 @@ p
 
 .btn--big
   min-height: 40px
-
-.btn--celsius
-  color: #FFF
-  font-weight: 600
-  font-size: 17px
-  line-height: 24px
-  border-radius: 8px
-  background-color: #20C589
-  border-color: #20C589
-  white-space: nowrap
-  width: 100% @sm auto
-  margin-top: 1rem @sm 0
-
-.article__content
-  font-size: .875rem
-  line-height: 1.75
-  margin: 0
-  margin-bottom: 1.7rem
-
-.article
-  p
-    font-size: .875rem
-    line-height: 1.75
-    margin: 0
-    margin-bottom: 1.7rem
-
-  ol:not([class]), ul:not([class])
-    margin: 2rem 0
-
-  ol:not([class]) li, ul:not([class]) li
-    font-size: .875rem
-    line-height: 1.75
-
-  &__contents
-    margin: 1.7rem 0
-
-    &-title
-      text: 600 17px 1.4
-      margin-bottom: 1.3rem
-
-    &-list
-      margin-bottom: 1.45rem
-
-    &-item
-      padding-left: 1.6rem
-      position: relative
-
-      & + &
-        margin-top: .5rem
-
-      &:before
-        content: ''
-        position: absolute
-        left: 0
-        top: 12px
-        display: block
-        background-color: $accent-1-light
-        size: 5px
-        border-radius: 50%
-
-    &-link
-      border-bottom: 0
-      text: $accent-1-light 500 15px 1.8
-
-p
-  ol, p, ul
-    margin-top: -0.7rem
-
-table
-  width: 100%
-  max-width: 736px
-  margin-bottom: 1.7rem
-  border-collapse: collapse
-  border: 1px solid #cfd8dc
-  border-top: none
-  border-radius: 2px
-  overflow-x: auto
-  overflow-y: hidden
-  display: block
-
-  td
-    font-size: .8125rem
-    font-weight: 500
-    line-height: 2.1
-    padding: .75rem 1rem
-    vertical-align: top
-    border-top: 1px solid #dee2e6
-    border-right: 1px solid #dee2e6
 
 html body
   li p, td p
@@ -1134,14 +774,14 @@ body
           &:after
             transform: scaleY(-1)
 
-        &:after
-          right: 24px
+          &:after
+            right: 24px
 
-        ^^&-link:after
-          content: ""
-          display: block
-          background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
-          size: 24px 12px
+          ^^&-link:after
+            content: ""
+            display: block
+            background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
+            size: 24px 12px
 
     &-link
       text: $pseudo-neutral-900 600 0.9375rem 1.4 normal
@@ -1246,46 +886,6 @@ body
   text-decoration: none
   color: #263238
 
-.article__main-img
-  width: 100%
-  height: 100%
-
-.article__amp-recommended
-  border-top: 16px solid #F5F5F5
-  border-bottom: 16px solid #F5F5F5
-  margin: 0 -1rem
-  padding: 1.5rem 1rem
-
-  &-title
-    text: 600 21px 1.4
-    margin-bottom: 1.2rem
-
-  &-item
-    margin-bottom: 1rem @sm 1.5rem
-    box:
-
-    &:last-child
-      margin-bottom: 0
-
-    &-title
-      text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
-      text-decoration: none
-      background-color: $neutral
-      width: 100%
-      display: block
-
-    &-img
-      display: block
-      width: 100%
-      max-width: 72px @sm 144px @xl 218px
-      min-width: 72px @sm 144px @xl 218px
-
-  &-info
-    padding: 0 1.5rem .6rem
-
-  &-row
-    margin-bottom: .5rem
-
 .promoted__mark
   border: 1px solid rgba(255, 255, 255, 0.4)
   color: #FFF
@@ -1299,83 +899,6 @@ body
   top: 0
   right: 0
 
-.amp-article .article__content
-  overflow: hidden
-  max-height: 200px
-
-  &.active
-    overflow: auto
-    max-height: 100%
-
-.link-text
-  text-decoration: none
-  border-bottom: 0
-  color: $accent-1-light
-  padding-left: 5px
-
-.article
-  padding-bottom: 0
-
-.article__main-img
-  height: auto
-
-.article__main-img-wrapper
-  padding-top: 0
-
-.about-author
-  background-color: #f5f5f5
-  position: relative
-  padding: 2rem 1rem 1.5rem @sm 2rem 2rem 1rem
-  margin: 1.5rem -1rem 0 @sm 1.5rem 0
-
-.about-author_row
-  display: flex
-
-.about-author_avatar
-  display: block
-  height: 40px
-  min-width: 40px
-  max-width: 40px
-  margin-right: 1.5rem
-
-  img
-    border-radius: 3px
-
-.about-author .about-author_title
-  margin: 0
-  padding: 0
-
-.about-author_data
-  display: flex
-  flex-wrap: wrap
-  margin-top: 0
-
-.about-author_name
-  text-decoration: none
-  text: #2979ff 600 13px 1.8 @sm 15px @xl 17px
-  margin-right: @xl 1.6rem
-
-.about-author .social
-  margin-top: .5rem @xl 0
-
-  .social__link
-    margin-right: 1.6rem
-
-    &:last-child
-      margin-right: 0
-
-.article .about-author p
-  margin: .5rem 0 0 -60px
-  text: 15px 1.8
-
-.disclaimer
-  margin-top: .5rem
-
-  .disclaimer_text
-    text: #90a4ae 13px 16px 500
-    letter-spacing: .01em
-    margin-bottom: 0
-
 .footer__disclaimer
   border-bottom: 1px solid #cfd8dc
   padding: 1.1875rem 0 0.8125rem
@@ -1385,15 +908,6 @@ body
   line-height: 1.5rem
   color: #78909c
   margin-bottom: 0
-
-.article__header
-  margin-bottom: 1rem
-
-.article__header--row
-  display: flex
-
-.article__amp-recommended-wrapper--img
-  position: relative
 
 .asset
   width: 100%
@@ -1407,155 +921,111 @@ body
   width: 100%
   height: 100%
 
-.article__label
-  text: #263238 13px 16px 500
-  text-decoration: none
-  display: inline-flex
-  align-items: center
-  margin-bottom: 1rem
-  margin-right: 1rem
+.category-info
+  border-bottom: $border
   position: relative
-  padding-left: 2rem
+  padding-bottom: 1.7rem @md 2.5rem @xl 3rem
 
-  svg
-    width: 24px
-    height: 24px
-    position: absolute
-    left: 0
+  &__title
+    text: $header-tiny @md $header-small @xl $header-large
+    max-width: @md-down calc(100% - 72px - 1rem)
+    margin-right: @sm-down 87px
+    margin-top: @sm-down 0
+    min-height: 46px @sm 1px
 
-amp-list
-  height: 0
+  &__desc
+    text: $body-small @xl $body-large
+    margin-top: 1.5rem @md .5rem @xl .3rem
+    margin-bottom: .6rem @md .5rem
+    position: relative
 
-.cels__widget
-  flex-wrap: wrap
-  box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
-  border-radius: 16px
-  margin: .5rem 0 3rem
-  display: flex
-  align-items: center
-  justify-content: space-between
+  &__img
+    border-radius: 2px
+
+    &-wrapper
+      margin: 2rem -1rem 0
+
+      figcaption
+        margin: .75rem 1rem 0
+
+.category-item
+  box: left space-between
+  margin-bottom: 1.1rem @xl 1.5rem
+  padding-top: 1.1rem @xl 1.5rem
   position: relative
 
-.cels__widget-info
-  justify-content: center
-  flex-wrap: wrap
-  width: 100%
-  padding: .625rem
-  display: flex
-  align-items: center
+  h2
+    margin-bottom: .5rem
+    margin-right: 87px @sm 0
 
-.cels__widget-select
-  display: flex
+  & + &
+    border-top: $border
 
-.cels__widget-option
-  text-transform: uppercase
+  + .btn
+    margin-top: 1.5rem @md 2rem @xl 2.7rem
 
-.cels__widget-img--wrapper
-  display: flex
-  max-width: 44px
-  min-width: 44px
-  margin-right: 1.5rem
+  &__body
+    max-width: 100% @md calc(100% - 1rem - 144px) @xl calc(100% - 1rem - 224px)
 
-.cels__widget-caption
-  color: #32325D
-  font-size: .8125rem
-  line-height: .8125rem
-  font-weight: 500
-  text-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
-  display: block
+  &__info
+    box: center
+    flex-wrap: wrap
+    margin-bottom: .3rem @md .4rem @xl .8rem
+    max-width: @md-down calc(100% - 72px - 1rem)
 
-.cels__widget
-  .cels__widget-signature
-    color: #FFF
-    font-weight: 500
-    font-size: .8125rem
-    line-height: .8125rem
-    margin-bottom: 0
-
-  .amount-crypt
-    font-size: 1.0625rem
-    line-height: 1.5rem
-    font-weight: 600
-    text-transform: uppercase
-    color: #20C589
-
-.cels__widget-output
-  padding: .625rem
-  width: 100%
-  border-radius: 0 0 16px 16px
-  box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
-  background-color: #32325D
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-wrap: wrap @sm nowrap
-
-.cels__widget .cels__widget-output--value
-  color: #20C589
-  font-weight: 600
-  font-size: 1.0625rem
-  line-height: 1.5rem
-  max-width: 75px
-  text-overflow: clip
-
-.cels__widget-list
-  list-style: none
-  padding: 0
-  margin: 0
-  display: flex
-
-.cels__widget-item
-  margin-right: 1rem
-
-.cels__widget
-  .form--row
-    margin-top: .75rem
-    display: flex
-
-    .input
-      margin-right: .75rem
+    &:last-child
       margin-bottom: 0
-      display: flex
 
-      &:last-child
-        margin-right: 0
+    &-event
+      box: center
+      margin-bottom: 1.2rem
 
-  .input__elem
-    max-width: 60px
-    min-width: 60px
-    border: 1px solid #CFD8DC
-    -moz-appearance: textfield
+    &-link
+      max-width: @sm 40% @xl unset
 
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
-      -webkit-appearance: none
-      margin: 0
+    & ~ h2
+      margin-right: @sm-down 0
+      margin-top: @sm-down 1.5rem
 
-  .input__select
-    max-width: 88px
-    min-width: 88px
-    text-transform: uppercase
+  &__title
+    text: $pseudo-neutral-900 $header-tiny @xl $header-small
+    text-decoration: none
+    display: block
+    max-width: 100% @sm calc(100% - 72px - 1rem) @md 100%
+    min-height: 46px
 
-  #interest_per_week:before, #interest_per_year:before
-    content: '$'
-    color: #20C589
-    font-weight: 600
-    font-size: 1.0625rem
-    line-height: 1.5rem
+  &__list
+    margin-top: 1.5rem @sm 0 @xl 1.7rem
+    max-width: 100% @sm calc(100% - 72px - 1rem) @md 100%
 
-  #interest_rate:after
-    content: '%'
-    color: #20C589
-    font-weight: 600
-    font-size: 1.0625rem
-    line-height: 1.5rem
+    &-item
+      margin-bottom: .5rem @xl 1.6rem
 
-  .widget__mark
-    position: absolute
-    bottom: -1.5rem
-    font-size: .6875rem
-    line-height: 1.8
+    &-link
+      text: $body-small @xl $body-standart
+
+  &__desc
+    text: $body-small @xl $body-standart
+    margin-top: .6rem @xl 1.2rem
+    margin-bottom: .6rem @xl .9rem
+
+  &__img
+    border-radius: 2px
+    position: absolute 0 null null 0
     width: 100%
-    text-align: center
+
+    &-wrapper
+      margin-left: 1rem @xl 2rem
+      max-width: 72px @md 144px @xl 224px
+      min-width: 72px @md 144px @xl 224px
+      width: 72px @md 144px @xl 224px
+      height: 45px @md 90px @xl 140px
+      background: #ECEFF1
+      overflow: hidden
+      position: absolute 16px 0 null null @md relative 0
+
+  .humble
+    text: 11px
 
 .card
   background-color: #fff

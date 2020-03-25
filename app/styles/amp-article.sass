@@ -1,0 +1,1749 @@
+@import 'inc/var.sss'
+@import 'inc/reset.css'
+
+.btns-spacer
+  display: flex
+  margin-bottom: -.5rem
+  flex-wrap: wrap
+
+  > *
+    margin-right: .5rem
+    margin-bottom: 0.5rem
+
+.btn-aside-space
+  margin-top: 1rem
+
+.btn-filter-space
+  margin-top: 2rem
+
+.links-spacer > *
+  margin-right: 0.5rem
+
+.article__contents-list, .footer__nav-child-list, .footer__nav-list, .list-reset
+  margin: 0
+  padding: 0
+  list-style: none
+
+.title-mark
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  display: inline-block
+  margin-left: .2rem
+  letter-spacing: .015em
+  color: #263238
+
+.text-tiny
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  letter-spacing: .015em
+  color: #78909c
+
+.text-small
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  color: #78909c
+
+.article > img, .article__main-img, .article__main-img-wrapper img, .img, img:not([class])
+  display: block
+  max-width: 100%
+
+.img-cover
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+
+.img-cover-wrapper
+  position: relative
+  overflow: hidden
+  background: #eceff1
+
+.visibility-hidden
+  visibility: hidden
+
+.truncate
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.page-title
+  font-size: 1.0625rem
+  font-weight: 600
+  line-height: 1.4
+  margin-top: 1rem
+
+.footer__copy-link, .link
+  text-decoration: none
+  color: $accent-1-light
+
+.input__text a, .link-decorate, a:not([class]), .link-text
+  text-decoration: none
+  color: $accent-1-light
+
+.amp_ads
+  margin: 50px 0 50px 0
+
+.link-pseudo
+  text-decoration: none
+  color: #263238
+
+.article__recommended-link, .footer__nav-child-link, .footer__nav-link, .link-plain
+  text-decoration: none
+  color: #263238
+
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+  overflow-x: hidden
+  color: #263238
+  background: #f5f5f5
+
+h1, h2, h3, h4, h5
+  font-weight: 600
+  margin-top: 0
+
+h1
+  font-family: 'Montserrat', sans-serif
+  font-size: 22px
+  font-weight: 600
+  line-height: 1.4
+
+h2
+  font-family: 'Montserrat', sans-serif
+  font-size: 22px
+  font-weight: 600
+  line-height: 1.4
+  margin-bottom: 0.9rem
+
+h3
+  font-family: 'Montserrat', sans-serif
+  font-size: 17px
+  font-weight: 600
+  line-height: 1.4
+  margin-bottom: 0.8rem
+
+h4
+  font-family: 'Montserrat', sans-serif
+  font-size: 17px
+  line-height: 1.41
+  margin-bottom: 0.7rem
+
+h5
+  font-family: 'Montserrat', sans-serif
+  font-size: 14px
+  line-height: 1.4
+  margin-bottom: 0.6rem
+
+ul:not([class])
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1.5rem
+  list-style: none
+
+  ul
+    margin: 1rem 0 @xl 1.5rem 0 2rem
+
+  li
+    text: 500 13px 1.8 @md 15px
+    position: relative
+
+    + li
+      margin-top: .5rem
+
+blockquote
+  margin: 2.5rem 0 1.7rem
+  position: relative
+  border-left: 4px solid $accent-1-light
+  padding: .5rem 1rem
+
+  &:before
+    content: ""
+    display: block
+    background: svg-load("icons/quote.svg" fill: $accent-1-light) center / cover
+    size: 1.5rem
+    position: absolute -26px null null -14px
+
+  p
+    text: $pseudo-neutral-900 500 15px 1.8
+    font-style: italic
+
+  img
+    display: block
+    border-radius: 50%
+    margin-right: .5rem
+    size: 3rem
+    float: left
+
+  strong
+    text: $header-tiny
+    margin-top: 1rem
+    display: block
+
+  em
+    text: $body-small
+    text: $pseudo-neutral-400
+    font-style: normal
+    display: block
+
+.article blockquote p
+  margin-bottom: 0
+
+.form__group
+  margin-bottom: 2rem
+
+.form--col
+  max-width: 352px
+
+.form__submit
+  margin-top: 1.4rem
+
+.input
+  position: relative
+  margin-bottom: 1rem
+
+.input--large-space
+  margin-bottom: 0.4rem
+
+  .btn
+    margin-top: -0.4rem
+
+.input--btn-space
+  margin-bottom: 0.4rem
+
+.input__text
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+
+.input__checkbox
+  display: none
+
+.input__checkbox-label
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  display: flex
+  margin-top: 1.1rem
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  color: #78909c
+  align-items: center
+
+.input__row
+  .input
+    width: 100%
+
+  .btn
+    margin-top: 1rem
+
+.input__label
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  letter-spacing: .015em
+  color: #78909c
+
+.input__file
+  display: none
+
+.input__elem, .input__select, input
+  font-family: 'Montserrat', sans-serif
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  width: 100%
+  min-height: 40px
+  padding: 0 1rem
+  border: 1px solid #cfd8dc
+  border-radius: 2px
+  outline: 0
+
+.input__elem::-webkit-input-placeholder, .input__select::-webkit-input-placeholder, input::-webkit-input-placeholder, .input__elem::-ms-input-placeholder, .input__select::-ms-input-placeholder, input::-ms-input-placeholder, .input__elem::placeholder, .input__select::placeholder, input::placeholder
+  color: #78909c
+
+.input__elem:valid, .input__select:valid, input:valid
+  border-color: #90a4ae
+
+.input__elem:disabled, .input__select:disabled, input:disabled
+  border-color: #cfd8dc
+  background: #f5f5f5
+
+textarea.input__elem
+  display: block
+  height: 48px
+  padding-top: .6rem
+  padding-bottom: .6rem
+  resize: none
+
+.input__select
+  position: relative
+  display: flex
+  width: 100%
+  min-height: 40px
+  cursor: pointer
+  letter-spacing: normal
+  text-transform: none
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: calc(100% - 6px) center
+  background-size: 24px 24px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  align-items: center
+  justify-content: flex-start
+
+  option
+    height: 36px
+
+.input__select:valid
+  border-color: #cfd8dc
+
+.input__error
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  display: none
+  margin-bottom: -.5rem
+  letter-spacing: .015em
+  color: #f44336
+
+.input--error
+  .input__elem
+    border-color: #f44336
+
+  .input__error
+    display: block
+
+.social
+  display: inline-flex
+  align-items: center
+  justify-content: space-between
+
+.social--border
+  border: 1px solid #cfd8dc
+  border-radius: 2px
+
+  .social__link
+    width: 100%
+    height: 38px
+    border-left: 1px solid #cfd8dc
+
+    &:first-child
+      border-left: 0
+
+.social--wide .social__link
+  width: 4.5rem
+  text-align: center
+  line-height: 3.2rem
+
+.social__link
+  width: 1.5rem
+  height: 1.5rem
+  background-repeat: no-repeat
+  background-position: center
+  position: relative
+
+.humble
+  text: $pseudo-neutral-300 500 13px 2.1
+  letter-spacing: .015em
+  white-space: nowrap
+  text-decoration: none
+  display: inline-flex
+  height: 24px
+  margin-right: 1.3rem
+  padding: 0
+  user-select: none
+  border: 0
+  outline: 0
+  background: transparent
+  align-items: center
+  position: relative
+
+  &__inner-text
+    margin-left: 0.25rem
+
+  &--tiny
+    margin-right: .7rem
+
+  &__img
+    display: block
+    margin-right: .5rem
+    border-radius: 50%
+
+  &--author
+    margin-top: .5rem
+    
+  &--icon
+    padding-left: 1.3rem
+    
+    svg
+      size: 16px
+      position: absolute 4px null null 0
+
+.article
+  position: relative
+  z-index: 5
+
+  &__lead
+    box:
+    margin: 1.7rem 0
+    background: rgba(196, 196, 196, .3)
+    border-radius: 4px 4px 8px 8px
+    padding: .75rem 1rem
+    position: relative
+
+    &-img
+      border-radius: 50%
+      min-width: 40px
+
+      &--wrapper
+        display: block
+        text-decoration: none
+        margin-right: 1rem
+
+    &-name
+      text: $pseudo-neutral-900 700 15px 1.8
+      text-decoration: none
+
+    &-desc
+      text: 500 15px 1.8
+      margin-bottom: 0
+
+  &__related
+    margin: 1.7rem 0 @xl 2.5rem 0
+
+    &-flame
+      text: $accent-2-medium 500 15px 1.8 @xl 17px
+      display: inline-flex
+      align-items: center
+      text-transform: uppercase
+      margin-left: -10px
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
+
+    &-blockquote
+      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
+      font-style: italic
+      border-left: 4px solid $accent-2-medium
+      padding: .5rem 1rem
+
+  .card
+    margin: 0 -1rem
+
+  ul:not([class]), ol:not([class])
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+
+    li
+      text: 500 13px 1.8 @md 15px
+
+.article__title
+  margin-top: 0
+  margin-bottom: 0.8rem
+
+.article__title-mark
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  margin-left: .4rem
+  letter-spacing: .015em
+  color: #263238
+
+.article__mark
+  font-size: .9375rem
+  font-weight: 500
+  line-height: 2.1
+  margin-top: 0
+  margin-bottom: 1rem
+  color: #263238
+
+.article__main-img
+  position: absolute
+  top: 0
+  left: 0
+
+.article__main-img-wrapper
+  position: relative
+  overflow: hidden
+  margin-bottom: 2rem
+  padding-top: 62.5%
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+
+.article__content
+  margin-top: 2.2rem
+  margin-bottom: 2.5rem
+
+  h2, h3
+    em
+      display: inline-flex
+      align-items: center
+      font-style: normal
+
+      &:after
+        content: 'Promoted'
+        text: $pseudo-neutral-200 11px 18px
+        text-align: center
+        white-space: nowrap
+        padding: 0 .5rem
+        border-radius: 2px
+        border: 1px solid $pseudo-neutral-100
+        font-style: normal
+        margin-left: 1rem
+
+.article h4
+  margin-top: 2.6rem
+  margin-bottom: 2.2rem
+  padding: 1.3rem 2rem
+  background: #f5f5f5
+
+.article__fact-title, .article__fact strong
+  font-size: 27px
+  font-weight: 600
+  line-height: 1.4
+  display: block
+  margin-bottom: .6rem
+  text-align: center
+
+.article
+  h4 strong
+    font-size: 27px
+    font-weight: 600
+    line-height: 1.4
+    display: block
+    margin-bottom: .6rem
+    text-align: center
+
+.article__fact-text, .article__fact p
+  font-size: 15px
+  font-weight: 500
+  line-height: 2.1
+  margin-bottom: 0
+  text-align: center
+  color: #263238
+
+.article
+  h4 p, h4-text
+    font-size: 15px
+    font-weight: 500
+    line-height: 2.1
+    margin-bottom: 0
+    text-align: center
+    color: #263238
+
+main
+  &:not(.scroll-end) > .article:after
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    display: block
+    height: 100vh
+    margin-right: -50vw
+    margin-left: -50vw
+    content: ''
+    transition: .5s ease
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    pointer-events: none
+    opacity: 0
+    background: linear-gradient(180deg, #263238 0, rgba(38, 50, 56, 0) 100%)
+
+  > .article:nth-last-child(2)
+    z-index: 4
+
+    &:after
+      opacity: 1
+
+.footer
+  margin-top: 2rem
+  position: relative
+  z-index: 150
+  background: #fff
+
+  &__container
+    padding: 0 1rem @md 0
+
+  &:before
+    display: block
+    content: ''
+    border-bottom: 3px solid #263238
+
+.footer__row
+  display: none
+
+.footer__title
+  font-size: .8125rem
+  font-weight: 600
+  line-height: 1.2
+  margin-bottom: 0.8rem
+
+.footer__nav
+  position: relative
+  padding-top: 1.3rem
+  padding-bottom: .3rem
+  border-bottom: 1px solid #cfd8dc
+
+.footer__nav-list
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: -1.5rem
+
+.footer__nav-item
+  width: 60% @md 33% @xl auto
+  white-space: nowrap
+  margin-top: 1.5rem
+
+.footer__nav-item:nth-child(even)
+  width: 30% @md 33% @xl auto
+
+.footer__nav-link
+  font-size: 1.0625rem
+  font-weight: 600
+  line-height: 1.4
+
+.footer__nav-child-list
+  margin-top: 1rem
+  display: none @sm block
+
+.footer__nav-child-item .footer__nav-child-item
+  margin-top: 0.94rem
+
+.footer__nav-child-link
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 2.1
+  letter-spacing: .015em
+  color: #263238
+
+.footer__copy
+  display: flex
+  padding-top: 1.5rem
+  padding-bottom: 1.5rem
+  flex-wrap: wrap
+
+.footer__copy-text
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  margin-right: 2rem
+  color: #78909c
+
+.footer__copy-link
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  color: #78909c
+
+figure
+  margin: 1.5rem 0
+
+.article__content figure img
+  margin-bottom: 0
+
+figcaption
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  margin: .5rem 0 0
+  color: #78909c
+
+  a
+    color: #2979FF
+    text-decoration: none
+
+ol
+  margin: 2rem 0
+  padding: 0
+  padding-left: 1.1rem
+  list-style-type: decimal
+
+  ol
+    margin: 1rem 0
+
+  li
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 1.9
+
+    li
+      margin-top: 1rem
+
+ul:not([class])
+  margin: 2rem 0
+  padding: 0
+  padding-left: 1.1rem
+  list-style: none
+
+  ul
+    margin: 1rem 0
+
+  li
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 1.9
+    position: relative
+
+    li
+      margin-top: 1rem
+
+    &:before
+      content: ''
+      position: absolute
+      left: -1.1rem
+      top: 10px
+      display: block
+      background-color: #263238
+      width: 5px
+      height: 5px
+      border-radius: 50%
+
+p
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  margin: 0
+  margin-bottom: 1.7rem
+
+.btn
+  font-family: 'Montserrat', sans-serif
+  font-size: 13px
+  font-weight: 600
+  line-height: unset
+  display: inline-flex
+  min-height: 1.5rem
+  padding: 0 .7rem
+  cursor: pointer
+  text-decoration: none
+  color: #263238
+  border: 1px solid #cfd8dc
+  border-radius: 2px
+  outline: 0
+  background: transparent
+  align-items: center
+  justify-content: center
+  -webkit-tap-highlight-color: transparent
+
+.btn--wide
+  padding-right: 1rem
+  padding-left: 1rem
+
+.btn--full
+  min-height: 48px
+  width: 100%
+
+.btn--input
+  display: flex
+  width: 100%
+  min-height: 40px
+
+.btn--light
+  margin: 0
+  padding: 0
+  cursor: pointer
+  border: 0
+  outline: 0
+  background: transparent
+
+.btn--large
+  line-height: 56px
+  display: flex
+  width: 100%
+  max-width: 330px
+  height: 56px
+  margin-right: auto
+  margin-left: auto
+  color: #fff
+  border-color: #2979ff
+  background: #2979ff
+
+.btn--icon
+  margin-right: 1rem
+  display: flex
+
+.btn--rating-down:after
+  -webkit-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+.btn--hash-tag
+  font-size: 13px
+  font-weight: 500
+  line-height: 1.9
+  text-decoration: none
+  letter-spacing: normal
+  text-transform: none
+  border-color: #2979ff
+  background: #2979ff
+  color: #fff
+
+.btn--block
+  display: flex
+  width: 100%
+
+.btn--text
+  font-size: 1.0625rem
+  line-height: 2rem
+  color: #fff
+  letter-spacing: normal
+  border-bottom: 1px dashed #fff
+
+.btn--accent
+  background: $accent-1-light
+  border-color: $accent-1-light
+  text: #fff
+
+.btn--accent-3
+  background: #4CAF50
+  border: none
+  border-radius: 0
+  font-weight: 400
+  color: #fff
+  padding: 0 5px 0 5px
+  text-align: center
+
+.btn--accent-4
+  background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
+  border: none
+  color: #fff
+
+.btn--radius-left
+  border-radius: 2px 0 0 2px
+
+.btn--radius-right
+  border-radius: 0 2px 2px 0
+
+.btn--small
+  min-height: 32px
+
+.btn--big
+  min-height: 40px
+
+.btn--celsius
+  color: #FFF
+  font-weight: 600
+  font-size: 17px
+  line-height: 24px
+  border-radius: 8px
+  background-color: #20C589
+  border-color: #20C589
+  white-space: nowrap
+  width: 100% @sm auto
+  margin-top: 1rem @sm 0
+
+.article__content
+  font-size: .875rem
+  line-height: 1.75
+  margin: 0
+  margin-bottom: 1.7rem
+
+.article
+  p
+    font-size: .875rem
+    line-height: 1.75
+    margin: 0
+    margin-bottom: 1.7rem
+
+  ol:not([class]), ul:not([class])
+    margin: 2rem 0
+
+  ol:not([class]) li, ul:not([class]) li
+    font-size: .875rem
+    line-height: 1.75
+
+  &__contents
+    margin: 1.7rem 0
+
+    &-title
+      text: 600 17px 1.4
+      margin-bottom: 1.3rem
+
+    &-list
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 1.6rem
+      position: relative
+
+      & + &
+        margin-top: .5rem
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 12px
+        display: block
+        background-color: $accent-1-light
+        size: 5px
+        border-radius: 50%
+
+    &-link
+      border-bottom: 0
+      text: $accent-1-light 500 15px 1.8
+
+p
+  ol, p, ul
+    margin-top: -0.7rem
+
+table
+  width: 100%
+  max-width: 736px
+  margin-bottom: 1.7rem
+  border-collapse: collapse
+  border: 1px solid #cfd8dc
+  border-top: none
+  border-radius: 2px
+  overflow-x: auto
+  overflow-y: hidden
+  display: block
+
+  td
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 2.1
+    padding: .75rem 1rem
+    vertical-align: top
+    border-top: 1px solid #dee2e6
+    border-right: 1px solid #dee2e6
+
+html body
+  li p, td p
+    font-size: .8125rem
+    font-weight: 500
+    line-height: 1.9
+    margin: 0
+    padding: 0
+
+h2 span
+  font-size: 13px
+  font-weight: 500
+  line-height: 2.1
+  letter-spacing: 0.015em
+
+body
+  font-size: 1rem
+  background: #f5f5f5
+
+.container
+  max-width: 768px @xl 1150px
+  margin: 0 auto
+
+.main-aside-container
+  box: space-between wrap
+
+.main-news-block
+  width: 100% @md 480px @xl 760px
+  order: 1 @xl 2
+  background: #fff
+  padding: 1rem 1rem 0
+
+.aside-menu-block
+  width: 100% @md 240px @xl 360px
+  order: 1 @xl 2
+
+.something
+  box: center middle vertical
+  overflow: hidden
+  text-align: center
+  position: relative
+
+  &--top
+    height: @sm 90px
+    position: relative
+    z-index: 996
+
+  &--content
+    margin: 1rem 0 @sm 1rem 0
+
+  &__content
+
+    &-long
+      text-align: center
+      display: inherit @xl-down none
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+    &-scale
+      transform: scale(0.89)
+
+    &-square
+      display: inherit @xl none
+      text-align: center
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+  &--aside
+    padding: @xl 9px *
+    height: @xl-down 200px
+
+    > *
+      transform: @xl-down scale(.76)
+
+    > img
+      min-width: 300px
+
+  &--wide
+    margin-bottom: 1rem @xl 2rem
+    margin: @sm-down * -1rem
+
+  &-long
+    display: @md-down none
+
+  &-square
+    display: @md none
+
+  &__wrapper
+    margin-bottom: 1rem @xl 1.5rem
+    border-bottom: $border
+
+.header
+  margin: 0 0 1rem
+  background: #fff
+  padding: .7rem 0
+
+  &__container
+    box: space-between center
+    flex-wrap: @md wrap
+    padding: 0 1rem
+
+  &__logo
+    height: 20px
+
+    svg
+      display: block
+      width: 100%
+
+  &__panel
+    box: center
+
+  &__nav
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl 740px
+    display: none @md block
+    margin-top: 1rem @xl 0
+
+    &-list
+      margin: 0
+      padding: 0
+      list-style: none
+      box: horizontal space-between @xl center
+      margin: @xl 0 1.5rem
+
+    &-item
+      position: relative
+
+      &:after
+        content: ""
+        height: 4px
+        position: absolute auto 0 -1px 0
+        z-index: 997
+        display: none
+
+      &:hover
+        ^^&-child-list
+          display: block
+
+        &:after
+          background: $accent-1-medium
+
+      &--active:after
+        background: $pseudo-neutral-900
+
+      & + &
+        margin-left: 1.4rem
+
+      &--arrow
+        &:hover
+
+          &:after
+            right: 24px
+
+        ^^^&-link
+
+          &:after
+            transform: scaleY(-1)
+
+        &:after
+          right: 24px
+
+        ^^&-link:after
+          content: ""
+          display: block
+          background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
+          size: 24px 12px
+
+    &-link
+      text: $pseudo-neutral-900 600 0.9375rem 1.4 normal
+      text-decoration: none
+      box: left center
+
+    &-child
+
+      &-list
+        margin: 0
+        padding: 0
+        list-style: none
+        display: none
+        position: absolute 33px null null
+        padding-top: .5rem
+        border-radius: 2px
+        border: 1px solid $pseudo-neutral-300
+        min-width: 190px
+        background: #fff
+        z-index: 997
+
+      &-item
+        border-left: 4px solid transparent
+        margin-bottom: .5rem
+
+        &--active
+          border-color: $pseudo-neutral-900
+
+        &:hover
+          background: $neutral-100
+
+      &-link
+        text: $pseudo-neutral-900 11px 1.4 600
+        text-decoration: none
+        text-transform: none
+        letter-spacing: normal
+        white-space: nowrap
+        height: 2.5rem
+        box: center
+        padding: * .8rem
+
+.mobile-menu__btn
+  display: @md none
+  margin-left: 1rem
+
+  path
+    fill: #263238
+
+.sidebar
+  width: 260px
+  min-width: 260px
+  background: #fff
+
+.sidebar__social
+  width: 100%
+  height: 56px
+  padding: 1rem 4rem 1rem 1rem
+  border-bottom: 1px solid #cfd8dc
+
+.sidebar__close
+  position: absolute
+  top: 16px
+  right: 16px
+
+  path
+    fill: #263238
+
+.sidebar__nav
+  margin-bottom: 1rem
+
+.sidebar__nav-list
+  margin: 0
+  padding: .5rem 1rem
+  padding-left: 0
+  list-style: none
+
+.sidebar__nav-item .sidebar__nav-link
+  font-size: .8125rem
+  font-weight: 600
+  line-height: 1.4
+  display: flex
+  height: calc(3rem - 8px)
+  margin-top: 4px
+  margin-bottom: 4px
+  padding-left: 1rem
+  text-decoration: none
+  color: #263238
+  align-items: center
+
+.sidebar__nav-child-list
+  margin: -1rem 0 0
+  padding: 1rem 0 .5rem
+  list-style: none
+
+.sidebar__nav-child-link
+  font-size: .8125rem
+  font-weight: 500
+  line-height: 1.9
+  display: block
+  height: 2rem
+  padding-left: 2rem
+  text-decoration: none
+  color: #263238
+
+.article__main-img
+  width: 100%
+  height: 100%
+
+.article__amp-recommended
+  border-top: 16px solid #F5F5F5
+  border-bottom: 16px solid #F5F5F5
+  margin: 0 -1rem
+  padding: 1.5rem 1rem
+
+  &-title
+    text: 600 21px 1.4
+    margin-bottom: 1.2rem
+
+  &-item
+    margin-bottom: 1rem @sm 1.5rem
+    box:
+
+    &:last-child
+      margin-bottom: 0
+
+    &-title
+      text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
+      text-decoration: none
+      background-color: $neutral
+      width: 100%
+      display: block
+
+    &-img
+      display: block
+      width: 100%
+      max-width: 72px @sm 144px @xl 218px
+      min-width: 72px @sm 144px @xl 218px
+
+  &-info
+    padding: 0 1.5rem .6rem
+
+  &-row
+    margin-bottom: .5rem
+
+.promoted__mark
+  border: 1px solid rgba(255, 255, 255, 0.4)
+  color: #FFF
+  font-size: .8125rem
+  line-height: 1rem
+  font-weight: 500
+  padding: 0 .5rem
+  text-shadow: -2px 2px 8px #000
+  border-radius: 0 0 0 2px
+  position: absolute
+  top: 0
+  right: 0
+
+.amp-article .article__content
+  overflow: hidden
+  max-height: 200px
+
+  &.active
+    overflow: auto
+    max-height: 100%
+
+.link-text
+  text-decoration: none
+  border-bottom: 0
+  color: $accent-1-light
+  padding-left: 5px
+
+.article
+  padding-bottom: 0
+
+.article__main-img
+  height: auto
+
+.article__main-img-wrapper
+  padding-top: 0
+
+.about-author
+  background-color: #f5f5f5
+  position: relative
+  padding: 2rem 1rem 1.5rem @sm 2rem 2rem 1rem
+  margin: 1.5rem -1rem 0 @sm 1.5rem 0
+
+.about-author_row
+  display: flex
+
+.about-author_avatar
+  display: block
+  height: 40px
+  min-width: 40px
+  max-width: 40px
+  margin-right: 1.5rem
+
+  img
+    border-radius: 3px
+
+.about-author .about-author_title
+  margin: 0
+  padding: 0
+
+.about-author_data
+  display: flex
+  flex-wrap: wrap
+  margin-top: 0
+
+.about-author_name
+  text-decoration: none
+  text: #2979ff 600 13px 1.8 @sm 15px @xl 17px
+  margin-right: @xl 1.6rem
+
+.about-author .social
+  margin-top: .5rem @xl 0
+
+  .social__link
+    margin-right: 1.6rem
+
+    &:last-child
+      margin-right: 0
+
+.article .about-author p
+  margin: .5rem 0 0 -60px
+  text: 15px 1.8
+
+.disclaimer
+  margin-top: .5rem
+
+  .disclaimer_text
+    text: #90a4ae 13px 16px 500
+    letter-spacing: .01em
+    margin-bottom: 0
+
+.footer__disclaimer
+  border-bottom: 1px solid #cfd8dc
+  padding: 1.1875rem 0 0.8125rem
+
+.footer__disclaimer-text
+  font-size: .8125rem
+  line-height: 1.5rem
+  color: #78909c
+  margin-bottom: 0
+
+.article__header
+  margin-bottom: 1rem
+
+.article__header--row
+  display: flex
+
+.article__amp-recommended-wrapper--img
+  position: relative
+
+.asset
+  width: 100%
+  text-align: center
+  margin: 1rem * @sm 1.5rem *
+
+.asset--link
+  display: block
+
+.asset--img
+  width: 100%
+  height: 100%
+
+.article__label
+  text: #263238 13px 16px 500
+  text-decoration: none
+  display: inline-flex
+  align-items: center
+  margin-bottom: 1rem
+  margin-right: 1rem
+  position: relative
+  padding-left: 2rem
+
+  svg
+    width: 24px
+    height: 24px
+    position: absolute
+    left: 0
+
+amp-list
+  height: 0
+
+.cels__widget
+  flex-wrap: wrap
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
+  border-radius: 16px
+  margin: .5rem 0 3rem
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+
+.cels__widget-info
+  justify-content: center
+  flex-wrap: wrap
+  width: 100%
+  padding: .625rem
+  display: flex
+  align-items: center
+
+.cels__widget-select
+  display: flex
+
+.cels__widget-option
+  text-transform: uppercase
+
+.cels__widget-img--wrapper
+  display: flex
+  max-width: 44px
+  min-width: 44px
+  margin-right: 1.5rem
+
+.cels__widget-caption
+  color: #32325D
+  font-size: .8125rem
+  line-height: .8125rem
+  font-weight: 500
+  text-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+  display: block
+
+.cels__widget
+  .cels__widget-signature
+    color: #FFF
+    font-weight: 500
+    font-size: .8125rem
+    line-height: .8125rem
+    margin-bottom: 0
+
+  .amount-crypt
+    font-size: 1.0625rem
+    line-height: 1.5rem
+    font-weight: 600
+    text-transform: uppercase
+    color: #20C589
+
+.cels__widget-output
+  padding: .625rem
+  width: 100%
+  border-radius: 0 0 16px 16px
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
+  background-color: #32325D
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap @sm nowrap
+
+.cels__widget .cels__widget-output--value
+  color: #20C589
+  font-weight: 600
+  font-size: 1.0625rem
+  line-height: 1.5rem
+  max-width: 75px
+  text-overflow: clip
+
+.cels__widget-list
+  list-style: none
+  padding: 0
+  margin: 0
+  display: flex
+
+.cels__widget-item
+  margin-right: 1rem
+
+.cels__widget
+  .form--row
+    margin-top: .75rem
+    display: flex
+
+    .input
+      margin-right: .75rem
+      margin-bottom: 0
+      display: flex
+
+      &:last-child
+        margin-right: 0
+
+  .input__elem
+    max-width: 60px
+    min-width: 60px
+    border: 1px solid #CFD8DC
+    -moz-appearance: textfield
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+  .input__select
+    max-width: 88px
+    min-width: 88px
+    text-transform: uppercase
+
+  #interest_per_week:before, #interest_per_year:before
+    content: '$'
+    color: #20C589
+    font-weight: 600
+    font-size: 1.0625rem
+    line-height: 1.5rem
+
+  #interest_rate:after
+    content: '%'
+    color: #20C589
+    font-weight: 600
+    font-size: 1.0625rem
+    line-height: 1.5rem
+
+  .widget__mark
+    position: absolute
+    bottom: -1.5rem
+    font-size: .6875rem
+    line-height: 1.8
+    width: 100%
+    text-align: center
+
+.card
+  background-color: #fff
+  border-radius: 2px
+  overflow: hidden
+  display: @md-down none
+
+  &--mobile-visible
+    display: @md-down block
+    margin: .5rem 0 @sm 1rem 0
+
+  & + &
+    margin-top: 1rem
+
+  .btn--accent
+    width: 100%
+
+  &--tweet
+    padding-top: @md-down .9rem
+
+  &--press--release
+
+    .aside-story
+      display: none @md flex
+
+    &:first-child
+      display: @md-down flex
+
+    ^&__footer
+      border: none
+      margin-bottom: .7rem
+      margin-top: -20px
+
+  &__title
+    text: $pseudo-neutral-900 13px 1.4 600
+    padding: .219rem 1rem
+    min-height: 40px
+    border-bottom: $border
+    margin-bottom: 0
+    box: center space-between
+
+  &__desc
+    text: $body-small
+    margin: -.2rem * .9rem @xl -.7rem * 1rem
+
+  &__list
+
+    &-item
+      border-top: 1px solid $pseudo-neutral-50
+      padding: .7rem * @xl 1rem *
+
+      &:last-child
+        padding-bottom: 0
+
+    &-title
+      text: $header-super-tiny @xl $header-tiny
+      margin-bottom: .5rem
+
+    &-link
+      text: $body-small
+      @extend .link-decorate
+
+  &__social
+    box: center
+    min-height: 64px
+
+    .social__link
+      margin-right: 1.5rem
+
+  &__footer
+    padding: .219rem 1rem
+    min-height: 40px
+    border-top: $border
+    box: center space-between
+
+    .btn
+      font-weight: 600
+      min-height: 32px
+
+  &--something
+    padding: 0
+    border: 0
+    border-radius: 0
+    display: none @xl block
+
+    img
+      height: auto
+
+  .text-tiny
+    text: #90a4ae
+
+  &__body
+    padding: .8rem 1rem .8rem
+
+  &__mark
+    text: $pseudo-neutral-300 13px 1.8 500
+
+  &--widget
+
+    ^&__title
+      margin-top: @sm-down 0
+
+    &__title
+      font-size: 15px
+      line-height: 1.6
+      font-weight: 700
+
+    &__signature
+      color: #263238
+      font-size: 13px
+      line-height: 1.5
+      font-weight: 500
+
+    &__item
+      display: flex
+      flex-wrap: @md wrap @xl nowrap
+      align-items: center
+      justify-content: space-between
+      color: #263238
+      text-decoration: none
+
+      & + &
+        margin-top: 24px
+
+      .btn
+        width: 100%
+        min-height: 24px
+
+      .btn--block
+        margin-top: @md 8px @xl 0
+        margin-left: @md 0 @xl 20px
+        width: @md 100% @xl auto
+
+    &__row
+      display: flex
+      align-items: center
+
+    &__info
+      margin-left: 8px
+
+    &__img
+      display: block
+
+.aside-story
+  box: left
+  padding-bottom: .5rem
+
+  & + &
+    padding-top: .9rem
+    border-top: 1px solid $pseudo-neutral-50
+
+  &__name
+    text: $pseudo-neutral-900 13px 16px 600
+
+  &__img
+    border-radius: 2px
+    width: 100%
+
+    &-wrapper
+      position: relative
+      width: 72px @sm 144px @md 72px
+      min-width: 72px @sm 144px @md 72px
+      border-radius: 2px
+      margin-right: 1rem
+
+  &__info
+    box: center
+
+  &__body
+    margin-top: -6px
+
+  &__row
+    box: space-between
+    align-items: center @md flex-start @xl center
+    width: 100%
+    margin-top: 0
+
+    &-center
+      display: flex
+      flex-wrap: nowrap @md wrap
+      align-items: center
+
+  &__link
+    text: $pseudo-neutral-900 13px 1.9 500
+    text-decoration: none
+    display: block
+
+  &__info
+    margin-top: .1em
+
+  &__text
+    text: $body-tiny @xl $body-small
+    margin-top: .1rem @xl .7em
+
+.share
+
+  &__social
+    margin-top: 0 @md-l -4rem
+    background-color: #fff
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.5)
+    border-radius: 8px
+    padding: .5rem @md-l 1rem .5rem
+    overflow: hidden
+    display: @md-l-down flex
+    z-index: 202
+
+  &__circle
+    background-color: transparent
+    size: 32px
+    box: center middle
+
+    & + &
+      margin-top: @md-l 1rem
+      margin-left: @md-l-down 1rem
+
+    svg
+      display: block
+      size: 24px
+
+  &-and-up
+    position: fixed
+    left: 1rem @md-l 1rem @xl calc(50% - 560px - 112px)
+    top: @md-l 50%
+    bottom: 1rem
+    box: horizontal center middle @md-l vertical top
+    z-index: 201
+
+@media (max-width: 1367px)
+  .share-and-up
+    left: 1rem

@@ -22,7 +22,7 @@ html(lang="en" dir="ltr" ⚡)
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
         style(amp-custom="")
-            include ../../../dest/styles/amp.css
+            include ../../../dest/styles/amp-article.css
 
         script(type='application/ld+json').
             {
@@ -117,9 +117,13 @@ html(lang="en" dir="ltr" ⚡)
                         .article__header
                             .article__header--row
                                 time.humble.author__item-time Oct 27’2018, 11:27 AM
-                                .humble.humble--icon.humble--views.humble--tiny.humble--views__bold 123k
-                                .humble.humble--icon.humble--liked.humble--tiny.humble--liked__bold 31
-                                .humble.humble--icon.humble--comments.humble--tiny.humble--comments__bold 256
+                                .humble.humble--icon 123k
+                                    include ../img/icons/eye_bold.svg
+                                .humble.humble--icon 31
+                                    include ../img/icons/liked_bold.svg
+                                .humble.humble--icon 256
+                                    include ../img/icons/comment_bold.svg
+
                         a.article__label(href="#!") News
                             include ../img/icons/label/news.svg
                         a.article__label(href="#!") Price predictions
