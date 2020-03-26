@@ -653,19 +653,16 @@ body
     margin: 1rem 0 @sm 1rem 0
 
   &__content
-    display: block
+    display: inline-flex
+    width: 100%
 
-    img
+    amp-img
       margin: * auto
       height: auto
 
     &-long
       text-align: center
       display: inherit @xl-down none
-
-      img
-        margin: * auto
-        height: auto
 
       & > ins
         display: block
@@ -678,10 +675,6 @@ body
       display: inherit @xl none
       text-align: center
 
-      img
-        margin: * auto
-        height: auto
-
       & > ins
         display: block
         margin: 0 auto
@@ -692,9 +685,6 @@ body
 
     > *
       transform: @xl-down scale(.76)
-
-    > img
-      min-width: 300px
 
   &--wide
     margin-bottom: 1rem @xl 2rem
