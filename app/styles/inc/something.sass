@@ -1,5 +1,4 @@
 .something
-  box: center middle vertical
   overflow: hidden
   text-align: center
   position: relative
@@ -10,9 +9,14 @@
     z-index: 996
 
   &--content
-    margin: 1rem 0 @sm 1rem 0
+    margin: 1rem 0
 
   &__content
+    display: block
+
+    img
+      margin: * auto
+      height: auto
 
     &-long
       text-align: center
@@ -78,13 +82,9 @@
     margin-bottom: 1rem @xl 1.5rem
     border-bottom: $border
 
-  &--conditions
-    text: $pseudo-neutral-400 500 13px 20px center
-    margin-bottom: .75rem
-    padding: 0 1rem
-
-    a:not([class])
-      text: $pseudo-neutral-400
-      text-decoration: underline
+.ref
+  text: $pseudo-neutral-400 13px 1.6
+  text-align: center
+  margin: 0 0 16px 0
 
 

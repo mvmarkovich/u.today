@@ -1345,10 +1345,6 @@ aside {
   overflow: hidden;
   text-align: center;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .something--top {
@@ -1358,6 +1354,16 @@ aside {
 
 .something--content {
   margin: 1rem 0;
+}
+
+.something__content {
+  display: block;
+}
+
+.something__content img {
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
 }
 
 .something__content-long {
@@ -1439,19 +1445,12 @@ aside {
   border-bottom: 1px solid #CFD8DC;
 }
 
-.something--conditions {
+.ref {
   color: #78909C;
-  font-weight: 500;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 1.6;
   text-align: center;
-  margin-bottom: .75rem;
-  padding: 0 1rem;
-}
-
-.something--conditions a:not([class]) {
-  color: #78909C;
-  text-decoration: underline;
+  margin: 0 0 16px 0;
 }
 
 .store {
@@ -2005,7 +2004,7 @@ aside {
   display: none;
 }
 
-.input__elem,.input__select,input {
+.input__elem,.input__select {
   border: 1px solid #CFD8DC;
   border-radius: 2px;
   padding: 0 1rem;
@@ -2018,35 +2017,35 @@ aside {
   width: 100%;
 }
 
-.input__elem::-webkit-input-placeholder,.input__select::-webkit-input-placeholder,input::-webkit-input-placeholder {
+.input__elem::-webkit-input-placeholder,.input__select::-webkit-input-placeholder {
   color: #78909C;
 }
 
-.input__elem::-moz-placeholder,.input__select::-moz-placeholder,input::-moz-placeholder {
+.input__elem::-moz-placeholder,.input__select::-moz-placeholder {
   color: #78909C;
 }
 
-.input__elem::-ms-input-placeholder,.input__select::-ms-input-placeholder,input::-ms-input-placeholder {
+.input__elem::-ms-input-placeholder,.input__select::-ms-input-placeholder {
   color: #78909C;
 }
 
-.input__elem::placeholder,.input__select::placeholder,input::placeholder {
+.input__elem::placeholder,.input__select::placeholder {
   color: #78909C;
 }
 
-.input__elem:hover,.input__select:hover,input:hover {
+.input__elem:hover,.input__select:hover {
   border-color: #2979FF;
 }
 
-.input__elem:focus,.input__select:focus,input:focus {
+.input__elem:focus,.input__select:focus {
   border-color: #2196F3;
 }
 
-.input__elem:valid,.input__select:valid,input:valid {
+.input__elem:valid,.input__select:valid {
   border-color: #90A4AE;
 }
 
-.input__elem:disabled,.input__select:disabled,input:disabled {
+.input__elem:disabled,.input__select:disabled {
   background: #F5F5F5;
   border-color: #CFD8DC;
 }
@@ -4298,10 +4297,6 @@ blockquote em {
 
   .something--top {
     height: 90px;
-  }
-
-  .something--content {
-    margin: 1rem 0;
   }
 
   .card--mobile-visible {
