@@ -1,7 +1,7 @@
-section.card.card--press--release.card--mobile-visible
+.card.card--press--release.card--mobile-visible
   h4.card__title Press Releases
   .card__body
-    article.aside-story
+    .aside-story
       a.aside-story__img-wrapper(href="#!")
         img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
         .promoted__mark.promoted__mark-top-left Promo
@@ -9,9 +9,9 @@ section.card.card--press--release.card--mobile-visible
         a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
 
         .aside-story__info
-          time.humble.humble--tiny 12:25 AM
+          .humble.humble--tiny 12:25 AM
 
-    article.aside-story
+    .aside-story
       a.aside-story__img-wrapper(href="#!")
         img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
         .sponsored__mark.sponsored__mark-bottom-right Promo
@@ -19,16 +19,16 @@ section.card.card--press--release.card--mobile-visible
         a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
 
         .aside-story__info
-          time.humble.humble--tiny 12:25 AM
+          .humble.humble--tiny 12:25 AM
 
   .card__footer
     a.btn.btn--accent(href="#!") Submit Press Release
 
-section.card
+.card
   h4.card__title Popular
   .card__body
     each hot in hots
-      article.aside-story
+      .aside-story
         a.aside-story__img-wrapper(href="#!")
           img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ")
           .sponsored__mark.sponsored__mark-bottom-right Promo
@@ -36,12 +36,12 @@ section.card
           a.aside-story__link(href="#!")= hot
 
           .aside-story__info
-            time.humble.humble--tiny 12:25 AM
+            .humble.humble--tiny 12:25 AM
 
   .card__footer
     a.btn.btn--light.btn--arrow-right(href="#!") Show more
 
-section.card
+.card
   .card__title
     .card__social
       .social__title Follow us:
@@ -62,16 +62,16 @@ section.card
           button.btn.btn--accent.btn--input(type="submit") Subscribe
     .text-tiny By pressing the “Subscribe button” you agree with our <a href="#!"> Privacy Policy </a>
 
-section.card.card--something
+.card.card--something
   .something
     img(src="img/content/banner.png" width="360" height="156" alt="something-square")
 
-section.card
+.card
   h4.card__title Upcoming events
 
   .card__body
     each event in events
-      article.aside-story.aside-story--events
+      .aside-story.aside-story--events
         .aside-story__body
           a.aside-story__link(href="#!")= event
 
@@ -81,20 +81,5 @@ section.card
 
   .card__footer
     a.btn.btn--light.btn--arrow-right(href="#!") See all
-
-section.card.card--article
-  h4.card__title.card__title-flame WARNING: HOT CONTENT!
-
-  .card__body
-    article.aside-article
-      a.aside-article__img-wrapper(href="#!")
-        img.aside-article__img(src="https://u.today/sites/default/files/styles/736x/public/2019-12/1569.jpg?itok=8QFbKLNM")
-        .promoted__mark.promoted__mark-top-left Promo
-      .aside-article__body
-        a.aside-article__link(href="#!") Exclusive Interview with John McAfee: Epstein Didn’t Kill Himself, Bitcoin to Hit $1 million, & “Russian Roulette”
-
-        .aside-article__info
-          span.humble.humble--comments.humble--tiny.humble--comments_bold 256
-
 
 

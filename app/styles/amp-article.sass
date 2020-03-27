@@ -46,10 +46,6 @@
   line-height: 1.9
   color: #78909c
 
-.article > img, .article__main-img, .article__main-img-wrapper img, .img, img:not([class])
-  display: block
-  max-width: 100%
-
 .img-cover
   position: absolute
   top: 0
@@ -189,9 +185,6 @@ blockquote
     text: $pseudo-neutral-400
     font-style: normal
     display: block
-
-.article blockquote p
-  margin-bottom: 0
 
 .form__group
   margin-bottom: 2rem
@@ -389,190 +382,6 @@ textarea.input__elem
       size: 16px
       position: absolute 4px null null 0
 
-.article
-  position: relative
-  z-index: 5
-
-  &__lead
-    box:
-    margin: 1.7rem 0
-    background: rgba(196, 196, 196, .3)
-    border-radius: 4px 4px 8px 8px
-    padding: .75rem 1rem
-    position: relative
-
-    &-img
-      border-radius: 50%
-      min-width: 40px
-
-      &--wrapper
-        display: block
-        text-decoration: none
-        margin-right: 1rem
-
-    &-name
-      text: $pseudo-neutral-900 700 15px 1.8
-      text-decoration: none
-
-    &-desc
-      text: 500 15px 1.8
-      margin-bottom: 0
-
-  &__related
-    margin: 1.7rem 0 @xl 2.5rem 0
-
-    &-flame
-      text: $accent-2-medium 500 15px 1.8 @xl 17px
-      display: inline-flex
-      align-items: center
-      text-transform: uppercase
-      margin-left: -10px
-
-      &:before
-        content: ''
-        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
-        background-size: contain
-        background-position: center
-        background-repeat: no-repeat
-        size: 24px
-        margin-right: .5rem
-
-    &-blockquote
-      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
-      font-style: italic
-      border-left: 4px solid $accent-2-medium
-      padding: .5rem 1rem
-
-  .card
-    margin: 0 -1rem
-
-  ul:not([class]), ol:not([class])
-    margin: 2rem 0 @xl 2.1rem 0 3rem
-
-    li
-      text: 500 13px 1.8 @md 15px
-
-.article__title
-  margin-top: 0
-  margin-bottom: 0.8rem
-
-.article__title-mark
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 2.1
-  margin-left: .4rem
-  letter-spacing: .015em
-  color: #263238
-
-.article__mark
-  font-size: .9375rem
-  font-weight: 500
-  line-height: 2.1
-  margin-top: 0
-  margin-bottom: 1rem
-  color: #263238
-
-.article__main-img
-  position: absolute
-  top: 0
-  left: 0
-
-.article__main-img-wrapper
-  position: relative
-  overflow: hidden
-  margin-bottom: 2rem
-  padding-top: 62.5%
-
-  img
-    position: absolute
-    top: 0
-    left: 0
-
-.article__content
-  margin-top: 2.2rem
-  margin-bottom: 2.5rem
-
-  h2, h3
-    em
-      display: inline-flex
-      align-items: center
-      font-style: normal
-
-      &:after
-        content: 'Promoted'
-        text: $pseudo-neutral-200 11px 18px
-        text-align: center
-        white-space: nowrap
-        padding: 0 .5rem
-        border-radius: 2px
-        border: 1px solid $pseudo-neutral-100
-        font-style: normal
-        margin-left: 1rem
-
-.article h4
-  margin-top: 2.6rem
-  margin-bottom: 2.2rem
-  padding: 1.3rem 2rem
-  background: #f5f5f5
-
-.article__fact-title, .article__fact strong
-  font-size: 27px
-  font-weight: 600
-  line-height: 1.4
-  display: block
-  margin-bottom: .6rem
-  text-align: center
-
-.article
-  h4 strong
-    font-size: 27px
-    font-weight: 600
-    line-height: 1.4
-    display: block
-    margin-bottom: .6rem
-    text-align: center
-
-.article__fact-text, .article__fact p
-  font-size: 15px
-  font-weight: 500
-  line-height: 2.1
-  margin-bottom: 0
-  text-align: center
-  color: #263238
-
-.article
-  h4 p, h4-text
-    font-size: 15px
-    font-weight: 500
-    line-height: 2.1
-    margin-bottom: 0
-    text-align: center
-    color: #263238
-
-main
-  &:not(.scroll-end) > .article:after
-    position: absolute
-    right: 0
-    bottom: 0
-    left: 0
-    display: block
-    height: 100vh
-    margin-right: -50vw
-    margin-left: -50vw
-    content: ''
-    transition: .5s ease
-    -webkit-transform: translateY(100%)
-    transform: translateY(100%)
-    pointer-events: none
-    opacity: 0
-    background: linear-gradient(180deg, #263238 0, rgba(38, 50, 56, 0) 100%)
-
-  > .article:nth-last-child(2)
-    z-index: 4
-
-    &:after
-      opacity: 1
-
 .footer
   margin-top: 2rem
   position: relative
@@ -656,9 +465,6 @@ main
 
 figure
   margin: 1.5rem 0
-
-.article__content figure img
-  margin-bottom: 0
 
 figcaption
   font-size: .8125rem
@@ -849,57 +655,6 @@ p
   width: 100% @sm auto
   margin-top: 1rem @sm 0
 
-.article__content
-  font-size: .875rem
-  line-height: 1.75
-  margin: 0
-  margin-bottom: 1.7rem
-
-.article
-  p
-    font-size: .875rem
-    line-height: 1.75
-    margin: 0
-    margin-bottom: 1.7rem
-
-  ol:not([class]), ul:not([class])
-    margin: 2rem 0
-
-  ol:not([class]) li, ul:not([class]) li
-    font-size: .875rem
-    line-height: 1.75
-
-  &__contents
-    margin: 1.7rem 0
-
-    &-title
-      text: 600 17px 1.4
-      margin-bottom: 1.3rem
-
-    &-list
-      margin-bottom: 1.45rem
-
-    &-item
-      padding-left: 1.6rem
-      position: relative
-
-      & + &
-        margin-top: .5rem
-
-      &:before
-        content: ''
-        position: absolute
-        left: 0
-        top: 12px
-        display: block
-        background-color: $accent-1-light
-        size: 5px
-        border-radius: 50%
-
-    &-link
-      border-bottom: 0
-      text: $accent-1-light 500 15px 1.8
-
 p
   ol, p, ul
     margin-top: -0.7rem
@@ -971,7 +726,7 @@ body
     z-index: 996
 
   &--content
-    margin: 1rem 0 @sm 1rem 0
+    margin: 1.5rem 0 @md 2rem 0 @xl 2.5rem 0
 
   &__content
     display: inline-flex
@@ -1198,46 +953,6 @@ body
   text-decoration: none
   color: #263238
 
-.article__main-img
-  width: 100%
-  height: 100%
-
-.article__amp-recommended
-  border-top: 16px solid #F5F5F5
-  border-bottom: 16px solid #F5F5F5
-  margin: 0 -1rem
-  padding: 1.5rem 1rem
-
-  &-title
-    text: 600 21px 1.4
-    margin-bottom: 1.2rem
-
-  &-item
-    margin-bottom: 1rem @sm 1.5rem
-    box:
-
-    &:last-child
-      margin-bottom: 0
-
-    &-title
-      text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
-      text-decoration: none
-      background-color: $neutral
-      width: 100%
-      display: block
-
-    &-img
-      display: block
-      width: 100%
-      max-width: 72px @sm 144px @xl 218px
-      min-width: 72px @sm 144px @xl 218px
-
-  &-info
-    padding: 0 1.5rem .6rem
-
-  &-row
-    margin-bottom: .5rem
-
 .promoted__mark
   border: 1px solid rgba(255, 255, 255, 0.4)
   color: #FFF
@@ -1251,28 +966,11 @@ body
   top: 0
   right: 0
 
-.amp-article .article__content
-  overflow: hidden
-  max-height: 200px
-
-  &.active
-    overflow: auto
-    max-height: 100%
-
 .link-text
   text-decoration: none
   border-bottom: 0
   color: $accent-1-light
   padding-left: 5px
-
-.article
-  padding-bottom: 0
-
-.article__main-img
-  height: auto
-
-.article__main-img-wrapper
-  padding-top: 0
 
 .about-author
   background-color: #f5f5f5
@@ -1316,10 +1014,6 @@ body
     &:last-child
       margin-right: 0
 
-.article .about-author p
-  margin: .5rem 0 0 -60px
-  text: 15px 1.8
-
 .disclaimer
   margin-top: .5rem
 
@@ -1337,31 +1031,6 @@ body
   line-height: 1.5rem
   color: #78909c
   margin-bottom: 0
-
-.article__header
-  margin-bottom: 1rem
-
-.article__header--row
-  display: flex
-
-.article__amp-recommended-wrapper--img
-  position: relative
-
-.article__label
-  text: #263238 13px 16px 500
-  text-decoration: none
-  display: inline-flex
-  align-items: center
-  margin-bottom: 1rem
-  margin-right: 1rem
-  position: relative
-  padding-left: 2rem
-
-  svg
-    width: 24px
-    height: 24px
-    position: absolute
-    left: 0
 
 amp-list
   height: 0
@@ -1496,6 +1165,229 @@ amp-list
     line-height: 1.8
     width: 100%
     text-align: center
+
+.article
+  margin-bottom: 0
+
+  h4
+    margin-top: 2.6rem
+    margin-bottom: 2.2rem
+    padding: 1.3rem 2rem
+    background: #f5f5f5
+
+  h4 strong
+    font-size: 27px
+    font-weight: 600
+    line-height: 1.4
+    display: block
+    margin-bottom: .6rem
+    text-align: center
+
+  h4 p
+    font-size: 15px
+    font-weight: 500
+    line-height: 2.1
+    margin-bottom: 0
+    text-align: center
+    color: #263238
+
+  p
+    text: 15px 1.75
+    margin: 0 0 1.7rem
+
+  ol:not([class]), ul:not([class])
+    margin: 2rem 0
+
+  ol:not([class]) li, ul:not([class]) li
+    text: 15px 1.75
+
+  &__lead
+    box:
+    margin: 1.7rem 0
+    background: rgba(196, 196, 196, .3)
+    border-radius: 4px 4px 8px 8px
+    padding: .75rem 1rem
+    position: relative
+
+    &-img
+      border-radius: 50%
+      min-width: 40px
+
+      &--wrapper
+        display: block
+        text-decoration: none
+        margin-right: 1rem
+
+    &-name
+      text: $pseudo-neutral-900 700 15px 1.8
+      text-decoration: none
+
+    &-desc
+      text: 500 15px 1.8
+      margin-bottom: 0
+
+  &__related
+    margin: 1.7rem 0 @xl 2.5rem 0
+
+    &-flame
+      text: $accent-2-medium 500 15px 1.8 @xl 17px
+      display: inline-flex
+      align-items: center
+      text-transform: uppercase
+      margin-left: -10px
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
+
+    &-blockquote
+      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
+      font-style: italic
+      border-left: 4px solid $accent-2-medium
+      padding: .5rem 1rem
+
+  .card
+    margin: 0 -1rem
+
+  ul:not([class]), ol:not([class])
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+
+    li
+      text: 500 13px 1.8 @md 15px
+
+  &__title
+    margin-top: 0
+    margin-bottom: 0.8rem
+
+  &__main-img
+
+    &-wrapper
+      margin-bottom: 2rem
+
+  &__content
+    h2, h3
+      em
+        display: inline-flex
+        align-items: center
+        font-style: normal
+
+        &:after
+          content: 'Promoted'
+          text: $pseudo-neutral-200 11px 18px
+          text-align: center
+          white-space: nowrap
+          padding: 0 .5rem
+          border-radius: 2px
+          border: 1px solid $pseudo-neutral-100
+          font-style: normal
+          margin-left: 1rem
+
+    &.active
+      overflow: auto
+      max-height: 100%
+
+  &__header
+    margin-bottom: 1rem
+
+    &--row
+      box:
+
+  &__contents
+    margin: 1.7rem 0
+
+    &-title
+      text: 600 17px 1.4
+      margin-bottom: 1.3rem
+
+    &-list
+      margin-bottom: 1.45rem
+
+    &-item
+      padding-left: 1.6rem
+      position: relative
+
+      & + &
+        margin-top: .5rem
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 12px
+        display: block
+        background-color: $accent-1-light
+        size: 5px
+        border-radius: 50%
+
+    &-link
+      border-bottom: 0
+      text: $accent-1-light 500 15px 1.8
+
+  &__label
+    text: #263238 13px 16px 500
+    text-decoration: none
+    display: inline-flex
+    align-items: center
+    margin-bottom: 1rem
+    margin-right: 1rem
+    position: relative
+    padding-left: 2rem
+
+    svg
+      width: 24px
+      height: 24px
+      position: absolute
+      left: 0
+
+  &__amp-recommended
+    border-top: 16px solid #F5F5F5
+    border-bottom: 16px solid #F5F5F5
+    margin: 0 -1rem
+    padding: 1.5rem 1rem
+
+    &-title
+      text: 600 21px 1.4
+      margin-bottom: 1.2rem
+
+    &-wrapper--img
+      position: relative
+
+    &-item
+      margin-bottom: 1rem @sm 1.5rem
+      box:
+
+      &:last-child
+        margin-bottom: 0
+
+      &-title
+        text: $pseudo-neutral-900 500 13px 1.9 @xl 15px
+        text-decoration: none
+        background-color: $neutral
+        width: 100%
+        display: block
+
+      &-img
+        display: block
+        width: 100%
+        max-width: 72px @sm 144px @xl 218px
+        min-width: 72px @sm 144px @xl 218px
+
+    &-info
+      padding: 0 1.5rem .6rem
+
+    &-row
+      margin-bottom: .5rem
+
+  .about-author
+    p
+      margin: .5rem 0 0 -60px
+      text: 15px 1.8
+
 
 .card
   background-color: #fff

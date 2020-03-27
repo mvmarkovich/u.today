@@ -3,13 +3,13 @@ section.card.card--tweet
 
   .card__body
     each item in cryptoTweets
-      article.aside-story.aside-story--tweets
+      .aside-story.aside-story--tweets
         .aside-story__img-wrapper
           img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
 
         .aside-story__body
           a.aside-story__link(href="#!")= item.login
-          time.text-small= item.time
+          .text-small= item.time
 
         .aside-story__text= item.text
 
