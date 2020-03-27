@@ -726,7 +726,7 @@ body
     z-index: 996
 
   &--content
-    margin: 1.5rem 0 @md 2rem 0 @xl 2.5rem 0
+    margin: 1rem 0
 
   &__content
     display: inline-flex
@@ -772,6 +772,10 @@ body
   text: $pseudo-neutral-400 13px 1.6
   text-align: center
   margin: 0 0 16px 0
+
+  a
+    text: $pseudo-neutral-400
+    text-decoration: underline
 
 .header
   margin: 0 0 1rem
@@ -1294,6 +1298,9 @@ amp-list
 
       ol:not([class]) li, ul:not([class]) li
         text: 15px 1.75
+
+    .something
+      margin: 1.5rem 0 @md 2rem 0 @xl 2.5rem 0
 
   &__header
     margin-bottom: 1rem
