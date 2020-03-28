@@ -383,85 +383,72 @@ textarea.input__elem
       position: absolute 4px null null 0
 
 .footer
-  margin-top: 2rem
+  margin-top: 32px
   position: relative
   z-index: 150
   background: #fff
 
   &__container
-    padding: 0 1rem @md 0
+    padding: 0 16px @md 0
+
+  &__title
+    text: 600 13px 1.2 @md 15px
+    margin-bottom: 13px
+
+  &__nav
+    position: relative
+    padding-top: 21px
+    padding-bottom: 16px
+    border-bottom: 1px solid #cfd8dc
+
+    &-list
+      box: wrap space-between
+      margin-top: -24px
+
+    &-item
+      width: 60% @sm 35% @md 33% @xl auto
+      white-space: nowrap
+      margin-top: 24px
+
+      &:nth-child(even)
+        width: 30% @md 33% @xl auto
+
+    &-child
+
+      &-list
+        margin-top: 16px
+        display: none @sm block
+
+      &-item
+
+        & + &
+          margin-top: 10px
+
+      &-link
+        text: $pseudo-neutral-900 500 13px 2.1 @md 15px
+        letter-spacing: .015em
+
+    &-link
+      text: 600 17px 1.4
+
+  &__copy
+    box: wrap
+    padding: 24px 0
+
+    &-text
+      text: $pseudo-neutral-400 500 13px 1.9 @md 15px
+      margin-right: 32px
+
+    &-link
+      text: $pseudo-neutral-400 500 13px 1.9 @md 15px
 
   &:before
     display: block
     content: ''
     border-bottom: 3px solid #263238
 
-.footer__row
-  display: none
-
-.footer__title
-  font-size: .8125rem
-  font-weight: 600
-  line-height: 1.2
-  margin-bottom: 0.8rem
-
-.footer__nav
-  position: relative
-  padding-top: 1.3rem
-  padding-bottom: .3rem
-  border-bottom: 1px solid #cfd8dc
-
-.footer__nav-list
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  margin-top: -1.5rem
-
-.footer__nav-item
-  width: 60% @md 33% @xl auto
-  white-space: nowrap
-  margin-top: 1.5rem
-
-.footer__nav-item:nth-child(even)
-  width: 30% @md 33% @xl auto
-
-.footer__nav-link
-  font-size: 1.0625rem
-  font-weight: 600
-  line-height: 1.4
-
-.footer__nav-child-list
-  margin-top: 1rem
-  display: none @sm block
-
-.footer__nav-child-item .footer__nav-child-item
-  margin-top: 0.94rem
-
-.footer__nav-child-link
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 2.1
-  letter-spacing: .015em
-  color: #263238
-
-.footer__copy
-  display: flex
-  padding-top: 1.5rem
-  padding-bottom: 1.5rem
-  flex-wrap: wrap
-
-.footer__copy-text
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 1.9
-  margin-right: 2rem
-  color: #78909c
-
-.footer__copy-link
-  font-size: .8125rem
-  font-weight: 500
-  line-height: 1.9
-  color: #78909c
+  &__row
+    display: none
 
 figure
   margin: 1.5rem 0
@@ -1014,7 +1001,7 @@ body
   margin-top: .5rem
 
   .disclaimer_text
-    text: #90a4ae 13px 16px 500
+    text: #90a4ae 500 13px 1.2
     letter-spacing: .01em
     margin-bottom: 0
 
@@ -1023,9 +1010,7 @@ body
   padding: 1.1875rem 0 0.8125rem
 
 .footer__disclaimer-text
-  font-size: .8125rem
-  line-height: 1.5rem
-  color: #78909c
+  text: $pseudo-neutral-400 13px 1.6 @md 15px
   margin-bottom: 0
 
 amp-list
@@ -1425,7 +1410,7 @@ amp-list
       margin-top: -20px
 
   &__title
-    text: $pseudo-neutral-900 13px 1.4 600
+    text: $pseudo-neutral-900 600 13px 1.4 @xl 15px
     padding: .219rem 1rem
     min-height: 40px
     border-bottom: $border
@@ -1574,7 +1559,7 @@ amp-list
       align-items: center
 
   &__link
-    text: $pseudo-neutral-900 13px 1.9 500
+    text: $pseudo-neutral-900 13px 1.9 500 @xl 15px
     text-decoration: none
     display: block
 
