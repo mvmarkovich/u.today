@@ -1353,7 +1353,7 @@ aside {
 }
 
 .something--content {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .something__content {
@@ -4407,6 +4407,10 @@ blockquote em {
     margin-top: 1rem;
   }
 
+  .something--content {
+    margin: 2rem 0;
+  }
+
   .something-square {
     display: none;
   }
@@ -4882,6 +4886,10 @@ blockquote em {
 
   .btn--celsius {
     margin-left: 0;
+  }
+
+  .something--content {
+    margin: 2.5rem 0;
   }
 
   .something__content-square {
