@@ -2915,7 +2915,7 @@ main > .article:nth-last-child(2):after {
   }
 }
 
-@media (min-width: 785px) {
+@media (min-width: 768px) {
   .hide-md-up {
     display: none;
   }

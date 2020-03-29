@@ -4358,7 +4358,7 @@ blockquote em {
   }
 }
 
-@media (min-width: 785px) {
+@media (min-width: 768px) {
   .container {
     max-width: 768px;
   }

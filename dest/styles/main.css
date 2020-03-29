@@ -2260,7 +2260,7 @@
   }
 }
 
-@media (min-width: 785px) {
+@media (min-width: 768px) {
   .breaking {
     flex-wrap: nowrap;
   }

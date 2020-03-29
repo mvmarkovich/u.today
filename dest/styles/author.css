@@ -220,7 +220,7 @@
   }
 }
 
-@media (min-width: 785px) {
+@media (min-width: 768px) {
   .news-featured__item {
     width: 33%;
   }
