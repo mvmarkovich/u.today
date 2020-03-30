@@ -18,6 +18,7 @@ html(lang="en" dir="ltr" ⚡)
 
         script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
         script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+        script(async='', custom-element='amp-social-share' src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -463,11 +464,11 @@ html(lang="en" dir="ltr" ⚡)
 
         .share-and-up
             .share__social
-                a.share__circle(href="#!")
+                amp-social-share.share__circle(type="telegram" width="32" height="32" data-share-endpoint="tg://msg" data-param-text="Check out this article: TITLE - CANONICAL_URL")
                     include ../img/icons/social/telegram.svg
-                a.share__circle(href="#!")
+                amp-social-share.share__circle(type="twitter" width="32" height="32")
                     include ../img/icons/social/twitter.svg
-                a.share__circle(href="#!")
+                amp-social-share.share__circle(type="facebook" width="32" height="32")
                     include ../img/icons/social/facebook.svg
 
         footer.footer
