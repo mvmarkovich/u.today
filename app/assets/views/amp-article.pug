@@ -104,8 +104,16 @@ html(lang="en" dir="ltr" ⚡)
                                                 a.header__nav-child-link(href="#!c" + i)= child.name
 
                 .header__panel
-                    button.btn.btn--search.btn--light.header__btn-search
-                        include ../img/icons/search.svg
+                    .header__search
+                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                            include ../img/icons/search.svg
+
+                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
+                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
+                                include ../img/icons/search.svg
+                            input.header__search-input(type="text" name="search")
+                            button.header__search-close.btn.btn--light.btn--cross
+                                include ../img/icons/Cross.svg
 
                     button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
                         include ../img/icons/burger.svg
