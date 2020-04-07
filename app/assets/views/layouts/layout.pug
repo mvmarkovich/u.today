@@ -25,6 +25,10 @@ html(lang="en" dir="ltr")
 
   body
 
+    .something(style="background-color: #fff")
+      a.something__content(href="#!")
+        img(src="img/something/vexel.png")
+
     include ../blocks/currencies.pug
 
     include ../inc/header.pug
@@ -35,6 +39,8 @@ html(lang="en" dir="ltr")
     include ../inc/share.pug
 
     include ../inc/footer.pug
+
+    include ../blocks/modal.pug
 
     block foot
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
