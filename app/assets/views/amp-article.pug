@@ -63,7 +63,7 @@ html(lang="en" dir="ltr" ⚡)
 
     body
 
-        .something(style="background-color: #fff")
+        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
             a.something__content(href="#!")
                 amp-img(src="img/something/vexel.png" width="970" height="90" layout="intrinsic")
 
@@ -109,7 +109,9 @@ html(lang="en" dir="ltr" ⚡)
                                                 a.header__nav-child-link(href="#!c" + i)= child.name
 
                 .header__panel
-                    button.btn(on="tap:subscribe") Subscribe
+                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
+                        include ../img/icons/subscribe.svg
+                        | Subscribe
 
                     .header__search
                         a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
