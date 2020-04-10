@@ -147,6 +147,10 @@ html(lang="en" dir="ltr" ⚡)
 
                         .article__header
                             .article__header--row
+                                .share__social
+                                    amp-social-share.share__circle.share__circle-tw(type="twitter" width="56" height="24")
+                                    amp-social-share.share__circle.share__circle-fb(type="facebook" width="56" height="24")
+                                    amp-social-share.share__circle.share__circle-ln(type="linkedin" width="56" height="24")
                                 a.humble.humble--icon(href="#!") News
                                     include ../img/icons/label/news.svg
                                 .humble.author__item-time Oct 27’2018, 11:27 AM
@@ -512,15 +516,6 @@ html(lang="en" dir="ltr" ⚡)
 
                         .card__footer
                             a.btn.btn--light.btn--arrow-right(href="#!") Show more
-
-        .share-and-up
-            .share__social
-                amp-social-share.share__circle(type="twitter" width="32" height="32")
-                    include ../img/icons/social/twitter.svg
-                amp-social-share.share__circle(type="facebook" width="32" height="32")
-                    include ../img/icons/social/facebook.svg
-                amp-social-share.share__circle(type="linkedin" width="32" height="32")
-                    include ../img/icons/social/LinkedIn.svg
 
         footer.footer
             .container.footer__container
