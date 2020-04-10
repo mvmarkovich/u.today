@@ -138,9 +138,11 @@ html(lang="en" dir="ltr" ⚡)
             .main-aside-container
                 .main-news-block
                     .article
-                        a.article__label U.TODAY Original Article
+                        a.article__label.article__label-sponsored(href="#!") Sponsored
+                            include ../img/icons/sponcored.svg
+                        a.article__label(href="#!") U.TODAY Original Article
                             include ../img/icons/article__label-u.svg
-                        a.article__label Tweet-based article
+                        a.article__label(href="#!") Tweet-based article
                             include ../img/icons/social/twitter.svg
 
                         h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
