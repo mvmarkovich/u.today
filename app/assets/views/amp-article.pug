@@ -559,13 +559,17 @@ html(lang="en" dir="ltr" ⚡)
                     .modal__item-body
                         .modal__item-text Sign up for crypto digest
 
-                        form(action="#" method="get" target="_top")
+                        form(action="#" action-xhr="https://example.com/subscribe" method="post" target="_top")
+                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
+                            .validation__panel.validation__error(submit-error='') Error
+
                             .input.article__subscribe-input
                                 input.input__elem(type="text" name="email" placeholder="Email" required)
 
-                            button.btn.btn--wide.btn--input(type="submit") Subscribe
+                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
 
                             .modal__item-agree By pressing the “Subscribe button” you agree with our
                                 a(href="#!") Privacy Policy
+
 
 
