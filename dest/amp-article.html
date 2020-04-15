@@ -794,12 +794,12 @@
           </button>
           <div class="modal__item-body">
             <div class="modal__item-text">Sign up for crypto digest</div>
-            <form action="https://www.example.com/endpoint" action-xhr="https://www.example.com/endpoint" method="get" target="_top">
+            <form action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top">
+              <div class="validation__panel validation__successful" submit-success="">Thank you for subscription!</div>
+              <div class="validation__panel validation__error" submit-error=""><template type="amp-mustache">Error! JSON: {{message}}</template></div>
               <div class="input article__subscribe-input">
                 <input class="input__elem" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
               </div>
-              <div class="validation__panel validation__successful" submit-success="">Thank you { for subscription!</div>
-              <div class="validation__panel validation__error" submit-error="">Error</div>
               <input class="btn btn--wide btn--input" type="submit" value="Subscribe">
               <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our<a href="#!">Privacy Policy</a></div>
             </form>
