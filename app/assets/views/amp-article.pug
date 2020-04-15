@@ -18,8 +18,9 @@ html(lang="en" dir="ltr" ⚡)
 
         script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
         script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async='', custom-element='amp-social-share' src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
-        script(async='', custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
+        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
+        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
+        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -205,8 +206,18 @@ html(lang="en" dir="ltr" ⚡)
                             .widget__mark Sponsored by <span> Celsius.Network </span>
 
                         .article__main-img-wrapper
+                            figcaption Cover image via <a href="#!"> www.tronwallet.me </a>
                             amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', layout='responsive', width='16', height='10')
-                            figcaption Cover image via <a href="#!"> 123rf.com </a>
+
+                            .sponcored
+                                span.sponcored--title Sponsored
+
+                                a.btn.btn--sponcored(href="#!")
+                                    amp-img(src='img/something/iqmining_3-icon.svg', layout='fixed', width='40', height='40')
+                                    .btn--sponcored-info
+                                        .btn--sponcored-title IQ Mining
+                                        .btn--sponcored-desc 30% OFF till 30th Apr
+
                             .disclaimer
                                 p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
@@ -559,12 +570,13 @@ html(lang="en" dir="ltr" ⚡)
                     .modal__item-body
                         .modal__item-text Sign up for crypto digest
 
-                        form(action="#" action-xhr="https://example.com/subscribe" method="post" target="_top")
-                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
-                            .validation__panel.validation__error(submit-error='') Error
+                        form(action="https://www.example.com/endpoint" action-xhr="https://www.example.com/endpoint" method="get" target="_top")
 
                             .input.article__subscribe-input
-                                input.input__elem(type="text" name="email" placeholder="Email" required)
+                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
+
+                            .validation__panel.validation__successful(submit-success='') Thank you { for subscription!
+                            .validation__panel.validation__error(submit-error='') Error
 
                             input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
 
