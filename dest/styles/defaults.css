@@ -639,11 +639,6 @@ h5 {
   width: 100%;
 }
 
-.main-aside-container .content-block {
-  margin: -1rem -1rem 0;
-  width: auto;
-}
-
 .main-news-block {
   width: 100%;
   position: relative;
@@ -4275,10 +4270,6 @@ blockquote em {
     margin-bottom: 1rem;
   }
 
-  .main-aside-container .content-block {
-    margin: -1rem -1.5rem 0;
-  }
-
   .main-news-block > * {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -4398,10 +4389,6 @@ blockquote em {
 
   .main-aside-container--vertical {
     max-width: 768px;
-  }
-
-  .main-aside-container .content-block {
-    margin: -2rem -1.5rem 0;
   }
 
   .main-news-block {
@@ -4883,10 +4870,6 @@ blockquote em {
 
   .main-aside-container--vertical {
     max-width: 800px;
-  }
-
-  .main-aside-container .content-block {
-    margin: -2rem -2rem 0;
   }
 
   .main-news-block {
