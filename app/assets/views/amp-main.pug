@@ -1,0 +1,478 @@
+include inc/var.pug
+doctype html
+html(lang="en" dir="ltr" ⚡)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+
+        script(async="" src="https://cdn.ampproject.org/v0.js")
+
+        style(amp-boilerplate='').
+            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+
+        noscript
+            style(amp-boilerplate='').
+                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+
+        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
+        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
+        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
+        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
+
+        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+
+        style(amp-custom="")
+            include ../../../dest/styles/amp-main.css
+
+        script(type='application/ld+json').
+            {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://google.com/article"
+            },
+            "headline": "Article headline",
+            "image": {
+            "@type": "ImageObject",
+            "url": "https://google.com/thumbnail1.jpg",
+            "height": 800,
+            "width": 800
+            },
+            "datePublished": "2015-02-05T08:00:00+08:00",
+            "dateModified": "2015-02-05T09:20:00+08:00",
+            "author": {
+            "@type": "Person",
+            "name": "John Doe"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Google",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://google.com/logo.jpg",
+            "width": 600,
+            "height": 60
+            }
+            },
+            "description": "A most wonderful article"
+            }
+
+
+    body
+
+        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+                include ../img/icons/cross.svg
+
+            .sidebar__social.social
+                a.social__link.social__link--fb(href="#!")
+                    include ../img/icons/social/facebook.svg
+                a.social__link.social__link--tg(href="#!")
+                    include ../img/icons/social/telegram.svg
+                a.social__link.social__link--tw(href="#!")
+                    include ../img/icons/social/twitter.svg
+
+            nav.sidebar__nav
+                ul.sidebar__nav-list
+                    each category in navFooter
+                        li.sidebar__nav-item
+                            a.sidebar__nav-link(href="#!")= category.name
+
+                            if category.childs
+                                ul.sidebar__nav-child-list
+                                    each child in category.childs
+                                        li.sidebar__nav-child-item
+                                            a.sidebar__nav-child-link(href="#!")= child.name
+
+        header.header
+            .container.header__container
+                a.header__logo(href="/")
+                    include ../img/icons/logo.svg
+
+                nav.header__nav
+                    ul.header__nav-list
+                        each category, i in nav
+                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
+                                a.header__nav-link(href="/" + i)= category.name
+
+                                if category.childs
+                                    ul.header__nav-child-list
+                                        each child, i in category.childs
+                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
+                                                a.header__nav-child-link(href="#!c" + i)= child.name
+
+                .header__panel
+                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
+                        include ../img/icons/subscribe.svg
+                        | Subscribe
+
+                    .header__search
+                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                            include ../img/icons/search.svg
+
+                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
+                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
+                                include ../img/icons/search.svg
+                            input.header__search-input(type="text" name="search")
+                            button.header__search-close.btn.btn--light.btn--cross
+                                include ../img/icons/Cross.svg
+
+                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
+                        include ../img/icons/burger.svg
+
+        .container.page-container
+
+            .something.something--content
+                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
+
+                a.something__content(href="#!" style="background-color: #cef1f3")
+                    amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
+
+            .main-aside-container
+                .main-block
+                    .news
+                        .news__header
+                            .icon.icon--clock
+                            .news__title Latest news
+                            .btns-spacer
+                                a.btn.btn--pseudo(href="#!") See all
+
+                        ul.news__list
+                            li.news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble 1 hour ago
+
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-link.link-plain(href="#!") Google CEO’s Son Mines Ethereum on Home PC
+
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment_bold.svg
+                                            | 0
+
+                            li.news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble 5 hours ago
+
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-title.link-plain(href="#!") Coinbase Custody Launches Cryptocurrency Fund With Wilshire Phoenix Two strings news title
+
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment_bold.svg
+                                            | 12
+
+                            li.news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble 12 hours ago
+
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-title.link-plain(href="#!") From Thinking Like a Regulator to Pulling Off a Crypto Heist: StartEngine Summit Opens LA Blockchain Week (Sample three line header for demo)
+
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment_bold.svg
+                                            | 56
+                            li.news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble 18 hour ago
+
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-title.link-plain(href="#!") Past-ICO Review: Hero Token
+
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment_bold.svg
+                                            | 33
+
+                    .press-releases
+
+                        .press-releases__header
+
+                            .press-releases__info
+                                h3.press-releases__title Press releases
+
+                                .btn--block
+                                    a.btn.btn--pseudo(href="#!See all") See all
+                                    a.btn.btn--pseudo(href="#!Submit") Submit
+
+                        .press-releases__row
+                            a.press-releases__item.link-plain(href="#!")
+                                .press-releases__inner
+                                    .press-releases__item-img--wrapper
+                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1696.jpg?itok=zr1r7IrI" layout="responsive" width="224" height="140")
+                                        .promoted__mark Promo
+
+                                    h4.press-releases__item-name EPAY-X is Encouraging Crypto Adoption by Letting Its Debit Card Users Spend It Anywhere
+
+                            a.press-releases__item.link-plain(href="#!")
+                                .press-releases__inner
+                                    .press-releases__item-img--wrapper
+                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR" layout="responsive" width="224" height="140")
+                                        .promoted__mark Promo
+
+                                    h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
+
+                            a.press-releases__item.link-plain(href="#!")
+                                .press-releases__inner
+                                    .press-releases__item-img--wrapper
+                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
+                                        .promoted__mark Promo
+
+                                    h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
+
+                    .story
+                        .story__header
+                            .humble__row
+                                a.humble(href="#!") TOP stories
+                                .humble.humble--time 17 minutes ago
+                            a.story__title-link.link-plain(href="#!")
+                                h2.story__title Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay
+
+                        a.story__img-wrapper.link-plain(href="#!")
+                            amp-img.story__img(src="https://u.today/sites/default/files/styles/736x/public/2020-04/2965_0.jpg.webp" layout="responsive" width="736" height="460")
+
+                        .story__footer
+                            a.story__desc.link-plain(href="#!") John McAfee sends word that Tron’s TRX is finally supported on the recently launched SEC-criticized DEX
+                            .humble__row
+                                a.humble.humble--author(href="#!")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                                    | Yuri Molchan
+                                .humble.humble--icon.humble--icon-large
+                                    include ../img/icons/comment.svg
+                                    | 0
+
+                    .something.something--content
+                        .something.something__content-long(style="background-color: #032e61")
+                            amp-img(src="img/something/long.png" alt="something-wide" layout="intrinsic" width="728" height="90")
+
+                        .something.something__content-square(style="background-color: #032e61")
+                            amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
+
+                    .stories
+                        .stories__item
+                            a.stories__img-wrapper(href="#!")
+                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2973.jpg?itok=OsEwmzXP" layout="responsive" width="240" height="136")
+
+                            .stories__item-info
+                                .humble__row
+                                    a.humble(href="#!") Stories
+                                    .humble.humble--time 2 hours ago
+                                a.stories__item-title.link-plain(href="#!") Tron CEO Justin Sun Teases "Huge" Secret Guest at Upcoming NiTROn Summit
+                                .humble__row
+                                    a.humble.humble--author(href="#!")
+                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                                        | Yuri Molchan
+                                    .humble.humble--icon.humble--icon-large
+                                        include ../img/icons/comment.svg
+                                        | 2
+
+                        .stories__item
+                            a.stories__img-wrapper.link-plain(href="#!")
+                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2964.jpg?itok=7k54XRVR" layout="responsive" width="240" height="136")
+
+                            .stories__item-info
+                                .humble__row
+                                    a.humble(href="#!") Interviews
+                                    .humble.humble--time 4 hours ago
+                                a.stories__item-title.link-plain(href="#!") Tron Price ‘Ready to Fly’ as Justin Sun Gives Away 50 Mln TRX to SRs
+                                .humble__row
+                                    a.humble.humble--author(href="#!")
+                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/alex-m-ava.jpg" layout="fixed" width="24" height="24")
+                                        | Alex Dovbnya
+                                    .humble.humble--icon.humble--icon-large
+                                        include ../img/icons/comment.svg
+                                        | 12
+
+                    .story
+                        .story__header
+                            .humble__row
+                                a.humble(href="#!") Cryptocurrency trading
+                                .humble.humble--time 1 day 15 hours ago
+                            a.story__title-link.link-plain(href="#!")
+                                h2.story__title Tron Surpasses Rival Blockchains
+
+                        a.story__img-wrapper.link-plain(href="#!")
+                            amp-img.story__img(src="https://u.today/sites/default/files/styles/736x/public/2019-12/1524.jpg?itok=LN2Ej_tZ" layout="responsive" width="736" height="460")
+
+                        .story__footer
+                            a.story__desc.link-plain(href="#!") Another 30 mln USDT moved from the Ethereum chain to Tron, reports Misha Lederman, a major Tron supporter as Justin Sun recommends Poloniex for USDT-Tron conversion
+                            .humble__row
+                                a.humble.humble--author(href="#!")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/geof-big_0.jpg" layout="fixed" width="24" height="24")
+                                    | Geoffrey Schwartz
+                                .humble.humble--icon.humble--icon-large
+                                    include ../img/icons/comment.svg
+                                    | 77
+
+                    .stories
+                        .stories__item
+                            a.stories__img-wrapper.link-plain(href="#!")
+                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2958.jpg?itok=ot2Di6sS" layout="responsive" width="240" height="136")
+
+                            .stories__item-info
+                                .humble__row
+                                    a.humble(href="#!") Price Prediction
+                                    .humble.humble--time 1 day 23 hours ago
+                                a.stories__item-title.link-plain(href="#!") It's Official: Tron CEO Justin Sun Confirms Much-Hyped Partnership with Samsung
+                                .humble__row
+                                    a.humble.humble--author(href="#!")
+                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg" layout="fixed" width="24" height="24")
+                                        | Denys Serhiichuk
+                                    .humble.humble--icon.humble--icon-large
+                                        include ../img/icons/comment.svg
+                                        | 123
+
+                        .stories__item
+                            a.stories__img-wrapper.link-plain(href="#!")
+                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2960.jpg?itok=6Fq_k83V" layout="responsive" width="240" height="136")
+
+                            .stories__item-info
+                                .humble__row
+                                    a.humble(href="#!") News
+                                    .humble.humble--time 2 days 1 hour ago
+                                a.stories__item-title.link-plain(href="#!") EOS Remains in First Place on China's Updated Crypto Rankings. What About Tron, Ethereum ...
+                                .humble__row
+                                    a.humble.humble--author(href="#!")
+                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
+                                        | Vladislav Sopov
+                                    .humble.humble--icon.humble--icon-large
+                                        include ../img/icons/comment.svg
+                                        | 246
+
+                aside.aside-menu-block
+
+                    .card.card--widget.hide-md-up
+                        h4.card__title Top tranding bot
+                            span.card__mark Promoted
+
+                        .card__body
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
+
+                                    .card--widget__info
+                                        .card--widget__title IQ Mining
+                                        span.card--widget__signature 40% discount till 8 march
+
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
+
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+
+                                    .card--widget__info
+                                        .card--widget__title CryptoUniverse
+                                        span.card--widget__signature Cashback up to 20%
+
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
+
+                    .card.card--press--release
+                        .card__body
+                            .aside-story
+                                a.aside-story__img-wrapper(href="#!")
+                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
+                                    .promoted__mark Promo
+
+                                .aside-story__body
+                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                                    .aside-story__info
+                                        .humble.humble--tiny 12:25 AM
+                        .card__footer
+                            a.btn.btn--accent(href="#!") Submit Press Release
+
+                    .card.card--something
+                        .something
+                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
+
+                    .card
+                        h4.card__title Popular
+                        .card__body
+                            each hot in hots
+                                article.aside-story
+                                    a.aside-story__img-wrapper(href="#!")
+                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
+                                        .promoted__mark Promo
+                                    .aside-story__body
+                                        a.aside-story__link(href="#!")= hot
+
+                                        .aside-story__info
+                                            time.humble.humble--tiny 12:25 AM
+
+                        .card__footer
+                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
+
+        .share-and-up
+            .share__social
+                a.share__circle(href="#!")
+                    include ../img/icons/social/telegram.svg
+                a.share__circle(href="#!")
+                    include ../img/icons/social/twitter.svg
+                a.share__circle(href="#!")
+                    include ../img/icons/social/facebook.svg
+
+        footer.footer
+            .container.footer__container
+                .footer__row
+                    .footer__follow-us
+                        .footer__title Follow us and get all crypto news 24/7
+
+                        .social.social--border.social--wide
+                            a.social__link.social__link--fb(href="#!")
+                                include ../img/icons/social/facebook.svg
+                            a.social__link.social__link--tg(href="#!")
+                                include ../img/icons/social/telegram.svg
+                            a.social__link.social__link--tw(href="#!")
+                                include ../img/icons/social/twitter.svg
+
+                nav.footer__nav
+                    ul.footer__nav-list
+                        each category in navFooter
+                            li.footer__nav-item
+                                a.footer__nav-link(href="#!")= category.name
+
+                                if category.childs
+                                    ul.footer__nav-child-list
+                                        each child in category.childs
+                                            li.footer__nav-child-item
+                                                a.footer__nav-child-link(href="#!")= child.name
+                .footer__disclaimer
+                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
+                .footer__copy
+                    .footer__copy-text © 2018 U.Today. All rights reserved
+                    a.footer__copy-link(href="#!") Terms and conditions
+
+        amp-lightbox#subscribe(layout="nodisplay")
+            .modal
+                .modal__item
+                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
+                        include ../img/icons/Cross.svg
+
+                    .modal__item-body
+                        .modal__item-text Sign up for crypto digest
+
+                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
+                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
+                            .validation__panel.validation__error(submit-error='')
+                                <template type="amp-mustache">Error! JSON: {{message}}</template>
+
+                            .input.article__subscribe-input
+                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
+
+                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
+
+                            .modal__item-agree By pressing the “Subscribe button” you agree with our
+                                a(href="#!") Privacy Policy
