@@ -64,6 +64,10 @@ html(lang="en" dir="ltr" ⚡)
 
     body
 
+        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
+            a.something__content(href="#!")
+                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
+
         amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
             .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
                 include ../img/icons/cross.svg
@@ -126,19 +130,42 @@ html(lang="en" dir="ltr" ⚡)
 
         .container.page-container
 
-            .something.something--content
+            .something.something--top
                 .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
 
                 a.something__content(href="#!" style="background-color: #cef1f3")
                     amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
 
             .main-aside-container
-                .main-block
-                    .category
-                        include blocks/amp-category-info.pug
+                .main-news-block
+                    .article
+                        h1.article__title Denys Serhiichuk
+
+                        .article__main-img-wrapper
+                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2019-03/den-sergeychuk.jpg?itok=KBxTzoGQ', layout='responsive', width='736', height='460')
+                            figcaption Cover image via <a href="#!"> U.Today </a>
+
+                        .article__content
+                            p Yuri is a journalist interested in technology and technical innovations. He has been in crypto since 2017. Believes that blockchain and cryptocurrencies have a potential to transform the world in the future. ‘Hodls’ cryptocurrencies. Has written for several crypto media. Currently is a news writer at U.Today, can be contacted at yuri.molchan@u.today.
+
+                            .author__social.social
+                                a.social__link(href="#!")
+                                    include ../img/icons/social/facebook.svg
+                                a.social__link(href="#!")
+                                    include ../img/icons/social/telegram.svg
+                                a.social__link(href="#!")
+                                    include ../img/icons/social/twitter-gray.svg
+                                a.social__link(href="#!")
+                                    include ../img/icons/social/email-gray.svg
+
+                    .author__articles.category
+
+                        h2.category-info__title Articles by author
+
                         .category-item
                             a.category-item__img-wrapper(href="#!")
                                 amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
+                                .promoted__mark Promoted
 
                             .category-item__info
                                 .humble__row
@@ -160,6 +187,7 @@ html(lang="en" dir="ltr" ⚡)
                         .category-item
                             a.category-item__img-wrapper(href="#!")
                                 amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
+                                .promoted__mark Promoted
 
                             .category-item__info
                                 .humble__row
@@ -181,6 +209,7 @@ html(lang="en" dir="ltr" ⚡)
                         .category-item
                             a.category-item__img-wrapper(href="#!")
                                 amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
+                                .promoted__mark Promoted
 
                             .category-item__info
                                 .humble__row
@@ -202,6 +231,7 @@ html(lang="en" dir="ltr" ⚡)
                         .category-item
                             a.category-item__img-wrapper(href="#!")
                                 amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" layout="responsive" width="218" height="136")
+                                .promoted__mark Promoted
 
                             .category-item__info
                                 .humble__row
@@ -285,15 +315,6 @@ html(lang="en" dir="ltr" ⚡)
 
                         .card__footer
                             a.btn.btn--light.btn--arrow-right(href="#!") Show more
-
-        .share-and-up
-            .share__social
-                a.share__circle(href="#!")
-                    include ../img/icons/social/telegram.svg
-                a.share__circle(href="#!")
-                    include ../img/icons/social/twitter.svg
-                a.share__circle(href="#!")
-                    include ../img/icons/social/facebook.svg
 
         footer.footer
             .container.footer__container
