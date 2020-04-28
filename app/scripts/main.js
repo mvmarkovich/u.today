@@ -101,7 +101,7 @@
         }).appendTo($outer).outerWidth();
     $outer.remove();
     return 100 - widthWithScroll;
-  };
+  }
 
   function openModal() {
     var modalId = $(this).data("modal");
