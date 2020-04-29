@@ -1744,6 +1744,109 @@ h5 {
   margin-bottom: 0;
 }
 
+figure {
+  margin: 2.3rem 0 2.1rem;
+}
+
+.img.caption,figcaption {
+  color: #78909C;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  margin: .5rem 0 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.img.caption a,figcaption a {
+  color: #2979FF;
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 2rem 0;
+  padding: 0;
+  padding-left: 1.1rem;
+}
+
+ol ol {
+  margin: 1rem 0;
+}
+
+ol li {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+ol li + li {
+  margin-top: 1rem;
+}
+
+ul:not([class]) {
+  margin: 2rem 0;
+  padding: 0;
+  padding-left: 1.1rem;
+  list-style: none;
+}
+
+ul:not([class]) ul {
+  margin: 1rem 0;
+}
+
+ul:not([class]) li {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.8;
+  position: relative;
+}
+
+ul:not([class]) li + li {
+  margin-top: 1rem;
+}
+
+ul:not([class]) li:before {
+  content: "•";
+  display: block;
+  position: absolute;
+  left: -1.1rem;
+}
+
+p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+  margin-bottom: 1.7rem;
+}
+
+.article__content,.article__content p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+  clear: both;
+}
+
+.article__content + img,.article__content p + img {
+  margin-bottom: 1.7rem;
+}
+
+.article ol:not([class]),.article ul:not([class]) {
+  margin: 2rem 0;
+}
+
+.article ol:not([class]) li,.article ul:not([class]) li {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+p + ol,p + p,p + ul {
+  margin-top: -0.7rem;
+}
+
 .content-block__title,.content-block h1,.content-block h2 {
   font-size: 17px;
   line-height: 19px;
@@ -1762,6 +1865,40 @@ h5 {
 
 .content-block p:last-child {
   margin-bottom: 0;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  border-collapse: collapse;
+  border-radius: 2px;
+  border: 1px solid #CFD8DC;
+}
+
+table td,table th {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.9;
+  padding: .75rem 1rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+html body li p,html body td p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+h2 span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 2.1;
+  letter-spacing: .015em;
 }
 
 blockquote {
@@ -2958,6 +3095,22 @@ main > .article:nth-last-child(2):after {
     align-items: center;
   }
 
+  ol li {
+    font-size: 15px;
+  }
+
+  ul:not([class]) li {
+    font-size: 15px;
+  }
+
+  .article__content,.article__content p {
+    font-size: 15px;
+  }
+
+  .article ol:not([class]) li,.article ul:not([class]) li {
+    font-size: 15px;
+  }
+
   blockquote {
     margin: 3.2rem 0 2rem;
   }
@@ -3161,6 +3314,59 @@ main > .article:nth-last-child(2):after {
     padding-bottom: 1.1rem;
   }
 
+  figure {
+    margin: 2.7rem 0;
+  }
+
+  ol {
+    margin: 2.1rem 0 3rem;
+    padding-left: 1rem;
+  }
+
+  ol ol {
+    margin: 1.5rem 0 2rem;
+  }
+
+  ol li + li {
+    margin-top: 1.5rem;
+  }
+
+  ul:not([class]) {
+    margin: 2.1rem 0 3rem;
+    padding-left: 1.5rem;
+  }
+
+  ul:not([class]) ul {
+    margin: 1.5rem 0 2rem;
+  }
+
+  ul:not([class]) li + li {
+    margin-top: 1.5rem;
+  }
+
+  ul:not([class]) li:before {
+    left: -1.5rem;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2.1;
+    margin-bottom: 2.5rem;
+  }
+
+  .article__content + img,.article__content p + img {
+    margin-bottom: 2.5rem;
+  }
+
+  .article ol:not([class]),.article ul:not([class]) {
+    margin: 2.1rem 0 3rem;
+  }
+
+  p + ol,p + p,p + ul {
+    margin-top: -1rem;
+  }
+
   .content-block__title,.content-block h1,.content-block h2 {
     font-size: 22px;
     line-height: 24px;
@@ -3170,6 +3376,22 @@ main > .article:nth-last-child(2):after {
     margin: 0 0 2rem;
     font-size: 15px;
     line-height: 2.2;
+  }
+
+  table {
+    margin-bottom: 2.5rem;
+  }
+
+  table td,table th {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2.1;
+  }
+
+  html body li p,html body td p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2.1;
   }
 
   blockquote {
@@ -3552,6 +3774,15 @@ main > .article:nth-last-child(2):after {
 
   .footer__copy-text {
     margin-bottom: 1rem;
+  }
+
+  figure {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+
+  .img.caption,figcaption {
+    margin-left: 1rem;
   }
 
   .article__panel .humble {
