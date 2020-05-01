@@ -64,6 +64,10 @@ html(lang="en" dir="ltr" ⚡)
 
     body
 
+        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
+            a.something__content(href="#!")
+                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
+
         amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
             .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
                 include ../img/icons/cross.svg
@@ -126,7 +130,7 @@ html(lang="en" dir="ltr" ⚡)
 
         .container.page-container
 
-            .something.something--content
+            .something.something--top
                 .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
 
                 a.something__content(href="#!" style="background-color: #cef1f3")
