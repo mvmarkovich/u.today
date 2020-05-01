@@ -1,0 +1,289 @@
+include inc/var.pug
+doctype html
+html(lang="en" dir="ltr" ⚡)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+
+        script(async="" src="https://cdn.ampproject.org/v0.js")
+
+        style(amp-boilerplate='').
+            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+
+        noscript
+            style(amp-boilerplate='').
+                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+
+        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
+        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
+        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
+        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
+
+        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+
+        style(amp-custom="")
+            include ../../../dest/styles/amp-info.css
+
+        script(type='application/ld+json').
+            {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://google.com/article"
+            },
+            "headline": "Article headline",
+            "image": {
+            "@type": "ImageObject",
+            "url": "https://google.com/thumbnail1.jpg",
+            "height": 800,
+            "width": 800
+            },
+            "datePublished": "2015-02-05T08:00:00+08:00",
+            "dateModified": "2015-02-05T09:20:00+08:00",
+            "author": {
+            "@type": "Person",
+            "name": "John Doe"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Google",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://google.com/logo.jpg",
+            "width": 600,
+            "height": 60
+            }
+            },
+            "description": "A most wonderful article"
+            }
+
+
+    body
+
+        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+                include ../img/icons/cross.svg
+
+            .sidebar__social.social
+                a.social__link.social__link--fb(href="#!")
+                    include ../img/icons/social/facebook.svg
+                a.social__link.social__link--tg(href="#!")
+                    include ../img/icons/social/telegram.svg
+                a.social__link.social__link--tw(href="#!")
+                    include ../img/icons/social/twitter.svg
+
+            nav.sidebar__nav
+                ul.sidebar__nav-list
+                    each category in navFooter
+                        li.sidebar__nav-item
+                            a.sidebar__nav-link(href="#!")= category.name
+
+                            if category.childs
+                                ul.sidebar__nav-child-list
+                                    each child in category.childs
+                                        li.sidebar__nav-child-item
+                                            a.sidebar__nav-child-link(href="#!")= child.name
+
+        header.header
+            .container.header__container
+                a.header__logo(href="/")
+                    include ../img/icons/logo.svg
+
+                nav.header__nav
+                    ul.header__nav-list
+                        each category, i in nav
+                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
+                                a.header__nav-link(href="/" + i)= category.name
+
+                                if category.childs
+                                    ul.header__nav-child-list
+                                        each child, i in category.childs
+                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
+                                                a.header__nav-child-link(href="#!c" + i)= child.name
+
+                .header__panel
+                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
+                        include ../img/icons/subscribe.svg
+                        | Subscribe
+
+                    .header__search
+                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                            include ../img/icons/search.svg
+
+                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
+                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
+                                include ../img/icons/search.svg
+                            input.header__search-input(type="text" name="search")
+                            button.header__search-close.btn.btn--light.btn--cross
+                                include ../img/icons/Cross.svg
+
+                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
+                        include ../img/icons/burger.svg
+
+        .container.page-container
+
+            .something.something--content
+                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
+
+                a.something__content(href="#!" style="background-color: #cef1f3")
+                    amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
+
+            .main-aside-container
+                .main-block
+                    .content-block
+                        h1.content-block__title Submit your Event on U.Today
+
+                        .content-block__descr
+                            p Intro text. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+                            .table-plan
+                                .table-plan__header
+                                    .table-plan__col
+                                    .table-plan__col Press release
+
+                                each item in tablePrice
+                                    .table-plan__row
+                                        .table-plan__col= item[0]
+                                        if item[3]
+
+                                        .table-plan__col
+                                            .icon.icon--check
+                                                include ../img/icons/Check.svg
+
+                                .table-plan__footer
+                                    .table-plan__col Cost
+                                    .table-plan__col $600*
+
+                            p To submit your press release, contact us by e-mail: <a href="mailto:ads@u.today">ads@u.today</a> and in 24 hours your press-release will be live on U.Today!
+
+                aside.aside-menu-block
+
+                    .card.card--widget.hide-md-up
+                        h4.card__title Top tranding bot
+                            span.card__mark Promoted
+
+                        .card__body
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
+
+                                    .card--widget__info
+                                        .card--widget__title IQ Mining
+                                        span.card--widget__signature 40% discount till 8 march
+
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
+
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+
+                                    .card--widget__info
+                                        .card--widget__title CryptoUniverse
+                                        span.card--widget__signature Cashback up to 20%
+
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
+
+                    .card.card--press--release
+                        .card__body
+                            .aside-story
+                                a.aside-story__img-wrapper(href="#!")
+                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
+                                    .promoted__mark.promoted__mark-top-left Promo
+                                .aside-story__body
+                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                                    .aside-story__info
+                                        .humble.humble--tiny 12:25 AM
+                        .card__footer
+                            a.btn.btn--accent(href="#!") Submit Press Release
+
+                    .card.card--something
+                        .something
+                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
+
+                    .card
+                        h4.card__title Popular
+                        .card__body
+                            each hot in hots
+                                article.aside-story
+                                    a.aside-story__img-wrapper(href="#!")
+                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
+                                        .promoted__mark Promo
+                                    .aside-story__body
+                                        a.aside-story__link(href="#!")= hot
+
+                                        .aside-story__info
+                                            time.humble.humble--tiny 12:25 AM
+
+                        .card__footer
+                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
+
+        .share-and-up
+            .share__social
+                a.share__circle(href="#!")
+                    include ../img/icons/social/telegram.svg
+                a.share__circle(href="#!")
+                    include ../img/icons/social/twitter.svg
+                a.share__circle(href="#!")
+                    include ../img/icons/social/facebook.svg
+
+        footer.footer
+            .container.footer__container
+                .footer__row
+                    .footer__follow-us
+                        .footer__title Follow us and get all crypto news 24/7
+
+                        .social.social--border.social--wide
+                            a.social__link.social__link--fb(href="#!")
+                                include ../img/icons/social/facebook.svg
+                            a.social__link.social__link--tg(href="#!")
+                                include ../img/icons/social/telegram.svg
+                            a.social__link.social__link--tw(href="#!")
+                                include ../img/icons/social/twitter.svg
+
+                nav.footer__nav
+                    ul.footer__nav-list
+                        each category in navFooter
+                            li.footer__nav-item
+                                a.footer__nav-link(href="#!")= category.name
+
+                                if category.childs
+                                    ul.footer__nav-child-list
+                                        each child in category.childs
+                                            li.footer__nav-child-item
+                                                a.footer__nav-child-link(href="#!")= child.name
+                .footer__disclaimer
+                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
+                .footer__copy
+                    .footer__copy-text © 2018 U.Today. All rights reserved
+                    a.footer__copy-link(href="#!") Terms and conditions
+
+        amp-lightbox#subscribe(layout="nodisplay")
+            .modal
+                .modal__item
+                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
+                        include ../img/icons/Cross.svg
+
+                    .modal__item-body
+                        .modal__item-text Sign up for crypto digest
+
+                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
+                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
+                            .validation__panel.validation__error(submit-error='')
+                                <template type="amp-mustache">Error! JSON: {{message}}</template>
+
+                            .input.article__subscribe-input
+                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
+
+                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
+
+                            .modal__item-agree By pressing the “Subscribe button” you agree with our
+                                a(href="#!") Privacy Policy
