@@ -21,6 +21,8 @@ html(lang="en" dir="ltr" ⚡)
         script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
         script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
         script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
+        script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
+        script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -91,6 +93,17 @@ html(lang="en" dir="ltr" ⚡)
                                     each child in category.childs
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
+
+        .currencies
+            .currencies__container.container
+
+                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
+                    template.currencies__slide(type="amp-mustache")
+                        a.currencies__link(href="{{url}}")
+                            .currencies__info
+                                .currencies__name {{title}}
+                                .currencies__trand(class="{{down}}") {{trand}}
+                            .currencies__price {{price}}
 
         header.header
             .container.header__container
