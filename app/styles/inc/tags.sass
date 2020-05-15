@@ -91,10 +91,14 @@ p + p, p + ul, p + ol
 
 table
   width: 100%
-  margin-bottom: 1.7rem @xl 2.5rem
   border-collapse: collapse
   border-radius: 2px
   border: $border
+  max-width: 736px
+  display: block
+  overflow-x: auto
+  border-top: 0
+  margin: 24px 0
 
   td, th
     text: $body-small @xl $body-standart
@@ -102,6 +106,9 @@ table
     vertical-align: top
     border-top: 1px solid #dee2e6
     border-right: 1px solid #dee2e6
+
+  td
+    min-width: 170px
 
 html body
   td p, li p
