@@ -4,6 +4,7 @@ html(lang="en" dir="ltr" ⚡)
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        meta(name='amp-script-src', content='sha384-X8xW7VFd-a-kgeKjsR4wgFSUlffP7x8zpVmqC6lm2DPadWUnwfdCBJ2KbwQn6ADE sha384-nNFaDRiLzgQEgiC5kP28pgiJVfNLVuw-nP3VBV-e2s3fOh0grENnhllLfygAuU_M sha384-u7NPnrcs7p4vsbGLhlYHsId_iDJbcOWxmBd9bhVuPoA_gM_he4vyK6GsuvFvr2ym')
 
         link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
 
@@ -23,6 +24,7 @@ html(lang="en" dir="ltr" ⚡)
         script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
         script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
         script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
+        script(async='', custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js")
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -424,6 +426,47 @@ html(lang="en" dir="ltr" ⚡)
                                 .btn--block
                                     .btn.btn--small.btn--accent-3 Website
 
+                    .card.card--subscribe
+                        .card__subscribe
+                            a.card__subscribe-item.card__subscribe-fb(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/facebook-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Like
+                                    .card__subscribe-nick utoday.en
+
+                            a.card__subscribe-item.card__subscribe-tw(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/twitter-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Follow
+                                    .card__subscribe-nick @utoday_en
+
+                            a.card__subscribe-item.card__subscribe-yb(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/youtube-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Subscribe
+                                    .card__subscribe-nick utoday
+
+                            a.card__subscribe-item.card__subscribe-tm(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/telegram-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Join
+                                    .card__subscribe-nick @utoday_en
+
+                            a.card__subscribe-item.card__subscribe-em(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/email-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Subscribe to email
+
                     .card.card--press--release
                         .card__body
                             .aside-story
@@ -521,3 +564,21 @@ html(lang="en" dir="ltr" ⚡)
 
                             .modal__item-agree By pressing the “Subscribe button” you agree with our
                                 a(href="#!") Privacy Policy
+
+        .modal__yb#modal__yb-close
+            .modal__yb-desc
+                .modal__yb-title
+                    | “Ripple Was Always Scam Coin.” Exclusive Interview with Tone Vays
+                a.btn.btn--light.btn--yb(href="https://www.youtube.com/" target="_blank")
+                    include ../img/icons/social/Youtube.svg
+                    | Subscribe
+
+                a.btn.btn--light.modal__close(href="#modal__yb-close")
+                    include ../img/icons/cross-gray.svg
+
+            amp-youtube(data-videoid="mGENRKrdoGY" autoplay layout="responsive" width="384" height="216")
+
+
+
+
+
