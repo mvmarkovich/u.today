@@ -426,7 +426,7 @@ html(lang="en" dir="ltr" ⚡)
                                 .btn--block
                                     .btn.btn--small.btn--accent-3 Website
 
-                    .card.card--subscribe
+                    .card.card--subscribe.card--mobile-visible
                         .card__subscribe
                             a.card__subscribe-item.card__subscribe-fb(href="#!")
                                 .card__subscribe-icon
@@ -525,6 +525,19 @@ html(lang="en" dir="ltr" ⚡)
                                 include ../img/icons/social/telegram.svg
                             a.social__link.social__link--tw(href="#!")
                                 include ../img/icons/social/twitter.svg
+
+                    .footer__subscribe
+                        .footer__title Subscribe to daily newsletter
+
+                        form.form--row.footer__subscribe-form(target="#" method="get")
+                            .input
+                                input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+
+                            .input
+                                button.btn.btn--wide.btn--input(type="submit") Subscribe
+
+                            .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
+                                a(href="#!") Privacy Policy
 
                 nav.footer__nav
                     ul.footer__nav-list
