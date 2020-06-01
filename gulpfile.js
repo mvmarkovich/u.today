@@ -119,7 +119,7 @@
   gulp.task('postcssAmp', function () {
     return (
       gulp
-      .src(['app/styles/*.sass'])
+      .src(['app/styles/*.sss'])
       .pipe(sourcemaps.init())
       .pipe(
         postcss(processors, {
