@@ -94,17 +94,6 @@ html(lang="en" dir="ltr" ⚡)
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
 
-        .currencies
-            .currencies__container.container
-
-                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
-                    template.currencies__slide(type="amp-mustache")
-                        a.currencies__link(href="{{url}}")
-                            .currencies__info
-                                .currencies__name {{title}}
-                                .currencies__trand(class="{{down}}") {{trand}}
-                            .currencies__price {{price}}
-
         header.header
             .container.header__container
                 a.header__logo(href="/")
@@ -151,12 +140,15 @@ html(lang="en" dir="ltr" ⚡)
 
             .main-aside-container
                 .main-news-block
-                    .article
+                    .article.author
                         h1.article__title Denys Serhiichuk
 
-                        .article__main-img-wrapper
-                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2019-03/den-sergeychuk.jpg?itok=KBxTzoGQ', layout='responsive', width='736', height='460')
-                            figcaption Cover image via <a href="#!"> U.Today </a>
+                        .article__main
+                            .article__main-row
+                                amp-img.article__main-img(src='https://u.today/sites/default/files/styles/736x/public/2019-03/den-sergeychuk.jpg?itok=KBxTzoGQ', layout='responsive', width='736', height='460')
+
+                                .article__lead
+                                    figcaption Cover image via <a href="#!"> U.Today </a>
 
                         .article__content
                             p Yuri is a journalist interested in technology and technical innovations. He has been in crypto since 2017. Believes that blockchain and cryptocurrencies have a potential to transform the world in the future. ‘Hodls’ cryptocurrencies. Has written for several crypto media. Currently is a news writer at U.Today, can be contacted at yuri.molchan@u.today.

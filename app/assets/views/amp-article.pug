@@ -94,17 +94,6 @@ html(lang="en" dir="ltr" ⚡)
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
 
-        .currencies
-            .currencies__container.container
-
-                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
-                    template.currencies__slide(type="amp-mustache")
-                        a.currencies__link(href="{{url}}")
-                            .currencies__info
-                                .currencies__name {{title}}
-                                .currencies__trand(class="{{down}}") {{trand}}
-                            .currencies__price {{price}}
-
         header.header
             .container.header__container
                 a.header__logo(href="/")
@@ -178,14 +167,6 @@ html(lang="en" dir="ltr" ⚡)
                                 .humble.humble--icon 256
                                     include ../img/icons/comment_bold.svg
 
-                        .article__lead
-                            a.article__lead-img--wrapper(href="#!")
-                                amp-img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' layout='fixed' width='40' height='40')
-
-                            .article__lead-info
-                                a.article__lead-name(href="#!") Denys Serhiichuk
-                                p We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!
-
                         a.cels__widget(href="#!" rel="nofollow" target="_blank")
                             .cels__widget-info
                                 .cels__widget-img--wrapper
@@ -219,21 +200,21 @@ html(lang="en" dir="ltr" ⚡)
 
                             .widget__mark Sponsored by <span> Celsius.Network </span>
 
-                        .article__main-img-wrapper
+                        .article__main
+                            .article__main-row
+                                amp-img.article__main-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', layout='responsive', width='184', height='110')
+
+                                .article__lead
+                                    a.humble--author.humble.article__lead-name(href="#!")
+                                        amp-img.humble__img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' layout='fixed' width='40' height='40')
+                                        | Denys Serhiichuk
+
+                                    p We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!
+
                             figcaption Cover image via <a href="#!"> www.tronwallet.me </a>
-                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', layout='responsive', width='736', height='460')
 
-                            .sponcored
-                                span.sponcored--title Sponsored
-
-                                a.btn.btn--sponcored(href="#!")
-                                    amp-img(src='img/something/iqmining_3-icon.svg', layout='fixed', width='40', height='40')
-                                    .btn--sponcored-info
-                                        .btn--sponcored-title IQ Mining
-                                        .btn--sponcored-desc 30% OFF till 30th Apr
-
-                            .disclaimer
-                                p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+                        .disclaimer
+                            p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
                         .something.something--content
                             .something.something__content-long(style="background-color: #032e61")
@@ -623,7 +604,7 @@ html(lang="en" dir="ltr" ⚡)
                     p.cookies_text This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a>
                     .btn__block
                         a.btn-link(href="#!") Cookie settings
-                        a.btn.accept-cookies(href="#" on='tap:close-cookies.toggle') Accept cookies
+                        a.btn.accept-cookies(href="#" on='tap:close-cookie.toggle') Accept cookies
 
 
 
