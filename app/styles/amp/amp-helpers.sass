@@ -1,0 +1,32 @@
+body
+  text: $pseudo-neutral-900 400 16px 1.5
+  font-family: $font
+  background: $neutral-100
+  overflow-x: hidden
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+.visibility-hidden
+  visibility: hidden
+
+.hide
+  &-xl-down
+    display: @xl-down none
+
+  &-xl-only
+    display: @xl none
+
+  &-md-down
+    display: @md-down none
+
+  &-md-up
+    display: @md none
+
+  &-sm-down
+    display: @sm-down none
+
+  &-sm-only
+    display: @sm none

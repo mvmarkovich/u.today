@@ -1,74 +1,48 @@
 .category-item
-  box: left space-between
-  margin-bottom: 1.1rem @xl 1.5rem
-  padding-top: 1.1rem @xl 1.5rem
+  display: flex
+  padding: 40px 16px 16px @sm 16px @xl 0
+  background-color: #fff
   position: relative
 
-  h2
-    margin-bottom: .5rem
-
-  & + &
-    border-top: $border
-
-  + .btn
-    margin-top: 1.5rem @md 2rem @xl 2.7rem
-
-  &__body
-    max-width: 100% @md calc(100% - 1rem - 144px) @xl calc(100% - 1rem - 224px)
-
-  &__info
-    box: center
-    flex-wrap: wrap
-    margin-bottom: .3rem @md .4rem @xl .8rem
-    max-width: @md-down calc(100% - 72px - 1rem)
-
-    &:last-child
-      margin-bottom: 0
-
-    &-event
-      box: center
-      margin-bottom: 1.2rem
-
-    &-link
-      max-width: 40% @md 50% @xl unset
-
-  &__title
-    text: $header-tiny @xl $header-small
-    display: block
-    max-width: @md-down calc(100% - 72px - 1rem)
-
-  &__list
-    
-    margin-top: 0 @xl 1.7rem
-    max-width: @md-down calc(100% - 72px - 1rem)
-
-    &-item
-      margin-bottom: .5rem @xl 1.6rem
-
-    &-link
-      
-      text: $body-small @xl $body-standart
-
-  &__desc
-    text: $body-small @xl $body-standart
-    margin-top: .6rem @xl 1.2rem
-    margin-bottom: .6rem @xl .9rem
-
   &__img
-    border-radius: 2px
-    position: absolute 0 null null 0
-    width: 100%
+    max-width: 72px @sm 144px @xl 240px
+    min-width: 72px @sm 144px @xl 240px
 
     &-wrapper
-      margin-left: 1rem @xl 2rem
-      max-width: 72px @md 144px @xl 224px
-      min-width: 72px @md 144px @xl 224px
-      width: 72px @md 144px @xl 224px
-      height: 45px @md 90px @xl 140px
-      background: #ECEFF1
-      overflow: hidden
-      position: absolute 16px 0 null null @md relative 0
+      position: relative
 
-  .humble
-    text: 11px
+  & + &
+    margin: 16px 0
 
+  .humble__row
+    margin: 12px 0 0 -88px @sm 8px * * 0
+
+    &:first-child
+      margin: 0 @sm * * 8px
+      position: absolute @sm static
+      top: 8px
+      justify-content: space-between @sm flex-start
+      left: 16px
+      right: 16px
+
+  .humble--author
+    margin: 0
+
+  &__info
+    width: 100%
+    margin-left: 16px @xl 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: @xl 16px 16px 12px
+
+  &__title
+    text: #263238 500 15px 1.6
+    background: $neutral
+    width: 100%
+    margin: 0
+    display: block
+
+    &-link
+      display: block
+      min-height: 48px

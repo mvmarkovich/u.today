@@ -94,6 +94,17 @@ html(lang="en" dir="ltr" ⚡)
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
 
+        .currencies
+            .currencies__container.container
+
+                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
+                    template.currencies__slide(type="amp-mustache")
+                        a.currencies__link(href="{{url}}")
+                            .currencies__info
+                                .currencies__name {{title}}
+                                .currencies__trand(class="{{down}}") {{trand}}
+                            .currencies__price {{price}}
+
         header.header
             .container.header__container
                 a.header__logo(href="/")

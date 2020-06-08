@@ -1,0 +1,63 @@
+.currencies
+  padding: 0
+  position: relative
+  z-index: 997
+  background: #263238
+
+  &__container
+    display: flex
+    justify-content: space-between
+    height: 24px
+    overflow: hidden
+    padding: 0 16px
+
+  &__slide-wrapper
+    width: 100%
+    padding-bottom: 48px
+
+    & > div
+      overflow-x: auto
+      overflow-y: hidden
+      margin-right: 0
+      display: flex
+      justify-content: @md space-between
+
+  &__link
+    text: #263238 600 13px 1.6
+    font-variant: none
+    text-transform: uppercase
+    display: flex
+    padding: 2px 0
+    padding-bottom: @xl-down 48px
+    flex-wrap: nowrap
+
+    & + &
+      margin-left: @xl-down 24px
+
+  &__name
+    margin-right: 8px
+    margin-bottom: 2px
+    height: 15px
+    display: inline-block
+    color: $neutral
+
+  &__info
+    display: flex
+
+  &__trand
+    text: #8bc34a
+
+    &--down
+      text: #F44336
+
+  &__price
+    color: #78909C
+    width: 100%
+    margin-left: 8px
+
+  &__currency
+    display: none
+    margin: 12px 0
+
+    span
+      width: 33px

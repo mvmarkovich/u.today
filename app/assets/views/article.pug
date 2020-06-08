@@ -5,8 +5,7 @@ block title
 
 block head
     link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet")
-    link(rel="stylesheet" href="styles/defaults.css")
-    link(rel="stylesheet" href="styles/article.css")
+    link(rel="stylesheet" href="styles/main.css")
 
 block content
     .something.something--content
@@ -15,10 +14,110 @@ block content
 
         .something__content-square(style="background-color: #032e61")
             img(src="img/something/square.png" alt="something-square")
+
     .main-aside-container
         main.main-news-block
             include blocks/article.pug
 
         aside.aside-menu-block
-            include blocks/aside-menu-block.pug
+            .card.card--widget
+                h4.card__title Top tranding bot
+                    span.card__mark Promoted
+
+                .card__body
+                    a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                        .card--widget__row
+                            .card--widget__img-wrapper
+                                img.card--widget__img(src="img/content/crypt/IQ-Mining.png")
+
+                            .card--widget__info
+                                .card--widget__title IQ Mining
+                                span.card--widget__signature 40% discount till 8 march
+
+                        .btn--block
+                            .btn.btn--small.btn--accent-3 Website
+
+                    a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                        .card--widget__row
+                            .card--widget__img-wrapper
+                                img.card--widget__img(src="img/content/crypt/CryptoUniverse.png")
+
+                            .card--widget__info
+                                .card--widget__title CryptoUniverse
+                                span.card--widget__signature Cashback up to 20%
+
+                        .btn--block
+                            .btn.btn--small.btn--accent-3 Website
+
+            .card.card--subscribe.card--mobile-visible
+                .card__subscribe
+                    a.card__subscribe-item.card__subscribe-fb(href="#!")
+                        .card__subscribe-icon
+
+                        .card__subscribe-desc
+                            .card__subscribe-title Like
+                            .card__subscribe-nick utoday.en
+
+                    a.card__subscribe-item.card__subscribe-tw(href="#!")
+                        .card__subscribe-icon
+
+                        .card__subscribe-desc
+                            .card__subscribe-title Follow
+                            .card__subscribe-nick @utoday_en
+
+                    a.card__subscribe-item.card__subscribe-yb(href="#!")
+                        .card__subscribe-icon
+
+                        .card__subscribe-desc
+                            .card__subscribe-title Subscribe
+                            .card__subscribe-nick utoday
+
+                    a.card__subscribe-item.card__subscribe-tm(href="#!")
+                        .card__subscribe-icon
+
+                        .card__subscribe-desc
+                            .card__subscribe-title Join
+                            .card__subscribe-nick @utoday_en
+
+                    a.card__subscribe-item.card__subscribe-em(href="#!")
+                        .card__subscribe-icon
+
+                        .card__subscribe-desc
+                            .card__subscribe-title Subscribe to email
+
+            .card.card--press--release
+                .card__body
+                    .aside-story
+                        a.aside-story__img-wrapper(href="#!")
+                            img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+                            .promoted__mark Promo
+
+                        .aside-story__body
+                            a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                            .aside-story__info
+                                .humble.humble--tiny 12:25 AM
+                .card__footer
+                    a.btn.btn--accent(href="#!") Submit Press Release
+
+            .card.card--something
+                .something
+                    img(src="img/content/banner.png")
+
+            .card
+                h4.card__title Popular
+                .card__body
+                    each hot in hots
+                        article.aside-story
+                            a.aside-story__img-wrapper(href="#!")
+                                img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ")
+                                .promoted__mark Promo
+                            .aside-story__body
+                                a.aside-story__link(href="#!")= hot
+
+                                .aside-story__info
+                                    time.humble.humble--tiny 12:25 AM
+
+                .card__footer
+                    a.btn.btn--light.btn--arrow-right(href="#!") Show more
 

@@ -1,0 +1,103 @@
+.footer
+  margin-top: 32px
+  position: relative
+  z-index: 150
+  background: $neutral
+
+  &__container
+    padding: 0 16px
+
+  &__title
+    text: 600 13px 1.2 @md 15px
+    margin: 0 0 12px
+
+  &:before
+    content: ''
+    display: block
+    border-bottom: 3px solid #263238
+
+  &__row
+    flex-wrap: wrap @md nowrap
+    padding-top: 24px @md 40px
+    padding-bottom: 24px @md 40px
+    border-bottom: 1px solid #CFD8DC
+    display: flex
+    justify-content: space-between
+
+  &__follow-us
+    margin-right: 0 @md 16px @xl 48px
+    margin-bottom: @xl-down 24px
+    width: @xl-down 100%
+
+    ^&__title
+      white-space: nowrap
+
+  &__subscribe
+    width: @xl-down 100%
+
+    &-input
+      width: @md 116px @xl 269px
+
+    &-agree
+      text: #78909C 500 13px 2.1
+      margin-top: 0
+
+  &__nav
+    position: relative
+    padding: 21px 0 16px
+    border-bottom: 1px solid #cfd8dc
+
+    &-list
+      margin: -24px 0 0
+      list-style: none
+      padding: 0
+      display: flex @sm block
+      flex-wrap: wrap
+      justify-content: space-between
+
+    &-item
+      width: 60% @sm 35% @md 33% @xl auto
+      white-space: nowrap
+      margin-top: 24px
+
+      &:nth-child(even)
+        width: 30% @md 33% @xl auto
+
+    &-link
+      text: #263238 600 17px 1.4
+
+    &-child
+
+      &-list
+        display: none
+        margin: 16px 0 0
+        list-style: none
+        padding: 0
+
+      &-item
+
+        & + &
+          margin-top: 10px
+
+      &-link
+        text: #263238 500 13px 2.1 @md 15px
+
+  &__copy
+    padding: 24px 0
+    display: flex
+    flex-wrap: wrap
+
+    &-text
+      text: #546E7A 500 15px 1.9
+      margin-right: 32px
+
+    &-link
+      text: #2962FF 500 13px 1.9 @md 15px
+
+  &__disclaimer
+    border-bottom: 1px solid #cfd8dc
+    padding: 16px 0 12px
+
+    &-text
+      text: #78909C 500 15px 1.6
+      margin: 0

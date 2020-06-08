@@ -1,282 +1,48 @@
 .modal
-  position: fixed 0 0 0 0
-  background: $cover-color
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(38, 50, 56, 0.85)
   justify-content: center
-  z-index: 99990
   display: none
+  align-items: center
   overflow: auto
-  opacity: 0
   transition: .3s ease
-  padding: 1rem @md 2rem
-
-  &--open
-    display: flex
-
-  &--fadeIn
-    opacity: 1
-
-    ^&__item, ^&__square
-      transform: translateY(0) scale(1)
-
-    ^&__square-img
-      transform: translateY(0) scale(1)
-      transition-delay: 0s
-
-  &__item, &__square
-    transform: translateY(-10px) scale(.98)
-    transition: .3s ease
+  padding: 16px
 
   &__item
-    size: 320px 400px
-    background: #fff
-    border-radius: 4px 4px 2px 2px
+    width: 320px
+    background: $neutral
+    border-radius: 4px
     position: relative
     margin: auto
 
     &-header
-      background: $pseudo-neutral-900
-      border-radius: 2px 2px 0 0
-      box: wrap center middle
-      padding: 1rem *
 
       &-title
-        text: $pseudo-neutral-300 13px 1.4 center
+        text: #90A4AE 13px 1.4
+        text-align: center
         width: 100%
-        margin-bottom: .5rem
-
-    &-logo
-      background: svg-load("icons/logo.svg", fill: #fff) no-repeat left top / contain
-      size: 130px 19px
+        margin-bottom: 8px
 
     &-body
-      padding: 1.7rem 2rem 1.4rem 2rem
-
-    &-icon
-      text: $header-large center
+      padding: 32px 32px 24px
 
     &-text
-      text: $header-tiny center
-      margin-bottom: 1.5rem
+      text-align: center
+      text: 600 17px 1.4
+      margin: 0 0 24px
 
     &-agree
-      text: $pseudo-neutral-400 $body-tiny center
-      margin-top: 1rem
+      text: #78909C 500 13px 2.1
+      letter-spacing: .015em
+      text-align: center
+      margin-top: 16px
 
   &__close
-    position: absolute 3px 3px null null
-
-  &__square
-    size: auto
-    border-radius: 2px
-    overflow: hidden
-    box: vertical left @md horizontal
-    margin: auto
-    display: none
-
-    ^&__close
-      opacity: .6 @md .25
-      z-index: 3
-      filter: @md-down brightness(100)
-
-      &:hover
-        opacity: .8 @md 1
-
-    &-img
-      size: 320px 168px @md 320px
-      min-width: 320px
-      min-height: 168px
-      background-image: resolve("modals/subscribe-title.jpg")
-      background-color: #c3c2c7
-      background-position: center
-      transform: translateY(10px) scale(1.06)
-      border-radius: 2px 2px 0 0 @md 2px 0 0 2px
-      transition: transform .32s ease 1s, box-shadow .22s ease 1s
-
-    &-content
-      size: 320px 272px @md 320px
-      padding: 1.5rem 2rem @md 1.2rem 2rem
-      background: #fff
-      position: relative
-      z-index: 2
-
-    &-icon
-      text: 31px center
-      display: none @md block
-      margin-bottom: .4rem
-
-    &-title
-      text: $header-tiny center
-      font-weight: 600
-      margin-bottom: 1.1rem
-
-    &-text
-      text: $body-small center
-      margin-bottom: 1rem
-
-    &-agree
-      text: $pseudo-neutral-400 $body-tiny center
-      margin-top: 1.1rem
-
-      a
-        @extend .link-decorate
-        color: inherit
-        border-color: inherit
-
-    &--text
-
-      ^&-content
-        size: 320px 280px @md 320px
-        padding: 1.5rem 2rem @md .65rem 2rem
-
-      ^&-img
-        background-image: resolve("modals/subscribe-text.jpg")
-        size: 320px 240px @md 320px
-        min-height: 240px
-
-      ^&-title
-        white-space: nowrap
-        margin-bottom: .6rem
-
-  .modal__entrance
-    display: none
-
-    &:first-of-type
-      display: block
-
-  &__entrance
-    align-items: inherit
-
-    .modal__close
-      opacity: 1
-      filter: @md-down none
-
-    &-header
-      background-color: #fff
-      border-bottom: 1px solid #263238
-
-    &-title
-      text: 15px 1.4 600
-      margin-bottom: 0
-      text-align: center
-      padding: .75rem 0
-
-    &-content
-      background-color: #fff
-      position: relative
-      z-index: 2
-      width: 360px
-      height: auto
-      padding: 2rem 1rem
-
-    &-text
-      text: #263238 .8125rem 1.9
-      margin-bottom: 1rem
-
-      &.bold
-        font-weight: 600
-
-    &-hashtags
-      box:
-      flex-wrap: wrap
-      background-color: #9575cd
-      margin-left: -1rem
-      width: 360px
-      padding: .675rem 1rem
-
-    &-hashtag
-      text: #fff .8125rem 1.5rem
-      margin: 0 .7625rem 0 0
-
-    &-caption
-      text: .8125rem 1.9 500
-
-    .btn__block
-      margin-top: 2rem
-      padding-top: 2rem
-      border-top: 1px solid #cfd8dc
-
-    .checkbox__block
-
-      label
-        text: #263238
-        padding-left: 30px
-        order: 1
-
-        a
-          text-decoration: none
-          color: #2979ff
-
-    .input
-      box:
-      flex-direction: column
-
-      &__checkbox-label
-        margin: 1.5rem 0 1rem
-
-      &__elem
-        border: 1px solid #cfd8dc
-
-        &.invalid
-          border: 1px solid #f44336
-
-        &.valid
-          border: 1px solid #4caf50
-
-    .internet-dog
-      position: absolute 6px null null 16px
-      text: .8125rem 1.9 500
-
-    .formError
-      position: static
-      order: 2
-
-    .formErrorContent
-      text: #ff5252 .8125rem 2
-
-    .timeout__item
-      size: 80px
-      text: #cfd8dc 31px 80px 600
-      background-color: #fff
-      text-align: center
-      border-radius: 50%
-      border: 1px solid #cfd8dc
-      margin: 2.5rem auto 0
-
-    .modal__back
-      position: absolute
-      top: 7px
-      opacity: 1
-      left: 3px
-
-    .modal__close
-      top: 7px
-      opacity: @md 1
-
-      &:after
-        background-image: svg-load("icons/cross.svg", fill: $accent-1-light)
-
-      &:hover:after
-        background-image: svg-load("icons/cross.svg", fill: $accent-1-medium)
-
-      &:active:after
-        background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
-
-  &__successfully
-
-    &-text
-      text: .8125rem 1.5rem 500
-      text-align: center
-
-  &__giveaway
-    border-radius: 12px
-    max-width: 620px
-
-    .modal__close
-      opacity: @md 1
-      filter: @md-down none
-
-
-
-
-
-
+    position: absolute
+    min-height: 24px
+    top: 6px
+    right: 6px

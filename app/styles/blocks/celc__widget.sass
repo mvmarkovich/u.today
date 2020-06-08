@@ -1,100 +1,104 @@
 .cels__widget
-  box: center space-between
   flex-wrap: wrap
-  position: relative
   box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
-  border-radius: 16px
-  margin: .5rem 0 2.5rem @md 1rem 0 3.5rem
+  border-radius: 32px
+  margin: 8px 0 48px
+  display: flex
+  justify-content: space-between
+  position: relative
+  color: #263238
+  text-decoration: none
 
   &-info
-    box: center
-    justify-content: center @xl flex-start
-    flex-wrap: wrap @xs nowrap
-    width: 100% @xl 50%
-    padding: .625rem
+    justify-content: center
+    width: 100% @xl 35%
+    padding: 10px
+    display: flex
+    align-items: center
+
+  &-select
+    display: flex
 
   &-option
     text-transform: uppercase
 
   &-img
-
     &--wrapper
-      display: block
+      display: flex
       max-width: 44px
       min-width: 44px
-      margin-right: 1.5rem @sm 2rem
+      margin-right: 16px
 
   &-caption
-    text: #32325D 600 13px 13px
-    text-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
-    margin-right: .75rem
+    text: #32325d 700 13px 1
     display: block
+    margin-bottom: 8px
+    width: 100%
 
   &-signature
-    text: $neutral 500 13px 13px
+    text: $neutral 500 13px 1.2
+    margin: 0
 
   &-output
-    box: center
-    justify-content: @xl-down space-between
-    flex-wrap: wrap @sm nowrap
-    padding: .625rem @xl .625rem .625rem .625rem 1.5rem
-    width: 100% @xl 50%
-    border-radius: 0 0 16px 16px @xl 0 16px 16px 0
+    padding: 10px
+    width: 100% @xl 65%
+    border-radius: 0 0 32px 32px @xl 0 32px 32px 0
     box-shadow: 0 0 24px rgba(33, 150, 243, 0.15)
-    background-color: #32325D
+    background-color: #32325d
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap @sm nowrap
 
     &--value
-      text: #20C589 600 17px 24px
-      max-width: 75px
-      text-overflow: clip
+      text: #20c589 600 19px 1.3
 
   &-list
-    
-    box:
-    width: @sm-down 100%
-    justify-content: @xl-down center
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
 
   &-item
-    width: auto @sm 33%
+    margin-right: 16px
 
-    & + &
-      margin-left: @sm-down 2rem
+    &:last-child
+      margin-right: @sm-down 0
 
-  .input__elem
-    max-width: 60px
-    min-width: 60px
-    border: 1px solid $pseudo-neutral-100
-    -moz-appearance: textfield
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button
-      -webkit-appearance: none
-      margin: 0
-
-  .input__select
-    max-width: 88px
-    min-width: 88px
+  .amount-crypt
+    text: #20c589 600 17px 1.4
     text-transform: uppercase
 
-  .interest_per_week,
-  .interest_per_year,
-  #interest_per_week,
-  #interest_per_year
-    &:before
-      content: '$'
-      text: #20C589 600 17px 24px
+  .form--row
+    display: flex
+    flex-wrap: wrap
+    max-width: 188px
 
-  .interest_rate,
-  #interest_rate
-    &:after
-      content: '%'
-      text: #20C589 600 17px 24px
+    .input
+      margin-right: 12px
+      margin-bottom: 0
+      display: flex
 
-  .widget__mark
-    position: absolute
-    bottom: -1.5rem
-    text: 11px 1.8
-    width: 100%
-    text-align: center
+      &:last-child
+        margin-right: 0
 
+  .input__elem
+    max-width: 88px
+    min-width: 88px
+    min-height: 32px
 
+  .input__select
+    min-width: 1px
+    min-height: 32px
+    text-transform: uppercase
+
+.widget__mark
+  width: 100%
+  text-align: center
+  font-size: 13px
+  line-height: 1.8
+  position: absolute
+  bottom: -1.6rem
+
+  span
+    color: #2979FF

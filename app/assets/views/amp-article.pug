@@ -27,7 +27,7 @@ html(lang="en" dir="ltr" ⚡)
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
         style(amp-custom="")
-            include ../../../dest/styles/amp-article.css
+            include ../../../dest/styles/amp.css
 
         script(type='application/ld+json').
             {
@@ -99,39 +99,15 @@ html(lang="en" dir="ltr" ⚡)
                 a.header__logo(href="/")
                     amp-img(src="img/icons/logo-news.svg" layout="intrinsic" width="219" height="20")
 
-                nav.header__nav
-                    ul.header__nav-list
-                        each category, i in nav
-                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
-                                a.header__nav-link(href="/" + i)= category.name
-
-                                if category.childs
-                                    ul.header__nav-child-list
-                                        each child, i in category.childs
-                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
-                                                a.header__nav-child-link(href="#!c" + i)= child.name
-
                 .header__panel
                     button.btn.btn--light.btn--subscribe(on="tap:subscribe")
                         include ../img/icons/subscribe.svg
                         | Subscribe
 
-                    .header__search
-                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
-                            include ../img/icons/search.svg
-
-                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
-                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
-                                include ../img/icons/search.svg
-                            input.header__search-input(type="text" name="search")
-                            button.header__search-close.btn.btn--light.btn--cross
-                                include ../img/icons/Cross.svg
-
                     button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
                         include ../img/icons/burger.svg
 
         .container.page-container
-
             .something.something--top
                 .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
 
@@ -222,7 +198,7 @@ html(lang="en" dir="ltr" ⚡)
                             .something.something__content-square(style="background-color: #032e61")
                                 amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
 
-                        section.article__content
+                        .article__content
                             .article__contents
                                 .article__contents-title Contents
 
@@ -233,7 +209,7 @@ html(lang="en" dir="ltr" ⚡)
 
                             p
                                 | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
-                                a.link-text(href='#!') Crypto Invest Summit
+                                a(href='#!') Crypto Invest Summit
                                 | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
 
                             h2
@@ -264,12 +240,14 @@ html(lang="en" dir="ltr" ⚡)
                             blockquote
                                 p
                                     | This is a quote example. During that time, TRON announced a $1 million dollar fund to support developers, as well as the TRON Accelerator coding competition. After carefully reviewing TRON’s code, we loved the blockchain’s architecture and high performance, and quickly understood that a huge investment in terms of money and development had been put into the project.
-                                    a.link-text(href='#!') made up roughly 20 percent
+                                    a(href='#!') made up roughly 20 percent
                                     |  of the speakers.
+
                             figure
                                 a(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
                                     amp-img(layout='responsive', width='16', height='10' src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4")
                                 figcaption Cover image via <a href="#!"> 123rf.com </a>
+
                             table
                                 tbody
                                     tr
@@ -419,117 +397,97 @@ html(lang="en" dir="ltr" ⚡)
                                     .btn--block
                                         .btn.btn--small.btn--accent-3 Website
 
-                        .article__amp-recommended
-                            .article__amp-recommended-list
-                                each item in ['5 Worst ICO Promotions', 'Past-ICO Review: Exchange-Based Tokens Are a Safe Bet During Times Of Trouble', 'Past-ICO Review: Hero Token']
-                                    .article__amp-recommended-item
-                                        a.article__amp-recommended-wrapper--img(href="#!")
-                                            amp-img.article__amp-recommended-item-img(src="https://u.today/sites/default/files/styles/400/public/2019-11/1269.jpg?itok=TAl2iO6R" layout="responsive" width="218" height="136")
-                                            .promoted__mark Promoted
-                                        .article__amp-recommended-info
-                                            .article__amp-recommended-row
-                                                a.humble(href="#!") News
-                                                .humble.humble--time 21 hours 31 minutes ago
-                                            a.article__amp-recommended-item-title(href="#!")= item
+                    .category-item
+                        a.category-item__img-wrapper(href="#!")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
 
-                                            a.humble.humble--author(href="#!")
-                                                amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
-                                                | Yuri Molchan
+                        .category-item__info
+                            .humble__row
+                                a.humble(href="#!") Stories
+                                .humble.humble--time 2 hours ago
 
-                        .card.card--widget
-                            .card__title Top tranding bot
-                                span.card__mark Promoted
+                            a.category-item__title-link(href="#!")
+                                h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
 
-                            .card__body
-                                a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                    .card--widget__row
-                                        .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width='48', height='48')
+                            .humble__row.humble--between
+                                a.humble.humble--author(href="#!")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
+                                    | Vladislav Sopov
 
-                                        .card--widget__info
-                                            .card--widget__title IQ Mining
-                                            span.card--widget__signature 40% discount till 8 march
+                                .humble.humble--icon.humble--icon-large
+                                    include ../img/icons/comment.svg
+                                    | 2
 
-                                    .btn--block
-                                        .btn.btn--small.btn--accent-3 Website
+                    .category-item
+                        a.category-item__img-wrapper(href="#!")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
 
-                                a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                    .card--widget__row
-                                        .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width='48', height='48')
+                        .category-item__info
+                            .humble__row
+                                a.humble(href="#!") Interviews
+                                .humble.humble--time 4 hours ago
 
-                                        .card--widget__info
-                                            .card--widget__title CryptoUniverse
-                                            span.card--widget__signature Cashback up to 20%
+                            a.category-item__title-link(href="#!")
+                                h3.category-item__title How To Exchange Crypto with BestСhange
 
-                                    .btn--block
-                                        .btn.btn--small.btn--accent-3 Website
+                            .humble__row.humble--between
+                                a.humble.humble--author(href="#!")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" layout="fixed" width="24" height="24")
+                                    | Heewon Jang
 
-                aside.aside-menu-block
+                                .humble.humble--icon.humble--icon-large
+                                    include ../img/icons/comment.svg
+                                    | 12
 
-                    .card.card--widget
-                        h4.card__title Top tranding bot
-                            span.card__mark Promoted
+                    .category-item
+                        a.category-item__img-wrapper(href="#!")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
 
-                        .card__body
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
+                        .category-item__info
+                            .humble__row
+                                a.humble(href="#!") Price Prediction
+                                .humble.humble--time 1 day 23 hours ago
 
-                                    .card--widget__info
-                                        .card--widget__title IQ Mining
-                                        span.card--widget__signature 40% discount till 8 march
+                            a.category-item__title-link(href="#!")
+                                h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
 
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
+                            .humble__row.humble--between
+                                a.humble.humble--author(href="#!")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" layout="fixed" width="24" height="24")
+                                    | Vera Yurina
 
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+                                .humble.humble--icon.humble--icon-large
+                                    include ../img/icons/comment.svg
+                                    | 123
 
-                                    .card--widget__info
-                                        .card--widget__title CryptoUniverse
-                                        span.card--widget__signature Cashback up to 20%
+                .card.card--widget
+                    .card__title Top tranding bot
+                        span.card__mark Promoted
 
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
+                    .card__body
+                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                            .card--widget__row
+                                .card--widget__img-wrapper
+                                    amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width='48', height='48')
 
-                    .card.card--press--release
-                        .card__body
-                            .aside-story
-                                a.aside-story__img-wrapper(href="#!")
-                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
-                                    .promoted__mark.promoted__mark-top-left Promo
-                                .aside-story__body
-                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+                                .card--widget__info
+                                    .card--widget__title IQ Mining
+                                    span.card--widget__signature 40% discount till 8 march
 
-                                    .aside-story__info
-                                        .humble.humble--tiny 12:25 AM
-                        .card__footer
-                            a.btn.btn--accent(href="#!") Submit Press Release
+                            .btn--block
+                                .btn.btn--small.btn--accent-3 Website
 
-                    .card.card--something
-                        .something
-                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
+                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                            .card--widget__row
+                                .card--widget__img-wrapper
+                                    amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width='48', height='48')
 
-                    .card
-                        h4.card__title Popular
-                        .card__body
-                            each hot in hots
-                                article.aside-story
-                                    a.aside-story__img-wrapper(href="#!")
-                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
-                                        .promoted__mark Promo
-                                    .aside-story__body
-                                        a.aside-story__link(href="#!")= hot
+                                .card--widget__info
+                                    .card--widget__title CryptoUniverse
+                                    span.card--widget__signature Cashback up to 20%
 
-                                        .aside-story__info
-                                            time.humble.humble--tiny 12:25 AM
-
-                        .card__footer
-                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
+                            .btn--block
+                                .btn.btn--small.btn--accent-3 Website
 
         footer.footer
             .container.footer__container
@@ -603,7 +561,7 @@ html(lang="en" dir="ltr" ⚡)
                     p.cookies_text This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a>
                     .btn__block
                         a.btn-link(href="#!") Cookie settings
-                        a.btn.accept-cookies(href="#" on='tap:close-cookie.toggle') Accept cookies
+                        a.btn.accept-cookies(href="#" on='tap:close-cookies.toggle') Accept cookies
 
 
 

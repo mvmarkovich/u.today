@@ -1,0 +1,70 @@
+.humble
+  text: #546E7A 500 13px 2.1
+  letter-spacing: .015em
+  white-space: nowrap
+  text-decoration: none
+  display: inline-flex
+  height: 24px
+  margin-right: 16px
+  padding: 0
+  border: 0
+  outline: 0
+  background: transparent
+  align-items: center
+  position: relative
+
+  &:last-child
+    margin: 0
+
+  &--tiny
+    margin-right: 8px
+
+  &__img
+    display: block
+    margin-right: 8px
+    border-radius: 50%
+
+  &__row
+    display: flex
+    flex-wrap: wrap
+
+  &--between
+    justify-content: space-between
+    align-items: center
+
+  &--author
+    margin-top: 8px
+
+  &--icon
+    padding-left: 21px
+
+    svg
+      size: 16px
+      position: absolute
+      top: 4px
+      left: 0
+
+    &-large
+      padding-left: 32px
+
+      svg
+        width: 24px
+        height: 24px
+        position: absolute
+        top: 1px
+        left: 0
+
+.promoted__mark
+  border: 1px solid rgba(255, 255, 255, 0.4)
+  text-shadow: -2px 2px 8px #000
+  text: $neutral 500 12px 1.4
+  z-index: 2
+  padding: 0 8px
+  border-radius: 0 0 0 2px
+  position: absolute
+  top: 0
+  right: 0
+
+  &-black
+    background-color: #263238
+    border: none
