@@ -65,10 +65,12 @@ html(lang="en" dir="ltr" ⚡)
 
 
     body
-
         .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
-            a.something__content(href="#!")
-                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
+            .something.something__content-long
+                amp-img(src="img/something/vexel-long.jpg" alt="vexel-long" layout="intrinsic" width="1150" height="90" srcset="img/something/vexel-2x-long.png 2x")
+
+            .something.something__content-square
+                amp-img(src="img/something/vexel-square.png" alt="vexel-square" layout="intrinsic" width="360" height="90" srcset="img/something/vexel-2x-square.png 2x")
 
         amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
             .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')

@@ -29,7 +29,7 @@ html(lang="en" dir="ltr" ⚡)
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
         style(amp-custom="")
-            include ../../../dest/styles/amp-main.css
+            include ../../../dest/styles/main-amp.css
 
         script(type='application/ld+json').
             {
@@ -95,17 +95,6 @@ html(lang="en" dir="ltr" ⚡)
                                     each child in category.childs
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
-
-        .currencies
-            .currencies__container.container
-
-                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
-                    template.currencies__slide(type="amp-mustache")
-                        a.currencies__link(href="{{url}}")
-                            .currencies__info
-                                .currencies__name {{title}}
-                                .currencies__trand(class="{{down}}") {{trand}}
-                            .currencies__price {{price}}
 
         header.header
             .container.header__container
@@ -303,41 +292,6 @@ html(lang="en" dir="ltr" ⚡)
 
                         .something.something__content-square(style="background-color: #032e61")
                             amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
-
-                    .stories
-                        .stories__item.stories__item-sl
-                            a.stories__img-wrapper(href="#!")
-                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2973.jpg?itok=OsEwmzXP" layout="responsive" width="240" height="136")
-
-                            .stories__item-info
-                                .humble__row
-                                    a.humble(href="#!") Influencer news
-                                    a.humble(href="#!") Yun San Mao
-                                a.stories__item-title.link-plain(href="#!") Tron CEO Justin Sun Teases "Huge" Secret Guest at Upcoming NiTROn Summit
-                                .humble__row
-                                    a.humble.humble--author(href="#!")
-                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
-                                        | Yuri Molchan
-                                    .humble.humble--icon.humble--icon-large
-                                        include ../img/icons/comment.svg
-                                        | 2
-
-                        .stories__item.stories__item-sl
-                            a.stories__img-wrapper.link-plain(href="#!")
-                                amp-img.stories__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2964.jpg?itok=7k54XRVR" layout="responsive" width="240" height="136")
-
-                            .stories__item-info
-                                .humble__row
-                                    a.humble(href="#!") Influencer news
-                                    a.humble(href="#!") Justin Sun
-                                a.stories__item-title.link-plain(href="#!") Tron Price ‘Ready to Fly’ as Justin Sun Gives Away 50 Mln TRX to SRs
-                                .humble__row
-                                    a.humble.humble--author(href="#!")
-                                        amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/alex-m-ava.jpg" layout="fixed" width="24" height="24")
-                                        | Alex Dovbnya
-                                    .humble.humble--icon.humble--icon-large
-                                        include ../img/icons/comment.svg
-                                        | 12
 
                     .story
                         .story__header
@@ -577,21 +531,3 @@ html(lang="en" dir="ltr" ⚡)
 
                             .modal__item-agree By pressing the “Subscribe button” you agree with our
                                 a(href="#!") Privacy Policy
-
-        .modal__yb#modal__yb-close
-            .modal__yb-desc
-                .modal__yb-title
-                    | “Ripple Was Always Scam Coin.” Exclusive Interview with Tone Vays
-                a.btn.btn--light.btn--yb(href="https://www.youtube.com/" target="_blank")
-                    include ../img/icons/social/Youtube.svg
-                    | Subscribe
-
-                a.btn.btn--light.modal__close(href="#modal__yb-close")
-                    include ../img/icons/cross-gray.svg
-
-            amp-youtube(data-videoid="mGENRKrdoGY" autoplay layout="responsive" width="384" height="216")
-
-
-
-
-

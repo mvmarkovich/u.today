@@ -1,0 +1,207 @@
+.content-block
+  background: $neutral
+  width: 100%
+  margin: 0 0 16px
+
+  &:last-child
+    margin: 0
+
+  h1, h2
+    text: 600 17px 1.1 @xl 22px
+    padding: 16px @sm 24px 32px
+    border-bottom: 1px solid #CFD8DC
+    margin-bottom: 0
+
+  p
+    margin: 0 0 24px
+    font-size: 13px
+    line-height: 1.8
+    font-weight: 500
+    text: 500 13px 1.8 @xl 15px
+
+    &:last-child
+      margin: 0
+
+  ul
+    margin: 0
+
+  &__descr
+    padding: 16px @sm 24px 32px
+    background: $neutral
+
+.staff
+  &__item
+    align-items: flex-start
+    position: relative
+    padding: 16px 48px 24px 16px @sm 32px
+    display: flex
+    border-bottom: 1px solid #CFD8DC
+
+    &:last-child
+      border: 0
+
+    .social
+      margin: 0 0 0 -10px @xl 0
+      position: @sm-down absolute
+      top: @sm-down 10px
+      right: @sm-down 0
+      display: @sm-down flex
+      flex-direction: @sm-down column
+
+      &__link
+        margin: 0 @xl 0 0 0 4px
+
+  &__info
+    margin-left: 16px
+
+    p
+      text: 500 13px 1.8
+      margin: 16px 0 0 -132px @sm 16px 0 0 -175px
+
+  &__name
+    text: #263238 600 15px 1.8
+    overflow: hidden
+    text-overflow: ellipsis
+    max-width: 253px
+    display: block
+    white-space: normal
+
+  &__post
+    text: #78909C 13px 1.8
+
+  &__row
+    height: 72px @sm 100px @xl auto
+    display: @xl flex
+    flex-wrap: @xl wrap
+
+  &__img
+    width: 100%
+
+    &-wrapper
+      min-width: 116px @sm 160px
+      max-width: 116px @sm 160px
+      height: 72px @sm 100px
+      background: svg-load("./img/icons/greeting.svg") no-repeat (center / 44px), linear-gradient(-45deg, #d0d7df 0%, #f2f7f5 100%)
+      border-radius: 2px
+      overflow: hidden
+
+.partners
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    width: 100%
+    background-color: #fff
+    padding: 24px 16px @sm 32px
+    display: @sm flex
+    align-items: @sm flex-start
+    border-bottom: 1px solid #CFD8DC
+
+  .img-link
+    min-width: 96px
+    max-width: 96px
+
+  &__img
+    max-width: 128px
+    min-width: 128px
+
+  &__row
+    display: flex
+    align-items: center
+    margin: @sm 16px 0 0
+
+  &__info
+    margin: 24px 0 0 @sm 0 0 0 32px
+
+    p
+      text: 500 13px 1.8
+      margin: 16px 0
+
+  &__name
+    text: 600 13px 1.3 @sm 15px
+
+  &__link
+    margin: 0 24px 0 0
+    text: 500 13px 1.8
+
+  &__lead
+    background: $neutral
+    padding: 52px 64px 64px
+    margin: 0 0 16px
+
+    &-mark
+      display: flex
+      align-items: center
+      margin: 0 0 24px
+      text: #F44336 700 1.6 15px
+
+    &-list
+      margin: 32px 0 0
+
+    &-item
+      margin: 0 0 56px
+
+      &:last-child
+        margin: 0
+
+    p
+      font-size: 15px
+      line-height: 1.6
+      margin: 16px 0
+      font-weight: 500
+
+    a
+      margin: 12px 0 0
+      font-weight: 500
+
+    p a
+      display: inline-block
+      margin: 0
+
+  &__title
+    text: 800 35px 1.2
+    margin: 0 0 32px
+
+.team
+  margin: 32px 0 0 @xl 48px
+  order: 9
+
+  &__title
+    text: 600 17px 1.4 @md 22px @xl 31px
+    margin: 0 0 24px
+
+  &__list
+    padding: 16px @sm 32px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    display: block
+    text: 500 13px 1.9
+    width: 47% @sm 31% @xl 21.8%
+    margin: 0 0 24px @sm 0 0 32px
+
+  &__img
+    border-radius: 2px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+
+    &-wrapper
+      overflow: hidden
+      position: relative
+      padding-top: 62.5%
+      margin-bottom: 16px
+      background: svg-load("./img/icons/greeting.svg") no-repeat (center / 44px), linear-gradient(-45deg, #d0d7df 0%, #f2f7f5 100%)
+      border-radius: 2px
+
+  &__name
+    text: #263238
+
+  &__post
+    text: #78909C 500 13px 2.1
+    letter-spacing: 0.015em

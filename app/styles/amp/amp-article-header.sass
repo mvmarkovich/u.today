@@ -1,0 +1,86 @@
+.header
+  background: #fff
+  position: relative
+  z-index: 996
+  margin-bottom: 16px
+
+  &__container
+    flex-wrap: nowrap @md wrap @xl nowrap
+    padding: 0 0 0 16px
+    position: relative
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__logo
+    height: 20px
+    display: flex
+    align-items: center
+    margin-right: @sm-down 8px
+
+
+  &__panel
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.sidebar
+  width: 260px
+  min-width: 260px
+  background: #fff
+
+  &__social
+    width: 100%
+    height: 56px
+    padding: 16px 64px 16px 16px
+    border-bottom: 1px solid #cfd8dc
+
+  &__close
+    position: absolute
+    top: 3px
+    right: 0
+    width: 48px
+    height: 48px
+    line-height: 60px
+    text-align: center
+
+    path
+      fill: #263238
+
+  &__nav
+    margin: 0 0 16px
+
+    &-list
+      margin: 0
+      padding: 8px 16px 8px 0
+      list-style: none
+
+    &-link
+      text: #263238 600 17px 1.4
+      box: center
+      height: 40px
+      margin: 4px 0
+      padding-left: 16px
+      text-decoration: none
+
+    &-child
+      &-list
+        margin: -16px 0 0
+        padding: 16px 0 8px
+        list-style: none
+
+      &-item
+        & + &
+          margin-top: 8px
+
+      &-link
+        text: #263238 500 15px 1.9
+        display: block
+        height: 32px
+        padding-left: 32px
+        text-decoration: none
+
+.header__btn-search, .mobile-menu__btn
+  width: 48px
+  height: 48px

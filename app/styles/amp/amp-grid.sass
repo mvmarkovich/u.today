@@ -1,11 +1,44 @@
 .container
   max-width: $container-sm-px
   margin: * auto
+  padding: * 1rem @xl * .5rem
+
+@media $md
+.container
+  max-width: $container-md-px
+
+@media $lg
+.container
+  max-width: $container-lg-px
+
+@media $xl
+.container
+  max-width: $container-xl-px
 
 .page-container
   background: transparent
-  margin-top: 16px
+  padding: @xl-down 0
+  margin-top: .5rem @sm 1rem
 
 .main-block
-  width: 480px
-  padding: 16px
+  width: 100% @md 480px @xl 712px
+  padding: 1rem @sm 1rem 1.5rem @md 2rem 1.5rem @xl 2rem
+  order: @md-down 2
+  background-color: $neutral
+
+.main-aside-container
+  box: space-between
+  flex-wrap: wrap @md nowrap
+  align-items: flex-start
+
+.main-news-block
+  width: 100% @md 480px @xl 760px
+  order: @md-down 2
+  position: relative
+  z-index: 99
+
+.aside-menu-block
+  max-width: 100% @md 240px @xl 336px
+  width: 100%
+  position: relative
+  z-index: 7
