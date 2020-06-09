@@ -2,7 +2,6 @@
   padding-bottom: 12px
   display: flex
   align-items: flex-start
-  justify-content: space-between
   width: 100%
 
   &:last-child
@@ -21,10 +20,9 @@
 
     &-wrapper
       position: relative
-      width: 72px @sm 144px @md 72px
-      min-width: 72px @sm 144px @md 72px
+      max-width: 72px
+      min-width: 72px
       border-radius: 2px
-      margin: 0 10px 0 16px
 
   &__info
     display: flex
@@ -62,6 +60,10 @@
   border-radius: 2px
   overflow: hidden
   margin-bottom: 16px
+  display: none @md block
+
+  &--mobile-visible
+    display: block
 
   &__mark
     text: #90a4ae 500 13px 1.8
@@ -88,8 +90,6 @@
     width: 100%
 
   &--press--release
-    .aside-story
-      display: none @md flex
 
     .card__footer
       border: 0
@@ -129,12 +129,12 @@
     padding: 0
     border: 0
     border-radius: 0
-    display: none
+    display: @md none @xl block
 
   &--widget
     &__item
       display: flex
-      flex-wrap: nowrap
+      flex-wrap: wrap @xl nowrap
       align-items: center
       justify-content: space-between
       color: #263238
@@ -147,8 +147,8 @@
         width: 100%
 
       .btn--block
-        margin-left: 20px
-        width: auto
+        margin: 8px 0 0 @xl 0 0 0 20px
+        width: 100% @xl auto
 
     &__row
       display: flex
@@ -173,7 +173,7 @@
     justify-content: space-between
 
     &-item
-      width: 100%
+      width: 100% @sm 49% @md 100% @xl 49%
       text: $neutral
       box: center
       text-decoration: none
@@ -224,6 +224,7 @@
 
     &-em
       margin: 0
+      width: 100% @sm 100% @md 100% @xl 100%
 
       ^&-icon
         background: #2979FF

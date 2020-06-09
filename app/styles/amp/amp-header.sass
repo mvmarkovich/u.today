@@ -27,14 +27,17 @@
 
   &__nav
     position: relative
-    width: 100%
-    display: none
-    margin-top: 8px
+    width: 100% @xl 740px
+    display: none @md block
+    margin-top: 8px @xl 16px
+    order: 9 @xl 0
 
     &-list
       display: flex
       flex-direction: row
+      align-items: @xl center
       justify-content: space-between
+      margin: @xl 0 24px
 
     &-item
       position: relative
@@ -119,6 +122,43 @@
         display: flex
         align-items: center
 
+  &__search
+    margin: 0 0 0 16px
+
+    &-form
+      align-items: center
+      position: absolute
+      left: 16px @md 215px @xl 210px
+      right: 16px @md 195px @xl 200px
+      top: 0
+      display: none
+      padding: 9px 0
+
+      &:target
+        display: flex
+
+    &-submit
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 32px
+
+    &-input
+      background: #fff @md #F5F5F5
+      border: none
+      min-height: 32px
+      padding-left: 32px
+      outline: none
+      width: 100%
+
+    &-close
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 32px
+
 .sidebar
   width: 260px
   min-width: 260px
@@ -178,3 +218,6 @@
 .header__btn-search, .mobile-menu__btn
   width: 48px
   height: 48px
+
+.mobile-menu__btn
+  display: none

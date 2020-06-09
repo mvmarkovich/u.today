@@ -65,7 +65,7 @@ html(lang="en" dir="ltr" ⚡)
 
 
     body
-        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
+        .something(style="background-color: #f5f5f5; border-bottom: 1px solid #CFD8DC;")
             .something.something__content-long
                 amp-img(src="img/something/vexel-long.jpg" alt="vexel-long" layout="intrinsic" width="1150" height="90" srcset="img/something/vexel-2x-long.png 2x")
 
@@ -101,10 +101,33 @@ html(lang="en" dir="ltr" ⚡)
                 a.header__logo(href="/")
                     amp-img(src="img/icons/logo-news.svg" layout="intrinsic" width="219" height="20")
 
+                nav.header__nav
+                    ul.header__nav-list
+                        each category, i in nav
+                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
+                                a.header__nav-link(href="/" + i)= category.name
+
+                                if category.childs
+                                    ul.header__nav-child-list
+                                        each child, i in category.childs
+                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
+                                                a.header__nav-child-link(href="#!c" + i)= child.name
+
                 .header__panel
                     button.btn.btn--light.btn--subscribe(on="tap:subscribe")
                         include ../img/icons/subscribe.svg
                         | Subscribe
+
+                    .header__search
+                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                            include ../img/icons/search.svg
+
+                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
+                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
+                                include ../img/icons/search.svg
+                            input.header__search-input(type="text" name="search")
+                            button.header__search-close.btn.btn--light.btn--cross
+                                include ../img/icons/Cross.svg
 
                     button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
                         include ../img/icons/burger.svg
@@ -463,34 +486,114 @@ html(lang="en" dir="ltr" ⚡)
                                     include ../img/icons/comment.svg
                                     | 123
 
-                .card.card--widget
-                    .card__title Top tranding bot
-                        span.card__mark Promoted
 
-                    .card__body
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width='48', height='48')
+                aside.aside-menu-block
 
-                                .card--widget__info
-                                    .card--widget__title IQ Mining
-                                    span.card--widget__signature 40% discount till 8 march
+                    .card.card--widget.hide-md-up
+                        h4.card__title Top tranding bot
+                            span.card__mark Promoted
 
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
+                        .card__body
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
 
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width='48', height='48')
+                                    .card--widget__info
+                                        .card--widget__title IQ Mining
+                                        span.card--widget__signature 40% discount till 8 march
 
-                                .card--widget__info
-                                    .card--widget__title CryptoUniverse
-                                    span.card--widget__signature Cashback up to 20%
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
 
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
+                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                                .card--widget__row
+                                    .card--widget__img-wrapper
+                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+
+                                    .card--widget__info
+                                        .card--widget__title CryptoUniverse
+                                        span.card--widget__signature Cashback up to 20%
+
+                                .btn--block
+                                    .btn.btn--small.btn--accent-3 Website
+
+                    .card.card--subscribe.card--mobile-visible
+                        .card__subscribe
+                            a.card__subscribe-item.card__subscribe-fb(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/facebook-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Like
+                                    .card__subscribe-nick utoday.en
+
+                            a.card__subscribe-item.card__subscribe-tw(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/twitter-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Follow
+                                    .card__subscribe-nick @utoday_en
+
+                            a.card__subscribe-item.card__subscribe-yb(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/youtube-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Subscribe
+                                    .card__subscribe-nick utoday
+
+                            a.card__subscribe-item.card__subscribe-tm(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/telegram-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Join
+                                    .card__subscribe-nick @utoday_en
+
+                            a.card__subscribe-item.card__subscribe-em(href="#!")
+                                .card__subscribe-icon
+                                    include ../img/icons/social/email-white.svg
+
+                                .card__subscribe-desc
+                                    .card__subscribe-title Subscribe to email
+
+                    .card.card--press--release
+                        .card__body
+                            .aside-story
+                                a.aside-story__img-wrapper(href="#!")
+                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
+                                    .promoted__mark Promo
+
+                                .aside-story__body
+                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+                                    .aside-story__info
+                                        .humble.humble--tiny 12:25 AM
+                        .card__footer
+                            a.btn.btn--accent(href="#!") Submit Press Release
+
+                    .card.card--something
+                        .something
+                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
+
+                    .card
+                        h4.card__title Popular
+                        .card__body
+                            each hot in hots
+                                article.aside-story
+                                    a.aside-story__img-wrapper(href="#!")
+                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
+                                        .promoted__mark Promo
+                                    .aside-story__body
+                                        a.aside-story__link(href="#!")= hot
+
+                                        .aside-story__info
+                                            time.humble.humble--tiny 12:25 AM
+
+                        .card__footer
+                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
 
         footer.footer
             .container.footer__container
