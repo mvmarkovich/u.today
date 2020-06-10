@@ -27,7 +27,7 @@ html(lang="en" dir="ltr" ⚡)
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
         style(amp-custom="")
-            include ../../../dest/styles/amp-info.css
+            include ../../../dest/styles/amp.css
 
         script(type='application/ld+json').
             {
@@ -93,17 +93,6 @@ html(lang="en" dir="ltr" ⚡)
                                     each child in category.childs
                                         li.sidebar__nav-child-item
                                             a.sidebar__nav-child-link(href="#!")= child.name
-
-        .currencies
-            .currencies__container.container
-
-                amp-list.currencies__slide-wrapper(height="24" width="auto" src="currencies.json")
-                    template.currencies__slide(type="amp-mustache")
-                        a.currencies__link(href="{{url}}")
-                            .currencies__info
-                                .currencies__name {{title}}
-                                .currencies__trand(class="{{down}}") {{trand}}
-                            .currencies__price {{price}}
 
         header.header
             .container.header__container
@@ -242,15 +231,6 @@ html(lang="en" dir="ltr" ⚡)
 
                         .card__footer
                             a.btn.btn--light.btn--arrow-right(href="#!") Show more
-
-        .share-and-up
-            .share__social
-                a.share__circle(href="#!")
-                    include ../img/icons/social/telegram.svg
-                a.share__circle(href="#!")
-                    include ../img/icons/social/twitter.svg
-                a.share__circle(href="#!")
-                    include ../img/icons/social/facebook.svg
 
         footer.footer
             .container.footer__container

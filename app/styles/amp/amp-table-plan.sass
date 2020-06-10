@@ -1,0 +1,103 @@
+.table-plan
+  margin: 24px 0 @md 40px 0
+  border-top: 1px solid #CFD8DC
+  border-bottom: 1px solid #CFD8DC
+
+  &__header, &__footer, &__row
+    box: middle wrap @md space-between
+
+    ^&__col
+      box: middle vertical
+
+      &:nth-child(1)
+        width: 100% @md 40%
+        padding-top: @md-down 16px
+        padding-bottom: @md-down 0
+        align-items: @md-down center
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        width: 50% @md 120px
+        text: center
+        align-items: center
+
+      &:nth-child(4)
+        width: 50% @md 136px
+
+  &__header
+    border-bottom: 1px solid #CFD8DC
+    position: @md-down sticky
+    top: 0
+    background: #fff
+
+    ^&__col
+      &:nth-child(1)
+        display: @md-down none
+
+  &__header, &__footer
+    padding: 8px 0 @md 12px 0
+    text: $header-super-tiny @md $header-tiny
+
+  &__footer
+    padding-bottom: 8px @md 4px
+
+    ^&__col
+      white-space: nowrap
+
+      &:nth-child(1)
+        padding-top: @md-down 12px
+        padding-bottom: @md-down 4px
+
+      &:nth-child(2), &:nth-child(3)
+        align-items: flex-start
+        flex-direction: row
+
+    ^&__tip
+      margin-top: 8px
+
+      &:first-child
+        margin-top: 16px
+
+  &__legend
+    padding-bottom: 0 @md 8px
+    padding-top: @md-down 2px
+    text-align: @md-down center
+
+    ^&__tip
+      margin-bottom: @md-down 4px
+
+    ^&__col
+      padding-top: 0
+
+  &__col
+    padding: 12px 0
+
+    .icon
+      display: block
+
+  &__row
+    &:not(:last-child)
+      border-bottom: 1px solid #CFD8DC
+
+    ^&__col
+      text: $body-tiny @md $body-standart
+
+  &__tip
+    text: $pseudo-neutral-400 $body-tiny @md $body-small
+    margin-top: -6px @md -2px
+    margin-bottom: -1px @md 5px
+
+  &__old-price
+    text: $pseudo-neutral-400
+    display: inline
+    margin-right: 11px
+    text-decoration: line-through
+
+  &--three
+
+    ^&__col
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        width: 33% @md 120px
+
+      &:nth-child(4)
+        width: 33% @md 136px
