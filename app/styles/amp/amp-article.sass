@@ -64,12 +64,24 @@
       padding: 0
 
     &-item
-      margin: 0 0 10px
+      margin: 0 0 12px
       padding: 0
       color: #2979FF
 
+      &:last-child
+        margin: 0
+
     &-link
       text: 500 16px 1.6
+
+      &:before
+        content: ''
+        size: 4px
+        border-radius: 50%
+        background: $accent-1-light
+        position: absolute
+        left: -20px
+        top: 8px
 
   &__lead
     margin: 24px 0

@@ -1,0 +1,36 @@
+blockquote
+  margin: 2.5rem 0 1.7rem @md 3.2rem 0 2rem @xl 4rem 0 2.5rem
+  position: relative
+  border-left: 4px solid $accent-1-light
+  padding: .5rem 1rem
+
+  &:before
+    content: ""
+    display: block
+    background: svg-load("icons/quote.svg" fill: $accent-1-light) center / cover
+    size: 1.5rem
+    position: absolute -26px null null -14px
+
+  p
+    text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
+    font-style: italic
+
+  img
+    display: block
+    border-radius: 50%
+    margin-right: .5rem @xl 1.1rem
+    size: 3rem @xl 4rem
+    float: left
+    margin-bottom: 0
+
+  strong
+    text: $header-tiny
+    font-family: $font
+    margin-top: 1rem @xl 1.9rem
+    display: block
+
+  em
+    text: $pseudo-neutral-400 $body-small
+    font-family: $font
+    font-style: normal
+    display: block

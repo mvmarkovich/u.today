@@ -1,0 +1,88 @@
+.something
+  overflow: hidden
+  text-align: center
+  position: relative
+
+  &--top
+    height: @sm 90px
+    position: relative
+    z-index: 996
+
+  &--content
+    margin: 1.5rem 0 @md 2rem 0 @xl 2.5rem 0
+
+  &__content
+    display: block
+
+    img
+      margin: * auto
+      height: auto
+
+    &-long
+      text-align: center
+      display: inherit @xl-down none
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+    &-scale
+      transform: scale(0.89)
+
+    &-square
+      display: inherit @xl none
+      text-align: center
+
+      img
+        margin: * auto
+        height: auto
+
+      & > ins
+        display: block
+        margin: 0 auto
+
+  &--aside
+    padding: @xl 9px *
+    height: @xl-down 200px
+
+    > *
+      transform: @xl-down scale(.76)
+
+    > img
+      min-width: 300px
+
+  &--wide
+    margin-bottom: 1rem @xl 2rem
+    margin: @sm-down * -1rem
+
+  &-long
+    display: @md-down none
+
+  &-square
+    display: @md none
+
+  &--footer
+    display: flex @md none
+    height: @md 0
+    position: fixed null 16px 16px 16px
+    z-index: 106
+    flex-direction: column
+    align-items: flex-end
+    background-color: transparent
+
+    &.hide
+      height: 0
+      display: none
+
+  &__wrapper
+    margin-bottom: 1rem @xl 1.5rem
+    border-bottom: $border
+
+.ref
+  text: $pseudo-neutral-400 13px 1.6
+  text-align: center
+  margin: 0 0 16px 0
