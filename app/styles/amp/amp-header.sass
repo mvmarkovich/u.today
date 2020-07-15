@@ -19,6 +19,12 @@
     align-items: center
     margin-right: @sm-down 8px
 
+    span
+      height: 0
+      width: 0
+      color: transparent
+      overflow: hidden
+      display: block
 
   &__panel
     display: flex
@@ -222,6 +228,14 @@
 .header__btn-search, .mobile-menu__btn
   width: 48px
   height: 48px
+  overflow: hidden
+
+  span
+    height: 0
+    width: 0
+    color: transparent
+    overflow: hidden
+    display: block
 
 .mobile-menu__btn
   display: none

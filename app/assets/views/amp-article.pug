@@ -3,7 +3,7 @@ doctype html
 html(lang="en" dir="ltr" ⚡)
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=5")
 
         link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
 
@@ -79,10 +79,15 @@ html(lang="en" dir="ltr" ⚡)
             .sidebar__social.social
                 a.social__link.social__link--fb(href="#!")
                     include ../img/icons/social/facebook.svg
+                    | Facebook
+
                 a.social__link.social__link--tg(href="#!")
                     include ../img/icons/social/telegram.svg
+                    | Telegram
+
                 a.social__link.social__link--tw(href="#!")
                     include ../img/icons/social/twitter.svg
+                    | Twitter
 
             nav.sidebar__nav
                 ul.sidebar__nav-list
@@ -99,7 +104,8 @@ html(lang="en" dir="ltr" ⚡)
         header.header
             .container.header__container
                 a.header__logo(href="/")
-                    amp-img(src="img/icons/logo-news.svg" layout="intrinsic" width="219" height="20")
+                    amp-img(src="img/icons/logo-news.svg" layout="intrinsic" alt="U.TODAY NEWS" width="219" height="20")
+                    span U.TODAY NEWS
 
                 nav.header__nav
                     ul.header__nav-list
@@ -121,6 +127,7 @@ html(lang="en" dir="ltr" ⚡)
                     .header__search
                         a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
                             include ../img/icons/search.svg
+                            span Search
 
                         form.header__search-form#header__search-form(action="#" target="_top" method="get")
                             button.header__search-submit.btn.btn--light.btn--search(type="submit")
@@ -156,8 +163,12 @@ html(lang="en" dir="ltr" ⚡)
                             .article__header--row
                                 .share__social
                                     amp-social-share.share__circle.share__circle-tw(type="twitter" width="56" height="24")
+                                        | Twitter
                                     amp-social-share.share__circle.share__circle-fb(type="facebook" width="56" height="24")
+                                        | Facebook
                                     amp-social-share.share__circle.share__circle-ln(type="linkedin" width="56" height="24")
+                                        | LinkedIn
+
                                 a.humble.humble--icon(href="#!") News
                                     include ../img/icons/label/news.svg
                                 .humble.author__item-time Oct 27’2018, 11:27 AM
@@ -170,7 +181,7 @@ html(lang="en" dir="ltr" ⚡)
 
                         .article__lead
                             a.article__lead-img--wrapper(href="#!")
-                                amp-img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' layout='fixed' width='40' height='40')
+                                amp-img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' alt="Denys Serhiichuk" layout='fixed' width='40' height='40')
 
                             .article__lead-info
                                 a.article__lead-name(href="#!") Denys Serhiichuk
@@ -179,7 +190,7 @@ html(lang="en" dir="ltr" ⚡)
                         a.cels__widget(href="#!" rel="nofollow" target="_blank")
                             .cels__widget-info
                                 .cels__widget-img--wrapper
-                                    amp-img.cels__widget-img(src="img/content/crypt/mini_celsius.svg" layout="fixed" width="48" height="48")
+                                    amp-img.cels__widget-img(src="img/content/crypt/mini_celsius.svg" alt="Celsius" layout="fixed" width="48" height="48")
 
                                 .form--row
                                     span.cels__widget-caption Put your crypto to work
@@ -211,7 +222,7 @@ html(lang="en" dir="ltr" ⚡)
 
                         .article__main-img-wrapper
                             figcaption Cover image via <a href="#!"> www.tronwallet.me </a>
-                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', layout='responsive', width='736', height='460')
+                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', alt="main-img", layout='responsive', width='736', height='460')
 
                             .disclaimer
                                 p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
@@ -245,12 +256,14 @@ html(lang="en" dir="ltr" ⚡)
                             p(dir="ltr")
                                 .article__related
                                     a.article__related-img--wrapper(href="#!")
-                                        amp-img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al" layout="fixed" width="112" height="68")
+                                        amp-img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al" alt="Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha" layout="fixed" width="112" height="68")
+                                        span Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
+
                                     a.article__related-desc(href="#!")
                                         .article__related-flame Related
                                         .article__related-blockquote Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
 
-                            amp-img(src="https://u.today/sites/default/files/styles/1200x/public/inline-images/twit-example%201.jpg?itok=89jS47Fu" width="371" height="240" layout="intrinsic")
+                            amp-img(src="https://u.today/sites/default/files/styles/1200x/public/inline-images/twit-example%201.jpg?itok=89jS47Fu" alt="IMG" width="371" height="240" layout="intrinsic")
 
                             p
                                 | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
@@ -270,8 +283,7 @@ html(lang="en" dir="ltr" ⚡)
                                     |  of the speakers.
 
                             figure
-                                a(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
-                                    amp-img(layout='responsive', width='16', height='10' src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4")
+                                amp-img(layout='responsive', width='16', height='10' alt="IMG" src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4")
                                 figcaption Cover image via <a href="#!"> 123rf.com </a>
 
                             table
@@ -373,7 +385,9 @@ html(lang="en" dir="ltr" ⚡)
                         .about-author
                             .about-author_row
                                 a.about-author_avatar(href="#!author")
-                                    amp-img(src="https://dummyimage.com/64x64/d8dbde/aaabad" layout='fixed', width='40', height='40')
+                                    amp-img(src="https://dummyimage.com/64x64/d8dbde/aaabad" alt="Konstantin Konstantinopolsky" layout='fixed', width='40', height='40')
+                                    span Konstantin Konstantinopolsky
+
                                 .about-author_info
                                     .about-author_title About the author
                                     .about-author_data
@@ -381,16 +395,27 @@ html(lang="en" dir="ltr" ⚡)
                                         .social
                                             a.social__link.social__link--fb(href="#!")
                                                 include ../img/icons/social/facebook.svg
+                                                | Facebook
+
                                             a.social__link.social__link--tg(href="#!")
                                                 include ../img/icons/social/telegram.svg
+                                                | Telegram
+
                                             a.social__link.social__link--tw(href="#!")
                                                 include ../img/icons/social/twitter.svg
+                                                | Twitter
+
                                             a.social__link.social__link--ln(href="#!")
                                                 include ../img/icons/social/LinkedIn.svg
+                                                | LinkedIn
+
                                             a.social__link.social__link--insta(href="#!")
                                                 include ../img/icons/social/Instagram.svg
+                                                | Instagram
+
                                             a.social__link.social__link--em(href="#!")
                                                 include ../img/icons/social/email.svg
+                                                | Email
 
                                     p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
 
@@ -402,7 +427,7 @@ html(lang="en" dir="ltr" ⚡)
                                 a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
                                     .card--widget__row
                                         .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
+                                            amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining" layout='fixed', width="48px", height="48px")
 
                                         .card--widget__info
                                             .card--widget__title IQ Mining
@@ -414,7 +439,7 @@ html(lang="en" dir="ltr" ⚡)
                                 a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
                                     .card--widget__row
                                         .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+                                            amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse" layout='fixed', width="48px", height="48px")
 
                                         .card--widget__info
                                             .card--widget__title CryptoUniverse
@@ -425,7 +450,8 @@ html(lang="en" dir="ltr" ⚡)
 
                     .category-item
                         a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="How to Protect Your Identity and Bitcoin Wallet From Tracking" layout="responsive" width="218" height="136")
+                            span How to Protect Your Identity and Bitcoin Wallet From Tracking
 
                         .category-item__info
                             .humble__row
@@ -437,7 +463,7 @@ html(lang="en" dir="ltr" ⚡)
 
                             .humble__row.humble--between
                                 a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov" layout="fixed" width="24" height="24")
                                     | Vladislav Sopov
 
                                 .humble.humble--icon.humble--icon-large
@@ -446,7 +472,8 @@ html(lang="en" dir="ltr" ⚡)
 
                     .category-item
                         a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
+                            span Beginner’s Guide to Bluzelle — The Decentralized Data Network
                             .promoted__mark Promo
 
                         .category-item__info
@@ -459,7 +486,7 @@ html(lang="en" dir="ltr" ⚡)
 
                             .humble__row.humble--between
                                 a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" layout="fixed" width="24" height="24")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" alt="Heewon Jang" layout="fixed"  width="24" height="24")
                                     | Heewon Jang
 
                                 .humble.humble--icon.humble--icon-large
@@ -468,7 +495,8 @@ html(lang="en" dir="ltr" ⚡)
 
                     .category-item
                         a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
+                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
+                            span Beginner’s Guide to Bluzelle — The Decentralized Data Network
 
                         .category-item__info
                             .humble__row
@@ -480,7 +508,7 @@ html(lang="en" dir="ltr" ⚡)
 
                             .humble__row.humble--between
                                 a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" layout="fixed" width="24" height="24")
+                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Vera Yurina" layout="fixed" width="24" height="24")
                                     | Vera Yurina
 
                                 .humble.humble--icon.humble--icon-large
@@ -498,7 +526,7 @@ html(lang="en" dir="ltr" ⚡)
                             a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
                                 .card--widget__row
                                     .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
+                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining" layout='fixed', width="48px", height="48px")
 
                                     .card--widget__info
                                         .card--widget__title IQ Mining
@@ -510,7 +538,7 @@ html(lang="en" dir="ltr" ⚡)
                             a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
                                 .card--widget__row
                                     .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
+                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse" layout='fixed', width="48px", height="48px")
 
                                     .card--widget__info
                                         .card--widget__title CryptoUniverse
@@ -564,7 +592,7 @@ html(lang="en" dir="ltr" ⚡)
                         .card__body
                             .aside-story
                                 a.aside-story__img-wrapper(href="#!")
-                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
+                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", alt="Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches" layout='fixed', width="72px", height="45px")
                                     .promoted__mark Promo
 
                                 .aside-story__body
@@ -577,7 +605,7 @@ html(lang="en" dir="ltr" ⚡)
 
                     .card.card--something
                         .something
-                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
+                            amp-img(src="img/content/banner.png" alt="banner" width="360" height="156" layout="fixed")
 
                     .card
                         h4.card__title Popular
@@ -585,7 +613,7 @@ html(lang="en" dir="ltr" ⚡)
                             each hot in hots
                                 article.aside-story
                                     a.aside-story__img-wrapper(href="#!")
-                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
+                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", alt="IMG" width="72px", height="45px")
                                         .promoted__mark Promo
                                     .aside-story__body
                                         a.aside-story__link(href="#!")= hot
@@ -605,17 +633,21 @@ html(lang="en" dir="ltr" ⚡)
                         .social.social--border.social--wide
                             a.social__link.social__link--fb(href="#!")
                                 include ../img/icons/social/facebook.svg
+                                | Facebook
+
                             a.social__link.social__link--tg(href="#!")
                                 include ../img/icons/social/telegram.svg
+                                | Telegram
+
                             a.social__link.social__link--tw(href="#!")
                                 include ../img/icons/social/twitter.svg
+                                | Twitter
 
                     .footer__subscribe
-                        .footer__title Subscribe to daily newsletter
-
                         form.form--row.footer__subscribe-form(target="#" method="get")
                             .input
-                                input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+                                label.footer__title(for="footer__subscribe-input") Subscribe to daily newsletter
+                                input.footer__subscribe-input.input__elem#footer__subscribe-input(type="text" name="email" placeholder="Email" required)
 
                             .input
                                 button.btn.btn--wide.btn--input(type="submit") Subscribe
