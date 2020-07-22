@@ -23,6 +23,7 @@ html(lang="en" dir="ltr" ⚡)
         script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
         script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
         script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
+        script(async='', custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js")
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -694,13 +695,22 @@ html(lang="en" dir="ltr" ⚡)
                             .modal__item-agree By pressing the “Subscribe button” you agree with our
                                 a(href="#!") Privacy Policy
 
-        .cookies#close-cookies
+        script(type='application/json').
+            {
+            "consentInstanceId": "my-consent",
+            "consentRequired": "remote",
+            "checkConsentHref": "https://example.com/api/check-consent",
+            "promptUI": "consent-ui",
+            "onUpdateHref": "https://example.com/update-consent"
+            }
+
+        amp-user-notification.cookies#cookies(layout="display")
             .cookies__container.container
                 .cookies__row
                     p.cookies_text This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a>
                     .btn__block
                         a.btn-link(href="#!") Cookie settings
-                        a.btn.accept-cookies(href="#" on='tap:close-cookies.toggle') Accept cookies
+                        button.btn.accept-cookies(on="tap:cookies.dismiss") Accept cookies
 
 
 
