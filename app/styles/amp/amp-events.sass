@@ -18,3 +18,42 @@
 
     &-text
       text: 500 13px 1.9
+
+  &--bg
+    padding: 24px 16px @sm 32px 40px
+    background: #F5F5F5
+    border: none
+    margin: 32px -16px @sm 32px 0
+
+    ^&__info
+
+      &-row
+        align-items: center
+
+      &-label
+        text: @sm 15px
+        min-width: @sm 140px
+
+      &-text
+        text: 700 @sm 15px
+
+.speakers
+  margin: 32px 0
+
+  &__item
+    margin: 0 0 24px
+    box: center
+
+    &:last-child
+      margin: 0
+
+  &__img
+    max-width: 48px @sm 64px
+    min-width: 48px @sm 64px
+    border-radius: 50%
+    overflow: hidden
+
+  &__name
+    text: 500 17px 1.6
+    margin: 0 0 0 16px
+

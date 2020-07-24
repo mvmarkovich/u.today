@@ -25,6 +25,7 @@ html(lang="en" dir="ltr" ⚡)
         script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
         script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
         script(async='', custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js")
+        script(async='', custom-element='amp-bind', src='https://cdn.ampproject.org/v0/amp-bind-0.1.js')
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -177,57 +178,47 @@ html(lang="en" dir="ltr" ⚡)
                             .btns-spacer
                                 a.btn.btn--light(href="#!") See all
 
-                        ul.news__list
-                            li.news__item
-                                .news__item-time-wrapper
-                                    time.news__item-time.humble 1 hour ago
+                        amp-list(width='auto', height='332', layout='fixed-height', src='main-news-list.json', binding='refresh', load-more='manual', load-more-bookmark='next')
+                            .news__list
+                                template(type='amp-mustache')
+                                    .news__item
+                                        .news__item-time-wrapper
+                                            time.news__item-time.humble {{time}}
 
-                                .news__item-title-wrapper
-                                    h2.news__item-title
-                                        a.news__item-link.link-plain(href="#!") Google CEO’s Son Mines Ethereum on Home PC
+                                        .news__item-title-wrapper
+                                            h2.news__item-title
+                                                a.news__item-link.link-plain(href="#!") {{title}}
 
-                                    .news__item-info
-                                        a.humble.humble--icon(href="#!")
-                                            include ../img/icons/comment_bold.svg
-                                            | 0
+                                            .news__item-info
+                                                a.humble.humble--icon(href="#!")
+                                                    include ../img/icons/comment_bold.svg
+                                                    | 0
 
-                            li.news__item
-                                .news__item-time-wrapper
-                                    time.news__item-time.humble 5 hours ago
+                                div(fallback='')
+                                    | FALLBACK
+                                div(placeholder='')
+                                    | PLACEHOLDER
+                                amp-list-load-more
+                                    | ERROR
+                                amp-list-load-more(load-more-end='')
+                                    | END
 
-                                .news__item-title-wrapper
-                                    h2.news__item-title
-                                        a.news__item-title.link-plain(href="#!") Coinbase Custody Launches Cryptocurrency Fund With Wilshire Phoenix Two strings news title
+                                button(load-more-button) Show
 
-                                    .news__item-info
-                                        a.humble.humble--icon(href="#!")
-                                            include ../img/icons/comment_bold.svg
-                                            | 12
 
-                            li.news__item
-                                .news__item-time-wrapper
-                                    time.news__item-time.humble 12 hours ago
-
-                                .news__item-title-wrapper
-                                    h2.news__item-title
-                                        a.news__item-title.link-plain(href="#!") From Thinking Like a Regulator to Pulling Off a Crypto Heist: StartEngine Summit Opens LA Blockchain Week (Sample three line header for demo)
-
-                                    .news__item-info
-                                        a.humble.humble--icon(href="#!")
-                                            include ../img/icons/comment_bold.svg
-                                            | 56
-                            li.news__item
-                                .news__item-time-wrapper
-                                    time.news__item-time.humble 18 hour ago
-
-                                .news__item-title-wrapper
-                                    h2.news__item-title
-                                        a.news__item-title.link-plain(href="#!") Past-ICO Review: Hero Token
-
-                                    .news__item-info
-                                        a.humble.humble--icon(href="#!")
-                                            include ../img/icons/comment_bold.svg
-                                            | 33
+                    amp-list(width='auto', height='332', layout='fixed-height', src='https://amp.dev/documentation/examples/api/photo-stream?items=3&left=3', binding='refresh', load-more, load-more-bookmark='next')
+                        template(type='amp-mustache')
+                            .list-item
+                                amp-img(src='{{imageUrl}}', width='100', height='100')
+                                p {{title}}
+                        div(fallback='')
+                            | FALLBACK
+                        div(placeholder='')
+                            | PLACEHOLDER
+                        amp-list-load-more(load-more-failed='')
+                            | ERROR
+                        amp-list-load-more(load-more-end='')
+                            | END
 
                     .press-releases
 

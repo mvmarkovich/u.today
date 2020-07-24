@@ -10,6 +10,11 @@
     display: @sm-down flex
     align-items: @sm-down center
 
+  &__mark
+    margin: 32px 0
+    font-weight: 500
+    line-height: 1.8
+
   &__header
     margin: 24px 0
 
@@ -126,6 +131,9 @@
       margin: 0
 
   &__content
+    .btn--block-event
+      padding: 0 0 32px
+
     p
       font-weight: 500
       line-height: 1.8
@@ -181,6 +189,13 @@
     &-img
       &--wrapper
         margin-right: 16px
+
+        span
+          height: 0
+          width: 0
+          color: transparent
+          overflow: hidden
+          display: block
 
     &-flame
       text: #546E7A 700 15px 1.2
