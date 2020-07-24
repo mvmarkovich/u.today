@@ -8,9 +8,10 @@
     &-row
       display: flex
       align-items: flex-start
+      margin: 0 0 16px @sm 0 0 24px
 
-      & + &
-        margin-top: 24px
+      &:last-child
+        margin: 0
 
     &-label
       text: #78909C 500 13px 1.9
@@ -20,25 +21,30 @@
       text: 500 13px 1.9
 
   &--bg
-    padding: 24px 16px @sm 32px 40px
+    padding: 24px 16px 16px 16px @sm 32px 40px 16px 40px
     background: #F5F5F5
     border: none
-    margin: 32px -16px @sm 32px 0
+    margin: 24px 0 @sm 32px 0
 
     ^&__info
 
       &-row
+        display: @sm-down block
         align-items: center
 
       &-label
-        text: @sm 15px
-        min-width: @sm 140px
+        text: 15px
+        min-width: 1px @sm 140px
 
       &-text
-        text: 700 @sm 15px
+        margin:
+        text: 700 15px
+
+    .social
+      margin: 0 0 0 -16px
 
 .speakers
-  margin: 32px 0
+  margin: 24px 0 @sm 32px 0
 
   &__item
     margin: 0 0 24px
@@ -48,12 +54,12 @@
       margin: 0
 
   &__img
-    max-width: 48px @sm 64px
-    min-width: 48px @sm 64px
+    max-width: 40px @sm 64px
+    min-width: 40px @sm 64px
     border-radius: 50%
     overflow: hidden
 
   &__name
-    text: 500 17px 1.6
+    text: 500 15px 1.6 @sm 17px
     margin: 0 0 0 16px
 
