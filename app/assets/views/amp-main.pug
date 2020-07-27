@@ -178,8 +178,7 @@ html(lang="en" dir="ltr" ⚡)
                             .btns-spacer
                                 a.btn.btn--light(href="#!") See all
 
-                        <button on="tap:list.changeToLayoutContainer()">Show Grid</button>
-                        amp-list(width='auto', height='332' src='main-news-list.json' load-more='manual')
+                        amp-list(width='auto' height="360" layout="fixed-height" src='main-news-list-1.json' load-more="manual" load-more-bookmark="next")
                             .news__list
                                 template(type='amp-mustache')
                                     .news__item
@@ -195,9 +194,10 @@ html(lang="en" dir="ltr" ⚡)
                                                     include ../img/icons/comment_bold.svg
                                                     | 0
 
-                            amp-list-load-more(load-more-failed='')
-                                button Unable to Load More
-
+                            amp-list-load-more(load-more-button='')
+                                button.btn.btn--light.news__footer
+                                    include ../img/icons/triangle_down.svg
+                                    | Show more news
 
                     .press-releases
 
