@@ -178,7 +178,8 @@ html(lang="en" dir="ltr" ⚡)
                             .btns-spacer
                                 a.btn.btn--light(href="#!") See all
 
-                        amp-list(width='auto', height='332', layout='fixed-height', src='main-news-list.json', binding='refresh', load-more='manual', load-more-bookmark='next')
+                        <button on="tap:list.changeToLayoutContainer()">Show Grid</button>
+                        amp-list(width='auto', height='332' src='main-news-list.json' load-more='manual')
                             .news__list
                                 template(type='amp-mustache')
                                     .news__item
@@ -194,31 +195,9 @@ html(lang="en" dir="ltr" ⚡)
                                                     include ../img/icons/comment_bold.svg
                                                     | 0
 
-                                div(fallback='')
-                                    | FALLBACK
-                                div(placeholder='')
-                                    | PLACEHOLDER
-                                amp-list-load-more
-                                    | ERROR
-                                amp-list-load-more(load-more-end='')
-                                    | END
+                            amp-list-load-more(load-more-failed='')
+                                button Unable to Load More
 
-                                button(load-more-button) Show
-
-
-                    amp-list(width='auto', height='332', layout='fixed-height', src='https://amp.dev/documentation/examples/api/photo-stream?items=3&left=3', binding='refresh', load-more, load-more-bookmark='next')
-                        template(type='amp-mustache')
-                            .list-item
-                                amp-img(src='{{imageUrl}}', width='100', height='100')
-                                p {{title}}
-                        div(fallback='')
-                            | FALLBACK
-                        div(placeholder='')
-                            | PLACEHOLDER
-                        amp-list-load-more(load-more-failed='')
-                            | ERROR
-                        amp-list-load-more(load-more-end='')
-                            | END
 
                     .press-releases
 
