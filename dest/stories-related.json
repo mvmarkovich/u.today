@@ -1,0 +1,38 @@
+{
+    "bookendVersion": "v1.0",
+
+    "components": [
+        {
+            "type": "heading",
+            "text": "Related"
+        },
+        {
+            "type": "landscape",
+            "title": "Tron CEO Justin Sun Teases 'Huge' Secret Guest at Upcoming NiTROn Summit",
+            "url": "https://wikipedia.org/wiki/Cat",
+            "image": "img/content/amp-stories/related_item_1.png",
+            "category": "Stories"
+        },
+        {
+            "type": "landscape",
+            "title": "Tron Price ‘Ready to Fly’ as Justin Sun Gives Away 50 Mln TRX to SRs",
+            "url": "/",
+            "image": "img/content/amp-stories/related_item_2.png",
+            "category": "Interviews"
+        },
+        {
+            "type": "landscape",
+            "title": "It's Official: Tron CEO Justin Sun Confirms Much-Hyped Partnership with Samsung",
+            "url": "/",
+            "image": "img/content/amp-stories/related_item_3.png",
+            "category": "Price Prediction"
+        },
+        {
+            "type": "landscape",
+            "title": "EOS Remains in First Place on China's Updated Crypto Rankings. What About Tron, Ethereum ...",
+            "url": "/",
+            "image": "img/content/amp-stories/related_item_4.png",
+            "category": "News"
+        }
+    ]
+}
