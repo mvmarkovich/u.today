@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "img": "https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge",
+      "category" : "Stories",
+      "time": "2 hours ago",
+      "title": "How to Protect Your Identity and Bitcoin Wallet From Tracking",
+      "author" : "Vladislav Sopov",
+      "link" : "/",
+      "link-author" : "/",
+      "img-author" : "https://u.today/sites/default/files/2019-11/vlad-ava.jpg",
+      "label" : "Promoted"
+    },
+    {
+      "img": "https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1",
+      "category" : "Interviews",
+      "time": "4 hours ago",
+      "title": "How To Exchange Crypto with BestСhange",
+      "author" : "Heewon Jang",
+      "link" : "/",
+      "link-author" : "/",
+      "img-author" : "https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg"
+    },
+    {
+      "img": "https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_",
+      "category" : "Price Prediction",
+      "time": "1 day 23 hours ago",
+      "title": "Beginner’s Guide to Bluzelle — The Decentralized Data Network",
+      "author" : "Vera Yurina",
+      "link" : "/",
+      "link-author" : "/",
+      "img-author" : "https://u.today/sites/default/files/2019-11/vera-ava.jpg"
+    },
+    {
+      "img": "https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw",
+      "category" : "News",
+      "time": "2 days 1 hour ago",
+      "title": "Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand",
+      "author" : " Yuri Molchan",
+      "link" : "/",
+      "link-author" : "/",
+      "img-author" : "https://u.today/sites/default/files/2019-11/yuri-ava.jpg"
+    }
+  ],
+
+  "next" : "author-articles-1.json"
+}
