@@ -1,0 +1,64 @@
+.upcoming
+  margin: 16px 0
+  padding: @md-down 0 16px
+  height: 470px @md auto
+  overflow: hidden @md visible
+
+  &__header
+    margin: 0 0 8px
+    padding: 16px
+    display: flex
+    background: #fff
+
+    .btn
+      min-height: 24px
+      margin-right: 16px
+      font-weight: 700
+      text: #90A4AE 15px
+
+  &__row
+    display: flex
+    justify-content: space-between
+    padding-bottom: 130px @md 0
+    overflow-x: auto
+
+  &__title
+    text: 600 15px 1.6
+    white-space: pre
+    margin: 0 16px 0 0
+
+  &__item
+    min-width: 224px @xl 1px
+    max-width: 224px @xl 100%
+    width: 100%
+    background: #fff
+
+    & + &
+      margin-left: 8px
+
+    &-info
+      padding: 16px
+
+      & > *
+        margin: 0 0 16px
+
+        &:last-child
+          margin: 0
+
+    &-title
+      text: 700 15px 1.6
+      margin: 0
+
+    &-link
+      text: 500 13px 1.5
+      display: inline-block
+
+    .btn--event
+      font-size: 13px
+
+.promocode
+  &__title
+    text: 700 15px 1.6
+
+  &__value
+    text: #546E7A 500 13px 1.5
