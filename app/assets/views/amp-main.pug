@@ -26,6 +26,8 @@ html(lang="en" dir="ltr" ⚡)
         script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
         script(async='', custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js")
         script(async='', custom-element='amp-bind', src='https://cdn.ampproject.org/v0/amp-bind-0.1.js')
+        script(async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js")
+
 
         link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
 
@@ -213,7 +215,7 @@ html(lang="en" dir="ltr" ⚡)
                                     a.btn.btn--light(href="#!See all") See all
                                     a.btn.btn--light(href="#!Submit") Submit
 
-                        .press-releases__row
+                        amp-carousel.press-releases__slider(layout="intrinsic" type="carousel")
                             a.press-releases__item.link-plain(href="#!")
                                 .press-releases__inner
                                     .press-releases__item-img--wrapper
@@ -228,6 +230,13 @@ html(lang="en" dir="ltr" ⚡)
                                         amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR" layout="responsive" width="224" height="140")
 
                                     h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
+
+                            a.press-releases__item.link-plain(href="#!")
+                                .press-releases__inner
+                                    .press-releases__item-img--wrapper
+                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
+
+                                    h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
 
                             a.press-releases__item.link-plain(href="#!")
                                 .press-releases__inner
@@ -317,8 +326,8 @@ html(lang="en" dir="ltr" ⚡)
                             .btn--block
                                 a.btn.btn--light(href="#!See all") See all
 
-                        .upcoming__row
-                            .upcoming__item.link-plain
+                        amp-carousel.upcoming__slider(layout="intrinsic" type="carousel")
+                            .upcoming__item
                                 .upcoming__item-img
                                     amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
 
@@ -335,9 +344,9 @@ html(lang="en" dir="ltr" ⚡)
                                         .promocode__title Promocode:
                                         .promocode__value WWWWWWWWWWWW
 
-                            .upcoming__item.link-plain
+                            .upcoming__item
                                 .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_3.png" alt="Sed ut perspiciatis unde accusantium doloremque" layout="responsive" width="237" height="148")
+                                    amp-img(src="img/content/upcoming/item_2.png" alt="Sed ut perspiciatis unde accusantium doloremque" layout="responsive" width="237" height="148")
 
                                 .upcoming__item-info
                                     .humble__row
@@ -347,9 +356,9 @@ html(lang="en" dir="ltr" ⚡)
                                     .upcoming__item-title Sed ut perspiciatis unde accusantium doloremque
                                     a.upcoming__item-link(href="#!") Read more
 
-                            .upcoming__item.link-plain
+                            .upcoming__item
                                 .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_2.png" alt="Lorem ipsum dolor sit amet" layout="responsive" width="237" height="148")
+                                    amp-img(src="img/content/upcoming/item_3.png" alt="Lorem ipsum dolor sit amet" layout="responsive" width="237" height="148")
 
                                 .upcoming__item-info
                                     .humble__row
@@ -359,6 +368,23 @@ html(lang="en" dir="ltr" ⚡)
                                     a.upcoming__item-link(href="#!") Read more
 
                                     a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
+
+                            .upcoming__item
+                                .upcoming__item-img
+                                    amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
+
+                                .upcoming__item-info
+                                    .humble__row
+                                        .humble 1 Sep 2020
+
+                                    .upcoming__item-title Blockspot Conference Europe 2020
+                                    a.upcoming__item-link(href="#!") Read more
+
+                                    a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
+
+                                    .promocode
+                                        .promocode__title Promocode:
+                                        .promocode__value WWWWWWWWWWWW
 
                     .story
                         .story__header

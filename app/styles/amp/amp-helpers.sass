@@ -37,3 +37,23 @@ ul
 
   &-sm-only
     display: @sm none
+
+.amp-carousel-button
+  size: 24px 48px
+  background-color: transparent
+  border-radius: 0
+  background-size: contain
+  margin: 0
+  outline: none
+  cursor: pointer
+  position: absolute
+
+.amp-carousel-button-prev
+  background-image: svg-load("icons/slider_arrow-prev.svg")
+  left: 0 @md -28px
+  display: @md-down none
+
+.amp-carousel-button-next
+  background-image: svg-load("icons/slider_arrow-next.svg")
+  right: 0 @md -28px
+  display: @md-down none

@@ -1,22 +1,29 @@
 .press-releases
-  background-color: #FFF
-  padding: 12px 16px 32px
+  background-color: #fff
   margin: 16px 0
   border-top: 4px solid #2196F3
   border-bottom: 4px solid #2196F3
-  height: 320px @md auto
-  overflow: hidden @md visible
 
   &__header
     justify-content: space-between
-    margin-bottom: 16px
     display: flex
+    padding: 12px 16px
 
-  &__row
-    display: flex
-    justify-content: space-between
-    padding-bottom: 130px @md 0
-    overflow-x: auto
+  &__slider
+    width: 100% @md 480px @xl 768px
+    position: relative
+    padding: 0 16px 32px
+
+    & > *
+
+      & > *:first-child
+        margin: 0 0 -17px
+
+        &::-webkit-scrollbar
+          width: 0
+
+        &::-moz-scrollbar
+          width: 0
 
   &__info
     display: flex
@@ -28,12 +35,13 @@
     margin: 0 16px 0 0
 
   &__item
-    min-width: 180px @sm 224px @xl 1px
-    max-width: 180px @sm 224px
+    min-width: 180px @sm 214px @xl 1px
+    max-width: 180px @sm 214px @xl 224px
     width: 100%
+    vertical-align: top
 
     & + &
-      margin-left: 16px
+      margin-left: 16px @xl 32px
 
     &-img
 
@@ -44,6 +52,7 @@
     &-name
       text: 500 13px 1.8
       margin: 8px 0 0
+      white-space: pre-wrap
 
   .btn
     min-height: 16px
