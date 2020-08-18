@@ -1,0 +1,21 @@
+amp-lightbox#subscribe(layout="nodisplay")
+    .modal
+        .modal__item
+            button.btn.btn--light.modal__close(on="tap:subscribe.close")
+                include ../../img/icons/Cross.svg
+
+            .modal__item-body
+                .modal__item-text Sign up for crypto digest
+
+                form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
+                    .validation__panel.validation__successful(submit-success='') Thank you for subscription!
+                    .validation__panel.validation__error(submit-error='')
+                        <template type="amp-mustache">Error! JSON: {{message}}</template>
+
+                    .input.article__subscribe-input
+                        input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
+
+                    input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
+
+                    .modal__item-agree By pressing the “Subscribe button” you agree with our
+                        a(href="#!") Privacy Policy

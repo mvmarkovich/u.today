@@ -1,0 +1,13 @@
+aside.aside-menu-block
+
+    .card
+        .card__title Contacts
+
+        .card__body
+            .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
+
+            .card__list
+                each item in contactEmails
+                    .card__list-item
+                        .card__list-title= item.title
+                        a.card__list-link(href="mailto:" + item.email)= item.email

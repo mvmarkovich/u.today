@@ -1,626 +1,316 @@
-include inc/var.pug
-doctype html
-html(lang="en" dir="ltr" ⚡)
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-        meta(name='amp-script-src', content='sha384-X8xW7VFd-a-kgeKjsR4wgFSUlffP7x8zpVmqC6lm2DPadWUnwfdCBJ2KbwQn6ADE sha384-nNFaDRiLzgQEgiC5kP28pgiJVfNLVuw-nP3VBV-e2s3fOh0grENnhllLfygAuU_M sha384-u7NPnrcs7p4vsbGLhlYHsId_iDJbcOWxmBd9bhVuPoA_gM_he4vyK6GsuvFvr2ym')
+extends layouts/amp-layout.pug
 
-        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+block title
+    title Main | U
 
-        script(async="" src="https://cdn.ampproject.org/v0.js")
+block content
+    .big-story
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+                .humble.big-story__mark Promoted
 
-        style(amp-boilerplate='').
-            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2020-04-04%2016.14.05.jpg?itok=gtYXCQMM" layout="responsive" width="336" height="196")
+                .promoted__mark Sponsored
 
-        noscript
-            style(amp-boilerplate='').
-                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+            a.big-story__title.link-plain(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
 
-        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
-        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
-        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
-        script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
-        script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
-        script(async='', custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js")
-        script(async='', custom-element='amp-bind', src='https://cdn.ampproject.org/v0/amp-bind-0.1.js')
-        script(async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js")
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
 
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2982.jpg?itok=Mc_wAk2l" layout="responsive" width="336" height="196")
 
-        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+            a.big-story__title.link-plain(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
 
-        style(amp-custom="")
-            include ../../../dest/styles/amp.css
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
 
-        script(type='application/ld+json').
-            {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://google.com/article"
-            },
-            "headline": "Article headline",
-            "image": {
-            "@type": "ImageObject",
-            "url": "https://google.com/thumbnail1.jpg",
-            "height": 800,
-            "width": 800
-            },
-            "datePublished": "2015-02-05T08:00:00+08:00",
-            "dateModified": "2015-02-05T09:20:00+08:00",
-            "author": {
-            "@type": "Person",
-            "name": "John Doe"
-            },
-            "publisher": {
-            "@type": "Organization",
-            "name": "Google",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://google.com/logo.jpg",
-            "width": 600,
-            "height": 60
-            }
-            },
-            "description": "A most wonderful article"
-            }
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2986.jpg.webp" layout="responsive" width="336" height="196")
 
+            a.big-story__title.link-plain(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
 
-    body
+    .main-aside-container
+        .main-block
+            .news
+                .news__header
+                    .icon
+                        include ../img/icons/clock.svg
+                    .news__title Latest news
+                    .btns-spacer
+                        a.btn.btn--light(href="#!") See all
 
-        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
-            a.something__content(href="#!")
-                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
+                amp-list(width='auto' height="360" layout="fixed-height" src='main-news-list-1.json' load-more="manual" load-more-bookmark="next")
+                    .news__list
+                        template(type='amp-mustache')
+                            .news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble {{time}}
 
-        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
-            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
-                include ../img/icons/cross.svg
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-link.link-plain(href="#!") {{title}}
 
-            .sidebar__social.social
-                a.social__link.social__link--fb(href="#!")
-                    include ../img/icons/social/facebook.svg
-                a.social__link.social__link--tg(href="#!")
-                    include ../img/icons/social/telegram.svg
-                a.social__link.social__link--tw(href="#!")
-                    include ../img/icons/social/twitter.svg
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment_bold.svg
+                                            | 0
 
-            nav.sidebar__nav
-                ul.sidebar__nav-list
-                    each category in navFooter
-                        li.sidebar__nav-item
-                            a.sidebar__nav-link(href="#!")= category.name
+                    amp-list-load-more(load-more-button='')
+                        button.btn.btn--light.news__footer
+                            include ../img/icons/triangle_down.svg
+                            | Show more news
 
-                            if category.childs
-                                ul.sidebar__nav-child-list
-                                    each child in category.childs
-                                        li.sidebar__nav-child-item
-                                            a.sidebar__nav-child-link(href="#!")= child.name
+            .press-releases
 
-        header.header
-            .container.header__container
-                a.header__logo(href="/")
-                    amp-img(src="img/icons/logo.svg" layout="intrinsic" width="130" height="20")
+                .press-releases__header
 
-                nav.header__nav
-                    ul.header__nav-list
-                        each category, i in nav
-                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
-                                a.header__nav-link(href="/" + i)= category.name
+                    .press-releases__info
+                        h3.press-releases__title Press releases
 
-                                if category.childs
-                                    ul.header__nav-child-list
-                                        each child, i in category.childs
-                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
-                                                a.header__nav-child-link(href="#!c" + i)= child.name
+                        .btn--block
+                            a.btn.btn--light(href="#!See all") See all
+                            a.btn.btn--light(href="#!Submit") Submit
 
-                .header__panel
-                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
-                        include ../img/icons/subscribe.svg
-                        | Subscribe
+                amp-carousel.press-releases__slider(layout="intrinsic" type="carousel")
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1696.jpg?itok=zr1r7IrI" layout="responsive" width="224" height="140")
+                                .promoted__mark Sponsored
 
-                    .header__search
-                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
-                            include ../img/icons/search.svg
+                            h4.press-releases__item-name EPAY-X is Encouraging Crypto Adoption by Letting Its Debit Card Users Spend It Anywhere
 
-                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
-                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
-                                include ../img/icons/search.svg
-                            input.header__search-input(type="text" name="search")
-                            button.header__search-close.btn.btn--light.btn--cross
-                                include ../img/icons/Cross.svg
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR" layout="responsive" width="224" height="140")
 
-                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
-                        include ../img/icons/burger.svg
+                            h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
 
-        .container.page-container
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
 
-            .something.something--top
-                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
 
-                a.something__content(href="#!" style="background-color: #fff")
-                    amp-img(src="img/something/vexel.png" alt="something-square" width="970" height="90" layout="intrinsic")
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
 
-            .big-story
-                .big-story__item
-                    .big-story__header
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
+
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") TOP stories
+                        .humble.humble--time 17 minutes ago
+
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay
+
+                a.story__img-wrapper.link-plain(href="#!")
+                    amp-img.story__img(src="img/content/story/item_1.png" alt="Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay" layout="responsive" width="736" height="460")
+                    .promoted__mark Sponsored
+
+                .story__footer
+                    a.story__desc.link-plain(href="#!") John McAfee sends word that Tron’s TRX is finally supported on the recently launched SEC-criticized DEX
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                            | Jeremy O’Bernstahard
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 0
+
+            .something.something--content
+                .something__content-long
+                    amp-img(src="img/something/something__central-728x90.png" alt="Something central" layout="intrinsic" width="728" height="90")
+
+                .something__content-square
+                    amp-img(src="img/something/something__central-336x280.png" alt="Something central" layout="intrinsic" width="300" height="250")
+
+            .category-item.category-item-sl
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
+                    .promoted__mark Sponsored
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Price Prediction
+                        .humble.humble--time 1 day 23 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="fixed" width="24" height="24")
+                            | Vera Yurina
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 123
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand" layout="responsive" width="218" height="136")
+
+                .category-item__info
+                    .humble__row
                         a.humble(href="#!") News
-                        .humble.big-story__mark Promoted
+                        .humble.humble--time 2 days 1 hour ago
 
-                    a.big-story__img-wrapper(href="#!")
-                        amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2020-04-04%2016.14.05.jpg?itok=gtYXCQMM" layout="responsive" width="336" height="196")
-                        .promoted__mark Sponsored
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand
 
-                    a.big-story__title.link-plain(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                            | Yuri Molchan
 
-                .big-story__item
-                    .big-story__header
-                        a.humble(href="#!") News
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 246
 
-                    a.big-story__img-wrapper(href="#!")
-                        amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2982.jpg?itok=Mc_wAk2l" layout="responsive" width="336" height="196")
+            .upcoming
+                .upcoming__header
+                    h3.upcoming__title Upcoming events
 
-                    a.big-story__title.link-plain(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
+                    .btn--block
+                        a.btn.btn--light(href="#!See all") See all
 
-                .big-story__item
-                    .big-story__header
-                        a.humble(href="#!") News
+                amp-carousel.upcoming__slider(layout="intrinsic" type="carousel")
+                    .upcoming__item
+                        .upcoming__item-img
+                            amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
 
-                    a.big-story__img-wrapper(href="#!")
-                        amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2986.jpg.webp" layout="responsive" width="336" height="196")
-
-                    a.big-story__title.link-plain(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
-
-            .main-aside-container
-                .main-block
-                    .news
-                        .news__header
-                            .icon
-                                include ../img/icons/clock.svg
-                            .news__title Latest news
-                            .btns-spacer
-                                a.btn.btn--light(href="#!") See all
-
-                        amp-list(width='auto' height="360" layout="fixed-height" src='main-news-list-1.json' load-more="manual" load-more-bookmark="next")
-                            .news__list
-                                template(type='amp-mustache')
-                                    .news__item
-                                        .news__item-time-wrapper
-                                            time.news__item-time.humble {{time}}
-
-                                        .news__item-title-wrapper
-                                            h2.news__item-title
-                                                a.news__item-link.link-plain(href="#!") {{title}}
-
-                                            .news__item-info
-                                                a.humble.humble--icon(href="#!")
-                                                    include ../img/icons/comment_bold.svg
-                                                    | 0
-
-                            amp-list-load-more(load-more-button='')
-                                button.btn.btn--light.news__footer
-                                    include ../img/icons/triangle_down.svg
-                                    | Show more news
-
-                    .press-releases
-
-                        .press-releases__header
-
-                            .press-releases__info
-                                h3.press-releases__title Press releases
-
-                                .btn--block
-                                    a.btn.btn--light(href="#!See all") See all
-                                    a.btn.btn--light(href="#!Submit") Submit
-
-                        amp-carousel.press-releases__slider(layout="intrinsic" type="carousel")
-                            a.press-releases__item.link-plain(href="#!")
-                                .press-releases__inner
-                                    .press-releases__item-img--wrapper
-                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1696.jpg?itok=zr1r7IrI" layout="responsive" width="224" height="140")
-                                        .promoted__mark Sponsored
-
-                                    h4.press-releases__item-name EPAY-X is Encouraging Crypto Adoption by Letting Its Debit Card Users Spend It Anywhere
-
-                            a.press-releases__item.link-plain(href="#!")
-                                .press-releases__inner
-                                    .press-releases__item-img--wrapper
-                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR" layout="responsive" width="224" height="140")
-
-                                    h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
-
-                            a.press-releases__item.link-plain(href="#!")
-                                .press-releases__inner
-                                    .press-releases__item-img--wrapper
-                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
-
-                                    h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
-
-                            a.press-releases__item.link-plain(href="#!")
-                                .press-releases__inner
-                                    .press-releases__item-img--wrapper
-                                        amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
-
-                                    h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
-
-                    .story
-                        .story__header
+                        .upcoming__item-info
                             .humble__row
-                                a.humble(href="#!") TOP stories
-                                .humble.humble--time 17 minutes ago
+                                .humble 1 Sep 2020
 
-                            a.story__title-link.link-plain(href="#!")
-                                h2.story__title Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay
+                            .upcoming__item-title Blockspot Conference Europe 2020
+                            a.upcoming__item-link(href="#!") Read more
 
-                        a.story__img-wrapper.link-plain(href="#!")
-                            amp-img.story__img(src="img/content/story/item_1.png" alt="Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay" layout="responsive" width="736" height="460")
-                            .promoted__mark Sponsored
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
 
-                        .story__footer
-                            a.story__desc.link-plain(href="#!") John McAfee sends word that Tron’s TRX is finally supported on the recently launched SEC-criticized DEX
+                            .promocode
+                                .promocode__title Promocode:
+                                .promocode__value WWWWWWWWWWWW
 
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
-                                    | Jeremy O’Bernstahard
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 0
+                    .upcoming__item
+                        .upcoming__item-img
+                            amp-img(src="img/content/upcoming/item_2.png" alt="Sed ut perspiciatis unde accusantium doloremque" layout="responsive" width="237" height="148")
 
-                    .something.something--content
-                        .something.something__content-long(style="background-color: #032e61")
-                            amp-img(src="img/something/long.png" alt="something-wide" layout="intrinsic" width="728" height="90")
-
-                        .something.something__content-square(style="background-color: #032e61")
-                            amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
-
-                    .category-item.category-item-sl
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
-                            .promoted__mark Sponsored
-
-                        .category-item__info
+                        .upcoming__item-info
                             .humble__row
-                                a.humble(href="#!") Price Prediction
-                                .humble.humble--time 1 day 23 hours ago
+                                .humble.humble--label Top Event
+                                .humble 10 Sep 2020
 
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+                            .upcoming__item-title Sed ut perspiciatis unde accusantium doloremque
+                            a.upcoming__item-link(href="#!") Read more
 
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="fixed" width="24" height="24")
-                                    | Vera Yurina
+                    .upcoming__item
+                        .upcoming__item-img
+                            amp-img(src="img/content/upcoming/item_3.png" alt="Lorem ipsum dolor sit amet" layout="responsive" width="237" height="148")
 
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 123
-
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand" layout="responsive" width="218" height="136")
-
-                        .category-item__info
+                        .upcoming__item-info
                             .humble__row
-                                a.humble(href="#!") News
-                                .humble.humble--time 2 days 1 hour ago
+                                .humble 20 Sep 2020
 
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand
+                            .upcoming__item-title Lorem ipsum dolor sit amet
+                            a.upcoming__item-link(href="#!") Read more
 
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
-                                    | Yuri Molchan
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
 
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 246
+                    .upcoming__item
+                        .upcoming__item-img
+                            amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
 
-                    .upcoming
-                        .upcoming__header
-                            h3.upcoming__title Upcoming events
-
-                            .btn--block
-                                a.btn.btn--light(href="#!See all") See all
-
-                        amp-carousel.upcoming__slider(layout="intrinsic" type="carousel")
-                            .upcoming__item
-                                .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
-
-                                .upcoming__item-info
-                                    .humble__row
-                                        .humble 1 Sep 2020
-
-                                    .upcoming__item-title Blockspot Conference Europe 2020
-                                    a.upcoming__item-link(href="#!") Read more
-
-                                    a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
-
-                                    .promocode
-                                        .promocode__title Promocode:
-                                        .promocode__value WWWWWWWWWWWW
-
-                            .upcoming__item
-                                .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_2.png" alt="Sed ut perspiciatis unde accusantium doloremque" layout="responsive" width="237" height="148")
-
-                                .upcoming__item-info
-                                    .humble__row
-                                        .humble.humble--label Top Event
-                                        .humble 10 Sep 2020
-
-                                    .upcoming__item-title Sed ut perspiciatis unde accusantium doloremque
-                                    a.upcoming__item-link(href="#!") Read more
-
-                            .upcoming__item
-                                .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_3.png" alt="Lorem ipsum dolor sit amet" layout="responsive" width="237" height="148")
-
-                                .upcoming__item-info
-                                    .humble__row
-                                        .humble 20 Sep 2020
-
-                                    .upcoming__item-title Lorem ipsum dolor sit amet
-                                    a.upcoming__item-link(href="#!") Read more
-
-                                    a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
-
-                            .upcoming__item
-                                .upcoming__item-img
-                                    amp-img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020" layout="responsive" width="237" height="148")
-
-                                .upcoming__item-info
-                                    .humble__row
-                                        .humble 1 Sep 2020
-
-                                    .upcoming__item-title Blockspot Conference Europe 2020
-                                    a.upcoming__item-link(href="#!") Read more
-
-                                    a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
-
-                                    .promocode
-                                        .promocode__title Promocode:
-                                        .promocode__value WWWWWWWWWWWW
-
-                    .story
-                        .story__header
+                        .upcoming__item-info
                             .humble__row
-                                a.humble(href="#!") Cryptocurrency trading
-                                .humble.humble--time 1 day 15 hours ago
+                                .humble 1 Sep 2020
 
-                            a.story__title-link.link-plain(href="#!")
-                                h2.story__title Tron Surpasses Rival Blockchains
+                            .upcoming__item-title Blockspot Conference Europe 2020
+                            a.upcoming__item-link(href="#!") Read more
 
-                        a.story__img-wrapper.link-plain(href="#!")
-                            amp-img.story__img(src="img/content/story/item_2.png" alt="Tron Surpasses Rival Blockchains" layout="responsive" width="736" height="460")
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
 
-                        .story__footer
-                            a.story__desc.link-plain(href="#!") Another 30 mln USDT moved from the Ethereum chain to Tron, reports Misha Lederman, a major Tron supporter as Justin Sun recommends Poloniex for USDT-Tron conversion
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/geof-big_0.jpg" layout="fixed" width="24" height="24")
-                                    | Geoffrey Schwartz
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 77
+                            .promocode
+                                .promocode__title Promocode:
+                                .promocode__value WWWWWWWWWWWW
+
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") Cryptocurrency trading
+                        .humble.humble--time 1 day 15 hours ago
+
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron Surpasses Rival Blockchains
+
+                a.story__img-wrapper.link-plain(href="#!")
+                    amp-img.story__img(src="img/content/story/item_2.png" alt="Tron Surpasses Rival Blockchains" layout="responsive" width="736" height="460")
+
+                .story__footer
+                    a.story__desc.link-plain(href="#!") Another 30 mln USDT moved from the Ethereum chain to Tron, reports Misha Lederman, a major Tron supporter as Justin Sun recommends Poloniex for USDT-Tron conversion
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/geof-big_0.jpg" layout="fixed" width="24" height="24")
+                            | Geoffrey Schwartz
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 77
 
 
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
 
-                        .category-item__info
-                            .humble__row
-                                a.humble(href="#!") Stories
-                                .humble.humble--time 2 hours ago
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
 
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
 
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
-                                    | Vladislav Sopov
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
+                            | Vladislav Sopov
 
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 2
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 2
 
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
 
-                        .category-item__info
-                            .humble__row
-                                a.humble(href="#!") Interviews
-                                .humble.humble--time 4 hours ago
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
 
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title How To Exchange Crypto with BestСhange
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
 
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" layout="fixed" width="24" height="24")
-                                    | Heewon Jang
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" layout="fixed" width="24" height="24")
+                            | Heewon Jang
 
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 12
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 12
 
-                aside.aside-menu-block
+        include blocks/amp-aside.pug
 
-                    .card.card--widget.hide-md-up
-                        h4.card__title Top tranding bot
-                            span.card__mark Promoted
-
-                        .card__body
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
-
-                                    .card--widget__info
-                                        .card--widget__title IQ Mining
-                                        span.card--widget__signature 40% discount till 8 march
-
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
-
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
-
-                                    .card--widget__info
-                                        .card--widget__title CryptoUniverse
-                                        span.card--widget__signature Cashback up to 20%
-
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
-
-                    .card.card--subscribe.card--mobile-visible
-                        .card__subscribe
-                            a.card__subscribe-item.card__subscribe-fb(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/facebook-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Like
-                                    .card__subscribe-nick utoday.en
-
-                            a.card__subscribe-item.card__subscribe-tw(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/twitter-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Follow
-                                    .card__subscribe-nick @utoday_en
-
-                            a.card__subscribe-item.card__subscribe-yb(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/youtube-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Subscribe
-                                    .card__subscribe-nick utoday
-
-                            a.card__subscribe-item.card__subscribe-tm(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/telegram-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Join
-                                    .card__subscribe-nick @utoday_en
-
-                            a.card__subscribe-item.card__subscribe-em(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/email-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Subscribe to email
-
-                    .card.card--press--release
-                        .card__body
-                            .aside-story
-                                a.aside-story__img-wrapper(href="#!")
-                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", layout='fixed', width="72px", height="45px")
-
-                                .aside-story__body
-                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
-
-                                    .aside-story__info
-                                        .humble.humble--tiny 12:25 AM
-                        .card__footer
-                            a.btn.btn--accent(href="#!") Submit Press Release
-
-                    .card.card--something
-                        .something
-                            amp-img(src="img/content/banner.png" width="360" height="156" layout="fixed")
-
-                    .card
-                        h4.card__title Popular
-
-                        .card__body
-                            each hot in hots
-                                .aside-story
-                                    a.aside-story__img-wrapper(href="#!")
-                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", width="72px", height="45px")
-
-                                    .aside-story__body
-                                        a.aside-story__link(href="#!")= hot
-
-                                        .aside-story__info
-                                            time.humble.humble--tiny 12:25 AM
-
-                        .card__footer
-                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
-
-        footer.footer
-            .container.footer__container
-                .footer__row
-                    .footer__follow-us
-                        .footer__title Follow us and get all crypto news 24/7
-
-                        .social.social--border.social--wide
-                            a.social__link.social__link--fb(href="#!")
-                                include ../img/icons/social/facebook.svg
-                            a.social__link.social__link--tg(href="#!")
-                                include ../img/icons/social/telegram.svg
-                            a.social__link.social__link--tw(href="#!")
-                                include ../img/icons/social/twitter.svg
-
-                    .footer__subscribe
-                        .footer__title Subscribe to daily newsletter
-
-                        form.form--row.footer__subscribe-form(target="#" method="get")
-                            .input
-                                input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
-
-                            .input
-                                button.btn.btn--wide.btn--input(type="submit") Subscribe
-
-                            .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
-
-                nav.footer__nav
-                    ul.footer__nav-list
-                        each category in navFooter
-                            li.footer__nav-item
-                                a.footer__nav-link(href="#!")= category.name
-
-                                if category.childs
-                                    ul.footer__nav-child-list
-                                        each child in category.childs
-                                            li.footer__nav-child-item
-                                                a.footer__nav-child-link(href="#!")= child.name
-                .footer__disclaimer
-                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
-                .footer__copy
-                    .footer__copy-text © 2018 U.Today. All rights reserved
-                    a.footer__copy-link(href="#!") Terms and conditions
-
-        amp-lightbox#subscribe(layout="nodisplay")
-            .modal
-                .modal__item
-                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
-                        include ../img/icons/Cross.svg
-
-                    .modal__item-body
-                        .modal__item-text Sign up for crypto digest
-
-                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
-                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
-                            .validation__panel.validation__error(submit-error='')
-                                <template type="amp-mustache">Error! JSON: {{message}}</template>
-
-                            .input.article__subscribe-input
-                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
-
-                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
-
-                            .modal__item-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy

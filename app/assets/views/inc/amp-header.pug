@@ -1,0 +1,66 @@
+amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
+    .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
+        include ../../img/icons/cross.svg
+
+    .sidebar__social.social
+        a.social__link.social__link--fb(href="#!")
+            include ../../img/icons/social/facebook.svg
+            | Facebook
+
+        a.social__link.social__link--tg(href="#!")
+            include ../../img/icons/social/telegram.svg
+            | Telegram
+
+        a.social__link.social__link--tw(href="#!")
+            include ../../img/icons/social/twitter.svg
+            | Twitter
+
+    nav.sidebar__nav
+        ul.sidebar__nav-list
+            each category in navFooter
+                li.sidebar__nav-item
+                    a.sidebar__nav-link(href="#!")= category.name
+
+                    if category.childs
+                        ul.sidebar__nav-child-list
+                            each child in category.childs
+                                li.sidebar__nav-child-item
+                                    a.sidebar__nav-child-link(href="#!")= child.name
+
+header.header
+    .container.header__container
+        a.header__logo(href="/")
+            amp-img(src="img/icons/logo.svg" layout="intrinsic" alt="U.TODAY" width="132" height="20")
+            span U.TODAY
+
+        nav.header__nav
+            ul.header__nav-list
+                each category, i in nav
+                    li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
+                        a.header__nav-link(href="/" + i)= category.name
+
+                        if category.childs
+                            ul.header__nav-child-list
+                                each child, i in category.childs
+                                    li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
+                                        a.header__nav-child-link(href="#!c" + i)= child.name
+
+        .header__panel
+            button.btn.btn--light.btn--subscribe(on="tap:subscribe")
+                include ../../img/icons/subscribe.svg
+                | Subscribe
+
+            .header__search
+                a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                    include ../../img/icons/search.svg
+                    span Search
+
+                form.header__search-form#header__search-form(action="#" target="_top" method="get")
+                    button.header__search-submit.btn.btn--light.btn--search(type="submit")
+                        include ../../img/icons/search.svg
+                    input.header__search-input(type="text" name="search")
+                    button.header__search-close.btn.btn--light.btn--cross
+                        include ../../img/icons/Cross.svg
+
+            button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
+                include ../../img/icons/burger.svg

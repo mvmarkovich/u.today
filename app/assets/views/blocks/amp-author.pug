@@ -1,0 +1,54 @@
+.article
+    h1.article__title Denys Serhiichuk
+
+    .article__main-img-wrapper
+        amp-img(src='https://u.today/sites/default/files/styles/736x/public/2019-03/den-sergeychuk.jpg?itok=KBxTzoGQ', layout='responsive', width='736', height='460')
+        figcaption Cover image via <a href="#!"> U.Today </a>
+
+    .article__content
+        p Yuri is a journalist interested in technology and technical innovations. He has been in crypto since 2017. Believes that blockchain and cryptocurrencies have a potential to transform the world in the future. ‘Hodls’ cryptocurrencies. Has written for several crypto media. Currently is a news writer at U.Today, can be contacted at yuri.molchan@u.today.
+
+        .something.something--content
+            .something__content-long
+                amp-img(src="img/something/something__central-728x90.png" alt="Something central" layout="intrinsic" width="728" height="90")
+
+            .something__content-square
+                amp-img(src="img/something/something__central-336x280.png" alt="Something central" layout="intrinsic" width="300" height="250")
+
+        .author__social.social
+            a.social__link(href="#!")
+                include ../../img/icons/social/facebook.svg
+            a.social__link(href="#!")
+                include ../../img/icons/social/telegram.svg
+            a.social__link(href="#!")
+                include ../../img/icons/social/twitter-gray.svg
+            a.social__link(href="#!")
+                include ../../img/icons/social/email-gray.svg
+
+.author__articles.category
+
+    h2.category-info__title Articles by author
+
+    amp-list(width="auto" height="568" src='author-articles-3.json' load-more="auto")
+        template(type='amp-mustache')
+            .category-item
+                a.category-item__img-wrapper(href="{{link}}")
+                    amp-img.category-item__img(src="{{img}}" layout="responsive" width="218" height="136")
+                    .promoted__mark {{label}}
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") {{category}}
+                        .humble.humble--time {{time}}
+
+                    a.category-item__title-link(href="{{link}}")
+                        h3.category-item__title {{title}}
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="{{link-author}}")
+                            amp-img.humble__img(src="{{img-author}}" layout="fixed" width="24" height="24")
+                            | {{author}}
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../../img/icons/comment.svg
+                            | 2

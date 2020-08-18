@@ -1,674 +1,81 @@
-include inc/var.pug
-doctype html
-html(lang="en" dir="ltr" ⚡)
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=5")
-
-        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
-
-        script(async="" src="https://cdn.ampproject.org/v0.js")
-
-        style(amp-boilerplate='').
-            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-
-        noscript
-            style(amp-boilerplate='').
-                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-
-        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
-        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
-        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
-        script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
-        script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
-        script(async='', custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js")
-
-        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
-
-        style(amp-custom="")
-            include ../../../dest/styles/amp.css
-
-        script(type='application/ld+json').
-            {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://google.com/article"
-            },
-            "headline": "Article headline",
-            "image": {
-            "@type": "ImageObject",
-            "url": "https://google.com/thumbnail1.jpg",
-            "height": 800,
-            "width": 800
-            },
-            "datePublished": "2015-02-05T08:00:00+08:00",
-            "dateModified": "2015-02-05T09:20:00+08:00",
-            "author": {
-            "@type": "Person",
-            "name": "John Doe"
-            },
-            "publisher": {
-            "@type": "Organization",
-            "name": "Google",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://google.com/logo.jpg",
-            "width": 600,
-            "height": 60
-            }
-            },
-            "description": "A most wonderful article"
-            }
-
-
-    body
-        .something(style="background-color: #f5f5f5; border-bottom: 1px solid #CFD8DC;")
-            .something.something__content-long
-                amp-img(src="img/something/vexel-long.jpg" alt="vexel-long" layout="intrinsic" width="1150" height="90" srcset="img/something/vexel-2x-long.png 2x")
-
-            .something.something__content-square
-                amp-img(src="img/something/vexel-square.png" alt="vexel-square" layout="intrinsic" width="360" height="90" srcset="img/something/vexel-2x-square.png 2x")
-
-        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
-            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
-                include ../img/icons/cross.svg
-
-            .sidebar__social.social
-                a.social__link.social__link--fb(href="#!")
-                    include ../img/icons/social/facebook.svg
-                    | Facebook
-
-                a.social__link.social__link--tg(href="#!")
-                    include ../img/icons/social/telegram.svg
-                    | Telegram
-
-                a.social__link.social__link--tw(href="#!")
-                    include ../img/icons/social/twitter.svg
-                    | Twitter
-
-            nav.sidebar__nav
-                ul.sidebar__nav-list
-                    each category in navFooter
-                        li.sidebar__nav-item
-                            a.sidebar__nav-link(href="#!")= category.name
-
-                            if category.childs
-                                ul.sidebar__nav-child-list
-                                    each child in category.childs
-                                        li.sidebar__nav-child-item
-                                            a.sidebar__nav-child-link(href="#!")= child.name
-
-        header.header
-            .container.header__container
-                a.header__logo(href="/")
-                    amp-img(src="img/icons/logo-news.svg" layout="intrinsic" alt="U.TODAY NEWS" width="219" height="20")
-                    span U.TODAY NEWS
-
-                nav.header__nav
-                    ul.header__nav-list
-                        each category, i in nav
-                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
-                                a.header__nav-link(href="/" + i)= category.name
-
-                                if category.childs
-                                    ul.header__nav-child-list
-                                        each child, i in category.childs
-                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
-                                                a.header__nav-child-link(href="#!c" + i)= child.name
-
-                .header__panel
-                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
-                        include ../img/icons/subscribe.svg
-                        | Subscribe
-
-                    .header__search
-                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
-                            include ../img/icons/search.svg
-                            span Search
-
-                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
-                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
-                                include ../img/icons/search.svg
-                            input.header__search-input(type="text" name="search")
-                            button.header__search-close.btn.btn--light.btn--cross
-                                include ../img/icons/Cross.svg
-
-                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
-                        include ../img/icons/burger.svg
-
-        .container.page-container
-            .something.something--top
-                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
-
-                a.something__content(href="#!" style="background-color: #cef1f3")
-                    amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
-                        .promoted__mark Promo
-
-            .main-aside-container
-                .main-news-block
-                    .article
-                        a.article__label.article__label-sponsored(href="#!") Sponsored
-                            include ../img/icons/sponcored.svg
-                        a.article__label(href="#!") U.TODAY Original Article
-                            include ../img/icons/article__label-u.svg
-                        a.article__label(href="#!") Tweet-based article
-                            include ../img/icons/social/twitter.svg
-
-                        h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
-
-                        .article__header
-                            .article__header--row
-                                .share__social
-                                    amp-social-share.share__circle.share__circle-tw(type="twitter" width="56" height="24")
-                                        | Twitter
-                                    amp-social-share.share__circle.share__circle-fb(type="facebook" width="56" height="24")
-                                        | Facebook
-                                    amp-social-share.share__circle.share__circle-ln(type="linkedin" width="56" height="24")
-                                        | LinkedIn
-
-                                a.humble.humble--icon(href="#!") News
-                                    include ../img/icons/label/news.svg
-                                .humble.author__item-time Oct 27’2018, 11:27 AM
-                                .humble.humble--icon 123k
-                                    include ../img/icons/eye_bold.svg
-                                .humble.humble--icon 31
-                                    include ../img/icons/liked_bold.svg
-                                .humble.humble--icon 256
-                                    include ../img/icons/comment_bold.svg
-
-                        .article__lead
-                            a.article__lead-img--wrapper(href="#!")
-                                amp-img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' alt="Denys Serhiichuk" layout='fixed' width='40' height='40')
-
-                            .article__lead-info
-                                a.article__lead-name(href="#!") Denys Serhiichuk
-                                .article__lead-desc We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!
-
-                        .article__main-img-wrapper
-                            figcaption Cover image via <a href="#!"> www.tronwallet.me </a>
-                            amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-03/2493.jpg.webp', alt="main-img", layout='responsive', width='736', height='460')
-
-                            .disclaimer
-                                p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
-
-                        .something.something--content
-                            .something.something__content-long(style="background-color: #032e61")
-                                amp-img(src="img/something/long.png" alt="something-wide" layout="intrinsic" width="728" height="90")
-
-                            .something.something__content-square(style="background-color: #032e61")
-                                amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
-
-                        .article__content
-                            .article__contents
-                                .article__contents-title Contents
-
-                                ul.article__contents-list
-                                    each content in articleContents
-                                        li.article__contents-item
-                                            a.article__contents-link.link-pseudo(href="#!")= content
-
-                            p
-                                | In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second
-                                a(href='#!') Crypto Invest Summit
-                                | , which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.
-
-                            h2
-                                em Women of Crypto as opening act
-
-                            p It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”
-
-                            p(dir="ltr")
-                                .article__related
-                                    a.article__related-img--wrapper(href="#!")
-                                        amp-img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al" alt="Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha" layout="fixed" width="112" height="68")
-                                        span Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
-
-                                    a.article__related-desc(href="#!")
-                                        .article__related-flame Related
-                                        .article__related-blockquote Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
-
-                            amp-img(src="https://u.today/sites/default/files/styles/1200x/public/inline-images/twit-example%201.jpg?itok=89jS47Fu" alt="IMG" width="371" height="240" layout="intrinsic")
-
-                            p
-                                | As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.
-
-                            ul
-                                li(dir='ltr') Name: Bitcoin
-                                li(dir='ltr') Ticker: BTC
-                                li(dir='ltr') Market Cap: $148 229 848 980
-                                li(dir='ltr') Price: $8 163,79
-                                li(dir='ltr') Volume (24h): $23 837 066 530
-                                li(dir='ltr') Change (7d): 9.12%
-
-                            blockquote
-                                p
-                                    | This is a quote example. During that time, TRON announced a $1 million dollar fund to support developers, as well as the TRON Accelerator coding competition. After carefully reviewing TRON’s code, we loved the blockchain’s architecture and high performance, and quickly understood that a huge investment in terms of money and development had been put into the project.
-                                    a(href='#!') made up roughly 20 percent
-                                    |  of the speakers.
-
-                            figure
-                                amp-img(layout='responsive', width='16', height='10' alt="IMG" src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4")
-                                figcaption Cover image via <a href="#!"> 123rf.com </a>
-
-                            table
-                                tbody
-                                    tr
-                                        td &nbsp;
-                                        td
-                                            p(dir='ltr')
-                                                b Established
-                                        td
-                                            p(dir='ltr')
-                                                b Headquarters
-                                        td
-                                            p(dir='ltr')
-                                                b Currencies
-                                        td
-                                            p(dir='ltr')
-                                                b Contract cost
-                                        td
-                                            p(dir='ltr')
-                                                b Number of users
-                                        td
-                                            p(dir='ltr')
-                                                b Traffic*(last 6 months)
-                                        td
-                                            p(dir='ltr')
-                                                b Countries*
-                                    tr
-                                        td
-                                            p(dir='ltr')
-                                                a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=1') Hashflare
-                                        td
-                                            p(dir='ltr') 2015
-                                        td
-                                            p(dir='ltr') Estonia
-                                        td
-                                            p(dir='ltr') BTC, LTC, ETH, Dash, ZCash
-                                        td
-                                            p(dir='ltr') Bitcoin &mdash; $0.8 per 10 GH/s
-                                            p(dir='ltr') Lite&scy;oin &mdash; $1.8 per 1 MH/s
-                                            p(dir='ltr') Ethereum &mdash; $1.8 per 100 KH/s Zcash &mdash; $1.4 per 1 H/s
-                                            p(dir='ltr') DASH &nbsp;&mdash; $3.2 per 1 MH/s
-                                            br
-                                            br
-                                        td
-                                            p(dir='ltr') 2.5 mln
-                                        td
-                                            p(dir='ltr') ?
-                                        td
-                                            p(dir='ltr') Russia, Ukraine, Brazil, USA, Germany
-                                    tr
-                                        td
-                                            p(dir='ltr')
-                                                a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=4') Genesis Mining
-                                        td
-                                            p(dir='ltr') 2010
-                                        td
-                                            p(dir='ltr') Hong-Kong
-                                        td
-                                            p(dir='ltr') Bitcoin, Litecoin, Dash, Dogecoin, Monero
-                                        td
-                                            p(dir='ltr') 5-year contracts:
-                                            p(dir='ltr') $285 - 1 TH/s
-                                            p(dir='ltr') $1,400 - 5 TH/s
-                                            p(dir='ltr') $6,875 - 25 TH/s
-                                        td
-                                            p(dir='ltr') 2 mln
-                                        td
-                                            p(dir='ltr') ?
-                                        td
-                                            p(dir='ltr') USA, China, Russia, EU
-                                    tr
-                                        td
-                                            p(dir='ltr')
-                                                a(rel='nofollow', target='_blank', href='https://track.advendor.net/click?pid=22476&offer_id=409') Hashing 24
-                                        td
-                                            p(dir='ltr') 2015
-                                        td
-                                            p(dir='ltr') Scotland, Thailand, and Ukraine
-                                        td
-                                            p(dir='ltr') Bitcoin
-                                        td
-                                            p(dir='ltr') $ 68.5 per 100 Gh/s
-                                            p(dir='ltr') + $0,00033 daily maintenance fee
-                                        td
-                                            p(dir='ltr') ?
-                                        |
-                                        td
-                                            p(dir='ltr') 352.98K
-                                        td
-                                            p(dir='ltr') USA, UK, Russia, Spain, China, Thailand, Indonesia
-
-                        .article__panel
-                            .article__tags.btns-spacer
-                                a.btn.btn--hash-tag(href="#!") #tag
-                                a.btn.btn--hash-tag(href="#!") #tronnews
-                                a.btn.btn--hash-tag(href="#!") #cryptocurrency
-
-                        .about-author
-                            .about-author_row
-                                a.about-author_avatar(href="#!author")
-                                    amp-img(src="https://dummyimage.com/64x64/d8dbde/aaabad" alt="Konstantin Konstantinopolsky" layout='fixed', width='40', height='40')
-                                    span Konstantin Konstantinopolsky
-
-                                .about-author_info
-                                    .about-author_title About the author
-                                    .about-author_data
-                                        a.about-author_name(href="#!author") Konstantin Konstantinopolsky
-                                        .social
-                                            a.social__link.social__link--fb(href="#!")
-                                                include ../img/icons/social/facebook.svg
-                                                | Facebook
-
-                                            a.social__link.social__link--tg(href="#!")
-                                                include ../img/icons/social/telegram.svg
-                                                | Telegram
-
-                                            a.social__link.social__link--tw(href="#!")
-                                                include ../img/icons/social/twitter.svg
-                                                | Twitter
-
-                                            a.social__link.social__link--ln(href="#!")
-                                                include ../img/icons/social/LinkedIn.svg
-                                                | LinkedIn
-
-                                            a.social__link.social__link--insta(href="#!")
-                                                include ../img/icons/social/Instagram.svg
-                                                | Instagram
-
-                                            a.social__link.social__link--em(href="#!")
-                                                include ../img/icons/social/email.svg
-                                                | Email
-
-                                    p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
-
-                        .card.card--widget.hide-sm-up
-                            h4.card__title Top tranding bot
-                                span.card__mark Promoted
-
-                            .card__body
-                                a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                    .card--widget__row
-                                        .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining" layout='fixed', width="48px", height="48px")
-
-                                        .card--widget__info
-                                            .card--widget__title IQ Mining
-                                            span.card--widget__signature 40% discount till 8 march
-
-                                    .btn--block
-                                        .btn.btn--small.btn--accent-3 Website
-
-                                a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                    .card--widget__row
-                                        .card--widget__img-wrapper
-                                            amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse" layout='fixed', width="48px", height="48px")
-
-                                        .card--widget__info
-                                            .card--widget__title CryptoUniverse
-                                            span.card--widget__signature Cashback up to 20%
-
-                                    .btn--block
-                                        .btn.btn--small.btn--accent-3 Website
-
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="How to Protect Your Identity and Bitcoin Wallet From Tracking" layout="responsive" width="218" height="136")
-                            span How to Protect Your Identity and Bitcoin Wallet From Tracking
-
-                        .category-item__info
-                            .humble__row
-                                a.humble(href="#!") Stories
-                                .humble.humble--time 2 hours ago
-
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
-
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov" layout="fixed" width="24" height="24")
-                                    | Vladislav Sopov
-
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 2
-
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
-                            span Beginner’s Guide to Bluzelle — The Decentralized Data Network
-                            .promoted__mark Promo
-
-                        .category-item__info
-                            .humble__row
-                                a.humble(href="#!") Interviews
-                                .humble.humble--time 4 hours ago
-
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title How To Exchange Crypto with BestСhange
-
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" alt="Heewon Jang" layout="fixed"  width="24" height="24")
-                                    | Heewon Jang
-
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 12
-
-                    .category-item
-                        a.category-item__img-wrapper(href="#!")
-                            amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
-                            span Beginner’s Guide to Bluzelle — The Decentralized Data Network
-
-                        .category-item__info
-                            .humble__row
-                                a.humble(href="#!") Price Prediction
-                                .humble.humble--time 1 day 23 hours ago
-
-                            a.category-item__title-link(href="#!")
-                                h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
-
-                            .humble__row.humble--between
-                                a.humble.humble--author(href="#!")
-                                    amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Vera Yurina" layout="fixed" width="24" height="24")
-                                    | Vera Yurina
-
-                                .humble.humble--icon.humble--icon-large
-                                    include ../img/icons/comment.svg
-                                    | 123
-
-
-                aside.aside-menu-block
-
-                    .card.card--widget.hide-md-up
-                        h4.card__title Top tranding bot
-                            span.card__mark Promoted
-
-                        .card__body
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining" layout='fixed', width="48px", height="48px")
-
-                                    .card--widget__info
-                                        .card--widget__title IQ Mining
-                                        span.card--widget__signature 40% discount till 8 march
-
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
-
-                            a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                                .card--widget__row
-                                    .card--widget__img-wrapper
-                                        amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse" layout='fixed', width="48px", height="48px")
-
-                                    .card--widget__info
-                                        .card--widget__title CryptoUniverse
-                                        span.card--widget__signature Cashback up to 20%
-
-                                .btn--block
-                                    .btn.btn--small.btn--accent-3 Website
-
-                    .card.card--subscribe.card--mobile-visible
-                        .card__subscribe
-                            a.card__subscribe-item.card__subscribe-fb(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/facebook-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Like
-                                    .card__subscribe-nick utoday.en
-
-                            a.card__subscribe-item.card__subscribe-tw(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/twitter-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Follow
-                                    .card__subscribe-nick @utoday_en
-
-                            a.card__subscribe-item.card__subscribe-yb(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/youtube-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Subscribe
-                                    .card__subscribe-nick utoday
-
-                            a.card__subscribe-item.card__subscribe-tm(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/telegram-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Join
-                                    .card__subscribe-nick @utoday_en
-
-                            a.card__subscribe-item.card__subscribe-em(href="#!")
-                                .card__subscribe-icon
-                                    include ../img/icons/social/email-white.svg
-
-                                .card__subscribe-desc
-                                    .card__subscribe-title Subscribe to email
-
-                    .card.card--press--release
-                        .card__body
-                            .aside-story
-                                a.aside-story__img-wrapper(href="#!")
-                                    amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq", alt="Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches" layout='fixed', width="72px", height="45px")
-                                    .promoted__mark Promo
-
-                                .aside-story__body
-                                    a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
-
-                                    .aside-story__info
-                                        .humble.humble--tiny 12:25 AM
-                        .card__footer
-                            a.btn.btn--accent(href="#!") Submit Press Release
-
-                    .card.card--something
-                        .something
-                            amp-img(src="img/content/banner.png" alt="banner" width="360" height="156" layout="fixed")
-
-                    .card
-                        h4.card__title Popular
-                        .card__body
-                            each hot in hots
-                                article.aside-story
-                                    a.aside-story__img-wrapper(href="#!")
-                                        amp-img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ", alt="IMG" width="72px", height="45px")
-                                        .promoted__mark Promo
-                                    .aside-story__body
-                                        a.aside-story__link(href="#!")= hot
-
-                                        .aside-story__info
-                                            time.humble.humble--tiny 12:25 AM
-
-                        .card__footer
-                            a.btn.btn--light.btn--arrow-right(href="#!") Show more
-
-        footer.footer
-            .container.footer__container
-                .footer__row
-                    .footer__follow-us
-                        .footer__title Follow us and get all crypto news 24/7
-
-                        .social.social--border.social--wide
-                            a.social__link.social__link--fb(href="#!")
-                                include ../img/icons/social/facebook.svg
-                                | Facebook
-
-                            a.social__link.social__link--tg(href="#!")
-                                include ../img/icons/social/telegram.svg
-                                | Telegram
-
-                            a.social__link.social__link--tw(href="#!")
-                                include ../img/icons/social/twitter.svg
-                                | Twitter
-
-                    .footer__subscribe
-                        form.form--row.footer__subscribe-form(target="#" method="get")
-                            .input
-                                label.footer__title(for="footer__subscribe-input") Subscribe to daily newsletter
-                                input.footer__subscribe-input.input__elem#footer__subscribe-input(type="text" name="email" placeholder="Email" required)
-
-                            .input
-                                button.btn.btn--wide.btn--input(type="submit") Subscribe
-
-                            .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
-
-                nav.footer__nav
-                    ul.footer__nav-list
-                        each category in navFooter
-                            li.footer__nav-item
-                                a.footer__nav-link(href="#!")= category.name
-
-                                if category.childs
-                                    ul.footer__nav-child-list
-                                        each child in category.childs
-                                            li.footer__nav-child-item
-                                                a.footer__nav-child-link(href="#!")= child.name
-                .footer__disclaimer
-                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
-                .footer__copy
-                    .footer__copy-text © 2018 U.Today. All rights reserved
-                    a.footer__copy-link(href="#!") Terms and conditions
-
-        amp-lightbox#subscribe(layout="nodisplay")
-            .modal
-                .modal__item
-                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
-                        include ../img/icons/Cross.svg
-
-                    .modal__item-body
-                        .modal__item-text Sign up for crypto digest
-
-                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
-                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
-                            .validation__panel.validation__error(submit-error='')
-                                <template type="amp-mustache">Error! JSON: {{message}}</template>
-
-                            .input.article__subscribe-input
-                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
-
-                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
-
-                            .modal__item-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
-
-        amp-user-notification.cookies#cookies(layout="display")
-            .cookies__container.container
-                .cookies__row
-                    p.cookies_text This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a>
-                    .btn__block
-                        a.btn-link(href="#!") Cookie settings
-                        button.btn.accept-cookies(on="tap:cookies.dismiss") Accept cookies
+extends layouts/amp-layout.pug
+
+block title
+    title Article | U
+
+block content
+    .main-aside-container
+        .main-news-block
+            include blocks/amp-article.pug
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="How to Protect Your Identity and Bitcoin Wallet From Tracking" layout="responsive" width="218" height="136")
+                    span How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov" layout="fixed" width="24" height="24")
+                            | Vladislav Sopov
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 2
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
+                    span Beginner’s Guide to Bluzelle — The Decentralized Data Network
+                    .promoted__mark Promo
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" alt="Heewon Jang" layout="fixed"  width="24" height="24")
+                            | Heewon Jang
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 12
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="responsive" width="218" height="136")
+                    span Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Price Prediction
+                        .humble.humble--time 1 day 23 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Vera Yurina" layout="fixed" width="24" height="24")
+                            | Vera Yurina
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 123
+
+        include blocks/amp-aside.pug
 
 
 

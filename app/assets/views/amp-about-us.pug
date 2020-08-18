@@ -1,375 +1,161 @@
-include inc/var.pug
-doctype html
-html(lang="en" dir="ltr" ⚡)
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-
-        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
-
-        script(async="" src="https://cdn.ampproject.org/v0.js")
-
-        style(amp-boilerplate='').
-            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-
-        noscript
-            style(amp-boilerplate='').
-                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-
-        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
-        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
-        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
-        script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
-        script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
-
-        link(rel="shortcut icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
-
-        style(amp-custom="")
-            include ../../../dest/styles/amp.css
-
-        script(type='application/ld+json').
-            {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://google.com/article"
-            },
-            "headline": "Article headline",
-            "image": {
-            "@type": "ImageObject",
-            "url": "https://google.com/thumbnail1.jpg",
-            "height": 800,
-            "width": 800
-            },
-            "datePublished": "2015-02-05T08:00:00+08:00",
-            "dateModified": "2015-02-05T09:20:00+08:00",
-            "author": {
-            "@type": "Person",
-            "name": "John Doe"
-            },
-            "publisher": {
-            "@type": "Organization",
-            "name": "Google",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://google.com/logo.jpg",
-            "width": 600,
-            "height": 60
-            }
-            },
-            "description": "A most wonderful article"
-            }
-
-
-    body
-
-        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
-            a.something__content(href="#!")
-                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
-
-        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
-            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
-                include ../img/icons/cross.svg
-
-            .sidebar__social.social
-                a.social__link.social__link--fb(href="#!")
-                    include ../img/icons/social/facebook.svg
-                a.social__link.social__link--tg(href="#!")
-                    include ../img/icons/social/telegram.svg
-                a.social__link.social__link--tw(href="#!")
-                    include ../img/icons/social/twitter.svg
-
-            nav.sidebar__nav
-                ul.sidebar__nav-list
-                    each category in navFooter
-                        li.sidebar__nav-item
-                            a.sidebar__nav-link(href="#!")= category.name
-
-                            if category.childs
-                                ul.sidebar__nav-child-list
-                                    each child in category.childs
-                                        li.sidebar__nav-child-item
-                                            a.sidebar__nav-child-link(href="#!")= child.name
-
-        header.header
-            .container.header__container
-                a.header__logo(href="/")
-                    amp-img(src="img/icons/logo.svg" layout="intrinsic" width="130" height="20")
-
-                nav.header__nav
-                    ul.header__nav-list
-                        each category, i in nav
-                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
-                                a.header__nav-link(href="/" + i)= category.name
-
-                                if category.childs
-                                    ul.header__nav-child-list
-                                        each child, i in category.childs
-                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
-                                                a.header__nav-child-link(href="#!c" + i)= child.name
-
-                .header__panel
-                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
-                        include ../img/icons/subscribe.svg
-                        | Subscribe
-
-                    .header__search
-                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
-                            include ../img/icons/search.svg
-
-                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
-                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
-                                include ../img/icons/search.svg
-                            input.header__search-input(type="text" name="search")
-                            button.header__search-close.btn.btn--light.btn--cross
-                                include ../img/icons/Cross.svg
-
-                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
-                        include ../img/icons/burger.svg
-
-        .container.page-container
-
-            .something.something--top
-                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
-
-                a.something__content(href="#!" style="background-color: #cef1f3")
-                    amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
-
-            .main-aside-container
-                .main-block
-                    .content-block
-                        h1.content-block__title About Us
-                        .content-block__descr
-                            p U.Today is a global media organisation dedicated to helping you understand the new generation tech and the future it brings to society. <br> Our mission is to serve the emerging community of enthusiasts, professionals and newcomers who explore, use and develop the tech by heeding the core journalistic values of clear thinking, accuracy and independence. <br> We seek to inform, educate, collaborate and support better practices for the benefit of all.
-                            amp-img.about-logo(src="img/icons/logo.svg" layout="responsive" width="652" height="97")
-
-                    .content-block
-                        h2.content-block__title Terms & policies
-                        .content-block__descr
-                            ul
-                                li
-                                    a(target='_blank', href='/terms-and-conditions') Terms & Conditions
-                                li
-                                    a(target='_blank', href='/privacy-policy') Privacy Policy
-                                li
-                                    a(target='_blank', href='/editorial-policy') Editorial Policy
-                                li
-                                    a(target='_blank', href='/cookie') Cookie Policy
-
-                    .content-block
-                        h2.content-block__title Business Information
-                        .content-block__descr
-                            p https://u.today website is operated by AKSELERATOR, LLC
-
-                            p
-                                strong Our address: <br>
-                                | 111395, Moscow, Moldagulova Street, Building 10, 2
-
-                            p
-                                strong For donations: <br>
-                                | Official U.Today BTC wallet: 1EXCmnrTvohJwzymCufkLqw6zVrNvhApQN <br>
-                                | Official U.Today ETH wallet: 0x66B4157a5180F22DF948A01CFD6106dd0076f08d
-
-                    .content-block
-                        h2.content-block__title Corrections or feedback?
-                        .content-block__descr
-                            p If a story contains inaccuracies or breaches of our ethical code, please reach out to our editor by email: editor@u.today
-
-                            p If a story has been corrected and a grave error has been made by U.today, the correction and explanation will be published under the category U.today Apology.
-
-                    .content-block
-                        h2.content-block__title Regular staff
-                        .staff__list
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-                                    amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Aliya-Prokofieva.jpg?itok=XneRBbMI" layout="responsive" width="150" height="94")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Konstantin Konstantinopolsiy
-                                            a.staff__post.link(href="#!") Editor-in-Chief
-
-                                        .social
-                                            a.social__link(href="#!ln")
-                                                include ../img/icons/social/linkedIn-gray.svg
-                                            a.social__link(href="#!fb")
-                                                include ../img/icons/social/facebook-gray.svg
-                                            a.social__link(href="#!email")
-                                                include ../img/icons/social/email-gray.svg
-                                            a.social__link(href="#!tg")
-                                                include ../img/icons/social/telegram-gray.svg
-
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-                                    amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Alex.jpg?itok=xbAwW_Ky" layout="responsive" width="150" height="94")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Alexander Borodich
-                                            a.staff__post.link(href="#!") Financial Analyst
-
-                                        .social
-                                            a.social__link(href="#!fb")
-                                                include ../img/icons/social/facebook-gray.svg
-                                            a.social__link(href="#!email")
-                                                include ../img/icons/social/email-gray.svg
-
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Alexander Goborov
-                                            a.staff__post.link(href="#!") Editor-in-Chief
-                                        .social
-                                            a.social__link(href="#!ln")
-                                                include ../img/icons/social/linkedIn-gray.svg
-                                            a.social__link(href="#!tg")
-                                                include ../img/icons/social/telegram-gray.svg
-
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-                                    amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-03/cyril.jpg?itok=B4DTzpuI" layout="responsive" width="150" height="94")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Aliya Prokofieva
-                                            a.staff__post.link(href="#!") Financial Analyst
-                                        .social
-                                            a.social__link(href="#!ln")
-                                                include ../img/icons/social/linkedIn-gray.svg
-                                            a.social__link(href="#!tw")
-                                                include ../img/icons/social/twitter-gray.svg
-
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-                                    amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-03/George-Shnurenko_1.jpg?itok=DpBxrdn8" layout="responsive" width="150" height="94")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Andrew Strogoff
-                                            a.staff__post.link(href="#!") Financial Analyst
-                                        .social
-                                            a.social__link(href="#!fb")
-                                                include ../img/icons/social/facebook-gray.svg
-                                            a.social__link(href="#!tg")
-                                                include ../img/icons/social/telegram-gray.svg
-
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            .staff__item
-                                a.staff__img-wrapper(href="#!")
-                                    amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Rajashi%20Mitra.jpg?itok=-XBa93Io" layout="responsive" width="150" height="94")
-
-                                .staff__info
-                                    .staff__row
-                                        .personal__info
-                                            a.staff__name.link(href="#!") Angel Di Matteo
-                                            a.staff__post.link(href="#!") Editor-in-Chief
-                                        .social
-                                            a.social__link.social__link--em(href="#!email")
-                                            a.social__link.social__link--tw(href="#!tw")
-                                            a.social__link.social__link--fb(href="#!fb")
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                    .content-block
-                        h2.content-block__title Outsource
-                        .team__list
-                            each i in [1,2,3,4,5,6,7,8,9]
-                                a.team__item.link(href="#!")
-                                    .team__img-wrapper
-                                        amp-img.team__img(src="https://u.today/sites/default/files/styles/profile_teaser/public/2018-06/borodich.jpg?itok=F_DxIVHf" layout="responsive" width="250" height="156")
-
-                                    .team__name Angel Di Matteo
-                                    .team__post Editor-in-Chief
-
-                aside.aside-menu-block
-
-                    .card
-                        .card__title Contacts
-
-                        .card__body
-                            .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
-
-                            .card__list
-                                each item in contactEmails
-                                    .card__list-item
-                                        .card__list-title= item.title
-                                        a.card__list-link(href="mailto:" + item.email)= item.email
-
-        footer.footer
-            .container.footer__container
-                .footer__row
-                    .footer__follow-us
-                        .footer__title Follow us and get all crypto news 24/7
-
-                        .social.social--border.social--wide
-                            a.social__link.social__link--fb(href="#!")
-                                include ../img/icons/social/facebook.svg
-                            a.social__link.social__link--tg(href="#!")
-                                include ../img/icons/social/telegram.svg
-                            a.social__link.social__link--tw(href="#!")
-                                include ../img/icons/social/twitter.svg
-
-                    .footer__subscribe
-                        .footer__title Subscribe to daily newsletter
-
-                        form.form--row.footer__subscribe-form(target="#" method="get")
-                            .input
-                                input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
-
-                            .input
-                                button.btn.btn--wide.btn--input(type="submit") Subscribe
-
-                            .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
-
-                nav.footer__nav
-                    ul.footer__nav-list
-                        each category in navFooter
-                            li.footer__nav-item
-                                a.footer__nav-link(href="#!")= category.name
-
-                                if category.childs
-                                    ul.footer__nav-child-list
-                                        each child in category.childs
-                                            li.footer__nav-child-item
-                                                a.footer__nav-child-link(href="#!")= child.name
-                .footer__disclaimer
-                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
-                .footer__copy
-                    .footer__copy-text © 2018 U.Today. All rights reserved
-                    a.footer__copy-link(href="#!") Terms and conditions
-
-        amp-lightbox#subscribe(layout="nodisplay")
-            .modal
-                .modal__item
-                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
-                        include ../img/icons/Cross.svg
-
-                    .modal__item-body
-                        .modal__item-text Sign up for crypto digest
-
-                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
-                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
-                            .validation__panel.validation__error(submit-error='')
-                                <template type="amp-mustache">Error! JSON: {{message}}</template>
-
-                            .input.article__subscribe-input
-                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
-
-                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
-
-                            .modal__item-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
+extends layouts/amp-layout.pug
+
+block title
+    title About Us | U
+
+block content
+    .main-aside-container
+        .main-block
+            .content-block
+                h1.content-block__title About Us
+                .content-block__descr
+                    p U.Today is a global media organisation dedicated to helping you understand the new generation tech and the future it brings to society. <br> Our mission is to serve the emerging community of enthusiasts, professionals and newcomers who explore, use and develop the tech by heeding the core journalistic values of clear thinking, accuracy and independence. <br> We seek to inform, educate, collaborate and support better practices for the benefit of all.
+                    amp-img.about-logo(src="img/icons/logo.svg" layout="responsive" width="652" height="97")
+
+            .content-block
+                h2.content-block__title Terms & policies
+                .content-block__descr
+                    ul
+                        li
+                            a(target='_blank', href='/terms-and-conditions') Terms & Conditions
+                        li
+                            a(target='_blank', href='/privacy-policy') Privacy Policy
+                        li
+                            a(target='_blank', href='/editorial-policy') Editorial Policy
+                        li
+                            a(target='_blank', href='/cookie') Cookie Policy
+
+            .content-block
+                h2.content-block__title Business Information
+                .content-block__descr
+                    p https://u.today website is operated by AKSELERATOR, LLC
+
+                    p
+                        strong Our address: <br>
+                        | 111395, Moscow, Moldagulova Street, Building 10, 2
+
+                    p
+                        strong For donations: <br>
+                        | Official U.Today BTC wallet: 1EXCmnrTvohJwzymCufkLqw6zVrNvhApQN <br>
+                        | Official U.Today ETH wallet: 0x66B4157a5180F22DF948A01CFD6106dd0076f08d
+
+            .content-block
+                h2.content-block__title Corrections or feedback?
+                .content-block__descr
+                    p If a story contains inaccuracies or breaches of our ethical code, please reach out to our editor by email: editor@u.today
+
+                    p If a story has been corrected and a grave error has been made by U.today, the correction and explanation will be published under the category U.today Apology.
+
+            .content-block
+                h2.content-block__title Regular staff
+                .staff__list
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+                            amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Aliya-Prokofieva.jpg?itok=XneRBbMI" layout="responsive" width="150" height="94")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Konstantin Konstantinopolsiy
+                                    a.staff__post.link(href="#!") Editor-in-Chief
+
+                                .social
+                                    a.social__link(href="#!ln")
+                                        include ../img/icons/social/linkedIn-gray.svg
+                                    a.social__link(href="#!fb")
+                                        include ../img/icons/social/facebook-gray.svg
+                                    a.social__link(href="#!email")
+                                        include ../img/icons/social/email-gray.svg
+                                    a.social__link(href="#!tg")
+                                        include ../img/icons/social/telegram-gray.svg
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+                            amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Alex.jpg?itok=xbAwW_Ky" layout="responsive" width="150" height="94")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Alexander Borodich
+                                    a.staff__post.link(href="#!") Financial Analyst
+
+                                .social
+                                    a.social__link(href="#!fb")
+                                        include ../img/icons/social/facebook-gray.svg
+                                    a.social__link(href="#!email")
+                                        include ../img/icons/social/email-gray.svg
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Alexander Goborov
+                                    a.staff__post.link(href="#!") Editor-in-Chief
+                                .social
+                                    a.social__link(href="#!ln")
+                                        include ../img/icons/social/linkedIn-gray.svg
+                                    a.social__link(href="#!tg")
+                                        include ../img/icons/social/telegram-gray.svg
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+                            amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-03/cyril.jpg?itok=B4DTzpuI" layout="responsive" width="150" height="94")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Aliya Prokofieva
+                                    a.staff__post.link(href="#!") Financial Analyst
+                                .social
+                                    a.social__link(href="#!ln")
+                                        include ../img/icons/social/linkedIn-gray.svg
+                                    a.social__link(href="#!tw")
+                                        include ../img/icons/social/twitter-gray.svg
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+                            amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-03/George-Shnurenko_1.jpg?itok=DpBxrdn8" layout="responsive" width="150" height="94")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Andrew Strogoff
+                                    a.staff__post.link(href="#!") Financial Analyst
+                                .social
+                                    a.social__link(href="#!fb")
+                                        include ../img/icons/social/facebook-gray.svg
+                                    a.social__link(href="#!tg")
+                                        include ../img/icons/social/telegram-gray.svg
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .staff__item
+                        a.staff__img-wrapper(href="#!")
+                            amp-img.staff__img(src="https://u.today/sites/default/files/styles/150/public/2019-05/Rajashi%20Mitra.jpg?itok=-XBa93Io" layout="responsive" width="150" height="94")
+
+                        .staff__info
+                            .staff__row
+                                .personal__info
+                                    a.staff__name.link(href="#!") Angel Di Matteo
+                                    a.staff__post.link(href="#!") Editor-in-Chief
+                                .social
+                                    a.social__link.social__link--em(href="#!email")
+                                    a.social__link.social__link--tw(href="#!tw")
+                                    a.social__link.social__link--fb(href="#!fb")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            .content-block
+                h2.content-block__title Outsource
+                .team__list
+                    each i in [1,2,3,4,5,6,7,8,9]
+                        a.team__item.link(href="#!")
+                            .team__img-wrapper
+                                amp-img.team__img(src="https://u.today/sites/default/files/styles/profile_teaser/public/2018-06/borodich.jpg?itok=F_DxIVHf" layout="responsive" width="250" height="156")
+
+                            .team__name Angel Di Matteo
+                            .team__post Editor-in-Chief

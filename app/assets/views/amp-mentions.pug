@@ -1,291 +1,91 @@
-include inc/var.pug
-doctype html
-html(lang="en" dir="ltr" ⚡)
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+extends layouts/amp-layout.pug
 
-        link(rel='canonical', href='https://u.today/keybase-starts-supporting-stellar-wallets')
+block title
+    title Mentions | U
 
-        script(async="" src="https://cdn.ampproject.org/v0.js")
+block content
+    .main-aside-container
+        .main-block
+            .memories
+                .memories__main
+                    h1.memories__title U.Today Crypto News Influence Across the World Web
+                    p.memories__desc U.Today Crypto News is a leading cryptocurrency media company that has earned respect in the crypto field by providing honest and relevant news on a daily basis.
+                    p.memories__desc Our articles are cited by the most influential figures in the market, and top international business media regularly reference our news.
+                    p.memories__desc We are proud to provide our readers with reliable information and appreciate their trust.
 
-        style(amp-boilerplate='').
-            body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+                    .memories__people
+                        .memories__people-list
+                            each memory, i in memories
+                                a.memories__people-item(href="#memories__news_" + i)
+                                    .memories__people-img--wrapper
+                                        amp-img.memories__people-img(src="" + memory.src layout="fixed" width="40" height="40")
 
-        noscript
-            style(amp-boilerplate='').
-                body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+                                    .memories__people-name= memory.name
 
-        script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-        script(async='', custom-element='amp-form', src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
-        script(async='', custom-template="amp-mustache", src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" )
-        script(async='', custom-element='amp-social-share', src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js')
-        script(async='', custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
-        script(async='', custom-element="amp-twitter", src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js")
-        script(async='', custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js")
+                    .memories__content
 
-        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+                        .memories__news#memories__news_0
+                            .memories__news-wrapper
+                                .memories__news-header
+                                    a.memories__news-avatar--wrapper(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow")
+                                        amp-img.memories__news-avatar(src="img/content/memories/RBK.png" layout="fixed" width="36" height="36")
 
-        style(amp-custom="")
-            include ../../../dest/styles/amp.css
+                                    .memories__news-info
+                                        .memories__news-name RBC
+                                        a.memories__news-data(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow") https://www.rbc.ru/link.html
 
-        script(type='application/ld+json').
-            {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://google.com/article"
-            },
-            "headline": "Article headline",
-            "image": {
-            "@type": "ImageObject",
-            "url": "https://google.com/thumbnail1.jpg",
-            "height": 800,
-            "width": 800
-            },
-            "datePublished": "2015-02-05T08:00:00+08:00",
-            "dateModified": "2015-02-05T09:20:00+08:00",
-            "author": {
-            "@type": "Person",
-            "name": "John Doe"
-            },
-            "publisher": {
-            "@type": "Organization",
-            "name": "Google",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://google.com/logo.jpg",
-            "width": 600,
-            "height": 60
-            }
-            },
-            "description": "A most wonderful article"
-            }
+                                .memories__news-descr
+                                    p <strong> $3,9 млрд на крючке: как Джон Моррис стал «директором по рыбалке» в США </strong>
+                                    p Джон Моррис начинал с торговли рыболовными снастями в углу отцовского винного магазина. Теперь обладатель состояния...
 
+                                    a.memories__news-img--wrapper(href="#!" target="_blank" rel="nofollow")
+                                        amp-img.memories__news-img(src="img/content/memories/main_img_1.png" layout="responsive" width="458" height="305")
 
-    body
+                        amp-twitter.memories__news#memories__news_13(width="500" height="456" layout="responsive" data-tweetid="1138521614637838336")
+                            blockquote
+                                p(lang='en', dir='ltr')
+                                    | My week on Twitter 🎉: 46 Mentions, 97 Mention Reach, 207 Likes, 65 Retweets, 232K Retweet Reach. See yours with
+                                    a(href='https://t.co/dE26XJkoJ4') https://t.co/dE26XJkoJ4
+                                    a(href='https://t.co/RQbF3YMRgt') pic.twitter.com/RQbF3YMRgt
+                                | — biggzi (@biggzi)
+                                a(href='https://twitter.com/biggzi/status/1138521614637838336?ref_src=twsrc%5Etfw') June 11, 2019
 
-        .something(style="background-color: #fff; border-bottom: 1px solid #CFD8DC;")
-            a.something__content(href="#!")
-                amp-img(src="img/something/vexel.png" width="940" height="90" layout="intrinsic" srcset="img/something/vexel.png 2x")
+                        amp-twitter.memories__news#memories__news_3(width="500" height="675" layout="responsive" data-tweetid="1194357297084084224")
+                            blockquote.twitter-tweet
+                                p(lang='en', dir='ltr')
+                                    a(href='https://twitter.com/hashtag/TRON?src=hash&ref_src=twsrc%5Etfw') #TRON
+                                    | 's Justin Sun confirms
+                                    a(href='https://twitter.com/Tronfoundation?ref_src=twsrc%5Etfw') @Tronfoundation
+                                    |  is part of investor group that acquired
+                                    a(href='https://twitter.com/Poloniex?ref_src=twsrc%5Etfw') @Poloniex
+                                    |  Exchange
+                                    br
+                                    br
+                                    | TRON & Poloniex partnership will also focus on attracting Chinese users via new domain pwang. com, redirercting to Poloniex. com, including KYC.
+                                    br
+                                    br
+                                    | Major.
+                                    a(href='https://t.co/XFakZMar3n') https://t.co/XFakZMar3n
+                                | — Misha Lederman (@mishalederman)
+                                a(href='https://twitter.com/mishalederman/status/1194357297084084224?ref_src=twsrc%5Etfw') November 12, 2019
 
-        amp-sidebar#sidebar.sidebar(layout='nodisplay', side='right')
-            .sidebar__close(role='button' aria-label='close sidebar' on='tap:sidebar.toggle' tabindex='0')
-                include ../img/icons/cross.svg
+                        amp-twitter.memories__news#memories__news_2(width="500" height="345" layout="responsive" data-tweetid="1193673109817188353")
+                            blockquote.twitter-tweet
+                                p(lang='en', dir='ltr')
+                                    | Proof: forcing standev=1 means forcing variance=1, and if mean=0 then that means the sum of squares equals 1, which is the quadratic voting budget rule.
+                                | — vitalik.eth (@VitalikButerin)
+                                a(href='https://twitter.com/VitalikButerin/status/1193673109817188353?ref_src=twsrc%5Etfw') November 10, 2019
 
-            .sidebar__social.social
-                a.social__link.social__link--fb(href="#!")
-                    include ../img/icons/social/facebook.svg
-                a.social__link.social__link--tg(href="#!")
-                    include ../img/icons/social/telegram.svg
-                a.social__link.social__link--tw(href="#!")
-                    include ../img/icons/social/twitter.svg
+        aside.aside-menu-block
 
-            nav.sidebar__nav
-                ul.sidebar__nav-list
-                    each category in navFooter
-                        li.sidebar__nav-item
-                            a.sidebar__nav-link(href="#!")= category.name
+            .card
+                .card__title Contacts
 
-                            if category.childs
-                                ul.sidebar__nav-child-list
-                                    each child in category.childs
-                                        li.sidebar__nav-child-item
-                                            a.sidebar__nav-child-link(href="#!")= child.name
+                .card__body
+                    .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
 
-        header.header
-            .container.header__container
-                a.header__logo(href="/")
-                    amp-img(src="img/icons/logo.svg" layout="intrinsic" width="130" height="20")
-
-                nav.header__nav
-                    ul.header__nav-list
-                        each category, i in nav
-                            li.header__nav-item(class=[category.childs ? 'header__nav-item--arrow' : ''] class=[i == 1 ? 'header__nav-item--active' : ''])
-                                a.header__nav-link(href="/" + i)= category.name
-
-                                if category.childs
-                                    ul.header__nav-child-list
-                                        each child, i in category.childs
-                                            li.header__nav-child-item(class=[i == 1 ? 'header__nav-child-item--active' : ''])
-                                                a.header__nav-child-link(href="#!c" + i)= child.name
-
-                .header__panel
-                    button.btn.btn--light.btn--subscribe(on="tap:subscribe")
-                        include ../img/icons/subscribe.svg
-                        | Subscribe
-
-                    .header__search
-                        a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
-                            include ../img/icons/search.svg
-
-                        form.header__search-form#header__search-form(action="#" target="_top" method="get")
-                            button.header__search-submit.btn.btn--light.btn--search(type="submit")
-                                include ../img/icons/search.svg
-                            input.header__search-input(type="text" name="search")
-                            button.header__search-close.btn.btn--light.btn--cross
-                                include ../img/icons/Cross.svg
-
-                    button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
-                        include ../img/icons/burger.svg
-
-        .container.page-container
-
-            .something.something--top
-                .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
-
-                a.something__content(href="#!" style="background-color: #cef1f3")
-                    amp-img(src="img/something/iqmining_3-square.jpg" alt="something-square" width="970" height="90" layout="intrinsic")
-
-            .main-aside-container
-                .main-block
-                    .memories
-                        .memories__main
-                            h1.memories__title U.Today Crypto News Influence Across the World Web
-                            p.memories__desc U.Today Crypto News is a leading cryptocurrency media company that has earned respect in the crypto field by providing honest and relevant news on a daily basis.
-                            p.memories__desc Our articles are cited by the most influential figures in the market, and top international business media regularly reference our news.
-                            p.memories__desc We are proud to provide our readers with reliable information and appreciate their trust.
-
-                            .memories__people
-                                .memories__people-list
-                                    each memory, i in memories
-                                        a.memories__people-item(href="#memories__news_" + i)
-                                            .memories__people-img--wrapper
-                                                amp-img.memories__people-img(src="" + memory.src layout="fixed" width="40" height="40")
-
-                                            .memories__people-name= memory.name
-
-                            .memories__content
-
-                                .memories__news#memories__news_0
-                                    .memories__news-wrapper
-                                        .memories__news-header
-                                            a.memories__news-avatar--wrapper(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow")
-                                                amp-img.memories__news-avatar(src="img/content/memories/RBK.png" layout="fixed" width="36" height="36")
-
-                                            .memories__news-info
-                                                .memories__news-name RBC
-                                                a.memories__news-data(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow") https://www.rbc.ru/link.html
-
-                                        .memories__news-descr
-                                            p <strong> $3,9 млрд на крючке: как Джон Моррис стал «директором по рыбалке» в США </strong>
-                                            p Джон Моррис начинал с торговли рыболовными снастями в углу отцовского винного магазина. Теперь обладатель состояния...
-
-                                            a.memories__news-img--wrapper(href="#!" target="_blank" rel="nofollow")
-                                                amp-img.memories__news-img(src="img/content/memories/main_img_1.png" layout="responsive" width="458" height="305")
-
-                                amp-twitter.memories__news#memories__news_13(width="500" height="456" layout="responsive" data-tweetid="1138521614637838336")
-                                    blockquote
-                                        p(lang='en', dir='ltr')
-                                            | My week on Twitter 🎉: 46 Mentions, 97 Mention Reach, 207 Likes, 65 Retweets, 232K Retweet Reach. See yours with
-                                            a(href='https://t.co/dE26XJkoJ4') https://t.co/dE26XJkoJ4
-                                            a(href='https://t.co/RQbF3YMRgt') pic.twitter.com/RQbF3YMRgt
-                                        | — biggzi (@biggzi)
-                                        a(href='https://twitter.com/biggzi/status/1138521614637838336?ref_src=twsrc%5Etfw') June 11, 2019
-
-                                amp-twitter.memories__news#memories__news_3(width="500" height="675" layout="responsive" data-tweetid="1194357297084084224")
-                                    blockquote.twitter-tweet
-                                        p(lang='en', dir='ltr')
-                                            a(href='https://twitter.com/hashtag/TRON?src=hash&ref_src=twsrc%5Etfw') #TRON
-                                            | 's Justin Sun confirms
-                                            a(href='https://twitter.com/Tronfoundation?ref_src=twsrc%5Etfw') @Tronfoundation
-                                            |  is part of investor group that acquired
-                                            a(href='https://twitter.com/Poloniex?ref_src=twsrc%5Etfw') @Poloniex
-                                            |  Exchange
-                                            br
-                                            br
-                                            | TRON & Poloniex partnership will also focus on attracting Chinese users via new domain pwang. com, redirercting to Poloniex. com, including KYC.
-                                            br
-                                            br
-                                            | Major.
-                                            a(href='https://t.co/XFakZMar3n') https://t.co/XFakZMar3n
-                                        | — Misha Lederman (@mishalederman)
-                                        a(href='https://twitter.com/mishalederman/status/1194357297084084224?ref_src=twsrc%5Etfw') November 12, 2019
-
-                                amp-twitter.memories__news#memories__news_2(width="500" height="345" layout="responsive" data-tweetid="1193673109817188353")
-                                    blockquote.twitter-tweet
-                                        p(lang='en', dir='ltr')
-                                            | Proof: forcing standev=1 means forcing variance=1, and if mean=0 then that means the sum of squares equals 1, which is the quadratic voting budget rule.
-                                        | — vitalik.eth (@VitalikButerin)
-                                        a(href='https://twitter.com/VitalikButerin/status/1193673109817188353?ref_src=twsrc%5Etfw') November 10, 2019
-
-                aside.aside-menu-block
-
-                    .card
-                        .card__title Contacts
-
-                        .card__body
-                            .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
-
-                            .card__list
-                                each item in contactEmails
-                                    .card__list-item
-                                        .card__list-title= item.title
-                                        a.card__list-link(href="mailto:" + item.email)= item.email
-
-        footer.footer
-            .container.footer__container
-                .footer__row
-                    .footer__follow-us
-                        .footer__title Follow us and get all crypto news 24/7
-
-                        .social.social--border.social--wide
-                            a.social__link.social__link--fb(href="#!")
-                                include ../img/icons/social/facebook.svg
-                            a.social__link.social__link--tg(href="#!")
-                                include ../img/icons/social/telegram.svg
-                            a.social__link.social__link--tw(href="#!")
-                                include ../img/icons/social/twitter.svg
-
-                    .footer__subscribe
-                        .footer__title Subscribe to daily newsletter
-
-                        form.form--row.footer__subscribe-form(target="#" method="get")
-                            .input
-                                input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
-
-                            .input
-                                button.btn.btn--wide.btn--input(type="submit") Subscribe
-
-                            .footer__subscribe-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
-
-                nav.footer__nav
-                    ul.footer__nav-list
-                        each category in navFooter
-                            li.footer__nav-item
-                                a.footer__nav-link(href="#!")= category.name
-
-                                if category.childs
-                                    ul.footer__nav-child-list
-                                        each child in category.childs
-                                            li.footer__nav-child-item
-                                                a.footer__nav-child-link(href="#!")= child.name
-                .footer__disclaimer
-                    p.footer__disclaimer-text Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.
-                .footer__copy
-                    .footer__copy-text © 2018 U.Today. All rights reserved
-                    a.footer__copy-link(href="#!") Terms and conditions
-
-        amp-lightbox#subscribe(layout="nodisplay")
-            .modal
-                .modal__item
-                    button.btn.btn--light.modal__close(on="tap:subscribe.close")
-                        include ../img/icons/Cross.svg
-
-                    .modal__item-body
-                        .modal__item-text Sign up for crypto digest
-
-                        form(action="https://u.today/mailchimp-post.php" action-xhr="https://u.today/mailchimp-post.php" method="get" target="_top")
-                            .validation__panel.validation__successful(submit-success='') Thank you for subscription!
-                            .validation__panel.validation__error(submit-error='')
-                                <template type="amp-mustache">Error! JSON: {{message}}</template>
-
-                            .input.article__subscribe-input
-                                input.input__elem(type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2, 4}$" required)
-
-                            input.btn.btn--wide.btn--input(type="submit" value="Subscribe")
-
-                            .modal__item-agree By pressing the “Subscribe button” you agree with our
-                                a(href="#!") Privacy Policy
+                    .card__list
+                        each item in contactEmails
+                            .card__list-item
+                                .card__list-title= item.title
+                                a.card__list-link(href="mailto:" + item.email)= item.email
