@@ -152,6 +152,14 @@ a,button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.btns-spacer {
+  margin: 0 0 -16px;
+}
+
+.btns-spacer > * {
+  margin: 0 16px 16px 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -210,17 +218,22 @@ ul {
   border-color: #1565C0;
 }
 
-.card__list-link,.input__text a,.link-decorate,.modal__square-agree a,a,p a:not([class]) {
+.card__list-link,.input__text a,.link-decorate,.modal__square-agree a,p a:not([class]) {
   color: #2979FF;
   text-decoration: none;
 }
 
-.card__list-link:hover,.input__text a:hover,.link-decorate:hover,.modal__square-agree a:hover,a:hover,p a:not([class]):hover {
+.card__list-link:hover,.input__text a:hover,.link-decorate:hover,.modal__square-agree a:hover,p a:not([class]):hover {
   color: #2196F3;
 }
 
-.card__list-link:active,.input__text a:active,.link-decorate:active,.modal__square-agree a:active,a:active,p a:not([class]):active {
+.card__list-link:active,.input__text a:active,.link-decorate:active,.modal__square-agree a:active,p a:not([class]):active {
   color: #1565C0;
+}
+
+a {
+  color: #2979FF;
+  text-decoration: none;
 }
 
 .link-text {
@@ -1188,7 +1201,6 @@ aside {
   position: relative;
   width: 72px;
   min-width: 72px;
-  background: #ECEFF1;
   border-radius: 2px;
   margin-right: 1rem;
 }
@@ -1262,7 +1274,7 @@ aside {
   display: none;
 }
 
-.card--press--release:first-child {
+.card--press--release .aside-story:first-child {
 }
 
 .card--press--release .card__footer {
@@ -8727,7 +8739,7 @@ blockquote em {
     padding-top: .9rem;
   }
 
-  .card--press--release:first-child {
+  .card--press--release .aside-story:first-child {
     display: flex;
   }
 
