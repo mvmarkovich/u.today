@@ -1,249 +1,182 @@
-.aside-story
-  padding-bottom: 12px
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
-  width: 100%
-
-  &:last-child
-    padding-bottom: 0
-
-  & + &
-    padding-top: 16px
-    border-top: 1px solid #eceff1
-
-  &__name
-    text: #263238 13px 1.2 600
-
-  &__img
-    border-radius: 2px
-    width: 100%
-
-    &-wrapper
-      position: relative
-      width: 72px @sm 144px @md 72px
-      min-width: 72px @sm 144px @md 72px
-      border-radius: 2px
-      margin: 0 10px 0 0
-
-  &__info
-    display: flex
-    align-items: center
-    margin-left: 8px
-
-  &__body
-    margin-top: -6px
-
-  &__row
-    width: 100%
-    margin-top: 0
-    display: flex
-    align-items: center @md flex-start @xl center
-    justify-content: space-between
-
-  &__link
-    text: #263238 500 13px 1.9 @xl 15px
-    margin-left: 8px
-    text-decoration: none
-    display: block
-
-  &__text
-    text: 13px 2.1 500
-    letter-spacing: .015em
-    margin-top: 2px
-
-  &__signature
-    text: #F44336 13px 1.2
-    display: block
-    margin-top: 4px
-
 .card
   background-color: #fff
   border-radius: 2px
   overflow: hidden
-  margin: 0 0 16px
+  display: @md-down none
 
-  &__mark
-    text: #546e7a 500 13px 1.8
+  &--mobile-visible
+    display: @md-down block
+    margin: .5rem 0 @sm 1rem 0
 
-  &__title
-    text: #263238 13px 1.4 600
-    box: center space-between
-    padding: 4px 16px
-    border-bottom: 1px solid #cfd8dc
-    margin: 0
-    min-height: 40px
-
-  &__desc
-    text: 500 13px 1.9
-    margin: -4px 0 16px
-
-  &__body
-    padding: 16px
-
-  &:last-child
-    margin: 0
+  & + &
+    margin-top: 1rem
 
   .btn--accent
     width: 100%
 
+  &--tweet
+    padding-top: @md-down .9rem
+
   &--press--release
+
     .aside-story
       display: none @md flex
 
-    .card__footer
-      border: 0
-      margin-bottom: 8px
+    &:first-child
+      display: @md-down flex
+
+    ^&__footer
+      border: none
+      margin-bottom: .7rem @xl 1.1rem
+
+  &--no-padding
+    padding: 0
+
+  &__title
+    text: $pseudo-neutral-900 13px 1.4 600
+    padding: .219rem 1rem
+    min-height: 40px
+    border-bottom: $border
+    margin-bottom: 0
+    box: center space-between
+
+    &-flame
+      font-weight: 600
+      border-bottom: 0
+      color: $accent-2-medium
+      text-transform: uppercase
+      display: inline-flex
+      align-items: center
+      margin-bottom: 0
+
+      &:before
+        content: ''
+        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        size: 24px
+        margin-right: .5rem
+
+  &__desc
+    text: $body-small
+    margin: -.2rem * .9rem @xl -.7rem * 1rem
 
   &__list
 
-    &-title
-      text: 600 13px 1.2
-      margin: 0 0 8px
-
     &-item
-      border-top: 1px solid #eceff1
-      padding-top: 8px
-      padding-bottom: 8px
+      border-top: 1px solid $pseudo-neutral-50
+      padding: .7rem * @xl 1rem *
 
       &:last-child
         padding-bottom: 0
 
+    &-title
+      text: $header-super-tiny @xl $header-tiny
+      margin-bottom: .5rem
+
     &-link
-      font-weight: 500
-      font-size: 13px
-      line-height: 1.9
+      text: $body-small
+      @extend .link-decorate
+
+  &__social
+    box: center
+    min-height: 64px
+
+    .social__link
+      margin-right: 1.5rem
 
   &__footer
-    padding: 4px 16px
-    border-top: 1px solid #cfd8dc
-    display: flex
-    align-items: center
-    justify-content: space-between
+    padding: .219rem 1rem
+    border-top: $border
+    box: center space-between
 
     .btn
       font-weight: 600
-      font-size: 15px
 
   &--something
     padding: 0
     border: 0
     border-radius: 0
-    display: none
 
-  &--widget
-    &__item
-      display: flex
-      flex-wrap: nowrap
-      align-items: center
-      justify-content: space-between
-      color: #263238
-      text-decoration: none
+    img
+      height: auto
 
-      & + &
-        margin-top: 24px
+  .text-tiny
+    text: #90a4ae
 
-      .btn
-        width: 100%
+  &--miners
+    padding: 0 @xl 0
+    margin-bottom: 1rem @md 1.5rem @xl 2rem
+
+    .aside-story:first-child
+      padding-top: 0
+
+    .aside-story + .aside-story
+      padding-top: .9rem
+
+    .aside-story
+      padding-bottom: .9rem
+
+    .card__body
+      padding-top: .9rem
+      padding-bottom: .9rem
+
+      .aside-story--miners
+        align-items: center @md flex-start @xl center
+
+      .aside-story__name
+        min-width: 115px
+
+      .aside-story__text
+        text: #78909C 13px 16px
+        margin-top: .5rem
+
+      .aside-story__img
+
+        &-wrapper
+          max-width: 75px
+          min-width: 1px @xs 75px
+          width: 100%
+          background: transparent
+          display: block
+
+          margin-top: @md 1rem @xl 0
+
+  &--article
+
+    ^&__body
+      padding: 0
+
+  &__body
+    padding: 1.3rem 1rem 1.5rem @xl * * 1.2rem
+
+    &-counter
+      background-color: #fff
+      counter-reset: section
 
       .btn--block
-        margin-left: 20px
-        width: auto
+        .btn
+          &:last-child
+            margin-top: @md 0
 
-    &__img
-      &-wrapper
-        max-width: 48px
-        min-width: 48px
-
-    &__row
-      display: flex
-
-    &__info
-      margin-left: 8px
-
-    &__title
-      text: 700 15px 1.6
-
-    &__signature
-      text: #263238 500 14px 1.5
-
-  &--subscribe
-    background: transparent
-    border-radius: 0
+  &__mark
+    text: $pseudo-neutral-300 13px 1.8 500
 
   &__subscribe
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    justify-content: space-between
+    margin-bottom: .7rem
 
-    &-item
-      width: 100% @sm 49% @md 100% @xl 49%
-      text: $neutral
-      box: center
-      text-decoration: none
-      margin: 0 0 8px
+    .btn--accent
+      margin-top: 0
+      font-weight: 600
 
-    &-icon
-      padding: 16px
-      size: 56px
-      background-repeat: no-repeat
-      background-position: center
+    .input
+      margin-right: 0
+
+    .form--col
+      width: 100%
+      margin-right: -3px
 
     &-title
-      text: $neutral 700 15px 33px
-
-    &-desc
-      padding: 0 12px
-      width: 100%
-      height: 56px
-
-    &-nick
-      text: 13px 1.1
-
-    &-fb
-      ^&-icon
-        background-color: #3B5998
-        background-image: resolve("icons/social/facebook-white.svg")
-
-      ^&-desc
-        background: #213256
-
-    &-tw
-      ^&-icon
-        background-color: #1DA1F2
-        background-image: resolve("icons/social/twitter-white.svg")
-
-      ^&-desc
-        background: #105B88
-
-    &-yb
-      ^&-icon
-        background-color: red
-        background-image: resolve("icons/social/youtube-white.svg")
-
-      ^&-desc
-        background: #8F0000
-
-    &-tm
-      ^&-icon
-        background-color: #08C
-        background-image: resolve("icons/social/telegram-white.svg")
-
-      ^&-desc
-        background: #069
-
-    &-em
-      margin: 0
-      width: 100% @sm 100% @md 100% @xl 100%
-
-      ^&-icon
-        background-color: #2979FF
-        background-image: resolve("icons/social/email-white.svg")
-
-      ^&-desc
-        background: #17448F
-        padding: 0 16px
-
-      ^&-title
-        line-height: 56px
+      text: $pseudo-neutral-900 600 13px 16px
+      margin-bottom: 1.5rem

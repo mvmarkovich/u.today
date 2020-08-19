@@ -1,0 +1,21 @@
+extends layouts/layout.pug
+
+block title
+  title Article Infinite | u.today
+
+block content
+  .main-aside-container
+    main.main-news-block
+
+      include blocks/article-infinite-scroll.pug
+
+      +article-infinite-scroll(1)
+
+      .article-infinite-scroll
+        each i in [2,3,4]
+          +article-infinite-scroll(i)
+
+    aside.aside-menu-block
+
+      include blocks/aside-menu-block.pug
+

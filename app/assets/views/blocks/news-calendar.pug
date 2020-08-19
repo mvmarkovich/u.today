@@ -1,0 +1,20 @@
+.news-calendar
+    .news-calendar__header
+        .icon.icon--calendar
+        .news-calendar__title Upcoming events
+        .btns-spacer
+            a.btn.btn--pseudo(href="#!") See all
+
+    ul.news-calendar__list
+        each item, i in newsCalendar
+            li.news-calendar__item
+                time.news-calendar__item-time.humble= item.date
+
+                .news-calendar__item-info
+
+                    h3.news-calendar__item-title= item.title
+
+                    p.news-calendar__item-descr An Airdrop for Unsold Tokens to encourage wider mass adoption is scheduled for December 7th, 2019
+
+                    .btn--block
+                        a.btn.btn--light.btn--arrow-right(href="#!") More

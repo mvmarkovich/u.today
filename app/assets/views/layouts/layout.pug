@@ -1,5 +1,5 @@
 include ../inc/var.pug
-include ../inc/mixins.pug
+
 doctype html
 html(lang="en" dir="ltr")
   head
@@ -20,14 +20,9 @@ html(lang="en" dir="ltr")
 
     block head
       link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet")
-      link(rel="stylesheet" href="styles/defaults.css")
       link(rel="stylesheet" href="styles/main.css")
 
   body
-
-    .something(style="background-color: #fff")
-      a.something__content(href="#!")
-        img(src="img/something/vexel.png" srcset="img/something/vexel.png 1x, img/something/vexel-dark-2x-desktop.png 2x")
 
     include ../inc/header.pug
 

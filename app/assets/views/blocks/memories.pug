@@ -1,0 +1,80 @@
+.memories
+
+    .memories__main
+        h1.memories__title Our influence accross the web
+
+        .memories__people
+            .memories__people-list
+                each memory, i in memories
+                    a.memories__people-item(href="#memories__news_" + i)
+                        .memories__people-img--wrapper
+                            img.memories__people-img(src="" + memory.src)
+
+                        .memories__people-name= memory.name
+
+            button.btn.btn--arrow-down.btn--full.hide-md-up.btn--show Show more
+
+        .memories__content
+
+            .memories__news#memories__news_0
+                .memories__news-wrapper
+                    .memories__news-header
+                        a.memories__news-avatar--wrapper(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow")
+                            img.memories__news-avatar(src="img/content/memories/RBK.png")
+
+                        .memories__news-info
+                            .memories__news-name RBC
+                            a.memories__news-data(href="https://www.rbc.ru/link.html" target="_blank" rel="nofollow") https://www.rbc.ru/link.html
+
+                    .memories__news-descr
+                        p <strong> $3,9 млрд на крючке: как Джон Моррис стал «директором по рыбалке» в США </strong>
+                        p Джон Моррис начинал с торговли рыболовными снастями в углу отцовского винного магазина. Теперь обладатель состояния...
+
+                        a.memories__news-img--wrapper(href="#!" target="_blank" rel="nofollow")
+                            img.memories__news-img(src="img/content/memories/main_img_1.png")
+
+            .memories__news#memories__news_13
+                blockquote.twitter-tweet
+                    p(lang='en', dir='ltr')
+                        | My week on Twitter 🎉: 46 Mentions, 97 Mention Reach, 207 Likes, 65 Retweets, 232K Retweet Reach. See yours with
+                        a(href='https://t.co/dE26XJkoJ4') https://t.co/dE26XJkoJ4
+                        a(href='https://t.co/RQbF3YMRgt') pic.twitter.com/RQbF3YMRgt
+                    | — biggzi (@biggzi)
+                    a(href='https://twitter.com/biggzi/status/1138521614637838336?ref_src=twsrc%5Etfw') June 11, 2019
+
+            .memories__news#memories__news_3
+                blockquote.twitter-tweet
+                    p(lang='en', dir='ltr')
+                        a(href='https://twitter.com/hashtag/TRON?src=hash&ref_src=twsrc%5Etfw') #TRON
+                        | 's Justin Sun confirms
+                        a(href='https://twitter.com/Tronfoundation?ref_src=twsrc%5Etfw') @Tronfoundation
+                        |  is part of investor group that acquired
+                        a(href='https://twitter.com/Poloniex?ref_src=twsrc%5Etfw') @Poloniex
+                        |  Exchange
+                        br
+                        br
+                        | TRON & Poloniex partnership will also focus on attracting Chinese users via new domain pwang. com, redirercting to Poloniex. com, including KYC.
+                        br
+                        br
+                        | Major.
+                        a(href='https://t.co/XFakZMar3n') https://t.co/XFakZMar3n
+                    | — Misha Lederman (@mishalederman)
+                    a(href='https://twitter.com/mishalederman/status/1194357297084084224?ref_src=twsrc%5Etfw') November 12, 2019
+
+            .memories__news#memories__news_2
+                blockquote.twitter-tweet
+                    p(lang='en', dir='ltr')
+                        | Proof: forcing standev=1 means forcing variance=1, and if mean=0 then that means the sum of squares equals 1, which is the quadratic voting budget rule.
+                    | — vitalik.eth (@VitalikButerin)
+                    a(href='https://twitter.com/VitalikButerin/status/1193673109817188353?ref_src=twsrc%5Etfw') November 10, 2019
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@
   background: #fff
   position: relative
   z-index: 996
+  margin: 0 0 16px
 
   &__container
     box: center space-between
@@ -53,6 +54,7 @@
     display: none @md block
 
     &-list
+
       box: vertical @md horizontal space-between @xl center
       background: @md-down #fff
       padding-top: @md-down .8rem
@@ -98,11 +100,11 @@
           &:after
             right: auto @md 24px
 
-      ^^^&-link
-        pointer-events: @md-down none
+        ^^^&-link
+          pointer-events: @md-down none
 
-        &:after
-          transform: @md scaleY(-1)
+          &:after
+            transform: @md scaleY(-1)
 
         &:after
           right: auto @md 24px

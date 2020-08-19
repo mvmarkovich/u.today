@@ -1,0 +1,85 @@
+.card.card--press--release.card--mobile-visible
+  h4.card__title Press Releases
+  .card__body
+    .aside-story
+      a.aside-story__img-wrapper(href="#!")
+        img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+        .promoted__mark.promoted__mark-top-left Promo
+      .aside-story__body
+        a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+        .aside-story__info
+          .humble.humble--tiny 12:25 AM
+
+    .aside-story
+      a.aside-story__img-wrapper(href="#!")
+        img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq")
+        .sponsored__mark.sponsored__mark-bottom-right Promo
+      .aside-story__body
+        a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
+
+        .aside-story__info
+          .humble.humble--tiny 12:25 AM
+
+  .card__footer
+    a.btn.btn--accent(href="#!") Submit Press Release
+
+.card
+  h4.card__title Popular
+  .card__body
+    each hot in hots
+      .aside-story
+        a.aside-story__img-wrapper(href="#!")
+          img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ")
+          .sponsored__mark.sponsored__mark-bottom-right Promo
+        .aside-story__body
+          a.aside-story__link(href="#!")= hot
+
+          .aside-story__info
+            .humble.humble--tiny 12:25 AM
+
+  .card__footer
+    a.btn.btn--light.btn--arrow-right(href="#!") Show more
+
+.card
+  .card__title
+    .card__social
+      .social__title Follow us:
+      .social
+        a.social__link.social__link--fb-paint(href="#!fb")
+        a.social__link.social__link--tg-paint(href="#!tg")
+        a.social__link.social__link--tw-paint(href="#!tw")
+
+  .card__body
+    form.card__subscribe(action="#" method="get")
+      .card__subscribe-title Subscribe to daily newsletter
+
+      .form--row
+        .input.form--col
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        .input
+          button.btn.btn--accent.btn--input(type="submit") Subscribe
+    .text-tiny By pressing the “Subscribe button” you agree with our <a href="#!"> Privacy Policy </a>
+
+.card.card--something
+  .something
+    img(src="img/content/banner.png" width="360" height="156" alt="something-square")
+
+.card
+  h4.card__title Upcoming events
+
+  .card__body
+    each event in events
+      .aside-story.aside-story--events
+        .aside-story__body
+          a.aside-story__link(href="#!")= event
+
+          .aside-story__info
+            time.humble.humble--tiny Oct 31, 2018
+            .humble.humble--tiny Las Vegas, USA
+
+  .card__footer
+    a.btn.btn--light.btn--arrow-right(href="#!") See all
+
+

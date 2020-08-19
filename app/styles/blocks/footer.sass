@@ -32,11 +32,6 @@
     &-form
       height: auto @md 40px
 
-      .input
-        &:first-child
-          margin-right: 16px
-          width: calc(100% - 116px) @md auto
-
     &-input
       width: @md 116px @xl 269px
 
@@ -66,6 +61,7 @@
     //   top: 80px @xl 96px
     //   right: 24px @xl 32px
     &-link
+      @extend .link-plain
       text: $pseudo-neutral-900 $header-tiny @md $header-super-tiny @xl $header-tiny
 
     &-child
@@ -80,7 +76,9 @@
           margin-top: 0.94rem @xl 1rem
 
       &-link
-        text: $pseudo-neutral-900 $body-tiny @xl $body-small
+        text: $body-tiny @xl $body-small
+        text: $pseudo-neutral-900
+
 
   &__copy
     box: wrap @md center

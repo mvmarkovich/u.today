@@ -1,0 +1,226 @@
+.about-author_avatar img.caption a,
+.about-author_name,
+.article > img.caption a,
+.article__contents-link,
+.article__main-img.caption a,
+.article__recommended-link,
+.article__recommended .article__recommended-item-title,
+.article__related-link a,
+.aside-story--miners a.aside-story__name,
+.aside-story__img.caption a,
+.aside-story__link,
+.author__item-name,
+.big_categories-story_item-title,
+.big_categories-story_mark,
+.breaking, .card--related,
+.card--related .related_img img.caption a,
+.card .advertising_link,
+.categories-story_item-title,
+.categories-story_mark,
+.category-item__list-link,
+.cels__widget-img.caption a,
+.comments .comment-wrapper .form-img--wrapper img.caption a,
+.comments .js-comment footer > p a,
+.comments .js-comment footer > p span,
+.comments article img.caption a,
+.comments ul.links.inline .comment-forbidden a,
+.comments ul.links.inline .comment-reply a,
+.event__main-img.caption a,
+.footer__nav-child-link,
+.footer__nav-link,
+.humble--author,
+.humble--link,
+.image-source-text a,
+.img.caption a,
+.input__checkbox-label a,
+.landing .text-link,
+.landing__benefits-img.caption a,
+.medium_categories-story_item-title,
+.medium_categories-story_mark,
+.mega-history,
+.memories__news-avatar.caption a,
+.memories__news-data,
+.memories__news-img.caption a,
+.memories__people-img.caption a,
+.memories__people-item,
+.news-categories__item-link,
+.news-category__item-title,
+.news-featured__item-link,
+.news-feed__item-title,
+.news__item-title,
+.partners__img.caption a,
+.partners__link,
+.press-releases__item,
+.press-releases__item-img.caption a,
+.price-index__header .btn,
+.rate-billet-img.caption a,
+.staff__img.caption a,
+.staff__name,
+.staff__post,
+.team__item,
+.top-story--link,
+.top-story__img-wrapper.caption a,
+.top-story__mark,
+.top-story__title,
+.under_main-img__item,
+.user--login__descr,
+.user--logout,
+a.category-item__title,
+.news-calendar__header .btns-spacer .btn,
+.news__header .btns-spacer .btn,
+.aside-article__link,
+figcaption a,
+img:not([class]).caption a
+  text: $pseudo-neutral-900
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-medium
+
+  &:active
+    text: $accent-1-dark
+
+.footer__copy-link
+  color: #2196F3
+  border-bottom: 1px solid #CFD8DC
+  text-decoration: none
+
+.card__list-link,
+.event__speakers-link,
+.input__text a,
+.modal__square-agree a,
+a:not([class]),
+p a:not([class])
+  text: $accent-1-light
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-medium
+    border-color: $accent-1-medium
+
+  &:active
+    text: $accent-1-dark
+    border-color: $accent-1-dark
+
+.category-info__img,
+.about-author_avatar img,
+.article > img,
+.article__main-img,
+.aside-story__img,
+.card--related .related_img img,
+.cels__widget-img,
+.comments .comment-wrapper .form-img--wrapper img,
+.comments article img,
+.event__main-img,
+.landing__benefits-img,
+.memories__news-avatar,
+.memories__news-img,
+.memories__people-img,
+.partners__img,
+.press-releases__item-img,
+.rate-billet-img,
+.staff__img,
+.top-story__img-wrapper,
+.aside-article__img,
+img:not([class])
+  display: block
+  max-width: 100%
+
+.category-item__img-wrapper,
+.news-category__item-img-wrapper,
+.news-featured__item-img-wrapper,
+.news-feed__item-img-wrapper,
+.team__img-wrapper
+  background: #ECEFF1
+  overflow: hidden
+  position: relative
+
+.category-item__img,
+.news-category__item-img,
+.news-featured__item-img,
+.news-feed__item-img,
+.team__img
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+
+.article__contents-list,
+.author__list,
+.category-item__list,
+.cels__widget-list,
+.comments ul.links.inline,
+.event__speakers,
+.footer__nav-child-list,
+.footer__nav-list,
+.header__nav-child-list,
+.header__nav-list,
+.landing__benefits-list,
+.landing__location-list,
+.landing__request-list,
+.landing__statistics-list,
+.news-categories__list,
+.news__list,
+.tabs,
+.tabs__sub,
+.news-calendar__list
+  list-style: none
+  padding: 0
+  margin: 0
+
+
+.comments .form-submit
+  background: $accent-1-light
+  border-color: $accent-1-light
+  text: #fff
+
+  &:hover
+    background: $accent-1-medium
+    border-color: $accent-1-medium
+    text: #fff
+
+  &:active
+    background: $accent-1-dark
+    border-color: $accent-1-dark
+    text: #fff
+
+  &:disabled, &.btn--disabled
+    background: $pseudo-neutral-100 !important
+    text: $pseudo-neutral-300 !important
+    border-color: $pseudo-neutral-100 !important
+    cursor: default
+    pointer-events: none
+
+.comments textarea.form-textarea,
+.input__select,
+input
+  border: $border
+  border-radius: 2px
+  padding: 0 1rem
+  min-height: 40px
+  outline: 0
+  text: $body-small
+  font-family: $font
+  width: 100%
+
+  &::placeholder
+    text: $pseudo-neutral-400
+
+  &:hover
+    border-color: $accent-1-light
+
+  &:focus
+    border-color: $accent-1-medium
+
+  &:valid
+    border-color: $pseudo-neutral-300
+
+  &:disabled
+    background: $neutral-100
+    border-color: $pseudo-neutral-100
+
+  textarea&
+    padding: .6rem *
+    resize: none
+    display: block
+    height: 48px

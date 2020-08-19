@@ -1,0 +1,49 @@
+.tooltip
+  position: relative
+  margin: @sm-down 0 1rem
+
+  &__content
+    background: $neutral
+    border-radius: 8px
+    padding: 1rem
+    position: absolute
+    top: 72px
+    z-index: 24
+    display: none
+    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
+
+    &:after
+      content: ''
+      position: absolute
+      top: -16px
+      left: 0
+      right: 0
+      size: 100% 16px
+      background-color: transparent
+
+    &:before
+      content: ''
+      position: absolute
+      top: -16px
+      left: 50%
+      border-left: 16px solid transparent
+      border-right: 16px solid transparent
+      border-bottom: 16px solid $neutral
+      display: block
+      size: 0
+      margin-left: -16px
+
+    &-img
+
+      &--wrapper
+        max-width: 130px
+        margin-bottom: 1rem
+
+    p
+      text: 500 13px 24px
+      margin-bottom: 0
+
+  &:hover
+
+    ^&__content
+      display: block

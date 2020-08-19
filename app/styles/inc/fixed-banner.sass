@@ -1,0 +1,55 @@
+.fixed-banner
+  position: fixed null 50px 35px null @md-down fixed null 16px 16px null
+  animation: fixed-banner 4s infinite
+  z-index: 100
+  
+  &-wrapper
+    position: relative
+
+  &-general
+    width: @md-down 120px
+
+  &-img
+    width: 120px @md 100%
+
+    &--wrapper
+      opacity: 0
+      position: absolute
+      top: 0
+      right: 0
+      transition: .42s
+      transform: scale(.1)
+
+  &-close
+    position: absolute -4px -4px null null @md-down absolute -8px -12px null null
+    opacity: 0
+    transform: scale(.1)
+    transition: .42s
+
+    &:after
+      content: ''
+      background-image: svg-load("icons/cross.svg", fill: $accent-1-light)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      size: 24px
+
+
+    &:hover:after
+      background-image: svg-load("icons/cross.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
+
+  &:hover
+    animation: 0s
+
+    ^&-close
+      opacity: 1
+      transform: scale(1)
+
+    ^&-img
+
+      &--wrapper
+        opacity: 1
+        transform: scale(1)

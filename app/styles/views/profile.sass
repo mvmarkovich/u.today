@@ -1,0 +1,122 @@
+.profile
+
+  &__info
+    padding: 1.5rem 1rem @sm 2rem
+    border-bottom: $border
+
+    .username
+      text: 22px 1.8 600 @xl 31px 2.2
+
+  &__row
+    box: space-between wrap
+    align-items: flex-start
+
+  &__list
+    box: space-between center
+    flex-wrap: nowrap @sm-down wrap
+    margin-top: .75rem
+
+  &__item
+    width: 100% @sm 33%
+    text-align: @sm-down center
+
+    & + &
+      border-left: @sm $border
+      margin-top: @sm-down 1.2rem
+
+    &--value
+      text: 13px 1.8 600
+
+    &--name
+      text: $pseudo-neutral-400 13px 1.8
+      letter-spacing: .01em
+      user-select: none
+
+    &:first-child
+      text-align: @sm left
+
+    &:nth-child(2)
+      text-align: @sm center
+      max-width: 358px
+      width: 100%
+
+    &:last-child
+      text-align: @sm right
+
+  &__form
+    padding: 2rem
+
+    .input__elem
+      min-height: @sm 72px
+      padding: 1rem @sm 1.5rem 2rem
+
+    textarea.input__elem
+      height: 100%
+      min-height: 178px
+      text: 13px 2.2 500 @xl 15px 1.8
+
+
+.user
+
+  &__info
+    text-align: center
+    order: @sm-down 3
+    width: @sm-down 100%
+
+    .humble
+      order: @sm-down 1
+
+    .no--avatar
+      text-align: center
+      user-select: none
+      text: $neutral 22px 96px 600 @xl 31px
+
+    .add--img
+      size: 2rem
+      background-color: $neutral
+      border-radius: 50%
+      box-shadow: 0 2px 5px rgba(33, 150, 243, 0.5)
+      position: absolute null 0 0 null
+
+      display: block
+      margin-right: .6rem
+      background-size: 18px
+      background-position: center
+      background-repeat: no-repeat
+      background-image: svg-load("icons/add-img.svg" fill: $pseudo-neutral-900)
+
+      &:hover
+        background-image: svg-load("icons/add-img.svg" fill: $accent-1-medium)
+
+      &:active
+        background-image: svg-load("icons/add-img.svg" fill: $accent-1-dark)
+
+  &__img
+    min-width: 96px
+    max-width: 96px
+    height: 96px
+    border-radius: 50%
+    background-color: $accent-1-light
+    margin: 0 auto .75rem
+    position: relative
+
+  &--logout
+    
+    text: 13px 16px 600
+    box: inline-flex center
+    order: @sm-down 2
+
+    &:after
+      content: ''
+      background-image: svg-load("icons/logout-variant.svg", fill: $pseudo-neutral-900)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      size: 24px
+      margin-left: .6rem
+
+    &:hover:after
+      background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-dark)

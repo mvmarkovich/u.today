@@ -1,0 +1,173 @@
+.price-index
+
+  &__aside
+    background-color: $neutral
+    margin-bottom: @md-down 1rem
+    overflow: hidden
+    max-height: 40px @md 100%
+
+    .price-index__header .btn:before
+      transform: @md-down rotate(180deg)
+
+    &--close
+      max-height: 100% @md 40px
+
+      .price-index__header .btn:before
+        transform: @md-down rotate(0) @md rotate(180deg)
+
+  &__title
+    text: $neutral $body-small
+
+  &__header
+
+    .btn
+      line-height: 40px
+      font-weight: 600
+      justify-content: flex-start
+      width: 100%
+      padding: 0 1rem
+
+    &:before
+      position: absolute
+      right: 1rem
+      margin-right: 0
+
+  &__tabs-item
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+
+
+  &__table
+    box: center space-between
+    border-bottom: $border
+    padding: 0 16px
+    background: #CFD8DC
+
+  &__body
+    padding: .5rem 0 0
+    overflow: hidden
+
+    &--open
+      max-height: unset
+
+    .tabs__item
+      box: space-between center
+      padding: 0 1rem
+
+    .btn
+      padding: 0
+
+  &__coin
+
+    &-short
+      background: $neutral-100
+      text: 13px 1.8 500
+      border-radius: 2px
+      padding: .1rem .2rem
+      margin-left: .5rem
+      display: none
+
+    &-trand
+      margin-left: auto
+      text: $status-positive 13px 1.8 500
+      text-align: right
+
+      &--down
+        color: $status-negative
+
+      & + &
+        margin-left: 1rem
+
+      &:last-child
+        min-width: 55px
+
+  &__footer
+    padding: .2rem 1rem .5rem @xl 0 1rem 1rem
+
+  &_chart
+    margin-bottom: 5rem
+
+    &.chart-row
+      box: space-between wrap
+
+      .tradingview-widget-container
+        width: 100% !important
+        max-width: 100% @xl 310px
+        margin-bottom: @xl-down 5rem
+
+        &:last-child
+          margin-bottom: @xl-down 0
+
+.cryptocurrency_price
+  margin: 1.5rem -1rem @sm 2rem 0
+
+  .social
+
+    &-descr
+      text: 15px 38px 500
+      padding: 0 1rem
+      border-right: $border
+
+    &__link
+      width: 2.7rem
+
+    &--border
+      width: auto
+
+  &__block
+    background: url("../img/content/price-index/background-block.png") no-repeat
+    background-size: cover
+    padding: 1rem @xl 3rem 4rem
+    height: 270px @xl 460px
+    box: vertical space-between
+
+  .name
+    text: $neutral 22px 1.8 @xl 31px
+
+  .price
+    text: $neutral 31px 1.2 @xl 80px
+    box: center
+
+    &:after
+      content: ''
+      size: 24px 21px @xl 48px 42px
+      display: block
+      margin-left: 1.5rem @xl 2rem
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+
+  .change
+    text: $neutral 22px 1.8 600 @xl 31px
+
+  .date
+    text: $neutral 22px 1.8 600 @xl 31px
+
+  &.price-up
+
+    .price
+
+      &:after
+        background-image: svg-load("icons/big_chevron-up.svg", fill: #64DD17)
+
+    .change
+      color: #64DD17
+
+  &.price-down
+
+    .price
+
+      &:after
+        background-image: svg-load("icons/big_chevron-down.svg", fill: #FF5252)
+
+    .change
+      color: #FF5252
+
+.tradingview-widget-container
+  height: 368px !important
+  width: 100% !important
+
+  iframe
+    height: 100% !important
+    width: 100% !important

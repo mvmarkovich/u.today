@@ -16,21 +16,13 @@
   user-select: none
   -webkit-tap-highlight-color: transparent
 
-  &:hover
-    border-color: $accent-1-medium
-    color: $accent-1-medium
-
-  &:active
-    border-color: $accent-1-dark
-    color: $accent-1-dark
-
   &--wide
     padding: * 1rem
 
   &--input
     display: flex
     width: 100%
-    min-height: 40px
+    height: 40px
 
   &--light
     margin: 0
@@ -64,11 +56,23 @@
     &--open
       display: none
 
-  &--pseudo
-    @extend .btn--light
-    text-transform: none
-    text: 500 13px
-    letter-spacing: normal
+  &--subscribe
+    font-weight: 700
+    color: #2979FF
+    height: 48px
+
+    svg
+      margin-right: 8px
+
+  &--yb
+    font-weight: 700
+    color: red
+    vertical-align: middle
+    display: inline-flex
+    align-items: center
+
+    svg
+      margin-right: 4px
 
   &--hash-tag
     text: $body-small normal none none
@@ -76,104 +80,25 @@
     border-color: $accent-1-light
     color: #fff
 
-    &:hover
-      border-color: $accent-1-medium
-      background: $accent-1-medium
-      color: #fff
-
-    &:active
-      border-color: $accent-1-dark
-      background: $accent-1-dark
-      color: #fff
-
-  &--background--blue
-    background: #2979ff
-    box-shadow: 0 16px 24px rgba(33, 150, 243, 0.35)
-    border: 1px solid #2979ff
-    color: #fff
-    padding: 0
-
-    &:hover
-      background-color: #2196F3
-      border: 1px solid #2196F3
-      color: #fff
-
-    &:active
-      background-color: #1565C0
-      border: 1px solid #1565C0
-      color: #fff
-
-  &:disabled, &--disabled
-    text: $pseudo-neutral-300 !important
-    border-color: $pseudo-neutral-100 !important
-    cursor: default
-
-  &-aside-space
-    margin: 2rem 1rem
-    width: auto
-
   &--accent
     background: $accent-1-light
     border-color: $accent-1-light
     text: #fff
-
-    &:hover
-      background: $accent-1-medium
-      border-color: $accent-1-medium
-      text: #fff
-
-    &:active
-      background: $accent-1-dark
-      border-color: $accent-1-dark
-      text: #fff
-
-    &:disabled, &.btn--disabled
-      background: $pseudo-neutral-100 !important
-      text: $pseudo-neutral-300 !important
-      border-color: $pseudo-neutral-100 !important
-      cursor: default
-      pointer-events: none
 
   &--accent-2
     background: $accent-2-medium
     border-color: $accent-2-medium
     text: #fff
 
-    &:hover
-      background: $accent-2-medium
-      border-color: $accent-2-medium
-      text: #fff
-
-    &:active
-      background: $accent-2-medium
-      border-color: $accent-2-medium
-      text: #fff
-
   &--accent-3
-    background: #2E7D32
+    background: linear-gradient(135deg, #00B964 35.53%, #06CE72 93.42%)
     border: none
     color: #fff
-
-    &:hover
-      color: #fff
-      background: #2E7D32
-
-    &:active
-      color: #fff
-      background: #2E7D32
 
   &--accent-4
     background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
     border: none
     color: #fff
-
-    &:hover
-      color: #fff
-      background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
-
-    &:active
-      color: #fff
-      background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
 
   &--radius
 
@@ -182,41 +107,6 @@
 
     &-right
       border-radius: 0 2px 2px 0
-
-  &--celsius
-    text: $neutral 600 17px 24px
-    border-radius: 8px
-    background-color: #20C589
-    border-color: #20C589
-    white-space: nowrap
-    margin-left: @sm .5rem @xl 0
-    width: @sm-down 100%
-    margin-top: @sm-down 1rem
-
-    &:hover
-      background-color: #2cd99a
-      color: $neutral
-      border-color: #20C589
-
-    &:active
-      background-color: #2cd99a
-      color: $neutral
-      border-color: #20C589
-
-  &--tooltip
-    background-color: $accent-1-medium
-    border-color: $accent-1-medium
-    border-radius: 8px
-    text-transform: uppercase
-    font-weight: 600
-
-    &:hover
-      background-color: $accent-1-medium
-      border-color: $accent-1-medium
-
-    &:active
-      background-color: $accent-1-medium
-      border-color: $accent-1-medium
 
   &--arrow-down,
   &--dropdown,

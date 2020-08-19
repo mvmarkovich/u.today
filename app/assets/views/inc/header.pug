@@ -1,0 +1,50 @@
+header.header
+  .header__container
+    a.header__logo(href="#!")
+
+    .header__social.social
+      a.social__link.social__link--fb(href="#!fb")
+      a.social__link.social__link--tg(href="#!tg")
+      a.social__link.social__link--tw(href="#!tw")
+      a.social__link.social__link--em(href="#!em")
+
+    nav.header__nav
+      ul.header__nav-list
+        each category, i in nav
+          li.header__nav-item(class=[ category.childs ? 'header__nav-item--arrow' : '' ] class=[ i == 1 ? 'header__nav-item--active' : '' ])
+            a.header__nav-link(href="/" + i)= category.name
+
+            if category.childs
+              ul.header__nav-child-list
+                each child, i in category.childs
+                  li.header__nav-child-item(class=[ i == 1 ? 'header__nav-child-item--active' : '' ])
+                    a.header__nav-child-link(href="#!c" + i)= child.name
+
+    .header__panel
+      button.header__btn-search.btn.btn--light.btn--search
+
+      button.header__btn-notification.btn.btn--light.btn--notification
+        .notification_value-block
+          .notification_value 1
+
+      button.header__account.btn.btn--light.btn--account.user--login
+
+      .user--login__modal
+        .user--login__content
+          .user--login__item
+            a.user--login__descr(href='#!') Waititi Taika
+
+          .user--login__item
+            a.user--logout(href='#!') Log out
+
+      button.header__burger.btn.btn--light.btn--burger
+
+    .mobile-menu-back Back
+
+    .header__search
+      form.header__search-form(action="#" method="get")
+        button.header__search-submit.btn.btn--light.btn--search(type="submit")
+        input.header__search-input(type="text" name="search")
+        button.header__search-close.btn.btn--light.btn--cross
+
+.mobile-menu-cover

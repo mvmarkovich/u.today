@@ -1,0 +1,6 @@
+section.news-categories
+
+  ul.news-categories__list
+    each item, i in newsCategories
+      li.news-categories__item
+        a.news-categories__item-link(href="#!" class=[ i == 2 ? 'news-categories__item-link--singularity' : ''])= item

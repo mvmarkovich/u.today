@@ -20,6 +20,7 @@
 
     &-long
       text-align: center
+      display: inherit @xl-down none
 
       img
         margin: * auto
@@ -33,6 +34,7 @@
       transform: scale(0.89)
 
     &-square
+      display: inherit @xl none
       text-align: center
 
       img
@@ -58,10 +60,10 @@
     margin: @sm-down * -1rem
 
   &-long
-    display: @xl-down none
+    display: @md-down none
 
   &-square
-    display: @xl none
+    display: @md none
 
   &--footer
     display: flex @md none
@@ -84,3 +86,5 @@
   text: $pseudo-neutral-400 13px 1.6
   text-align: center
   margin: 0 0 16px 0
+
+

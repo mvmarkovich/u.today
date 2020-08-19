@@ -1,0 +1,38 @@
+extends layouts/layout.pug
+
+block title
+    title Profile | u.today
+
+block content
+    .main-center-block
+        main.main-block
+            section.content-block
+                .profile__info
+                    .profile__row
+                        a.humble.humble--liked.humble--dark(href="#!like") +7245
+                        .user__info
+                            .user__img
+                                .no--avatar W
+                                //
+                                a.add--img(href="#!add--photo")
+                            .username waitititaika1
+                        a.user--logout(href="#!logout") Log out
+                    .profile__list
+                        .profile__item
+                            .profile__item--value 125
+                            .profile__item--name Articles
+                        .profile__item
+                            .profile__item--value usermail@gmail.com
+                            .profile__item--name Registered 27 Sep 2018
+                        .profile__item
+                            .profile__item--value 0
+                            .profile__item--name Comments
+
+                form.profile__form
+                    .input
+                        label.input__label Name (optional)
+                        input(type="text" class="input__elem" value="Taika Waititi")
+                    .input
+                        label.input__label About you (optional)
+                        textarea(class="input__elem") I’m a New Zealand filmmaker, actor, and comedian. I was nominated for an Academy Award for my 2004 short film Two Cars, One Night. My feature films Boy and Hunt for the Wilderpeople have each been the top-grossing New Zealand film, with the latter still holding that title as of 2018.
+

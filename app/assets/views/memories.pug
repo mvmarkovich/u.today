@@ -1,0 +1,13 @@
+extends layouts/layout.pug
+
+block title
+    title Memories | u.today
+
+block content
+    .main-aside-container
+
+        main.main-news-block
+            include blocks/memories.pug
+
+        aside.aside-menu-block
+            include blocks/aside-menu-block.pug
