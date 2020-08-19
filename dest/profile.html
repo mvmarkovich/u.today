@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -15,7 +15,7 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#263238">
     <title>Profile | u.today</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -64,20 +64,8 @@
           </ul>
         </nav>
         <div class="header__panel">
-          <button class="header__btn-search btn btn--light btn--search"></button>
-          <button class="header__btn-notification btn btn--light btn--notification">
-            <div class="notification_value-block">
-              <div class="notification_value">1</div>
-            </div>
-          </button>
-          <button class="header__account btn btn--light btn--account user--login"></button>
-          <div class="user--login__modal">
-            <div class="user--login__content">
-              <div class="user--login__item"><a class="user--login__descr" href="#!">Waititi Taika</a></div>
-              <div class="user--login__item"><a class="user--logout" href="#!">Log out</a></div>
-            </div>
-          </div>
-          <button class="header__burger btn btn--light btn--burger"></button>
+          <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
         </div>
         <div class="mobile-menu-back">Back</div>
         <div class="header__search">

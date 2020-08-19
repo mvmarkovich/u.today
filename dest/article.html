@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -15,7 +15,7 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#263238">
     <title>Article | u.today</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -64,20 +64,8 @@
           </ul>
         </nav>
         <div class="header__panel">
-          <button class="header__btn-search btn btn--light btn--search"></button>
-          <button class="header__btn-notification btn btn--light btn--notification">
-            <div class="notification_value-block">
-              <div class="notification_value">1</div>
-            </div>
-          </button>
-          <button class="header__account btn btn--light btn--account user--login"></button>
-          <div class="user--login__modal">
-            <div class="user--login__content">
-              <div class="user--login__item"><a class="user--login__descr" href="#!">Waititi Taika</a></div>
-              <div class="user--login__item"><a class="user--logout" href="#!">Log out</a></div>
-            </div>
-          </div>
-          <button class="header__burger btn btn--light btn--burger"></button>
+          <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
         </div>
         <div class="mobile-menu-back">Back</div>
         <div class="header__search">
@@ -293,7 +281,7 @@
                 <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?</em></p>
               </div>
               <div class="article__panel">
-                <section class="article__tags btns-spacer"><a class="btn btn--hash-tag" href="#!">#MaltaBlockchainSummit</a><a class="btn btn--hash-tag" href="#!">#Bitcoin</a><a class="btn btn--hash-tag" href="#!">#Processor</a></section>
+                <div class="article__tags btns-spacer"><a class="btn btn--hash-tag" href="#!">#MaltaBlockchainSummit</a><a class="btn btn--hash-tag" href="#!">#Bitcoin</a><a class="btn btn--hash-tag" href="#!">#Processor</a></div>
                 <div class="article__panel-row">
                   <div class="article__panel-col">
                     <div class="left">
@@ -307,7 +295,7 @@
               <div class="about-author">
                 <div class="about-author_row"><a class="about-author_avatar" href="#!author"><img src="https://dummyimage.com/64x64/d8dbde/aaabad"></a>
                   <div class="about-author_info">
-                    <h4 class="about-author_title">About the author</h4>
+                    <div class="about-author_title">About the author</div>
                     <div class="about-author_data"><a class="about-author_name" href="#!author">Konstantin Konstantinopolsky</a>
                       <div class="social"><a class="social__link social__link--ln" href="#!ln"></a><a class="social__link social__link--insta" href="#!insta"></a><a class="social__link social__link--em" href="#!email"></a></div>
                     </div>
@@ -322,39 +310,29 @@
                 <div class="article__recommended-list-slide article__recommended-list-slide--yellow">
                   <div class="article__recommended-list">
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
-                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT">
-                          <div class="sponsored__mark">Promoted</div>
-                        </div>
-                        <h4 class="article__recommended-item-title">What Is Decentralized Application (dApp): Explanation for Beginners</h4></a></div>
+                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT"></div>
+                        <div class="article__recommended-item-title">What Is Decentralized Application (dApp): Explanation for Beginners</div></a></div>
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
-                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y">
-                          <div class="sponsored__mark">Promoted</div>
-                        </div>
-                        <h4 class="article__recommended-item-title">Ethereum Breakout in Full Force</h4></a></div>
+                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y"></div>
+                        <div class="article__recommended-item-title">Ethereum Breakout in Full Force</div></a></div>
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
-                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs">
-                          <div class="sponsored__mark">Promo</div>
-                        </div>
-                        <h4 class="article__recommended-item-title">Bitcoin Cash Slingshots to the Moon?</h4></a></div>
+                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs"></div>
+                        <div class="article__recommended-item-title">Bitcoin Cash Slingshots to the Moon?</div></a></div>
                   </div>
                 </div>
                 <div class="article__recommended-list-slide">
                   <div class="article__recommended-list">
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
-                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT">
-                          <div class="sponsored__mark">Promo</div>
-                        </div>
-                        <h4 class="article__recommended-item-title">What Is Decentralized Application (dApp): Explanation for Beginners</h4></a></div>
+                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT"></div>
+                        <div class="article__recommended-item-title">What Is Decentralized Application (dApp): Explanation for Beginners</div></a></div>
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
                         <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y">
                           <div class="sponsored__mark">Promo</div>
                         </div>
                         <h4 class="article__recommended-item-title">Ethereum Breakout in Full Force</h4></a></div>
                     <div class="article__recommended-item"><a class="article__recommended-link" href="#!">
-                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs">
-                          <div class="sponsored__mark">Promo</div>
-                        </div>
-                        <h4 class="article__recommended-item-title">Bitcoin Cash Slingshots to the Moon?</h4></a></div>
+                        <div class="article__recommended-wrapper--img"><img class="article__recommended-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs"></div>
+                        <div class="article__recommended-item-title">Bitcoin Cash Slingshots to the Moon?</div></a></div>
                   </div>
                 </div>
               </div>
@@ -366,37 +344,8 @@
           </div>
         </main>
         <aside class="aside-menu-block">
-          <div class="card card--miners card--mobile-visible">
-            <h4 class="card__title">Top tranding bot<span class="card__mark">Promoted</span></h4>
-            <div class="card__body card__body-counter">
-              <div class="aside-story aside-story--miners">
-                <div class="aside-story__body aside-story__row">
-                  <div class="aside-story__descr">
-                    <div class="aside-story__row-center"><a class="aside-story__name" href="#!" target="_blank" rel="nofollow noopener">HaasOnline</a><a class="aside-story__img-wrapper" href="#!" target="_blank" rel="nofollow noopener"><img class="aside-story__img" src="img/content/crypt/haasonline.png"></a><span class="aside-story__signature">30% discount till 29 Feb</span></div>
-                  </div>
-                  <div class="btn--block"><a class="btn btn--small btn--accent-3" href="#!" target="_blank" rel="nofollow noopener">Website</a></div>
-                </div>
-              </div>
-              <div class="aside-story aside-story--miners">
-                <div class="aside-story__body aside-story__row">
-                  <div class="aside-story__descr">
-                    <div class="aside-story__row-center"><a class="aside-story__name" href="#!" target="_blank" rel="nofollow noopener">Margin</a><a class="aside-story__img-wrapper" href="#!" target="_blank" rel="nofollow noopener"><img class="aside-story__img" src="img/content/crypt/margin.png"></a></div><span class="aside-story__signature">30% discount till 29 Feb</span>
-                  </div>
-                  <div class="btn--block"><a class="btn btn--small btn--accent-3" href="#!" target="_blank" rel="nofollow noopener">Website</a></div>
-                </div>
-              </div>
-              <div class="aside-story aside-story--miners">
-                <div class="aside-story__body aside-story__row">
-                  <div class="aside-story__descr">
-                    <div class="aside-story__row-center"><a class="aside-story__name" href="#!" target="_blank" rel="nofollow noopener">Zignaly</a><a class="aside-story__img-wrapper" href="#!" target="_blank" rel="nofollow noopener"><img class="aside-story__img" src="img/content/crypt/zignaly.png"></a></div><span class="aside-story__signature">30% discount till 29 Feb</span>
-                  </div>
-                  <div class="btn--block"><a class="btn btn--small btn--accent-3" href="#!" target="_blank" rel="nofollow noopener">Website</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="card card--press--release card--mobile-visible">
-            <h4 class="card__title">Press Releases</h4>
+            <div class="card__title">Press Releases</div>
             <div class="card__body">
               <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq"></a>
                 <div class="aside-story__body"><a class="aside-story__link" href="#!">Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches</a>
@@ -416,7 +365,7 @@
             <div class="card__footer"><a class="btn btn--accent" href="#!">Submit Press Release</a></div>
           </div>
           <div class="card">
-            <h4 class="card__title">Popular</h4>
+            <div class="card__title">Popular</div>
             <div class="card__body">
               <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ"></a>
                 <div class="aside-story__body"><a class="aside-story__link" href="#!">A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon</a>

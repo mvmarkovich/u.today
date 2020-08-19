@@ -46,12 +46,12 @@ header.header
                                         a.header__nav-child-link(href="#!c" + i)= child.name
 
         .header__panel
-            button.btn.btn--light.btn--subscribe(on="tap:subscribe")
+            button.btn.btn--light.btn--subscribe(aria-label="open subscribe popup" on="tap:subscribe")
                 include ../../img/icons/subscribe.svg
                 | Subscribe
 
             .header__search
-                a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" href="#header__search-form")
+                a.btn.btn--search.btn--light.header__btn-search(rel="header__btn-search" aria-label="open search form" href="#header__search-form")
                     include ../../img/icons/search.svg
                     span Search
 
@@ -62,5 +62,5 @@ header.header
                     button.header__search-close.btn.btn--light.btn--cross
                         include ../../img/icons/Cross.svg
 
-            button.btn.btn--light.mobile-menu__btn(on="tap:sidebar.toggle")
+            button.btn.btn--light.mobile-menu__btn(aria-label="open/close menu" on="tap:sidebar.toggle")
                 include ../../img/icons/burger.svg
