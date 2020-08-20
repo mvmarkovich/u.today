@@ -5,16 +5,16 @@ footer.footer
         .footer__title Follow us and get all crypto news 24/7
 
         .social.social--border.social--wide
-          a.social__link.social__link--fb(href="#!")
-          a.social__link.social__link--tg(href="#!")
-          a.social__link.social__link--tw(href="#!")
+          a.social__link.social__link--fb(href="#!") Facebook
+          a.social__link.social__link--tg(href="#!") Telegram
+          a.social__link.social__link--tw(href="#!") Twitter
 
       .footer__subscribe
-        .footer__title Subscribe to daily newsletter
+        label.footer__title(for="footer__subscribe") Subscribe to daily newsletter
 
         form.form--row.footer__subscribe-form(target="#" method="get")
           .input
-            input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+            input.footer__subscribe-input.input__elem#footer__subscribe(type="text" name="email" placeholder="Email" required)
 
           .input
             button.btn.btn--wide.btn--input(type="submit") Subscribe

@@ -1518,6 +1518,8 @@ aside {
   height: 1.5rem;
   background-position: center;
   background-repeat: no-repeat;
+  color: transparent;
+  text-indent: -9999px;
 }
 
 .social__link--name {
@@ -2504,6 +2506,8 @@ textarea.input__elem {
   height: 19px;
   min-width: 130px;
   position: relative;
+  color: transparent;
+  text-indent: -9999px;
 }
 
 .header__logo-news {
@@ -4785,6 +4789,7 @@ main > .article:nth-last-child(2):after {
   font-size: 13px;
   line-height: 1.2;
   margin-bottom: .8rem;
+  display: block;
 }
 
 .footer__follow-us {

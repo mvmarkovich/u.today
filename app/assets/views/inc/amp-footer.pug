@@ -13,11 +13,10 @@ footer.footer
                         include ../../img/icons/social/twitter.svg
 
             .footer__subscribe
-                .footer__title Subscribe to daily newsletter
-
                 form.form--row.footer__subscribe-form(target="_top" action="/" method="get")
                     .input
-                        input.footer__subscribe-input.input__elem(type="text" name="email" placeholder="Email" required)
+                        label.footer__title(for="footer__subscribe") Subscribe to daily newsletter
+                        input.footer__subscribe-input.input__elem#footer__subscribe(type="text" name="email" placeholder="Email" required)
 
                     .input
                         button.btn.btn--wide.btn--input(type="submit") Subscribe
