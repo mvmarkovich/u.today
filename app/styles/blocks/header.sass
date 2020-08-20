@@ -8,21 +8,11 @@
     box: center space-between
     flex-wrap: wrap @xl nowrap
     height: @xl 3rem
-    padding: .5rem 1rem @xl 0 2rem @md 0.5rem 1rem 0px
+    padding: 0 1rem @xl 0 2rem
     position: relative
     will-change: transform
     max-width: @xl 1152px @md 768px @md-down 480px
     margin: 0 auto
-
-    &--sticky
-      position: @sm-down fixed 0 0 null 0
-      background: @sm-down #fff
-      box-shadow: @sm-down 5rem 0 0 #fff, -5rem 0 0 #fff
-      transform: @sm-down translateY(-100%)
-      transition: @sm-down transform .3s ease
-
-      &-show
-        transform: @sm-down translateY(0)
 
   &__logo
     display: block
@@ -240,7 +230,6 @@
       width: @md-down 205px
       position: @md-down absolute 48px 0 null null
       background: @md-down #fff
-      padding: @md-down * 1.3rem
       border-top: @md-down $border
       border-bottom: @md-down $border
 
