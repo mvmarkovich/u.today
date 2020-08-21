@@ -21,18 +21,22 @@
     margin: 0 16px 0 0
 
   &__slider
-    width: 100% @md 480px @xl 768px
-    background: #fff
+    width: 100% @md 550px @xl 830px
+    padding: @md 0 32px
+    margin: @md 0 0 0 -32px
 
     & > *
 
       & > *:first-child
+        background: $neutral
 
         &::-webkit-scrollbar
           width: 0
+          height: 0
 
         &::-moz-scrollbar
           width: 0
+          height: 0
 
   &__item
     background: #fff

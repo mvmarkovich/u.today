@@ -10,13 +10,15 @@
     padding: 12px 16px
 
   &__slider
-    width: 100% @md 480px @xl 768px
+    width: 100% @md 550px @xl 830px
     position: relative
-    padding: 0 16px 32px
+    padding: 0 16px 32px @md 0 48px 32px
+    margin: @md 0 0 0 -32px
 
     & > *
 
       & > *:first-child
+        background: $neutral
 
         &::-webkit-scrollbar
           width: 0

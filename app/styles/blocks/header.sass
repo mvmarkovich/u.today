@@ -16,7 +16,7 @@
 
   &__logo
     display: block
-    background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+    background: resolve("icons/logo.svg") no-repeat left top / contain
     size: 125px 19px @md 132px 20px
     min-width: 130px @md 132px
     position: relative
@@ -26,12 +26,12 @@
     &-news
       size: 140px 14px @md 219px 20px
       min-width: 140px @md 219px
-      background: svg-load("icons/logo-news.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+      background: resolve("icons/logo-news.svg") no-repeat left top / contain
 
     &-101
       size: 125px 14px @md 177px 20px
       min-width: 125px @md 177px
-      background: svg-load("icons/logo-101.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+      background: resolve("icons/logo-101.svg") no-repeat left top / contain
 
   &__social
     width: 236px @xl 161px
@@ -159,7 +159,7 @@
 
   &__panel
     box: center space-between
-  // width: 129px @xs 164px @md 230px @xl 187px
+
   &__btn-search
     margin-right: .8rem @md 1.5rem
 
@@ -185,39 +185,9 @@
     &-close
       position: absolute 0 0 0 null
 
-  &__account
-    margin-right: @md-down .8rem
-
-    &-img
-      display: block
-      border-radius: 2px
-      position: absolute
-
-  .btn--notification
-    position: relative
-    display: none @md block
-    margin-right: 2rem
-
-  .notification_value-block
-    height: 1rem
-    min-width: 1rem
-    background-color: $accent-2-medium
-    border-radius: 2px
-    color: #fff
-    position: absolute
-    right: -.5rem
-    top: 0
-    line-height: 1rem
-
-  .notification_value
-    letter-spacing: 0
-
   &__burger
     display: @md none
     size: 32px
-
-  &__lang
-    display: none
 
   &--mobile-menu
 
@@ -242,15 +212,6 @@
 
 .mobile-menu
 
-  &-lang
-    position: absolute 104px 0 null null
-    background: #fff
-    size: 205px 56px
-    border-bottom: $border
-    display: none
-    align-items: flex-end
-    justify-content: center
-
   &-cover
     position: fixed 0 0 -82px 0
     z-index: 995
@@ -264,7 +225,7 @@
     position: absolute 49px 0 null null
     size: 205px 54px
     background-color: #fff
-    background-image: svg-load("icons/arrow_long.svg", fill: $pseudo-neutral-900)
+    background-image: resolve("icons/arrow_long.svg")
     background-repeat: no-repeat
     background-position: 11px center
     cursor: pointer
@@ -275,89 +236,3 @@
 
 .overflow-hidden
   overflow: hidden
-
-.user--login
-  position: relative
-
-  &--open
-
-    &:hover:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-900)
-
-    &:active:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-900)
-
-    ^&__modal
-      display: block
-
-  &__modal
-    position: absolute
-    top: 48px
-    right: 62px @md 16px @xl 32px
-    background-color: #fff
-    padding: 0 1rem
-    width: 240px
-    z-index: 997
-    box-shadow: 0 2px 5px rgba(33, 150, 243, .5)
-    display: none
-
-    &:after
-      content: ''
-      position: absolute -12px 0 null null
-      size: 12px
-      filter: drop-shadow(1px -0.5px 2.8px rgba(33, 150, 243, 0.5))
-      background: linear-gradient(to right bottom, transparent 50%, white 50%)
-      z-index: -1
-
-    &-open
-      display: block
-
-    .user--logout
-      text-transform: none
-      letter-spacing: normal
-      text: 13px 54px 600
-      padding-left: 2.2rem
-
-      &:after
-        content: ''
-        background-image: svg-load("icons/logout-variant.svg", fill: $pseudo-neutral-900)
-        background-position: center
-        background-size: contain
-        background-repeat: no-repeat
-        size: 24px
-        position: absolute 16px null null 0
-
-      &:hover:after
-        background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-medium)
-
-      &:active:after
-        background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-dark)
-
-  &__item
-    position: relative
-
-    & + &
-      border-top: $border
-
-  &__descr
-
-    text: 13px 54px 600
-    text-transform: none
-    letter-spacing: normal
-    box: center
-
-    &:before
-      content: ""
-      display: block
-      size: 24px
-      margin-right: .6rem
-      background-size: contain
-      background-position: center
-      background-repeat: no-repeat
-      background-image: svg-load("icons/user.svg", fill: $pseudo-neutral-900)
-
-    &:hover:before
-      background-image: svg-load("icons/user.svg", fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/user.svg", fill: $accent-1-dark)
