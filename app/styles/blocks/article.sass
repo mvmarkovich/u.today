@@ -22,6 +22,46 @@
       &:before
         margin-right: @xl-down 0
 
+  &__lead
+    margin: 24px 0
+    display: flex
+    align-items: flex-start
+
+    &-img
+      border-radius: 50%
+      min-width: 40px
+      size: 40px
+
+      &--wrapper
+        display: block
+        text-decoration: none
+        margin-right: 16px
+
+    &-info
+      background: rgba(196, 196, 196, 0.3)
+      border-radius: 0 4px 8px 8px
+      padding: 8px 16px 12px
+      position: relative
+      width: 100%
+
+      &:before
+        content: ''
+        width: 0
+        height: 0
+        border-top: 16px solid rgba(196, 196, 196, 0.3)
+        border-left: 16px solid transparent
+        position: absolute
+        top: 0
+        left: -16px
+
+    &-name
+      text: #263238 700 15px 1.8
+      text-decoration: none
+
+    &-desc
+      text: 500 15px 1.8
+      margin: 0
+
   &__label
     text: 13px 16px 600
     letter-spacing: 0.01em
@@ -405,74 +445,65 @@
     margin: 0
     background-color: transparent
 
-.author
+.about-author
+  position: relative
+  padding: 32px 16px 24px @xl 24px 40px 8px
+  margin: 24px -16px 32px @xl 40px -16px 32px
+  border-top: 1px solid #E0E0E0
 
-  &_block
-    margin: 1.3rem 0 @md 2rem 0
-    position: relative
-    border: 1px solid #C4C4C4
-    border-radius: 0 8px 8px 8px
-    padding: 1rem @md 1.5rem 1.5rem 1rem
-    position: relative
+  &_row
+    display: flex
 
-    &:before
-      content: ''
-      position: absolute 0 null null -13px
-      border: 8px solid transparent
-      border-right: 8px solid $neutral
-      border-top: 8px solid $neutral
-      display: block
-      width: 0
+  &_avatar
+    display: block
+    margin-right: 16px
+    min-width: 40px
+    size: 40px
+    overflow: hidden
+    border-radius: 50%
+
+    img
+      width: 100%
+
+    span
       height: 0
-      z-index: 2
-
-    &:after
-      content: ''
-      position: absolute -1px null null -16px
-      border: 8px solid transparent
-      border-right: 8px solid #C4C4C4
-      border-top: 8px solid #C4C4C4
-      display: block
       width: 0
-      height: 0
-
-    .author__item
-
-      &-msg
-        margin: @md-down 2rem 0 0 -55px
-
-        p
-          text: #263238 15px 1.8 500 @md 17px
-          font-style: italic
-          margin: 0
-
-  &__item
-
-    &-header
-      box:
-
-    &-user
-      size: 40px @md 64px
-      border-radius: 50%
-      min-width: 40px @md 64px
-      margin-right: 1rem @md 1.5rem
-
-      img
-        border-radius: 50%
-        max-width: 100%
-        display: block
-
-    &-name
-      text: #263238 15px 1.4 600 @xl 17px
-      font-style: italic
-      cursor: pointer
-      white-space: normal
+      color: transparent
+      overflow: hidden
       display: block
 
-    &-wrapper
-      box:
-      flex-wrap: wrap
-      margin-bottom: 1rem
+  &_title
+    text: #546E7A 500 15px 1.4
+    margin: 0
+
+  &_data
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-top: 0
+
+  &_name
+    text-decoration: none
+    text: #263238 700 15px 1.8 @xl 17px
+    margin-right: @xl 12px
+
+  .social
+    width: 100% @md auto
+    margin: 0 0 0 -16px @md 0
+    justify-content: flex-start
+
+    .social__link
+      margin-right: 4px
+
+      &:last-child
+        margin-right: 0
+
+  p
+    font-size: 15px
+    line-height: 1.6
+    font-weight: 500
+    text: 500 15px 1.6
+    margin: 0 0 0 -52px @xl 0
 
 .disclaimer
   margin-top: .8rem
@@ -480,85 +511,6 @@
   &_text
     text: #546e7a .8125rem 1rem 500
     margin-bottom: 0
-
-.about-author
-  background-color: #f5f5f5
-  position: relative
-  padding: 1rem @sm 2rem 2rem 1rem
-  margin: 2rem -1rem @sm 2rem 0 @xl 2.4rem 0 3rem
-
-  &_row
-    box:
-
-  .about-author_title
-    margin: 0
-    padding: 0
-    line-height: 1.41
-    font-weight: 700
-    font-size: 17px @xl-down 15px
-
-  &_data
-    box: flex center
-    flex-wrap: @xl-down wrap
-    margin-top: .5rem
-
-  &_info
-    position: @xl relative
-
-    &.content--open
-      p
-        max-height: 100%
-
-  &_name
-    text: #1f5bff 13px 1.8 600 none none @sm 15px @xl 17px
-
-  &_avatar
-    max-width: 40px @sm 64px
-    min-width: 40px @sm 64px
-    size: 40px @sm 64px
-    margin-right: 1.2rem @md 2rem
-    display: block
-
-    source
-      display: none
-
-    img
-      width: 100%
-      border-radius: 2px
-
-  .social
-    box:
-    width: @xl-down 100%
-    margin: @xl-down 8px 0 0 -16px
-    justify-content: @xl-down flex-start
-
-    &__link
-      margin: 0
-
-  p
-    text: 13px 1.8 500 @sm 15px
-    margin-left: -55px @sm -82px @md -95px @xl 0
-    margin-top: .5rem @sm 1rem @xl .5rem
-    margin-bottom: 0
-    overflow: hidden
-
-  .btn
-    font-weight: 600
-    margin-left: -55px @sm -82px @md -95px @xl 0
-    position: relative
-    z-index: 2
-
-    &:before
-      content: ''
-      background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, #F5F5F5 50%)
-      width: 383px @xl 568px
-      height: 64px
-      position: absolute
-      display: block
-      bottom: 8px
-      left: 0
-      right: 0
-      z-index: -1
 
 main:not(.scroll-end) > .article:after
   content: ""
