@@ -1,8 +1,15 @@
 .btns-spacer
-  margin: 0 0 -16px
+  box: wrap
+  margin-bottom: -8px
 
-  & > *
-    margin: 0 16px 16px 0
+  > *
+    margin: * 8px 8px *
+
+body
+  text: $pseudo-neutral-900 400 16px 1.5
+  font-family: $font
+  background: $neutral-100
+  overflow-x: hidden
 
 ul
   list-style: none
@@ -31,11 +38,22 @@ ul
   &-sm-only
     display: @sm none
 
-.promoted__mark
-  border: 1px solid rgba(255, 255, 255, 0.4)
-  text: $neutral 13px 16px 500
-  padding: 0 .5rem
-  text-shadow: -2px 2px 8px black
-  border-radius: 0 0 0 2px
-  position: absolute 0 0 null null
+.amp-carousel-button
+  size: 24px 48px
+  background-color: transparent
+  border-radius: 0
+  background-size: contain
+  margin: 0
+  outline: none
+  cursor: pointer
+  position: absolute
 
+.amp-carousel-button-prev
+  background-image: svg-load("icons/slider_arrow-prev.svg")
+  left: 0
+  display: @md-down none
+
+.amp-carousel-button-next
+  background-image: svg-load("icons/slider_arrow-next.svg")
+  right: 0
+  display: @md-down none

@@ -4,355 +4,290 @@ block title
     title Main | u.today
 
 block content
-    include blocks/breaking.pug
+    .big-story
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+                .humble.big-story__mark Promoted
 
-    .something.something--content
-        .ref U.today  is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="#!"> Learn more </a>
+            a.big-story__img-wrapper(href="#!")
+                img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2020-04-04%2016.14.05.jpg?itok=gtYXCQMM")
+                .promoted__mark Sponsored
 
-        a.something__content(href="#!" style="background-color: #cef1f3")
-            img(src="img/something/iqmining_3-square.jpg" alt="something-square")
+            a.big-story__title.link-plain(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
 
-    .big_categories-story
-        .big_categories-story_list
-            .big_categories-story_item
-                .big_categories-story_item-header
-                    a.big_categories-story_mark(href="#!") Press releases
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    button.humble.humble--comments.humble--tiny.humble--comments_bold 44
-                    button.humble.humble--liked.humble--tiny.humble--liked_bold 7
-                a.big_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/250/public/2019-05/ETH_Price_Projection.jpg?itok=bWaLL6Z7")
-                    .sponsored__mark.sponsored__mark-top-right Sponsored
-                .big_categories-story_item-footer
-                    a.big_categories-story_item-title(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
-                    .mobile_humble.big_categories-story_item-header
-                        a.big_categories-story_mark(href="#!") Press releases
-                        .news__item-time-wrapper
-                            time.news__item-time.humble Aug 29
-            .big_categories-story_item
-                .big_categories-story_item-header
-                    a.big_categories-story_mark(href="#!") Interviews
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    button.humble.humble--comments.humble--tiny.humble--comments_bold 44
-                    button.humble.humble--liked.humble--tiny.humble--liked_bold 7
-                a.big_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-05/5%20Reasons%20Why%20You%20Should%20Invest%20in%20Cryptocurrency.jpg?itok=dVO4c6oG")
-                .big_categories-story_item-footer
-                    a.big_categories-story_item-title(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
-                    .mobile_humble.big_categories-story_item-header
-                        a.big_categories-story_mark(href="#!") Press releases
-                        .news__item-time-wrapper
-                            time.news__item-time.humble Aug 29
-            .big_categories-story_item
-                .big_categories-story_item-header
-                    a.big_categories-story_mark(href="#!") Infographics
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Jul 1
-                    button.humble.humble--comments.humble--tiny.humble--comments_bold 44
-                    button.humble.humble--liked.humble--tiny.humble--liked_bold 7
-                a.big_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-04/What%20Are%20Masternodes%20Is%20It%20Still%20Profitable%20to%20Run%20One.jpg?itok=IK1IiqpT")
-                .big_categories-story_item-footer
-                    a.big_categories-story_item-title(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
-                    .mobile_humble.big_categories-story_item-header
-                        a.big_categories-story_mark(href="#!") Press releases
-                        .news__item-time-wrapper
-                            time.news__item-time.humble Aug 29
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
 
-    include blocks/press-releases-long
+            a.big-story__img-wrapper(href="#!")
+                img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2982.jpg?itok=Mc_wAk2l")
+
+            a.big-story__title.link-plain(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
+
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+
+            a.big-story__img-wrapper(href="#!")
+                img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2986.jpg.webp")
+
+            a.big-story__title.link-plain(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
 
     .main-aside-container
-        main.main-news-block
-            .something.something--content(style="background-color: #e5edff")
-                a.something__content-long(href="#!")
-                    img(src="img/something/iqmining_1-long.png" alt="something-long")
+        .main-block
+            .news
+                .news__header
+                    .icon.icon--clock
+                    .news__title Latest news
+                    .btns-spacer
+                        a.btn.btn--light(href="#!") See all
 
-                a.something__content-square(href="#!")
-                    img(src="img/something/iqmining_1-square.png" alt="something-square")
-            <!— the start of news —>
-            .news-block
-                include blocks/news.pug
-            <!— the end of news —>
+            .press-releases
 
-            include blocks/news-calendar.pug
+                .press-releases__header
 
-            include blocks/press-releases.pug
+                    .press-releases__info
+                        h3.press-releases__title Press releases
 
-            .top-story-block
-                .top-story.slider_top-story
-                    .top-story__item
-                        .top-story_header
-                            .row
-                                a.top-story__mark(href="#!") TOP stories
-                                time.news__item-time.humble 11:05 AM
-                            a.title__block(href="#!")
-                                h2.top-story__title Crypto Trader Ronnie Moas Bets $20K: BTC to Reach $28,000 in Late 2019
-                        a.top-story__img-wrapper(href="#!")
-                            img.top-story__img(src="https://u.today/sites/default/files/styles/1200x/public/2019-11/1166.JPG.jpg?itok=IQPDjmHC")
-                            .sponsored__mark.sponsored__mark-top-right Sponsored
-                        .top-story_footer
-                            a.top-story--link(href="#!")
-                                h3.top-story__descr Grayscale becomes a dark horse in the crowded Bitcoin ETF race
-                            .top-story_humble
-                                a.humble.humble--author(href='/darryn-pollock/')
-                                    img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                    | Darryn Pollock
-                                .row
-                                    a.humble.humble--comments(href="#!") 463
-                                    a.humble.humble--liked(href="#!") 7
-                    .top-story__item
-                        .top-story_header
-                            .row
-                                a.top-story__mark(href="#!") TOP stories
-                                time.news__item-time.humble 11:05 AM
-                            a.title__block(href="#!")
-                                h2.top-story__title Crypto Trader Ronnie Moas Bets $20K: BTC to Reach $28,000 in Late 2019
-                        a.top-story__img-wrapper(href="#!")
-                            img.top-story__img(src="https://u.today/sites/default/files/styles/1200x/public/2019-11/1147.jpg?itok=npi8Mo54")
-                        .top-story_footer
-                            .top-story__descr Bitcoin bears come into hiding as one of the top traders on BitMEX reveals he's long on BTC
-                            .top-story_humble
-                                a.humble.humble--author(href='/darryn-pollock/')
-                                    img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                    | Darryn Pollock
-                                .row
-                                    a.humble.humble--comments(href="#!") 463
-                                    a.humble.humble--liked(href="#!") 7
-                    .top-story__item
-                        .top-story_header
-                            .row
-                                a.top-story__mark(href="#!") TOP stories
-                                time.news__item-time.humble 11:05 AM
-                            a.title__block(href="#!")
-                                h2.top-story__title Crypto Trader Ronnie Moas Bets $20K: BTC to Reach $28,000 in Late 2019
-                        a.top-story__img-wrapper(href="#!")
-                            img.top-story__img(src="https://u.today/sites/default/files/styles/400/public/2019-05/Ethereum_%28ETH%29_Cost_Still_Has_Chance_To_Hit_%24300_Soon.__Find_Out_How_To_Trade_ETH_This_Week.jpg?itok=aivI3tno")
-                        .top-story_footer
-                            a.top-story--link(href="#!")
-                                h3.top-story__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn...
-                            .top-story_humble
-                                a.humble.humble--author(href='/darryn-pollock/')
-                                    img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                    | Darryn Pollock
-                                .row
-                                    a.humble.humble--comments(href="#!") 463
-                                    a.humble.humble--liked(href="#!") 7
-            <!— the start of categories —>
-            .new_categories
-                include blocks/news-categories.pug
-            <!— the end of categories —>
+                        .btn--block
+                            a.btn.btn--light(href="#!See all") See all
+                            a.btn.btn--light(href="#!Submit") Submit
 
-            <!— the start of categories story —>
-            .categories-story
-                .categories-story_item
-                    a.categories-story_item-link(href="#!")
-                        img(src="https://u.today/sites/default/files/styles/medium/public/2019-06/2000x1314_1.png?itok=fWWKNiKG")
-                        .sponsored__mark.sponsored__mark-bottom-right Promo
-                    .categories-story_item-info
-                        .categories-story_item-humble
-                            a.categories-story_mark(href="#!") Press releases
-                            .news__item-time-wrapper
-                                time.news__item-time.humble 11:30 AM
-                            a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                            a.humble.humble--liked.humble--tiny.humble--liked_bold(href="#!") 7
-                        a.categories-story_item-title(href="#!") What Is Decentralized Application (dApp): Explanation for Beginners
-                        .categories-story_author
-                            a.humble.humble--author(href='/darryn-pollock/')
-                                img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                | Darryn Pollock
-                .categories-story_item
-                    a.categories-story_item-link(href="#!")
-                        img(src="https://u.today/sites/default/files/styles/medium/public/2019-04/Verge%20Price%20Prediction%20Will%20XVG%20Surprise%20Us.jpg?itok=KPgRl-My")
-                    .categories-story_item-info
-                        .categories-story_item-humble
-                            a.categories-story_mark(href="#!") Interviews
-                            .news__item-time-wrapper
-                                time.news__item-time.humble Aug 29
-                            a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                            a.humble.humble--liked.humble--tiny.humble--liked_bold(href="#!") 7
-                        a.categories-story_item-title(href="#!") Bitcoin Spring Shows Second-Best Quarterly Gain in 5 Years — Is Price Headed for New All-Time High?
-                        .categories-story_author
-                            a.humble.humble--author(href='/darryn-pollock/')
-                                img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                | Darryn Pollock
-                .categories-story_item
-                    a.categories-story_item-link(href="#!")
-                        img(src="https://u.today/sites/default/files/styles/medium/public/2019-05/2019.05.22.jpg?itok=6gWflEob")
-                    .categories-story_item-info
-                        .categories-story_item-humble
-                            a.categories-story_mark(href="#!") Infographics
-                            .news__item-time-wrapper
-                                time.news__item-time.humble Jul 1
-                            a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                            a.humble.humble--liked.humble--tiny.humble--liked_bold(href="#!") 7
-                        a.categories-story_item-title(href="#!") Bitcoin Price Rally Caused Huge Increase in Mining Difficulty
-                        .categories-story_author
-                            a.humble.humble--author(href='/darryn-pollock/')
-                                img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                | Darryn Pollock
-            <!— the end of categories story —>
+                .press-releases__slider
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1696.jpg?itok=zr1r7IrI")
+                                .promoted__mark Sponsored
 
-            <!— the start of top story —>
-            .top-story
-                .top-story__item
-                    .top-story_header
-                        .row
-                            a.top-story__mark(href="#!") Featured
-                            time.news__item-time.humble 11:05 AM
-                        a.title__block(href="#!")
-                            h2.top-story__title Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
-                    a.top-story__img-wrapper(href="#!")
-                        img.top-story__img(src="./img/content/top-story/item_1.png")
-                    .top-story_footer
-                        a.top-story--link(href="#!")
-                            h3.top-story__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn...
-                        .top-story_humble
-                            a.humble.humble--author(href='/darryn-pollock/')
-                                img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                | Darryn Pollock
-                            .row
-                                a.humble.humble--comments(href="#!") 463
-                                a.humble.humble--liked(href="#!") 7
-            <!— the end of top story —>
+                            h4.press-releases__item-name EPAY-X is Encouraging Crypto Adoption by Letting Its Debit Card Users Spend It Anywhere
 
-            <!— the start of top story —>
-            .top-story
-                .top-story__item
-                    .top-story_header
-                        .row
-                            a.top-story__mark(href="#!") Featured
-                            time.news__item-time.humble 11:05 AM
-                        a.title__block(href="#!")
-                            h2.top-story__title Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
-                    a.top-story__img-wrapper(href="#!")
-                        img.top-story__img(src="./img/content/top-story/item_2.png")
-                    .top-story_footer
-                        a.top-story--link(href="#!")
-                            h3.top-story__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn...
-                        .top-story_humble
-                            a.humble.humble--author(href='/darryn-pollock/')
-                                img.lazy.humble__img(alt='Darryn Pollock', src='https://u.today/sites/default/files/2019-03/Darryn-Pollack_1.jpg', style='')
-                                | Darryn Pollock
-                            .row
-                                a.humble.humble--comments(href="#!") 463
-                                a.humble.humble--liked(href="#!") 7
-            <!— the end of top story —>
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR")
 
-        <!— the start of sidebar —>
-        aside.aside-menu-block
+                            h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
 
-            include blocks/aside.pug
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-")
 
-            include blocks/crypto-tweets.pug
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
 
-            section.card.card--miners.card--mobile-visible
-                h4.card__title Top tranding bot
-                    span.card__mark Promoted
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-")
 
-                .card__body.card__body-counter
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") HaasOnline
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/haasonline.png")
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
 
-                                    span.aside-story__signature 30% discount till 29 Feb
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") TOP stories
+                        .humble.humble--time 17 minutes ago
 
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Margin
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/margin.png")
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay
 
-                                span.aside-story__signature 30% discount till 29 Feb
+                a.story__img-wrapper.link-plain(href="#!")
+                    img.story__img(src="img/content/story/item_1.png" alt="Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay")
+                    .promoted__mark Sponsored
 
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+                .story__footer
+                    a.story__desc.link-plain(href="#!") John McAfee sends word that Tron’s TRX is finally supported on the recently launched SEC-criticized DEX
 
-                    .aside-story.aside-story--miners
-                        .aside-story__body.aside-story__row
-                            .aside-story__descr
-                                .aside-story__row-center
-                                    a.aside-story__name(href="#!" target="_blank" rel="nofollow noopener") Zignaly
-                                    a.aside-story__img-wrapper(href="#!" target="_blank" rel="nofollow noopener")
-                                        img.aside-story__img(src="img/content/crypt/zignaly.png")
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg")
+                            | Jeremy O’Bernstahard
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 0
 
-                                span.aside-story__signature 30% discount till 29 Feb
+            .something.something--content
+                .something__content-long
+                    img(src="img/something/something__central-728x90.png" alt="Something central")
 
-                            .btn--block
-                                a.btn.btn--small.btn--accent-3(href="#!" target="_blank" rel="nofollow noopener") Website
+                .something__content-square
+                    img(src="img/something/something__central-336x280.png" alt="Something central")
 
-        <!— the end of sidebar —>
+            .category-item.category-item-sl
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_")
+                    .promoted__mark Sponsored
 
-    .medium_categories-story
-        .medium_categories-story_list
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Press releases
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/250/public/2019-05/ETH_Price_Projection.jpg?itok=bWaLL6Z7")
-                    .sponsored__mark.sponsored__mark-top-right Sponsored
-                a.medium_categories-story_item-title(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Interviews
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-05/5%20Reasons%20Why%20You%20Should%20Invest%20in%20Cryptocurrency.jpg?itok=dVO4c6oG")
-                    .sponsored__mark.sponsored__mark-top-left Sponsored
-                a.medium_categories-story_item-title(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Infographics
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Jul 1
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-04/What%20Are%20Masternodes%20Is%20It%20Still%20Profitable%20to%20Run%20One.jpg?itok=IK1IiqpT")
-                    .sponsored__mark.sponsored__mark-bottom-right Sponsored
-                a.medium_categories-story_item-title(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Press releases
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/250/public/2019-05/ETH_Price_Projection.jpg?itok=bWaLL6Z7")
-                    .sponsored__mark.sponsored__mark-bottom-left Sponsored
-                a.medium_categories-story_item-title(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Interviews
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Aug 29
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-05/5%20Reasons%20Why%20You%20Should%20Invest%20in%20Cryptocurrency.jpg?itok=dVO4c6oG")
-                    .sponsored__mark.sponsored__mark-center Sponsored
-                a.medium_categories-story_item-title(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
-            .medium_categories-story_item
-                .medium_categories-story_item-header
-                    a.medium_categories-story_mark(href="#!") Infographics
-                    .news__item-time-wrapper
-                        time.news__item-time.humble Jul 1
-                    a.humble.humble--comments.humble--tiny.humble--comments_bold(href="#!") 44
-                a.medium_categories-story_item-link(href="#!")
-                    img(src="https://u.today/sites/default/files/styles/1200x/public/2019-04/What%20Are%20Masternodes%20Is%20It%20Still%20Profitable%20to%20Run%20One.jpg?itok=IK1IiqpT")
-                a.medium_categories-story_item-title(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
-        .slider__nav.slider__nav-icon--swipe
-            button.slider__nav-arrow.slider__nav-prev
-            button.slider__nav-arrow.slider__nav-next
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Price Prediction
+                        .humble.humble--time 1 day 23 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network")
+                            | Vera Yurina
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 123
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") News
+                        .humble.humble--time 2 days 1 hour ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg")
+                            | Yuri Molchan
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 246
+
+            .upcoming
+                .upcoming__header
+                    h3.upcoming__title Upcoming events
+
+                    .btn--block
+                        a.btn.btn--light(href="#!See all") See all
+
+                .upcoming__slider
+                    .upcoming__item
+                        .upcoming__item-img
+                            img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020")
+
+                        .upcoming__item-info
+                            .humble__row
+                                .humble 1 Sep 2020
+
+                            .upcoming__item-title Blockspot Conference Europe 2020
+                            a.upcoming__item-link(href="#!") Read more
+
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
+
+                            .promocode
+                                .promocode__title Promocode:
+                                .promocode__value WWWWWWWWWWWW
+
+                    .upcoming__item
+                        .upcoming__item-img
+                            img(src="img/content/upcoming/item_2.png" alt="Sed ut perspiciatis unde accusantium doloremque")
+
+                        .upcoming__item-info
+                            .humble__row
+                                .humble.humble--label Top Event
+                                .humble 10 Sep 2020
+
+                            .upcoming__item-title Sed ut perspiciatis unde accusantium doloremque
+                            a.upcoming__item-link(href="#!") Read more
+
+                    .upcoming__item
+                        .upcoming__item-img
+                            img(src="img/content/upcoming/item_3.png" alt="Lorem ipsum dolor sit amet")
+
+                        .upcoming__item-info
+                            .humble__row
+                                .humble 20 Sep 2020
+
+                            .upcoming__item-title Lorem ipsum dolor sit amet
+                            a.upcoming__item-link(href="#!") Read more
+
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
+
+                    .upcoming__item
+                        .upcoming__item-img
+                            img(src="img/content/upcoming/item_1.png" alt="Blockspot Conference Europe 2020")
+
+                        .upcoming__item-info
+                            .humble__row
+                                .humble 1 Sep 2020
+
+                            .upcoming__item-title Blockspot Conference Europe 2020
+                            a.upcoming__item-link(href="#!") Read more
+
+                            a.btn.btn--accent.btn--big.btn--event(href="#!") Buy tickets
+
+                            .promocode
+                                .promocode__title Promocode:
+                                .promocode__value WWWWWWWWWWWW
+
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") Cryptocurrency trading
+                        .humble.humble--time 1 day 15 hours ago
+
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron Surpasses Rival Blockchains
+
+                a.story__img-wrapper.link-plain(href="#!")
+                    img.story__img(src="img/content/story/item_2.png" alt="Tron Surpasses Rival Blockchains")
+
+                .story__footer
+                    a.story__desc.link-plain(href="#!") Another 30 mln USDT moved from the Ethereum chain to Tron, reports Misha Lederman, a major Tron supporter as Justin Sun recommends Poloniex for USDT-Tron conversion
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/geof-big_0.jpg")
+                            | Geoffrey Schwartz
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 77
+
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg")
+                            | Vladislav Sopov
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 2
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg")
+                            | Heewon Jang
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 12
+
+        include blocks/aside.pug
