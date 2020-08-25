@@ -1,7 +1,15 @@
-amp-user-notification.cookies#cookies(layout="nodisplay")
+amp-consent.cookies#cookies(data-block-on-consent="_till_responded" layout="nodisplay")
+    script(type='application/json').
+        {
+        "consentInstanceId": "/",
+        "consentRequired": "remote",
+        "checkConsentHref": "https://cdn.iubenda.com/cs/amp/checkConsent",
+        "promptUI": "myConsentFlow"
+        }
+
     .cookies__container.container
         .cookies__row
             p.cookies_text This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a>
             .btn__block
                 a.btn-link(href="#!") Cookie settings
-                button.btn.accept-cookies(on="tap:cookies.dismiss") Accept cookies
+                button.btn.accept-cookies(on="tap:cookies.accept") Accept cookies

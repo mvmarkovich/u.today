@@ -22,6 +22,7 @@
     <script async="" custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async="" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async="" custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async="" custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <title>About Us | U</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
@@ -534,6 +535,24 @@
         </div>
       </div>
     </amp-lightbox>
-    <!-- include ../inc/amp-cookies.pug-->
+    <amp-consent class="cookies" id="cookies" data-block-on-consent="_till_responded" layout="nodisplay">
+      <script type="application/json">
+        {
+        "consentInstanceId": "consent896537",
+        "consentRequired": "remote",
+        "checkConsentHref": "https://cdn.iubenda.com/cs/amp/checkConsent",
+        "promptUI": "myConsentFlow"
+        }
+        
+      </script>
+      <div class="cookies__container container">
+        <div class="cookies__row">
+          <p class="cookies_text">This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a></p>
+          <div class="btn__block"><a class="btn-link" href="#!">Cookie settings</a>
+            <button class="btn accept-cookies" on="tap:cookies.accept">Accept cookies</button>
+          </div>
+        </div>
+      </div>
+    </amp-consent>
   </body>
 </html>
