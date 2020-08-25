@@ -1,17 +1,18 @@
-amp-consent.cookies#cookies(data-block-on-consent="_till_responded" layout="nodisplay")
+amp-consent#cookies(layout='nodisplay')
     script(type='application/json').
         {
-          "consentInstanceId": "my-consent",
-          "consentRequired": "remote",
-          "checkConsentHref": "https://example.com/api/check-consent",
-          "promptUI": "consent-ui",
-          "onUpdateHref": "https://example.com/update-consent"
+        "consentInstanceId": "consent-id",
+        "consentRequired": true,
+        "promptUI": "consentDialog",
+        "postPromptUI": "post-cookies"
         }
 
-    .container
-        .cookies__row
-            p.cookies__desc This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a href="#!">Click here for cookie policy</a>
+    #post-cookies
+        .cookies
+            .container
+                .cookies__row
+                    p.cookies__desc This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a href="#!">Click here for cookie policy</a>
 
-            .btn__block
-                a(href="#!") Cookie settings
-                button.btn.btn--accent(role="button") Accept cookies
+                    .btn__block
+                        a(href="#!") Cookie settings
+                        button.btn.btn--accent(on="tap:cookies.prompt()" role="button") Accept cookies

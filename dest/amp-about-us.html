@@ -535,22 +535,25 @@
         </div>
       </div>
     </amp-lightbox>
-    <amp-consent class="cookies" id="cookies" data-block-on-consent="_till_responded" layout="nodisplay">
+    <amp-consent id="cookies" layout="nodisplay">
       <script type="application/json">
         {
-          "consentInstanceId": "my-consent",
-          "consentRequired": "remote",
-          "checkConsentHref": "https://example.com/api/check-consent",
-          "promptUI": "consent-ui",
-          "onUpdateHref": "https://example.com/update-consent"
+        "consentInstanceId": "consent-id",
+        "consentRequired": true,
+        "promptUI": "consentDialog",
+        "postPromptUI": "post-cookies"
         }
         
       </script>
-      <div class="container">
-        <div class="cookies__row">
-          <p class="cookies__desc">This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a href="#!">Click here for cookie policy</a></p>
-          <div class="btn__block"><a href="#!">Cookie settings</a>
-            <button class="btn btn--accent" role="button">Accept cookies</button>
+      <div id="post-cookies">
+        <div class="cookies">
+          <div class="container">
+            <div class="cookies__row">
+              <p class="cookies__desc">This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a href="#!">Click here for cookie policy</a></p>
+              <div class="btn__block"><a href="#!">Cookie settings</a>
+                <button class="btn btn--accent" on="tap:cookies.prompt()" role="button">Accept cookies</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
