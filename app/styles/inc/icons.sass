@@ -38,14 +38,11 @@
   background-size: contain
 
   &--check
-    background-image: svg-load("icons/check.svg" fill: $status-positive)
+    background-image: resolve("icons/check.svg")
 
   &--cross
-    background-image: svg-load("icons/cross.svg" fill: $status-negative)
+    background-image: resolve("icons/cross.svg")
 
   &--clock
-    background-image: svg-load("icons/clock.svg" fill: $pseudo-neutral-900)
-
-  &--calendar
-    background-image: svg-load("icons/calendar.svg" fill: $pseudo-neutral-900)
+    background-image: resolve("icons/clock.svg")
 

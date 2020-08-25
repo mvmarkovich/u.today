@@ -1,80 +1,65 @@
 .news
-  height: 100%
-  background-color: $neutral
+  background-color: #FFF
+  margin: 0 0 8px
 
   .icon
-    margin-right: 1.5rem
-
-  .btn--block
-    width: auto
-    border-top: 1px solid #ECEFF1
-    padding: * 1rem @sm * 7.6rem @xl * 8rem
-
-    .btn--arrow-down-before
-      position: relative
-      width: 100%
-      font-weight: 600
-      border: none
-      justify-content: flex-start
-
-    .btn--show--open
-      display: inline-flex
+    margin-right: 16px
+    height: 24px
 
   &__header
-    box: center
-    padding: .75rem 1rem @sm * 1.5rem @xl * 2rem
+    padding: 12px 16px
     border-bottom: 1px solid #ECEFF1
+    display: flex
+    align-items: center
 
     .btns-spacer
-      margin-left: 1.5rem
+      margin-left: 24px
       margin-bottom: 0
 
       .btn
-        text: #90A4AE
-        min-height: 1.5rem
-        margin-right: 1rem
+        color: #90A4AE
+        min-height: 24px
+        margin-right: 16px
+        margin-bottom: 0
         font-weight: 600
 
-  .btn--arrow-down-before:before
-    margin-right: 2rem
-
-  .title
-    margin-bottom: 0
-    display: inline
-
-  &__title
-    text: 600 15px 1.4
-
-    &:before
-      content: ''
-
   &__item
-    display: @sm flex
-    align-items: baseline
-    padding: .75rem 1rem @sm * 1.5rem @xl * 2rem
+    padding: 12px 16px
     border-top: 1px solid #ECEFF1
+    display: block
 
     &:first-child
       border-top: 0
 
-    &-time
-
-      &-wrapper
-        display: @sm inline
-        min-width: 7.8rem
-
     &-title
-      text: $body-small @xl $body-standart
-      margin-right: .2rem @xl .7rem
+      margin: 0 4px 0 0
+      display: inline-block
+      text: 500 15px 1.9
 
       &-wrapper
         display: inline
+
+    &-time
+
+      &--wrapper
+        min-width: 140px
 
     &-info
       display: inline-flex
       align-items: center
       vertical-align: middle
 
+  &__title
+    text: 600 15px 1.4
+
+    &:before
+      content: ""
+
   &__footer
-    margin-top: 1rem
-    margin-bottom: .7rem
+    padding: 0 16px
+    border-top: 1px solid #eee
+    text: 700 15px
+    width: 100%
+    min-height: 48px
+    justify-content: flex-start
+
