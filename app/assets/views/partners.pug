@@ -5,12 +5,12 @@ block title
 
 block content
     .main-aside-container
-        main.main-news-block
-            section.content-block
+        .main-news-block
+            .content-block
                 h2.content-block__title Contact the core team
                 .content-block__descr
                     p If you want to become a partner, send an email to <a class="link" href="mailto:partners@u.today">partners@u.today</a>.
-            section.partners__list
+            .partners__list
                 .partners__item
                     a.img-link(href="#!")
                         img.partners__img(src="https://u.today/sites/default/files/styles/partner_teaser/public/2018-10/Decent.jpg?itok=3uiQCNgX")
@@ -53,5 +53,4 @@ block content
                             .store
                                 a.store__link.store__link--gp(href="#!pm")
 
-        aside.aside-menu-block
-            include blocks/aside-menu-block.pug
+        include blocks/aside.pug

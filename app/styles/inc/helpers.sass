@@ -19,6 +19,9 @@ ul
 .visibility-hidden
   visibility: hidden
 
+img
+  width: 100%
+
 .hide
   &-xl-down
     display: @xl-down none
@@ -38,22 +41,25 @@ ul
   &-sm-only
     display: @sm none
 
-.amp-carousel-button
+.slick-arrow
   size: 24px 48px
-  background-color: transparent
-  border-radius: 0
-  background-size: contain
-  margin: 0
-  outline: none
-  cursor: pointer
-  position: absolute
+  min-width: 24px
+  bottom: @md-down 89px
+  top: @md-down auto
 
-.amp-carousel-button-prev
-  background-image: svg-load("icons/slider_arrow-prev.svg")
-  left: 0
-  display: @md-down none
+.slick-next
+  background-image: resolve("icons/slider-next-arrow.svg")
+  right: -28px
 
-.amp-carousel-button-next
-  background-image: svg-load("icons/slider_arrow-next.svg")
-  right: 0
-  display: @md-down none
+  &:hover
+    background-image: svg-load("icons/slider-next-arrow.svg" fill: #000)
+
+.slick-prev
+  background-image: resolve("icons/slider-prev-arrow.svg")
+  left: -28px
+
+  &:hover
+    background-image: svg-load("icons/slider-prev-arrow.svg" fill: #000)
+
+.slick-disabled
+  display: none !important

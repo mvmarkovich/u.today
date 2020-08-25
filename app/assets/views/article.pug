@@ -5,315 +5,110 @@ block title
 
 block content
     .main-aside-container
-        main.main-news-block
+        .main-news-block
             .article
-                .article__main
-                    span.article__label.article__label--original U.TODAY Original Article
-                    span.article__label.article__label--tweet Tweet-based article
-                    span.article__label.article__label--interviews Interviews
+                span.article__label.article__label--original U.TODAY Original Article
+                span.article__label.article__label--tweet Tweet-based article
+                span.article__label.article__label--interviews Interviews
 
-                    h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
+                h1.article__title Women of Crypto at the Crypto Invest Summit: Separate but Hopeful
 
-                    .article_main-info
-                        .article_main-info__humble
-                            .author__item-time.humble Monday, November 11 — 8:15 PM
-                            .humble.humble--tiny.humble--comments 256
-                            .humble.humble--tiny.humble--liked 31
-                            .humble.humble--tiny.humble--views 125k
+                .article_main-info
+                    .article_main-info__humble
+                        .author__item-time.humble Monday, November 11 — 8:15 PM
+                        .humble.humble--tiny.humble--comments 256
+                        .humble.humble--tiny.humble--liked 31
+                        .humble.humble--tiny.humble--views 125k
 
-                            .social
-                                span.social__link--name Share:
-                                a.social__link.social__link--tiny.social__link--tg(href="#!") Telegram
-                                a.social__link.social__link--tiny.social__link--tw(href="#!") Twitter
-                                a.social__link.social__link--tiny.social__link--fb(href="#!") Facebook
+                        .social
+                            span.social__link--name Share:
+                            a.social__link.social__link--tiny.social__link--tg(href="#!") Telegram
+                            a.social__link.social__link--tiny.social__link--tw(href="#!") Twitter
+                            a.social__link.social__link--tiny.social__link--fb(href="#!") Facebook
 
-                    .article__lead
-                        a.article__lead-img--wrapper(href="#!")
-                            img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' alt="Denys Serhiichuk")
+                .article__lead
+                    a.article__lead-img--wrapper(href="#!")
+                        img.article__lead-img(src='https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg' alt="Denys Serhiichuk")
 
-                        .article__lead-info
-                            a.article__lead-name(href="#!") Denys Serhiichuk
-                            .article__lead-desc We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!
+                    .article__lead-info
+                        a.article__lead-name(href="#!") Denys Serhiichuk
+                        .article__lead-desc We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!
 
-                    .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+                .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
 
-                    .article__main-img-wrapper
-                        img.article__main-img(src="https://news.u.today/sites/default/files/styles/1200x/public/2019-09/BitPay_Suspends_Bitcoin_Donations_to_Hong_Kong_Free_Press_without_Notification.JPG.jpg?itok=M8YJr0SX" alt="Main-img")
-                        figcaption Cover image via <a href="#!"> 123rf.com </a>
+                .article__main-img-wrapper
+                    img.article__main-img(src="https://news.u.today/sites/default/files/styles/1200x/public/2019-09/BitPay_Suspends_Bitcoin_Donations_to_Hong_Kong_Free_Press_without_Notification.JPG.jpg?itok=M8YJr0SX" alt="Main-img")
+                    figcaption Cover image via <a href="#!"> 123rf.com </a>
 
-                        .disclaimer
-                            p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
+                    .disclaimer
+                        p.disclaimer_text Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.
 
-                    .article__content
-                        .article__contents
-                            .article__contents-title Contents
+                .article__content
+                    .article__contents
+                        .article__contents-title Contents
 
-                            ul.article__contents-list
-                                each content in articleContents
-                                    li.article__contents-item
-                                        a.article__contents-link.link-pseudo(href="#!")= content
+                        ul.article__contents-list
+                            each content in articleContents
+                                li.article__contents-item
+                                    a.article__contents-link.link-pseudo(href="#!")= content
 
-                        | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women.
+                    | Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women.
 
-                        p!= articleTexts[0]
+                    p!= articleTexts[0]
 
-                        h2
-                            em Women of Crypto as opening act
+                    h2
+                        em Women of Crypto as opening act
 
-                        p!= articleTexts[1]
+                    p!= articleTexts[1]
 
-                        p!= articleTexts[2]
+                    p!= articleTexts[2]
 
-                        h2 Ladies only
+                    h2 Ladies only
 
-                        p!= articleTexts[3]
+                    p!= articleTexts[3]
 
-                        blockquote
-                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+                    blockquote
+                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
-                            img(src="https://dummyimage.com/64x64/d8dbde/aaa" alt="Image")
-                            strong Bob Stewarts
-                            em CEO of uToday
+                        img(src="https://dummyimage.com/64x64/d8dbde/aaa" alt="Image")
+                        strong Bob Stewarts
+                        em CEO of uToday
 
-                        p!= articleTexts[0]
+                    p!= articleTexts[0]
 
-                        blockquote
-                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+                    blockquote
+                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
-                            strong Bob Stewarts
-                            em CEO of uToday
+                        strong Bob Stewarts
+                        em CEO of uToday
 
-                        p!= articleTexts[1]
+                    p!= articleTexts[1]
 
-                        blockquote
-                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+                    blockquote
+                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
-                            strong Bob Stewarts
+                        strong Bob Stewarts
 
-                        p!= articleTexts[2]
+                    p!= articleTexts[2]
 
-                        blockquote
-                            p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
+                    blockquote
+                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
 
-                        p!= articleTexts[5]
+                    p!= articleTexts[5]
 
-                        ul
-                            each li in articleList
-                                li= li
+                    ul
+                        each li in articleList
+                            li= li
 
-                        h2 Scaling community and activism
+                    h2 Scaling community and activism
 
-                        p!= articleTexts[2]
+                    p!= articleTexts[2]
 
-                        .article__related
-                            .article__related-flame Must Read
+                    p!= articleTexts[3]
 
-                            .article__related-blockquote Exclusive Interview with John McAfee: Epstein Didn’t Kill Himself, Bitcoin to Hit $1 million, & “Russian Roulette” — <a href="#!"> READ MORE </a>
-
-                        p!= articleTexts[3]
-
-                        h2 Reclaiming sovereignty
-
-                        p!= articleTexts[1]
-
-                        .something.something--content
-                            .something__content-long
-                                img(src="img/something/long.png" width="728" height="90" alt="something-wide")
-
-                            .something__content-square
-                                img(src="img/something/square.png" width="300" height="250" alt="something-square")
-
-                        p!= articleTexts[2]
-
-                        h2 Reclaiming sovereignty
-
-                        figure
-                            a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
-                                img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
-                            figcaption Cover image via <a href="#!"> 123rf.com </a>
-
-                        p!= articleTexts[1]
-
-                        p!= articleTexts[3]
-
-                        p!= articleTexts[1]
-
-                        h2 Adding value despite challenges
-
-                        p!= articleTexts[0]
-
-                        ol
-                            li Change the terms and conditions of the ToU
-                            li
-                                | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
-
-                                ol
-                                    li Change the terms and conditions of the ToU
-                                    li
-                                        | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
-
-                            li or Change other conditions for use of the U.Today Sites.
-
-                        p!= articleTexts[0]
-
-                        ul
-                            li Change the terms and conditions of the ToU
-                            li
-                                | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
-
-                                ul
-                                    li Change the terms and conditions of the ToU
-                                    li
-                                        | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
-
-                            li or Change other conditions for use of the U.Today Sites.
-
-                        table(align='center')
-                            tbody
-                                tr
-                                    th  
-                                    th Loan-to-Value
-                                    th Interest Rates
-                                    th Native Token
-                                    th Assets
-                                    th Registered
-                                tr
-                                    td BlockFi
-                                    td 50%
-                                    td 3-12%
-                                    td No
-                                    td 5
-                                    td USA
-                                tr
-                                    td YouHodler
-                                    td 90%
-                                    td >4,5%
-                                    td No
-                                    td 16
-                                    td Cyprus/Switzerland
-                                tr
-                                    td Crypto.com
-                                    td 50%
-                                    td 8-18%
-                                    td Required
-                                    td 16
-                                    td Malta
-
-                        table
-                            colgroup
-                                col
-                                col
-                            tbody
-                                tr
-                                    td
-                                        p(dir='ltr')
-                                            strong Pros
-                                    td
-                                        p(dir='ltr')
-                                            strong Cons
-                                tr
-                                    td
-                                        ol
-                                            li(dir='ltr')
-                                                p(dir='ltr', role='presentation') Incorporated in South Korea, which has a very reliable legislation.
-                                            li(dir='ltr')
-                                                p(dir='ltr', role='presentation') High-level security toolkit.
-                                            li(dir='ltr')
-                                                p(dir='ltr', role='presentation') Active IEO policy, many rare assets available.
-                                    td
-                                        ol
-                                            li(dir='ltr')
-                                                p(dir='ltr', role='presentation') Cumbersome interface.
-                                            li(dir='ltr')
-                                                p(dir='ltr', role='presentation') High fees, especially without the PROB being staked.
-
-
-                        p!= articleTexts[2]
-
-                        p
-                            strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
-
-                        p
-                            em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
-
-                    .article__panel
-                        .article__tags.btns-spacer
-                            a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit
-                            a.btn.btn--hash-tag(href="#!") #Bitcoin
-                            a.btn.btn--hash-tag(href="#!") #Processor
-
-                        .article__panel-row
-                            .article__panel-col
-                                .left
-                                    .humble.humble--liked 31
-                                    .humble.humble--bookmark 17
-                                    .humble.humble--views 123.5k
-
-                    .about-author
-                        .about-author_row
-                            a.about-author_avatar(href="#!author")
-                                img(src="https://dummyimage.com/64x64/d8dbde/aaabad" alt="Konstantin Konstantinopolsky")
-
-                            .about-author_info
-                                .about-author_title About the author
-
-                                .about-author_data
-                                    a.about-author_name(href="#!author") Konstantin Konstantinopolsky
-                                    .social
-                                        a.social__link.social__link--ln(href="#!ln") LinkedIn
-                                        a.social__link.social__link--insta(href="#!insta") Instagram
-                                        a.social__link.social__link--em(href="#!email") Email
-
-                                p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
-
-                    .article__recommended
-                        .article__recommended-header
-                            .article__recommended-title &#x1F453; Recommended articles
-
-                        .article__recommended-list-slide.article__recommended-list-slide--yellow
-                            .article__recommended-list
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT' alt="Recommended image")
-
-                                        .article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
-
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y' alt="Recommended image")
-
-                                        .article__recommended-item-title Ethereum Breakout in Full Force
-
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs' alt="Recommended image")
-
-                                        .article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
-
-                        .article__recommended-list-slide
-                            .article__recommended-list
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/IQ_Mining_Review_or_how_to_make_500_from_100_0.jpg?itok=RQrZzAfT' alt="Recommended image")
-
-                                        .article__recommended-item-title What Is Decentralized Application (dApp): Explanation for Beginners
-
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/5%20Best%20Ethereum%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=uKNJtR9Y' alt="Recommended image")
-                                            .sponsored__mark Promo
-                                        .article__recommended-item-title Ethereum Breakout in Full Force
-                                .article__recommended-item
-                                    a.article__recommended-link(href='#!')
-                                        .article__recommended-wrapper--img
-                                            img.article__recommended-img(src='https://u.today/sites/default/files/styles/1200x/public/2019-06/10%20Best%20Cloud%20Mining%20Sites%20in%202019.jpg?itok=AmHFtuAs' alt="Recommended image")
-
-                                        .article__recommended-item-title Bitcoin Cash Slingshots to the Moon?
+                    h2 Reclaiming sovereignty
+
+                    p!= articleTexts[1]
 
                     .something.something--content
                         .something__content-long
@@ -321,6 +116,207 @@ block content
 
                         .something__content-square
                             img(src="img/something/square.png" width="300" height="250" alt="something-square")
+
+                    p!= articleTexts[2]
+
+                    h2 Reclaiming sovereignty
+
+                    figure
+                        a.image-popup-vertical-fit(rel='dofollow', target='_blank', href='https://u.today/sites/default/files/inline-images/4_26.jpg?from=body')
+                            img(alt='XRP is very likely to drop to support', src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4", data-entity-type='file', data-entity-uuid='ba3ac052-8a1c-42a2-bf1a-795e82cc841f')
+                        figcaption Cover image via <a href="#!"> 123rf.com </a>
+
+                    p!= articleTexts[1]
+
+                    p!= articleTexts[3]
+
+                    p(dir="ltr")
+                        .article__related
+                            a.article__related-img--wrapper(href="#!")
+                                img(src="https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al" alt="Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha")
+                                span Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
+
+                            a.article__related-desc(href="#!")
+                                .article__related-flame Related
+                                .article__related-blockquote Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha
+
+                    p!= articleTexts[1]
+
+                    h2 Adding value despite challenges
+
+                    p!= articleTexts[0]
+
+                    ol
+                        li Change the terms and conditions of the ToU
+                        li
+                            | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                            ol
+                                li Change the terms and conditions of the ToU
+                                li
+                                    | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                        li or Change other conditions for use of the U.Today Sites.
+
+                    p!= articleTexts[0]
+
+                    ul
+                        li Change the terms and conditions of the ToU
+                        li
+                            | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                            ul
+                                li Change the terms and conditions of the ToU
+                                li
+                                    | Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+
+                        li or Change other conditions for use of the U.Today Sites.
+
+                    table(align='center')
+                        tbody
+                            tr
+                                th  
+                                th Loan-to-Value
+                                th Interest Rates
+                                th Native Token
+                                th Assets
+                                th Registered
+                            tr
+                                td BlockFi
+                                td 50%
+                                td 3-12%
+                                td No
+                                td 5
+                                td USA
+                            tr
+                                td YouHodler
+                                td 90%
+                                td >4,5%
+                                td No
+                                td 16
+                                td Cyprus/Switzerland
+                            tr
+                                td Crypto.com
+                                td 50%
+                                td 8-18%
+                                td Required
+                                td 16
+                                td Malta
+
+                    table
+                        colgroup
+                            col
+                            col
+                        tbody
+                            tr
+                                td
+                                    p(dir='ltr')
+                                        strong Pros
+                                td
+                                    p(dir='ltr')
+                                        strong Cons
+                            tr
+                                td
+                                    ol
+                                        li(dir='ltr')
+                                            p(dir='ltr', role='presentation') Incorporated in South Korea, which has a very reliable legislation.
+                                        li(dir='ltr')
+                                            p(dir='ltr', role='presentation') High-level security toolkit.
+                                        li(dir='ltr')
+                                            p(dir='ltr', role='presentation') Active IEO policy, many rare assets available.
+                                td
+                                    ol
+                                        li(dir='ltr')
+                                            p(dir='ltr', role='presentation') Cumbersome interface.
+                                        li(dir='ltr')
+                                            p(dir='ltr', role='presentation') High fees, especially without the PROB being staked.
+
+
+                    p!= articleTexts[2]
+
+                    p
+                        strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+                    p
+                        em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+                .article__panel
+                    .article__tags.btns-spacer
+                        a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit
+                        a.btn.btn--hash-tag(href="#!") #Bitcoin
+                        a.btn.btn--hash-tag(href="#!") #Processor
+
+                .about-author
+                    .about-author_row
+                        a.about-author_avatar(href="#!author")
+                            img(src="https://dummyimage.com/64x64/d8dbde/aaabad" alt="Konstantin Konstantinopolsky")
+
+                        .about-author_info
+                            .about-author_title About the author
+
+                            .about-author_data
+                                a.about-author_name(href="#!author") Konstantin Konstantinopolsky
+                                .social
+                                    a.social__link.social__link--ln(href="#!ln") LinkedIn
+                                    a.social__link.social__link--insta(href="#!insta") Instagram
+                                    a.social__link.social__link--em(href="#!email") Email
+
+                            p As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="How to Protect Your Identity and Bitcoin Wallet From Tracking")
+                    span How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov")
+                            | Vladislav Sopov
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network")
+                    span Beginner’s Guide to Bluzelle — The Decentralized Data Network
+                    .promoted__mark Promo
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" alt="Heewon Jang")
+                            | Heewon Jang
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network")
+                    span Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Price Prediction
+                        .humble.humble--time 1 day 23 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Vera Yurina")
+                            | Vera Yurina
 
         aside.aside-menu-block
             .card.card--press--release.card--mobile-visible

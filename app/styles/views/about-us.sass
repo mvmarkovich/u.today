@@ -1,9 +1,3 @@
-.about-logo
-  size: 100% 50px @md 435px 65px @xl 652px 97px
-  background: svg-load("icons/logo.svg" fill: $pseudo-neutral-900) no-repeat left top / contain
-  margin-top: 2rem @md 3rem @xl 0
-  margin-bottom: @md-down 2.4rem
-
 .team
   margin-top: 2.1rem @xl 3rem
   order: 9
@@ -34,7 +28,7 @@
       position: relative
       padding-top: 62.5%
       margin-bottom: 1rem
-      background: svg-load("icons/greeting.svg", fill: 	#B0BFC6) no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
+      background: resolve("icons/greeting.svg") no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
       border-radius: 2px
 
   &__post
@@ -113,5 +107,5 @@
       min-width: 116px @sm 160px
       max-width: 116px @sm 160px
       height: 72px @sm 100px
-      background: svg-load("icons/greeting.svg", fill: 	#B0BFC6) no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
+      background: resolve("icons/greeting.svg") no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
       border-radius: 2px

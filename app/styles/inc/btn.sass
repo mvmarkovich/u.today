@@ -61,19 +61,6 @@
     color: #2962ff
     height: 48px
 
-    svg
-      margin-right: 8px
-
-  &--yb
-    font-weight: 700
-    color: red
-    vertical-align: middle
-    display: inline-flex
-    align-items: center
-
-    svg
-      margin-right: 4px
-
   &--hash-tag
     text: $body-small normal none none
     background: $accent-1-light
@@ -91,22 +78,14 @@
     text: #fff
 
   &--accent-3
-    background: linear-gradient(135deg, #00B964 35.53%, #06CE72 93.42%)
-    border: none
+    background: #2E7D32
+    border: 0
+    border-radius: 0
+    font-weight: 700
+    letter-spacing: .01em
     color: #fff
-
-  &--accent-4
-    background: linear-gradient(222.06deg, #FF2E00 34.45%, #FF451D 87.03%)
-    border: none
-    color: #fff
-
-  &--radius
-
-    &-left
-      border-radius: 2px 0 0 2px
-
-    &-right
-      border-radius: 0 2px 2px 0
+    padding: 0 5px
+    text-align: center
 
   &--arrow-down,
   &--dropdown,
@@ -142,264 +121,73 @@
 
   &--arrow-down
     &:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/triangle-down.svg")
       size: 18px 24px
       margin-left: .6rem
 
     &:hover:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
+      background-image: svg-load("icons/triangle-down.svg", fill: $accent-1-medium)
 
   &--arrow-down-before
     &:before
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/triangle-down.svg")
       size: 24px
       margin-right: .6rem
 
     &:hover:before
-      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
-
-    &:disabled:before, &^&--disabled:before
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
+      background-image: svg-load("icons/triangle-down.svg", fill: $accent-1-medium))
 
   &--arrow-up-before
     &:before
-      background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/triangle-up.svg")
       size: 24px
       margin-right: .6rem
 
     &:hover:before
-      background-image: svg-load("icons/triangle_up.svg", fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/triangle_up.svg", fill: $accent-1-dark)
-
-    &:disabled:before, &^&--disabled:before
-      background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-300)
-
-  &--dropdown
-    &:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
-      size: 18px 24px
-
-    &:hover
-      color: $pseudo-neutral-900
-
-      &:after
-        background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
-
-    &:active:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
+      background-image: svg-load("icons/triangle-up.svg", fill: $accent-1-medium)
 
   &--arrow-right
     &:after
-      background-image: svg-load("icons/triangle_right.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/triangle-right.svg")
       size: 17px 24px
       margin-left: 0.9em
 
     &:hover:after
-      background-image: svg-load("icons/triangle_right.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/triangle_right.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/triangle_right.svg", fill: $pseudo-neutral-300)
-
-  &--rating-up
-    &:after
-      background-image: svg-load("icons/chevron.svg", fill: $pseudo-neutral-200)
-      transform: rotate(-90deg)
-      size: 24px
-
-  &--rating-down
-    &:after
-      background-image: svg-load("icons/chevron.svg", fill: $pseudo-neutral-200)
-      transform: rotate(90deg)
-      size: 24px
-
-  &--attach
-    &:after
-      background-image: svg-load("icons/attach.svg", fill: $pseudo-neutral-200)
-      size: 24px
-
-    &:hover:after
-      background-image: svg-load("icons/attach.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/attach.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/attach.svg", fill: $pseudo-neutral-300)
-
-  &--attach-dark
-    &:after
-      background-image: svg-load("icons/attach.svg", fill: $pseudo-neutral-900)
-      size: 24px
-      margin-left: 8px
-
-  &--more
-    &:after
-      background-image: svg-load("icons/more_horizontal.svg", fill: $pseudo-neutral-200)
-      size: 24px
-
-    &:hover:after
-      background-image: svg-load("icons/more_horizontal.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/more_horizontal.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/more_horizontal.svg", fill: $pseudo-neutral-300)
+      background-image: svg-load("icons/triangle-right.svg", fill: $accent-1-medium)
 
   &--search
     &:after
-      background-image: svg-load("icons/search.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/search.svg")
       size: 48px
 
     &:hover:after
       background-image: svg-load("icons/search.svg", fill: $accent-1-medium)
 
-    &:active:after
-      background-image: svg-load("icons/search.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/search.svg", fill: $pseudo-neutral-300)
-
-  &--account
-    &:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-900)
-      size: 48px
-
-    &:hover:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-300)
-
-  &--notification
-    &:after
-      background-image: svg-load("icons/notification.svg", fill: $pseudo-neutral-900)
-      size: 48px
-
-    &:hover:after
-      background-image: svg-load("icons/notification.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/notification.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/notification.svg", fill: $pseudo-neutral-300)
-
   &--burger
     &:after
-      background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-900)
+      background-image: resovle("icons/burger.svg")
       size: 48px
 
     &:hover:after
       background-image: svg-load("icons/burger.svg", fill: $accent-1-medium)
 
-    &:active:after
-      background-image: svg-load("icons/burger.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-300)
-
-  &--info
-    &:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-900)
-      size: 20px
-      margin-left: .9em
-
-    &:hover:after
-      background-image: svg-load("icons/information.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
-
-  &--info-white
-    &:after
-      background-image: svg-load("icons/information.svg", fill: #fff)
-      size: 20px
-      margin-left: .9em
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-200)
-
-  &--info-before
-    &:before
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-900)
-      size: 20px
-      margin-right: .6em
-
-    &:hover:before
-      background-image: svg-load("icons/information.svg", fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
-
-    &:disabled:before, &^&--disabled:after
-      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
-
-  &--lightning-white
-    &:after
-      background-image: svg-load("icons/lightning.svg", fill: #fff)
-      size: 20px
-      margin-left: .9em
-      margin-right: -0.3rem
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/lightning.svg", fill: $pseudo-neutral-200)
-
   &--cross
     &:after
-      background-image: svg-load("icons/cross.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/cross.svg")
       size: 32px
 
     &:hover:after
       background-image: svg-load("icons/cross.svg", fill: $accent-1-medium)
 
-    &:active:after
-      background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
-
-    &:disabled:after, &^&--disabled:after
-      background-image: svg-load("icons/cross.svg", fill: $pseudo-neutral-300)
-
   &--cross-white
     &:after
-      background-image: svg-load("icons/cross.svg", fill: #fff)
+      background-image: resolve("icons/cross.svg")
       size: 32px
 
     &:hover:after
-      background-image: svg-load("icons/cross.svg", fill: #fff)
-
-    &:active:after
       background-image: svg-load("icons/cross.svg", fill: #fff)
 
   &--back
     &:after
-      background-image: svg-load("icons/btn--back.svg", fill: $accent-1-light)
+      background-image: resolve("icons/btn--back.svg")
       size: 32px
-
-    &:hover:after
-      background-image: svg-load("icons/btn--back.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/btn--back.svg", fill: $accent-1-dark)

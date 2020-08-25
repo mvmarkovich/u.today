@@ -1,6 +1,6 @@
 .upcoming
   margin: 16px 0
-  padding: @md-down 0 16px
+  padding: @sm-down 0 16px
   position: relative
 
   &__header
@@ -12,44 +12,26 @@
     .btn
       min-height: 24px
       margin-right: 16px
-      font-weight: 700
-      text: #90A4AE 15px
+      font-weight: 500
+      text: #424242 15px
 
   &__title
-    text: 600 15px 1.6
+    text: 500 17px 1.7
     white-space: pre
     margin: 0 16px 0 0
-
-  &__slider
-    width: 100% @md 550px @xl 830px
-    padding: @md 0 32px
-    margin: @md 0 0 0 -32px
-
-    & > *
-
-      & > *:first-child
-        background: $neutral
-
-        &::-webkit-scrollbar
-          width: 0
-          height: 0
-
-        &::-moz-scrollbar
-          width: 0
-          height: 0
 
   &__item
     background: #fff
     vertical-align: top
     max-width: 236px @xl 251px
     width: 100%
+    height: auto
 
-    &:before
-      content: ''
-      background: #f5f5f5
-      width: 8px
-      position: absolute 0 null -300px -8px
-      display: block
+    .short
+      margin: 0 16px 0 0
+
+    & + &
+      margin: 0 0 0 8px
 
     &-info
       padding: 16px
@@ -61,21 +43,24 @@
           margin: 0
 
     &-title
-      text: 700 15px 1.6
+      text: 500 17px 1.7
       white-space: pre-wrap
-      min-height: 48px
-      margin: 0
+      min-height: 84px
+      margin: 0 0 4px
 
     &-link
-      text: 500 13px 1.5
+      text: 400 14px 1.5
       display: block
 
     .btn--event
       font-size: 13px
+      border-radius: 2px
+      width: auto
+      padding: 0 20px
 
 .promocode
   &__title
-    text: 700 15px 1.6
+    text: 500 15px 1.6
 
   &__value
-    text: #546E7A 500 13px 1.5
+    text: #424242 400 13px 1.5

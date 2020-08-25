@@ -1,103 +1,49 @@
 .press-releases
-  width: 100%
-  background-color: $neutral
-  padding: 1.2rem 0 1.5rem
-  margin: .5rem 0 @sm 1rem 0
-  border-top: 4px solid $accent-1-medium
-  border-bottom: 4px solid $accent-1-medium
+  background-color: #fff
+  margin: 16px 0
+  border-top: 4px solid #2196F3
+  border-bottom: 4px solid #2196F3
 
   &__header
-    box:
     justify-content: space-between
-    margin-bottom: 1.2rem
-    padding: 0 1rem @sm 0 1.5rem @xl 0 2rem
-
-  &__info
-    box: center
+    display: flex
+    padding: 12px 16px
 
   &__slider
-    padding: * 1rem @sm * 1.5rem @xl * 2rem
+    position: relative
+    padding: 0 16px 32px
+
+  &__info
+    display: flex
+    align-items: center
 
   &__title
-    text: 600 13px 16px
-    margin-bottom: 0
+    text: 600 13px 1.4
     white-space: pre
-    margin-right: 1rem
-
-  .btn
-    min-height: 1rem
-    margin-right: 1rem
-    font-weight: 600
-    color: $pseudo-neutral-300
-
-    &:hover
-      color: $accent-1-medium
-
-    &:active
-      color: $accent-1-dark
+    margin: 0 16px 0 0
 
   &__item
-    
-    margin-right: 1.5rem
-    max-width: 176px @sm 205px
+    min-width: 180px @sm 214px @xl 1px
+    max-width: 180px @sm 214px @xl 224px
     width: 100%
+    vertical-align: top
+
+    & + &
+      margin-left: 16px @xl 32px
 
     &-img
-      position: absolute 0 null null 0
-      width: 100%
 
       &--wrapper
         background: #ECEFF1
-        overflow: hidden
         position: relative
-        padding-top: 62.5%
 
     &-name
       text: 500 13px 1.8
-      margin-bottom: 0
-      margin-top: .7rem
+      margin: 8px 0 0
+      white-space: pre-wrap
 
-  &-long
-    padding: @md 1.2rem 0 1.5rem @xl .75rem 0 .65rem
-    padding: * 1rem @sm * 1.5rem @md * 0
-    box-shadow: 48rem 0 0 #fff, -48rem 0 0 #fff
-    border: none
-
-    .slider__nav
-      display: @xs-down none
-
-    ^&__header
-      margin-bottom: 1.2rem @xl .75rem
-      padding: 0
-
-    ^&__inner
-      display: block @xl flex
-      align-items: @xl flex-start
-
-    ^&__slider
-      padding: 0
-
-      .slick-list
-        margin-left: 0
-
-    ^&__item
-      margin-right: 1.5rem @xl 1rem
-      margin-left: 0
-      max-width: 176px @sm 205px @md 240px @xl 363px
-
-      &-img
-        position: static
-
-        &--wrapper
-          padding-top: 0
-          min-width: 176px @sm 205px @md 240px @xl 96px
-          max-width: 176px @sm 205px @md 240px @xl 96px
-          margin-right: @xl .75rem
-
-      &-name
-        position: @xl relative
-        top: @xl -6px
-        margin-top: .7rem @xl 0
-
-
-
+  .btn
+    min-height: 16px
+    margin-right: 16px
+    font-weight: 600
+    text: #90A4AE

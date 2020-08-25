@@ -1,26 +1,11 @@
 .article
-  position: relative
-  z-index: 5
-  overflow: hidden
+  padding: 16px 16px 0
+  background: $neutral
+  margin: 0 0 16px
 
   .image-popup-vertical-fit
     display: block
     margin-bottom: .8rem
-
-  &__summary
-    box: center
-    flex-wrap: wrap
-    margin-bottom: 0.7rem @md 1.3rem
-
-    &-device
-      display: block @xl none
-      margin: 1.1rem * .8rem
-
-    &-bookmarks
-      font-size: @xl-down 0
-
-      &:before
-        margin-right: @xl-down 0
 
   &__lead
     margin: 24px 0
@@ -80,64 +65,19 @@
 
     &--original
       &:before
-        background-image: svg-load("icons/article__label-u.svg", fill: $pseudo-neutral-900)
+        background-image: resolve("icons/article__label-u.svg")
 
     &--interviews
       &:before
-        background-image: svg-load("icons/article__label-interviews.svg", fill: $pseudo-neutral-900)
+        background-image: resolve("icons/article__label-interviews.svg")
 
     &--tweet
       &:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
+        background-image: resolve("icons/social/twitter.svg")
 
   &__info
     box: center
     margin-bottom: 1.5rem @xl 1.3rem
-
-  &__panel
-    box: wrap
-    margin-bottom: 2.1rem @xl 2.5rem
-    min-height: 48px
-
-    &-separator
-      background: $pseudo-neutral-100
-      height: 1px @xl 46px
-      width: 100% @xl 1px
-      margin: .4rem 0 @xl 0 1.1rem
-
-    &-row
-      box: wrap center
-      padding: .7rem 0 .4rem @xl 0
-      width: 100%
-      margin-top: .5rem @md 1.2rem
-
-    &-col
-      box: center
-      width: 100% @xl auto
-
-      & + &
-        margin-top: .4rem @xl 0
-
-    .humble
-      text: 13px 2.1 600 @sm 15px
-      margin-right: @sm-down .7rem
-
-      &--liked
-        color: $pseudo-neutral-900
-
-        &:before
-          background-image: svg-load("icons/liked.svg" fill: $accent-1-light)
-
-      &--bookmark
-        color: $pseudo-neutral-900
-
-        &:before
-          background-image: svg-load("icons/bookmark.svg" fill: $accent-1-light)
-
-  .social
-
-    &__link
-      margin-right: 1.5rem
 
   &__title
     margin-top: 0
@@ -260,29 +200,32 @@
       text: $accent-1-light 500 15px 1.8
 
   &__related
-    margin: 1.7rem 0 @xl 2.5rem 0
+    margin: 24px * @md 40px 0
+    padding: 16px 0
+    border-top: 1px solid #E0E0E0
+    border-bottom: 1px solid #E0E0E0
+    text-decoration: none
+    display: flex
+    align-items: flex-start
+
+    &-img
+      &--wrapper
+        margin-right: 16px
+        max-width: 112px
+        min-width: 112px
+
+        span
+          height: 0
+          width: 0
+          color: transparent
+          overflow: hidden
+          display: block
 
     &-flame
-      text: $accent-2-medium 500 15px 1.8 @xl 17px
-      display: inline-flex
-      align-items: center
-      text-transform: uppercase
-      margin-left: -10px
-
-      &:before
-        content: ''
-        background-image: svg-load('icons/flame.svg', fill: $accent-2-medium)
-        background-size: contain
-        background-position: center
-        background-repeat: no-repeat
-        size: 24px
-        margin-right: .5rem
+      text: #546E7A 700 15px 1.2
 
     &-blockquote
-      text: $pseudo-neutral-900 500 15px 1.8 @xl 17px
-      font-style: italic
-      border-left: 4px solid $accent-2-medium
-      padding: .5rem 1rem
+      text: #263238 700 13px 1.8 @md 15px
 
   twitter-widget
     overflow: hidden
@@ -317,122 +260,6 @@
     &::-webkit-scrollbar-thumb
       border-radius: 10px
       background-color: #4e616d
-
-  &__fact, h4
-    background: $neutral-100
-    padding: 1.3rem 2rem @xl 3.4rem 2rem
-    margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
-    margin: @sm-down * -1rem
-
-    &-title, strong
-      text: $header-standart center @xl $header-large
-      margin-bottom: .6rem @xl 2.4rem
-      display: block
-
-    &-text, p
-      text: $body-standart center @xl $body-large
-      text: $pseudo-neutral-900
-      margin-bottom: 0
-
-  &__tags
-    margin-bottom: 0
-
-  &__recommended
-    margin-top: 1.5rem
-
-    &-header
-      box: center
-      margin-bottom: 1.5rem
-
-    &-title
-      text: $header-tiny
-      margin-right: 1.5rem
-
-    .article__recommended-item-title
-      background-color: transparent
-      margin: 1rem 0 0 0  @md 0 0 0 1rem @xl 1rem 0 0 0
-      padding: 0
-      text: #263238 13px 1.8 500
-
-    &-list
-      box: left
-      flex-wrap: nowrap @md wrap
-      margin: @md * -.51rem * -.5rem
-      overflow: auto @md hidden
-
-      &::-webkit-scrollbar-track
-        border-radius: 10px
-        background-color: transparent
-        width: 6px
-
-      &::-webkit-scrollbar
-        height: 8px
-        border-radius: 10px
-        background-color: transparent
-
-      &::-webkit-scrollbar-thumb
-        border-radius: 10px
-        background-color: transparent
-
-      &:after
-        content: ""
-        display: block
-        min-width: 1rem @sm 1px
-        size: 1rem @sm 1px
-
-      &-slide
-        margin: 1rem -1rem 0 @sm 1rem 0 0
-        overflow: hidden
-        padding: @sm-down 0 1rem
-
-        &--yellow
-          background-color: #fffcc0
-          margin: 0 -1rem 1rem @sm 0 -1rem 1rem
-          padding: 1rem @sm-down 1rem
-
-          .article__recommended-item
-            background-color: #fffcc0
-            margin-bottom: @xl 0
-
-            &:last-child
-              margin-bottom: @xl-down 0
-
-    &-item
-      width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
-      min-width: 185px @sm calc(45% - 1rem) @md 100% @xl calc(100% / 3 - 1rem)
-      margin: * .5rem
-      margin-bottom: 0 @md 1rem @xl 0
-
-      &:first-child
-        margin-left: @md-down 0
-
-      &:last-child
-        margin-right: @md-down 0
-        margin-bottom: 0
-
-    &-img
-      display: block
-      max-width: 100%
-      width: 100%
-      border-radius: 2px
-
-    &-wrapper--img
-      position: relative
-      max-width: @md 208px @xl 100%
-      min-width: @md 208px @xl 1px
-
-    &-link
-
-      text: $body-small
-      margin-bottom: .1rem
-      box: vertical @md horizontal @xl vertical
-
-    &-info
-      box: center wrap
-
-    .btn
-      margin: 1.5rem 0 0
-      box-shadow: 0px 16px 24px rgba(33, 150, 243, 0.35)
 
   .something--content
     margin: @sm-down 1.5rem -1rem
@@ -511,27 +338,3 @@
   &_text
     text: #546e7a .8125rem 1rem 500
     margin-bottom: 0
-
-main:not(.scroll-end) > .article:after
-  content: ""
-  display: block
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  transform: translateY(100%)
-  height: 100vh
-  background: linear-gradient(180deg, #263238 0%, rgba(38, 50, 56, 0) 100%)
-  opacity: 0
-  transition: .5s ease
-  pointer-events: none
-  margin-left: -50vw
-  margin-right: -50vw
-
-main > .article
-
-  &:nth-last-child(2)
-    z-index: 4
-
-    &:after
-      opacity: 1

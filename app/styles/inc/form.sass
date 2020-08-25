@@ -43,7 +43,7 @@
 
       & + ^&-label
         &:before
-          background: svg-load("icons/checkbox_marked.svg" fill: $accent-1-dark) center / contain
+          background: resolve("icons/checkbox_marked.svg") center / contain
 
     &-label
       text: $pseudo-neutral-400 $body-small
@@ -57,7 +57,7 @@
         display: block
         size: 24px
         margin-right: .5rem
-        background: svg-load("icons/checkbox_blank.svg" fill: $pseudo-neutral-900) center / contain
+        background: resolve("icons/checkbox_blank.svg") center / contain
 
       a
         @extend .link-plain
@@ -124,7 +124,7 @@
     width: 100%
     min-height: 40px
     appearance: none
-    background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+    background-image: resolve("icons/triangle-down.svg")
     background-position: calc(100% - 6px) center
     background-repeat: no-repeat
     background-size: 24px 24px

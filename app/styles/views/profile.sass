@@ -71,26 +71,6 @@
       user-select: none
       text: $neutral 22px 96px 600 @xl 31px
 
-    .add--img
-      size: 2rem
-      background-color: $neutral
-      border-radius: 50%
-      box-shadow: 0 2px 5px rgba(33, 150, 243, 0.5)
-      position: absolute null 0 0 null
-
-      display: block
-      margin-right: .6rem
-      background-size: 18px
-      background-position: center
-      background-repeat: no-repeat
-      background-image: svg-load("icons/add-img.svg" fill: $pseudo-neutral-900)
-
-      &:hover
-        background-image: svg-load("icons/add-img.svg" fill: $accent-1-medium)
-
-      &:active
-        background-image: svg-load("icons/add-img.svg" fill: $accent-1-dark)
-
   &__img
     min-width: 96px
     max-width: 96px
@@ -108,7 +88,7 @@
 
     &:after
       content: ''
-      background-image: svg-load("icons/logout-variant.svg", fill: $pseudo-neutral-900)
+      background-image: resolve("icons/logout-variant.svg")
       background-position: center
       background-size: contain
       background-repeat: no-repeat
@@ -117,6 +97,3 @@
 
     &:hover:after
       background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-medium)
-
-    &:active:after
-      background-image: svg-load("icons/logout-variant.svg", fill: $accent-1-dark)

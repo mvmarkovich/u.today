@@ -1,74 +1,25 @@
 @charset 'UTF-8';
-/* Slider */
-.slick-loading .slick-list
+/* Arrows */
+.slick-prev,
+.slick-next
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-}
+    font-size: 0;
+    line-height: 0;
 
-/* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-}
-
-/* Dots */
-
-.slick-dots
-{
     position: absolute;
-    top: 24px;
-    height: 8px;
+    top: 50%;
 
     display: block;
 
-    width: 100%;
     padding: 0;
-    margin: 0;
-
-    list-style: none;
-
-    text-align: center;
-    z-index: 8;
-}
-.slick-dots li
-{
-    position: relative;
-
-    display: inline-block;
-    margin: 0 12px;
-}
-.slick-dots li button
-{
-    font-size: 16px;
-    line-height: 20px;
-    color: transparent;
-
-    display: block;
-
-    width: 8px;
-    height: 8px;
-    border: 2px solid #B0BEC5;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 
     cursor: pointer;
 
+    color: transparent;
+    border: none;
     outline: none;
-}
-
-.slick-dots li.slick-active button{
-    background-color: #B0BEC5;
-}
-
-
-.slick-dots li button:hover,
-.slick-dots li button:focus
-{
-    outline: none;
+    background: transparent;
 }
