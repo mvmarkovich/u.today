@@ -286,5 +286,7 @@
       "link-author" : "/",
       "img-author" : "https://u.today/sites/default/files/2019-11/yuri-ava.jpg"
     }
-  ]
+  ],
+
+  "next" : "author-articles-2.json"
 }

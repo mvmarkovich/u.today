@@ -9,7 +9,7 @@ block content
             .category
                 include blocks/amp-category-info.pug
 
-                amp-list(width="auto" height="568" src='author-articles-3.json' load-more="auto")
+                amp-list(width="auto" height="500" src='author-articles-3.json' load-more="manual" load-more-bookmark="next")
                     template(type='amp-mustache')
                         .category-item
                             a.category-item__img-wrapper(href="{{link}}")
@@ -32,5 +32,10 @@ block content
                                     .humble.humble--icon.humble--icon-large
                                         include ../img/icons/comment.svg
                                         | 2
+
+                    amp-list-load-more(load-more-button='')
+                        button.btn.btn--light.btn--more
+                            include ../img/icons/triangle-down.svg
+                            | Show more news
 
         include blocks/amp-aside.pug
