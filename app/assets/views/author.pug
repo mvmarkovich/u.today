@@ -5,23 +5,74 @@ block title
 
 block content
     .main-aside-container
-        main.main-news-block
+        .main-news-block
             .article
-                .article__main
-                    h1.article__title Konstantin Konstantinopolsky
-                    .article__main-img-wrapper
-                        img(class="article__main-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-03/den-sergeychuk.jpg?itok=DtWJkKoA")
-                        figcaption Cover image via <a href="/">news.u.today</a>
-                    .article__content
-                        p Alex covers all things crypto — from major projects, which are fighting tooth and nail to gain the upper hand in the burgeoning industry, to the latest regulatory trends around the world.
-                        p He’s a firm believer that Blockchain has the potential to reshape pretty much every business out there, and cryptocurrencies are only a stepping stone to the upcoming decentralized revolution.
-                    .social
-                        a.social__link.social__link--tg(href="#!tg")
-                        a.social__link.social__link--insta(href="#!insta")
-                        a.social__link.social__link--em(href="#!email")
+                h1.article__title Konstantin Konstantinopolsky
+
+                .article__main-img-wrapper
+                    img(class="article__main-img" src="https://u.today/sites/default/files/styles/1200x/public/2019-03/den-sergeychuk.jpg?itok=DtWJkKoA")
+                    figcaption Cover image via <a href="/">news.u.today</a>
+
+                .article__content
+                    p Alex covers all things crypto — from major projects, which are fighting tooth and nail to gain the upper hand in the burgeoning industry, to the latest regulatory trends around the world.
+                    p He’s a firm believer that Blockchain has the potential to reshape pretty much every business out there, and cryptocurrencies are only a stepping stone to the upcoming decentralized revolution.
+
+                .social
+                    a.social__link.social__link--tg(href="#!tg")
+                    a.social__link.social__link--insta(href="#!insta")
+                    a.social__link.social__link--em(href="#!email")
 
 
-            include blocks/article-author.pug
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") News
+                        .humble.humble--time 2 days 1 hour ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg")
+                            | Yuri Molchan
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg")
+                            | Vladislav Sopov
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg")
+                            | Heewon Jang
 
         include blocks/aside.pug
 
