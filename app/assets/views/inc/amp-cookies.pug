@@ -8,6 +8,8 @@ amp-consent#cookies(layout='nodisplay')
         }
 
     #post-cookies
+        .overlay
+
         .cookies
             .container
                 .cookies__row
@@ -15,4 +17,4 @@ amp-consent#cookies(layout='nodisplay')
 
                     .btn__block
                         a(href="#!") Cookie settings
-                        button.btn.btn--accent(on="tap:cookies.prompt()" role="button") Accept cookies
+                        button.btn.btn--accent(on="tap:cookies.accept()" role="button") Accept cookies
