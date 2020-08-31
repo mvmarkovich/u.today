@@ -1,0 +1,118 @@
+extends layouts/layout.pug
+
+block title
+    title Event | U
+
+block content
+    .main-aside-container
+        .main-news-block
+            .article
+                h1.article__title Blockspot Conference Europe 2018
+
+                .btn--block.btn--block-event.btn--block-bg
+                    a.btn.btn--accent.btn--huge.btn--event(href="#!") Buy tickets
+
+                    .promocode
+                        .promocode__title Promocode:
+                        .promocode__value WWWWWWWWWWWW
+
+                p.article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
+
+                .article__main-img-wrapper
+                    img(src='img/content/event/main-img.png', alt="main-img")
+
+                .article__content
+                    h2 About this event
+
+                    p Description. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+                    p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+
+                    .event__info.event--bg
+                        .event__info-row
+                            .event__info-label Location:
+                            .event__info-text Zurich, Switzerland
+                        .event__info-row
+                            .event__info-label Venue:
+                            .event__info-text ???
+                        .event__info-row
+                            .event__info-label Start Date:
+                            .event__info-text 1 March 2018
+                        .event__info-row
+                            .event__info-label End Date:
+                            .event__info-text 3 March 2018
+                        .event__info-row
+                            .event__info-label Ticket from:
+                            .event__info-text $100
+                        .event__info-row
+                            .event__info-label Ticket to:
+                            .event__info-text $300:
+                        .event__info-row
+                            .event__info-label Website:
+                            .event__info-text
+                                a.link-decorate(href="#!") https://cocacola.com
+                        .event__info-row
+                            .event__info-label Organization:
+                            .event__info-text CocaCola
+                        .event__info-row
+                            .event__info-label Contacts:
+                            .event__info-text Leah Callon-Butler Chief Impact Officer: <br>
+                                a.link-decorate(href="mailto:leah@cocacola.com") leah@cocacola.com
+                        .event__info-row
+                            .event__info-label Social links:
+                            .event__info-text
+                                .social
+                                    a.social__link.social__link--fb(href="#!")
+                                    a.social__link.social__link--tw(href="#!")
+                                    a.social__link.social__link--tg(href="#!")
+                                    a.social__link.social__link--ln(href="#!")
+                                    a.social__link.social__link--yb(href="#!")
+                                    a.social__link.social__link--rd(href="#!")
+
+                    h2 Speakers
+
+                    .speakers
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_1.png" alt="John Smith")
+                            .speakers__name John Smith, enterpreneur
+
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_no-photo.svg" alt="Mike O’Neil")
+                            .speakers__name Mike O’Neil, CryptoLuck founder
+
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_2.png" alt="Cassedy Cage")
+                            .speakers__name Cassedy Cage, data scientist
+
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_3.png" alt="Gordon Freeman")
+                            a.speakers__name(href="#!") Gordon Freeman, venture investor
+
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_no-photo.svg" alt="Phillip D’Angelo")
+                            a.speakers__name(href="#!") Phillip D’Angelo, BlockRocket founder
+
+                        .speakers__item
+                            .speakers__img
+                                img(src="img/content/event/speakers_4.png" alt="Kevin Mallowne")
+                            .speakers__name Kevin Mallowne, Dash accountant
+
+                    h2 Agenda
+
+                    p Description. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+                    p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+
+                    .btn--block.btn--block-event.btn--block-bg
+                        a.btn.btn--accent.btn--huge.btn--event(href="#!") Buy tickets
+
+                        .promocode
+                            .promocode__title Promocode:
+                            .promocode__value WWWWWWWWWWWW
+
+        include blocks/amp-aside.pug

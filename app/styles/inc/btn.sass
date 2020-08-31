@@ -32,9 +32,33 @@
     background: transparent
     cursor: pointer
 
+  &--event
+    max-width: 100% @sm 336px
+    width: 100%
+    text: 500 15px
+    border-radius: 0
+
   &--block
     display: flex
     width: 100%
+
+    &-event
+      margin: 32px 0
+
+      .promocode
+        margin: 16px 0 0 @md 0 0 0 16px
+
+        &__title
+          text: 500 17px 1.7
+
+        &__value
+          text: #263238 700 17px 1.7
+
+    &-bg
+      display: block @md flex
+      align-items: @md center
+      background: #E1F5FE
+      padding: 16px
 
   &--small
     min-height: 24px

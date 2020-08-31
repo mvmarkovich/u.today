@@ -227,11 +227,6 @@
     &-blockquote
       text: #263238 700 13px 1.8 @md 15px
 
-  twitter-widget
-    overflow: hidden
-    max-width: 500px !important
-    width: 100% !important
-
   table
     max-width: 736px
     width: 100% !important
@@ -271,6 +266,43 @@
     padding: .5rem 1rem
     margin: 0
     background-color: transparent
+
+  ol
+    list-style-type: decimal
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+    padding: 0
+    padding-left: 1.1rem @xl 1rem
+
+    ol
+      margin: 1rem 0 @xl 1.5rem 0 2rem
+
+    li
+      text: 500 13px 1.8 @md 15px
+
+      + li
+        margin-top: 1rem @xl 1.5rem
+
+  ul:not([class])
+    margin: 2rem 0 @xl 2.1rem 0 3rem
+    padding: 0
+    padding-left: 1.1rem @xl 1.5rem
+    list-style: none
+
+    ul
+      margin: 1rem 0 @xl 1.5rem 0 2rem
+
+    li
+      text: 500 13px 1.8 @md 15px
+      position: relative
+
+      + li
+        margin-top: 1rem @xl 1.5rem
+
+      &:before
+        content: "•"
+        display: block
+        position: absolute
+        left: -1.1rem @xl -1.5rem
 
 .about-author
   position: relative

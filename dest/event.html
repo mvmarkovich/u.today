@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#263238">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css">
+    <meta name="msapplication-TileColor" content="#263238">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#263238">
+    <title>Event | U</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container"><a class="header__logo" href="#!">U.TODAY</a>
+        <div class="header__social social"><a class="social__link social__link--fb" href="#!fb">Facebook</a><a class="social__link social__link--tg" href="#!tg">Telegram</a><a class="social__link social__link--tw" href="#!tw">Twitter</a><a class="social__link social__link--em" href="#!em">Email</a></div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/0">News</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Latest News</a></li>
+                <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">Bitcoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Ethereum News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Bitcoin Cash News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Ripple News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">EOS News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c6">Litecoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c7">Cardano News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c8">NEM</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c9">Press releases</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c10">Submit Press releases</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow header__nav-item--active"><a class="header__nav-link" href="/1">Stories</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Features</a></li>
+                <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">Opinions</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Artificial Intelligence</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">SingUlarity</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Infographics</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">ICO Watch</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/2">Guides</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Coins Guide</a></li>
+                <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">WikiCoin</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">CryptoTips</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Trading Guide</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/3">Price Predictions</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/4">Blockchain Programming</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__panel">
+          <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
+        </div>
+        <div class="mobile-menu-back">Back</div>
+        <div class="header__search">
+          <form class="header__search-form" action="#" method="get">
+            <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
+            <input class="header__search-input" type="text" name="search">
+            <button class="header__search-close btn btn--light btn--cross"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu-cover"></div>
+    <div class="page-container container">
+      <div class="main-aside-container">
+        <div class="main-news-block">
+          <div class="article">
+            <h1 class="article__title">Blockspot Conference Europe 2018</h1>
+            <div class="btn--block btn--block-event btn--block-bg"><a class="btn btn--accent btn--huge btn--event" href="#!">Buy tickets</a>
+              <div class="promocode">
+                <div class="promocode__title">Promocode:</div>
+                <div class="promocode__value">WWWWWWWWWWWW</div>
+              </div>
+            </div>
+            <p class="article__mark">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</p>
+            <div class="article__main-img-wrapper"><img src="img/content/event/main-img.png" alt="main-img"></div>
+            <div class="article__content">
+              <h2>About this event</h2>
+              <p>Description. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
+              <div class="event__info event--bg">
+                <div class="event__info-row">
+                  <div class="event__info-label">Location:</div>
+                  <div class="event__info-text">Zurich, Switzerland</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Venue:</div>
+                  <div class="event__info-text">???</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Start Date:</div>
+                  <div class="event__info-text">1 March 2018</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">End Date:</div>
+                  <div class="event__info-text">3 March 2018</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Ticket from:</div>
+                  <div class="event__info-text">$100</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Ticket to:</div>
+                  <div class="event__info-text">$300:</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Website:</div>
+                  <div class="event__info-text"><a class="link-decorate" href="#!">https://cocacola.com</a></div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Organization:</div>
+                  <div class="event__info-text">CocaCola</div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Contacts:</div>
+                  <div class="event__info-text">Leah Callon-Butler Chief Impact Officer: <br><a class="link-decorate" href="mailto:leah@cocacola.com">leah@cocacola.com</a></div>
+                </div>
+                <div class="event__info-row">
+                  <div class="event__info-label">Social links:</div>
+                  <div class="event__info-text">
+                    <div class="social"><a class="social__link social__link--fb" href="#!"></a><a class="social__link social__link--tw" href="#!"></a><a class="social__link social__link--tg" href="#!"></a><a class="social__link social__link--ln" href="#!"></a><a class="social__link social__link--yb" href="#!"></a><a class="social__link social__link--rd" href="#!"></a></div>
+                  </div>
+                </div>
+              </div>
+              <h2>Speakers</h2>
+              <div class="speakers">
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_1.png" alt="John Smith"></div>
+                  <div class="speakers__name">John Smith, enterpreneur</div>
+                </div>
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_no-photo.svg" alt="Mike O’Neil"></div>
+                  <div class="speakers__name">Mike O’Neil, CryptoLuck founder</div>
+                </div>
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_2.png" alt="Cassedy Cage"></div>
+                  <div class="speakers__name">Cassedy Cage, data scientist</div>
+                </div>
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_3.png" alt="Gordon Freeman"></div><a class="speakers__name" href="#!">Gordon Freeman, venture investor</a>
+                </div>
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_no-photo.svg" alt="Phillip D’Angelo"></div><a class="speakers__name" href="#!">Phillip D’Angelo, BlockRocket founder</a>
+                </div>
+                <div class="speakers__item">
+                  <div class="speakers__img"><img src="img/content/event/speakers_4.png" alt="Kevin Mallowne"></div>
+                  <div class="speakers__name">Kevin Mallowne, Dash accountant</div>
+                </div>
+              </div>
+              <h2>Agenda</h2>
+              <p>Description. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
+              <div class="btn--block btn--block-event btn--block-bg"><a class="btn btn--accent btn--huge btn--event" href="#!">Buy tickets</a>
+                <div class="promocode">
+                  <div class="promocode__title">Promocode:</div>
+                  <div class="promocode__value">WWWWWWWWWWWW</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="aside-menu-block">
+          <div class="card card--widget hide-md-up">
+            <div class="card__title">Top tranding bot<span class="card__mark">Promoted</span></div>
+            <div class="card__body"><a class="card--widget__item" href="#!" target="_blank" rel="nofollow noopener">
+                <div class="card--widget__row">
+                  <div class="card--widget__img-wrapper">
+                    <amp-img class="card--widget__img" src="img/content/crypt/IQ-Mining.png" alt="IQ-Mining" layout="fixed" width="48px" height="48px"></amp-img>
+                  </div>
+                  <div class="card--widget__info">
+                    <div class="card--widget__title">IQ Mining</div><span class="card--widget__signature">40% discount till 8 march</span>
+                  </div>
+                </div>
+                <div class="btn--block">
+                  <div class="btn btn--small btn--accent-3">Website</div>
+                </div></a><a class="card--widget__item" href="#!" target="_blank" rel="nofollow noopener">
+                <div class="card--widget__row">
+                  <div class="card--widget__img-wrapper">
+                    <amp-img class="card--widget__img" src="img/content/crypt/CryptoUniverse.png" alt="CryptoUniverse" layout="fixed" width="48px" height="48px"></amp-img>
+                  </div>
+                  <div class="card--widget__info">
+                    <div class="card--widget__title">CryptoUniverse</div><span class="card--widget__signature">Cashback up to 20%</span>
+                  </div>
+                </div>
+                <div class="btn--block">
+                  <div class="btn btn--small btn--accent-3">Website</div>
+                </div></a></div>
+          </div>
+          <div class="card card--subscribe card--mobile-visible">
+            <div class="card__subscribe"><a class="card__subscribe-item card__subscribe-fb" href="#!">
+                <div class="card__subscribe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 2V6H15C14.3 6 14 6.8 14 7.5V10H17V14H14V22H10V14H7V10H10V6C10 3.8 11.8 2 14 2H17Z" fill="white"/>
+</svg>
+
+                </div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Like</div>
+                  <div class="card__subscribe-nick">utoday.en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tw" href="#!">
+                <div class="card__subscribe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.5 6C21.7 6.3 20.9 6.6 20 6.7C20.9 6.2 21.6 5.3 21.9 4.3C21.1 4.8 20.1 5.1 19.2 5.4C18.4 4.5 17.3 4 16 4C13.6 4 11.7 5.9 11.7 8.3C11.7 8.6 11.7 9 11.8 9.3C8.29998 9.1 5.09998 7.4 2.99998 4.8C2.59998 5.4 2.39998 6.2 2.39998 6.9C2.39998 8.4 3.19998 9.7 4.29998 10.5C3.59998 10.5 2.89998 10.3 2.39998 10C2.39998 12.1 3.89998 13.8 5.79998 14.2C5.39998 14.3 5.09998 14.4 4.69998 14.4C4.39998 14.4 4.19998 14.4 3.89998 14.3C4.39998 16 5.99998 17.2 7.89998 17.3C6.39998 18.5 4.59998 19.1 2.59998 19.1C2.29998 19.1 1.89998 19.1 1.59998 19C3.39998 20.3 5.69998 21 8.09998 21C16 21 20.3 14.5 20.3 8.8C20.3 8.6 20.3 8.4 20.3 8.2C21.2 7.6 21.9 6.9 22.5 6Z" fill="white"/>
+</svg>
+
+                </div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Follow</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-yb" href="#!">
+                <div class="card__subscribe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 15L15.2 12L10 9V15ZM21.6 7.2C21.7 7.7 21.8 8.3 21.9 9.1C22 9.9 22 10.6 22 11.2V12C22 14.2 21.8 15.8 21.6 16.8C21.3 17.7 20.8 18.3 19.9 18.5C19.4 18.6 18.6 18.7 17.3 18.8C16 18.9 14.8 18.9 13.7 18.9L12 19C7.8 19 5.2 18.8 4.2 18.6C3.3 18.3 2.7 17.8 2.5 16.9C2.4 16.4 2.3 15.8 2.2 15C2.1 14.2 2.1 13.5 2.1 12.9L2 12C2 9.8 2.2 8.2 2.4 7.2C2.7 6.3 3.2 5.7 4.1 5.5C4.6 5.4 5.4 5.3 6.8 5.2C8.1 5.1 9.3 5.1 10.4 5.1L12 5C16.2 5 18.8 5.2 19.8 5.4C20.7 5.7 21.3 6.3 21.6 7.2Z" fill="white"/>
+</svg>
+
+                </div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Subscribe</div>
+                  <div class="card__subscribe-nick">utoday</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tm" href="#!">
+                <div class="card__subscribe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.8 18.6L10.1 14.4L17.8 7.49999C18.1 7.19999 17.7 6.99999 17.3 7.29999L7.8 13.3L3.6 12C2.7 11.7 2.7 11.1 3.8 10.7L19.8 4.49999C20.5 4.19999 21.2 4.69999 20.9 5.79999L18.2 18.6C18 19.5 17.5 19.7 16.7 19.3L12.6 16.2L10.6 18.1C10.4 18.5 10.2 18.6 9.8 18.6Z" fill="white"/>
+</svg>
+
+                </div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Join</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-em" href="#!">
+                <div class="card__subscribe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="white"/>
+</svg>
+
+                </div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Subscribe to email</div>
+                </div></a></div>
+          </div>
+          <div class="card card--press--release">
+            <div class="card__body">
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq" alt="Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches" layout="fixed" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer"><a class="btn btn--accent" href="#!">Submit Press Release</a></div>
+          </div>
+          <div class="card card--something">
+            <div class="something">
+              <amp-img src="img/something/something__aside-336x280.png" alt="Banner aside" width="336" height="280" layout="fixed"></amp-img>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__title">Popular</div>
+            <div class="card__body">
+              <article class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </article>
+              <article class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Google’s Amir Sarhangi Joins Ripple</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </article>
+              <article class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </article>
+              <article class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Where Is Bitcoin Going in the Near Future? Experts Weigh In</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </article>
+              <article class="aside-story"><a class="aside-story__img-wrapper" href="#!">
+                  <amp-img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG" width="72px" height="45px"></amp-img></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="card__footer"><a class="btn btn--light btn--arrow-right" href="#!">Show more</a></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__follow-us">
+            <div class="footer__title">Follow us and get all crypto news 24/7</div>
+            <div class="social social--border social--wide"><a class="social__link social__link--fb" href="#!">Facebook</a><a class="social__link social__link--tg" href="#!">Telegram</a><a class="social__link social__link--tw" href="#!">Twitter</a></div>
+          </div>
+          <div class="footer__subscribe">
+            <label class="footer__title" for="footer__subscribe">Subscribe to daily newsletter</label>
+            <form class="form--row footer__subscribe-form" target="#" method="get">
+              <div class="input">
+                <input class="footer__subscribe-input input__elem" id="footer__subscribe" type="text" name="email" placeholder="Email" required>
+              </div>
+              <div class="input">
+                <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+              </div>
+              <div class="footer__subscribe-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+            </form>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">News</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Latest News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ethereum News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Cash News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ripple News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">EOS News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Litecoin News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Cardano News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">NEM</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Press releases</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Submit Press releases</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Stories</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Features</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Opinions</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Artificial Intelligence</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">SingUlarity</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Infographics</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">ICO Watch</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Market analysis</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Pricewise</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ethereum Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Cash Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ripple Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">EOS Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Litecoin Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Cardano Price Index</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Guides</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Coins Guide</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">WikiCoin</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">CryptoTips</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Trading Guide</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">About Us</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Our partners</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Jobs</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">About Us</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Interviews</a>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Events</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__disclaimer">
+          <p class="footer__disclaimer-text">Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.</p>
+        </div>
+        <div class="footer__copy">
+          <div class="footer__copy-text">© 2018 U.Today. All rights reserved</div><a class="footer__copy-link" href="#!">Terms and conditions</a><a class="footer__copy-link" href="#!">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="cookies">
+      <div class="cookies__container container">
+        <div class="cookies__row">
+          <p class="cookies_text">This site uses cookies for different purposes. Please set your preferences in Cookie Settings and visit our Cookie policy for more information on how and why cookies are used on this site. <a class="cookies-link" href="#!cookies"> Click here for cookie policy </a></p>
+          <div class="btn__block"><a class="btn-link" href="#!">Cookie settings</a>
+            <button class="btn accept-cookies">Accept cookies</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="subscribe-form">
+      <div class="modal__item">
+        <button class="modal__close btn btn--light btn--cross-white" data-close-modal></button>
+        <div class="modal__item-header">
+          <div class="modal__item-header-title">All crypto news for</div>
+          <div class="modal__item-logo"></div>
+        </div>
+        <div class="modal__item-body">
+          <div class="modal__item-text">Sign up for crypto digest</div>
+          <form action="#" method="get">
+            <div class="input article__subscribe-input">
+              <input class="input__elem" type="text" name="email" placeholder="Email" required>
+            </div>
+            <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+            <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="subscribe-form-title">
+      <div class="modal__square">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__square-img"></div>
+        <div class="modal__square-content">
+          <div class="modal__square-title">Get the latest news, tips and good insights to your inbox</div>
+          <form action="#" method="get">
+            <div class="input article__subscribe-input">
+              <input class="input__elem" type="text" name="email" placeholder="Email" required>
+            </div>
+            <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+            <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="subscribe-form-text">
+      <div class="modal__square modal__square--text">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__square-img"></div>
+        <div class="modal__square-content">
+          <div class="modal__square-title">What will be your next move?</div>
+          <div class="modal__square-text">Sign up for crypto-trading tips & hints:</div>
+          <form action="#" method="get">
+            <div class="input article__subscribe-input">
+              <input class="input__elem" type="text" name="email" placeholder="Email" required>
+            </div>
+            <button class="btn btn--wide btn--input btn--accent" type="submit">Subscribe</button>
+            <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="giveaway">
+      <div class="modal__square modal__giveaway">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button><a class="modal__giveaway-img" href="#!" target="_blank"><img src="./img/modals/giveaway-img.jpg"></a>
+      </div>
+    </div>
+    <div class="modal" id="log_in">
+      <div class="modal__square modal__entrance">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__entrance-header">
+          <div class="modal__entrance-title">Log in</div>
+        </div>
+        <div class="modal__entrance-content">
+          <form class="modal__log_in-form" id="form-log_in" action="#" method="get">
+            <div class="input">
+              <input class="input__elem validate[required]" type="text" maxlength="12" name="name" placeholder="Account name">
+            </div>
+            <div class="input">
+              <input class="input__elem validate[required]" type="password" name="password" placeholder="Brain key">
+            </div>
+            <button class="btn btn--input btn--accent btn_step" type="submit">Log in</button>
+          </form>
+          <div class="btn__block">
+            <button class="btn btn--wide btn--input register" data-modal="register">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="register">
+      <div class="modal__square modal__entrance">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__entrance-header">
+          <div class="modal__entrance-title">Step 1</div>
+        </div>
+        <div class="modal__entrance-content">
+          <form class="modal__entrance-form" id="generate-brainkey" action="#" method="get">
+            <div class="input">
+              <input class="input__elem validate[required,custom[email]]" type="text" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="input input-account--name"><span class="internet-dog">@</span>
+              <input class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" type="text" data-field="item" maxlength="12" id="account_name" name="account_name" placeholder="Account name">
+              <div class="input__counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
+            </div>
+            <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
+            <div class="input">
+              <input class="validate[required] input__checkbox" type="checkbox" name="agree-terms" id="agree-terms">
+              <label class="input__checkbox-label" for="agree-terms">I accept <a href="#!"> Terms and Conditions </a></label>
+            </div>
+            <button class="btn btn--input btn--accent btn_step" type="submit">Generate brainkey</button>
+          </form>
+          <div class="btn__block">
+            <button class="btn btn--input sign_in" data-modal="log_in">Or Sign In</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__square modal__entrance">
+        <button class="modal__back btn btn--light btn--back" data-back-modal></button>
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__entrance-header">
+          <div class="modal__entrance-title">Step 2</div>
+        </div>
+        <div class="modal__entrance-content">
+          <div class="modal__entrance-text">The Brainkey is the seed phrase from which your public-private key pairs are generated. You can restore the public-private key pairs from your Brainkey if you lose the keys.</div>
+          <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
+          <div class="modal__entrance-text">Write it down on a paper and make a photo:</div>
+          <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
+          <form class="modal__entrance-form" id="recorded-brainkey" action="#" method="get">
+            <div class="input">
+              <input class="validate[required] input__checkbox" type="checkbox" id="accept-brainkey" name="accept-brainkey">
+              <label class="input__checkbox-label" for="accept-brainkey">I accept <a href="#!">I recorded my Brainkey</a></label>
+            </div>
+            <button class="btn btn--input btn--accent btn--wide btn_step" type="submit" disabled>Finish</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal__square modal__entrance">
+        <div class="modal__entrance-header">
+          <div class="modal__entrance-title">Registration completed</div>
+        </div>
+        <div class="modal__entrance-content">
+          <div class="modal__successfully-text">Registration was successfully completed</div>
+          <div class="modal__successfully-text">Please, wait to reload the page</div>
+          <div class="modal__timeout">
+            <div class="timeout__item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/sticky-sidebar/sticky-sidebar.min.js"></script>
+    <script src="libs/sticky-sidebar/ResizeSensor.js"></script>
+    <script src="libs/jquery-validate/jquery.validationEngine.js"></script>
+    <script src="libs/jquery-validate/jquery.validationEngine-en.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/trading_view.js"></script>
+  </body>
+</html>

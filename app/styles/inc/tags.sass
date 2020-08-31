@@ -11,43 +11,6 @@ figcaption, .img.caption
   a
     text: $accent-1-light
 
-ol
-  list-style-type: decimal
-  margin: 2rem 0 @xl 2.1rem 0 3rem
-  padding: 0
-  padding-left: 1.1rem @xl 1rem
-
-  ol
-    margin: 1rem 0 @xl 1.5rem 0 2rem
-
-  li
-    text: 500 13px 1.8 @md 15px
-
-    + li
-      margin-top: 1rem @xl 1.5rem
-
-ul:not([class])
-  margin: 2rem 0 @xl 2.1rem 0 3rem
-  padding: 0
-  padding-left: 1.1rem @xl 1.5rem
-  list-style: none
-
-  ul
-    margin: 1rem 0 @xl 1.5rem 0 2rem
-
-  li
-    text: 500 13px 1.8 @md 15px
-    position: relative
-
-    + li
-      margin-top: 1rem @xl 1.5rem
-
-    &:before
-      content: "•"
-      display: block
-      position: absolute
-      left: -1.1rem @xl -1.5rem
-
 p
   text: $body-small @xl $body-standart
   margin: 0
@@ -99,6 +62,10 @@ table
   overflow-x: auto
   border-top: 0
   margin: 24px 0
+
+  thead
+    td
+      font-weight: 600
 
   td, th
     text: $body-small @xl $body-standart
