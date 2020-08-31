@@ -1,0 +1,34 @@
+extends layouts/layout.pug
+
+block title
+    title Press Release Submit | U
+
+block content
+    .main-aside-container
+        .main-block
+            .infoblock
+                .infoblock__item
+                    h1 Submit your Press release on U.Today
+
+                    p We offer two options for the publishing. The News coverage is provided as the special opportunity by U.Today. Use it now! Feel free to ask any questions by mail at <a href="mailto:ads@u.today">ads@u.today</a>
+
+                    .table-plan
+                        .table-plan__header
+                            .table-plan__col
+                            .table-plan__col Press release
+
+                        each item in tablePrice
+                            .table-plan__row
+                                .table-plan__col= item[0]
+                                if item[3]
+
+                                .table-plan__col
+                                    .icon.icon--check
+
+                        .table-plan__footer
+                            .table-plan__col Cost
+                            .table-plan__col $600*
+
+                    p To submit your press release, contact us by e-mail: <a href="mailto:ads@u.today">ads@u.today</a> and in 24 hours your press-release will be live on U.Today!
+
+        include blocks/aside.pug

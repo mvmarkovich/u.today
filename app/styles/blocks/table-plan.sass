@@ -1,11 +1,5 @@
-.submit-event
-
-  &__form
-    margin: 1rem * 2rem
-
 .table-plan
-  margin-bottom: 1.9rem @md 2.6rem
-  margin-top: @xl -1.2rem
+  margin: 24px 0 @md 40px 0
   border-top: 1px solid #CFD8DC
   border-bottom: 1px solid #CFD8DC
 
@@ -17,7 +11,7 @@
 
       &:nth-child(1)
         width: 100% @md 40%
-        padding-top: @md-down 1rem
+        padding-top: @md-down 16px
         padding-bottom: @md-down 0
         align-items: @md-down center
 
@@ -40,42 +34,42 @@
         display: @md-down none
 
   &__header, &__footer
-    padding: .5rem 0 @md .7rem 0
+    padding: 8px 0 @md 12px 0
     text: $header-super-tiny @md $header-tiny
 
   &__footer
-    padding-bottom: .5rem @md .3rem
+    padding-bottom: 8px @md 4px
 
     ^&__col
       white-space: nowrap
 
       &:nth-child(1)
-        padding-top: @md-down .8rem
-        padding-bottom: @md-down .3rem
+        padding-top: @md-down 12px
+        padding-bottom: @md-down 4px
 
       &:nth-child(2), &:nth-child(3)
         align-items: flex-start
         flex-direction: row
 
     ^&__tip
-      margin-top: .5rem
+      margin-top: 8px
 
       &:first-child
-        margin-top: 1rem
+        margin-top: 16px
 
   &__legend
-    padding-bottom: 0 @md .5rem
-    padding-top: @md-down .2rem
+    padding-bottom: 0 @md 8px
+    padding-top: @md-down 2px
     text-align: @md-down center
 
     ^&__tip
-      margin-bottom: @md-down .3rem
+      margin-bottom: @md-down 4px
 
     ^&__col
       padding-top: 0
 
   &__col
-    padding: .75rem 0
+    padding: 12px 0
 
     .icon
       display: block

@@ -1,4 +1,4 @@
-extends layouts/amp-layout.pug
+extends layouts/layout.pug
 
 block title
     title Press Release | U
@@ -12,31 +12,23 @@ block content
                 .article__header
                     .article__header--row
                         .share__social
-                            amp-social-share.share__circle.share__circle-tw(type="twitter" width="56" height="24")
-                            amp-social-share.share__circle.share__circle-fb(type="facebook" width="56" height="24")
-                            amp-social-share.share__circle.share__circle-ln(type="linkedin" width="56" height="24")
-                        a.humble.humble--icon(href="#!") Press Release
-                            include ../img/icons/label/certificate.svg
-                        .humble.author__item-time Oct 27’2018, 11:27 AM
+                            a.social__link.social__link--bg.social__link--tw(href="#!") Twitter
+                            a.social__link.social__link--bg.social__link--fb(href="#!") Facebook
+                            a.social__link.social__link--bg.social__link--ln(href="#!") LinkedIn
 
-                        .humble.humble--icon 123k
-                            include ../img/icons/eye-bold.svg
+                        a.humble.humble--icon.humble--cert(href="#!") Press Release
+                        .humble Oct 27’2018, 11:27 AM
+
+                        .humble.humble--icon.humble--views 123k
 
                 .article__main-img-wrapper
+                    img(src='https://u.today/sites/default/files/styles/736x/public/2020-04/2951.jpg?itok=vDnRxY8q' alt="main-img")
                     figcaption Dio Ianakiara. Image by <a href="#!">TRON Foundation</a>, niTROn 2019
-                    amp-img(src='https://u.today/sites/default/files/styles/736x/public/2020-04/2951.jpg?itok=vDnRxY8q', layout='responsive', width='736', height='460')
 
                     .disclaimer
                         p.disclaimer_text This is a paid press release. U.Today does not endorse and is not responsible for or liable for any content, accuracy, quality, advertising, products or other materials on this page. Readers should do their own research before taking any actions related to the company. U.Today is not responsible, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any content, goods or services mentioned in the press release.
 
-                .something.something--content
-                    .something.something__content-long(style="background-color: #032e61")
-                        amp-img(src="img/something/long.png" alt="something-wide" layout="intrinsic" width="728" height="90")
-
-                    .something.something__content-square(style="background-color: #032e61")
-                        amp-img(src="img/something/square.png" alt="something-wide" layout="intrinsic" width="300" height="250")
-
-                section.article__content
+                .article__content
                     p We at TronWallet are proud over what we’ve achieved up to this point in making the TRON blockchain more easily accessible to everyone worldwide, and are looking forward to playing an integral part in shaping the TRON ecosystem and the crypto movement at large in the years to come.
                     p Join our Telegram channel to get news even faster!
 
@@ -58,63 +50,5 @@ block content
                             .event__info-label Contacts
                             .event__info-text Leah Callon-Butler Chief Impact Officer:
                                 a.link-decorate(href="mailto:leah@cocacola.com") leah@cocacola.com
-
-                .card.card--widget.hide-sm-up
-                    h4.card__title Top tranding bot
-                        span.card__mark Promoted
-
-                    .card__body
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width="48px", height="48px")
-
-                                .card--widget__info
-                                    .card--widget__title IQ Mining
-                                    span.card--widget__signature 40% discount till 8 march
-
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
-
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width="48px", height="48px")
-
-                                .card--widget__info
-                                    .card--widget__title CryptoUniverse
-                                    span.card--widget__signature Cashback up to 20%
-
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
-
-                .card.card--widget
-                    .card__title Top tranding bot
-                        span.card__mark Promoted
-
-                    .card__body
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/IQ-Mining.png", layout='fixed', width='48', height='48')
-
-                                .card--widget__info
-                                    .card--widget__title IQ Mining
-                                    span.card--widget__signature 40% discount till 8 march
-
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
-
-                        a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
-                            .card--widget__row
-                                .card--widget__img-wrapper
-                                    amp-img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", layout='fixed', width='48', height='48')
-
-                                .card--widget__info
-                                    .card--widget__title CryptoUniverse
-                                    span.card--widget__signature Cashback up to 20%
-
-                            .btn--block
-                                .btn.btn--small.btn--accent-3 Website
 
         include blocks/aside.pug

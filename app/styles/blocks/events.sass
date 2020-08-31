@@ -1,0 +1,89 @@
+.events
+
+  &__info
+    padding: 24px 16px @sm 32px @xl 32px 48px 40px
+    margin: 0 0 16px
+    background: #fff
+
+    &-title
+      text: 23px 1.2 800 @sm 26px @xl 31px
+      margin: 0 0 24px @sm 0 0 32px
+
+    .btn--block-event
+      margin: 24px 0 0 @sm 32px 0 0
+
+  &__col
+    margin: 0 0 16px
+    background: #fff
+
+    &-title
+      text: 23px 1.2 800 @sm 26px @xl 31px
+      padding: 24px 16px @sm 32px @xl 32px 48px
+      margin: 0
+      border-bottom: 1px solid #E0E0E0
+
+    &:last-child
+      margin: 16px 0 0
+
+  &__card
+    padding: 24px 16px @sm 32px @xl 32px 48px 40px
+    display: @sm flex
+    align-items: @sm flex-start
+    border-bottom: 1px solid #E0E0E0
+
+    &-left
+      margin: 0 0 16px @sm 0 16px 0 0
+
+    &-title
+      text: #263238 700 15px 1.6
+      margin: 0 0 8px
+
+    &-img
+      max-width: 160px @sm 180px @xl 224px
+      min-width: 160px @sm 180px @xl 224px
+
+    .btn--block-event
+      margin: 16px 0 0
+
+    &-info
+      p
+        text: 500 15px 1.6
+        margin: 10px 0 @sm 16px 0
+
+      ul
+        margin: 16px 0 0
+
+      li
+        margin: 0 0 8px
+
+        &:last-child
+          margin: 0
+
+        span
+          text: 15px 1.6
+
+          &:first-child
+            text: #546E7A
+            font-weight: 500
+            min-width: 90px @md 60px @xl 90px
+            padding: 0 16px 0 0 @md 0 8px 0 0 @xl 0 16px 0 0
+            display: inline-flex
+
+          &:last-child
+            text: #263238
+            font-weight: 700
+
+    &:last-child
+      border: none
+
+    &-medium
+      ^&-img
+        max-width: 160px
+        min-width: 160px
+
+      ^&-info
+        p
+          margin: 8px 0
+
+        ul
+          margin: 8px 0 0
