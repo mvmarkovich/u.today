@@ -1,16 +1,24 @@
 blockquote
-  margin: 2.5rem 0 1.7rem @md 3.2rem 0 2rem @xl 4rem 0 2.5rem
+  margin: 32px 0
   position: relative
-  border-left: 4px solid $accent-1-light
-  padding: .5rem 1rem
+  border-left: 4px solid #CFD8DC
+  padding: 0 16px
+  display: flex
+  align-items: center
+  min-height: 90px
 
   &:before
     content: ""
     display: block
-    background: resolve("icons/quote.svg") center / cover
-    size: 1.5rem
-    position: absolute -26px null null -14px
+    background-image: resolve("icons/quote.svg")
+    background-color: $neutral
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 50%
+    margin-top: -12px
+    left: -14px
 
   p
-    font-style: italic
+    text: #263238 500 16px 1.8
     margin: 0
