@@ -19,9 +19,7 @@
     gulpWatchPug = require('gulp-watch-pug'),
     cssbeautify = require('gulp-cssbeautify'),
     stripCssComments = require('gulp-strip-css-comments'),
-    cssDeclarationSorter = require('css-declaration-sorter'),
-    critical = require('critical').stream;
-
+    cssDeclarationSorter = require('css-declaration-sorter');
 
   //write html by pug
   gulp.task('views', function buildHTML() {
@@ -33,28 +31,6 @@
         })
       )
       .pipe(gulp.dest('dest/'));
-  });
-
-  gulp.task('critical', function () {
-    return gulp.src('dest/*.html')
-        .pipe(critical({
-          base: 'dest/',
-          inline: true,
-          css: ['dest/styles/defaults.css','dest/styles/main.css','dest/styles/defaults.css'],
-          dest: 'dest/styles/critical.css',
-          dimensions: [{
-            width: 320,
-            height: 480
-          },{
-            width: 1024,
-            height: 768
-          },{
-            width: 1920,
-            height: 1080
-          }]
-        }))
-        .on('error', function(err) { log.error(err.message); })
-        .pipe(gulp.dest('dest/'));
   });
 
   const processors = [
@@ -119,47 +95,26 @@
   //write style
   gulp.task('postcssAmp', function () {
     return (
-      gulp
-      .src(['app/styles/*.sss'])
-      .pipe(sourcemaps.init())
-      .pipe(
-        postcss(processors, {
-          parser: sugarss
-        }).on('error', notify.onError())
-      )
-      .pipe(rename({
-        extname: '.css'
-      }))
-      //.pipe(sourcemaps.write('/'))
-      .pipe(uglifycss())
-      .pipe(gulp.dest('dest/styles/'))
+        gulp
+            .src(['app/styles/*.sss'])
+            .pipe(sourcemaps.init())
+            .pipe(
+                postcss(processors, {
+                  parser: sugarss
+                }).on('error', notify.onError())
+            )
+            .pipe(rename({
+              extname: '.css'
+            }))
+            //.pipe(sourcemaps.write('/'))
+            .pipe(uglifycss())
+            .pipe(gulp.dest('dest/styles/'))
     );
   });
 
   // write js
   gulp.task('scripts', function () {
     return gulp.src('app/scripts/**').pipe(gulp.dest('dest/scripts'));
-  });
-
-  //delete dest folder
-  gulp.task('clean', function () {
-    return del('dest');
-  });
-
-  //lib
-  gulp.task('libs-css', function () {
-    return gulp
-      .src('app/libs/**/*.css')
-      .pipe(uglifycss())
-      .pipe(concat('libs.min.css'))
-      .pipe(gulp.dest('dest/styles/'));
-  });
-
-  gulp.task('libs-js', function () {
-    return gulp
-      .src('app/libs/**/*.js')
-      .pipe(concat('libs.min.js'))
-      .pipe(gulp.dest('dest/scripts/'));
   });
 
   //copy all assets files
@@ -172,37 +127,10 @@
       .pipe(gulp.dest('dest'));
   });
 
-  //run task for build once
-  gulp.task(
-    'build',
-    gulp.series(
-      'clean',
-      gulp.parallel(
-        'assets',
-        'postcss',
-        'postcssAmp',
-        'views',
-        'libs-css',
-        'libs-js',
-        'scripts'
-      )
-    )
-  );
-
-  //up static server; watching change in dest and reload page
-  gulp.task('server', function () {
-    browserSync.init({
-      server: 'dest',
-      notify: false
-    });
-
-    browserSync.watch('dest/**/*.*').on('change', browserSync.reload);
-  });
-
   //watching by all files in dest
   gulp.task('watch', function () {
-    gulp.watch(['app/styles/**/*.*', '!app/styles/amp-article.sass'], gulp.series('postcss'));
-    gulp.watch('app/styles/amp-article.sass', gulp.series('postcssAmp'));
+    gulp.watch(['app/styles/**/*.*', '!app/styles/amp.sass'], gulp.series('postcss'));
+    gulp.watch('app/styles/amp.sass', gulp.series('postcssAmp'));
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
@@ -210,5 +138,4 @@
     gulp.watch('app/libs/**/*.css', gulp.series('libs-css'));
   });
 
-  gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'server')));
 })();

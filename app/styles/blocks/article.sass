@@ -3,10 +3,6 @@
   background: $neutral
   margin: 0 0 16px
 
-  .image-popup-vertical-fit
-    display: block
-    margin-bottom: .8rem
-
   &__lead
     margin: 24px 0
     display: flex
@@ -93,11 +89,6 @@
     min-height: @sm-down 246px
     display: @sm-down flex
     align-items: @sm-down center
-
-    &-mark
-      text: $body-tiny
-      text: $pseudo-neutral-900
-      margin-left: .4rem
 
   .card
     margin: 1rem 0
@@ -234,82 +225,11 @@
     &-blockquote
       text: #263238 700 13px 1.8 @md 15px
 
-  table
-    max-width: 736px
-    width: 100% !important
-    display: block
-    overflow-x: auto
-    border-top: 0
-    margin: 1.5rem * @xl 2rem *
-
-    p, ol:not([class]), ul:not([class])
-      margin: 0
-      text: 13px 1.8
-
-    td
-      min-width: 170px
-
-    &::-webkit-scrollbar-track
-      border-radius: 10px
-      background-color: #546e7a
-      width: 6px
-
-    &::-webkit-scrollbar
-      height: 8px
-      border-radius: 10px
-      background-color: #546e7a
-
-    &::-webkit-scrollbar-thumb
-      border-radius: 10px
-      background-color: #4e616d
-
   .something--content
     margin: @sm-down 1.5rem -1rem
 
   &--mobile-visible
     display: block @md none
-
-  .card__title
-    padding: .5rem 1rem
-    margin: 0
-    background-color: transparent
-
-  ol
-    list-style-type: decimal
-    margin: 2rem 0 @xl 2.1rem 0 3rem
-    padding: 0
-    padding-left: 1.1rem @xl 1rem
-
-    ol
-      margin: 1rem 0 @xl 1.5rem 0 2rem
-
-    li
-      text: 500 13px 1.8 @md 15px
-
-      + li
-        margin-top: 1rem @xl 1.5rem
-
-  ul:not([class])
-    margin: 2rem 0 @xl 2.1rem 0 3rem
-    padding: 0
-    padding-left: 1.1rem @xl 1.5rem
-    list-style: none
-
-    ul
-      margin: 1rem 0 @xl 1.5rem 0 2rem
-
-    li
-      text: 500 13px 1.8 @md 15px
-      position: relative
-
-      + li
-        margin-top: 1rem @xl 1.5rem
-
-      &:before
-        content: "•"
-        display: block
-        position: absolute
-        left: -1.1rem @xl -1.5rem
 
 .about-author
   position: relative
@@ -371,9 +291,9 @@
     text: 500 15px 1.6
     margin: 0 0 0 -52px @xl 0
 
-.disclaimer
-  margin-top: .8rem
+.disclaimer, .caption
+  text: #90A4AE 15px
 
-  &_text
-    text: #546e7a .8125rem 1rem 500
-    margin-bottom: 0
+.disclaimer_text
+  text: #546e7a 500 15px 1.4
+  margin: 12px 0 0

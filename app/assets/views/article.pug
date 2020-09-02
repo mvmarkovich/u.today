@@ -15,16 +15,15 @@ block content
 
                 .article_main-info
                     .article_main-info__humble
-                        .humble Monday, November 11 — 8:15 PM
-                        .humble.humble--tiny.humble--comments 256
-                        .humble.humble--tiny.humble--liked 31
-                        .humble.humble--tiny.humble--views 125k
-
                         .social
-                            span.social__link--name Share:
-                            a.social__link.social__link--tiny.social__link--tg(href="#!") Telegram
-                            a.social__link.social__link--tiny.social__link--tw(href="#!") Twitter
-                            a.social__link.social__link--tiny.social__link--fb(href="#!") Facebook
+                            a.social__link.social__link--bg.social__link--tw(href="#!") Twitter
+                            a.social__link.social__link--bg.social__link--fb(href="#!") Facebook
+                            a.social__link.social__link--bg.social__link--ln(href="#!") LinkedIn
+
+                        .humble Monday, November 11 — 8:15 PM
+                        .humble.humble--icon.humble--comments 256
+                        .humble.humble--icon.humble--liked 31
+                        .humble.humble--icon.humble--views 125k
 
                 .article__lead
                     a.article__lead-img--wrapper(href="#!")
@@ -67,28 +66,9 @@ block content
 
                     p!= articleTexts[3]
 
-                    blockquote
-                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
-
-                        img(src="https://dummyimage.com/64x64/d8dbde/aaa" alt="Image")
-                        strong Bob Stewarts
-                        em CEO of uToday
-
                     p!= articleTexts[0]
 
-                    blockquote
-                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
-
-                        strong Bob Stewarts
-                        em CEO of uToday
-
                     p!= articleTexts[1]
-
-                    blockquote
-                        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.
-
-                        strong Bob Stewarts
-
                     p!= articleTexts[2]
 
                     blockquote
@@ -112,10 +92,10 @@ block content
 
                     .something.something--content
                         .something__content-long
-                            img(src="img/something/long.png" width="728" height="90" alt="something-wide")
+                            img(src="img/something/something__central-728x90.png" alt="Something central")
 
                         .something__content-square
-                            img(src="img/something/square.png" width="300" height="250" alt="something-square")
+                            img(src="img/something/something__central-336x280.png" alt="Something central")
 
                     p!= articleTexts[2]
 
