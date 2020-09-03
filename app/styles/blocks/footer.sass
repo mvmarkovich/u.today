@@ -1,104 +1,121 @@
 .footer
-  margin-top: 2rem @md 3rem @xl 4rem
-  background-color: $neutral
-  border-top: 4px solid $pseudo-neutral-900
+  margin-top: 32px
+  position: relative
+  z-index: 150
+  background: $neutral
 
   &__container
-    max-width: @xl 1152px @md 768px @md-down 480px
+    padding: 0 16px
+    max-width: 100% @md 768px @xl 1152px
     margin: 0 auto
-    padding: 0 1rem
-
-  &__row
-    box: space-between
-    flex-wrap: wrap @md nowrap
-    padding: 1.6rem * @md 2.6rem * @xl 3.2rem * 3.5rem
-    border-bottom: $border
 
   &__title
-    text: $header-super-tiny @xl $header-tiny
-    margin-bottom: .8rem @md 1.7rem
+    text: 600 13px 1.2 @md 15px
+    margin: 0 0 12px
     display: block
 
-  &__follow-us
-    margin-right: 0 @md 1rem @xl 3.6rem
-    margin-bottom: @md-down 1.4rem
-    width: @md-down 100%
+  &:before
+    content: ''
+    display: block
+    border-bottom: 3px solid #263238
 
-    .footer__title
+  &__row
+    flex-wrap: wrap @md nowrap
+    padding-top: 24px @md 40px
+    padding-bottom: 24px @md 40px
+    border-bottom: 1px solid #CFD8DC
+    display: flex
+    justify-content: space-between
+
+  &__follow-us
+    margin-right: 0 @md 16px @xl 40px
+    margin-bottom: @xl-down 24px
+    width: @xl-down 100%
+
+    ^&__title
       white-space: nowrap
 
   &__subscribe
-    width: @md-down 100%
+    width: @xl-down 100%
 
     &-form
-      height: auto @md 40px
+      flex-wrap: wrap @xl nowrap
+
+      .input
+        margin: @md 0
+
+        &:first-child
+          margin-right: 16px
+          width: 100% @md auto
+          display: block
 
     &-input
-      width: @md 116px @xl 269px
+      width: @md 237px
 
     &-agree
-      text: $pseudo-neutral-400 $body-tiny
-      margin-top: 0 @sm -2px
+      text: #546e7a 500 13px 2.1
+      margin: @xl -6px 0 0
 
   &__nav
-    padding: 1.3rem * 0.3rem @md 2.5rem * @xl 3.5rem *
-    border-bottom: $border
     position: relative
+    padding: 21px 0 16px
+    border-bottom: 1px solid #cfd8dc
 
     &-list
-
-      box: wrap @md space-between
+      margin: -24px 0 0
+      list-style: none
+      padding: 0
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
 
     &-item
-      width: 60% @sm 33% @md auto
-      margin-bottom: @md-down 1.1rem
+      width: 60% @sm 35% @md 33% @xl auto
       white-space: nowrap
+      margin-top: 24px
 
       &:nth-child(even)
-        width: @sm-down 40%
+        width: 30% @md 33% @xl auto
 
-    // &:last-child
-    //   position: @md absolute
-    //   top: 80px @xl 96px
-    //   right: 24px @xl 32px
     &-link
-      @extend .link-plain
-      text: $pseudo-neutral-900 $header-tiny @md $header-super-tiny @xl $header-tiny
+      text: #263238 600 17px 1.4
 
     &-child
 
       &-list
-        margin-top: 1rem
-        display: @md-down none
+        display: none @sm block
+        margin: 16px 0 0
+        list-style: none
+        padding: 0
 
       &-item
 
         & + &
-          margin-top: 0.94rem @xl 1rem
+          margin-top: 10px
 
       &-link
-        text: $body-tiny @xl $body-small
-        text: $pseudo-neutral-900
-
+        text: #263238 500 13px 2.1 @md 15px
 
   &__copy
-    box: wrap @md center
-    padding: 1.5rem * @md 1rem * @xl 1.1rem *
+    padding: 24px 0
+    display: flex
+    flex-wrap: wrap
 
     &-text
-      text: $body-small
-      text: $pseudo-neutral-400
-      margin-right: 2rem
-      margin-bottom: @sm-down 1rem
+      text: #546E7A 500 15px 1.9
+      margin-right: 32px
 
     &-link
-      text: $body-small
-      text: $pseudo-neutral-400
+      text: #2962FF 500 15px 1.9
+      margin: 0 12px 0 0
+
+    p
+      margin: 0 0 16px
 
   &__disclaimer
-    border-bottom: 1px solid $pseudo-neutral-100
-    padding: 1.1875rem 0 .8125rem 0
+    border-bottom: 1px solid #cfd8dc
+    padding: 16px 0 12px
 
     &-text
-      text: $pseudo-neutral-400 .8125rem 1.5rem
-      margin-bottom: 0
+      text: #546e7a 500 15px 1.6
+      margin: 0

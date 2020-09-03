@@ -298,15 +298,12 @@
 
   $(".news__item:hidden").slice(0, 5).show();
 
-  if($(".news__item").length < 6){
-    $('.news .btn--block').hide();
-  }
-
   $('.news .btn--show').on('click', function(){
     $(".news__item:hidden").slice(0, 5).show();
 
     if($(".news__item:hidden").length < 1){
-      $('.news .btn--block').hide();
+      $('.news .btn--show').hide();
+      $('.news .btn--show-all').css("display", "inline-flex");
     }
   });
 

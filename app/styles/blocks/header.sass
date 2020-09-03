@@ -11,7 +11,7 @@
     padding: 0 16px
     position: relative
     will-change: transform
-    max-width: @xl 1152px @md 768px @md-down 480px
+    max-width: 100% @md 768px @xl 1152px
     margin: 0 auto
 
   &__logo
@@ -46,7 +46,6 @@
     display: none @md block
 
     &-list
-
       box: vertical @md horizontal space-between @xl center
       background: @md-down #fff
       padding-top: @md-down .8rem
@@ -92,6 +91,12 @@
           &:after
             right: auto @md 24px
 
+          ^^^&-link
+            text: $accent-1-medium
+
+            &:after
+              background-image: svg-load("icons/triangle-down.svg", fill="$accent-1-medium")
+
         ^^^&-link
           pointer-events: @md-down none
 
@@ -127,7 +132,7 @@
         bottom: @md-down 0
         width: @md-down 205px
         overflow: @md-down auto
-        padding-top: .5rem
+        padding-top: 8px
         border-radius: @md 2px
         border: @md 1px solid $pseudo-neutral-300
         min-width: @md 190px
@@ -148,14 +153,14 @@
           background: @md $neutral-100
 
       &-link
-        text: $pseudo-neutral-900 11px 1.4 600
+        text: $pseudo-neutral-900 13px 1.4 600
         text-decoration: none
         text-transform: none
         letter-spacing: normal
         white-space: nowrap
-        height: 2.5rem
+        height: 40px
         box: center
-        padding: * .8rem
+        padding: * 16px
 
   &__panel
     box: center space-between

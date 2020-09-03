@@ -7,6 +7,7 @@
   text-decoration: none
   border: $border
   background: transparent
+  transition: .15s
   display: inline-flex
   align-items: center
   justify-content: center
@@ -15,6 +16,9 @@
   cursor: pointer
   user-select: none
   -webkit-tap-highlight-color: transparent
+
+  &:hover
+    text: $accent-1-medium
 
   &--wide
     padding: * 1rem
@@ -77,6 +81,9 @@
 
   &--show
 
+    &-all
+      display: none
+
     &--open
       display: none
 
@@ -96,10 +103,18 @@
     border-color: $accent-1-light
     text: #fff
 
+    &:hover
+      background: $accent-1-dark
+      border-color: $accent-1-dark
+      text: #fff
+
   &--accent-2
     background: $accent-2-medium
     border-color: $accent-2-medium
     text: #fff
+
+    &:hover
+      text: #fff
 
   &--accent-3
     background: #2E7D32
