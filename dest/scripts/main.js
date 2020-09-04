@@ -282,15 +282,6 @@
   });
 
   //
-  // Button show more
-  //
-
-  $(".main-news-block").on("click", ".btn--show", function () {
-        $(this).parent().addClass("content--open");
-        $(this).addClass("btn--show--open");
-    });
-
-  //
   // Button load more in News main
   //
 
