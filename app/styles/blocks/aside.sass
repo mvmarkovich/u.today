@@ -181,7 +181,11 @@
 
     &-icon
       padding: 16px
-      height: 56px
+      size: 56px
+      min-width: 56px
+      background-repeat: no-repeat
+      background-size: 24px
+      background-position: center
 
     &-title
       text: $neutral 700 15px 33px
@@ -192,32 +196,36 @@
       height: 56px
 
     &-nick
-      text: 13px 1.1
+      text: $neutral 13px 1.1
 
     &-fb
       ^&-icon
-        background: #3B5998
+        background-image: resolve("icons/social/facebook-white.svg")
+        background-color: #3B5998
 
       ^&-desc
         background: #213256
 
     &-tw
       ^&-icon
-        background: #1DA1F2
+        background-image: resolve("icons/social/twitter-white.svg")
+        background-color: #1DA1F2
 
       ^&-desc
         background: #105B88
 
     &-yb
       ^&-icon
-        background: red
+        background-image: resolve("icons/social/youtube-white.svg")
+        background-color: #FF0000
 
       ^&-desc
         background: #8F0000
 
     &-tm
       ^&-icon
-        background: #08C
+        background-image: resolve("icons/social/telegram-white.svg")
+        background-color: #08C
 
       ^&-desc
         background: #069
@@ -227,7 +235,8 @@
       width: 100% @sm 100% @md 100% @xl 100%
 
       ^&-icon
-        background: #2979FF
+        background-image: resolve("icons/social/email-white.svg")
+        background-color: #2979FF
 
       ^&-desc
         background: #17448F
