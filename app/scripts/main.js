@@ -298,4 +298,17 @@
     }
   });
 
+  //
+  // Copy URL Share block
+  //
+
+  document.querySelector('.social__link--copy').addEventListener('click', function(e) {
+    var copytext = document.createElement('input');
+    copytext.value = window.location.href;
+    document.body.appendChild(copytext);
+    copytext.select();
+    document.execCommand('copy');
+    document.body.removeChild(copytext)
+  });
+
 })(jQuery);

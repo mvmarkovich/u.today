@@ -3,3 +3,34 @@
   &__circle
     color: transparent
     text-indent: -9999px
+
+  &--row
+    box: center space-between
+    margin: 16px 0
+
+    .social__link
+      width: 100%
+      height: 32px @sm 48px
+      border-radius: 8px @sm 0
+      margin: 0 8px 0 0 @sm 0 16px 0 0
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &-fb
+        background: #3B5998
+
+      &-tw
+        background: #1DA1F2
+
+      &-em
+        background: #2962FF
+
+      &:hover
+        background-color: $accent-1-medium
+
+      &:active
+        background-color: $accent-1-dark
+
+      &:last-child
+        margin: 0

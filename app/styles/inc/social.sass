@@ -31,55 +31,64 @@
     text-indent: -9999px
 
     &--fb
-      background-image: svg-load("icons/social/facebook.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/facebook-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/facebook.svg" fill: $fb-color)
 
+      &-white
+        background-image: resolve("icons/social/facebook-white.svg")
+
     &--tg
-      background-image: svg-load("icons/social/telegram.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/telegram-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/telegram.svg" fill: $tg-color)
 
+      &-white
+        background-image: resolve("icons/social/telegram-white.svg")
+
     &--tw
-      background-image: svg-load("icons/social/twitter.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/twitter-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/twitter.svg" fill: $tw-color)
 
+      &-white
+        background-image: resolve("icons/social/twitter-white.svg")
+
     &--em
-      background-image: svg-load("icons/social/email.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/email-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/email.svg" fill: $accent-1-medium)
 
     &--yt
-      background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/youtube-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/youtube.svg" fill: $yt-color)
 
     &--rd
-      background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/reddit-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/reddit.svg" fill: $rd-color)
 
     &--rs
-      background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/rss-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/rss.svg" fill: $rs-color)
 
     &--ln
-      background-image: svg-load("icons/social/linkedIn.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/linkedIn-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/linkedIn.svg" fill: $ln-color)
 
     &--insta
-      background-image: svg-load("icons/social/instagram.svg" fill: $pseudo-neutral-200)
+      background-image: resolve("icons/social/instagram-gray.svg")
 
       &:hover, &-paint
         background-image: svg-load("icons/social/instagram.svg" fill: $insta-color)
@@ -101,6 +110,9 @@
       &.social__link--ln
         background-color: $ln-color
         background-image: resolve("icons/social/linkedin-white.svg")
+
+    &--copy
+      background-image: resolve("icons/copy.svg")
 
 .share__social
   margin: 0 16px 8px 0

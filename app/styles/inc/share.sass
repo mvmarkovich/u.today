@@ -1,138 +1,53 @@
 .share
-
-  &__square
-    size: 40px
-    display: block
-    box: center middle
-
-    & + &
-      margin-left: .5rem
-
-    &:before
-      content: ""
-      display: block
-      background-repeat: no-repeat
-      background-position: center
-      size: 24px
-
-    &:hover
-      background: $neutral-100
-
-    &--fb
-      &:before
-        background-image: svg-load("icons/social/facebook.svg", fill: $fb-color)
-
-      &:active:before
-        background-image: svg-load("icons/social/facebook.svg", fill: $pseudo-neutral-900)
-
-    &--tg
-      &:before
-        background-image: svg-load("icons/social/telegram.svg", fill: $tg-color)
-
-      &:active:before
-        background-image: svg-load("icons/social/telegram.svg", fill: $pseudo-neutral-900)
-
-    &--tw
-      &:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
-
-      &:active:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $pseudo-neutral-900)
-
-    &--close
-      &:before
-        background-image: svg-load("icons/cross.svg", fill: $pseudo-neutral-200)
-
-      &:hover:before
-        background-image: svg-load("icons/cross.svg", fill: $accent-1-medium)
-
-      &:active:before
-        background-image: svg-load("icons/cross.svg", fill: $accent-1-dark)
-
   &__social
-    margin-top: 0 @md-l -4rem
-    background-color: #fff
-    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.5)
-    border-radius: 8px
-    padding: .5rem @md-l 1rem .5rem
-    overflow: hidden
-    display: @md-l-down flex
+    margin-top: 0 @md -172px
     z-index: 202
+    display: inline-flex @md block
+    width: 100% @md auto
 
-  &__circle
-    background-color: transparent
-    size: 32px
-    box: center middle
+    .social__link
+      background-color: #512DA8
+      margin: @md 0 0 16px
+      width: 100% @md 48px
+      height: 48px
+      outline: none
+      border: none
+      border-right: 1px solid $neutral @md none
 
-    & + &
-      margin-top: @md-l 1rem
-      margin-left: @md-l-down 1rem
+      &:active
+        background-color: #000
 
-    &:before
-      content: ""
-      display: block
-      background-repeat: no-repeat
-      background-position: center
-      size: 24px
+      &:last-child
+        margin: @md 0
+        border: none
 
-    &--fb
-      &:before
-        background-image: svg-load("icons/social/facebook.svg", fill: $fb-color)
+  &--row
+    box: center space-between
+    margin: 24px 0
 
-      &:active:before
-        background-image: svg-load("icons/social/facebook.svg", fill: $accent-1-dark)
+    .social__link
+      width: 100%
+      height: 32px @sm 48px
+      border-radius: 8px @sm 0
+      margin: 0 8px 0 0 @sm 0 16px 0 0
 
-    &--tg
-      &:before
-        background-image: svg-load("icons/social/telegram.svg", fill: $tg-color)
+      &--fb-white
+        background-color: #3B5998
 
-      &:active:before
-        background-image: svg-load("icons/social/telegram.svg", fill: $accent-1-dark)
+      &--tw-white
+        background-color: #1DA1F2
 
-    &--tw
-      &:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $tw-color)
+      &--tg-white
+        background-color: #0088CC
 
-      &:active:before
-        background-image: svg-load("icons/social/twitter.svg", fill: $accent-1-dark)
+      &--copy
+        background-color: #2962FF
 
-    &--up
-      size: 48px
-      border-radius: 8px
-      box-shadow: 0 4px 8px rgba(33, 150, 243, 0.5)
-      background-color: $neutral
-      margin-top: auto
-      display: none @md-l flex
+      &:hover
+        background-color: $accent-1-medium
 
-      &:before
-        background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-light)
-        size: 18px 24px
-        transform: rotate(90deg)
+      &:active
+        background-color: $accent-1-dark
 
-      &:hover:before
-        background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-medium)
-
-      &:active:before
-        background-image: svg-load("icons/arrow_long.svg", fill: $accent-1-dark)
-
-  &-and-up
-    position: fixed
-    left: 1rem @md-l 1rem @xl calc(50% - 560px - 112px)
-    top: @md-l 50%
-    bottom: 1rem
-    box: horizontal center middle @md-l vertical top
-    z-index: 201
-
-  &-post
-    position: absolute -9999px null null -9999px
-    box: horizontal
-    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.15)
-    border-radius: 2px
-    padding: * .5rem
-    background-color: #fff
-    transform: translate(-84%, -17%)
-    z-index: 99
-
-@media (max-width: 1367px)
-  .share-and-up
-    left: 1rem
+      &:last-child
+        margin: 0
