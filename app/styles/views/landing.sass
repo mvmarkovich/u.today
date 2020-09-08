@@ -1,4 +1,5 @@
 .landing
+  margin: -16px 0 0
 
   & ~ .footer
     margin-top: 0
@@ -6,12 +7,12 @@
   &__title
     text: $neutral 600 22px @md 31px @xl 43px
     text-align: center
-    margin-bottom: 2rem @xl 2.75rem
+    margin-bottom: 32px @xl 44px
 
   &__subtitle
     text: 600 22px @md 24px @xl 31px
     text-align: center
-    margin-bottom: 4rem
+    margin-bottom: 64px
 
   &__descr
     text: $pseudo-neutral-900 500 14px @xl 18px
@@ -23,17 +24,16 @@
     text-align: center
 
   &__caption
-    margin-top: 1.5rem
+    margin-top: 24px
     display: block
     text-align: center
 
   .text-link
-    
     text: $accent-1-light
 
   .btn--block
     justify-content: center
-    margin-top: 3rem
+    margin-top: 48px
 
     .btn
       min-width: 230px
@@ -42,38 +42,38 @@
     border-top: $border
 
   .text-grey
-    text: $pseudo-neutral-200
+    text: $pseudo-neutral-400
 
   h3
     text: 600 15px @xl 24px
     text-align: center
-    margin-bottom: 3rem
+    margin-bottom: 48px
 
   h2 ~ h3
-    margin-top: -3rem
+    margin-top: -48px
 
   &__section
     background-color: #fff
 
     .container
-      padding: 4rem *
+      padding: 64px *
 
     &-big
       .container
-        padding: 4rem * @xl 90px * 75px
+        padding: 64px * @xl 90px * 75px
 
     &-large
       .container
-        padding: 4rem * @xl 4rem * 130px
+        padding: 64px * @xl 64px * 130px
 
     &-background
-      background-image: url("../img/content/background/bg-landing-1.png")
+      background-image: resolve("content/background/bg-landing-1.png")
       background-size: cover
       background-position: center
       background-repeat: no-repeat
 
       &--map
-        background-image: url("../img/content/background/bg-landing-2.png")
+        background-image: resolve("content/background/bg-landing-2.png")
         background-size: contain
         background-position: center
         background-repeat: no-repeat
@@ -88,25 +88,26 @@
       box: space-between
       align-items: flex-start
       flex-wrap: wrap
-      margin-top: 0 @md -2rem
+      margin-top: 0 @md -32px
 
     &-item
       width: 100% @md 48%
       display: inline-flex
       align-items: flex-start
-      margin-top: 0 @md 2rem
+      margin-top: 0 @md 32px
 
       & + &
-        margin-top: 2rem
+        margin-top: 32px
 
     &-name
       text: 500 14px 1.8 @xl 17px
+      margin: 0
 
     &-img
 
       &--wrapper
         display: block
-        margin-right: 2rem @xl 2.5rem
+        margin-right: 32px @xl 40px
         min-width: 48px
         size: 48px
         position: relative
@@ -118,17 +119,17 @@
       box: space-between
       align-items: flex-start
       flex-wrap: wrap
-      margin-top: 0 @md 2rem
+      margin-top: 0 @md 32px
 
     &-item
       text: 500 14px 1.8 @xl 17px
       width: 100% @md 48%
       display: inline-flex
       align-items: flex-start
-      margin-top: 0 @md 2rem
+      margin-top: 0 @md 32px
 
       & + &
-        margin-top: 2rem
+        margin-top: 32px
 
       &:before
         content: ''
@@ -139,9 +140,9 @@
         size: 48px
         min-width: 48px
         display: block
-        margin-right: 2rem @xl 2.5rem
+        margin-right: 32px @xl 40px
         position: relative
-        top: 3px @xl 7px
+        top: 1px @xl 5px
 
   &__location
 
@@ -150,14 +151,14 @@
       box: space-between
       align-items: flex-start
       flex-wrap: wrap
-      margin-top: -1.5rem
+      margin-top: -24px
 
     &-item
       text: $neutral 500 14px 1.8 @xl 17px
       width: 49% @sm 30% @md 26%
       display: inline-flex
       align-items: center
-      margin-top: 1.5rem
+      margin-top: 24px
 
       &:before
         content: ''
@@ -168,7 +169,7 @@
         size: 24px
         min-width: 24px
         display: block
-        margin-right: .75rem
+        margin-right: 12px
 
   &__statistics
 
@@ -185,7 +186,7 @@
 
       & + &
         margin-left: @md 60px @xl 80px
-        margin-top: @sm-down 1.5rem
+        margin-top: @sm-down 24px
 
     &-caption
       text: $neutral 500 14px 1.8 @md 17px
@@ -205,16 +206,16 @@
     flex-wrap: wrap @md nowrap
     align-items: center
     justify-content: space-between @md center
-    margin-top: 1.5rem @md 2rem @xl 3rem
+    margin-top: 24px @md 32px @xl 48px
 
     &-img
 
       &--wrapper
         width: @md-down 31%
-        margin-top: @md-down 1.25rem
+        margin-top: @md-down 18px
 
         & + &
-          margin-left: @md 1.25rem
+          margin-left: @md 18px
 
 
 
