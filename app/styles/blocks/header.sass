@@ -97,22 +97,19 @@
             &:after
               background-image: svg-load("icons/triangle-down.svg", fill="$accent-1-medium")
 
-        ^^^&-link
-          pointer-events: @md-down none
-
-          &:after
-            transform: @md scaleY(-1)
-
         &:after
           right: auto @md 24px
 
-        ^^&-link:after
-          content: ""
-          display: block
-          background: resolve("icons/triangle-down.svg") center
-          size: 24px 12px
-          transform: @md-down rotate(-90deg)
-          margin-right: @md-down 0.8rem
+        ^^&-link
+          pointer-events: @md-down none
+
+          &:after
+            content: ""
+            display: block
+            background: resolve("icons/triangle-down.svg") center
+            size: 24px 12px
+            transform: @md-down rotate(-90deg)
+            margin-right: @md-down 0.8rem
 
     &-link
       text: $pseudo-neutral-900 600 0.9375rem 1.4 normal
@@ -120,7 +117,6 @@
       box: space-between center @md left center
       padding: 0 0 .75rem @md-down 0 0 0 1rem
       height: @md-down 3rem
-      pointer-events: @md-down none
 
     &-child
 
