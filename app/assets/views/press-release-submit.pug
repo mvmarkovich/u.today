@@ -33,4 +33,23 @@ block content
                             .table-plan__col Cost
                             .table-plan__col $600*
 
+                    h2 Order the publication right now
+
+                    form.form--half(action="/" method="post")
+                        .input
+                            label.input__label Your name
+                            input.input__elem(type="text" name="name" placeholder="John Doe")
+
+                        .input
+                            label.input__label Your email
+                            input.input__elem(type="text" name="email" placeholder="john@sitename.com")
+
+                        .input
+                            label.input__label Upload your file
+                            input.input__file(type="file" id="attach-file")
+                            label.input__label-file(for="attach-file")
+                                span Select File
+
+                        button.btn.btn--input.btn--accent(type="submit") Order now
+
         include blocks/aside.pug

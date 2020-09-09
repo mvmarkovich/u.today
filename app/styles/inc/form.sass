@@ -16,6 +16,10 @@
   &__submit
     margin-top: 1.4rem @md 2rem
 
+  &--half
+    width: 100%
+    max-width: 360px
+
 .input
   margin-bottom: 1rem
   position: relative
@@ -144,6 +148,7 @@
       line-height: 1.1
       background-size: 24px 24px
       background-position: 47px center
+
     &:valid
       border-color: #CFD8DC
 
@@ -165,11 +170,25 @@
     ^&__error
       display: block
 
-  &__counter
-    position: absolute 6px 16px null null
-    text: #546e7a .8125rem 1.9 500
+  &__label
+    margin: 0 0 4px
+    text: #757575 14px 1.5
 
-  &-account--name
+    &-file
+      text: 500 #2962ff 14px 1.5
+      border: 1px solid #9E9E9E
+      size: 180px 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
 
-    .input__elem
-      padding: 0 3rem 0 2rem
+      &:after
+        content: ''
+        size: 32px
+        background: resolve("icons/attach_file.svg") no-repeat center / contain
+        margin: 0 0 0 4px
+        display: block
+
+      &:hover
+        border-color: #2962ff
