@@ -311,7 +311,7 @@
     document.body.removeChild(copytext)
   });
 
-  $('.article').bind('copy cut drag drop', function (e) {
+  $('body').bind('copy cut drag drop', function (e) {
     e.preventDefault();
   });
 
