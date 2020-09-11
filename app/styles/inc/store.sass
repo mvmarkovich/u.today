@@ -3,21 +3,18 @@
   align-items: center
 
   &__link
-    size: 1.5rem
+    size: 48px
     background-position: center
     background-repeat: no-repeat
 
-    & + &
-      margin-left: 1rem
-
-    &--gp
-      background-image: svg-load("icons/store-google.svg" fill: $pseudo-neutral-200)
+    &-gp
+      background-image: resolve("icons/store-google.svg")
 
       &:hover
-        background-image: svg-load("icons/store-google.svg" fill: $pm-color)
+        background-image: svg-load("icons/store-google.svg" fill: $accent-1-dark)
 
-    &--as
-      background-image: svg-load("icons/store-apple.svg" fill: $pseudo-neutral-200)
+    &-as
+      background-image: resolve("icons/store-apple.svg")
 
       &:hover
-        background-image: svg-load("icons/store-apple.svg" fill: $as-color)
+        background-image: svg-load("icons/store-apple.svg" fill: $accent-1-dark)

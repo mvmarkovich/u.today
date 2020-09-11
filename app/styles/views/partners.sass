@@ -1,65 +1,83 @@
 .partners
 
   &__list
-    box: wrap
+    display: flex
+    flex-wrap: wrap
 
   &__item
     width: 100%
     background-color: #fff
-    padding: 1.5rem 1rem @sm 2rem
+    padding: 24px 16px @sm 32px
+    display: @sm flex
+    align-items: @sm flex-start
     border-bottom: 1px solid #CFD8DC
-    box:
-    align-items: flex-start
-
-    &:last-child
-      padding-bottom: 0
-      border-bottom: 0
 
   .img-link
     min-width: 96px
     max-width: 96px
 
   &__img
-    max-width: 80px @xl 96px
+    max-width: 128px
+    min-width: 128px
 
   &__row
-    box: center
-    margin: 1rem 0 0 -112px @sm 1rem 0 0
+    display: flex
+    align-items: center
+    margin: @sm 16px 0 0
 
   &__info
-    margin-left: 2rem
+    margin: 24px 0 0 @sm 0 0 0 32px
 
     p
-      text: 13px 1.8 500 @xl 15px 2.2
-      margin: 1rem 0 0 -112px @sm 1rem 0
+      text: 500 13px 1.8
+      margin: 16px 0
 
   &__name
-    text: 13px 1.3 600 @sm 15px @xl 17px
-    height: @sm-down 80px
+    text: 600 13px 1.3 @sm 15px
 
   &__link
-    margin-right: 1.5rem
-    text: #2979FF 13px 1.8 500 @xl 15px 2.2
+    margin: 0 12px 0 0
+    text: 500 13px 1.8
 
-.list-check
-  box: wrap
-  list-style: none
-  padding: 0
+  &__lead
+    background: $neutral
+    padding: 24px 16px @sm 24px 32px 32px @xl 52px 64px 64px
+    margin: 0 0 16px
 
-  li
-    width: 100% @xl 50%
-    text: $body-small @xl $body-standart
-    box: center
-    margin-bottom: 1rem
+    &-mark
+      display: flex
+      align-items: center
+      margin: 0 0 24px
+      text: #F44336 700 1.6 15px
+      padding: 0 0 0 32px
+      background: resolve("icons/crown.svg") no-repeat left center / 24px
 
-    &:before
-      content: ""
+    &-list
+      margin: 32px 0 0
+
+    &-item
+      margin: 0 0 56px
+
+      img
+        width: auto
+
+      &:last-child
+        margin: 0
+
+    p
+      font-size: 15px
+      line-height: 1.6
+      margin: 16px 0
+      font-weight: 500
+
+    a
+      margin: 12px 0 0
+      font-weight: 500
+
+    p a
       display: inline-block
-      size: 24px
-      min-width: 24px
-      background: resolve("icons/check.svg")
-      margin-right: 1rem
+      margin: 0
 
-  &--one-col
-    li
-      width: 100% @xl 100%
+  &__title
+    text: 800 35px 1.2
+    margin: 0 0 32px
