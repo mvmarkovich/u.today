@@ -21,11 +21,12 @@
       display: block
       padding: 12px 0 @md 0
 
-      ^^&__img-wrapper
-        max-width: unset
-        min-width: 1px
-        width: 100%
-        margin: @md 0
+      ^^&__img
+        &-wrapper
+          max-width: unset
+          min-width: 1px
+          width: 100%
+          margin: @md 0
 
       ^^&__title
         margin: 16px 16px 0 @md 12px 0
@@ -49,12 +50,16 @@
     left: 16px
     right: 16px
 
-  &__img-wrapper
-    max-width: 80px @sm 144px @md 100%
-    min-width: 80px @sm 144px @md 1px
-    margin-right: 16px @md 0
-    display: block
-    position: relative
+  &__img
+    position: @md absolute 0 null null 0
+
+    &-wrapper
+      max-width: 80px @sm 144px @md 100%
+      min-width: 80px @sm 144px @md 1px
+      padding-top: @md 62.5%
+      margin-right: 16px @md 0
+      display: block
+      position: relative
 
   &__title
     font-weight: 500
