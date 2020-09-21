@@ -74,7 +74,7 @@
   $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
   $mobileMenuCover.on("click", toggleMobileMenu);
-  $headerBtnSearch.on("click", toggleHeaderSearch)
+  $headerBtnSearch.on("click", toggleHeaderSearch);
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
   $(window).on("scroll", stickyHeader);
 
