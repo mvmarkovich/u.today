@@ -29,13 +29,19 @@
     vertical-align: top
 
     & + &
-      margin-left: 16px @xl 32px
+      margin-left: 16px @xl 28px
 
     &-img
+      position: absolute 0 null null 0
 
       &--wrapper
-        background: #ECEFF1
+        max-width: 180px @sm 214px @xl 224px
+        min-width: 180px @sm 214px @xl 224px
+        padding-top: 62.5%
+        margin-right: 16px @md 0
+        display: block
         position: relative
+        overflow: hidden
 
     &-name
       text: 500 13px 1.8
