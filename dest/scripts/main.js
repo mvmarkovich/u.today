@@ -74,7 +74,7 @@
   $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
   $mobileMenuCover.on("click", toggleMobileMenu);
-  $headerBtnSearch.on("click", toggleHeaderSearch)
+  $headerBtnSearch.on("click", toggleHeaderSearch);
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
   $(window).on("scroll", stickyHeader);
 
@@ -302,16 +302,17 @@
   // Copy URL Share block
   //
 
-  document.querySelector('.social__link--copy').addEventListener('click', function(e) {
-    var copytext = document.createElement('input');
-    copytext.value = window.location.href;
-    document.body.appendChild(copytext);
-    copytext.select();
-    document.execCommand('copy');
-    document.body.removeChild(copytext)
+  var $temp = $("<input>");
+  var $url = $(location).attr('href');
+
+  $('.social__link--copy').on('click', function() {
+    $("body").append($temp);
+    $temp.val($url).select();
+    document.execCommand("copy");
+    $temp.remove();
   });
 
-  $('body').bind('copy cut drag drop', function (e) {
+  $('.article__content').bind('copy cut drag drop', function (e) {
     e.preventDefault();
   });
 
