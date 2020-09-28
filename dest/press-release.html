@@ -327,30 +327,10 @@
       </div>
     </footer>
     <div class="modal" id="subscribe-form">
-      <div class="modal__item">
-        <button class="modal__close btn btn--light btn--cross-white" data-close-modal></button>
-        <div class="modal__item-header">
-          <div class="modal__item-header-title">All crypto news for</div>
-          <div class="modal__item-logo"></div>
-        </div>
-        <div class="modal__item-body">
-          <div class="modal__item-text">Sign up for crypto digest</div>
-          <form action="#" method="get">
-            <div class="input article__subscribe-input">
-              <input class="input__elem" type="text" name="email" placeholder="Email" required>
-            </div>
-            <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
-            <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="subscribe-form-title">
       <div class="modal__square">
         <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
-        <div class="modal__square-img"></div>
         <div class="modal__square-content">
-          <div class="modal__square-title">Get the latest news, tips and good insights to your inbox</div>
+          <div class="modal__square-title">Sign up for crypto digest</div>
           <form action="#" method="get">
             <div class="input article__subscribe-input">
               <input class="input__elem" type="text" name="email" placeholder="Email" required>
@@ -358,110 +338,6 @@
             <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
             <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
           </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="subscribe-form-text">
-      <div class="modal__square modal__square--text">
-        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
-        <div class="modal__square-img"></div>
-        <div class="modal__square-content">
-          <div class="modal__square-title">What will be your next move?</div>
-          <div class="modal__square-text">Sign up for crypto-trading tips & hints:</div>
-          <form action="#" method="get">
-            <div class="input article__subscribe-input">
-              <input class="input__elem" type="text" name="email" placeholder="Email" required>
-            </div>
-            <button class="btn btn--wide btn--input btn--accent" type="submit">Subscribe</button>
-            <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="giveaway">
-      <div class="modal__square modal__giveaway">
-        <button class="modal__close btn btn--light btn--cross" data-close-modal></button><a class="modal__giveaway-img" href="#!" target="_blank"><img src="./img/modals/giveaway-img.jpg"></a>
-      </div>
-    </div>
-    <div class="modal" id="log_in">
-      <div class="modal__square modal__entrance">
-        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
-        <div class="modal__entrance-header">
-          <div class="modal__entrance-title">Log in</div>
-        </div>
-        <div class="modal__entrance-content">
-          <form class="modal__log_in-form" id="form-log_in" action="#" method="get">
-            <div class="input">
-              <input class="input__elem validate[required]" type="text" maxlength="12" name="name" placeholder="Account name">
-            </div>
-            <div class="input">
-              <input class="input__elem validate[required]" type="password" name="password" placeholder="Brain key">
-            </div>
-            <button class="btn btn--input btn--accent btn_step" type="submit">Log in</button>
-          </form>
-          <div class="btn__block">
-            <button class="btn btn--wide btn--input register" data-modal="register">Register</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="register">
-      <div class="modal__square modal__entrance">
-        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
-        <div class="modal__entrance-header">
-          <div class="modal__entrance-title">Step 1</div>
-        </div>
-        <div class="modal__entrance-content">
-          <form class="modal__entrance-form" id="generate-brainkey" action="#" method="get">
-            <div class="input">
-              <input class="input__elem validate[required,custom[email]]" type="text" name="email" id="email" placeholder="Email">
-            </div>
-            <div class="input input-account--name"><span class="internet-dog">@</span>
-              <input class="input__elem validate[custom[onlyLetterSp], required, minSize[12]" type="text" data-field="item" maxlength="12" id="account_name" name="account_name" placeholder="Account name">
-              <div class="input__counter"><span class="counter" data-field="target">0</span><span class="counter">/12</span></div>
-            </div>
-            <div class="modal__entrance-caption">Exactly 12 characters, lower case, latin symbols and digits 1-5 only.</div>
-            <div class="input">
-              <input class="validate[required] input__checkbox" type="checkbox" name="agree-terms" id="agree-terms">
-              <label class="input__checkbox-label" for="agree-terms">I accept <a href="#!"> Terms and Conditions </a></label>
-            </div>
-            <button class="btn btn--input btn--accent btn_step" type="submit">Generate brainkey</button>
-          </form>
-          <div class="btn__block">
-            <button class="btn btn--input sign_in" data-modal="log_in">Or Sign In</button>
-          </div>
-        </div>
-      </div>
-      <div class="modal__square modal__entrance">
-        <button class="modal__back btn btn--light btn--back" data-back-modal></button>
-        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
-        <div class="modal__entrance-header">
-          <div class="modal__entrance-title">Step 2</div>
-        </div>
-        <div class="modal__entrance-content">
-          <div class="modal__entrance-text">The Brainkey is the seed phrase from which your public-private key pairs are generated. You can restore the public-private key pairs from your Brainkey if you lose the keys.</div>
-          <div class="modal__entrance-text bold">The Brainkey itself cannot be restored once lost!</div>
-          <div class="modal__entrance-text">Write it down on a paper and make a photo:</div>
-          <div class="modal__entrance-hashtags"><span class="modal__entrance-hashtag">bedfoot</span><span class="modal__entrance-hashtag">fueler</span><span class="modal__entrance-hashtag">indrawn</span><span class="modal__entrance-hashtag">naw</span><span class="modal__entrance-hashtag">mutely</span><span class="modal__entrance-hashtag">judo</span><span class="modal__entrance-hashtag">cajuput</span><span class="modal__entrance-hashtag">ounds</span><span class="modal__entrance-hashtag">soum</span><span class="modal__entrance-hashtag">turr</span><span class="modal__entrance-hashtag">bail</span><span class="modal__entrance-hashtag">gunshot</span></div>
-          <form class="modal__entrance-form" id="recorded-brainkey" action="#" method="get">
-            <div class="input">
-              <input class="validate[required] input__checkbox" type="checkbox" id="accept-brainkey" name="accept-brainkey">
-              <label class="input__checkbox-label" for="accept-brainkey">I accept <a href="#!">I recorded my Brainkey</a></label>
-            </div>
-            <button class="btn btn--input btn--accent btn--wide btn_step" type="submit" disabled>Finish</button>
-          </form>
-        </div>
-      </div>
-      <div class="modal__square modal__entrance">
-        <div class="modal__entrance-header">
-          <div class="modal__entrance-title">Registration completed</div>
-        </div>
-        <div class="modal__entrance-content">
-          <div class="modal__successfully-text">Registration was successfully completed</div>
-          <div class="modal__successfully-text">Please, wait to reload the page</div>
-          <div class="modal__timeout">
-            <div class="timeout__item"></div>
-          </div>
         </div>
       </div>
     </div>

@@ -134,6 +134,15 @@
     $('.modal__square:visible').hide().prev('.modal__square').show();
   }
 
+  setTimeout(function() {
+    $("#subscribe-form").addClass("modal--open");
+
+    $("body").css("overflow", "hidden");
+
+    setTimeout(function () {
+      $("#subscribe-form").addClass("modal--fadeIn");}, 50);
+  }, 30000);
+
   $("[data-modal]").on("click", openModal);
   $(".modal").on("click", closeModal);
   $("[data-close-modal]").on("click", closeModal);
