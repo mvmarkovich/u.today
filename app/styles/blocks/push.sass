@@ -1,0 +1,40 @@
+.push
+  text-align: center
+  position: fixed
+  top: @md 32px
+  left: 0 @md 50%
+  bottom: @md-down 0
+  right: @md-down 0
+  margin-left: @md -185px
+  padding: 16px @sm 24px @md 32px
+  box-shadow: 0 8px 24px rgba(13, 71, 161, 0.45)
+  background: $neutral
+  z-index: 994
+  max-width: @md 370px
+  width: 100%
+  display: none
+
+  &__title
+    text: 700 19px 1.6
+
+  &__headline
+    text: 500 15px 1.6
+    margin: 0 0 16px
+
+  .btn--block
+    margin: 16px 0 0
+    justify-content: center
+
+    & > *
+      margin: 0 16px 0 0
+      width: 100%
+      border-radius: 0
+      text: 500 15px
+
+      &:last-child
+        margin: 0
+
+  &__close
+    &:hover
+      border-color: #1565c0
+      text: #1565c0

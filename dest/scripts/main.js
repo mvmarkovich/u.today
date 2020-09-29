@@ -135,13 +135,12 @@
   }
 
   setTimeout(function() {
-    $("#subscribe-form").addClass("modal--open");
-
-    $("body").css("overflow", "hidden");
-
-    setTimeout(function () {
-      $("#subscribe-form").addClass("modal--fadeIn");}, 50);
+    $("#push-notice").fadeIn(90);
   }, 30000);
+
+  $('.push__close').on('click', function() {
+    $("#push-notice").fadeOut(90);
+  });
 
   $("[data-modal]").on("click", openModal);
   $(".modal").on("click", closeModal);
