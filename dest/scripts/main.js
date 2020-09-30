@@ -134,14 +134,6 @@
     $('.modal__square:visible').hide().prev('.modal__square').show();
   }
 
-  setTimeout(function() {
-    $("#push-notice").fadeIn(90);
-  }, 30000);
-
-  $('.push__close').on('click', function() {
-    $("#push-notice").fadeOut(90);
-  });
-
   $("[data-modal]").on("click", openModal);
   $(".modal").on("click", closeModal);
   $("[data-close-modal]").on("click", closeModal);
