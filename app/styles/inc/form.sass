@@ -192,3 +192,40 @@
 
       &:hover
         border-color: #2962ff
+
+.switch
+  input[type='checkbox']
+    -webkit-appearance: none
+    -moz-appearance: none
+    height: 24px
+    width: 40px
+    outline: none
+    display: inline-block
+    vertical-align: top
+    position: relative
+    margin: 0
+    cursor: pointer
+    background: #CFD8DC
+    transition: .2s
+    border-radius: 12px
+
+    &:after 
+      content: ''
+      display: block
+      position: absolute
+      background: $neutral
+      transition: .2s
+      left: 2px
+      top: 2px
+      border-radius: 50%
+      width: 20px
+      height: 20px
+
+    &:checked
+      background: #448AFF
+
+      &:after
+        transform: translateX(16px)
+
+  label
+    display: none

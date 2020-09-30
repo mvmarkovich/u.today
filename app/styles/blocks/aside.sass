@@ -242,15 +242,52 @@
 
     &-em
       margin: 0
-      width: 100% @sm 100% @md 100% @xl 100%
 
       ^&-icon
-        background-image: resolve("icons/social/email-white.svg")
-        background-color: #2979FF
+        background-image: svg-load("icons/social/email.svg", fill="#263238")
+        background-color: $neutral
+
+    &-notice
+      margin: 0
+
+      ^&-icon
+        background-image: resolve("icons/notice-blue.svg")
+        background-color: $neutral
+
+    &-form
+      width: 100%
+
+      ^&-item
+        width: 100%
+        margin: 8px 0 0
+        background-color: $neutral
+
+        &:first-child
+          margin: 0
 
       ^&-desc
-        background: #17448F
+        box: center space-between
         padding: 0 16px
 
-      ^&-title
-        line-height: 56px
+      ^&-icon
+        border-right: 1px solid #CFD8DC
+
+      ^&-notice
+        ^^&-title
+          text: #2962FF
+          font-weight: 500
+
+      ^&-em
+        ^^&-title
+          text: #546E7A
+
+      .input__elem
+        border: none
+        padding: 0
+        text: 500 15px 1.6
+
+        &:active,
+        &:focus
+          &::placeholder
+            text: transparent
+

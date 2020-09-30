@@ -59,11 +59,25 @@
           .card__subscribe-title Join
           .card__subscribe-nick @utoday_en
 
-      a.card__subscribe-item.card__subscribe-em(href="#!")
-        .card__subscribe-icon.card__subscribe-icon-em
+      form.card__subscribe-form
+        .card__subscribe-item.card__subscribe-notice
+          .card__subscribe-icon.card__subscribe-icon-notice
 
-        .card__subscribe-desc
-          .card__subscribe-title Subscribe to email
+          .card__subscribe-desc
+            .card__subscribe-title Enable push
+
+            .card__subscribe-radio.switch
+              input(id="enable-push" type="checkbox")
+              label(for="enable-push")
+
+        .card__subscribe-item.card__subscribe-em
+          .card__subscribe-icon.card__subscribe-icon-em
+
+          .card__subscribe-desc
+            input.input__elem(type="text" name="email" placeholder="Subscribe to email")
+
+            button.btn.btn--light.btn--arrow-long-right(type="submit")
+
 
   .card.card--press--release
     .card__body

@@ -153,6 +153,7 @@
   &--lightning-white,
   &--cross-white,
   &--notification,
+  &--arrow-long-right,
   &--back
     &:after
       content: ""
@@ -204,6 +205,15 @@
 
     &:hover:after
       background-image: svg-load("icons/triangle-right.svg", fill: $accent-1-medium)
+
+  &--arrow-long-right
+    &:after
+      background-image: resolve("icons/arrow-long-right.svg")
+      size: 24px
+      margin-left: 12px
+
+    &:hover:after
+      background-image: svg-load("icons/arrow-long-right.svg", fill: $accent-1-medium)
 
   &--search
     &:after
