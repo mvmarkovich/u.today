@@ -207,6 +207,10 @@
     }
   });
 
+  $('.memories .btn--show').on('click', function() {
+    $(this).parent().addClass("content--open")
+  });
+
   /*
   var sidebar = new StickySidebar('.aside-menu-block', {
     containerSelector: '.main-aside-container',
