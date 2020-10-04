@@ -211,6 +211,11 @@
     $(this).parent().addClass("content--open")
   });
 
+  $('.btn--show-more').on('click', function() {
+    $(this).css("display", "none");
+    $(this).siblings().css("max-height", "100%")
+  });
+
   /*
   var sidebar = new StickySidebar('.aside-menu-block', {
     containerSelector: '.main-aside-container',

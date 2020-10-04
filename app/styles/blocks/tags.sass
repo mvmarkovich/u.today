@@ -1,0 +1,84 @@
+.user-short
+  box: center
+
+  &__name
+    text: 700 15px 1.6
+
+  &__nick
+    text: #546E7A 13px 1.5
+
+  &__img-wrapper
+    overflow: hidden
+    border-radius: 50%
+    margin: 0 16px 0 0
+
+.tags-info
+  background-color: #fff
+  padding:  16px
+  margin: 0 0 16px
+  display: flex
+  position: relative
+
+  &__title
+    text: 700 23px 1.3
+    margin: 0 88px 16px 0 @sm 0 0 16px
+    min-height: @sm-down 48px
+
+  &__desc
+    text: 500 15px 1.6
+    margin: 16px 0 0
+    max-height: 90px @sm 60px
+    overflow: hidden
+
+  &__body
+    width: 100%
+
+  &__img
+    width: 100%
+
+    &-wrapper
+      margin: @sm 0 0 0 16px
+      position: absolute 16px 16px null null @sm static
+      max-width: 72px @sm 144px @xl 224px
+      min-width: 72px @sm 144px @xl 224px
+
+.tags-list
+  column-count: @sm 2
+  column-gap: @sm 8px
+
+.tags-content
+  margin: 16px 0
+
+  .btn--show-more
+    min-height: 72px
+    justify-content: center
+    margin: -16px 0 0
+
+    &:after
+      top: -72px
+
+.tags-item
+  background: $neutral
+  padding: 16px
+  margin: 8px *
+  page-break-inside: avoid
+  break-inside: avoid-column
+
+  .user-short
+    margin: 0 0 16px
+
+  &__desc
+    text: 15px 1.6
+    margin: 16px 0 0
+
+    a
+      word-break: break-word
+
+  &__img-wrapper
+    margin: 16px 0 0
+
+  &:first-child
+    margin-top: 0
+
+  &-short
+    padding: 0
