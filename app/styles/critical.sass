@@ -1,0 +1,380 @@
+@import 'inc/var.sss'
+
+@import 'inc/reset.css'
+
+body
+  text: $pseudo-neutral-900 400 16px 1.5
+  font-family: $font
+  background: $neutral-100
+  overflow-x: hidden
+
+h1, h2, h3, h4, h5
+  font-weight: 600
+  margin-top: 0
+
+h1
+  text: 700 26px 1.6
+  font-family: $font
+
+h2
+  text: $header-small @xl $header-standart
+  font-family: $font
+  margin-bottom: 0.9rem
+
+h3
+  text: $header-tiny @sm $header-small
+  font-family: $font
+  margin-bottom: 0.8rem
+
+h4
+  text: 17px 1.41
+  font-family: $font
+  margin-bottom: 0.7rem
+
+h5
+  text: 14px 1.4
+  font-family: $font
+  margin-bottom: 0.6rem
+
+.container
+  max-width: $container-sm-px
+  margin: * auto
+  padding: * 1rem @xl * .5rem
+
+@media $md
+.container
+  max-width: $container-md-px
+
+@media $lg
+.container
+  max-width: $container-lg-px
+
+@media $xl
+.container
+  max-width: $container-xl-px
+
+.page-container
+  background: transparent
+  padding: @xl-down 0
+  margin-top: .5rem @sm 1rem
+
+.main-block
+  width: 100% @md 480px @xl 768px
+
+  .something--content
+    margin: 16px 0
+
+.main-aside-container
+  box: space-between
+  flex-wrap: wrap @md nowrap
+  align-items: flex-start
+
+.main-news-block
+  width: 100% @md 480px @xl 760px
+  position: relative
+  z-index: 99
+
+.aside-menu-block
+  max-width: 100% @md 240px @xl 336px
+  width: 100%
+  position: relative
+  z-index: 7
+
+
+.header
+  background: #fff
+  position: relative
+  z-index: 996 @md 300
+  margin: 0 0 16px
+
+  &__container
+    box: center space-between
+    flex-wrap: wrap @xl nowrap
+    min-height: 48px @md 97px @xl 48px
+    padding: 0 16px
+    position: relative
+    will-change: transform
+    max-width: 100% @md 768px @xl 1152px
+    margin: 0 auto
+
+  &__social
+    display: none
+
+  &__logo
+    display: block
+    size: 125px 19px @md 132px 20px
+    min-width: 130px @md 132px
+
+  &__nav
+    margin-top: 1rem
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl 740px
+    display: none @md block
+
+    &-list
+      box: vertical @md horizontal space-between @xl center
+      background: @md-down #fff
+      padding-top: @md-down .8rem
+      padding-bottom: @md-down 1.7rem
+      margin: @xl 0 1.5rem
+
+      &.visibility-hidden
+        visibility: @xl-down visible
+
+    &-item
+      position: @md relative
+      font-family: $font
+
+      &:hover
+        &:before
+          display: @md-down block
+
+      &:after
+        content: ""
+        height: 40px @md 4px
+        margin-top: @md-down -44px
+        width: @md-down 4px
+        position: absolute auto auto auto 0 @md absolute auto 0 -1px 0
+        z-index: 997
+        display: none
+
+      &:hover
+        ^^&-child-list
+          display: @md block
+
+        &:after
+          background: $accent-1-medium
+
+      &--active:after
+        background: $pseudo-neutral-900
+
+      & + &
+        margin-left: 0 @md 1.4rem
+
+    &-link
+      text: $pseudo-neutral-900 600 15px 1.4 normal
+      text-decoration: none
+      box: space-between center @md left center
+      padding: 0 0 .75rem @md-down 0 0 0 1rem
+      height: @md-down 3rem
+
+    &-child
+      &-list
+        display: none
+
+  &__panel
+    box: center space-between
+    min-height: 48px
+    min-width: 48px
+
+    & > *
+      margin: 0 8px 0 0
+
+      &:last-child
+        margin: 0
+
+  &__search
+    position: absolute
+    left: 16px @md 215px @xl 240px
+    right: 16px @md 185px @xl 210px
+    top: 8px @md 10px @xl 8px
+    display: none
+
+  &__burger
+    display: @md none
+
+.mobile-menu
+  &-back
+    display: none
+
+
+.memories
+
+  &__title
+    text-align: @md center
+
+  &__main
+    background-color: #fff
+    padding: 1.5rem 1rem
+
+  &__people
+    margin-bottom: @sm 1.5rem @md 2rem
+    margin: @sm-down 0 -1rem 1rem
+    padding: @sm-down 0 1rem 1rem
+    border-bottom: @sm-down 8px solid #EEEEEE
+
+    &-list
+      box: space-between wrap
+      overflow: hidden
+      max-height: 275px @sm 235px @md 100%
+
+    &-item
+      text: #263238
+      margin-bottom: @sm 1rem
+      width: 100% @sm 48% @xl 32%
+      box: center
+
+      & + &
+        margin-top: @sm-down 1rem
+
+    &-img
+
+      &--wrapper
+        border: 1px solid #EEEEEE
+        border-radius: 50%
+        margin-right: 1rem
+        min-width: 40px
+        max-width: 40px
+        overflow: hidden
+
+    &-name
+      text: 15px 1.8 500
+
+    .btn
+      font-weight: 600
+      position: relative
+
+      &:before
+        content: ''
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        width: 100%
+        height: 80px
+        position: absolute
+        display: block
+        bottom: 31px
+
+    .btn--arrow-down
+
+      &:after
+        position: absolute
+        right: .7rem
+
+.aside-story
+  padding-bottom: 12px
+  display: flex
+  align-items: flex-start
+  width: 100%
+
+  &:last-child
+    padding-bottom: 0
+
+  & + &
+    padding-top: 16px
+    border-top: 1px solid #eceff1
+
+  &__name
+    text: #263238 13px 1.2 600
+
+  &__img
+    border-radius: 2px
+    width: 100%
+
+    &-wrapper
+      position: relative
+      max-width: 72px
+      min-width: 72px
+      border-radius: 2px
+
+  &__info
+    display: flex
+    align-items: center
+    margin-left: 8px
+
+  &__body
+    margin-top: -6px
+
+.card
+  background-color: #fff
+  border-radius: 2px
+  overflow: hidden
+  margin-bottom: 16px
+  display: none @md block
+
+  &--mobile-visible
+    display: block
+
+  &__mark
+    text: #546e7a 500 13px 1.8
+
+  &__title
+    text: #263238 13px 1.4 600
+    box: center space-between
+    padding: 4px 16px
+    border-bottom: 1px solid #cfd8dc
+    margin: 0
+    min-height: 40px
+
+  &__desc
+    text: 500 13px 1.9
+    margin: -4px 0 16px
+
+  &__body
+    padding: 16px
+
+.article
+  padding: 16px 16px 0
+  background: $neutral
+  margin: 0 0 16px
+
+  &__lead
+    margin: 24px 0
+    display: flex
+    align-items: flex-start
+
+    &-img, img
+      border-radius: 50%
+      min-width: 40px
+      size: 40px
+
+      &--wrapper
+        display: block
+        text-decoration: none
+        margin-right: 16px
+
+    &-info
+      background: rgba(196, 196, 196, 0.3)
+      border-radius: 0 4px 8px 8px
+      padding: 8px 16px 12px
+      position: relative
+      width: 100%
+
+    &-name
+      text: #263238 700 15px 1.8
+      text-decoration: none
+
+    &-desc
+      text: 500 15px 1.8
+      margin: 0
+
+  &__header
+    margin: 24px 0
+
+    &--row
+      display: flex
+      flex-wrap: wrap
+
+  &__label
+    text: 13px 16px 600
+    letter-spacing: 0.01em
+    display: inline-flex
+    align-items: center
+    margin-bottom: 1rem
+    margin-right: 1rem @md 1.5rem @xl 2rem
+
+  &__info
+    box: center
+    margin-bottom: 1.5rem @xl 1.3rem
+
+  &__title
+    margin-top: 0
+    margin-bottom: .8rem
+    line-height: @sm-down 2.1
+    min-height: @sm-down 246px
+    display: @sm-down flex
+    align-items: @sm-down center
+
+  &__mark
+    text: $pseudo-neutral-900 500 13px 1.8 @md 15px
+    margin-top: 0
+    margin-bottom: 1rem @xl 1.4rem
