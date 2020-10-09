@@ -8,22 +8,7 @@
     display: flex
     align-items: flex-start
 
-    &-img, img
-      border-radius: 50%
-      min-width: 40px
-      size: 40px
-
-      &--wrapper
-        display: block
-        text-decoration: none
-        margin-right: 16px
-
     &-info
-      background: rgba(196, 196, 196, 0.3)
-      border-radius: 0 4px 8px 8px
-      padding: 8px 16px 12px
-      position: relative
-      width: 100%
 
       &:before
         content: ''
@@ -35,28 +20,7 @@
         top: 0
         left: -16px
 
-    &-name
-      text: #263238 700 15px 1.8
-      text-decoration: none
-
-    &-desc
-      text: 500 15px 1.8
-      margin: 0
-
-  &__header
-    margin: 24px 0
-
-    &--row
-      display: flex
-      flex-wrap: wrap
-
   &__label
-    text: 13px 16px 600
-    letter-spacing: 0.01em
-    display: inline-flex
-    align-items: center
-    margin-bottom: 1rem
-    margin-right: 1rem @md 1.5rem @xl 2rem
 
     &:before
       content: ''
@@ -78,39 +42,12 @@
       &:before
         background-image: resolve("icons/social/twitter.svg")
 
-  &__info
-    box: center
-    margin-bottom: 1.5rem @xl 1.3rem
-
-  &__title
-    margin-top: 0
-    margin-bottom: .8rem
-    line-height: @sm-down 2.1
-    min-height: @sm-down 246px
-    display: @sm-down flex
-    align-items: @sm-down center
-
   .card
     margin: 1rem 0
 
-  &__mark
-    text: $pseudo-neutral-900 500 13px 1.8 @md 15px
-    margin-top: 0
-    margin-bottom: 1rem @xl 1.4rem
-
   &__main
     background-color: #fff
-    padding: 1.5rem 1rem
-
-    .card--miners
-      border: 1px solid #CFD8DC
-      margin: 1.5rem -1rem @sm 1.7rem 0 @xl 2.5rem 0
-
-      .aside-story__img-wrapper
-        margin-top: @xl-down 0
-
-      .aside-story--miners
-        align-items: @xl-down center
+    padding: 24px 16px
 
   &_main
 
@@ -142,13 +79,6 @@
         padding: @sm-down 0 1rem
 
   &__content
-
-    iframe
-      margin: 1.5rem 0
-      max-width: 728px
-      width: 100% !important
-      height: @xl-down 300px !important
-
     h2, h3
       em
         display: inline-flex
