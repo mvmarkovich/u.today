@@ -10,7 +10,7 @@
     margin: 0 auto
 
   &__title
-    text: 600 13px 1.2 @md 15px
+    text: 700 15px 1.6
     margin: 0 0 12px
     display: block
 
@@ -28,9 +28,7 @@
     justify-content: space-between
 
   &__follow-us
-    margin-right: 0 @md 16px @xl 40px
-    margin-bottom: @xl-down 24px
-    width: @xl-down 100%
+    margin: 0 0 24px @md 0 48px 0 0
 
     ^&__title
       white-space: nowrap
@@ -41,16 +39,35 @@
     &-form
       flex-wrap: wrap @xl nowrap
 
+      .subscribe-result
+        display: none
+
       .input
         margin: @md 0
 
         &:first-child
-          margin-right: 16px
-          width: 100% @md auto
+          margin-right: 0
+          width: 100% @md calc(100% - 110px) @xl auto
           display: block
 
+      .btn
+        text: $neutral
+        background: #2962FF
+        border-color: #2962FF
+        left: -1px
+        min-height: 48px
+
+        &:hover
+          background: $accent-1-medium
+          border-color: $accent-1-medium
+
+        &:active
+          background: $accent-1-dark
+          border-color: $accent-1-dark
+
     &-input
-      width: @md 237px
+      width: @md calc(100% - 110px) @md 328px
+      min-height: 48px
 
     &-agree
       text: #546e7a 500 13px 2.1
