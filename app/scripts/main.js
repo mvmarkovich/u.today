@@ -16,8 +16,6 @@
       $headerNavLinksList = $(".header__nav-item--arrow"),
       $headerMobileMenuBack = $(".mobile-menu-back");
 
-  var firstHeaderLoad = true;
-
   function toggleMobileMenu() {
     $header.toggleClass("header--mobile-menu");
     $headerBurger.toggleClass("btn--cross");
@@ -43,48 +41,12 @@
     $(".header__nav-child-list").removeClass("show");
   }
 
-  function stickyHeader(e) {
-    let distanceToTop = $header[0].getBoundingClientRect().top;
-    let isScrollDown = this.oldScroll > this.scrollY;
-    let isMobileMenuOpen = $header.hasClass("header--mobile-menu");
-
-    if (distanceToTop <= 0) {
-      if (isScrollDown || firstHeaderLoad) {
-        firstHeaderLoad = false;
-        $headerContainer.addClass("header__container--sticky");
-      }
-    } else {
-      $headerContainer.removeClass("header__container--sticky");
-    }
-
-    if (isScrollDown) {
-      $headerContainer.addClass("header__container--sticky-show");
-    } else {
-      if (!isMobileMenuOpen) {
-        $headerContainer.removeClass("header__container--sticky-show");
-      }
-    }
-
-    this.oldScroll = this.scrollY;
-  }
-
-  stickyHeader();
-
   $headerMobileMenuBack.on("click", hideMobileSubMenu);
   $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
   $mobileMenuCover.on("click", toggleMobileMenu);
   $headerBtnSearch.on("click", toggleHeaderSearch);
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
-  $(window).on("scroll", stickyHeader);
-
-  //
-  // Accordion
-  //
-
-  $(".accordion__title").on("click", function () {
-    $(this).parent().toggleClass("accordion--open");
-  });
 
   //
   // Modals
@@ -143,70 +105,6 @@
     event.stopPropagation();
   });
 
-  $(".modal .register").on("click", function () {
-    $('#log_in').removeClass("modal--open modal--fadeIn");
-  });
-
-  $(".modal .sign_in").on("click", function () {
-    $('#register').removeClass("modal--open modal--fadeIn");
-  });
-
-  var currencyValue = $(".currencies__currency span");
-
-  $("[data-set-currency]").on("click", setCurrency);
-
-  function setCurrency() {
-    var currency = $(this).data("set-currency");
-
-    switch (currency) {
-      case "usd":
-        console.log("set usd")
-        break;
-
-      case "eur":
-        console.log("set eur")
-        break;
-
-      case "rub":
-        console.log("set rub")
-        break;
-    }
-
-    currencyValue.text(currency);
-  }
-
-  //
-  // Tabs
-  //
-
-  $("[data-active-tab]").on("click", function () {
-    var idTab = $(this).data("active-tab");
-
-    $("[data-active-tab]").removeClass("tabs__item--active");
-    $(this).addClass("tabs__item--active");
-
-    $("[data-tab]").removeClass("active");
-    $("[data-tab=" + idTab + "]").addClass("active");
-  });
-
-  $(".price-index__header .btn").on("click", function() {
-    $(".price-index__aside").toggleClass("price-index__aside--close");
-  });
-
-  $('.accept-cookies').on('click', function() {
-    $(".cookies").detach();
-    var date = new Date();
-    days = 365;
-    date.setTime(+date + (days * 86400000));
-    document.cookie = "accept=1; expires=" + date.toGMTString();
-  });
-
-  $(document).on('keyup', function(evt) {
-    if ( (evt.keyCode || evt.which) === 27 ) {
-      $('.aside_dropdown').removeClass('open');
-    }
-  });
-
   $('.memories .btn--show').on('click', function() {
     $(this).parent().addClass("content--open")
   });
@@ -215,16 +113,6 @@
     $(this).css("display", "none");
     $(this).siblings().css("max-height", "100%")
   });
-
-  /*
-  var sidebar = new StickySidebar('.aside-menu-block', {
-    containerSelector: '.main-aside-container',
-    innerWrapperSelector: '.sidebar__inner',
-    topSpacing: 16,
-    bottomSpacing: 16,
-    minWidth: 784
-  });
-   */
 
   //
   // Slider (Slick)
@@ -266,28 +154,6 @@
         }
       }
     ]
-  });
-
-
-  function modalTimeout() {
-    var i = 3;
-    var timerId = setTimeout(function go() {
-      $('.timeout__item').html(i);
-      if (i <= 3) setTimeout(go, 1000);
-      i--;
-    }, 0);
-  }
-
-  $(".modal__entrance-form, .comment-form").submit(function(e) {
-    e.preventDefault();
-  });
-
-  $(function () {
-    var target = $('[data-field="target"]');
-    $(document).on('input', '[data-field="item"]', function () {
-      var item = $(this);
-      target.html(item.val().length);
-    });
   });
 
   //
