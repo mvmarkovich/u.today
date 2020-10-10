@@ -65,18 +65,19 @@
           display: @sm-down none
 
   &__main-img
-    width: 100%
+    position: absolute 0 null null 0
 
     &-wrapper
       overflow: hidden
       position: relative
-      margin: 0 0 1.5rem @sm-down 0 -1rem 1rem
+      margin: 0 -16px 16px @sm 0 0 24px
+      padding-top: 62.5%
 
       figcaption
-        margin-bottom: 0
+        margin: @sm-down 24px 16px 0
 
       .disclaimer
-        padding: @sm-down 0 1rem
+        padding: @sm-down 0 16px
 
   &__content
     h2, h3
