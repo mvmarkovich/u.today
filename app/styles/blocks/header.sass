@@ -1,4 +1,68 @@
 .header
+  background: #fff
+  position: relative
+  z-index: 996 @md 300
+  margin: 0 0 16px
+
+  &__container
+    box: center space-between
+    flex-wrap: wrap @xl nowrap
+    min-height: 48px @md 97px @xl 48px
+    padding: 0 16px
+    position: relative
+    will-change: transform
+    max-width: 100% @md 768px @xl 1152px
+    margin: 0 auto
+
+  &__social
+    display: none
+
+  &__logo
+    display: block
+    size: 125px 19px @md 132px 20px
+    min-width: 130px @md 132px
+
+  &__nav
+    margin: 16px 0 0
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl 740px
+    display: none @md block
+
+    &-list
+      box: vertical @md horizontal space-between @xl center
+      background: @md-down #fff
+      padding: @md-down 16px 0 24px
+      margin: @xl 0
+      list-style: none
+
+      &.visibility-hidden
+        visibility: @xl-down visible
+
+    &-item
+      position: @md relative
+
+    &-link
+      text: $pseudo-neutral-900 600 15px 1.4
+      text-decoration: none
+      box: space-between center @md left center
+      padding: 0 0 0 16px @md 0 0 12px
+      height: @md-down 48px
+
+    &-child
+      &-list
+        display: none
+
+  &__panel
+    box: center space-between
+    min-height: 48px
+    min-width: 48px
+
+    & > *
+      margin: 0 8px 0 0
+
+      &:last-child
+        margin: 0
 
   &__logo
     background: resolve("icons/logo.svg") no-repeat left top / contain
@@ -121,6 +185,7 @@
     left: 16px @md 215px @xl 240px
     right: 16px @md 185px @xl 210px
     top: 8px @md 10px @xl 8px
+    display: none
 
     &-form
       box: center

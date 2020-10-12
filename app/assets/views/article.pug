@@ -281,51 +281,7 @@ block content
                             img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Vera Yurina")
                             | Vera Yurina
 
-        aside.aside-menu-block
-            .card.card--press--release.card--mobile-visible
-                .card__title Press Releases
-
-                .card__body
-                    .aside-story
-                        a.aside-story__img-wrapper(href="#!")
-                            img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq" alt="Aside story image")
-
-                        .aside-story__body
-                            a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
-
-                            .aside-story__info
-                                time.humble.humble--tiny 12:25 AM
-
-                    .aside-story
-                        a.aside-story__img-wrapper(href="#!")
-                            img.aside-story__img(src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq" alt="Aside story image")
-
-                        .aside-story__body
-                            a.aside-story__link(href="#!") Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches
-
-                            .aside-story__info
-                                time.humble.humble--tiny 12:25 AM
-
-                .card__footer
-                    a.btn.btn--accent(href="#!") Submit Press Release
-
-            .card
-                .card__title Popular
-
-                .card__body
-                    each hot in hots
-                        .aside-story
-                            a.aside-story__img-wrapper(href="#!")
-                                img.aside-story__img(src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="Aside story image")
-
-                            .aside-story__body
-                                a.aside-story__link(href="#!")= hot
-
-                                .aside-story__info
-                                    .humble.humble--tiny 12:25 AM
-
-                .card__footer
-                    a.btn.btn--light.btn--arrow-right(href="#!") Show more
+        include blocks/aside.pug
 
 
 

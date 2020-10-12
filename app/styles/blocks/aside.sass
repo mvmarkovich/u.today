@@ -1,4 +1,37 @@
 .aside-story
+  padding-bottom: 12px
+  display: flex
+  align-items: flex-start
+  width: 100%
+
+  &:last-child
+    padding-bottom: 0
+
+  & + &
+    padding-top: 16px
+    border-top: 1px solid #eceff1
+
+  &__name
+    text: #263238 13px 1.2 600
+
+  &__img
+    border-radius: 2px
+    width: 100%
+
+    &-wrapper
+      position: relative
+      max-width: 72px
+      min-width: 72px
+      border-radius: 2px
+
+  &__info
+    display: flex
+    align-items: center
+    margin-left: 8px
+
+  &__body
+    margin-top: -6px
+
   &__row
     width: 100%
     margin-top: 0
@@ -23,6 +56,33 @@
     margin-top: 4px
 
 .card
+  background-color: #fff
+  border-radius: 2px
+  overflow: hidden
+  margin-bottom: 16px
+  display: none @md block
+
+  &--mobile-visible
+    display: block
+
+  &__mark
+    text: #546e7a 500 13px 1.8
+
+  &__title
+    text: #263238 13px 1.4 600
+    box: center space-between
+    padding: 4px 16px
+    border-bottom: 1px solid #cfd8dc
+    margin: 0
+    min-height: 40px
+
+  &__desc
+    text: 500 13px 1.9
+    margin: -4px 0 16px
+
+  &__body
+    padding: 16px
+
   .sponsored__mark
     top: 0
     right: 0
