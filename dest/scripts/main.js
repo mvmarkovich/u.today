@@ -115,48 +115,6 @@
   });
 
   //
-  // Slider (Slick)
-  //
-
-  $('.press-releases__slider').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    variableWidth: true,
-    arrows: true,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 826,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  });
-
-  $('.upcoming__slider').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    variableWidth: true,
-    arrows: true,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 826,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  });
-
-  //
   // Button load more in News main
   //
 
