@@ -42,6 +42,13 @@
       max-width: 72px @sm 144px @xl 224px
       min-width: 72px @sm 144px @xl 224px
 
+  .btn--show-more
+    justify-content: flex-start
+    min-height: 1px
+
+    &:after
+      top: -84px
+
 .tags-list
   column-count: @sm 2
   column-gap: @sm 8px
@@ -50,12 +57,7 @@
   margin: 16px 0
 
   .btn--show-more
-    min-height: 72px
-    justify-content: center
     margin: -16px 0 0
-
-    &:after
-      top: -72px
 
 .tags-item
   background: $neutral
