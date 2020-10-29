@@ -5,7 +5,6 @@
   margin-bottom: 16px
 
   &__container
-    flex-wrap: nowrap @md wrap @xl nowrap
     padding: 0 0 0 16px
     position: relative
     margin: 0 auto
@@ -17,7 +16,7 @@
     height: 20px
     display: flex
     align-items: center
-    margin-right: @sm-down 8px
+    margin-right: 8px
 
     span
       height: 0
@@ -31,115 +30,14 @@
     align-items: center
     justify-content: space-between
 
-  &__nav
-    position: relative
-    width: 100% @xl 740px
-    display: none @md block
-    margin-top: 8px @xl 16px
-    order: 9 @xl 0
-
-    &-list
-      display: flex
-      flex-direction: row
-      align-items: @xl center
-      justify-content: space-between
-      margin: @xl 0 24px
-
-    &-item
-      position: relative
-
-      &:after
-        content: ""
-        height: 4px
-        position: absolute
-        top: auto
-        right: 0
-        bottom: -1px
-        left: 0
-        z-index: 997
-        display: none
-
-      &--active
-
-        &:after
-          background: #263238
-
-      & + &
-        margin-left: 24px
-
-      &--arrow
-        &:hover:after
-          right: 24px
-
-        .header-link:after
-          -webkit-transform: scaleY(-1)
-          transform: scaleY(-1)
-
-        &:after
-          right: 24px
-
-        .header__nav-link:after
-          content: ""
-          display: block
-          background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 10L12 15L17 10H7Z'/%3E %3C/svg%3E") center
-          width: 24px
-          height: 12px
-
-        &:hover
-          .header__nav-child-list
-            display: block
-
-    &-link
-      text: #263238 600 15px 1.4
-      padding: 0 0 12px
-      letter-spacing: normal
-      text-decoration: none
-      display: flex
-      align-items: center
-
-    &-child
-
-      &-list
-        display: none
-        position: absolute
-        top: 33px
-        padding-top: 8px
-        border-radius: 2px
-        border: 1px solid #90a4ae
-        min-width: 190px
-        background: #fff
-        z-index: 997
-
-      &-item
-        border-left: 4px solid transparent
-        margin: 0 0 8px
-
-        & + &
-          margin-top: 8px
-
-        &--active
-          border-color: #263238
-
-      &-link
-        text: #263238 600 14px 1.4
-        text-decoration: none
-        text-transform: none
-        letter-spacing: normal
-        white-space: nowrap
-        height: 40px
-        padding-right: 8px
-        padding-left: 8px
-        display: flex
-        align-items: center
-
   &__search
     margin: 0 0 0 16px
 
     &-form
       align-items: center
       position: absolute
-      left: 16px @md 215px @xl 210px
-      right: 16px @md 195px @xl 200px
+      left: 16px
+      right: 16px
       top: 0
       display: none
       padding: 9px 0
@@ -155,7 +53,7 @@
       width: 32px
 
     &-input
-      background: #fff @md #F5F5F5
+      background: #fff
       border: none
       min-height: 32px
       padding-left: 32px
@@ -236,6 +134,3 @@
     color: transparent
     overflow: hidden
     display: block
-
-.mobile-menu__btn
-  display: @md none

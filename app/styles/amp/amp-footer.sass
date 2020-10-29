@@ -8,9 +8,12 @@
     padding: 0 16px
 
   &__title
-    text: 600 13px 1.2 @md 15px
+    text: 700 15px 1.6
     margin: 0 0 12px
     display: block
+
+  .social
+    margin-left: -16px
 
   &:before
     content: ''
@@ -18,39 +21,28 @@
     border-bottom: 3px solid #263238
 
   &__row
-    flex-wrap: wrap @md nowrap
-    padding-top: 24px @md 40px
-    padding-bottom: 24px @md 40px
+    flex-wrap: wrap
+    padding-top: 24px
+    padding-bottom: 24px
     border-bottom: 1px solid #CFD8DC
     display: flex
     justify-content: space-between
 
   &__follow-us
-    margin-right: 0 @md 16px @xl 40px
-    margin-bottom: @xl-down 24px
-    width: @xl-down 100%
-
-    ^&__title
-      white-space: nowrap
+    margin: 0 0 24px
+    width: 100%
 
   &__subscribe
-    width: @xl-down 100%
-
-    &-form
-      align-items: flex-end
-
-      .input
-        &:first-child
-          margin-right: 16px
-          width: calc(100% - 106px) @md auto
-          display: block
-
-    &-input
-      width: @md 245px
+    width: 100%
 
     &-agree
       text: #546e7a 500 13px 2.1
       margin-top: 0
+
+    .btn
+      color: #fff
+      background: #2962ff
+      border-color: #2962ff
 
   &__nav
     position: relative
@@ -66,12 +58,12 @@
       justify-content: space-between
 
     &-item
-      width: 60% @sm 35% @md 33% @xl auto
+      width: 60%
       white-space: nowrap
       margin-top: 24px
 
       &:nth-child(even)
-        width: 30% @md 33% @xl auto
+        width: 30%
 
     &-link
       text: #263238 600 17px 1.4
@@ -79,18 +71,7 @@
     &-child
 
       &-list
-        display: none @sm block
-        margin: 16px 0 0
-        list-style: none
-        padding: 0
-
-      &-item
-
-        & + &
-          margin-top: 10px
-
-      &-link
-        text: #263238 500 13px 2.1 @md 15px
+        display: none
 
   &__copy
     padding: 24px 0
@@ -102,7 +83,7 @@
       margin-right: 32px
 
     &-link
-      text: #2962FF 500 13px 1.9 @md 15px
+      text: #2962FF 500 15px 1.9
 
     p
       margin: 0 0 16px
