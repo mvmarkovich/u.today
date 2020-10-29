@@ -1,27 +1,26 @@
 .pag-nav
   background: $neutral
-  padding: 16px 16px 0
+  padding: 16px @sm 24px
   margin: 16px 0
 
   &__list
-    box: center wrap @sm middle
+    box: center wrap
+    margin: -8px -4px 0
 
   &__item
-    margin: 0 12px 12px 0 @md 0 16px 16px 0
-
-    &:last-child
-      margin: 0 0 12px @md 0 0 16px
+    margin: 8px 4px 0
 
   &__btn
-    text: #263238 16px 1.6 @md 20px
+    text: #546E7A 500 13px 48px
     display: block
-    min-width: 25px @md 32px
+    size: 48px
+    min-width: 48px
     text-align: center
 
     &-active
-      font-weight: 700
-      color: #2962ff
+      text: $neutral
+      background: #2962FF
       cursor: default
 
       &:hover
-        color: #2962ff
+        color: $neutral
