@@ -21,22 +21,24 @@
     margin: 0 16px 0 0
 
   &__slider
-    background: $neutral
+    display: @md-down flex
+    overflow-x: @md-down auto
+    overflow-y: @md-down hidden
+
+  .slick-track
+    box:
 
   &__item
-    max-width: 236px @xl 251px
+    background: $neutral
+    min-width: @md-down 236px
+    max-width: @md-down 236px
+    margin: 0 0 0 8px
+    min-width:
     width: 100%
     position: relative
 
-    &:before
-      content: ''
-      background: #f5f5f5
-      width: 8px
-      position: absolute 0 null -300px -8px
-      display: block
-
-    & + &
-      margin: 0 0 0 8px
+    &:first-child
+      margin: 0
 
     &-info
       padding: 16px

@@ -42,4 +42,5 @@ html(lang="en" dir="ltr")
 
       script(src="scripts/main.js")
       script.
-        (function ($) {$('.press-releases__slider').slick({infinite: false,slidesToShow: 3,slidesToScroll: 1,variableWidth: true,arrows: true,dots: false,responsive: [{breakpoint: 826,settings: {arrows: false,slidesToShow: 1,slidesToScroll: 1,}}]});$('.upcoming__slider').slick({infinite: false,slidesToShow: 3,slidesToScroll: 1,variableWidth: true,arrows: true,dots: false,responsive: [{breakpoint: 826,settings: {arrows: false,slidesToShow: 1,slidesToScroll: 1,}}]});})(jQuery);
+          (function ($) {if ($(window).width() > '768') {$('.press-releases__slider, .upcoming__slider').slick({infinite: false,slidesToShow:3,slidesToScroll:1,arrows:true,dots:false,responsive:[{breakpoint: 1152, settings: {slidesToShow: 2, slidesToScroll: 1,}}]});}})(jQuery);
+

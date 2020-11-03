@@ -224,28 +224,37 @@
           </div>
         </div>
         <div class="aside-menu-block">
-          <div class="card card--widget hide-md-up">
-            <div class="card__title">Top tranding bot<span class="card__mark">Promoted</span></div>
-            <div class="card__body"><a class="card--widget__item" href="#!" target="_blank" rel="nofollow noopener">
-                <div class="card--widget__row">
-                  <div class="card--widget__img-wrapper"><img class="card--widget__img" src="img/content/crypt/IQ-Mining.png" alt="IQ-Mining"></div>
-                  <div class="card--widget__info">
-                    <div class="card--widget__title">IQ Mining</div><span class="card--widget__signature">40% discount till 8 march</span>
-                  </div>
-                </div>
-                <div class="btn--block">
-                  <div class="btn btn--small btn--accent-3">Website</div>
-                </div></a><a class="card--widget__item" href="#!" target="_blank" rel="nofollow noopener">
-                <div class="card--widget__row">
-                  <div class="card--widget__img-wrapper"><img class="card--widget__img" src="img/content/crypt/CryptoUniverse.png" alt="CryptoUniverse"></div>
-                  <div class="card--widget__info">
-                    <div class="card--widget__title">CryptoUniverse</div><span class="card--widget__signature">Cashback up to 20%</span>
-                  </div>
-                </div>
-                <div class="btn--block">
-                  <div class="btn btn--small btn--accent-3">Website</div>
-                </div></a></div>
-          </div>
+          <!--
+          .card.card--widget.hide-md-up
+            .card__title Top tranding bot
+              span.card__mark Promoted
+          
+            .card__body
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining")
+          
+                  .card--widget__info
+                    .card--widget__title IQ Mining
+                    span.card--widget__signature 40% discount till 8 march
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse")
+          
+                  .card--widget__info
+                    .card--widget__title CryptoUniverse
+                    span.card--widget__signature Cashback up to 20%
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+          -->
           <div class="card card--subscribe card--mobile-visible">
             <div class="card__subscribe"><a class="card__subscribe-item card__subscribe-fb" href="#!">
                 <div class="card__subscribe-icon card__subscribe-icon-fb"></div>
@@ -459,6 +468,6 @@
     <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script>(function ($) {$('.press-releases__slider').slick({infinite: false,slidesToShow: 3,slidesToScroll: 1,variableWidth: true,arrows: true,dots: false,responsive: [{breakpoint: 826,settings: {arrows: false,slidesToShow: 1,slidesToScroll: 1,}}]});$('.upcoming__slider').slick({infinite: false,slidesToShow: 3,slidesToScroll: 1,variableWidth: true,arrows: true,dots: false,responsive: [{breakpoint: 826,settings: {arrows: false,slidesToShow: 1,slidesToScroll: 1,}}]});})(jQuery);</script>
+    <script>(function ($) {if ($(window).width() > '768') {$('.press-releases__slider, .upcoming__slider').slick({infinite: false,slidesToShow:3,slidesToScroll:1,arrows:true,dots:false,responsive:[{breakpoint: 1152, settings: {slidesToShow: 2, slidesToScroll: 1,}}]});}})(jQuery);</script>
   </body>
 </html>
