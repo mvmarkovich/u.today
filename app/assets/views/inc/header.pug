@@ -2,12 +2,6 @@ header.header
   .header__container
     a.header__logo(href="#!") U.TODAY
 
-    .header__social.social
-      a.social__link.social__link--fb(href="#!fb") Facebook
-      a.social__link.social__link--tg(href="#!tg") Telegram
-      a.social__link.social__link--tw(href="#!tw") Twitter
-      a.social__link.social__link--em(href="#!em") Email
-
     nav.header__nav
       ul.header__nav-list
         each category, i in nav
@@ -17,7 +11,7 @@ header.header
             if category.childs
               ul.header__nav-child-list
                 each child, i in category.childs
-                  li.header__nav-child-item(class=[ i == 1 ? 'header__nav-child-item--active' : '' ])
+                  li.header__nav-child-item
                     a.header__nav-child-link(href="#!c" + i)= child.name
 
     .header__panel
@@ -25,12 +19,10 @@ header.header
 
       button.header__burger.btn.btn--light.btn--burger(aria-label="open/close menu")
 
-    .mobile-menu-back Back
-
     .header__search
       form.header__search-form(action="#" method="get")
         button.header__search-submit.btn.btn--light.btn--search(type="submit")
-        input.header__search-input(type="text" name="search")
+        input.header__search-input(type="text" placeholder="Type..." name="search")
         button.header__search-close.btn.btn--light.btn--cross
 
 .mobile-menu-cover

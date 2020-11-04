@@ -5,7 +5,6 @@
   //
 
   const $header = $(".header"),
-      $headerContainer = $(".header__container"),
       $headerBurger = $(".header__burger"),
       $mobileMenuCover = $(".mobile-menu-cover"),
       $headerBtnSearch = $(".header__btn-search"),
@@ -13,8 +12,7 @@
       $headerSearchBtnClose = $(".header__search-close"),
       $headerSearchInput = $(".header__search-input"),
       $headerNavList = $(".header__nav-list"),
-      $headerNavLinksList = $(".header__nav-item--arrow"),
-      $headerMobileMenuBack = $(".mobile-menu-back");
+      $headerNavLinksList = $(".header__nav-item--arrow");
 
   function toggleMobileMenu() {
     $header.toggleClass("header--mobile-menu");
@@ -32,16 +30,13 @@
   }
 
   function showMobileSubMenu() {
-    $headerMobileMenuBack.addClass("show");
     $(".header__nav-child-list", this).addClass("show");
   }
 
   function hideMobileSubMenu() {
-    $headerMobileMenuBack.removeClass("show");
     $(".header__nav-child-list").removeClass("show");
   }
 
-  $headerMobileMenuBack.on("click", hideMobileSubMenu);
   $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
   $mobileMenuCover.on("click", toggleMobileMenu);
