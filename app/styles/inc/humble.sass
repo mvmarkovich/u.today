@@ -1,5 +1,5 @@
 .humble
-  text: #546E7A 500 13px 2.1
+  text: #546E7A 500 15px 1.6
   letter-spacing: .015em
   white-space: nowrap
   text-decoration: none
@@ -38,6 +38,16 @@
     margin-top: 8px
     height: 48px
 
+    &-big
+      ^^&__img
+        size: 40px
+        margin: 0 16px 0 0
+
+    &:hover
+      ^^&__author
+        &-name
+          text: #2196f3
+
   &--label
     background: #FF5722
     border-radius: 2px
@@ -57,6 +67,13 @@
     background-repeat: no-repeat
     background-size: 16px
     background-position: left center
+
+  &__author
+    &-name
+      text: 700 #263238
+
+    &-post
+      text: #546E7A 13px
 
   &--cert
     background-image: resolve("icons/label/certificate.svg")
