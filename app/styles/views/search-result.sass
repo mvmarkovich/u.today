@@ -1,0 +1,51 @@
+.search-result
+  .events__card
+    padding: 16px
+    border: none
+
+    &-img
+      max-width: 164px @sm 144px @xl 224px
+      min-width: 164px @sm 144px @xl 224px
+
+  .staff__item
+    padding: 16px
+    border: none
+    display: @sm-down block
+
+    .staff__info p
+      margin: @sm-down 8px 0 0 @xl-down 8px 0 0 -160px
+
+  .staff__img-wrapper
+    max-width: 164px @sm 144px @xl 224px
+    min-width: 164px @sm 144px @xl 224px
+
+  .staff__info
+    margin: 16px 0 0 @sm 0 0 0 16px
+
+  .category-info
+    display: @sm flex
+    padding: 16px
+
+    &__img
+      max-width: 164px @sm 144px @xl 224px
+      min-width: 164px @sm 144px @xl 224px
+
+      &-wrapper
+        margin: 0 0 16px @sm 0 16px 0 0
+
+    .btn--show-more
+      justify-content: flex-start
+      min-height: 1px
+      margin: 12px 0 0
+
+      &:after
+        top: -84px
+
+  & > *
+    margin: 16px 0
+
+    &:first-child
+      margin: 0 0 16px
+
+    &:last-child
+      margin: 16px 0 0

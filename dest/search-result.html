@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#263238">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css">
+    <meta name="msapplication-TileColor" content="#263238">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#263238">
+    <title>Search result | u.today</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container"><a class="header__logo" href="#!">U.TODAY</a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/0">News</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Latest News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">Bitcoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Ethereum News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Bitcoin Cash News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Ripple News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">EOS News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c6">Litecoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c7">Cardano News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c8">NEM</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c9">Press releases</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c10">Submit Press releases</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow header__nav-item--active"><a class="header__nav-link" href="/1">Stories</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Features</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">Opinions</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Artificial Intelligence</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">SingUlarity</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Infographics</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">ICO Watch</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/2">Guides</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Coins Guide</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">WikiCoin</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">CryptoTips</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Trading Guide</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/3">Price Predictions</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/4">Blockchain Programming</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__panel">
+          <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
+        </div>
+        <div class="header__search">
+          <form class="header__search-form" action="#" method="get">
+            <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
+            <input class="header__search-input" type="text" placeholder="Type..." name="search">
+            <button class="header__search-close btn btn--light btn--cross"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu-cover"></div>
+    <div class="page-container container">
+      <div class="main-aside-container">
+        <div class="main-block">
+          <div class="search-result">
+            <div class="category-item"><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Title category"></a>
+              <div class="category-item__info">
+                <div class="humble__row"><a class="humble" href="#!">Stories</a>
+                  <div class="humble humble--time">2 hours ago</div>
+                </div><a class="category-item__title-link" href="#!">
+                  <div class="category-item__title">Tron CEO Justin Sun Teases "Huge" Secret Guest at Upcoming NiTROn Bitcoin Summit</div></a>
+                <div class="humble__row humble--between"><a class="humble humble--author" href="#!"><img class="humble__img" src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" alt="Yuri Molchan">Yuri Molchan</a></div>
+              </div>
+            </div>
+            <div class="category-item"><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="Title category"></a>
+              <div class="category-item__info">
+                <div class="humble__row"><a class="humble" href="#!">Stories</a>
+                  <div class="humble humble--time">2 hours ago</div>
+                </div><a class="category-item__title-link" href="#!">
+                  <div class="category-item__title">It's Official: Tron CEO Justin Sun Confirms Much-Hyped Partnership with Samsung Bitcoin</div></a>
+                <div class="humble__row humble--between"><a class="humble humble--author" href="#!"><img class="humble__img" src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov">Vladislav Sopov</a></div>
+              </div>
+            </div>
+            <div class="events__card">
+              <div class="events__card-left">
+                <div class="events__card-img"><img src="img/content/events/item_2.png" alt="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ratio..."></div>
+              </div>
+              <div class="events__card-info"><a class="humble humble--bg" href="#!">Blockspot Conference Europe 2018</a>
+                <p>Nemo enim Bitcoin ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ratio... <a href="#!">Read more</a></p>
+                <ul>
+                  <li><span>Dates:</span><span>1 March 2018</span></li>
+                  <li><span>Location:</span><span>Zurich, Switzerland</span></li>
+                  <li><span>Venue:</span><span>Kaskaden-Halle</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="staff__item"><a class="staff__img-wrapper" href="#!"><img class="staff__img" src="https://u.today/sites/default/files/styles/150/public/2019-03/George-Shnurenko_1.jpg?itok=DpBxrdn8"></a>
+              <div class="staff__info">
+                <div class="staff__row">
+                  <div class="personal__info"><a class="staff__name" href="#!">Andrew Strogoff</a><a class="staff__post" href="#!">Financial Analyst</a></div>
+                  <div class="social"><a class="social__link social__link--ln" href="#!ln"><a class="social__link social__link--insta" href="#!insta"></a><a class="social__link social__link--em" href="#!email"></a><a class="social__link social__link--fb" href="#!fb"></a></a></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, Bitcoin consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="category-info">
+              <div class="category-info__img-wrapper"><img class="category-info__img" src="https://u.today/sites/default/files/styles/736x/public/2019-12/YouTube%20cover.jpg?itok=WSNITDFF" alt="#Hashtag or Category"></div>
+              <div class="category-info__body">
+                <div class="category-info__title">#Bitcoin (category or #hashtag)</div>
+                <div class="category-info__desc">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aside-menu-block">
+          <!--
+          .card.card--widget.hide-md-up
+            .card__title Top tranding bot
+              span.card__mark Promoted
+          
+            .card__body
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining")
+          
+                  .card--widget__info
+                    .card--widget__title IQ Mining
+                    span.card--widget__signature 40% discount till 8 march
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse")
+          
+                  .card--widget__info
+                    .card--widget__title CryptoUniverse
+                    span.card--widget__signature Cashback up to 20%
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+          -->
+          <div class="card card--subscribe card--mobile-visible">
+            <div class="card__subscribe"><a class="card__subscribe-item card__subscribe-fb" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-fb"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Like</div>
+                  <div class="card__subscribe-nick">utoday.en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tw" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-tw"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Follow</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-yb" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-yb"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Subscribe</div>
+                  <div class="card__subscribe-nick">utoday</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tm" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-tg"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Join</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a>
+              <form class="card__subscribe-form">
+                <label class="card__subscribe-item card__subscribe-notice">
+                  <div class="card__subscribe-icon card__subscribe-icon-notice"></div>
+                  <div class="card__subscribe-desc">
+                    <div class="card__subscribe-title">Enable push</div>
+                    <div class="card__subscribe-radio switch">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                </label>
+                <label class="card__subscribe-item card__subscribe-em">
+                  <div class="card__subscribe-icon card__subscribe-icon-em"></div>
+                  <div class="card__subscribe-desc">
+                    <input class="input__elem" type="text" name="email" placeholder="Subscribe to email">
+                    <button class="btn btn--light btn--arrow-long-right" type="submit" aria-label="send"></button>
+                  </div>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="card card--press--release">
+            <div class="card__body">
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq" alt="Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches"></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer"><a class="btn btn--accent" href="#!">Submit Press Release</a></div>
+          </div>
+          <div class="card card--something">
+            <div class="something"><img src="img/something/something__aside.png" alt="Banner aside"></div>
+          </div>
+          <div class="card">
+            <div class="card__title">Popular</div>
+            <div class="card__body">
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Google’s Amir Sarhangi Joins Ripple</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Where Is Bitcoin Going in the Near Future? Experts Weigh In</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer"><a class="btn btn--light btn--arrow-right" href="#!">Show more</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__follow-us">
+            <div class="footer__title">Follow us and get all crypto news 24/7</div>
+            <div class="social social--border social--wide"><a class="social__link social__link--fb" href="#!">Facebook</a><a class="social__link social__link--tg" href="#!">Telegram</a><a class="social__link social__link--tw" href="#!">Twitter</a></div>
+          </div>
+          <div class="footer__subscribe">
+            <label class="footer__title" for="footer__subscribe">Subscribe to daily newsletter</label>
+            <form class="form--row footer__subscribe-form" target="#" method="get">
+              <div class="input">
+                <input class="footer__subscribe-input input__elem" id="footer__subscribe" type="text" name="email" placeholder="Email" required>
+              </div>
+              <div class="input">
+                <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+              </div>
+              <div class="footer__subscribe-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+            </form>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">News</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Latest News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ethereum News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Cash News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ripple News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">EOS News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Litecoin News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Cardano News</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">NEM</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Press releases</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Submit Press releases</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Stories</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Features</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Opinions</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Artificial Intelligence</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">SingUlarity</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Infographics</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">ICO Watch</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Market analysis</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Pricewise</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ethereum Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Bitcoin Cash Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Ripple Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">EOS Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Litecoin Price Index</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Cardano Price Index</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Guides</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Coins Guide</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">WikiCoin</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">CryptoTips</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Trading Guide</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">About Us</a>
+              <ul class="footer__nav-child-list">
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Our partners</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">Jobs</a></li>
+                <li class="footer__nav-child-item"><a class="footer__nav-child-link" href="#!">About Us</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Interviews</a>
+            </li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="#!">Events</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__disclaimer">
+          <p class="footer__disclaimer-text">Disclaimer: Any financial advice given on U.TODAY is written for informational purpose only. Conduct your own research by contacting financial experts before making any investment decisions.</p>
+        </div>
+        <div class="footer__copy">
+          <div class="footer__copy-text">© 2018 U.Today. All rights reserved</div><a class="footer__copy-link" href="#!">Terms and conditions</a><a class="footer__copy-link" href="#!">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="subscribe-form">
+      <div class="modal__square">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__square-content">
+          <div class="modal__square-title">Sign up for crypto digest</div>
+          <form action="#" method="get">
+            <div class="input article__subscribe-input">
+              <input class="input__elem" type="text" name="email" placeholder="Email" required>
+            </div>
+            <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+            <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>(function ($) {if ($(window).width() > '768') {$('.press-releases__slider, .upcoming__slider').slick({infinite: false,slidesToShow:3,slidesToScroll:1,arrows:true,dots:false,responsive:[{breakpoint: 1152, settings: {slidesToShow: 2, slidesToScroll: 1,}}]});}})(jQuery);</script>
+  </body>
+</html>

@@ -6,6 +6,7 @@
     position: relative
     padding: 16px @sm 24px 32px
     border-bottom: $border
+    background: $neutral
 
     .personal__info
       width: 100% @xl auto
@@ -16,14 +17,14 @@
     .staff__info
 
       p
-        text: 13px 24px 500
-        margin: 0 0 0 -138px  @sm 8px 0 0 -184px @xl 0
+        text: 15px 1.6 500
+        margin: 0 0 0 -133px @sm 8px 0 0 -177px @xl 0
 
     &:last-child
       border: none
 
   &__name
-    text: $pseudo-neutral-900 13px 1.8 600
+    text: $pseudo-neutral-900 15px 1.6 700
     overflow: hidden
     text-overflow: ellipsis
     max-width: 80% @sm 100%
@@ -31,7 +32,7 @@
     white-space: nowrap
 
   &__post
-    text: $pseudo-neutral-400 13px 1.8
+    text: $pseudo-neutral-400 15px 1.6
 
   &__row
     box: wrap @xl center
@@ -48,9 +49,9 @@
     &-wrapper
       min-width: 116px @sm 160px
       max-width: 116px @sm 160px
-      height: 72px @sm 100px
       background: resolve("icons/greeting.svg") no-repeat center / 44px, linear-gradient(-45deg, #d0d7df 0%,#f2f7f5 100%)
       border-radius: 2px
+      display: block
 
 .team
   &__list
