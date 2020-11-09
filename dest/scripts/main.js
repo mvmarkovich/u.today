@@ -11,7 +11,7 @@
       $headerSearch = $(".header__search"),
       $headerSearchBtnClose = $(".header__search-close"),
       $headerSearchInput = $(".header__search-input"),
-      $headerNavList = $(".header__nav-list"),
+      $headerNav = $(".header__nav"),
       $headerNavLinksList = $(".header__nav-item--arrow");
 
   function toggleMobileMenu() {
@@ -22,11 +22,21 @@
     $mobileMenuCover.fadeToggle(280);
   }
 
-  function toggleHeaderSearch(e) {
+  function openHeaderSearch(e) {
     e.preventDefault();
-    $headerNavList.toggleClass("visibility-hidden");
+    $headerNav.addClass("header--hide");
+    $(".header__panel").addClass("header--hide");
     $headerSearch.fadeToggle(180);
-    $headerSearchInput.focus();
+  }
+
+  function closeHeaderSearch(e) {
+    e.preventDefault();
+    $headerSearch.fadeToggle(180);
+
+    setTimeout(function () {
+      $headerNav.toggleClass("header--hide");
+      $(".header__panel").toggleClass("header--hide");
+    }, 180);
   }
 
   function showMobileSubMenu() {
@@ -40,8 +50,8 @@
   $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
   $mobileMenuCover.on("click", toggleMobileMenu);
-  $headerBtnSearch.on("click", toggleHeaderSearch);
-  $headerSearchBtnClose.on("click", toggleHeaderSearch);
+  $headerBtnSearch.on("click", openHeaderSearch);
+  $headerSearchBtnClose.on("click", closeHeaderSearch);
 
   //
   // Modals

@@ -71,7 +71,7 @@
       text: $pseudo-neutral-900 700 15px 1.4
       text-decoration: none
       box: center @md left center
-      padding: 0 0 0 16px @md 0 0 12px
+      padding: 0 0 0 16px @md 0 0 11px
       height: @md-down 48px
 
     &-item
@@ -158,31 +158,34 @@
         padding: 0 16px
 
   &__search
-    position: absolute
-    left: 16px @md 215px @xl 240px
-    right: 16px @md 185px @xl 210px
-    top: 8px @md 10px @xl 8px
+    position: absolute @xl relative
+    left: 16px @md 215px @xl auto
+    right: 16px @md 16px @xl auto
+    top: 8px @md 10px @xl auto
+    width: @xl 100%
+    margin: @xl 0 0 0 16px
     display: none
 
     &-form
       box: center
 
     &-submit
-      position: absolute 0 null 0 0
       z-index: 1
+      background: #eee
 
       &:after
         size: 32px
 
     &-input
       @extend .input__elem
-      background: #fff @md #eee
+      background: #eee
       min-height: 32px
-      padding: 0 40px
+      padding: 0 16px
       border: none
 
     &-close
-      position: absolute 0 0 0 null
+      background: #fff
+      padding: 0 0 0 12px @md 0 0 0 16px
 
   &__burger
     display: @md none
@@ -195,6 +198,9 @@
       display: @md-down block
       background-color: @md-down #fff
       overflow-y: @md-down auto
+
+  &--hide
+    display: @xl none
 
 .mobile-menu
 
