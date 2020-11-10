@@ -1,0 +1,248 @@
+extends layouts/amp-layout.pug
+
+block title
+    title Main | U
+
+block content
+    .big-story
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+                .humble.big-story__mark Promoted
+
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2020-04-04%2016.14.05.jpg?itok=gtYXCQMM" layout="responsive" width="336" height="196")
+                .promoted__mark Sponsored
+
+            a.big-story__title.link-plain(href="#!") Bitcoin Cloud Mining Contracts 2019 — Looking for the Best
+
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2982.jpg?itok=Mc_wAk2l" layout="responsive" width="336" height="196")
+
+            a.big-story__title.link-plain(href="#!") HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes
+
+        .big-story__item
+            .big-story__header
+                a.humble(href="#!") News
+
+            a.big-story__img-wrapper(href="#!")
+                amp-img.big-story__img(src="https://u.today/sites/default/files/styles/400/public/2020-04/2986.jpg.webp" layout="responsive" width="336" height="196")
+
+            a.big-story__title.link-plain(href="#!") Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise
+
+    .main-aside-container
+        .main-block
+            .news
+                .news__header
+                    .icon
+                        include ../img/icons/clock.svg
+                    .news__title Latest news
+                    .btns-spacer
+                        a.btn.btn--light(href="#!") See all
+
+                amp-list(width='auto' height="360" layout="fixed-height" src='main-news-list-1.json' load-more="manual" load-more-bookmark="next")
+                    .news__list
+                        template(type='amp-mustache')
+                            .news__item
+                                .news__item-time-wrapper
+                                    time.news__item-time.humble {{time}}
+
+                                .news__item-title-wrapper
+                                    h2.news__item-title
+                                        a.news__item-link.link-plain(href="#!") {{title}}
+
+                                    .news__item-info
+                                        a.humble.humble--icon(href="#!")
+                                            include ../img/icons/comment-bold.svg
+                                            | 0
+
+                    amp-list-load-more(load-more-button='')
+                        button.btn.btn--light.news__footer
+                            include ../img/icons/triangle-down.svg
+                            | Show more news
+
+            .press-releases
+
+                .press-releases__header
+
+                    .press-releases__info
+                        h3.press-releases__title Press releases
+
+                        .btn--block
+                            a.btn.btn--light(href="#!See all") See all
+                            a.btn.btn--light(href="#!Submit") Submit
+
+                amp-carousel.press-releases__slider(layout="responsive" height="1" width="768" type="carousel")
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1696.jpg?itok=zr1r7IrI" layout="responsive" width="224" height="140")
+                                .promoted__mark Sponsored
+
+                            h4.press-releases__item-name EPAY-X is Encouraging Crypto Adoption by Letting Its Debit Card Users Spend It Anywhere
+
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/fiatech.jpg?itok=oygkViCR" layout="responsive" width="224" height="140")
+
+                            h4.press-releases__item-name An entrepreneur’s grand mission to transcend Myanmar's economic and humanitarian woes using blockchain tech
+
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
+
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
+
+                    a.press-releases__item.link-plain(href="#!")
+                        .press-releases__inner
+                            .press-releases__item-img--wrapper
+                                amp-img.press-releases__item-img(src="https://u.today/sites/default/files/styles/250/public/2020-01/1694_1.jpg?itok=_mR0Phl-" layout="responsive" width="224" height="140")
+
+                            h4.press-releases__item-name Trescon’s 14th World Blockchain Summit to Debut in Thailand This December
+
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") TOP stories
+                        .humble.humble--time 17 minutes ago
+
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay
+
+                a.story__img-wrapper.link-plain(href="#!")
+                    amp-img.story__img(src="img/content/story/item_1.png" alt="Tron (TRX) Goes Live on McAfeeDEX after Week’s Delay" layout="responsive" width="736" height="460")
+                    .promoted__mark Sponsored
+
+                .story__footer
+                    a.story__desc.link-plain(href="#!") John McAfee sends word that Tron’s TRX is finally supported on the recently launched SEC-criticized DEX
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                            | Jeremy O’Bernstahard
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 0
+
+            .something.something--content
+                .something__content-long
+                    amp-img(src="img/something/something__central-728.png" alt="Something central" layout="intrinsic" width="728" height="90")
+
+                .something__content-square
+                    amp-img(src="img/something/something__central-336.png" alt="Something central" layout="intrinsic" width="300" height="250")
+
+            .category-item.category-item-sl
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bluzelle.jpg?itok=ZFAJHkl_" layout="responsive" width="218" height="136")
+                    .promoted__mark Sponsored
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Price Prediction
+                        .humble.humble--time 1 day 23 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Beginner’s Guide to Bluzelle — The Decentralized Data Network
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vera-ava.jpg" alt="Beginner’s Guide to Bluzelle — The Decentralized Data Network" layout="fixed" width="24" height="24")
+                            | Vera Yurina
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 123
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand" layout="responsive" width="218" height="136")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") News
+                        .humble.humble--time 2 days 1 hour ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" layout="fixed" width="24" height="24")
+                            | Yuri Molchan
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 246
+
+            .story
+                .story__header
+                    .humble__row
+                        a.humble(href="#!") Cryptocurrency trading
+                        .humble.humble--time 1 day 15 hours ago
+
+                    a.story__title-link.link-plain(href="#!")
+                        h2.story__title Tron Surpasses Rival Blockchains
+
+                a.story__img-wrapper.link-plain(href="#!")
+                    amp-img.story__img(src="img/content/story/item_2.png" alt="Tron Surpasses Rival Blockchains" layout="responsive" width="736" height="460")
+
+                .story__footer
+                    a.story__desc.link-plain(href="#!") Another 30 mln USDT moved from the Ethereum chain to Tron, reports Misha Lederman, a major Tron supporter as Justin Sun recommends Poloniex for USDT-Tron conversion
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/geof-big_0.jpg" layout="fixed" width="24" height="24")
+                            | Geoffrey Schwartz
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 77
+
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" layout="responsive" width="218" height="136")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Stories
+                        .humble.humble--time 2 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How to Protect Your Identity and Bitcoin Wallet From Tracking
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" layout="fixed" width="24" height="24")
+                            | Vladislav Sopov
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 2
+
+            .category-item
+                a.category-item__img-wrapper(href="#!")
+                    amp-img.category-item__img(src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" layout="responsive" width="218" height="136")
+
+                .category-item__info
+                    .humble__row
+                        a.humble(href="#!") Interviews
+                        .humble.humble--time 4 hours ago
+
+                    a.category-item__title-link(href="#!")
+                        h3.category-item__title How To Exchange Crypto with BestСhange
+
+                    .humble__row.humble--between
+                        a.humble.humble--author(href="#!")
+                            amp-img.humble__img(src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" layout="fixed" width="24" height="24")
+                            | Heewon Jang
+
+                        .humble.humble--icon.humble--icon-large
+                            include ../img/icons/comment.svg
+                            | 12
+
+        include blocks/amp-aside.pug
