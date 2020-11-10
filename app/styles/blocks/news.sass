@@ -62,3 +62,22 @@
     min-height: 48px
     justify-content: flex-start
 
+  &__loading
+    width: 100%
+    border-top: 1px solid #eee
+    display: none
+    height: 48px
+    padding: 7px 16px
+
+.loading
+  background: resolve("icons/loading.svg") no-repeat center / contain
+  animation: myanimation 5s infinite
+  size: 32px
+
+@keyframes myanimation
+  0%
+    transform: rotate(0)
+
+  100%
+    transform: rotate(360deg)
+
