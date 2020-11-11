@@ -128,11 +128,10 @@
   $(".news__item:hidden").slice(0, 5).show();
 
   $('.news .btn--show').on('click', function(){
-
     $('.news .btn--show').hide();
     $('.news__loading').show();
 
-    if($(".news__item:hidden").length > 1){
+    if($(".news__item:hidden").length >=6){
       setTimeout(function () {
         $(".news__item:hidden").slice(0, 5).show();
         $('.news .btn--show').show();
@@ -140,12 +139,12 @@
       }, 300);
     }
 
-    if($(".news__item:hidden").length < 1){
+    if($(".news__item:hidden").length <= 5){
+      $(".news__item").show();
       $('.news .btn--show').hide();
       $('.news__loading').hide();
       $('.news .btn--show-all').css("display", "inline-flex");
     }
-
   });
 
   //
