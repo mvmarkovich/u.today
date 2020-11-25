@@ -1,15 +1,33 @@
-.modal#subscribe-form
-  .modal__square
+.modal#rus-version
+  .modal__square.modal__lang
     button.modal__close.btn.btn--light.btn--cross(data-close-modal)
 
     .modal__square-content
-      .modal__square-title Sign up for crypto digest
+      .modal__square-title Доступен русский язык!
 
-      form(action="#" method="get")
-        .input.article__subscribe-input
-          input.input__elem(type="text" name="email" placeholder="Email" required)
+      .modal__square-text Russian version is available!
 
-        button.btn.btn--wide.btn--input(type="submit") Subscribe
+      .btn--column
+        a.btn.btn--lang(href="#!")
+          .icon.icon--rus
+          span Перейти на русский сайт
 
-        .modal__square-agree By pressing the “Subscribe button” you agree with our 
-          a(href="#!") Privacy Policy
+        a.btn.btn--lang(href="#!")
+          .icon.icon--eng
+          span Keep reading in English
+
+.modal#eng-version
+  .modal__square.modal__lang
+    button.modal__close.btn.btn--light.btn--cross(data-close-modal)
+
+    .modal__square-content
+      .modal__square-title English version is available!
+
+      .btn--column
+        a.btn.btn--lang(href="#!")
+          .icon.icon--eng
+          span Go to English website
+
+        a.btn.btn--lang(href="#!")
+          .icon.icon--rus
+          span Остаться на русском

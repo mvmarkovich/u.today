@@ -2,6 +2,7 @@
   size: 16px @md 24px
   display: inline-block
   background-size: contain
+  background-repeat: no-repeat
 
   &--check
     background-image: resolve("icons/check.svg")
@@ -11,4 +12,18 @@
 
   &--clock
     background-image: resolve("icons/clock.svg")
+
+  &--rus,
+  &--eng
+    size: 56px @md 56px
+    min-width: 56px
+    background-size: 24px
+    background-position: center
+    border-right: 1px solid #CFD8DC
+
+  &--rus
+    background-image: resolve("icons/flag-ru.svg")
+
+  &--eng
+    background-image: resolve("icons/flag-eng.svg")
 

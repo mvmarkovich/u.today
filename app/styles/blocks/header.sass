@@ -6,7 +6,7 @@
 
   &__container
     box: center space-between
-    flex-wrap: wrap @xl nowrap
+    flex-wrap: @md wrap @xl nowrap
     min-height: 48px @md 97px @xl 48px
     padding: 0 16px
     position: relative
@@ -18,8 +18,8 @@
 
   &__logo
     display: block
-    size: 125px 19px @md 132px 20px
-    min-width: 130px @md 132px
+    size: 100% 19px
+    max-width: 130px
 
   &__panel
     box: center space-between
@@ -201,6 +201,41 @@
 
   &--hide
     display: @xl none
+
+  &__lang
+    position: relative
+    margin: 0 0 0 8px @md 0 0 0 28px
+
+    &-btn
+      border: 1px solid #CFD8DC
+      padding: 0 4px 0 8px
+      font-weight: 700
+
+    &-other
+      position: absolute 31px 0 null 0
+      border: 1px solid #CFD8DC
+      border-top: none
+      background: $neutral
+      padding: 4px 0
+      z-index: 2
+      display: none
+
+    &-link
+      padding: 0 8px
+      text: #263238 15px 1.6
+      width: 100%
+      display: block
+
+    &:hover
+      ^&-btn
+        text: #2196f3
+
+        &:after
+          background-image: svg-load("icons/triangle-down.svg", fill: $accent-1-medium)
+          transform: rotate(180deg)
+
+      ^&-other
+        display: block
 
 .mobile-menu
 

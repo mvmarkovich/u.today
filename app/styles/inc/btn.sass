@@ -65,6 +65,14 @@
       background: #E1F5FE
       padding: 16px
 
+  &--column
+    display: flex
+    flex-direction: column
+
+    & > *
+      &:first-child
+        margin: 0
+
   &--small
     min-height: 24px
 
@@ -268,3 +276,18 @@
     &:after
       background-image: resolve("icons/btn--back.svg")
       size: 32px
+
+  &--lang
+    display: inline-flex
+    align-items: center
+    border: 1px solid #2962FF
+    text: #2962FF
+    padding: 0
+    margin: 16px 0 0 @md 32px 0 0
+    max-width: 290px
+    width: 100%
+
+    span
+      width: 100%
+      text-align: center
+      display: block

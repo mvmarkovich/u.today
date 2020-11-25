@@ -36,32 +36,31 @@
     box: vertical left @md horizontal
     margin: auto
     display: none
+    text-align: center
 
     ^&__close
       opacity: .6 @md .25
       z-index: 3
-      filter: @md-down brightness(100)
 
       &:hover
         opacity: .8 @md 1
 
     &-content
-      max-width: 320px
+      max-width: 640px
       width: 100%
-      padding: 32px 32px 24px
+      padding: 32px 16px 16px @sm 32px
       background: #fff
       position: relative
       z-index: 2
 
     &-title
-      text: 500 13px 2.1 center
-      font-weight: 600
-      margin: 0 0 16px
+      text: 800 23px 1.2 center @md 35px
+      margin: 0 0 16px @md 0 0 32px
 
     &-text
-      text: 500 15px 1.6 center
-      margin: 0 0 16px
+      text: 500 15px 1.6 center @md 19px
+      margin: 16px 0 @md 32px 0
 
-    &-agree
-      text: $pseudo-neutral-400 500 13px 2.1 center
-      margin: 0 0 16px
+    .btn--column
+      margin: 16px 0 0 @md 32px 0 0
+      align-items: center

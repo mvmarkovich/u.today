@@ -26,6 +26,7 @@
     e.preventDefault();
     $headerNav.addClass("header--hide");
     $(".header__panel").addClass("header--hide");
+    $(".header__lang").addClass("visibility-hidden");
     $headerSearch.fadeToggle(180);
   }
 
@@ -36,6 +37,7 @@
     setTimeout(function () {
       $headerNav.toggleClass("header--hide");
       $(".header__panel").toggleClass("header--hide");
+      $(".header__lang").toggleClass("visibility-hidden");
     }, 180);
   }
 
