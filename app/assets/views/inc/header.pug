@@ -18,10 +18,11 @@ header.header
       button.header__btn-search.btn.btn--light.btn--search(aria-label="open search form")
 
       .header__lang
-        .btn.btn--light.btn--arrow-down.header__lang-btn ENG
+        .btn.btn--light.btn--arrow-down.header__lang-btn
+          a.tabs__btn.btn.btn--light.is-active(href='#' hreflang='en') ENG
 
         .header__lang-other
-          a.header__lang-link(href="#") RU
+          a.tabs__btn.btn.btn--light(href='#' hreflang='ru') RU
 
       button.header__burger.btn.btn--light.btn--burger(aria-label="open/close menu")
 

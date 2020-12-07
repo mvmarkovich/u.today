@@ -211,6 +211,10 @@
       padding: 0 4px 0 8px
       font-weight: 700
 
+      .is-active
+        pointer-events: none
+        font-weight: 700
+
     &-other
       position: absolute 31px 0 null 0
       border: 1px solid #CFD8DC
@@ -220,6 +224,9 @@
       z-index: 2
       display: none
 
+      .tabs__btn
+        padding: 0 8px
+
     &-link
       padding: 0 8px
       text: #263238 15px 1.6
@@ -228,7 +235,8 @@
 
     &:hover
       ^&-btn
-        text: #2196f3
+        .is-active
+          text: #2196f3
 
         &:after
           background-image: svg-load("icons/triangle-down.svg", fill: $accent-1-medium)

@@ -65,8 +65,8 @@
         <div class="header__panel">
           <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
           <div class="header__lang">
-            <div class="btn btn--light btn--arrow-down header__lang-btn">ENG</div>
-            <div class="header__lang-other"><a class="header__lang-link" href="#">RU</a></div>
+            <div class="btn btn--light btn--arrow-down header__lang-btn"><a class="tabs__btn btn btn--light is-active" href="#" hreflang="en">ENG</a></div>
+            <div class="header__lang-other"><a class="tabs__btn btn btn--light" href="#" hreflang="ru">RU</a></div>
           </div>
           <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
         </div>
@@ -214,6 +214,7 @@
           <div class="footer__subscribe">
             <label class="footer__title" for="footer__subscribe">Subscribe to daily newsletter</label>
             <form class="form--row footer__subscribe-form" target="#" method="get">
+              <div class="subscribe-result"></div>
               <div class="input">
                 <input class="footer__subscribe-input input__elem" id="footer__subscribe" type="text" name="email" placeholder="Email" required>
               </div>
