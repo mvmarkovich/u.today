@@ -5,14 +5,15 @@
     margin-top: 0
 
   &__title
-    text: $neutral 600 22px @md 31px @xl 43px
+    text: $neutral 600 22px @md 35px
     text-align: center
-    margin-bottom: 32px @xl 44px
+    max-width: 720px
+    margin: 0 auto 32px @xl 0 auto 48px
 
   &__subtitle
-    text: 600 22px @md 24px @xl 31px
+    text: 800 22px 1.2 @md 27px
     text-align: center
-    margin-bottom: 64px
+    margin: 0 0 24px
 
   &__descr
     text: $pseudo-neutral-900 500 14px @xl 18px
@@ -20,11 +21,13 @@
     margin-bottom: 0
 
   &__mark
-    text: $neutral 500 15px 1.8 @xl 24px
+    text: $neutral 500 15px 1.8 @md 19px
     text-align: center
+    margin: 0 0 32px @xl 0 0 48px
 
   &__caption
-    margin-top: 24px
+    margin: 24px 0 0
+    text: $neutral
     display: block
     text-align: center
 
@@ -33,7 +36,7 @@
 
   .btn--block
     justify-content: center
-    margin-top: 48px
+    margin: 28px 0 0
 
     .btn
       min-width: 230px
@@ -45,12 +48,12 @@
     text: $pseudo-neutral-400
 
   h3
-    text: 600 15px @xl 24px
+    text: 700 15px @sm 17px
     text-align: center
-    margin-bottom: 48px
+    margin: 0 0 24px
 
-  h2 ~ h3
-    margin-top: -48px
+  img
+    width: auto
 
   &__section
     background-color: #fff
@@ -84,20 +87,15 @@
   &__benefits
 
     &-list
-      
       box: space-between
       align-items: flex-start
       flex-wrap: wrap
-      margin-top: 0 @md -32px
 
     &-item
       width: 100% @md 48%
       display: inline-flex
       align-items: flex-start
-      margin-top: 0 @md 32px
-
-      & + &
-        margin-top: 32px
+      margin: 32px 0 0
 
     &-name
       text: 500 14px 1.8 @xl 17px
@@ -126,10 +124,7 @@
       width: 100% @md 48%
       display: inline-flex
       align-items: flex-start
-      margin-top: 0 @md 32px
-
-      & + &
-        margin-top: 32px
+      margin: 32px 0 0
 
       &:before
         content: ''
@@ -147,11 +142,10 @@
   &__location
 
     &-list
-      
       box: space-between
       align-items: flex-start
       flex-wrap: wrap
-      margin-top: -24px
+      margin: @sm 48px 0 0 @xl 70px 0 0
 
     &-item
       text: $neutral 500 14px 1.8 @xl 17px
@@ -172,11 +166,9 @@
         margin-right: 12px
 
   &__statistics
-
     &-list
-      
       box: middle
-      flex-wrap: wrap
+      flex-wrap: wrap @md nowrap
 
     &-item
       display: @sm flex @md block
@@ -194,11 +186,11 @@
       text-align: @sm-down center
 
     &-value
-      text: $neutral 600 1.8 31px @md 43px @xl 47px
+      text: $neutral 600 1.8 31px @md 35px @xl 47px
       text-align: @sm-down center
 
   &-center-container
-    max-width: 768px
+    max-width: 840px
     margin: 0 auto
 
   &__partners
