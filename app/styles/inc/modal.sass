@@ -38,6 +38,15 @@
     display: none
     text-align: center
 
+    &-tiny
+      ^&-content
+        max-width: 320px
+
+      ^&-title
+        text-align: center
+        text: 600 17px 1.4
+        margin: 0 0 24px
+
     ^&__close
       opacity: .6 @md .25
       z-index: 3
@@ -56,6 +65,12 @@
     &-title
       text: 800 23px 1.2 center @md 35px
       margin: 0 0 16px @md 0 0 32px
+
+    &-agree
+      text: #78909C 500 13px 2.1
+      letter-spacing: .015em
+      text-align: center
+      margin-top: 16px
 
     &-text
       text: 500 15px 1.6 center @md 19px

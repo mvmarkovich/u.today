@@ -82,6 +82,7 @@
     <div class="page-container container">
       <div class="content-container">
         <div class="btns-spacer">
+          <div class="btn" data-modal="subscribe-form">Subscribe</div>
           <div class="btn" data-modal="rus-version">RUS version</div>
           <div class="btn" data-modal="eng-version">ENG version</div>
         </div>
@@ -176,6 +177,21 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="subscribe-form">
+      <div class="modal__square modal__square-tiny">
+        <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+        <div class="modal__square-content">
+          <div class="modal__square-title">Sign up for crypto digest</div>
+          <form action="#" method="get">
+            <div class="input article__subscribe-input">
+              <input class="input__elem" type="text" name="email" placeholder="Email" required>
+            </div>
+            <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+            <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our<a href="#!">Privacy Policy</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="modal" id="rus-version">
       <div class="modal__square modal__lang">
         <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
