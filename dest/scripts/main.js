@@ -122,6 +122,18 @@
   });
 
   //
+  // Fixed sidebar
+  //
+
+  var sidebar = new StickySidebar('.aside-menu-block', {
+    containerSelector: '.main-aside-container',
+    innerWrapperSelector: '.sidebar__inner',
+    topSpacing: 16,
+    bottomSpacing: 16,
+    minWidth: 784
+  });
+
+  //
   // Button load more in News main
   //
 
