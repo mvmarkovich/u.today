@@ -96,3 +96,14 @@
   position: absolute
   top: 8px
   right: 8px
+
+.watermark
+  background: resolve("icons/watermark.svg") no-repeat center / contain
+  position: absolute
+  top: 16px @xl 32px
+  right: 16px @xl 32px
+  size: 108px 24px @sm 168px 34px @xl 240px 48px
+
+  &--right-bottom
+    top: auto @xl auto
+    bottom: 16px @xl 32px
