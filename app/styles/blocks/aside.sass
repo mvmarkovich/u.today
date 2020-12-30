@@ -56,14 +56,14 @@
     margin-top: 4px
 
 .card
-  background-color: #fff
+  background: #fff
   border-radius: 2px
   overflow: hidden
   margin-bottom: 16px
   display: none @md block
 
-  &--mobile-visible
-    display: block
+  &:last-child
+    margin: 0
 
   &__mark
     text: #546e7a 500 13px 1.8
@@ -142,7 +142,13 @@
     border: 0
     border-radius: 0
     background: transparent
-    display: @md none @xl block
+    display: block
+    size: @xl-down 0
+    overflow: @xl-down hidden
+    visibility: @xl-down hidden
+
+    &:last-child
+      margin: @xl-down -16px 0 0
 
     .something
       height: auto

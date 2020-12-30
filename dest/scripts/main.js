@@ -122,18 +122,6 @@
   });
 
   //
-  // Fixed sidebar
-  //
-
-  var sidebar = new StickySidebar('.aside-menu-block', {
-    containerSelector: '.main-aside-container',
-    innerWrapperSelector: '.sidebar__inner',
-    topSpacing: 16,
-    bottomSpacing: 16,
-    minWidth: 784
-  });
-
-  //
   // Button load more in News main
   //
 
@@ -176,3 +164,5 @@
   });
 
 })(jQuery);
+
+!function(){var e=document.querySelector(".aside-menu-block"),t=null,o=null,s=0,d=16,i=16;function n(){var n=e.getBoundingClientRect(),l=document.querySelector(".main-news-block").getBoundingClientRect().bottom;if(n.bottom<l){if(null==t){for(var a=getComputedStyle(e,""),p="",c=0;c<a.length;c++)0!=a[c].indexOf("overflow")&&0!=a[c].indexOf("padding")&&0!=a[c].indexOf("border")&&0!=a[c].indexOf("outline")&&0!=a[c].indexOf("box-shadow")&&0!=a[c].indexOf("background")||(p+=a[c]+": "+a.getPropertyValue(a[c])+"; ");(t=document.createElement("div")).className="aside-stop",t.style.cssText=p+" box-sizing: border-box; width: "+e.offsetWidth+"px;",e.insertBefore(t,e.firstChild);var r=e.childNodes.length;for(c=1;c<r;c++)t.appendChild(e.childNodes[1]);e.style.height=t.getBoundingClientRect().height+"px",e.style.padding="0",e.style.border="0"}var h=t.getBoundingClientRect(),u=n.top+h.height,m=document.documentElement.clientHeight,g=Math.round(u-l),x=Math.round(u-m);h.height>m?(n.top<o?x+i>g?h.bottom-m+i<=0?(t.className="aside-fixed",t.style.top=m-h.height-i+"px",s=i+n.top+h.height-m):(t.className="aside-stop",t.style.top=-s+"px"):(t.className="aside-stop",t.style.top=-g+"px",s=g):n.top-d<0?h.top-d>=0?(t.className="aside-fixed",t.style.top=d+"px",s=n.top-d):(t.className="aside-stop",t.style.top=-s+"px"):(t.className="",t.style.top="",s=0),o=n.top):n.top-d<=0?n.top-d<=g?(t.className="aside-stop",t.style.top=-g+"px"):(t.className="aside-fixed",t.style.top=d+"px"):(t.className="",t.style.top=""),window.addEventListener("resize",function(){e.children[0].style.width=getComputedStyle(e,"").width},!1)}}window.addEventListener("scroll",n,!1),document.body.addEventListener("scroll",n,!1)}();
