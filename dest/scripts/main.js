@@ -165,4 +165,70 @@
 
 })(jQuery);
 
-!function(){var e=document.querySelector(".aside-menu-block"),t=null,o=null,s=0,d=16,i=16;function n(){var n=e.getBoundingClientRect(),l=document.querySelector(".main-news-block").getBoundingClientRect().bottom;if(n.bottom<l){if(null==t){for(var a=getComputedStyle(e,""),p="",c=0;c<a.length;c++)0!=a[c].indexOf("overflow")&&0!=a[c].indexOf("padding")&&0!=a[c].indexOf("border")&&0!=a[c].indexOf("outline")&&0!=a[c].indexOf("box-shadow")&&0!=a[c].indexOf("background")||(p+=a[c]+": "+a.getPropertyValue(a[c])+"; ");(t=document.createElement("div")).className="aside-stop",t.style.cssText=p+" box-sizing: border-box; width: "+e.offsetWidth+"px;",e.insertBefore(t,e.firstChild);var r=e.childNodes.length;for(c=1;c<r;c++)t.appendChild(e.childNodes[1]);e.style.height=t.getBoundingClientRect().height+"px",e.style.padding="0",e.style.border="0"}var h=t.getBoundingClientRect(),u=n.top+h.height,m=document.documentElement.clientHeight,g=Math.round(u-l),x=Math.round(u-m);h.height>m?(n.top<o?x+i>g?h.bottom-m+i<=0?(t.className="aside-fixed",t.style.top=m-h.height-i+"px",s=i+n.top+h.height-m):(t.className="aside-stop",t.style.top=-s+"px"):(t.className="aside-stop",t.style.top=-g+"px",s=g):n.top-d<0?h.top-d>=0?(t.className="aside-fixed",t.style.top=d+"px",s=n.top-d):(t.className="aside-stop",t.style.top=-s+"px"):(t.className="",t.style.top="",s=0),o=n.top):n.top-d<=0?n.top-d<=g?(t.className="aside-stop",t.style.top=-g+"px"):(t.className="aside-fixed",t.style.top=d+"px"):(t.className="",t.style.top=""),window.addEventListener("resize",function(){e.children[0].style.width=getComputedStyle(e,"").width},!1)}}window.addEventListener("scroll",n,!1),document.body.addEventListener("scroll",n,!1)}();
+(function(){
+  var a = document.querySelector('.aside-menu-block'), b = null, K = null, Z = 0, P = 16, N = 16;
+  window.addEventListener('scroll', Ascroll, false);
+  document.body.addEventListener('scroll', Ascroll, false);
+  function Ascroll() {
+    var Ra = a.getBoundingClientRect(),
+        R1bottom = document.querySelector('.main-news-block').getBoundingClientRect().bottom;
+    if (Ra.bottom < R1bottom) {
+      if (b == null) {
+        var Sa = getComputedStyle(a, ''), s = '';
+        b = document.createElement('div');
+        b.className = "stop";
+        b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+        a.insertBefore(b, a.firstChild);
+        var l = a.childNodes.length;
+        for (var i = 1; i < l; i++) {
+          b.appendChild(a.childNodes[1]);
+        }
+        a.style.height = b.getBoundingClientRect().height + 'px';
+        a.style.padding = '0';
+        a.style.border = '0';
+      }
+      var Rb = b.getBoundingClientRect(),
+          Rh = Ra.top + Rb.height,
+          W = document.documentElement.clientHeight,
+          R1 = Math.round(Rh - R1bottom),
+          R2 = Math.round(Rh - W);
+      if (Rb.height > W) {
+        if (Ra.top < K) {  // скролл вниз
+          if (R2 + N > R1) {  // не дойти до низа
+            if (Rb.bottom - W + N <= 0) {  // подцепиться
+              b.className = 'aside-fixed';
+              b.style.top = W - Rb.height - N + 'px';
+              Z = N + Ra.top + Rb.height - W;
+            } else {
+              b.className = 'aside-stop';
+              b.style.top = - Z + 'px';
+            }
+          } else {
+            b.className = 'aside-stop';
+            b.style.top = - R1 +'px';
+            Z = R1;
+          }
+        } else {  // скролл вверх
+          if (Ra.top - P < 0) {  // не дойти до верха
+            if (Rb.top - P >= 0) {  // подцепиться
+              b.className = 'aside-fixed';
+              b.style.top = P + 'px';
+              Z = Ra.top - P;
+            } else {
+              b.className = 'aside-stop';
+              b.style.top = - Z + 'px';
+            }
+          } else {
+            b.className = '';
+            b.style.top = '';
+            Z = 0;
+          }
+        }
+        K = Ra.top;
+      }
+      window.addEventListener('resize', function() {
+        a.children[0].style.width = getComputedStyle(a, '').width
+      }, false);
+    }
+  }
+})()
