@@ -202,26 +202,11 @@
                 b.style.top = - Z + 'px';
               }
             } else {
-              b.className = 'aside-stop-1';
+              b.className = 'aside-stop';
               b.style.top = - R1 +'px';
               Z = R1;
             }
-          } else {  // скролл вверх
-            if (Ra.top - P < 0) {  // не дойти до верха
-              if (Rb.top - P >= 0) {  // подцепиться
-                b.className = 'aside-fixed';
-                b.style.top = P + 'px';
-                Z = Ra.top - P;
-              } else {
-                b.className = 'aside-stop';
-                b.style.top = - Z + 'px';
-              }
-            } else {
-              b.className = '';
-              b.style.top = '';
-              Z = 0;
-            }
-          }
+          } 
           K = Ra.top;
         }
 
