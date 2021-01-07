@@ -202,7 +202,7 @@
                 b.style.top = - Z + 'px';
               }
             } else {
-              b.className = 'aside-stop';
+              b.className = 'aside-stop-1';
               b.style.top = - R1 +'px';
               Z = R1;
             }
