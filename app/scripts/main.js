@@ -174,7 +174,7 @@
         if (b == null) {
           var Sa = getComputedStyle(a, ''), s = '';
           b = document.createElement('div');
-          b.className = "stop";
+          b.className = "aside-stop";
           b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
           a.insertBefore(b, a.firstChild);
           var l = a.childNodes.length;
@@ -205,6 +205,21 @@
               b.className = 'aside-stop';
               b.style.top = - R1 +'px';
               Z = R1;
+            }
+          } else {  // скролл вверх
+            if (Ra.top - P < 0) {  // не дойти до верха
+              if (Rb.top - P >= 0) {  // подцепиться
+                b.className = 'aside-fixed';
+                b.style.top = P + 'px';
+                Z = Ra.top - P;
+              } else {
+                b.className = 'aside-stop';
+                b.style.top = - Z + 'px';
+              }
+            } else {
+              b.className = '';
+              b.style.top = '';
+              Z = 0;
             }
           }
           K = Ra.top;
