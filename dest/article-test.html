@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#263238">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css">
+    <meta name="msapplication-TileColor" content="#263238">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#263238">
+    <title>Article | u.today</title>
+    <link rel="stylesheet" href="styles/article-test.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container"><a class="header__logo" href="#!">U.TODAY</a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/0">News</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Latest News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">Bitcoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Ethereum News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Bitcoin Cash News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Ripple News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">EOS News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c6">Litecoin News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c7">Cardano News</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c8">NEM</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c9">Press releases</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c10">Submit Press releases</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow header__nav-item--active"><a class="header__nav-link" href="/1">Stories</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Features</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">Opinions</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Artificial Intelligence</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">SingUlarity</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Infographics</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">ICO Watch</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="/2">Guides</a>
+              <ul class="header__nav-child-list">
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Coins Guide</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c1">WikiCoin</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">CryptoTips</a></li>
+                <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Trading Guide</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/3">Price Predictions</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/4">Blockchain Programming</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__panel">
+          <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <div class="header__lang">
+            <div class="btn btn--light btn--arrow-down header__lang-btn"><a class="tabs__btn btn btn--light is-active" href="#" hreflang="en">ENG</a></div>
+            <div class="header__lang-other"><a class="tabs__btn btn btn--light" href="#" hreflang="ru">RU</a></div>
+          </div>
+          <button class="header__burger btn btn--light btn--burger" aria-label="open/close menu"></button>
+        </div>
+        <div class="header__search">
+          <form class="header__search-form" action="#" method="get">
+            <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
+            <input class="header__search-input" type="text" placeholder="Type..." name="search">
+            <button class="header__search-close btn btn--light btn--cross"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu-cover"></div>
+    <div class="page-container container">
+      <div class="main-aside-container">
+        <div class="main-news-block">
+          <div class="article"><span class="article__label article__label--original">U.TODAY Original Article</span><span class="article__label article__label--tweet">Tweet-based article</span><span class="article__label article__label--interviews">Interviews</span>
+            <h1 class="article__title">Women of Crypto at the Crypto Invest Summit: Separate but Hopeful</h1>
+            <div class="share share--row"><a class="social__link social__link--fb-white" href="#!">Facebook</a><a class="social__link social__link--tw-white" href="#!">Twitter</a><a class="social__link social__link--rd-white" href="#!">Reddit</a><a class="social__link social__link--copy" href="#!">Copy URL</a></div>
+            <div class="article_main-info">
+              <div class="article_main-info__humble">
+                <div class="humble">Monday, November 11 — 8:15 PM</div>
+                <div class="humble humble--icon humble--comments">256</div>
+                <div class="humble humble--icon humble--liked">31</div>
+                <div class="humble humble--icon humble--views">125k</div>
+              </div>
+            </div>
+            <div class="article__lead"><a class="article__lead-img--wrapper" href="#!"><img class="article__lead-img" src="https://u.today/sites/default/files/2019-03/den-sergeychuk_0.jpg" alt="Denys Serhiichuk"></a>
+              <div class="article__lead-info"><a class="article__lead-name" href="#!">Denys Serhiichuk</a>
+                <div class="article__lead-desc">We spoke with CEO Dio Ianakiara about TronWallet’s success, goals and upcoming plans. Here is our exclusive interview!</div>
+              </div>
+            </div>
+            <div class="something something--content"><a class="something__content-long" href="https://www.okex.com/markets/spot-info/wgrt-usdt"><img src="img/something/something__title-728.png" alt="Something title">
+                <div class="promoted__mark">Ads</div></a><a class="something__content-square" href="https://www.okex.com/markets/spot-info/wgrt-usdt"><img src="img/something/something__title-336.png" alt="Something title">
+                <div class="promoted__mark">Ads</div></a></div>
+            <div class="article__main-img-wrapper"><img class="article__main-img" src="https://u.today/sites/default/files/styles/736x/public/2020-12/x5860.jpg.pagespeed.ic.5XgovE9a3I.webp" alt="Main-img"></div>
+            <figcaption>Cover image via <a href="#!"> 123rf.com </a></figcaption>
+            <div class="disclaimer">
+              <p class="disclaimer_text">Disclaimer: The opinion expressed here is not investment advice – it is provided for informational purposes only. It does not necessarily reflect the opinion of U.Today. Every investment and all trading involves risk, so you should always perform your own research prior to making decisions. We do not recommend investing money you cannot afford to lose.</p>
+            </div>
+            <div class="article__content">
+              <div class="article__contents">
+                <div class="article__contents-title">Contents</div>
+                <ul class="article__contents-list">
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Women of Crypto as opening act</a></li>
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Ladies only</a></li>
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Scaling community and activism</a></li>
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Reclaiming sovereignty</a></li>
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Invisible adoption</a></li>
+                  <li class="article__contents-item"><a class="article__contents-link link-pseudo" href="#!">Adding value despite challenges</a></li>
+                </ul>
+              </div>
+              <p>In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second <a href='#!'>Crypto Invest Summit</a>, which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.</p>
+              <h2><em>Women of Crypto as opening act</em></h2>
+              <p>It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”</p>
+              <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.</p>
+              <h2>Ladies only</h2>
+              <p>Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:</p>
+              <p>In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second <a href='#!'>Crypto Invest Summit</a>, which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.</p>
+              <p>It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”</p>
+              <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.</p>
+              <blockquote>
+                <p>Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a href="#!">made up roughly 20 percent</a> of the speakers.</p>
+              </blockquote>
+              <p>During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.</p>
+              <ul>
+                <li>This is a sample of a list.</li>
+                <li>Many panelists felt that the possibilities and opportunities promised by Blockchain technologies are especially urgent for women, people of color and residents of developing countries who are left outside the global financial system.</li>
+                <li>During the Blockchain for Good panel, speakers discussed how Blockchain and cryptocurrency can help the unbanked millions directly, but can also provide much-needed transparency to non-profit initiatives that serve domestic and international relief causes.</li>
+              </ul>
+              <h2>Scaling community and activism</h2>
+              <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.</p>
+              <p>Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:</p>
+              <h2>Reclaiming sovereignty</h2>
+              <p>It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”</p>
+              <div class="something something--content">
+                <div class="something__content-long"><img src="img/something/something__central-728.png" alt="Something central"></div>
+                <div class="something__content-square"><img src="img/something/something__central-336.png" alt="Something central"></div>
+              </div>
+              <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.</p>
+              <h2>Reclaiming sovereignty</h2>
+              <figure><a class="image-popup-vertical-fit" rel="dofollow" target="_blank" href="https://u.today/sites/default/files/inline-images/4_26.jpg?from=body"><img alt="XRP is very likely to drop to support" src="https://u.today/sites/default/files/styles/736x/public/inline-images/2_60.jpg?itok=U4w1Tsy4" data-entity-type="file" data-entity-uuid="ba3ac052-8a1c-42a2-bf1a-795e82cc841f"></a>
+                <figcaption>Cover image via <a href="#!"> 123rf.com </a></figcaption>
+              </figure>
+              <p>It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”</p>
+              <p>Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women made up roughly 20 percent of the speakers. In an earlier interview with U.Today, Crystal Rose–who was featured both in the Women’s track and on the Main Stage–mentioned her disappointment with the way conference organizers tend to structure panels:</p>
+              <p dir="ltr">
+                <div class="article__related"><a class="article__related-img--wrapper" href="#!"><img src="https://u.today/sites/default/files/styles/736x/public/2020-03/2323.jpg?itok=Fy7hW4Al" alt="Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha"><span>Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha</span></a><a class="article__related-desc" href="#!">
+                    <div class="article__related-flame">Related</div>
+                    <div class="article__related-blockquote">Tron CEO Justin Sun Gets His Account Closed by Bank of America after PayPal’s Roelof Botha</div></a></div>
+              </p>
+              <p>It’s worth noting, however, that the Women’s track took place on the day before the actual conference began. To avoid confusion, the event’s agenda page ran the following missive in red capitals: “No conference and expo on Monday. Conference and expo days are Tuesday and Wednesday. Monday is Women of Crypto pre-conference track and kickoff party.”</p>
+              <h2>Adding value despite challenges</h2>
+              <p>In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second <a href='#!'>Crypto Invest Summit</a>, which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.</p>
+              <ol>
+                <li>Change the terms and conditions of the ToU</li>
+                <li>Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+                  <ol>
+                    <li>Change the terms and conditions of the ToU</li>
+                    <li>Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature</li>
+                  </ol>
+                </li>
+                <li>or Change other conditions for use of the U.Today Sites.</li>
+              </ol>
+              <p>In the early days of crypto community conferences, the number of women attending and especially speaking was notoriously low, but in the last couple of years, every major crypto and Blockchain event diligently features a Women in Crypto panel. The second <a href='#!'>Crypto Invest Summit</a>, which took place this week at LA’s Convention Center, was no exception; indeed, the conference went all out for a full Women of Crypto track.</p>
+              <ul>
+                <li>Change the terms and conditions of the ToU</li>
+                <li>Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature
+                  <ul>
+                    <li>Change the terms and conditions of the ToU</li>
+                    <li>Change all or any portion of the U.Today Sites, including eliminating or discontinuing any content or feature</li>
+                  </ul>
+                </li>
+                <li>or Change other conditions for use of the U.Today Sites.</li>
+              </ul>
+              <table align="center">
+                <tbody>
+                  <tr>
+                    <th> </th>
+                    <th>Loan-to-Value</th>
+                    <th>Interest Rates</th>
+                    <th>Native Token</th>
+                    <th>Assets</th>
+                    <th>Registered</th>
+                  </tr>
+                  <tr>
+                    <td>BlockFi</td>
+                    <td>50%</td>
+                    <td>3-12%</td>
+                    <td>No</td>
+                    <td>5</td>
+                    <td>USA</td>
+                  </tr>
+                  <tr>
+                    <td>YouHodler</td>
+                    <td>90%</td>
+                    <td>>4,5%</td>
+                    <td>No</td>
+                    <td>16</td>
+                    <td>Cyprus/Switzerland</td>
+                  </tr>
+                  <tr>
+                    <td>Crypto.com</td>
+                    <td>50%</td>
+                    <td>8-18%</td>
+                    <td>Required</td>
+                    <td>16</td>
+                    <td>Malta</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper. On the upside, just about half of the crowd comprised men, something the organizers noted as being a very encouraging sign of support from across the aisle.</p>
+              <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?</strong></p>
+              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?</em></p>
+            </div>
+            <div class="article__panel">
+              <div class="article__tags btns-spacer"><a class="btn btn--hash-tag" href="#!">#MaltaBlockchainSummit</a><a class="btn btn--hash-tag" href="#!">#Bitcoin</a><a class="btn btn--hash-tag" href="#!">#Processor</a></div>
+            </div>
+            <div class="share share--row"><a class="social__link social__link--fb-white" href="#!">Facebook</a><a class="social__link social__link--tw-white" href="#!">Twitter</a><a class="social__link social__link--rd-white" href="#!">Reddit</a><a class="social__link social__link--copy" href="#!">Copy URL</a></div>
+            <div class="about-author">
+              <div class="about-author_row"><a class="about-author_avatar" href="#!author"><img src="https://dummyimage.com/64x64/d8dbde/aaabad" alt="Konstantin Konstantinopolsky"></a>
+                <div class="about-author_info">
+                  <div class="about-author_title">About the author</div>
+                  <div class="about-author_data"><a class="about-author_name" href="#!author">Konstantin Konstantinopolsky</a>
+                    <div class="social"><a class="social__link social__link--ln" href="#!ln">LinkedIn</a><a class="social__link social__link--insta" href="#!insta">Instagram</a><a class="social__link social__link--em" href="#!email">Email</a></div>
+                  </div>
+                  <p>As one would expect under such circumstances, the audience for the track was a fraction of that which was expected to attend the summit proper.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-item"><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/250/public/2020-03/11111.jpg?itok=nlU-SVSw" alt="Title category"></a>
+            <div class="category-item__info">
+              <div class="humble__row"><a class="humble" href="#!">News</a>
+                <div class="humble humble--time">2 days 1 hour ago</div>
+              </div><a class="category-item__title-link" href="#!">
+                <div class="category-item__title">Crypto Trading CEO Eyes Boom as Coronavirus Volatility Upends Demand</div></a>
+              <div class="humble__row humble--between"><a class="humble humble--author" href="#!"><img class="humble__img" src="https://u.today/sites/default/files/2019-11/yuri-ava.jpg" alt="Yuri Molchan">Yuri Molchan</a></div>
+            </div>
+          </div>
+          <div class="something something--content">
+            <div class="something__content-long"><img src="img/something/something__central-728.png" alt="Something central"></div>
+            <div class="something__content-square"><img src="img/something/something__central-336.png" alt="Something central"></div>
+          </div>
+          <div class="category-item"><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/250/public/2020-04/2963.jpg?itok=l2-ezqge" alt="Title category"></a>
+            <div class="category-item__info">
+              <div class="humble__row"><a class="humble" href="#!">Stories</a>
+                <div class="humble humble--time">2 hours ago</div>
+              </div><a class="category-item__title-link" href="#!">
+                <div class="category-item__title">How to Protect Your Identity and Bitcoin Wallet From Tracking</div></a>
+              <div class="humble__row humble--between"><a class="humble humble--author" href="#!"><img class="humble__img" src="https://u.today/sites/default/files/2019-11/vlad-ava.jpg" alt="Vladislav Sopov">Vladislav Sopov</a></div>
+            </div>
+          </div>
+          <div class="category-item"><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/250/public/2020-04/Bestchange.jpg?itok=HE4b8Qf1" alt="Title category"></a>
+            <div class="category-item__info">
+              <div class="humble__row"><a class="humble" href="#!">Interviews</a>
+                <div class="humble humble--time">4 hours ago</div>
+              </div><a class="category-item__title-link" href="#!">
+                <div class="category-item__title">How To Exchange Crypto with BestСhange</div></a>
+              <div class="humble__row humble--between"><a class="humble humble--author" href="#!"><img class="humble__img" src="https://u.today/sites/default/files/2019-03/Heewon-Jang_0.jpg" alt="Heewon Jang">Heewon Jang</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="aside-menu-block">
+          <!--
+          .card.card--widget.hide-md-up
+            .card__title Top tranding bot
+              span.card__mark Promoted
+          
+            .card__body
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/IQ-Mining.png", alt="IQ-Mining")
+          
+                  .card--widget__info
+                    .card--widget__title IQ Mining
+                    span.card--widget__signature 40% discount till 8 march
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+              a.card--widget__item(href="#!" target="_blank" rel="nofollow noopener")
+                .card--widget__row
+                  .card--widget__img-wrapper
+                    img.card--widget__img(src="img/content/crypt/CryptoUniverse.png", alt="CryptoUniverse")
+          
+                  .card--widget__info
+                    .card--widget__title CryptoUniverse
+                    span.card--widget__signature Cashback up to 20%
+          
+                .btn--block
+                  .btn.btn--small.btn--accent-3 Website
+          
+          -->
+          <div class="card card--subscribe card--mobile-visible">
+            <div class="card__subscribe"><a class="card__subscribe-item card__subscribe-fb" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-fb"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Like</div>
+                  <div class="card__subscribe-nick">utoday.en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tw" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-tw"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Follow</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a><a class="card__subscribe-item card__subscribe-yb" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-yb"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Subscribe</div>
+                  <div class="card__subscribe-nick">utoday</div>
+                </div></a><a class="card__subscribe-item card__subscribe-tm" href="#!">
+                <div class="card__subscribe-icon card__subscribe-icon-tg"></div>
+                <div class="card__subscribe-desc">
+                  <div class="card__subscribe-title">Join</div>
+                  <div class="card__subscribe-nick">@utoday_en</div>
+                </div></a>
+              <form class="card__subscribe-form">
+                <label class="card__subscribe-item card__subscribe-notice">
+                  <div class="card__subscribe-icon card__subscribe-icon-notice"></div>
+                  <div class="card__subscribe-desc">
+                    <div class="card__subscribe-title">Enable push</div>
+                    <div class="card__subscribe-radio switch">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                </label>
+                <label class="card__subscribe-item card__subscribe-em">
+                  <div class="card__subscribe-icon card__subscribe-icon-em"></div>
+                  <div class="card__subscribe-desc">
+                    <input class="input__elem" type="text" name="email" placeholder="Subscribe to email">
+                    <button class="btn btn--light btn--arrow-long-right" type="submit" aria-label="send"></button>
+                  </div>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="card card--press--release">
+            <div class="card__body">
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/150/public/2019-09/Will_New_Exchanges_Be_Able_to_Break_the_Crypto.JPG.jpg?itok=QbeGuWKq" alt="Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches"></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Norwegian Bitcoin Millionaire Proves Why You Shouldn’t Brag About Your Crypto Riches</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer"><a class="btn btn--accent" href="#!">Submit Press Release</a></div>
+          </div>
+          <div class="card card--something">
+            <div class="something"><img src="img/something/something__aside.png" alt="Banner aside"></div>
+          </div>
+          <div class="card">
+            <div class="card__title">Popular</div>
+            <div class="card__body">
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Google’s Amir Sarhangi Joins Ripple</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Where Is Bitcoin Going in the Near Future? Experts Weigh In</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://u.today/sites/default/files/styles/40/public/2019-03/The%20Best%20Cryptocurrency%20to%20Invest%20in%202019.jpg?itok=Pqr1SqcJ" alt="IMG">
+                  <div class="sponsored__mark">Promo</div></a>
+                <div class="aside-story__body"><a class="aside-story__link" href="#!">Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise</a>
+                  <div class="aside-story__info">
+                    <div class="humble humble--tiny">12:25 AM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer"><a class="btn btn--light btn--arrow-right" href="#!">Show more</a></div>
+          </div>
+          <div class="card card--something">
+            <div class="something"><img src="img/something/something__aside-big.png" alt="Banner aside"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
