@@ -8,7 +8,7 @@
     box: center space-between
     flex-wrap: @md wrap @xl nowrap
     min-height: 48px @md 97px @xl 48px
-    padding: 0 16px
+    padding: 0 8px @sm 0 16px
     position: relative
     max-width: 100% @md 768px @xl 1152px
     margin: 0 auto
@@ -56,6 +56,13 @@
       size: 125px 14px @md 177px 20px
       min-width: 125px @md 177px
       background: resolve("icons/logo-crypto.svg") no-repeat left top / contain
+      color: transparent
+      text-indent: -9999px
+
+    &-russian
+      size: 125px 14px @xs 177px 23px
+      min-width: 125px @xs 177px
+      background: resolve("icons/logo-russian.png") no-repeat left top / contain
       color: transparent
       text-indent: -9999px
 
