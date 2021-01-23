@@ -181,7 +181,9 @@
           for (var i = 1; i < l; i++) {
             b.appendChild(a.childNodes[1]);
           }
-          a.style.height = b.getBoundingClientRect().height + 'px';
+          $(window).scroll(function(){  
+            a.style.height = b.getBoundingClientRect().height + 'px';
+          })
           a.style.padding = '0';
           a.style.border = '0';
         }
