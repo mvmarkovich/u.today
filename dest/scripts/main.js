@@ -121,6 +121,10 @@
     $(this).siblings().css("max-height", "100%")
   });
 
+  $('.something--close').on('click', function() {
+    $(this).parent().remove();
+  });
+
   //
   // Button load more in News main
   //
