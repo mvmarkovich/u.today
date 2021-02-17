@@ -54,15 +54,23 @@
   &-square
     display: @md none
 
-  &--footer
+  &--fixed
     position: fixed null 0 0 0
-    display: block @md none 
-    z-index: 99
+    z-index: 151
+    max-height: 90px
+    background: rgba(245, 245, 245, 0.8)
+
+    img
+      max-height: 90px
 
   &--close
     position: absolute
     right: 0
     top: -32px 
+
+  &--container
+    max-width: 768px
+    margin: 0 auto
 
 .ref
   text: $pseudo-neutral-400 13px 1.6

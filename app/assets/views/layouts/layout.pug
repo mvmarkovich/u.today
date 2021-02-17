@@ -33,10 +33,11 @@ html(lang="en" dir="ltr")
 
     include ../blocks/modal.pug
 
-    .something--footer
+    .something--fixed
       .btn.btn--cross.btn--light.something--close
 
-      img(src="img/something/something__central-728.png" alt="Something central")
+      .something--container
+        img(src="img/something/something__central-728.png" alt="Something central")
 
     block foot
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
