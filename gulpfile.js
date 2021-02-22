@@ -129,8 +129,8 @@
 
   //watching by all files in dest
   gulp.task('watch', function () {
-    gulp.watch(['app/styles/**/*.*', '!app/styles/amp.sass'], gulp.series('postcss'));
-    gulp.watch('app/styles/amp.sass', gulp.series('postcssAmp'));
+    gulp.watch(['app/styles/**/*.*', '!app/styles/amp.sss'], gulp.series('postcss'));
+    gulp.watch('app/styles/amp.sss', gulp.series('postcssAmp'));
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
