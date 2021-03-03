@@ -1,14 +1,14 @@
 blockquote
   margin: 32px 0
   position: relative
-  border-left: 4px solid #CFD8DC
+  border-left: 4px solid var(--pseudo-neutral-100)
   padding: 12px 16px
 
   &:before
     content: ""
     display: block
     background-image: svg-load("icons/quote.svg")
-    background-color: $neutral
+    background-color: var(--neutral)
     width: 24px
     height: 24px
     position: absolute
@@ -17,7 +17,8 @@ blockquote
     left: -14px
 
   p
-    text: #263238 500 16px 1.8
+    color: var(--pseudo-neutral-900)
+    text: 500 16px 1.8
     margin: 0
 
   strong

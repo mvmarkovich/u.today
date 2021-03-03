@@ -1,5 +1,6 @@
 .btn
-  text: $pseudo-neutral-900 500 15px
+  color: var(--pseudo-neutral-900)
+  text: 500 15px
   line-height: unset
   min-height: 32px
   padding: 0 12px
@@ -17,7 +18,7 @@
   -webkit-tap-highlight-color: transparent
 
   &:hover
-    text: $accent-1-medium
+    color: var(--accent-1-medium)
 
   &--wide
     padding: * 16px
@@ -57,7 +58,8 @@
           text: 500 17px 1.7
 
         &__value
-          text: #263238 700 17px 1.7
+          color: var(--pseudo-neutral-900)
+          text: 700 17px 1.7
 
     &-bg
       display: block @xl flex
@@ -98,35 +100,35 @@
 
   &--subscribe
     font-weight: 700
-    color: #2962ff
+    color: var(--accent-1-medium)
     height: 48px
 
   &--hash-tag
     text: 500 15px 1.6
-    background: $accent-1-light
-    border-color: $accent-1-light
-    color: #fff
+    background: var(--accent-1-medium)
+    border-color: var(--accent-1-medium)
+    color: var(--neutral)
 
     &:hover
-      text: $neutral
+      text: var(--neutral)
 
   &--accent
-    background: $accent-1-light
-    border-color: $accent-1-light
-    text: #fff
+    background: var(--accent-1-medium)
+    border-color: var(--accent-1-medium)
+    color: var(--neutral)
 
     &:hover
-      background: $accent-1-dark
-      border-color: $accent-1-dark
-      text: #fff
+      background: var(--accent-1-dark)
+      border-color: var(--accent-1-dark)
+      color: var(--neutral)
 
   &--accent-2
-    background: $accent-2-medium
-    border-color: $accent-2-medium
-    text: #fff
+    background: var(--accent-2-medium)
+    border-color: var(--accent-2-medium)
+    color: var(--neutral)
 
     &:hover
-      text: #fff
+      color: var(--neutral)
 
   &--accent-3
     background: #2E7D32
@@ -134,12 +136,12 @@
     border-radius: 0
     font-weight: 700
     letter-spacing: .01em
-    color: #fff
+    color: var(--neutral)
     padding: 0 5px
     text-align: center
 
     &:hover
-      text: $neutral
+      color: var(--neutral)
 
   &--show-more, &--ajax
     font-weight: 700
@@ -149,7 +151,7 @@
     width: 100%
     justify-content: center
     min-height: 72px
-    background-color: $neutral
+    background-color: var(--neutral)
     border-radius: 0
 
     &:after
@@ -160,7 +162,7 @@
       position: absolute -72px 0 null 0
 
   &--border
-    border: 1px solid #CFD8DC
+    border: $border
 
   &--arrow-down,
   &--dropdown,
@@ -280,8 +282,8 @@
   &--lang
     display: inline-flex
     align-items: center
-    border: 1px solid #2962FF
-    text: #2962FF
+    border: 1px solid var(--accent-1-light)
+    color: var(--accent-1-light)
     padding: 0
     margin: 16px 0 0 @md 32px 0 0
     max-width: 290px

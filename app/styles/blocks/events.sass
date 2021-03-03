@@ -3,7 +3,7 @@
   &__info
     padding: 24px 16px @sm 32px @xl 32px 48px 40px
     margin: 0 0 16px
-    background: #fff
+    background: var(--accent-bg-1)
 
     &-title
       text: 23px 1.2 800 @sm 26px @xl 31px
@@ -14,13 +14,13 @@
 
   &__col
     margin: 0 0 16px
-    background: #fff
+    background: var(--accent-bg-1)
 
     &-title
       text: 23px 1.2 800 @sm 26px @xl 31px
       padding: 24px 16px @sm 32px @xl 32px 48px
       margin: 0
-      border-bottom: 1px solid #E0E0E0
+      border-bottom: 1px solid var(--pseudo-neutral-300)
 
     &:last-child
       margin: 16px 0 0
@@ -29,14 +29,15 @@
     padding: 24px 16px @sm 32px @xl 32px 48px 40px
     display: @sm flex
     align-items: @sm flex-start
-    border-bottom: 1px solid #E0E0E0
-    background: $neutral
+    border-bottom: 1px solid var(--pseudo-neutral-300)
+    background: var(--accent-bg-1)
 
     &-left
       margin: 0 0 16px @sm 0 16px 0 0
 
     &-title
-      text: #263238 700 15px 1.6
+      color: var(--pseudo-neutral-900)
+      text: 700 15px 1.6
       margin: 0 0 8px
 
     &-img
@@ -58,7 +59,8 @@
         min-width: 1px
 
         &__title
-          text: #546E7A 13px center
+          color: var(--pseudo-neutral-600)
+          text: 13px center
 
         &__value
           text: 15px
@@ -81,14 +83,14 @@
           text: 15px 1.6
 
           &:first-child
-            text: #546E7A
+            color: var(--pseudo-neutral-600)
             font-weight: 500
             min-width: 90px @md 60px @xl 110px
             padding: 0 16px 0 0 @md 0 8px 0 0 @xl 0 16px 0 0
             display: inline-flex
 
           &:last-child
-            text: #263238
+            color: var(--pseudo-neutral-600)
             font-weight: 700
 
     &:last-child

@@ -17,6 +17,13 @@ header.header
     .header__panel
       button.header__btn-search.btn.btn--light.btn--search(aria-label="open search form")
 
+      .header__theme
+        a.header__theme-item(aria-label="Light theme" title="Light theme")
+          include ../../img/icons/theme-light.svg
+
+        a.header__theme-item(aria-label="Dark theme" title="Dark theme")
+          include ../../img/icons/theme-dark.svg
+
       .header__lang
         .btn.btn--light.btn--arrow-down.header__lang-btn
           a.tabs__btn.btn.btn--light.is-active(href='#' hreflang='en') ENG

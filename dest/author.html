@@ -63,6 +63,27 @@
         </nav>
         <div class="header__panel">
           <button class="header__btn-search btn btn--light btn--search" aria-label="open search form"></button>
+          <div class="header__theme"><a class="header__theme-item" aria-label="Light theme" title="Light theme"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<circle cx="12" cy="12" r="8" fill="#FFEB3B"/>
+</g>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="24" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>
+</a><a class="header__theme-item" aria-label="Dark theme" title="Dark theme"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.293 15.293C18.2887 15.7472 17.1739 16 16 16C11.5817 16 8 12.4183 8 8.00002C8 6.82614 8.25283 5.71132 8.70701 4.70703C5.93132 5.9623 4 8.75562 4 12C4 16.4183 7.58172 20 12 20C15.2444 20 18.0377 18.0687 19.293 15.293Z" fill="#263238"/>
+<circle cx="12" cy="12" r="7.5" stroke="#263238" stroke-dasharray="1 1"/>
+</svg>
+</a></div>
           <div class="header__lang">
             <div class="btn btn--light btn--arrow-down header__lang-btn"><a class="tabs__btn btn btn--light is-active" href="#" hreflang="en">ENG</a></div>
             <div class="header__lang-other"><a class="tabs__btn btn btn--light" href="#" hreflang="ru">RU</a></div>
@@ -495,13 +516,18 @@
         </div>
       </div>
     </div>
-    <div class="something--fixed">
-      <div class="btn btn--cross btn--light something--close"></div>
-      <div class="something--container">
-        <div class="something--fixed__desktop"><img src="img/something/something__central-728.png" alt="Something central"></div>
-        <div class="something--fixed__mobile"><img src="img/something/something__central-336.png" alt="Something central"></div>
-      </div>
-    </div>
+    <!--
+    .something--fixed
+      .btn.btn--cross.btn--light.something--close
+    
+      .something--container
+        .something--fixed__desktop
+          img(src="img/something/something__central-728.png" alt="Something central")
+    
+        .something--fixed__mobile
+          img(src="img/something/something__central-336.png" alt="Something central")
+    
+    -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="libs/slick/slick.min.js"></script>

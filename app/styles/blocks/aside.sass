@@ -9,10 +9,11 @@
 
   & + &
     padding-top: 16px
-    border-top: 1px solid #eceff1
+    border-top: $border
 
   &__name
-    text: #263238 13px 1.2 600
+    color: var(--pseudo-neutral-900)
+    text: 13px 1.2 600
 
   &__img
     border-radius: 2px
@@ -40,7 +41,8 @@
     justify-content: space-between
 
   &__link
-    text: #263238 500 13px 1.9 @xl 15px
+    color: var(--pseudo-neutral-900)
+    text: 500 13px 1.9 @xl 15px
     margin-left: 8px
     text-decoration: none
     display: block
@@ -56,20 +58,22 @@
     margin-top: 4px
 
 .card
-  background: #fff
+  background: var(--accent-bg-1)
   border-radius: 2px
   overflow: hidden
   margin-bottom: 16px
   display: none @md block
 
   &__mark
-    text: #546e7a 500 13px 1.8
+    color: var(--pseudo-neutral-600)
+    text: 500 13px 1.8
 
   &__title
-    text: #263238 13px 1.4 600
+    color: var(--pseudo-neutral-900)
+    text: 13px 1.4 600
     box: center space-between
     padding: 4px 16px
-    border-bottom: 1px solid #cfd8dc
+    border-bottom: 1px solid var(--pseudo-neutral-200)
     margin: 0
     min-height: 40px
 
@@ -99,7 +103,6 @@
     width: 100%
 
   &--press--release
-
     .card__footer
       border: 0
       margin-bottom: 8px
@@ -111,7 +114,7 @@
       margin: 0 0 8px
 
     &-item
-      border-top: 1px solid #eceff1
+      border-top: 1px solid var(--pseudo-neutral-50)
       padding-top: 8px
       padding-bottom: 8px
 
@@ -125,7 +128,7 @@
 
   &__footer
     padding: 4px 16px
-    border-top: 1px solid #cfd8dc
+    border-top: 1px solid var(--pseudo-neutral-200)
     display: flex
     align-items: center
     justify-content: space-between
@@ -157,7 +160,7 @@
       flex-wrap: wrap @xl nowrap
       align-items: center
       justify-content: space-between
-      color: #263238
+      color: var(--pseudo-neutral-900)
       text-decoration: none
 
       & + &
@@ -180,7 +183,8 @@
       text: 700 15px 1.6
 
     &__signature
-      text: #263238 500 14px 1.5
+      color: var(--pseudo-neutral-900)
+      text: 500 14px 1.5
 
   &--subscribe
     background: transparent
@@ -194,7 +198,7 @@
 
     &-item
       width: 100% @sm 49% @md 100% @xl 49%
-      text: $neutral
+      color: var(--neutral)
       box: center
       text-decoration: none
       margin: 0 0 8px
@@ -208,7 +212,8 @@
       background-position: center
 
     &-title
-      text: $neutral 700 15px 33px
+      color: var(--neutral)
+      text: 700 15px 33px
       max-width: @xl 84px
       overflow: hidden
       text-overflow: ellipsis
@@ -219,7 +224,8 @@
       height: 56px
 
     &-nick
-      text: $neutral 13px 1.1
+      color: var(--neutral)
+      text: 13px 1.1
 
     &-fb
       ^&-icon
@@ -258,14 +264,14 @@
 
       ^&-icon
         background-image: svg-load("icons/social/email.svg", fill="#263238")
-        background-color: $neutral
+        background-color: var(--accent-bg-1)
 
     &-notice
       margin: 0
 
       ^&-icon
         background-image: resolve("icons/notice-blue.svg")
-        background-color: $neutral
+        background-color: var(--accent-bg-1)
 
     &-form
       width: 100%
@@ -273,7 +279,7 @@
       ^&-item
         width: 100%
         margin: 8px 0 0
-        background-color: $neutral
+        background-color: var(--accent-bg-1)
 
         &:first-child
           margin: 0
@@ -283,17 +289,17 @@
         padding: 0 16px
 
       ^&-icon
-        border-right: 1px solid #CFD8DC
+        border-right: $border
 
       ^&-notice
         ^^&-title
-          text: #2962FF
+          color: var(--accent-1-light)
           font-weight: 500
           max-width: 100%
 
       ^&-em
         ^^&-title
-          text: #546E7A
+          color: var(--pseudo-neutral-600)
 
       .input__elem
         border: none

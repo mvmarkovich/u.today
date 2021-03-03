@@ -1,21 +1,21 @@
 .accordion
   border-radius: 2px
-  background-color: $neutral
-  border-bottom: @md-down 1px solid #263238
+  background-color: var(--neutral)
+  border-bottom: @md-down 1px solid var(--pseudo-neutral-900)
 
   .tabs__item
-    margin: @md-down 0 1.5rem 0 0
+    margin: @md-down 0 24px 0 0
 
     &--active
 
       .tabs__btn
-        color: @md-down $pseudo-neutral-900
+        color: @md-down var(--pseudo-neutral-900)
 
   .tabs--vertical
     flex-direction: @md-down row
-    padding-left: 1rem @sm 1.5rem @md 0
+    padding-left: 16px @sm 24px @md 0
     overflow-x: @md-down auto
-    padding-bottom: @md-down 3rem
+    padding-bottom: @md-down 48px
 
     .tabs__item
 
@@ -27,8 +27,9 @@
 
 
   .tabs__btn
-    padding: @md-down .5rem 0
-    text: @md-down #546e7a 15px 24px 600
+    padding: @md-down 8px 0
+    color: var(--pseudo-neutral-600)
+    text: @md-down 15px 24px 600
     white-space: @md-down nowrap
 
   + .btn,
@@ -49,7 +50,7 @@
 
   &__title
     text: 13px 1.4 600
-    padding: .5rem 1rem
+    padding: 8px 16px
     cursor: pointer
     user-select: none
     box: center space-between
@@ -63,11 +64,11 @@
       transform: @md-down scaleY(-1)
 
   &__body
-    border-top: 0 @md $border
+    border-top: none @md 1px solid var(--pseudo-neutral-100)
     display: block @md none
-    padding: 0 @md .5rem *
-    height: @md-down 2.5rem
+    padding: 0 @md 8px *
+    height: @md-down 40px
     overflow: @md-down hidden
 
     &--content
-      padding: 1rem @xl 1rem 1rem 2rem 1rem
+      padding: 16px @xl 16px 16px 32px 16px

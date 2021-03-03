@@ -27,15 +27,16 @@
 
       .tabs__btn
         &:after
-          background-color: $pseudo-neutral-900
+          background-color: var(--pseudo-neutral-900)
 
     &--sub-open
       ^^&__sub
         display: block
 
   &__btn
-    padding-bottom: .9rem @md 1.6rem
-    text: $pseudo-neutral-900 .8125rem 1.5rem normal
+    padding-bottom: 16px @md 24px
+    color: var(--pseudo-neutral-900)
+    text: 13px 1.5 normal
     text-transform: none
 
     &:after
@@ -45,10 +46,10 @@
 
     &:hover
       &:after
-        background: $accent-1-medium
+        background: var(--accent-1-medium)
 
     &:hover
-      text: $pseudo-neutral-900
+      text: var(--pseudo-neutral-900)
 
   &--vertical
     flex-direction: column
@@ -89,7 +90,7 @@
           size: 4px
           min-width: 4px
           border-radius: 50%
-          background: $pseudo-neutral-900
+          background: var(--pseudo-neutral-900)
 
   &--small
 

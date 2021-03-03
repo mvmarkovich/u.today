@@ -1,12 +1,12 @@
 .big-story
   margin: 16px 0 8px @sm 16px 0
   padding: @md 12px 0
-  background-color: #fff
+  background: var(--accent-bg-1)
   display: flex
   flex-wrap: wrap
   align-items: flex-start
   justify-content: space-between
-  box-shadow: -768px 0 0 #fff, 768px 0 0 #fff
+  box-shadow: -768px 0 0 var(--accent-bg-1), 768px 0 0 var(--accent-bg-1)
 
   &__item
     width: 100% @md 30%
@@ -15,7 +15,7 @@
     padding: 40px 16px 12px @md 0
 
     & + &
-      border-top: 8px solid #f5f5f5 @md 0
+      border-top: 8px solid var(--neutral-100) @md 0
 
     &:first-child
       display: block

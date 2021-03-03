@@ -1,7 +1,7 @@
 .table-plan
   margin: 24px 0 @md 40px 0
-  border-top: 1px solid #CFD8DC
-  border-bottom: 1px solid #CFD8DC
+  border-top: $border
+  border-bottom: $border
 
   &__header, &__footer, &__row
     box: middle wrap @md space-between
@@ -25,9 +25,9 @@
         width: 50% @md 136px
 
   &__header
-    border-bottom: 1px solid #CFD8DC
+    border-bottom: $border
     top: 0
-    background: #fff
+    background: var(--neutral)
 
     ^&__col
       &:nth-child(1)
@@ -76,18 +76,19 @@
 
   &__row
     &:not(:last-child)
-      border-bottom: 1px solid #CFD8DC
+      border-bottom: $border
 
     ^&__col
       text: $body-tiny @md $body-standart
 
   &__tip
-    text: $pseudo-neutral-400 $body-tiny @md $body-small
+    color: var(--$pseudo-neutral-400)
+    text: $body-tiny @md $body-small
     margin-top: -6px @md -2px
     margin-bottom: -1px @md 5px
 
   &__old-price
-    text: $pseudo-neutral-400
+    text: var(--pseudo-neutral-400)
     display: inline
     margin-right: 11px
     text-decoration: line-through

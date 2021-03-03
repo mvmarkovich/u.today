@@ -6,7 +6,7 @@
     position: relative
     padding: 16px @sm 24px 32px
     border-bottom: $border
-    background: $neutral
+    background: var(--accent-bg-1)
 
     .personal__info
       width: 100% @xl auto
@@ -24,7 +24,8 @@
       border: none
 
   &__name
-    text: $pseudo-neutral-900 15px 1.6 700
+    color: var(--pseudo-neutral-900)
+    text: 15px 1.6 700
     overflow: hidden
     text-overflow: ellipsis
     max-width: 80% @sm 100%
@@ -32,7 +33,8 @@
     white-space: nowrap
 
   &__post
-    text: $pseudo-neutral-400 15px 1.6
+    color: var(--pseudo-neutral-400) 
+    text: 15px 1.6
 
   &__row
     box: wrap @xl center
@@ -64,7 +66,7 @@
     width: 50% @sm 33% @xl 25%
     margin: 24px 0 0 @xl 32px 0 0
     padding: 0 8px
-    text: $pseudo-neutral-900
+    color: var(--pseudo-neutral-900)
 
   &__img
     border-radius: 2px
@@ -84,4 +86,5 @@
     margin: 0 0 4px
 
   &__post
-    text: $pseudo-neutral-400 500 13px 1.5
+    color: var(--pseudo-neutral-900) 
+    text: 500 13px 1.5

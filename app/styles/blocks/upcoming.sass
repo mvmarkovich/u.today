@@ -8,13 +8,14 @@
     padding: 16px
     display: flex
     flex-wrap: wrap
-    background: #fff
+    background: var(--neutral)
 
     .btn
       min-height: 24px
       margin-right: 16px
       font-weight: 700
-      text: #546e7a 15px
+      color: var(--pseudo-neutral-600)
+      text: 15px
       white-space: nowrap
 
     .btn--block
@@ -34,7 +35,7 @@
     box:
 
   &__item
-    background: $neutral
+    background: var(--accent-bg-1)
     min-width: @md-down 236px
     max-width: @md-down 236px
     margin: 0 0 0 8px
@@ -78,7 +79,8 @@
         width: 100%
 
         &__title
-          text: 500 #546E7A 13px
+          color: var(--pseudo-neutral-600)
+          text: 500 13px
           text-align: center
 
         &__value
@@ -89,4 +91,5 @@
     text: 700 15px 1.6
 
   &__value
-    text: #546E7A 500 13px 1.5
+    color: var(--pseudo-neutral-600)
+    text: 500 13px 1.5

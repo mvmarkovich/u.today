@@ -1,12 +1,12 @@
 .form
   &__group
-    margin-bottom: 2rem @md 2.5rem @xl 3rem
+    margin-bottom: 32px @md 40px @xl 48px
 
   &--row
     display: @md flex
 
     .input
-      margin-right: @md .5rem @xl 1rem
+      margin-right: @md 8px @xl 16px
       margin-bottom: @md 0
       display: @md flex
 
@@ -14,7 +14,7 @@
     max-width: 352px
 
   &__submit
-    margin-top: 1.4rem @md 2rem
+    margin-top: 24px @md 32px
 
   &--half
     width: 100%
@@ -34,7 +34,8 @@
           background: resolve("icons/checkbox_marked.svg") center / contain
 
     &-label
-      text: $pseudo-neutral-400 500 15px 1.6
+      color: var(--pseudo-neutral-400)
+      text: 500 15px 1.6
       box: center
       cursor: pointer
       user-select: none
@@ -50,7 +51,7 @@
       a
         @extend .link-plain
         text-decoration: none
-        color: #2962ff
+        color: var(--accent-1-light)
 
   &__row
     display: @xl flex
@@ -65,7 +66,8 @@
       margin-top: 1rem
 
   &__label
-    text: $pseudo-neutral-400 500 13px 2.1
+    color: var(--pseudo-neutral-400)
+    text: 500 13px 2.1
 
   &__file
     display: none
@@ -75,22 +77,24 @@
     padding: 0 16px
     min-height: 40px
     outline: 0
+    color: var(--pseudo-neutral-900)
     text: 500 15px 1.6
     font-family: $font
     width: 100%
     position: relative
+    background: var(--accent-bg-1)
 
     &::placeholder
-      text: $pseudo-neutral-400
+      color: var(--pseudo-neutral-400)
 
     &:hover
-      border-color: $accent-1-light
+      border-color: var(--accent-1-light)
 
     &:focus
-      border-color: $accent-1-medium
+      border-color: var(--accent-1-medium)
 
     &:valid
-      border-color: $pseudo-neutral-300
+      border-color: var(--pseudo-neutral-300)
 
     textarea&
       padding: .6rem *
@@ -117,28 +121,30 @@
       min-height: 32px
       text-transform: uppercase
       padding: * .75rem
-      text: $pseudo-neutral-900 13px none
+      color: var(--pseudo-neutral-900)
+      text: 13px none
       line-height: 1.1
       background-size: 24px 24px
       background-position: 47px center
 
     &:valid
-      border-color: #CFD8DC
+      border-color: var(--pseudo-neutral-100)
 
     &:hover
-      border-color: $accent-1-medium
+      border-color: var(--accent-1-medium)
 
     &:focus:hover
       border-color: #90A4AE
 
   &__error
-    text: $accent-2-medium $body-tiny
+    color: var(--accent-2-medium)
+    text: $body-tiny
     display: none
-    margin-bottom: -.5rem
+    margin-bottom: -8px
 
   &--error
     ^&__elem
-      border-color: $accent-2-medium
+      border-color: var(--accent-2-medium)
 
     ^&__error
       display: block
@@ -186,7 +192,7 @@
       content: ''
       display: block
       position: absolute
-      background: $neutral
+      background: var(--neutral)
       transition: .2s
       left: 2px
       top: 2px

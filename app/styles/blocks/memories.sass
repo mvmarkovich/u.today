@@ -4,14 +4,14 @@
     text-align: @md center
 
   &__main
-    background-color: #fff
-    padding: 1.5rem 1rem
+    background: var(--accent-bg-1)
+    padding: 24px 16px
 
   &__people
-    margin-bottom: @sm 1.5rem @md 2rem
-    margin: @sm-down 0 -1rem 1rem
-    padding: @sm-down 0 1rem 1rem
-    border-bottom: @sm-down 8px solid #EEEEEE
+    margin-bottom: @sm 24px @md 32px
+    margin: @sm-down 0 -16px 16px
+    padding: @sm-down 0 16px 16px
+    border-bottom: @sm-down 8px solid var(--pseudo-neutral-200)
 
     &.content--open
 
@@ -27,18 +27,18 @@
       max-height: 275px @sm 235px @md 100%
 
     &-item
-      text: #263238
-      margin-bottom: @sm 1rem
+      color: var(--pseudo-neutral-900)
+      margin-bottom: @sm 16px
       width: 100% @sm 48% @xl 32%
       box: center
 
       & + &
-        margin-top: @sm-down 1rem
+        margin-top: @sm-down 16px
 
     &-img
 
       &--wrapper
-        border: 1px solid #EEEEEE
+        border: 1px solid var(--pseudo-neutral-200)
         border-radius: 50%
         margin-right: 1rem
         min-width: 40px
@@ -54,7 +54,7 @@
 
       &:before
         content: ''
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--neutral) 100%)
         width: 100%
         height: 80px
         position: absolute
@@ -65,7 +65,7 @@
 
       &:after
         position: absolute
-        right: .7rem
+        right: 8px
 
   &__content
     max-width: 500px
@@ -75,21 +75,21 @@
   &__news
 
     & + &
-      margin-top: 1rem @md 2rem
+      margin-top: 16px @md 32px
 
     &-wrapper
-      border: 1px solid #CFD8DC
+      border: $border
       overflow: hidden
       border-radius: 16px 16px 16px 0
 
     &-header
       box: flex-start
-      margin-bottom: .75rem
+      margin-bottom: 12px
 
     &-avatar
 
       &--wrapper
-        margin-right: .75rem
+        margin-right: 12px
         max-width: 36px
         min-width: 36px
         display: block
@@ -100,10 +100,10 @@
       text: 15px 1.5 600
 
     &-data
-      
       display: block
       word-break: break-all
-      text: $pseudo-neutral-400 15px 1.5 500
+      color: var(--pseudo-neutral-400)
+      text: 15px 1.5 500
 
     &-descr
       p
@@ -116,15 +116,16 @@
         display: block
 
     &-source
-      text: #2962FF 700 13px 20px
+      color: var(--accent-1-light)
+      text: 700 13px 20px
       text-transform: uppercase
       padding: 0 8px
-      border: 1px solid #CFD8DC
+      border: $border
       border-radius: 0 0 4px 4px
       position: relative
       top: -2px
       display: inline-block
-      background: #fff
+      background: var(--neutral)
 
     .twitter-tweet ~ ^&-source
       top: -6px

@@ -1,5 +1,5 @@
 .header
-  background: #fff
+  background: var(--accent-bg-1)
   position: relative
   z-index: 996 @md 300
   margin: 0 0 16px
@@ -77,7 +77,7 @@
       display: @md flex
       justify-content: @md space-between
       align-items: @xl center
-      background: @md-down #fff
+      background: @md-down var(--neutral)
       padding: @md-down 16px 0 24px
       margin: @xl 0
       list-style: none
@@ -86,7 +86,8 @@
         visibility: @xl-down visible
 
     &-link
-      text: $pseudo-neutral-900 700 15px 1.4
+      color: var(--pseudo-neutral-900) 
+      text: 700 15px 1.4
       text-decoration: none
       box: center @md left center
       padding: 0 0 0 16px @md 0 0 11px
@@ -113,10 +114,10 @@
           display: @md block
 
         &:after
-          background: $accent-1-medium
+          background: var(--accent-1-medium)
 
       &--active:after
-        background: $pseudo-neutral-900
+        background: var(--pseudo-neutral-900)
 
       & + &
         margin-left: 0 @md 1.4rem
@@ -128,7 +129,7 @@
             right: auto @md 24px
 
           ^^^&-link
-            text: $accent-1-medium
+            text: var(--accent-1-medium)
 
             &:after
               transform: rotate(180deg)
@@ -155,7 +156,7 @@
         border-radius: @md 2px
         box-shadow: @md 0 8px 24px rgba(13, 71, 161, 0.15)
         min-width: @md 190px
-        background: #fff
+        background: var(--neutral)
         z-index: 999 @md 997
         display: none
 
@@ -166,7 +167,8 @@
         margin: 0 0 8px
 
       &-link
-        text: $pseudo-neutral-900 15px 1.4 500
+        color: var(--pseudo-neutral-900)
+        text: 15px 1.4 500
         text-decoration: none
         text-transform: none
         letter-spacing: normal
@@ -189,20 +191,20 @@
 
     &-submit
       z-index: 1
-      background: #eee
+      background: var(--pseudo-neutral-200)
 
       &:after
         size: 32px
 
     &-input
       @extend .input__elem
-      background: #eee
+      background: var(--pseudo-neutral-200)
       min-height: 32px
       padding: 0 16px
       border: none
 
     &-close
-      background: #fff
+      background: var(--neutral)
       padding: 0 0 0 12px @md 0 0 0 16px
 
   &__burger
@@ -214,7 +216,7 @@
       position: @md-down fixed 32px 0 0 null
       width: @md-down 240px
       display: @md-down block
-      background-color: @md-down #fff
+      background-color: @md-down var(--neutral)
       overflow-y: @md-down auto
 
   &--hide
@@ -225,7 +227,7 @@
     margin: 0 0 0 8px @md 0 0 0 28px
 
     &-btn
-      border: 1px solid #CFD8DC
+      border: none
       padding: 0 4px 0 8px
       font-weight: 700
 
@@ -235,9 +237,9 @@
 
     &-other
       position: absolute 31px 0 null 0
-      border: 1px solid #CFD8DC
+      border: $border
       border-top: none
-      background: $neutral
+      background: var(--neutral)
       padding: 4px 0
       z-index: 2
       display: none
@@ -247,14 +249,15 @@
 
     &-link
       padding: 0 8px
-      text: #263238 15px 1.6
+      color: var(--pseudo-neutral-900)
+      text: 15px 1.6
       width: 100%
       display: block
 
     &:hover
       ^&-btn
         .is-active
-          text: #2196f3
+          color: var(--accent-1-light) 
 
         &:after
           background-image: svg-load("icons/triangle-down.svg", fill: $accent-1-medium)
@@ -262,6 +265,9 @@
 
       ^&-other
         display: block
+
+  &__theme
+    
 
 .mobile-menu
 

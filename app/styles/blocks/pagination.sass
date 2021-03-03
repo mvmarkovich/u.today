@@ -1,5 +1,5 @@
 .pag-nav
-  background: $neutral
+  background: var(--accent-bg-1)
   padding: 16px @sm 24px
   margin: 16px 0
 
@@ -11,16 +11,17 @@
     margin: 8px 4px 0
 
   &__btn
-    text: #546E7A 500 13px 48px
+    color: var(--pseudo-neutral-600)
+    text: 500 13px 48px
     display: block
     size: 48px
     min-width: 48px
     text-align: center
 
     &-active
-      text: $neutral
-      background: #2962FF
+      text: var(--neutral)
+      background: var(--accent-1-light)
       cursor: default
 
       &:hover
-        color: $neutral
+        color: var(--neutral)

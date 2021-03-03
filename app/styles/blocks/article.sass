@@ -1,6 +1,6 @@
 .article
   padding: 16px
-  background: $neutral
+  background: var(--accent-bg-1)
   margin: 0 0 16px
 
   &__header
@@ -32,14 +32,15 @@
         margin-right: 16px
 
     &-info
-      background: rgba(196, 196, 196, 0.3)
+      background: var(--pseudo-neutral-200)
       border-radius: 0 4px 8px 8px
       padding: 8px 16px 12px
       position: relative
       width: 100%
 
     &-name
-      text: #263238 700 15px 1.8
+      color: var(--pseudo-neutral-900)
+      text: 700 15px 1.8
       text-decoration: none
 
     &-desc
@@ -52,7 +53,7 @@
         content: ''
         width: 0
         height: 0
-        border-top: 16px solid rgba(196, 196, 196, 0.3)
+        border-top: 16px solid var(--pseudo-neutral-200)
         border-left: 16px solid transparent
         position: absolute
         top: 0
@@ -86,10 +87,10 @@
         background-image: resolve("icons/social/twitter.svg")
 
   .card
-    margin: 1rem 0
+    margin: 16px 0
 
   &__main
-    background-color: #fff
+    background: var(--neutral)
     padding: 24px 16px
 
   &_main
@@ -123,10 +124,10 @@
         padding: @sm-down 0 16px
 
   &__gnews
-    border: 1px solid #cfd8dc
+    border: $border
     padding: 8px 16px @sm 12px 16px
     box: middle
-    text: #263238
+    color: var(--pseudo-neutral-900)
     margin: 16px 0 @sm 32px 0
 
     &-text
@@ -139,7 +140,7 @@
       padding: 0 0 0 32px
 
     &:hover
-      border-color: #2196f3
+      border-color: var(--accent-1-medium)
 
   &__content
     margin: 24px 0
@@ -152,12 +153,13 @@
 
         &:after
           content: 'Promoted'
-          text: $pseudo-neutral-200 11px 18px
+          color: var(--pseudo-neutral-200)
+          text: 11px 18px
           text-align: center
           white-space: nowrap
           padding: 0 .5rem
           border-radius: 2px
-          border: 1px solid $pseudo-neutral-100
+          border: 1px solid var(--pseudo-neutral-100)
           font-style: normal
           margin-left: 1rem
 
@@ -192,19 +194,20 @@
         left: 0
         top: 12px
         display: block
-        background-color: $accent-1-light
+        background-color: var(--accent-1-light)
         size: 5px
         border-radius: 50%
 
     &-link
       border-bottom: 0
-      text: $accent-1-light 500 15px 1.8
+      color: var(--accent-1-light)
+      text: 500 15px 1.8
 
   &__related
     margin: 24px *
     padding: 16px 0
-    border-top: 1px solid #E0E0E0
-    border-bottom: 1px solid #E0E0E0
+    border-top: 1px solid var(--pseudo-neutral-200)
+    border-bottom: 1px solid var(--pseudo-neutral-200)
     text-decoration: none
     display: flex
     align-items: flex-start
@@ -228,10 +231,12 @@
           display: block
 
     &-flame
-      text: #546E7A 700 15px 1.2
+      color: var(--pseudo-neutral-600)
+      text: 700 15px 1.2
 
     &-blockquote
-      text: #263238 700 13px 1.8 @md 15px
+      color: var(--pseudo-neutral-900)
+      text: 700 13px 1.8 @md 15px
 
   .something--content
     margin: @sm-down 1.5rem -1rem
@@ -243,7 +248,7 @@
   position: relative
   padding: 32px 16px 24px @xl 24px 40px 8px
   margin: 24px -16px -16px @xl 40px -16px -16px
-  border-top: 1px solid #E0E0E0
+  border-top: 1px solid var(--pseudo-neutral-200)
 
   &_row
     display: flex
@@ -267,7 +272,8 @@
       display: block
 
   &_title
-    text: #546E7A 500 15px 1.4
+    color: var(--pseudo-neutral-600)
+    text: 500 15px 1.4
     margin: 0
 
   &_data
@@ -278,7 +284,8 @@
 
   &_name
     text-decoration: none
-    text: #263238 700 15px 1.8 @xl 17px
+    color: var(--pseudo-neutral-900)
+    text: 700 15px 1.8 @xl 17px
     margin-right: @xl 12px
 
   .social
@@ -303,5 +310,6 @@
   text: #90A4AE 15px
 
 .disclaimer_text
-  text: #546e7a 500 15px 1.4
+  color: var(--pseudo-neutral-600)
+  text: 500 15px 1.4
   margin: 12px 0 0

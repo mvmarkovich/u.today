@@ -2,7 +2,7 @@
   margin-top: 32px
   position: relative
   z-index: 150
-  background: $neutral
+  background: var(--accent-bg-1)
 
   &__container
     padding: 0 16px
@@ -17,13 +17,13 @@
   &:before
     content: ''
     display: block
-    border-bottom: 3px solid #263238
+    border-bottom: 3px solid var(--pseudo-neutral-600)
 
   &__row
     flex-wrap: wrap @md nowrap
     padding-top: 24px @md 40px
     padding-bottom: 24px @md 40px
-    border-bottom: 1px solid #CFD8DC
+    border-bottom: $border
     display: flex
     justify-content: space-between
 
@@ -51,32 +51,30 @@
           display: block
 
       .btn
-        text: $neutral
-        background: #2962FF
-        border-color: #2962FF
+        color: var(--neutral)
+        background: var(--accent-1-medium)
+        border-color: var(--accent-1-medium)
         left: -1px
         min-height: 48px
+        width: @xl 154px
 
         &:hover
-          background: $accent-1-medium
-          border-color: $accent-1-medium
-
-        &:active
-          background: $accent-1-dark
-          border-color: $accent-1-dark
+          background: var(--accent-1-dark)
+          border-color: var(--accent-1-dark)
 
     &-input
       width: @md calc(100% - 110px) @md 328px
       min-height: 48px
 
     &-agree
-      text: #546e7a 500 13px 2.1
+      color: var(--pseudo-neutral-600)
+      text: 500 15px 2.1
       margin: @xl -6px 0 0
 
   &__nav
     position: relative
     padding: 21px 0 16px
-    border-bottom: 1px solid #cfd8dc
+    border-bottom: $border
 
     &-list
       margin: -24px 0 0
@@ -95,7 +93,8 @@
         width: 30% @md 33% @xl auto
 
     &-link
-      text: #263238 600 17px 1.4
+      color: var(--pseudo-neutral-900)
+      text: 600 17px 1.4
 
     &-child
 
@@ -111,7 +110,8 @@
           margin-top: 10px
 
       &-link
-        text: #263238 500 13px 2.1 @md 15px
+        color: var(--pseudo-neutral-900)
+        text: 500 13px 2.1 @md 15px
 
   &__copy
     padding: 24px 0
@@ -119,20 +119,23 @@
     flex-wrap: wrap
 
     &-text
-      text: #546E7A 500 15px 1.9
+      color: var(--pseudo-neutral-600)
+      text: 500 15px 1.9
       width: 100%
 
     &-link
-      text: #2962FF 500 15px 1.9
+      color: var(--accent-1-light)
+      text: 500 15px 1.9
       margin: 0 12px 0 0
 
     p
       margin: 0 0 16px
 
   &__disclaimer
-    border-bottom: 1px solid #cfd8dc
+    border-bottom: $border
     padding: 16px 0 12px
 
     &-text
-      text: #546e7a 500 15px 1.6
+      color: var(--pseudo-neutral-600)
+      text: 500 15px 1.6
       margin: 0
