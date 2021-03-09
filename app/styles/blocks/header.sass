@@ -274,7 +274,10 @@
         background: resolve("icons/theme-dark.svg") no-repeat center / contain
 
       &--dark
-        background: resolve("icons/theme-system-light.svg") no-repeat center / contain
+        background: resolve("icons/theme-system-dark.svg") no-repeat center / contain
+
+      &--system
+        background: resolve("icons/theme-light.svg") no-repeat center / contain
 
     .is-visible
       display: block
@@ -313,11 +316,7 @@
     &-russian
       background-image: resolve("icons/logo-russian-white.svg") 
 
-  .header__theme .theme__switch--system
-    background: resolve("icons/theme-system-dark.svg") no-repeat center / contain
 
-.theme-light
-  .header__theme .theme__switch--system
-    background: resolve("icons/theme-system-light.svg") no-repeat center / contain
-
-  
+.theme-dark
+  .header__theme .theme__switch--light
+    background: resolve("icons/theme-dark-light.svg") no-repeat center / contain
