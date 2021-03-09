@@ -8,7 +8,7 @@ blockquote
     content: ""
     display: block
     background-image: svg-load("icons/quote.svg")
-    background-color: var(--neutral)
+    background-color: var(--accent-bg-1)
     width: 24px
     height: 24px
     position: absolute
@@ -23,3 +23,7 @@ blockquote
 
   strong
     display: block
+
+.theme-dark
+  blockquote:before
+    background-image: resolve("icons/quote-dark.svg")

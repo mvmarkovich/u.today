@@ -62,8 +62,8 @@
       position: absolute @sm static
       top: 8px
       justify-content: space-between @sm flex-start
-      left: 16px
-      right: 16px
+      left: 0
+      right: 0
 
   .humble--author
     margin: 0
@@ -86,22 +86,22 @@
     &-link
       display: block
       min-height: 48px
-      text: var(--pseudo-neutral-900)
+      color: var(--pseudo-neutral-900)
 
       &:hover
-        text: var(--accent-1-medium)
+        color: var(--accent-1-medium)
 
   &-sl
     .humble__row
       &:first-child
-        background: rgba(33,150,243,0.25)
-        padding: 0 6px @xl 5px
+        background: var(--accent-bg-3)
+        padding: 0 16px @sm 6px @xl 5px 21px
         min-width: 230px
-        display: table
-        margin: -8px 0 8px @sm 0 @xl -12px 0 8px
+        display: block @sm table
+        margin: -8px 0 8px @sm 0 @xl -12px -58px 8px -16px
 
         .humble
-          text: var(--pseudo-neutral-900)
+          color: var(--pseudo-neutral-900)
 
           &:first-child
             font-weight: 700

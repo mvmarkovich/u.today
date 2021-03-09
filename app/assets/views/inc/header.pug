@@ -1,6 +1,6 @@
 header.header
   .header__container
-    a.header__logo-russian(href="#!") U.TODAY
+    a.header__logo(href="#!") U.TODAY
 
     nav.header__nav
       ul.header__nav-list
@@ -18,11 +18,10 @@ header.header
       button.header__btn-search.btn.btn--light.btn--search(aria-label="open search form")
 
       .header__theme
-        a.header__theme-item(aria-label="Light theme" title="Light theme")
-          include ../../img/icons/theme-light.svg
-
-        a.header__theme-item(aria-label="Dark theme" title="Dark theme")
-          include ../../img/icons/theme-dark.svg
+        .theme
+          a.theme__switch.theme__switch--system.is-hidden(tabindex='0' title='Системная тема' aria-label='Системная тема')
+          a.theme__switch.theme__switch--light.is-hidden(tabindex='0' title='Светлая тема' aria-label='Светлая тема')
+          a.theme__switch.theme__switch--dark.is-hidden(tabindex='0' title='Тёмная тема' aria-label='Тёмная тема')
 
       .header__lang
         .btn.btn--light.btn--arrow-down.header__lang-btn

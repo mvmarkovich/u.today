@@ -167,6 +167,47 @@
     $temp.remove();
   });
 
+  window.internalTags = ''.split(", ").map((e => e.slice(5))),
+    window.getTheme = () => localStorage.getItem("THEME") || "system",
+    window.setTheme = (e=getTheme()) => {
+        localStorage.setItem("THEME", e);
+        const t = window.internalTags.includes("theme-default"),
+            a = "system" === e,
+            n = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+            o = [...document.documentElement.classList].find((e => e.startsWith("theme"))),
+            r = t ? "light" : a ? n : e;
+        document.documentElement.classList.replace(o, "theme-".concat(r))
+  }
+
+  (() => {
+    const e = {
+        system: document.querySelectorAll(".theme__switch--system"),
+        light: document.querySelectorAll(".theme__switch--light"),
+        dark: document.querySelectorAll(".theme__switch--dark")
+    };
+    function t(t) {
+        e[t].forEach((e => {
+            e.classList.replace("is-hidden", "is-visible")
+        }))
+    }
+    function n(n, o) {
+        !function(t) {
+            e[t].forEach((e => {
+                e.classList.replace("is-visible", "is-hidden")
+            }))
+        }(n),
+        window.setTheme(o),
+        t(o)
+    }
+    window.internalTags.includes("theme-default") ? t("light") : (e.system.forEach((e => {
+        e.addEventListener("click", (() => n("system", "light")))
+    })), e.light.forEach((e => {
+        e.addEventListener("click", (() => n("light", "dark")))
+    })), e.dark.forEach((e => {
+        e.addEventListener("click", (() => n("dark", "system")))
+    })), t(window.getTheme()))
+})();
+
   (function(){
     var a = document.querySelector('.aside-menu-block'), b = null, K = null, Z = 0, P = 16, N = 16;
     window.addEventListener('scroll', Ascroll, false);

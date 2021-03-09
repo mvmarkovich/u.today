@@ -59,19 +59,26 @@ img
   bottom: @md-down 89px
   top: @md-down auto
 
+.theme-dark
+  .slick-next
+    background-image: resolve("icons/slider-next-arrow-white.svg")
+    
+  .slick-prev
+    background-image: resolve("icons/slider-prev-arrow-white.svg")
+
 .slick-next
   background-image: resolve("icons/slider-next-arrow.svg")
   right: -28px
 
   &:hover
-    background-image: svg-load("icons/slider-next-arrow.svg" fill: #000)
+    background-image: svg-load("icons/slider-next-arrow.svg" fill: $accent-1-medium)
 
 .slick-prev
   background-image: resolve("icons/slider-prev-arrow.svg")
   left: -28px
 
   &:hover
-    background-image: svg-load("icons/slider-prev-arrow.svg" fill: #000)
+    background-image: svg-load("icons/slider-prev-arrow.svg" fill: $accent-1-medium)
 
 .slick-disabled
   display: none !important

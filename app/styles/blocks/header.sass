@@ -77,7 +77,7 @@
       display: @md flex
       justify-content: @md space-between
       align-items: @xl center
-      background: @md-down var(--neutral)
+      background: @md-down var(--accent-bg-1)
       padding: @md-down 16px 0 24px
       margin: @xl 0
       list-style: none
@@ -129,7 +129,7 @@
             right: auto @md 24px
 
           ^^^&-link
-            text: var(--accent-1-medium)
+            color: var(--accent-1-medium)
 
             &:after
               transform: rotate(180deg)
@@ -156,7 +156,7 @@
         border-radius: @md 2px
         box-shadow: @md 0 8px 24px rgba(13, 71, 161, 0.15)
         min-width: @md 190px
-        background: var(--neutral)
+        background: var(--accent-bg-1)
         z-index: 999 @md 997
         display: none
 
@@ -204,7 +204,7 @@
       border: none
 
     &-close
-      background: var(--neutral)
+      background: var(--accent-bg-1)
       padding: 0 0 0 12px @md 0 0 0 16px
 
   &__burger
@@ -216,7 +216,7 @@
       position: @md-down fixed 32px 0 0 null
       width: @md-down 240px
       display: @md-down block
-      background-color: @md-down var(--neutral)
+      background-color: @md-down var(--accent-bg-1)
       overflow-y: @md-down auto
 
   &--hide
@@ -224,7 +224,7 @@
 
   &__lang
     position: relative
-    margin: 0 0 0 8px @md 0 0 0 28px
+    margin: 0 0 0 12px 
 
     &-btn
       border: none
@@ -237,9 +237,8 @@
 
     &-other
       position: absolute 31px 0 null 0
-      border: $border
       border-top: none
-      background: var(--neutral)
+      background: var(--accent-bg-1)
       padding: 4px 0
       z-index: 2
       display: none
@@ -267,6 +266,21 @@
         display: block
 
   &__theme
+    .theme__switch
+      size: 24px
+      margin: 0 16px
+
+      &--light
+        background: resolve("icons/theme-dark.svg") no-repeat center / contain
+
+      &--dark
+        background: resolve("icons/theme-system-light.svg") no-repeat center / contain
+
+    .is-visible
+      display: block
+
+    .is-hidden
+      display: none
     
 
 .mobile-menu
@@ -279,3 +293,31 @@
 
 .overflow-hidden
   overflow: hidden
+
+.theme-dark
+  .header__nav-item--arrow .header__nav-link:after
+    background-image: resolve("icons/triangle-down-white.svg")
+
+  .header__logo
+    background-image: resolve("icons/logo-white.svg") 
+
+    &-news
+      background-image: resolve("icons/logo-news-white.svg")
+
+    &-101
+      background-image: resolve("icons/logo-101-white.svg") 
+
+    &-crypto
+      background-image: resolve("icons/logo-crypto-white.svg") 
+
+    &-russian
+      background-image: resolve("icons/logo-russian-white.svg") 
+
+  .header__theme .theme__switch--system
+    background: resolve("icons/theme-system-dark.svg") no-repeat center / contain
+
+.theme-light
+  .header__theme .theme__switch--system
+    background: resolve("icons/theme-system-light.svg") no-repeat center / contain
+
+  

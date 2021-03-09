@@ -19,11 +19,23 @@
     min-width: 56px
     background-size: 24px
     background-position: center
-    border-right: 1px solid #CFD8DC
+    border-right: $border
 
   &--rus
     background-image: resolve("icons/flag-ru.svg")
 
   &--eng
     background-image: resolve("icons/flag-eng.svg")
+
+.theme-dark
+  .icon
+    &--check
+      background-image: resolve("icons/check-white.svg")
+
+    &--cross
+      background-image: resolve("icons/cross-white.svg")
+
+    &--clock
+      background-image: resolve("icons/clock-white.svg")
+
 

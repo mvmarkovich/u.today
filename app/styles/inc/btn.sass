@@ -1,3 +1,42 @@
+.theme-dark
+  .btn
+    &--arrow-down
+      &:after
+        background-image: resolve("icons/triangle-down-white.svg")
+
+    &--arrow-down-before
+      &:before
+        background-image: resolve("icons/triangle-down-white.svg")
+
+    &--arrow-up-before
+      &:before
+        background-image: resolve("icons/triangle-up-white.svg")
+
+    &--arrow-right
+      &:after
+        background-image: resolve("icons/triangle-right-white.svg")
+
+    &--arrow-long-right
+      &:after
+        background-image: resolve("icons/arrow-long-right-white.svg")
+
+    &--search
+      &:after
+        background-image: resolve("icons/search-white.svg")
+
+    &--burger
+      &:after
+        background-image: resolve("icons/burger-white.svg")
+
+    &--cross
+      &:after
+        background-image: resolve("icons/cross-white.svg")
+
+    &--back
+      &:after
+        background-image: resolve("icons/btn--back-white.svg")
+        size: 32px
+  
 .btn
   color: var(--pseudo-neutral-900)
   text: 500 15px
@@ -64,7 +103,7 @@
     &-bg
       display: block @xl flex
       align-items: @xl center
-      background: #E1F5FE
+      background: var(--accent-bg-2)
       padding: 16px
 
   &--column
@@ -110,7 +149,7 @@
     color: var(--neutral)
 
     &:hover
-      text: var(--neutral)
+      color: var(--neutral)
 
   &--accent
     background: var(--accent-1-medium)
