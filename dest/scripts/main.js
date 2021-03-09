@@ -87,6 +87,20 @@
     }, 50);
   }
 
+  window.internalTags = ''.split(", ").map((e => e.slice(5))),
+      window.getTheme = () => localStorage.getItem("THEME") || "system",
+      window.setTheme = (e=getTheme()) => {
+      localStorage.setItem("THEME", e);
+      const t = window.internalTags.includes("theme-default"),
+      a = "system" === e,
+      n = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+      s = document.querySelector('meta[name="theme-color"]'),
+      i = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]'),
+      o = [...document.documentElement.classList].find((e => e.startsWith("theme"))),
+      r = t ? "light" : a ? n : e;
+      document.documentElement.classList.replace(o, "theme-".concat(r))
+      }
+
   function closeModal() {
     var $openModal = $(".modal--open");
     $openModal.removeClass("modal--fadeIn");
@@ -166,22 +180,6 @@
     document.execCommand("copy");
     $temp.remove();
   });
-
-  $('.article__content img').ezPlus({
-    scrollZoom: false
-  });
-
-  window.internalTags = ''.split(", ").map((e => e.slice(5))),
-    window.getTheme = () => localStorage.getItem("THEME") || "system",
-    window.setTheme = (e=getTheme()) => {
-        localStorage.setItem("THEME", e);
-        const t = window.internalTags.includes("theme-default"),
-            a = "system" === e,
-            n = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
-            o = [...document.documentElement.classList].find((e => e.startsWith("theme"))),
-            r = t ? "light" : a ? n : e;
-        document.documentElement.classList.replace(o, "theme-".concat(r))
-  }
 
   (() => {
     const e = {

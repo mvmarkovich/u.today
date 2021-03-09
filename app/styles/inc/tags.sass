@@ -1,12 +1,15 @@
 figure
   margin: 24px 0 0
-  padding: 62.5% 0 0 
+  padding: @md-down 62.5% 0 0 
   position: relative
   overflow: hidden
 
   img
-    position: absolute 0 none none 0
-    height: 100%
+    position: @md-down absolute
+    top: @md-down 0
+    left: @md-down 0
+    right: @md-down 0
+    height: @md-down 100%
     width: auto
     margin: 0 auto
 
