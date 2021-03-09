@@ -167,9 +167,9 @@
     $temp.remove();
   });
 
-  function ee() {
-    return [...document.documentElement.classList].find((e => e.startsWith("theme"))).slice(6)
-  }
+  $('.article__content img').ezPlus({
+    scrollZoom: false
+  });
 
   window.internalTags = ''.split(", ").map((e => e.slice(5))),
     window.getTheme = () => localStorage.getItem("THEME") || "system",
