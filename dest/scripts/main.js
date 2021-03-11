@@ -94,12 +94,11 @@
       const t = window.internalTags.includes("theme-default"),
       a = "system" === e,
       n = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
-      s = document.querySelector('meta[name="theme-color"]'),
-      i = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]'),
       o = [...document.documentElement.classList].find((e => e.startsWith("theme"))),
       r = t ? "light" : a ? n : e;
       document.documentElement.classList.replace(o, "theme-".concat(r))
       }
+  window.setTheme()
 
   function closeModal() {
     var $openModal = $(".modal--open");
