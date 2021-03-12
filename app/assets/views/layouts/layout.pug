@@ -35,16 +35,25 @@ html.theme-light(lang="en" dir="ltr")
 
     include ../blocks/modal.pug
 
-    //
-      .something--fixed
-        .btn.btn--cross.btn--light.something--close
+    .modal__yb
+      button.btn.btn--light.btn--cross.modal__close
 
-        .something--container
-          .something--fixed__desktop
-            img(src="img/something/something__central-728.png" alt="Something central")
+      .modal__yb-desc
+          .modal__yb-title “Ripple Was Always Scam Coin.” Exclusive Interview with Tone Vays
+          a.btn.btn--light.btn--yb(href="https://www.youtube.com/" target="_blank") Subscribe to U.Today
 
-          .something--fixed__mobile
-            img(src="img/something/something__central-336.png" alt="Something central")
+      iframe(width="1206" height="678" src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+    
+    .something--fixed
+      .btn.btn--cross.btn--light.something--close
+
+      .something--container
+        .something--fixed__desktop
+          img(src="img/something/something__central-728.png" alt="Something central")
+
+        .something--fixed__mobile
+          img(src="img/something/something__central-336.png" alt="Something central")
 
     block foot
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")

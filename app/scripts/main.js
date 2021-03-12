@@ -134,7 +134,7 @@
     $(this).siblings().css("max-height", "100%")
   });
 
-  $('.something--close').on('click', function() {
+  $('.something--close, .modal__close').on('click', function() {
     $(this).parent().remove();
   });
 

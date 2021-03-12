@@ -79,3 +79,28 @@
     .btn--column
       margin: 16px 0 0 @md 32px 0 0
       align-items: center
+
+  &__yb
+    position: fixed
+    bottom: 100px @md 140px
+    right: 0
+    width: 240px @md 384px
+    z-index: 9999
+    background: var(--accent-bg-1)
+
+    &-desc
+      padding: 4px 32px 4px 16px @md 8px 32px 8px 16px
+      display: @md-down flex
+      align-items: @md-down center
+
+    &-title
+      text: 700 13px 1.5
+      display: none @md inline
+
+    iframe
+      size: 240px 136px @md 384px 216px
+      margin: 0 0 -7px
+
+    .modal__close
+      top: @md-down 0
+      right: @md-down 0

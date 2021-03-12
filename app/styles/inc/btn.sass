@@ -182,6 +182,30 @@
     &:hover
       color: var(--neutral)
 
+  &--yb
+    color: #ff0000
+    text: 700 13px 1.3
+    display: inline-flex
+    min-height: 24px @md 12px
+    height: 24px @md 12px
+    position: @md relative
+    top: @md 7px
+    left: @md 6px
+    justify-content: @md flex-start
+    overflow: @md hidden
+    white-space: @md nowrap
+    width: @md 98px
+
+    &:before
+      content: ''
+      size: 24px
+      min-width: 24px
+      margin: 0 6px 0 0
+      background: resolve("icons/social/youtube.svg") no-repeat center / contain
+
+    &:hover
+      color: #ff0000
+
   &--show-more, &--ajax
     font-weight: 700
     text: 15px
