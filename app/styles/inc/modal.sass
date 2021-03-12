@@ -82,25 +82,20 @@
 
   &__yb
     position: fixed
-    bottom: 100px @md 140px
+    bottom: 140px
     right: 0
-    width: 240px @md 384px
+    width: 384px
     z-index: 9999
+    display: none @md block
     background: var(--accent-bg-1)
 
     &-desc
-      padding: 4px 32px 4px 16px @md 8px 32px 8px 16px
-      display: @md-down flex
-      align-items: @md-down center
+      padding: 8px 32px 8px 16px
 
     &-title
       text: 700 13px 1.5
-      display: none @md inline
+      display: inline
 
     iframe
-      size: 240px 136px @md 384px 216px
+      size: 384px 216px
       margin: 0 0 -7px
-
-    .modal__close
-      top: @md-down 0
-      right: @md-down 0
